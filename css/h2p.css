@@ -1,0 +1,22 @@
+.hover-box-shadow {
+    transition: width ease-in-out 2s;
+    -moz-transition: width ease-in-out 2s; /* Firefox 4 */
+    -webkit-transition: width ease-in-out 2s; /* Safari and Chrome */
+    -o-transition: width ease-in-out 2s; /* Opera */
+    box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 2px 10px 0 rgba(40, 40, 40, 0.08);
+}
+.hover-box-shadow:hover {
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.3), 0 2px 20px 0 rgba(40, 40, 40, 0.12);
+}
+
+.card-blog {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    transition: all .25s ease-in-out 0s;
+}
+
+.card-blog:hover {
+    transform: scale(1.05);
+    transition: all .25s ease-in-out 0s;
+    -webkit-transform: scale(1.05);
+}
