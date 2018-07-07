@@ -41,8 +41,12 @@
     <![endif]-->
 
     <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
-    <script src="/js/jquery-1.11.1.min.js"></script>
-    <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
+    <!-- <script src="/js/jquery-1.11.1.min.js"></script> -->
+    <!-- <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script> -->
+    <script src="/js/jquery-3.3.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-3.3.1.min.js"><\/script>')</script>
+    <script src="/js/popper.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
 
     <!-- Load these in the <head> for quicker IE8+ load times -->
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -117,31 +121,28 @@
 
         <!-- ============================ Header & Logo bar =========================== -->
 
-        <div id="navigation" class="navbar navbar-fixed-top">
-            <div class="navbar-inner">
+        <div id="navigation" class="navbar navbar-expand-lg navbar-fixed-top" style="z-index: 5; width: 100%; padding: 0;">
+            <div class="navbar-inner" style="width: 100%">
                 <div class="container">
                     <!-- Nav logo -->
                     <div class="logo">
                         <a href="/" title="Logo" class="animsition-link">
-                         <img src="/img/wolf_orange.png" alt="Logo" width="35px;"/> 
+                         <img src="/img/wolf_orange_small.png" alt="Logo" width="35px;"/> 
                         </a>
                     </div>
                     <!-- // Nav logo -->
                     <!-- Info-bar -->
-                    <nav>
-                        <ul class="nav">
-                            <li><a href="/" class="animsition-link">H2P'S BLOG</a></li>
-                            <li class="nolink"><span>Always </span>Creative.</li>
+                    <nav class="nav justify-content-center">
+                        <ul class="navbar-nav">
+                            <li class="nav-item nolink"><a href="/" class="animsition-link">H2P'S BLOG</a></li>
+                            <li class="nav-item nolink"><span>Always </span>Creative.</li>
                             
-                            <li><a href="https://github.com/WaterH2P" title="Github" target="_blank"><i class="icon-github"></i></a></li>
-                            
-                            
+                            <li class="nav-item nolink"><a href="https://github.com/WaterH2P" title="Github" target="_blank"><i class="icon-github"></i></a></li>
                             
                             
+                            <li class="nav-item nolink"><a href="https://weibo.com/5933348875" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
                             
-                            <li><a href="https://weibo.com/5933348875" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
-                            
-                            <li class="nolink"><span>Welcome!</span></li>
+                            <li class="nav-item nolink"><span>Welcome!</span></li>
                         </ul>
                     </nav>
                     <!--// Info-bar -->
@@ -149,10 +150,10 @@
                 <!-- // .container -->
                 <div class="learnmore sb-toggle-right">More</div>
                 <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar before"></span>
-                <span class="icon-bar main"></span>
-                <span class="icon-bar after"></span>
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar before"></span>
+                    <span class="icon-bar main"></span>
+                    <span class="icon-bar after"></span>
                 </button>
             </div>
             <!-- // .navbar-inner -->
@@ -163,8 +164,9 @@
       
 <section id="intro">
     <div class="container">
-        <div class="row col-md-offset-2">
-            <div class="col-md-8">
+        <div class="row">
+            <div class="col-lg-2 col-md-2"></div>
+            <div class="col-lg-2 col-md-8">
     			<span class="post-meta">
       <time datetime="2018-06-28T16:00:00.000Z" itemprop="datePublished">
           2018-06-29
@@ -172,12 +174,13 @@
     
     
     | 
-    <a href='/tags/hexo/'>hexo</a>,
+    <span class="tag is-info"><a href='/tags/hexo/'>hexo</a></span>,
     
-    <a href='/tags/blog/'>blog</a>
+    <span class="tag is-info"><a href='/tags/blog/'>blog</a></span>
     
     
 </span>
+
                 <h1>使用 Hexo 搭建 Blog</h1>
             </div>
         </div>
