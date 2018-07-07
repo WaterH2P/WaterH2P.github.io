@@ -165,8 +165,8 @@
 <section id="intro">
     <div class="container">
         <div class="row">
-            <div class="col-lg-2 col-md-2"></div>
-            <div class="col-lg-2 col-md-8">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
     			<span class="post-meta">
       <time datetime="2018-06-19T16:00:00.000Z" itemprop="datePublished">
           2018-06-20
@@ -184,8 +184,10 @@
                 <h1>Mysql</h1>
             </div>
         </div>
-        <div class="col-md-8 col-md-offset-2">
-      		<h3 id="建库"><a href="#建库" class="headerlink" title="建库"></a>建库</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">DATABASE</span> databaseName</span><br><span class="line">	<span class="built_in">CHARACTER</span> <span class="keyword">SET</span> utf8</span><br><span class="line">	<span class="keyword">DEFAULT</span> <span class="built_in">CHARACTER</span> <span class="keyword">SET</span> utf8</span><br><span class="line">	<span class="keyword">COLLATE</span> utf8_general_ci</span><br><span class="line">	<span class="keyword">DEFAULT</span> <span class="keyword">COLLATE</span> utf8_general_ci ;</span><br></pre></td></tr></table></figure>
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+          		<h3 id="建库"><a href="#建库" class="headerlink" title="建库"></a>建库</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">DATABASE</span> databaseName</span><br><span class="line">	<span class="built_in">CHARACTER</span> <span class="keyword">SET</span> utf8</span><br><span class="line">	<span class="keyword">DEFAULT</span> <span class="built_in">CHARACTER</span> <span class="keyword">SET</span> utf8</span><br><span class="line">	<span class="keyword">COLLATE</span> utf8_general_ci</span><br><span class="line">	<span class="keyword">DEFAULT</span> <span class="keyword">COLLATE</span> utf8_general_ci ;</span><br></pre></td></tr></table></figure>
 <h3 id="建表"><a href="#建表" class="headerlink" title="建表"></a>建表</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">DROP</span> <span class="keyword">TABLE</span> <span class="keyword">IF</span> <span class="keyword">EXISTS</span> tableName;</span><br><span class="line"></span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> tableName(</span><br><span class="line">...</span><br><span class="line">)<span class="keyword">ENGINE</span>=<span class="keyword">InnoDB</span> <span class="keyword">DEFAULT</span> <span class="keyword">CHARSET</span>=utf8;</span><br></pre></td></tr></table></figure>
 <h3 id="连接"><a href="#连接" class="headerlink" title="连接"></a>连接</h3><ul>
 <li>jdbc</li>
@@ -207,9 +209,10 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">eg:</span><br><span class="line">	CONVERT( value, DECIMAL(10,2) )</span><br><span class="line">		保留两位小数</span><br></pre></td></tr></table></figure>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-            <div class="clearfix"></div>
-            <hr class="nogutter">
+            </div>
         </div>
+        <div class="clearfix"></div>
+        <hr class="nogutter">
         <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
     
     <a class="pull-left" href="/2018/06/29/使用 Hexo 搭建 Blog/" style="float: left;">
