@@ -17,7 +17,7 @@
 <!--<![endif]-->
 
 <head>
-  <title>H2P&#39;S BLOG</title>
+  <title>Vultr 搭建 ss | H2P&#39;S BLOG</title>
   <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -63,7 +63,7 @@
 </head>
 
 <!--
-<body class="home-template">
+<body class="post-template">
 -->
 <body id="index" class="lightnav animsition">
 
@@ -161,47 +161,13 @@
 
         <!-- ============================ Header & Logo bar =========================== -->
 
-      <!-- ============================ Hero Image =========================== -->
-
-<section id="hero" class="scrollme">
-    <div class="container-fluid element-img" style="background: url(/img/zly_smallest.jpg) no-repeat center center fixed;background-size: cover">
-        <div class="row">
-            <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 vertical-align cover boost text-center">
-                <div class="center-me animateme" data-when="exit" data-from="0" data-to="0.6" data-opacity="0" data-translatey="100">
-                    <div>
-                        <!-- 首页显示的话 -->
-                        
-                        <h2></h2>
-                        <p></p>
-                        
-                    </div>
-                </div>
-            </div>
-            <!-- // .col-md-12 -->
-        </div>
-        <div class="herofade beige-dk"></div>
-    </div>
-</section>
-
-<!-- Height spacing helper -->
-<div class="heightblock"></div>
-<!-- // End height spacing helper -->
-
-<!-- ============================ END Hero Image =========================== -->
-<!-- ============================ Content =========================== -->
-
+      
 <section id="intro">
     <div class="container">
-        
-        
         <div class="row">
-            <div class="col-lg-2 col-md-2"></div>
-            <div class="col-lg-8 col-md-8 opening-statement">
-                <div class="row">
-                    <div class="col-lg-4 col-md-4">
-                        <h3><a href="/2018/08/29/Vultr 搭建 ss/">Vultr 搭建 ss</a></h3>
-                        <span>
-                            <span class="post-meta">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+    			<span class="post-meta">
       <time datetime="2018-08-28T16:00:00.000Z" itemprop="datePublished">
           2018-08-29
       </time>
@@ -215,122 +181,119 @@
     
 </span>
 
-                        </span>
-                    </div>
-                    <div class="col-lg-8 col-md-8" style="border-left:3px solid #697A82; background-color:#F6F6F6">
-                        <p>
-                          
-                            使用 Vultr 服务器搭建 ss
-                          
-                        </p>
-                        
-                        <p class="pull-right readMore" style="margin:10px 0 0 0">
-                            <a href="/2018/08/29/Vultr 搭建 ss/">Read More...</a>
-                        </p>
-                        
-                    </div>
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
+                <h1>Vultr 搭建 ss</h1>
             </div>
         </div>
-        
         <div class="row">
-            <div class="col-lg-2 col-md-2"></div>
-            <div class="col-lg-8 col-md-8 opening-statement">
-                <div class="row">
-                    <div class="col-lg-4 col-md-4">
-                        <h3><a href="/2018/06/29/使用 Hexo 搭建 Blog/">使用 Hexo 搭建 Blog</a></h3>
-                        <span>
-                            <span class="post-meta">
-      <time datetime="2018-06-28T16:00:00.000Z" itemprop="datePublished">
-          2018-06-29
-      </time>
-    
-    
-    | 
-    <span class="tag is-info"><a href='/tags/hexo/'>hexo</a></span>,
-    
-    <span class="tag is-info"><a href='/tags/blog/'>blog</a></span>
-    
-    
-</span>
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+          		<blockquote>
+<p>MacOS 10.13.6</p>
+<p><a href="https://www.freeluffy.com/vultr-vps-ss/" target="_blank" rel="noopener">Vultr（VPS）搭建SS服务器图文教程 三步十分钟带你畅游全网！</a></p>
+</blockquote>
+<h3 id="购买-Vultr-服务器"><a href="#购买-Vultr-服务器" class="headerlink" title="购买 Vultr 服务器"></a>购买 Vultr 服务器</h3><ol>
+<li><p><a href="https://www.vultr.com/" target="_blank" rel="noopener">Vultr 官网</a></p>
+</li>
+<li><p>注册登录</p>
+</li>
+<li><p>点击左侧 <code>Servers</code> ，点击右侧蓝色的 <code>+</code> 号。</p>
+</li>
+<li><p>选择服务器类型</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">我选的是：Silicon Valley / CentOS 6 x64 / $3.5</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Deploy Now</p>
+</li>
+</ol>
+<h3 id="配置服务器"><a href="#配置服务器" class="headerlink" title="配置服务器"></a>配置服务器</h3><ol>
+<li><p>登录服务器 <code>ssh root@服务器IP</code> ，输入密码。</p>
+</li>
+<li><p>输入命令： <code>wget –no-check-certificate  https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks.sh</code> ，回车。</p>
+</li>
+<li><p>输入命令：<code>chmod +x shadowsocks.sh</code> 。</p>
+</li>
+<li><p>输入命令：<code>./shadowsocks.sh 2&gt;&amp;1 | tee shadowsocks.log</code> 。</p>
+<ol>
+<li><p>首先输入的是 <code>password</code> ，就是将来用于连接的密码。</p>
+</li>
+<li><p>接着选择端口号。</p>
+</li>
+<li><p>最后选择加密方式。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">我选择的是 7 aes-256-cfb</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+</li>
+<li><p>【接下来是一段时间的安装过程，你可以休息一下。】</p>
+</li>
+<li><p>安装完成会显示服务器 ss 信息。</p>
+</li>
+</ol>
+<h3 id="配置客户端"><a href="#配置客户端" class="headerlink" title="配置客户端"></a>配置客户端</h3><p>。。。。。。</p>
 
-                        </span>
-                    </div>
-                    <div class="col-lg-8 col-md-8" style="border-left:3px solid #697A82; background-color:#F6F6F6">
-                        <p>
-                          
-                            此文介绍使用 Hexo + Github 架构搭建个人博客的详细步骤
-                          
-                        </p>
-                        
-                        <p class="pull-right readMore" style="margin:10px 0 0 0">
-                            <a href="/2018/06/29/使用 Hexo 搭建 Blog/">Read More...</a>
-                        </p>
-                        
-                    </div>
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
             </div>
         </div>
-        
-        <div class="row">
-            <div class="col-lg-2 col-md-2"></div>
-            <div class="col-lg-8 col-md-8 opening-statement">
-                <div class="row">
-                    <div class="col-lg-4 col-md-4">
-                        <h3><a href="/2018/06/20/Mysql/">Mysql</a></h3>
-                        <span>
-                            <span class="post-meta">
-      <time datetime="2018-06-19T16:00:00.000Z" itemprop="datePublished">
-          2018-06-20
-      </time>
+        <div class="clearfix"></div>
+        <hr class="nogutter">
+        <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
     
     
-    | 
-    <span class="tag is-info"><a href='/tags/sql/'>sql</a></span>,
+    <a class="pull-right" href="/2018/06/29/使用 Hexo 搭建 Blog/">
+        使用 Hexo 搭建 Blog →
+    </a>
     
-    <span class="tag is-info"><a href='/tags/mysql/'>mysql</a></span>
-    
-    
-</span>
+</nav>
 
-                        </span>
-                    </div>
-                    <div class="col-lg-8 col-md-8" style="border-left:3px solid #697A82; background-color:#F6F6F6">
-                        <p>
-                          
-                            MySQL 的一些基本语法，以及与 Java 一起使用
-                          
-                        </p>
-                        
-                        <p class="pull-right readMore" style="margin:10px 0 0 0">
-                            <a href="/2018/06/20/Mysql/">Read More...</a>
-                        </p>
-                        
-                    </div>
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <nav class="pagination" role="pagination">
-          
-          
-        </nav>
+        <div class="col-md-8 col-md-offset-2 col-sm-24"><script type="text/javascript">
+  /**
+   * 搜狐畅言
+   */
+
+  /*
+  document.write('<div id="SOHUCS" sid="' + window.location.pathname.slice(1) + '" ></div>');
+
+  window.onload = function () {
+    (function () {
+      var appid = 'cytXXXX';
+      var conf = 'prod_xxxxxxxxxxxxxxxxx';
+      var width = window.innerWidth || document.documentElement.clientWidth;
+      var loadJs = function (d, a, id) {
+        var c = document.getElementsByTagName("head")[0] || document.head || document.documentElement;
+        var b = document.createElement("script");
+        b.setAttribute("type", "text/javascript");
+        b.setAttribute("charset", "UTF-8");
+        b.setAttribute("src", d);
+        if (id) {
+          b.setAttribute("id", id);
+        }
+        if (typeof a === "function") {
+          if (window.attachEvent) {
+            b.onreadystatechange = function () {
+              var e = b.readyState;
+              if (e === "loaded" || e === "complete") {
+                b.onreadystatechange = null;
+                a()
+              }
+            }
+          } else {
+            b.onload = a
+          }
+        }
+        c.appendChild(b)
+      };
+
+      loadJs("https://changyan.sohu.com/upload/changyan.js", function () {
+        window.changyan.api.config({
+          appid: appid,
+          conf: conf
+        })
+      });
+    })();
+  }
+  */
+
+</script>
+</div>
     </div>
 </section>
-<section id="statement">
-    <div class="container text-center wow fadeInUp" data-wow-delay="0.5s">
-        <div class="row justify-content-center">
-            <p style="">给岁月以文明，给时光以生命。</p>
-        </div>
-    </div>
-</section>
-<!-- ============================ END Content =========================== -->
 
 
       
