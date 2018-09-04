@@ -17,7 +17,7 @@
 <!--<![endif]-->
 
 <head>
-  <title>Vultr 搭建 ss | H2P&#39;S BLOG</title>
+  <title>Vultr 搭建 ss / ssr | H2P&#39;S BLOG</title>
   <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -167,12 +167,14 @@
     | 
     <span class="tag is-info"><a href='/tags/vultr/'>vultr</a></span>,
     
-    <span class="tag is-info"><a href='/tags/ss/'>ss</a></span>
+    <span class="tag is-info"><a href='/tags/ss/'>ss</a></span>,
+    
+    <span class="tag is-info"><a href='/tags/ssr/'>ssr</a></span>
     
     
 </span>
 
-                <h1>Vultr 搭建 ss</h1>
+                <h1>Vultr 搭建 ss / ssr</h1>
             </div>
         </div>
         <div class="row">
@@ -185,7 +187,7 @@
 <p><a href="https://juejin.im/entry/5b03ca66518825426d2d753e" target="_blank" rel="noopener">关于一次Vultr搭建酸酸乳（ssr）的详细教程</a></p>
 <p><a href="https://blog.csdn.net/mmcooo/article/details/80094194" target="_blank" rel="noopener">SSR高阶协议与混淆的使用</a></p>
 </blockquote>
-<h3 id="购买-Vultr-服务器"><a href="#购买-Vultr-服务器" class="headerlink" title="购买 Vultr 服务器"></a>购买 Vultr 服务器</h3><ol>
+<h1 id="搭建-ss"><a href="#搭建-ss" class="headerlink" title="搭建 ss"></a>搭建 ss</h1><h3 id="购买-Vultr-服务器"><a href="#购买-Vultr-服务器" class="headerlink" title="购买 Vultr 服务器"></a>购买 Vultr 服务器</h3><ol>
 <li><p><a href="https://www.vultr.com/" target="_blank" rel="noopener">Vultr 官网</a></p>
 </li>
 <li><p>注册登录</p>
@@ -211,7 +213,7 @@
 <li><p>接着选择端口号。</p>
 </li>
 <li><p>最后选择加密方式。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">我选择的是 7 aes-256-gcm</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">aes-256-gcm</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
 </li>
@@ -232,6 +234,57 @@
 </li>
 <li><p>检测安装是否成功</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lsmod | grep bbr  //返回值有 tcp_bbr 模块即说明bbr已启动。</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h1 id="搭建-ssr"><a href="#搭建-ssr" class="headerlink" title="搭建 ssr"></a>搭建 ssr</h1><h3 id="购买-Vultr-服务器-1"><a href="#购买-Vultr-服务器-1" class="headerlink" title="购买 Vultr 服务器"></a>购买 Vultr 服务器</h3><ol>
+<li><p><a href="https://www.vultr.com/" target="_blank" rel="noopener">Vultr 官网</a></p>
+</li>
+<li><p>注册登录</p>
+</li>
+<li><p>点击左侧 <code>Servers</code> ，点击右侧蓝色的 <code>+</code> 号。</p>
+</li>
+<li><p>选择服务器类型</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">我选的是：Los Angeles / CentOS 7 x64 / $3.5</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Deploy Now</p>
+</li>
+</ol>
+<h3 id="配置服务器-1"><a href="#配置服务器-1" class="headerlink" title="配置服务器"></a>配置服务器</h3><ol>
+<li><p>登录服务器 <code>ssh root@服务器IP</code> ，输入密码。</p>
+</li>
+<li><p>输入命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">wget --no-check-certificate -O shadowsocks-all.sh https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks-all.sh</span><br><span class="line">chmod +x shadowsocks-all.sh</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>输入命令：<code>./shadowsocks-all.sh 2&gt;&amp;1 | tee shadowsocks-all.log</code> 。</p>
+<ol>
+<li><p>首先选择类型 <code>ShadowsocksR</code> 。</p>
+</li>
+<li><p>输入 <code>password</code> ，就是将来用于连接的密码。</p>
+</li>
+<li><p>选择端口号。</p>
+</li>
+<li><p>选择加密方式。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">aes-256-cfb</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>选择协议</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tls1.2_ticket_auth</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+</li>
+<li><p>【接下来是一段时间的安装过程，你可以休息一下。】</p>
+</li>
+<li><p>安装完成会显示服务器 ss 信息。</p>
+</li>
+</ol>
+<h3 id="配置客户端-1"><a href="#配置客户端-1" class="headerlink" title="配置客户端"></a>配置客户端</h3><p>。。。。。。</p>
+<h3 id="加速-1"><a href="#加速-1" class="headerlink" title="加速"></a>加速</h3><ol>
+<li><p>BBR 加速</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget --no-check-certificate https://github.com/teddysun/across/raw/master/bbr.sh &amp;&amp; chmod +x bbr.sh &amp;&amp; ./bbr.sh</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>【安装并重启】</p>
+</li>
+<li><p>检测是否安装成功</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">lsmod | grep bbr</span><br><span class="line"></span><br><span class="line">//返回值有 tcp_bbr 模块即说明 bbr 已启动。注意：并不是所有的 VPS 都会有此返回值，若没有也属正常。</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
 
