@@ -3,16 +3,7 @@
 <html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
 <![endif]-->
 <!--[if (gte IE 9)|!(IE)]><!-->
-<!--
-***************  *      *     *
-      8          *    *       *
-      8          *  *         *
-      8          **           *
-      8          *  *         *
-      8          *    *       *
-      8          *      *     *
-      8          *        *   ***********    -----Theme By Kieran(http://go.kieran.top)
--->
+
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN">
 <!--<![endif]-->
 
@@ -59,13 +50,28 @@
   
   
 
-  <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
+  <style>
+    .col-md-8.col-md-offset-2.opening-statement img{display:none;}
+    a:hover {
+      cursor: pointer;
+      color : #96d103;
+    }
+    .div-desc {
+      background: #f6f6f6;
+      border-left: 3px solid #697a82;
+      padding-bottom: 25px
+    }
+  </style>
 </head>
 
 <!--
 <body class="post-template">
 -->
 <body id="index" class="lightnav animsition">
+      <!-- 返回页面顶端 -->
+      <div id="div-back-top" style="position: fixed; right: 20px; bottom: 25px; z-index: 5; display: none">
+          <a class="btn btn-primary" onclick="back_to_top()" title="返回顶端">↑</a>
+      </div>
 
       
 <!-- ============================ Off-canvas navigation =========================== -->
@@ -132,7 +138,7 @@
                             
                             <li class="nav-item nolink"><a href="https://weibo.com/5933348875" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
                             
-                            <li class="nav-item nolink"><span>Welcome!</span></li>
+                            <li class="nav-item nolink" style="border-right: none"><span>Welcome!</span></li>
                         </ul>
                     </nav>
                     <!--// Info-bar -->
@@ -140,7 +146,6 @@
                 <!-- // .container -->
                 <div class="learnmore sb-toggle-right">More</div>
                 <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
-                    <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar before"></span>
                     <span class="icon-bar main"></span>
                     <span class="icon-bar after"></span>
@@ -178,13 +183,11 @@
         <div class="row">
             <div class="col-md-2"></div>
             <div class="col-md-8">
-          		<blockquote>
-<p>此文介绍使用 Hexo + Github 架构搭建个人博客的详细步骤</p>
-<p>Mac 操作系统</p>
-</blockquote>
+          		<div class="div-desc"><br>    <span>&nbsp;&nbsp;&nbsp;&nbsp;此文介绍使用 Hexo + Github 架构搭建个人博客的详细步骤</span><br>    <span>&nbsp;&nbsp;&nbsp;&nbsp;最近更新：2018-9-7</span><br>    <span>&nbsp;&nbsp;&nbsp;&nbsp;操作系统：MacOS 10.13.6</span><br></div>
+
 <blockquote>
-<p>【转】<a href="http://sheltonlee.cn/2018/01/29/hexo-blog/" target="_blank" rel="noopener">Shelton Lee</a></p>
 </blockquote>
+<p>【转】<a href="http://sheltonlee.cn/2018/01/29/hexo-blog/" target="_blank" rel="noopener">Shelton Lee</a></p>
 <h3 id="本地博客仓库"><a href="#本地博客仓库" class="headerlink" title="本地博客仓库"></a>本地博客仓库</h3><ul>
 <li><p>安装 Node</p>
 </li>
@@ -267,18 +270,20 @@
         </div>
         <div class="clearfix"></div>
         <hr class="nogutter">
-        <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
-    
-    <a class="pull-left" href="/2018/08/29/Vultr 搭建 ss : ssr/" style="float: left;">
-        ← Vultr 搭建 ss / ssr
-    </a>
-    
-    
-    <a class="pull-right" href="/2018/06/20/Mysql/">
-        Mysql →
-    </a>
-    
-</nav>
+        <div class="row justify-content-center">
+    <nav class="m-pagination col-md-8 col-sm-24" role="pagination">
+        
+        <a class="float-left" href="/2018/08/29/Vultr 搭建 ss : ssr/" style="float: left;">
+            ← Vultr 搭建 ss / ssr
+        </a>
+        
+        
+        <a class="float-right" href="/2018/06/20/Mysql/">
+            Mysql →
+        </a>
+        
+    </nav>
+</div>
 
         <div class="col-md-8 col-md-offset-2 col-sm-24"><script type="text/javascript">
   /**
@@ -405,5 +410,43 @@ $('#intro').find('img').each(function(){
 
 
       
+
+      <script>
+          function setPosition() {
+              var max_width = 1450;
+              var min_distance = 20;
+
+              var width = $(window).width();
+              if( width > max_width ){
+                  var right_distance = ( width - max_width) / 2;
+                  right_distance = ( right_distance > min_distance ) ? right_distance : min_distance;
+                  $('#div-back-top').css('right', right_distance + 'px');
+              }
+              else {
+                  $('#div-back-top').css('right', min_distance + 'px');
+              }
+          }
+      </script>
+      <script>
+            $(function () {
+                  setPosition();
+                  $(window).resize(function () {
+                        setPosition();
+                  });
+
+                  // 返回顶端按钮监听
+                  $(window).scroll(function () {
+                        if( $(document).scrollTop() < 10 ){
+                            $('#div-back-top').hide();
+                        }
+                        else {
+                            $('#div-back-top').show();
+                        }
+                  });
+            });
+            function back_to_top(){
+                  $('html').animate({scrollTop: 0}, 'slow');
+            }
+      </script>
 </body>
 </html>
