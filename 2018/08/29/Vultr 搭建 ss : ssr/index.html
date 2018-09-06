@@ -181,14 +181,15 @@
             <div class="col-md-2"></div>
             <div class="col-md-8">
           		<blockquote>
-<p>最近更新：2018-9-4</p>
+<p>最近更新：2018-9-7</p>
 </blockquote>
 <blockquote>
 <p>MacOS 10.13.6</p>
-<p><a href="https://deeponion.org/community/threads/vpnss-ssr.901/" target="_blank" rel="noopener">Vpn与ss/ssr的区别</a></p>
-<p><a href="https://www.freeluffy.com/vultr-vps-ss/" target="_blank" rel="noopener">Vultr（VPS）搭建SS服务器图文教程 三步十分钟带你畅游全网！</a></p>
-<p><a href="https://juejin.im/entry/5b03ca66518825426d2d753e" target="_blank" rel="noopener">关于一次Vultr搭建酸酸乳（ssr）的详细教程</a></p>
-<p><a href="https://blog.csdn.net/mmcooo/article/details/80094194" target="_blank" rel="noopener">SSR高阶协议与混淆的使用</a></p>
+<p>【课外阅读】<a href="https://deeponion.org/community/threads/vpnss-ssr.901/" target="_blank" rel="noopener">Vpn与ss/ssr的区别</a></p>
+</blockquote>
+<blockquote>
+<p>【转】<a href="https://www.freeluffy.com/vultr-vps-ss/" target="_blank" rel="noopener">Vultr（VPS）搭建SS服务器图文教程 三步十分钟带你畅游全网！</a></p>
+<p>【转】<a href="https://www.cokemine.com/vpsyh.html" target="_blank" rel="noopener">VPS网络优化各种方法汇总——锐速/BBR/BBR魔改版一键安装脚本</a></p>
 </blockquote>
 <h1 id="搭建-ss"><a href="#搭建-ss" class="headerlink" title="搭建 ss"></a>搭建 ss</h1><h3 id="购买-Vultr-服务器"><a href="#购买-Vultr-服务器" class="headerlink" title="购买 Vultr 服务器"></a>购买 Vultr 服务器</h3><ol>
 <li><p><a href="https://www.vultr.com/" target="_blank" rel="noopener">Vultr 官网</a></p>
@@ -228,17 +229,21 @@
 <h3 id="配置客户端"><a href="#配置客户端" class="headerlink" title="配置客户端"></a>配置客户端</h3><p>。。。。。。</p>
 <h3 id="加速"><a href="#加速" class="headerlink" title="加速"></a>加速</h3><ol>
 <li><p>BBR 加速器（也可以选择其他的）</p>
-<blockquote>
-<p><a href="https://www.cokemine.com/vpsyh.html" target="_blank" rel="noopener">VPS网络优化各种方法汇总——锐速/BBR/BBR魔改版一键安装脚本</a></p>
-</blockquote>
-</li>
-<li><p>输入命令：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">wget --no-check-certificate https://github.com/teddysun/across/raw/master/bbr.sh</span><br><span class="line">chmod +x bbr.sh</span><br><span class="line">./bbr.sh</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>【安装并重启】</p>
 </li>
 <li><p>检测安装是否成功</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lsmod | grep bbr  //返回值有 tcp_bbr 模块即说明bbr已启动。</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
+<blockquote>
+<p>【课外阅读】<a href="https://juejin.im/entry/5b03ca66518825426d2d753e" target="_blank" rel="noopener">关于一次Vultr搭建酸酸乳（ssr）的详细教程</a></p>
+<p>【课外阅读】<a href="https://blog.csdn.net/mmcooo/article/details/80094194" target="_blank" rel="noopener">SSR高阶协议与混淆的使用</a></p>
+</blockquote>
+<blockquote>
+<p>【转】<a href="https://lccurious.github.io/2018/03/03/vlutr-ssr/" target="_blank" rel="noopener">在Vultr上搭建SSR服务</a></p>
+</blockquote>
 <h1 id="搭建-ssr"><a href="#搭建-ssr" class="headerlink" title="搭建 ssr"></a>搭建 ssr</h1><h3 id="购买-Vultr-服务器-1"><a href="#购买-Vultr-服务器-1" class="headerlink" title="购买 Vultr 服务器"></a>购买 Vultr 服务器</h3><ol>
 <li><p><a href="https://www.vultr.com/" target="_blank" rel="noopener">Vultr 官网</a></p>
 </li>
@@ -256,12 +261,10 @@
 <li><p>登录服务器 <code>ssh root@服务器IP</code> ，输入密码。</p>
 </li>
 <li><p>输入命令：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">wget --no-check-certificate -O shadowsocks-all.sh https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks-all.sh</span><br><span class="line">chmod +x shadowsocks-all.sh</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">wget --no-check-certificate  https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocksR.sh</span><br><span class="line">chmod +x shadowsocksR.sh</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>输入命令：<code>./shadowsocks-all.sh 2&gt;&amp;1 | tee shadowsocks-all.log</code> 。</p>
+<li><p>输入命令： <code>./shadowsocksR.sh 2&gt;&amp;1 | tee shadowsocksR.log</code> 。</p>
 <ol>
-<li><p>首先选择类型 <code>ShadowsocksR</code> 。</p>
-</li>
 <li><p>输入 <code>password</code> ，就是将来用于连接的密码。</p>
 </li>
 <li><p>选择端口号。</p>
@@ -270,7 +273,7 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">aes-256-cfb</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>选择混淆</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">auth_sha1_v4</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">auth_aes128_md5</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>选择协议</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tls1.2_ticket_auth</span><br></pre></td></tr></table></figure>
@@ -279,18 +282,30 @@
 </li>
 <li><p>【接下来是一段时间的安装过程，你可以休息一下。】</p>
 </li>
-<li><p>安装完成会显示服务器 ss 信息。</p>
+<li><p>安装完成会显示服务器 ssr 信息。</p>
 </li>
 </ol>
 <h3 id="配置客户端-1"><a href="#配置客户端-1" class="headerlink" title="配置客户端"></a>配置客户端</h3><p>。。。。。。</p>
-<h3 id="加速-1"><a href="#加速-1" class="headerlink" title="加速"></a>加速</h3><ol>
-<li><p>BBR 加速</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget --no-check-certificate https://github.com/teddysun/across/raw/master/bbr.sh &amp;&amp; chmod +x bbr.sh &amp;&amp; ./bbr.sh</span><br></pre></td></tr></table></figure>
+<h3 id="加速-1"><a href="#加速-1" class="headerlink" title="加速"></a>加速</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">与 ss 加速相同</span><br></pre></td></tr></table></figure>
+<h2 id="其他问题"><a href="#其他问题" class="headerlink" title="其他问题"></a>其他问题</h2><blockquote>
+<p>【转】 <a href="https://blog.csdn.net/looksun/article/details/49562043" target="_blank" rel="noopener">centos7.0 没有netstat 和 ifconfig命令问题</a></p>
+</blockquote>
+<h3 id="centos7-0-没有netstat-和-ifconfig命令问题"><a href="#centos7-0-没有netstat-和-ifconfig命令问题" class="headerlink" title="centos7.0 没有netstat 和 ifconfig命令问题"></a>centos7.0 没有netstat 和 ifconfig命令问题</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">yum search ifconfig</span><br><span class="line"></span><br><span class="line">通过 yum search 这个命令我们发现 ifconfig 这个命令是在 net-tools.x86_64 这个包里，接下来我们安装这个包就行了</span><br><span class="line"></span><br><span class="line">运行  yum install net-tools  就OK了</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>【转】<a href="https://blog.csdn.net/u010085423/article/details/78157091/" target="_blank" rel="noopener">Centos7开启SSH服务</a></p>
+</blockquote>
+<ol>
+<li><p>查看本机是否安装SSH软件包</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# rpm -qa | grep ssh </span><br><span class="line">openssh-server-7.4p1-16.el7.x86_64 </span><br><span class="line">openssh-clients-7.4p1-16.el7.x86_64 </span><br><span class="line">libssh2-1.4.3-10.el7_2.1.x86_64 </span><br><span class="line">openssh-7.4p1-16.el7.x86_64</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>【安装并重启】</p>
+<li><p>如果没有，则需要安装</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost /]# yum install openssh-server</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>检测是否安装成功</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">lsmod | grep bbr</span><br><span class="line"></span><br><span class="line">//返回值有 tcp_bbr 模块即说明 bbr 已启动。注意：并不是所有的 VPS 都会有此返回值，若没有也属正常。</span><br></pre></td></tr></table></figure>
+<li><p>开启 SSH 服务</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# service sshd start </span><br><span class="line">Redirecting to /bin/systemctl start sshd.service</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>查看TCP 22端口是否打开</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# netstat -ntpl | grep 22 </span><br><span class="line">tcp 0 0 0.0.0.0:22 0.0.0.0:* LISTEN 674/sshd </span><br><span class="line">tcp6 0 0 :::22 :::* LISTEN 674/sshd</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
 
