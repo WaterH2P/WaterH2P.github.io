@@ -8,8 +8,8 @@
 <!--<![endif]-->
 
 <head>
-  <title>Tag: hexo | H2P&#39;S BLOG</title>
-  <!-- Meta data -->
+    <title>Tag: hexo | H2P&#39;S BLOG</title>
+    <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -46,34 +46,34 @@
     <script src="/js/respond.min.js"></script>
     <![endif]-->
 
-  
-  
-  
+    
+    
+    
 
-  <style>
-    .col-md-8.col-md-offset-2.opening-statement img{display:none;}
-    a:hover {
-      cursor: pointer;
-      color : #96d103;
-    }
-    .div-desc {
-      background: #f6f6f6;
-      border-left: 3px solid #697a82;
-      padding-bottom: 25px
-    }
-  </style>
+    <style>
+        .col-md-8.col-md-offset-2.opening-statement img{display:none;}
+        a:hover {
+            cursor: pointer;
+            color : #96d103;
+        }
+        .div-desc {
+            background: #f6f6f6;
+            border-left: 3px solid #697a82;
+            padding-bottom: 25px
+        }
+    </style>
 </head>
 
 <!--
 <body class="home-template">
 -->
 <body id="index" class="lightnav animsition">
-      <!-- 返回页面顶端 -->
-      <div id="div-back-top" style="position: fixed; right: 20px; bottom: 25px; z-index: 5; display: none">
-          <a class="btn btn-primary" onclick="back_to_top()" title="返回顶端">↑</a>
-      </div>
+    <!-- 返回页面顶端 -->
+    <div id="div-back-top" style="position: fixed; right: 20px; bottom: 25px; z-index: 5; display: none">
+        <a class="btn btn-grey" onclick="back_to_top()" title="返回顶端"><strong>↑</strong></a>
+    </div>
 
-      
+    
 <!-- ============================ Off-canvas navigation =========================== -->
 <!-- More 显示内容 -->
     <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
@@ -156,23 +156,11 @@
 
         <!-- ============================ Header & Logo bar =========================== -->
 
-      <!-- ============================ Hero Image =========================== -->
+    
+<!-- ============================ Hero Image =========================== -->
 
 <section id="hero" class="scrollme">
     <div class="container-fluid element-img" style="background: url(/img/zly_smallest.jpg) no-repeat center center fixed;background-size: cover">
-        <div class="row justify-content-center">
-            <div class="col-xs-12 col-sm-8 col-md-8 vertical-align cover boost text-center">
-                <div class="center-me animateme" data-when="exit" data-from="0" data-to="0.6" data-opacity="0" data-translatey="100">
-                    <div>
-                        
-                        <h2></h2>
-                        <p></p>
-                        
-                    </div>
-                </div>
-            </div>
-            <!-- // .col-md-12 -->
-        </div>
         <div class="herofade beige-dk"></div>
     </div>
 </section>
@@ -218,7 +206,7 @@
     </div>
 </section>
 
-      
+    
 <!-- ============================ Footer =========================== -->
 
 <footer>
@@ -248,7 +236,8 @@
 
 <!-- ============================ END Footer =========================== -->
 
-      <!-- Load our scripts -->
+    
+<!-- Load our scripts -->
 <!-- Resizable 'on-demand' full-height hero -->
 <script type="text/javascript">
     var resizeHero = function () {
@@ -265,67 +254,72 @@
         resizeHero();
     });
 </script>
-<script src="/js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load here -->
-<script src="/js/scripts.js"></script><!-- Theme scripts -->
+
+<!-- Bootstrap core and concatenated plugins always load here -->
+<script src="/js/plugins.min.js"></script>
+
+<!-- Theme scripts -->
+<script src="/js/scripts.js"></script>
 
 
 <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
 <script src="/fancybox/jquery.fancybox.pack.js"></script>
 <script type="text/javascript">
-$('#intro').find('img').each(function(){
-  var alt = this.alt;
+    $('#intro').find('img').each(function(){
+        var alt = this.alt;
 
-  if (alt){
-    $(this).after('<span class="caption" style="display:none">' + alt + '</span>');
-  }
+        if (alt){
+            $(this).after('<span class="caption" style="display:none">' + alt + '</span>');
+        }
 
-  $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox" rel="gallery" />');
-});
-(function($){
-  $('.fancybox').fancybox();
-})(jQuery);
+        $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox" rel="gallery" />');
+    });
+    (function($){
+        $('.fancybox').fancybox();
+    })(jQuery);
 </script>
 
 
 
-      
+    
 
-      <script>
-          function setPosition() {
-              var max_width = 1450;
-              var min_distance = 20;
+    <!-- 设置按钮位置 -->
+    <script>
+        function setPosition() {
+            var max_width = 1450;
+            var min_distance = 20;
 
-              var width = $(window).width();
-              if( width > max_width ){
-                  var right_distance = ( width - max_width) / 2;
-                  right_distance = ( right_distance > min_distance ) ? right_distance : min_distance;
-                  $('#div-back-top').css('right', right_distance + 'px');
-              }
-              else {
-                  $('#div-back-top').css('right', min_distance + 'px');
-              }
-          }
-      </script>
-      <script>
-            $(function () {
-                  setPosition();
-                  $(window).resize(function () {
-                        setPosition();
-                  });
-
-                  // 返回顶端按钮监听
-                  $(window).scroll(function () {
-                        if( $(document).scrollTop() < 10 ){
-                            $('#div-back-top').hide();
-                        }
-                        else {
-                            $('#div-back-top').show();
-                        }
-                  });
-            });
-            function back_to_top(){
-                  $('html').animate({scrollTop: 0}, 'slow');
+            var width = $(window).width();
+            if( width > max_width ){
+                var right_distance = ( width - max_width) / 2;
+                right_distance = ( right_distance > min_distance ) ? right_distance : min_distance;
+                $('#div-back-top').css('right', right_distance + 'px');
             }
-      </script>
+            else {
+                $('#div-back-top').css('right', min_distance + 'px');
+            }
+        }
+    </script>
+    <script>
+        $(function () {
+            setPosition();
+            $(window).resize(function () {
+                setPosition();
+            });
+
+            // 返回顶端按钮监听
+            $(window).scroll(function () {
+                if( $(document).scrollTop() < 15 ){
+                    $('#div-back-top').hide();
+                }
+                else {
+                    $('#div-back-top').show();
+                }
+            });
+        });
+        function back_to_top(){
+            $('html').animate({scrollTop: 0}, 'slow');
+        }
+    </script>
 </body>
 </html>

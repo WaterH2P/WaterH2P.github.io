@@ -21,3 +21,15 @@
     transition: all .25s ease-in-out 0s;
     -webkit-transform: scale(1.05);
 }
+
+.div-message-show {
+    border-left:3px solid #697A82;
+    background-color:#f6f6f6
+}
+
+.btn-grey {
+    background-color: #ececec
+}
+.btn-grey:hover {
+    background-color: #dddddd
+}
