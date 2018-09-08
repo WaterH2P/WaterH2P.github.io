@@ -56,6 +56,7 @@
             cursor: pointer;
             color : #96d103;
         }
+        a.own-underline { text-decoration:underline; }
         .div-desc {
             background: #f6f6f6;
             border-left: 3px solid #697a82;
@@ -202,7 +203,7 @@
 
 <blockquote>
 </blockquote>
-<p>【转】<a href="https://lccurious.github.io/2018/03/03/vlutr-ssr/" target="_blank" rel="noopener">在Vultr上搭建SSR服务</a></p>
+<p>【转】<a class="own-underline" href="https://lccurious.github.io/2018/03/03/vlutr-ssr/" target="_blank">在 Vultr 上搭建 SSR 服务</a></p>
 <h1 id="搭建-ssr"><a href="#搭建-ssr" class="headerlink" title="搭建 ssr"></a>搭建 ssr</h1><h3 id="购买-Vultr-服务器"><a href="#购买-Vultr-服务器" class="headerlink" title="购买 Vultr 服务器"></a>购买 Vultr 服务器</h3><ol>
 <li><p><a href="https://www.vultr.com/" target="_blank" rel="noopener">Vultr 官网</a></p>
 </li>
@@ -216,13 +217,13 @@
 <li><p>Deploy Now</p>
 </li>
 <li><p>等服务器处于 <code>Running</code> 状态的时候，首先使用 <code>ssh</code> 登录服务器来判断 IP 是否被墙。</p>
-<blockquote>
-<p>【转】<a href="https://www.vultryhw.com/ssh-forbidden/" target="_blank" rel="noopener">Vultr能ping通 SSH连不上</a></p>
-</blockquote>
+<p>【转】<a class="own-underline" href="https://www.vultryhw.com/ssh-forbidden/" target="_blank">Vultr 能 ping 通 SSH 连不上</a></p>
 <p>TCP阻断与ICMP阻断</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">首先科普一下，阻断（封/墙）的方式目前有两种，一种是 TCP 阻断，一种是 ICMP 阻断。</span><br><span class="line">ping 命令走的是 ICMP 协议，而 ssh 连接的时候是 TCP 协议。</span><br><span class="line">因此，Vultr 出现能 ping 通，ssh 却连不上的这种情况时，就是 ICMP 包被放行了，而 TCP 包却被拦截了，也就是 TCP 阻断。这是目前封禁比较常用的方法，我不禁你 IP，我让你端口用不了，自然也就什么都用不了了。</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
+<blockquote>
+</blockquote>
 <h3 id="配置服务器"><a href="#配置服务器" class="headerlink" title="配置服务器"></a>配置服务器</h3><ol>
 <li><p>登录服务器 <code>ssh root@服务器IP</code> ，输入密码。</p>
 </li>
@@ -251,7 +252,12 @@
 <li><p>安装完成会显示服务器 ssr 信息。</p>
 </li>
 </ol>
-<h3 id="配置客户端"><a href="#配置客户端" class="headerlink" title="配置客户端"></a>配置客户端</h3><h3 id="加速"><a href="#加速" class="headerlink" title="加速"></a>加速</h3><p>【转】<a href="https://www.cokemine.com/vpsyh.html" target="_blank" rel="noopener">VPS网络优化各种方法汇总——锐速/BBR/BBR魔改版一键安装脚本</a></p>
+<blockquote>
+</blockquote>
+<h3 id="配置客户端"><a href="#配置客户端" class="headerlink" title="配置客户端"></a>配置客户端</h3><p>。。。。。。</p>
+<blockquote>
+</blockquote>
+<h3 id="加速"><a href="#加速" class="headerlink" title="加速"></a>加速</h3><p>【转】<a class="own-underline" href="https://www.cokemine.com/vpsyh.html" target="_blank">VPS 网络优化各种方法汇总——锐速/BBR/BBR 魔改版一键安装脚本</a></p>
 <ol>
 <li><p>BBR 加速器（也可以选择其他的）</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">wget --no-check-certificate https://github.com/teddysun/across/raw/master/bbr.sh</span><br><span class="line">chmod +x bbr.sh</span><br><span class="line">./bbr.sh</span><br></pre></td></tr></table></figure>
@@ -262,12 +268,16 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lsmod | grep bbr  //返回值有 tcp_bbr 模块即说明bbr已启动。</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
+<blockquote>
+</blockquote>
 <h3 id="卸载"><a href="#卸载" class="headerlink" title="卸载"></a>卸载</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./shadowsocksR.sh uninstall</span><br></pre></td></tr></table></figure>
+<blockquote>
+</blockquote>
 <h3 id="其他命令"><a href="#其他命令" class="headerlink" title="其他命令"></a>其他命令</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">启动：/etc/init.d/shadowsocks start</span><br><span class="line">停止：/etc/init.d/shadowsocks stop</span><br><span class="line">重启：/etc/init.d/shadowsocks restart</span><br><span class="line">状态：/etc/init.d/shadowsocks status</span><br><span class="line"></span><br><span class="line">配置文件路径：/etc/shadowsocks.json</span><br><span class="line">日志文件路径：/var/log/shadowsocks.log</span><br><span class="line">代码安装目录：/usr/local/shadowsocks</span><br></pre></td></tr></table></figure>
 <hr>
 
 
-<p>【转】<a href="https://www.freeluffy.com/vultr-vps-ss/" target="_blank" rel="noopener">Vultr（VPS）搭建SS服务器图文教程 三步十分钟带你畅游全网！</a></p>
+<p>【转】<a class="own-underline" href="https://www.freeluffy.com/vultr-vps-ss/" target="_blank">Vultr（VPS）搭建 SS 服务器图文教程 三步十分钟带你畅游全网！</a></p>
 <h1 id="搭建-ss"><a href="#搭建-ss" class="headerlink" title="搭建 ss"></a>搭建 ss</h1><h3 id="配置服务器-1"><a href="#配置服务器-1" class="headerlink" title="配置服务器"></a>配置服务器</h3><ol>
 <li><p>登录服务器 <code>ssh root@服务器IP</code> ，输入密码。</p>
 </li>
@@ -293,18 +303,17 @@
 <hr>
 
 
-<h2 id="更多参考"><a href="#更多参考" class="headerlink" title="更多参考"></a>更多参考</h2><div style="background: #f6f6f6; border-left: 3px solid #697a82; padding-bottom: 25px"><br>    &nbsp;&nbsp;<a href="https://deeponion.org/community/threads/vpnss-ssr.901/" target="_blank" rel="noopener">Vpn与ss/ssr的区别</a><br>    &nbsp;&nbsp;<a href="https://blog.csdn.net/mmcooo/article/details/80094194" target="_blank" rel="noopener">SSR高阶协议与混淆的使用</a><br>    &nbsp;&nbsp;<a href="https://juejin.im/entry/5b03ca66518825426d2d753e" target="_blank" rel="noopener">关于一次Vultr搭建酸酸乳（ssr）的详细教程</a><br>    &nbsp;&nbsp;<a href="https://github.com/shadowsocksr-backup/shadowsocks-rss/blob/master/ssr.md" target="_blank" rel="noopener">ShadowsocksR 协议插件文档</a><br>    &nbsp;&nbsp;<a href="https://github.com/shadowsocksr-backup/shadowsocks-rss/wiki/Server-Setup" target="_blank" rel="noopener">ShadowsocksR 服务端安装教程</a><br>    &nbsp;&nbsp;<a href="https://www.vultryhw.com/vultr-all-guides/" target="_blank" rel="noopener">Vultr教程整理页</a><br></div>
-
+<h1 id="更多参考"><a href="#更多参考" class="headerlink" title="更多参考"></a>更多参考</h1><div style="background: #f6f6f6; border-left: 3px solid #697a82; padding-bottom: 25px"><br>    &nbsp;&nbsp;<a class="own-underline" href="https://deeponion.org/community/threads/vpnss-ssr.901/" target="_blank">Vpn 与 ss/ssr 的区别</a><br>    &nbsp;&nbsp;<a class="own-underline" href="https://blog.csdn.net/mmcooo/article/details/80094194" target="_blank">SSR 高阶协议与混淆的使用</a><br>    &nbsp;&nbsp;<a class="own-underline" href="https://juejin.im/entry/5b03ca66518825426d2d753e" target="_blank">关于一次Vultr 搭建酸酸乳（ssr）的详细教程</a><br>    &nbsp;&nbsp;<a class="own-underline" href="https://github.com/shadowsocksr-backup/shadowsocks-rss/blob/master/ssr.md" target="_blank">ShadowsocksR 协议插件文档</a><br>    &nbsp;&nbsp;<a class="own-underline" href="https://github.com/shadowsocksr-backup/shadowsocks-rss/wiki/Server-Setup" target="_blank">ShadowsocksR 服务端安装教程</a><br>    &nbsp;&nbsp;<a class="own-underline" href="https://www.vultryhw.com/vultr-all-guides/" target="_blank">Vultr 教程整理页</a><br></div>
 
 
 <hr>
 
 
-<h2 id="其他问题"><a href="#其他问题" class="headerlink" title="其他问题"></a>其他问题</h2><p>【转】 <a href="https://blog.csdn.net/looksun/article/details/49562043" target="_blank" rel="noopener">centos7.0 没有netstat 和 ifconfig命令问题</a></p>
+<h1 id="其他问题"><a href="#其他问题" class="headerlink" title="其他问题"></a>其他问题</h1><p>【转】<a class="own-underline" href="https://blog.csdn.net/looksun/article/details/49562043" target="_blank">centos7.0 没有 netstat 和 ifconfig 命令问题</a></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]<span class="comment"># yum search ifconfig</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 通过 yum search 这个命令我们发现 ifconfig 这个命令是在 net-tools.x86_64 这个包里，接下来我们安装这个包就行了</span></span><br><span class="line"></span><br><span class="line">[root@localhost ~]<span class="comment"># yum install net-tools</span></span><br></pre></td></tr></table></figure>
 <blockquote>
 </blockquote>
-<p>【转】<a href="https://blog.csdn.net/u010085423/article/details/78157091/" target="_blank" rel="noopener">Centos7开启SSH服务</a></p>
+<p>【转】<a class="own-underline" href="https://blog.csdn.net/u010085423/article/details/78157091/" target="_blank">Centos7 开启 SSH 服务</a></p>
 <ol>
 <li><p>查看本机是否安装SSH软件包</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]<span class="comment"># rpm -qa | grep ssh </span></span><br><span class="line">openssh-server-7.4p1-16.el7.x86_64 </span><br><span class="line">openssh-clients-7.4p1-16.el7.x86_64 </span><br><span class="line">libssh2-1.4.3-10.el7_2.1.x86_64 </span><br><span class="line">openssh-7.4p1-16.el7.x86_64</span><br></pre></td></tr></table></figure>
@@ -321,10 +330,10 @@
 </ol>
 <blockquote>
 </blockquote>
-<p>【转】<a href="https://www.centos.bz/2018/03/centos%e6%9f%a5%e7%9c%8b%e7%ab%af%e5%8f%a3%e5%8d%a0%e7%94%a8%e6%83%85%e5%86%b5%e5%92%8c%e5%bc%80%e5%90%af%e7%ab%af%e5%8f%a3%e5%91%bd%e4%bb%a4/" target="_blank" rel="noopener">Centos查看端口占用情况和开启端口命令</a></p>
+<p>【转】<a class="own-underline" href="https://www.centos.bz/2018/03/centos查看端口占用情况和开启端口命令/" target="_blank">CentOS 查看端口占用情况和开启端口命令</a></p>
 <blockquote>
-<p>【转】<a href="https://blog.csdn.net/sloan6/article/details/41984391" target="_blank" rel="noopener">删除ssh中旧的RSA key</a></p>
 </blockquote>
+<p>【转】<a class="own-underline" href="https://blog.csdn.net/sloan6/article/details/41984391" target="_blank">删除 ssh 中旧的 RSA key</a></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -R IP</span><br></pre></td></tr></table></figure>
 
             </div>
