@@ -3554,6 +3554,8 @@ pre .deletion {
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 20px 0 rgba(40, 40, 40, 0.08);
 }
 
+a.own-underline { text-decoration:underline; }
+
 .card-blog {
     border: none;
     transform: scale(1);
@@ -3579,6 +3581,11 @@ pre .deletion {
     background-color: #dddddd
 }
 
+.div-desc {
+    background: #f6f6f6;
+    border-left: 3px solid #697a82;
+    padding: 10px 0 10px 10px;
+}
 
 .background-color-grey-eee { background-color: #eee; }
 .background-color-grey { background-color: rgba(215, 215, 215, 0.6); }
