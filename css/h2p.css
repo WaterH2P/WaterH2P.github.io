@@ -9,8 +9,6 @@
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 20px 0 rgba(40, 40, 40, 0.08);
 }
 
-a.own-underline { text-decoration:underline; }
-
 .card-blog {
     border: none;
     transform: scale(1);
@@ -24,9 +22,13 @@ a.own-underline { text-decoration:underline; }
     -webkit-transform: scale(1.05);
 }
 
-.div-message-show {
-    border-left:3px solid #697A82;
+.div-message {
+    border-left:3px solid #697a82;
     background-color:#f6f6f6
+}
+
+.div-desc {
+    padding: 10px 0 10px 10px;
 }
 
 .btn-grey {
@@ -34,10 +36,4 @@ a.own-underline { text-decoration:underline; }
 }
 .btn-grey:hover {
     background-color: #dddddd
-}
-
-.div-desc {
-    background: #f6f6f6;
-    border-left: 3px solid #697a82;
-    padding: 10px 0 10px 10px;
 }
