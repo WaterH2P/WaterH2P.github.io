@@ -3583,6 +3583,8 @@ pre .deletion {
     background-color: #dddddd
 }
 
+
+
 .background-color-grey-eee { background-color: #eee; }
 .background-color-grey { background-color: rgba(215, 215, 215, 0.6); }
 .background-color-black-333 { background-color: #333 }
@@ -3591,7 +3593,9 @@ pre .deletion {
 
 
 
-.border-red { border: 1px solid red; }
+.border-red { border-color: red; }
+.border-grey { border-color: grey; }
+.border-right-1 { border-right: 1px solid; }
 
 
 
@@ -3679,6 +3683,7 @@ pre .deletion {
 .height-200 { height: 200px; }
 .height-300 { height: 300px; }
 .height-350 { height: 350px; }
+.height-50-pct { height: 50%; }
 .height-100-pct { height: 100%; }
 
 .min-height-300 { min-height: 300px }
@@ -3689,6 +3694,7 @@ pre .deletion {
 
 
 
+.width-1 { width: 1px }
 .width-30 { width: 30px }
 .width-40 { width: 40px }
 .width-45 { width: 45px }

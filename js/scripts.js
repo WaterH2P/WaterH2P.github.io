@@ -16,13 +16,6 @@ $(document).ready(function($) {
 		// Slidebars off-canvas menu
 		$.slidebars();
 
-		// Popovers [Hover]
-		// $("[data-toggle=popover]")
-		// 	.popover({
-		// 		html:true
-		// 	}
-		// );
-
 		// Page transitions
 		$(".animsition").animsition({
 
@@ -112,7 +105,7 @@ $(document).ready(function($) {
 
 		// Scrollspy for scrollto links in floating faq sidebar
 		var $body = $(document.body);
-		var navHeight = $('.navbar').outerHeight(true) + 80;
+		var navHeight = $('.nav').outerHeight(true) + 80;
 
 		$body.scrollspy({
 			target: '#leftcol',
