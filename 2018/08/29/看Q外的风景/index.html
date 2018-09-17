@@ -344,11 +344,38 @@
 <hr>
 
 
-<h1 id="其他问题"><a href="#其他问题" class="headerlink" title="其他问题"></a>其他问题</h1><p>【转】<a class="own-underline" href="https://blog.csdn.net/looksun/article/details/49562043" target="_blank">centos7.0 没有 netstat 和 ifconfig 命令问题</a></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]<span class="comment"># yum search ifconfig</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 通过 yum search 这个命令我们发现 ifconfig 这个命令是在 net-tools.x86_64 这个包里，接下来我们安装这个包就行了</span></span><br><span class="line"></span><br><span class="line">[root@localhost ~]<span class="comment"># yum install net-tools</span></span><br></pre></td></tr></table></figure>
-<blockquote>
+<h1 id="其他问题"><a href="#其他问题" class="headerlink" title="其他问题"></a>其他问题</h1><blockquote>
+<p>【转】<a class="own-underline" href="https://www.centos.bz/2018/03/centos查看端口占用情况和开启端口命令/" target="_blank">CentOS 查看端口占用情况和开启端口命令</a></p>
 </blockquote>
+<ul>
+<li><p>列出所有端口</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]<span class="comment"># netstat -ntlp</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<blockquote>
+<p>【转】<a class="own-underline" href="https://www.cnblogs.com/moxiaoan/p/5683743.html" target="_blank">CentOS7使用firewalld打开关闭防火墙与端口</a></p>
+</blockquote>
+<ul>
+<li><p>添加端口（以 80 端口为例）（–permanent 永久生效，没有此参数重启后失效）</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]<span class="comment"># firewall-cmd --zone=public --add-port=80/tcp --permanent</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>重新载入</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]<span class="comment"># firewall-cmd --reload</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>查看</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]<span class="comment"># firewall-cmd --zone= public --query-port=80/tcp</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>删除</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]<span class="comment"># firewall-cmd --zone= public --remove-port=80/tcp --permanent</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<blockquote>
+<p>【转】<a class="own-underline" href="https://blog.csdn.net/looksun/article/details/49562043" target="_blank">centos7.0 没有 netstat 和 ifconfig 命令问题</a></p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]<span class="comment"># yum search ifconfig</span></span><br><span class="line"><span class="comment"># 通过 yum search 这个命令我们发现 ifconfig 这个命令是在 net-tools.x86_64 这个包里，</span></span><br><span class="line"><span class="comment"># 接下来我们安装这个包就行了</span></span><br><span class="line">[root@localhost ~]<span class="comment"># yum install net-tools</span></span><br></pre></td></tr></table></figure>
+<blockquote>
 <p>【转】<a class="own-underline" href="https://blog.csdn.net/u010085423/article/details/78157091/" target="_blank">Centos7 开启 SSH 服务</a></p>
+</blockquote>
 <ol>
 <li><p>查看本机是否安装SSH软件包</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]<span class="comment"># rpm -qa | grep ssh </span></span><br><span class="line">openssh-server-7.4p1-16.el7.x86_64 </span><br><span class="line">openssh-clients-7.4p1-16.el7.x86_64 </span><br><span class="line">libssh2-1.4.3-10.el7_2.1.x86_64 </span><br><span class="line">openssh-7.4p1-16.el7.x86_64</span><br></pre></td></tr></table></figure>
@@ -365,14 +392,11 @@
 </ol>
 <blockquote>
 </blockquote>
-<p>【转】<a class="own-underline" href="https://www.centos.bz/2018/03/centos查看端口占用情况和开启端口命令/" target="_blank">CentOS 查看端口占用情况和开启端口命令</a></p>
-<blockquote>
-</blockquote>
 <p>【转】<a class="own-underline" href="https://blog.csdn.net/sloan6/article/details/41984391" target="_blank">删除 ssh 中旧的 RSA key</a></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -R IP</span><br></pre></td></tr></table></figure>
 <blockquote>
-</blockquote>
 <p>【转】<a class="own-underline" href="https://toutyrater.github.io/?q=#v2ray-%E9%85%8D%E7%BD%AE%E6%8C%87%E5%8D%97" target="_blank">V2Ray 配置指南</a></p>
+</blockquote>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">听说这个好😂</span><br></pre></td></tr></table></figure>
 
                 </div>
