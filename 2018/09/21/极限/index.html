@@ -236,7 +236,7 @@
             </div>
             <div class="row justify-content-center">
                 <div class="col-md-8">
-                    <h3 id="函数极限"><a href="#函数极限" class="headerlink" title="函数极限"></a>函数极限</h3><p>$\lim_{x \to x_0}f(x) = A​$ </p>
+                    <h3 id="x函数极限"><a href="#x函数极限" class="headerlink" title="x函数极限"></a>x函数极限</h3><p>$\lim_{x \to x_0}f(x) = A​$ </p>
 <ul>
 <li>$\forall \varepsilon &gt; 0$，$\exists \delta &gt; 0$，当 $0 &lt; |x - x_0| &lt; \delta$ 时，$|f(x) - A| &lt; \varepsilon$ 。 </li>
 </ul>
@@ -246,7 +246,7 @@
 </ul>
 <p>$\lim_{x \to \infty}f(x) = \infty$</p>
 <ul>
-<li>$\forall M &gt; 0$，$\exists X &gt; 0$，当 $|x| &gt; X$ 时，$|f(x)| &lt; M$ 。 </li>
+<li>$\forall M &gt; 0$，$\exists X &gt; 0$，当 $|x| &gt; X$ 时，$|f(x)| &gt; M$ 。 </li>
 </ul>
 <h3 id="数列极限"><a href="#数列极限" class="headerlink" title="数列极限"></a>数列极限</h3><p>$\lim_{n \to \infty}x_n = A$ </p>
 <ul>
@@ -287,10 +287,10 @@
 <li>脱帽法</li>
 </ul>
 <h3 id="函数极限的计算"><a href="#函数极限的计算" class="headerlink" title="函数极限的计算"></a>函数极限的计算</h3><ul>
-<li>七种未定式： $\dfrac{0}{0}​$ , $\dfrac{\infty}{\infty}​$ , $\infty \times 0​$ ; $\infty - \infty​$ ; $\infty^0​$ , $0^0​$ , $1^\infty​$ 。</li>
+<li>七种未定式： $\dfrac{0}{0}$ , $\dfrac{\infty}{\infty}$ , $\infty \times 0$ ; $\infty - \infty$ ; $\infty^0$ , $0^0$ , $1^\infty$ 。</li>
 <li>洛必达法则<ol>
-<li>若 $\lim_{x \to x_0 }f(x) = 0(\infty)$ ，$\lim_{x \to x_0}g(x) = 0(\infty)$ ；</li>
-<li>且 $\lim_{x \to x_0} \dfrac{f’(x)}{g’(x)}$ 存在，则 $\lim_{x \to x_0} \dfrac{f(x)}{g(x)} = \lim_{x \to x_0} \dfrac{f’(x)}{g’(x)}$ 。</li>
+<li>若 $\lim_{x \to x_0}f(x) = 0(\infty)$ ，$\lim_{x \to x_0}g(x) = 0(\infty)$ ；</li>
+<li>且 $lim_{x \to x_0} \dfrac{f’(x)}{g’(x)} 存在$ ，则 $lim_{x \to x_0} \dfrac{f(x)}{g(x)} = lim_{x \to x_0} \dfrac{f’(x)}{g’(x)}$ 。</li>
 </ol>
 </li>
 <li>常用等价无穷小 $(x \to 0)$<ul>
@@ -299,7 +299,7 @@
 </ul>
 </li>
 <li>解题思路<ul>
-<li>$\dfrac{0}{0}$ , $\dfrac{\infty}{\infty}$ , $\infty \times 0$<ul>
+<li>$\dfrac{0}{0}​$ , $\dfrac{\infty}{\infty}​$ , $\infty \times 0​$<ul>
 <li>化简<ul>
 <li>恒等变形<ul>
 <li>有理化<ul>
@@ -444,7 +444,7 @@
 <ol>
 <li>【数学归纳法】$\implies$ $\{x_n\}$ 单调增</li>
 <li>根据递推式证明有界：$x_n &lt; 2$ ，从而数列收敛，极限存在设为 $A$ 。</li>
-<li><strong>对递推式两边取极限</strong>，$\lim_{n \to \infty}x_n = \lim_{n \to \infty}(1 + \dfrac{x_{n - 1}}{1 + x_{n - 1}}) \quad \implies \quad A = 1 + \dfrac{A}{1 + A}$ 。 </li>
+<li><strong>对递推式两边取极限</strong>，$\lim_{n \to \infty}x_n = \lim_{n \to \infty}(1 + \dfrac{x_{n - 1}}{1 + x_{n - 1}}) \quad \implies \quad A = 1 + \dfrac{A}{1 + A}​$ 。 </li>
 </ol>
 </li>
 </ul>
@@ -513,9 +513,13 @@
 <div class="row justify-content-center">
     <nav class="m-pagination col-md-8 col-sm-24" role="pagination">
         
+        <a class="float-left" href="/2018/09/21/在 Hexo 中渲染 MathJax 数学公式/" style="float: left;">
+            ← 在 Hexo 中渲染 MathJax 数学公式
+        </a>
         
-        <a class="float-right" href="/2018/09/21/在 Hexo 中渲染 MathJax 数学公式/">
-            在 Hexo 中渲染 MathJax 数学公式 →
+        
+        <a class="float-right" href="/2018/09/19/Markdown/">
+            MarkDown 使用教程 →
         </a>
         
     </nav>
