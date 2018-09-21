@@ -271,7 +271,7 @@
 <li>讨论 $f(x)$ 在指定区间 $I$ 上的有界性：<ul>
 <li>若 $I$ 为 $[a,b]$ ，用“连续函数 $f(x)$ 在 $[a,b]$ 上必有界”。</li>
 <li>若 $I$ 为 $(a,b)$ ，<ul>
-<li>$$\left. \begin{array} \text{\lim_{x \to a^+}f(x) 存在} &amp; \implies &amp; \text{f(x) 在 a 的右邻域有界} \ \lim_{x \to b^-}f(x) 存在 &amp; \implies &amp; \text{f(x) 在 b 的左邻域有界} \ &amp; &amp; \text{f(x) 在 (a,b) 内连续} \end{array} \right } \implies f(x) 在 (a,b) 内有界 $$ </li>
+<li><script type="math/tex; mode=display">\left. \begin{array} \text{\lim_{x \to a^+}f(x) 存在} & \implies & \text{f(x) 在 a 的右邻域有界} \\ \lim_{x \to b^-}f(x) 存在 & \implies & \text{f(x) 在 b 的左邻域有界} \\ & & \text{f(x) 在 (a,b) 内连续} \end{array} \right \} \implies f(x) 在 (a,b) 内有界</script></li>
 <li>通常 $f(x) 在 (a,b) 内连续​$ 必成立<ul>
 <li>初等函数在其定义区间内必连续</li>
 </ul>
@@ -436,13 +436,13 @@
 </li>
 </ul>
 </li>
-<li>若 ${x_n}$ 由递推式 $x_n = f(x_{n-1})$ 给出，用【单调有界准则】。<ul>
-<li>若 ${x_n}$ 单调增且有上界或者单调减且有下界 $\implies \lim_{n \to \infty}x_n 存在 \iff {x_n} 收敛$ 。 </li>
-<li>设 $x_1 = 1, x_{n+1} = 1+ \dfrac{x_n}{1 + x_n} (n = 1, 2, …)$ ，证明 ${x_n}$ 收敛并求 $\lim_{n \to \infty} x_n$ 。<ul>
+<li>若 $\{x_n\}$ 由递推式 $x_n = f(x_{n-1})$ 给出，用【单调有界准则】。<ul>
+<li>若 $\{x_n\}$ 单调增且有上界或者单调减且有下界 $\implies \lim_{n \to \infty}x_n 存在 \iff {x_n} 收敛$ 。 </li>
+<li>设 $x_1 = 1, x_{n+1} = 1+ \dfrac{x_n}{1 + x_n} (n = 1, 2, …)$ ，证明 $\{x_n\}$ 收敛并求 $\lim_{n \to \infty} x_n$ 。<ul>
 <li>先证存在，再求极限。</li>
 </ul>
 <ol>
-<li>【数学归纳法】$\implies$ ${x_n}$ 单调增</li>
+<li>【数学归纳法】$\implies$ $\{x_n\}$ 单调增</li>
 <li>根据递推式证明有界：$x_n &lt; 2$ ，从而数列收敛，极限存在设为 $A$ 。</li>
 <li><strong>对递推式两边取极限</strong>，$\lim_{n \to \infty}x_n = \lim_{n \to \infty}(1 + \dfrac{x_{n - 1}}{1 + x_{n - 1}}) \quad \implies \quad A = 1 + \dfrac{A}{1 + A}$ 。 </li>
 </ol>
@@ -488,7 +488,7 @@
 </li>
 </ul>
 </li>
-<li>求函数 $F(x) = \begin{cases} \dfrac{x(\pi + 2x)}{2 \cos x}, &amp; x \leq 0 \ \sin\dfrac{1}{x^2 -1}, &amp; x &gt; 0 \end{cases}$ 的间断点，并判断它们的类型。<ol>
+<li>求函数 $F(x) = \begin{cases} \dfrac{x(\pi + 2x)}{2 \cos x}, &amp; x \leq 0 \\ \sin\dfrac{1}{x^2 -1}, &amp; x &gt; 0 \end{cases}$ 的间断点，并判断它们的类型。<ol>
 <li>分段点：$x = 0$ </li>
 <li>无定义点<ul>
 <li>$x &gt; 0$ 时，分母不为 $0$ ，$x = 1$ 。</li>
