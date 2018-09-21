@@ -289,8 +289,8 @@
 <h3 id="函数极限的计算"><a href="#函数极限的计算" class="headerlink" title="函数极限的计算"></a>函数极限的计算</h3><ul>
 <li>七种未定式： $\dfrac{0}{0}$ , $\dfrac{\infty}{\infty}$ , $\infty * 0$ ; $\infty - \infty$ ; $\infty^0$ , $0^0$ , $1^\infty$ 。</li>
 <li>洛必达法则<ol>
-<li>若 $\lim_{x \to <em>}f(x) = 0(\infty)$ ，$\lim_{x \to </em>}g(x) = 0(\infty)$ ；</li>
-<li>且 $lim_{x \to <em>} \dfrac{f’(x)}{g’(x)} 存在$ ，则 $lim_{x \to </em>} \dfrac{f(x)}{g(x)} = lim_{x \to *} \dfrac{f’(x)}{g’(x)}$ 。</li>
+<li>若 $\lim_{x \to }f(x) = 0(\infty)$ ，$\lim_{x \to *}g(x) = 0(\infty)$ ；</li>
+<li>且 $\lim_{x \to <em>} \dfrac{f’(x)}{g’(x)}$ 存在，则 $\lim_{x \to </em>} \dfrac{f(x)}{g(x)} = \lim_{x \to *} \dfrac{f’(x)}{g’(x)}$ 。</li>
 </ol>
 </li>
 <li>常用等价无穷小 $(x \to 0)$<ul>
@@ -503,9 +503,6 @@
 </ul>
 </li>
 </ol>
-<h3 id="不等式"><a href="#不等式" class="headerlink" title="不等式"></a>不等式</h3><ul>
-<li>$|a \pm b| \leq |a| + |b|$ </li>
-</ul>
 
                 </div>
             </div>
@@ -515,6 +512,10 @@
 <!-- 当前博客前后两篇博客 -->
 <div class="row justify-content-center">
     <nav class="m-pagination col-md-8 col-sm-24" role="pagination">
+        
+        <a class="float-left" href="/2018/09/21/在 Hexo 中渲染 MathJax 数学公式/" style="float: left;">
+            ← 在 Hexo 中渲染 MathJax 数学公式
+        </a>
         
         
         <a class="float-right" href="/2018/09/19/Markdown/">
@@ -645,5 +646,22 @@
             $('html').animate({scrollTop: 0}, 'slow');
         }
     </script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<!-- <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
 </body>
 </html>
