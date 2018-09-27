@@ -3548,10 +3548,10 @@ pre .deletion {
     -moz-transition: width ease-in-out 2s; /* Firefox 4 */
     -webkit-transition: width ease-in-out 2s; /* Safari and Chrome */
     -o-transition: width ease-in-out 2s; /* Opera */
-    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.08), 0 2px 10px 0 rgba(40, 40, 40, 0.02);
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.14), 0 2px 10px 0 rgba(40, 40, 40, 0.08);
 }
 .hover-box-shadow:hover {
-    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 20px 0 rgba(40, 40, 40, 0.08);
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.22), 0 2px 20px 0 rgba(40, 40, 40, 0.14);
 }
 
 .card-blog {
@@ -3562,6 +3562,7 @@ pre .deletion {
 }
 
 .card-blog:hover {
+    cursor: pointer;
     transform: scale(1.05);
     transition: all .25s ease-in-out 0s;
     -webkit-transform: scale(1.05);
