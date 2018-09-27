@@ -360,7 +360,7 @@
 <li><p>$\dfrac{ {\rm d}^2 y }{ {\rm d} x^2 } = \dfrac{ {\rm d} ( \dfrac{ {\rm d} y }{ {\rm d} x } ) }{ {\rm d} x }$ </p>
 <ul>
 <li>由于 $\dfrac{ {\rm d} y}{ {\rm d} x } = \dfrac{1}{f’(y)}$ 是关于 $y$ 的函数，所以 $\dfrac{ {\rm d} y}{ {\rm d} x }$ 只能对 $y$ 求导。 </li>
-<li>$\begin{array}{l}\dfrac{ {\rm d}^2 y }{ {\rm d} x^2 } &amp; = \dfrac{ {\rm d} ( \dfrac{ {\rm d} y }{ {\rm d} x } ) / {\rm d} y }{ {\rm d} x / {\rm d} y } = \dfrac{ {\rm d} ( \dfrac{1}{f’(y)} ) }{ {\rm d} y } \cdot \dfrac{ {\rm d} y }{ {\rm d} x } \[1em] &amp; = -\dfrac{ f’’(y) }{ [f’(y)]^2 } \cdot \dfrac{1}{f’(y)} \[1em] &amp; = -\dfrac{ f’’(y) }{ [f’(y)]^3 } =-\dfrac{ f’’(f^{-1}(x)) }{ \{f’[f^{-1}(x)]\}^3 } \end{array}$ </li>
+<li>$\begin{array}{l}\dfrac{ {\rm d}^2 y }{ {\rm d} x^2 } &amp; = \dfrac{ {\rm d} ( \dfrac{ {\rm d} y }{ {\rm d} x } ) / {\rm d} y }{ {\rm d} x / {\rm d} y } = \dfrac{ {\rm d} ( \dfrac{1}{f’(y)} ) }{ {\rm d} y } \cdot \dfrac{ {\rm d} y }{ {\rm d} x } \\ &amp; = -\dfrac{ f’’(y) }{ [f’(y)]^2 } \cdot \dfrac{1}{f’(y)} \\ &amp; = -\dfrac{ f’’(y) }{ [f’(y)]^3 } =-\dfrac{ f’’(f^{-1}(x)) }{ \{f’[f^{-1}(x)]\}^3 } \end{array}$ </li>
 </ul>
 </li>
 </ul>
@@ -400,7 +400,7 @@
 <li>高阶导数<ul>
 <li>$\text{高阶导数} \begin{cases} \text{莱布尼兹公式} \\ \text{找规律用数学归纳法} \\ \text{展开式法} \end{cases}$ </li>
 <li>莱布尼兹公式<ul>
-<li>$\begin{cases} (u \pm v)^{(n)} &amp; = u^{(n)} \pm v^{(n)} \[1em] (uv)^{(n)} &amp; = \sum_{k=0}^{k=n} C_n^k u^{(n - k)} v^{(k)} \\ &amp; = u^{(n)}v + n \cdot u^{(n - 1)}v’ + \dfrac{n(n - 1)}{2} \cdot u^{(n - 2)}v’’ + … + uv^{(n)} \end{cases}$ </li>
+<li>$\begin{cases} (u \pm v)^{(n)} &amp; = u^{(n)} \pm v^{(n)} \\ (uv)^{(n)} &amp; = \sum_{k=0}^{k=n} C_n^k u^{(n - k)} v^{(k)} \\ &amp; = u^{(n)}v + n \cdot u^{(n - 1)}v’ + \dfrac{n(n - 1)}{2} \cdot u^{(n - 2)}v’’ + … + uv^{(n)} \end{cases}$ </li>
 <li>$(a^x)^{(n)} = a^x(\ln a)^n, \quad (e^x)^{(n)} = e^x$ </li>
 <li>$(\sin kx)^{(n)} = k^n \sin( kx + \frac{\pi}{2} \cdot n  )$ </li>
 <li>$(\cos kx)^{(n)} = k^n \cos( kx + \frac{\pi}{2} \cdot n  )$ </li>
@@ -411,7 +411,7 @@
 </li>
 <li>例题<ul>
 <li>$y = x^2 \sin 2x$ ，求 $y^{(50)}$ 。<ul>
-<li>$\begin{array}{l} y^{(50)} &amp; = x^2 \cdot (\sin 2x)^{(50)} + 50(x^2)’ \cdot (\sin 2x)^{(49)} + \dfrac{50 \cdot 49}{2}(x^2)’’ \cdot (\sin 2x)^{(48)} \[1em] &amp; = -2^{50}x^2 \sin 2x + 50 \cdot 2^{50}x \cos 2x + 50 \cdot 49 \cdot 2^{48} \sin 2x \end{array}$ </li>
+<li>$\begin{array}{l} y^{(50)} &amp; = x^2 \cdot (\sin 2x)^{(50)} + 50(x^2)’ \cdot (\sin 2x)^{(49)} + \dfrac{50 \cdot 49}{2}(x^2)’’ \cdot (\sin 2x)^{(48)} \\ &amp; = -2^{50}x^2 \sin 2x + 50 \cdot 2^{50}x \cos 2x + 50 \cdot 49 \cdot 2^{48} \sin 2x \end{array}$ </li>
 </ul>
 </li>
 </ul>
@@ -448,23 +448,23 @@
 <li><p>涉及 $f’(x)$ 的定理</p>
 <ol>
 <li>费马定理<ul>
-<li>设 $f(x)$ 在 $x = x_0$ 处 $\begin{cases} 1) \text{可导} \[1em] 2) \text{取极值} \end{cases} \implies f’(x_0) = 0$ 。</li>
+<li>设 $f(x)$ 在 $x = x_0$ 处 $\begin{cases} 1) \text{可导} \\ 2) \text{取极值} \end{cases} \implies f’(x_0) = 0$ 。</li>
 <li>《费马大定理》</li>
 <li>证明见《高数 18 讲》</li>
 </ul>
 </li>
 <li><p><strong>罗尔定理</strong></p>
 <ul>
-<li>设 $f(x)$ 满足以下三条 $\begin{cases} 1) [a, b] \text{ 连续} \[1em] 2) (a, b) \text{ 内可导} \[1em] 3) f(a) = f(b) \end{cases} \implies \exists \xi \in (a, b) \text{ 使 } f’(\xi) = 0$ 。</li>
+<li>设 $f(x)$ 满足以下三条 $\begin{cases} 1) [a, b] \text{ 连续} \\ 2) (a, b) \text{ 内可导} \\ 3) f(a) = f(b) \end{cases} \implies \exists \xi \in (a, b) \text{ 使 } f’(\xi) = 0$ 。</li>
 </ul>
 </li>
 <li>拉格朗日中值定理<ul>
-<li>设 $f(x)$ 满足 $\begin{cases}  1) [a, b] \text{上连续} \[1em] 2) (a, b) \text{内可导}\end{cases}$ ，则 $\exists \xi \in (a, b)$ ，使 $f’(\xi) = \dfrac{f(b) - f(a)}{b - a}$ 。</li>
+<li>设 $f(x)$ 满足 $\begin{cases}  1) [a, b] \text{上连续} \\ 2) (a, b) \text{内可导}\end{cases}$ ，则 $\exists \xi \in (a, b)$ ，使 $f’(\xi) = \dfrac{f(b) - f(a)}{b - a}$ 。</li>
 <li>若 $f(b) = f(a)$ ，则 $f’(\xi) = 0$ ，即为罗尔定理。</li>
 </ul>
 </li>
 <li>柯西中值定理<ul>
-<li>设 $f(x)$ ， $g(x)$ 满足 $\begin{cases} 1) [a, b] \text{连续} \[1em] 2) (a, b) \text{内可导} \[1em] g’(x) \not= 0 \end{cases}$ ，则 $\dfrac{f’(\xi)}{g’(\xi)} = \dfrac{f(b) - f(a)}{g(b) - g(a)}$ 。</li>
+<li>设 $f(x)$ ， $g(x)$ 满足 $\begin{cases} 1) [a, b] \text{连续} \\ 2) (a, b) \text{内可导} \\ g’(x) \not= 0 \end{cases}$ ，则 $\dfrac{f’(\xi)}{g’(\xi)} = \dfrac{f(b) - f(a)}{g(b) - g(a)}$ 。</li>
 <li>若取 $g(x) = x \implies \dfrac{f(b) - f(a)}{b - a} = \dfrac{f’(\xi)}{1}$ ，即为拉格朗日中值定理。</li>
 <li>柯西中值定理 $\implies$ 拉格朗日中值定理 $\implies$ 罗尔定理</li>
 </ul>
@@ -505,7 +505,7 @@
 <ul>
 <li>设 $f(x)$ 在 $[a, b]$ 上连续，证明 $\exists \xi \in [a, b]$ ，使 $\int_a^b{f(x) {\rm d} x = f(\xi)(b - a)}$ 。<ul>
 <li>由于 $f(x)$ 在 $[a, b]$ 上连续，所以存在 $m \leq f(x) \leq M (x \in [a, b])$ ，$m$ 为最小值，$M$ 为最大值。</li>
-<li>所以 $\begin{array}{l} &amp; \int_a^b{m} {\rm d}x \leq \int_a^bf(x){\rm d}x \leq \int_a^b{M}{\rm d}x \[1em] \implies &amp; m(b - a) \leq \int_a^b{f(x)}{\rm d}x \leq M(b - a) \[1em] \implies &amp; m \leq \dfrac{ \int_a^b{f(x){\rm d}x} }{b - a} \leq M \end{array}$ 。 </li>
+<li>所以 $\begin{array}{l} &amp; \int_a^b{m} {\rm d}x \leq \int_a^bf(x){\rm d}x \leq \int_a^b{M}{\rm d}x \\ \implies &amp; m(b - a) \leq \int_a^b{f(x)}{\rm d}x \leq M(b - a) \\ \implies &amp; m \leq \dfrac{ \int_a^b{f(x){\rm d}x} }{b - a} \leq M \end{array}$ 。 </li>
 <li>所以 $\exists \xi \in [a, b]$ ，使 $f(\xi) = \dfrac{\int_a^b{f(x)}{\rm d}x}{b - a}$ 。</li>
 </ul>
 </li>
@@ -614,7 +614,7 @@
 </li>
 <li>2⃣️</li>
 <li>$\xi \to x \implies f(x)g’’(x) = g(x)f’’(x)$ </li>
-<li>积分： $\begin{array}{l} \dfrac{f(\xi)}{g(\xi)} = \dfrac{f’’(\xi)}{g’’(\xi)} &amp; \implies \int f(x)g’’(x) {\rm d}x = \int g(x)f’’(x) {\rm d}x \[1em] &amp; \implies f(x)g’(x) - \int g’(x)f’(x){\rm d}x = g(x)f’(x) - \int f’(x)g’(x){\rm d}x \[1em] &amp; \implies f(x)g’(x) = g(x)f’(x) \end{array}$  </li>
+<li>积分： $\begin{array}{l} \dfrac{f(\xi)}{g(\xi)} = \dfrac{f’’(\xi)}{g’’(\xi)} &amp; \implies \int f(x)g’’(x) {\rm d}x = \int g(x)f’’(x) {\rm d}x \\ &amp; \implies f(x)g’(x) - \int g’(x)f’(x){\rm d}x = g(x)f’(x) - \int f’(x)g’(x){\rm d}x \\ &amp; \implies f(x)g’(x) = g(x)f’(x) \end{array}$  </li>
 <li>令 $F(x) = f(x)g’(x) - g(x)f’(x)$ <ul>
 <li>$F(a) = f(a)g’(a) - g(a)f’(a) = 0$</li>
 <li>$F(b) = f(b)g’(b) - g(b)f’(b) = 0$  </li>
@@ -692,7 +692,7 @@
 <li>$ \dfrac{ f’(\eta) }{ e^\eta } $ 像柯西中值定理</li>
 </ul>
 </li>
-<li>其中 $ \begin{cases} \dfrac{ f’(\eta) }{ e^\eta } &amp; = \dfrac{ f(b) - f(a) }{ e^b - e^a } \quad ( g(x) = e^x ) \[1em] f’(\xi) &amp; = \dfrac{ f(b) - f(a) }{ b - a } \end{cases} $ 。</li>
+<li>其中 $ \begin{cases} \dfrac{ f’(\eta) }{ e^\eta } &amp; = \dfrac{ f(b) - f(a) }{ e^b - e^a } \quad ( g(x) = e^x ) \\ f’(\xi) &amp; = \dfrac{ f(b) - f(a) }{ b - a } \end{cases} $ 。</li>
 </ul>
 </li>
 </ul>
