@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+
+    
+<head>
+    <title>一元函数微分学 | H2P&#39;S BLOG</title>
+    <!-- Meta data -->
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="H2P'S BLOG">
+    <meta name="author" content="WaterH2P">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicon, (keep icon in root folder) -->
+    <link rel="Shortcut Icon" href="/img/wolf_small.png" type="image/ico">
+
+    <link rel="alternate" href="/atom.xml" title="H2P&#39;S BLOG" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/all.css" media="screen" type="text/css">
+    
+    <link rel="stylesheet" href="/highlightjs/vs.css" type="text/css">
+    
+
+    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
+    <script src="/js/jquery-3.3.1.min.js"></script>
+    <script src="/js/popper.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+
+    
+    
+    
+
+    <style>
+        .col-md-8.col-md-offset-2.opening-statement img{display:none;}
+        a:hover {
+            cursor: pointer;
+            color : #96d103;
+        }
+        a.own-underline { text-decoration:underline; }
+    </style>
+</head>
+
+    <!--
+    <body class="post-template">
+    -->
+<body id="index" class="lightnav animsition">
+    <!-- 返回页面顶端 -->
+    <div id="div-back-top" style="position: fixed; right: 20px; bottom: 25px; z-index: 5; display: none">
+        <a class="btn btn-grey" onclick="back_to_top()" title="返回顶端"><strong>↑</strong></a>
+    </div>
+
+    
+    <!-- ============================ Off-canvas navigation =========================== -->
+    <!-- More 显示内容 -->
+    <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
+        <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
+            <img src="/img/close.png" alt="Close"/>
+        </div>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu">
+            <li><a href="/" class="animsition-link" title="Home">Home</a></li>
+            <li><a href="/archives" class="animsition-link" title="archive">archives</a></li>
+            <!-- Dropdown Menu -->
+			 
+            
+            
+            <li>
+                <a class="sb-toggle-submenu">Friends<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                    <li><a href="http://yellowfefe.cn/" class="animsition-link" target="_blank">Yellowfefe</a></li>
+                    
+                    <li><a href="http://sheltonlee.cn/" class="animsition-link" target="_blank">SheltonLee</a></li>
+                    
+                </ul>
+            </li>
+            
+        </ul>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu secondary">
+            
+            <li><a href="/about.html" class="animsition-link" title="about">About</a></li>
+            <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li>
+        </ul>
+    </div>
+
+    <!-- ============================ END Off-canvas navigation =========================== -->
+
+    <!-- ============================ #sb-site Main Page Wrapper =========================== -->
+
+    <!--&lt;!&ndash; 首页顶端中间显示的内容 &ndash;&gt;-->
+    <!--<div id="sb-site">-->
+        <!--&lt;!&ndash; #sb-site - All page content should be contained within this id, except the off-canvas navigation itself &ndash;&gt;-->
+        <!--&lt;!&ndash; ============================ Header & Logo bar =========================== &ndash;&gt;-->
+
+        <!--<div id="navigation" class="navbar navbar-expand-lg navbar-fixed-top" style="z-index: 5; width: 100%; padding: 0;">-->
+            <!--<div class="navbar-inner" style="width: 100%">-->
+                <!--<div class="container">-->
+                    <!--&lt;!&ndash; Nav logo &ndash;&gt;-->
+                    <!--<div class="logo">-->
+                        <!--<a href="/" title="Logo" class="animsition-link">-->
+                        <!-- <img src="/img/wolf_orange_small.png" alt="Logo" width="35px;"/> -->
+                        <!--</a>-->
+                    <!--</div>-->
+                    <!--&lt;!&ndash; // Nav logo &ndash;&gt;-->
+                    <!--&lt;!&ndash; Info-bar &ndash;&gt;-->
+                    <!--<ul class="navbar-nav justify-content-center">-->
+                        <!--<li class="nav-item nolink">-->
+                            <!--<a href="/" class="animsition-link">H2P'S BLOG</a>-->
+                        <!--</li>-->
+                        <!---->
+                            <!--<li class="nav-item nolink"><a href="https://github.com/WaterH2P" title="Github" target="_blank"><i class="icon-github"></i></a></li>-->
+                        <!---->
+                        <!---->
+                            <!--<li class="nav-item nolink"><a href="https://weibo.com/5933348875" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>-->
+                        <!---->
+                        <!--<li class="nav-item nolink" style="border-right: none"><span>Welcome!</span></li>-->
+                    <!--</ul>-->
+                    <!--&lt;!&ndash;// Info-bar &ndash;&gt;-->
+                <!--</div>-->
+                <!--&lt;!&ndash; // .container &ndash;&gt;-->
+                <!--<div class="learnmore sb-toggle-right">More</div>-->
+                <!--<button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">-->
+                    <!--<span class="icon-bar before"></span>-->
+                    <!--<span class="icon-bar main"></span>-->
+                    <!--<span class="icon-bar after"></span>-->
+                <!--</button>-->
+            <!--</div>-->
+            <!--&lt;!&ndash; // .navbar-inner &ndash;&gt;-->
+        <!--</div>-->
+
+        <!--&lt;!&ndash; ============================ Header & Logo bar =========================== &ndash;&gt;-->
+    <!--</div>-->
+
+    <!-- 首页顶端中间显示的内容 -->
+    <div id="sb-site">
+        <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <div class="nav" style="width: 100%">
+            <!-- Nav logo -->
+            
+                <div class="nav-item" style="margin-left: 25px; vertical-align: center">
+                    <a href="/" title="Logo" class="navbar-brand">
+                        <img src="/img/wolf_orange_small.png" alt="Logo" style="width: 40px"/>
+                    </a>
+                </div>
+            
+            <!-- Nav logo -->
+            <div class="mx-auto">
+                <ul class="nav justify-content-center">
+                    <li class="nav-item nav-link border-right-1 border-grey" style="padding: 0 16px; margin: 8px 0">
+                        <a href="/">H2P'S BLOG</a>
+                    </li>
+                    
+                        <li class="nav-item nav-link border-right-1 border-grey" style="padding: 0 16px; margin: 8px 0">
+                            <a href="https://github.com/WaterH2P" title="Github" target="_blank"><i class="icon-github"></i></a>
+                        </li>
+                    
+                    
+                        <li class="nav-item nav-link border-right-1 border-grey" style="padding: 0 16px; margin: 8px 0">
+                            <a href="https://weibo.com/5933348875" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>
+                        </li>
+                    
+                    <li class="nav-item nav-link">
+                        <span>Welcome!</span>
+                    </li>
+                </ul>
+                <div class="learnmore sb-toggle-right">More</div>
+                <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
+                    <span class="icon-bar before"></span>
+                    <span class="icon-bar main"></span>
+                    <span class="icon-bar after"></span>
+                </button>
+            </div>
+            <!-- .navbar-inner -->
+        </div>
+
+        <!-- ============================ Header & Logo bar =========================== -->
+    </div>
+
+    
+    
+    <section id="intro">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    
+<span class="post-meta">
+    <!-- blog 的 date -->
+    
+        <span>
+            2018-09-28
+        </span>
+        <span>&nbsp;&nbsp;</span>
+    
+    <!-- blog 的 tags -->
+    
+    
+    
+    <span class="tag is-info">
+        <a href='/tags/maths/'>maths</a>
+    </span>
+    ,
+    
+    <span class="tag is-info">
+        <a href='/tags/cs/'>cs</a>
+    </span>
+    ,
+    
+    <span class="tag is-info">
+        <a href='/tags/kaoyan/'>kaoyan</a>
+    </span>
+    
+    
+    
+</span>
+
+                    <h1>一元函数微分学</h1>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="div-message div-desc">
+                        
+                            <span>做笔记，喝凉茶，看高数</span>
+                            <br>
+                        
+                        
+                            <span>最近更新：2018-09-28</span>
+                            <br>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><p>$lim_{\Delta x \to 0} \dfrac{f(x_0 + \Delta x) - f(x_0)}{\Delta x}$ 记为 $f’(x_0)$ ：（瞬时）变化率。</p>
+<ul>
+<li>$f$ 对 $x$ 的变化率：$\dfrac{ {\rm d} f}{ {\rm d} x} = f’_x$ 。</li>
+<li>$\begin{cases} \lim_{\Delta x \to 0}\dfrac{f(x_0 + \Delta x) - f(x_0)}{\Delta x} &amp; \to \text{增量式} \\ \lim_{x \to x_0}\dfrac{f(x) - f(x_0)}{x - x_0} &amp; \to \text{差值式} \end{cases}$ </li>
+<li><p>【注】</p>
+<ol>
+<li><p>【左右有别】</p>
+<ul>
+<li>$lim_{\Delta x \to 0^+} \dfrac{f(x_0 + \Delta x) - f(x_0)}{\Delta x} = f’_+(x_0)$ 右导数</li>
+<li>$lim_{\Delta x \to 0^-} \dfrac{f(x_0 + \Delta x) - f(x_0)}{\Delta x} = f’_-(x_0)$ 左导数</li>
+<li><strong>因此 $f’(x_0)$ 存在 $\iff$ $f’_-(x_0) = f’_+(x_0)$ 。</strong> <ul>
+<li>只有单侧极限，不能确定导数存在。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>$\Delta x \to $ （广义化）🐶</p>
+<ul>
+<li>$f’(x_0) = \lim_{🐶 \to 0}\dfrac{f(x_0 + 🐶) - f(x_0)}{🐶}$ </li>
+<li>三个 🐶 一摸一样（凑定义）</li>
+</ul>
+</li>
+<li><p>一静一动原则</p>
+<ul>
+<li><p>不可违反此原则</p>
+</li>
+<li><p>$\lim_{2 \Delta x \to 0}\dfrac{f(x_0 + \Delta x) - f(x_0 - \Delta x)}{2 \Delta x} = f’(x_0)$ 就是典型错误</p>
+</li>
+</ul>
+</li>
+<li><p>等价写法（换元法）</p>
+<ul>
+<li>令 $x_0 + \Delta x = x \implies \lim_{x \to x_0}\dfrac{f(x) - f(x_0)}{x - x_0} = f’(x_0)$ 。 </li>
+</ul>
+</li>
+</ol>
+</li>
+<li><p>例题</p>
+<ul>
+<li>下列函数中，在 $x = 0$ 处不可导的是 $()$ 。【具体型】<ul>
+<li>$\begin{array}{l} A. f(x) = |x| \sin |x| &amp; B. f(x) = |x| \sin \sqrt{|x|} \\ C. f(x) = \cos |x| &amp; D. f(x) = \cos \sqrt{|x|} \end{array}$ </li>
+<li>分析<ul>
+<li>只要见到 $f’(x_0)$ $\implies$ 先写导数定义。<ul>
+<li>当题目给出 $f(x)$ ，写【差值式】。</li>
+<li>有界值 $\times$ 无穷小 $=$ 无穷小</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>设 $f(0) = 0$ ，以下极限存在能确定 $f(x)$ 在点 $x = 0$ 可导的是 $()$ 。</strong>【抽象型】<ul>
+<li>$\begin{array}{l} A. \lim_{h \to 0}\dfrac{f(1 - \cos h)}{h^2} &amp; B. \lim_{h \to 0}\dfrac{f(1 - e^h)}{h} \\ C. \lim_{h \to 0}\dfrac{f(h - \sin h)}{h^2} &amp;  D. \lim_{h \to 0}\dfrac{f(2h) - f(h)}{h}\end{array}$ </li>
+<li>分析<ul>
+<li>抽象型使用【增量式】</li>
+<li>$f’(0) = \lim_{🐶 \to 0}\dfrac{f(0 + 🐶) - f(0)}{🐶}$ </li>
+<li>$h \to 0$ 时，$1 - \cos h \to 1^-$ 。<ul>
+<li>$\because \cos h \leq 1$ </li>
+<li>天生【单侧极限】</li>
+</ul>
+</li>
+<li>$D$ 反例<ul>
+<li>$f(x) = \begin{cases} 1, &amp; x\not= 0 \\ 0, &amp; x = 0 \end{cases}$ </li>
+</ul>
+</li>
+<li>$\begin{cases} f’(0) \cdot n = \exists &amp; \implies f’(0) \exists \\ f’(0) \cdot \infty = \exists &amp; \implies f’(0) \exists = 0 \\ f’(0) \cdot 0 = \exists &amp; \not\implies f’(0) \exists \end{cases}$ </li>
+</ul>
+</li>
+<li>【注】<ul>
+<li>$🐶 \to 0$ 时，$\dfrac{|🐶|}{🐶}$ 有界，但 $\lim_{🐶 \to 0}\dfrac{|🐶|}{🐶}$ 不存在。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>若 $f(x)$ 是可导的偶函数，证明 $f’(x)$ 的奇函数。【记】<ul>
+<li>$\begin{array}{l}f’(x) &amp; = \lim_{\Delta x \to 0} \dfrac{f(x + \Delta x) - f(x)}{\Delta x} \\ f’(-x) &amp; = \lim_{\Delta x \to 0} \dfrac{f(-x + \Delta x) - f(-x)}{\Delta x} \\ &amp; = \lim_{\Delta x \to 0} \dfrac{f(x+(-\Delta x) - f(x)}{\Delta x} \\ &amp; = -\lim_{-\Delta x \to 0} \dfrac{f(x+(-\Delta x) - f(x)}{-\Delta x} \\ &amp; = -f’(x) \end{array}​$ </li>
+<li>若 $f(x)$ 是可导的奇函数，证明 $f’(x)$ 的偶函数。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="导数计算"><a href="#导数计算" class="headerlink" title="导数计算"></a>导数计算</h3><h5 id="基本求导公式"><a href="#基本求导公式" class="headerlink" title="基本求导公式"></a>基本求导公式</h5><p>$\begin{array}{l} (\sin x)’ = \cos x &amp; (\cos x)’ = -\sin x \\ (\tan x)’ = \sec^2 x &amp; (\cot x)’ = - \csc^2 x \\ (\sec x)’ = \sec x \tan x &amp; (\csc x)’ = - \csc x \cot x \end{array}$ </p>
+<p>$\begin{array}{l} (\arcsin x)’ = \dfrac{1}{ \sqrt{1 - x^2} } &amp; (\arccos x)’ = - \dfrac{1}{ \sqrt{1 - x^2} } \\ (\arctan x)’ = \dfrac{1}{1 + x^2} &amp; (\arccot x)’ = - \dfrac{1}{1 + x^2} \end{array}$</p>
+<p>$\begin{array}{l} (\ln(x + \sqrt{x^2 + 1}))’ = \dfrac{1}{ \sqrt{x^2 + 1} } \end{array}​$ </p>
+<p>$\begin{array}{l} (\ln(x + \sqrt{x^2 - 1}))’ = \dfrac{1}{ \sqrt{x^2 - 1} } \end{array}$ </p>
+<h5 id="基本求导方法"><a href="#基本求导方法" class="headerlink" title="基本求导方法"></a>基本求导方法</h5><ol>
+<li><p>复合函数求导</p>
+<ul>
+<li>求函数 $y = (\tan 2x)^{ \cot\frac{x}{2} }$ 的导数。</li>
+</ul>
+</li>
+<li>隐函数求导<ul>
+<li>显函数：$y = f(x)$ ，隐函数：$F(x, y) = 0$ 。</li>
+<li>方法：在 $F(x, y) = 0$ 两边同时对 $x$ 求导，只需注意 $y = y(x)$ 即可（复合求导）。</li>
+<li>例题<ul>
+<li>设 $y = y(x)$ 是由 $\sin xy = \ln \dfrac{x + e}{y} + 1$ 确定的隐函数，求 $y’(0)$ 和 $y’’(0)$ 的值。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>对数求导法<ul>
+<li>方法：对于多项相乘、相除、开方、乘方得来的式子，先取对数再求导。</li>
+<li>例题<ul>
+<li>设 $y = (\dfrac{a}{b})^x \cdot (\dfrac{b}{x})^a \cdot (\dfrac{x}{a})^b \quad (a&gt;0, b&gt;0)$ ，求 $y’$ 。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>反函数求导</p>
+<ul>
+<li><p>注意写法即可</p>
+</li>
+<li><p>例题</p>
+<ul>
+<li><p>设函数 $f(y)$ 的反函数 $f^{-1}(x)$ 及 $f’[f^{-1}(x)]$ 与 $f’’[f^{-1}(x)]$ 都存在，且 $f’[f^{-1}(x)] \not= 0$ 。证明：$\dfrac{ {\rm d}^2 f^{-1}(x) }{ {\rm d} x^2 } = -\dfrac{ f’’[f^{-1}(x)] }{ \{f’[f^{-1}(x)]\}^3 }$ 。</p>
+<ul>
+<li><p>$\because x = f(y) \implies y = f^{-1}(x), \quad \therefore \dfrac{ {\rm d}^2 f^{-1}(x) }{ {\rm d} x^2 } = \dfrac{ {\rm d}^2 y }{ {\rm d} x^2 }$ 。</p>
+</li>
+<li><p>$x = f(y)$ 两边对 $x$ 求导，$1 = f’(y) \cdot \dfrac{ {\rm d} y }{ {\rm d} x } \implies \dfrac{ {\rm d} y }{ {\rm d} x } = \dfrac{1}{f’(y)}$ 。</p>
+</li>
+<li><p>$\dfrac{ {\rm d}^2 y }{ {\rm d} x^2 } = \dfrac{ {\rm d} ( \dfrac{ {\rm d} y }{ {\rm d} x } ) }{ {\rm d} x }$ </p>
+<ul>
+<li>由于 $\dfrac{ {\rm d} y}{ {\rm d} x } = \dfrac{1}{f’(y)}$ 是关于 $y$ 的函数，所以 $\dfrac{ {\rm d} y}{ {\rm d} x }$ 只能对 $y$ 求导。 </li>
+<li>$\begin{array}{l}\dfrac{ {\rm d}^2 y }{ {\rm d} x^2 } &amp; = \dfrac{ {\rm d} ( \dfrac{ {\rm d} y }{ {\rm d} x } ) / {\rm d} y }{ {\rm d} x / {\rm d} y } = \dfrac{ {\rm d} ( \dfrac{1}{f’(y)} ) }{ {\rm d} y } \cdot \dfrac{ {\rm d} y }{ {\rm d} x } \[1em] &amp; = -\dfrac{ f’’(y) }{ [f’(y)]^2 } \cdot \dfrac{1}{f’(y)} \[1em] &amp; = -\dfrac{ f’’(y) }{ [f’(y)]^3 } =-\dfrac{ f’’(f^{-1}(x)) }{ \{f’[f^{-1}(x)]\}^3 } \end{array}$ </li>
+</ul>
+</li>
+</ul>
+</li>
+<li>求 $y = \dfrac{1}{2}\arctan \sqrt[4]{1 + x^4} + \ln\sqrt[4]{ \dfrac{ \sqrt[4]{1 + x^4} + 1 }{ \sqrt[4]{1 + x^4} - 1} }$ 的反函数的导数。<ul>
+<li>$\dfrac{ {\rm d} y }{ {\rm d} x } = \dfrac{1}{ \dfrac{ {\rm d} x }{ {\rm d} y } } \implies y’_x = \dfrac{1}{x’_y}$ </li>
+<li>令 $u =  \sqrt[4]{1 + x^4}$ ，$y = \dfrac{1}{2} \arctan u + \ln \sqrt[4]{ \dfrac{u + 1}{u - 1} }$ 。</li>
+<li>$y = \dfrac{1}{2} \arctan u + \dfrac{1}{4}( \ln (u + 1) - \ln(u - 1) )$ </li>
+<li>$y’_x = [\dfrac{1}{2} \cdot \dfrac{1}{u^2 + 1} + \dfrac{1}{4}(\dfrac{1}{u + 1} - \dfrac{1}{u - 1})] \cdot u’_x = - \dfrac{u’_x}{u^4 - 1}$ </li>
+<li>将 $u = \sqrt[4]{1 + x^4}$ 代入得： $y’_x = - \dfrac{ \frac{1}{4} (1 + x^4)^{ -\frac{3}{4} } \cdot 4x^3 }{1 + x^4 - 1} = -\dfrac{1}{ x(1 + x^4)^{ \frac{3}{4} } }$ 。</li>
+<li>所以 $x’_y = \dfrac{1}{y’_x} = -x(1 + x^4)^{ \frac{3}{4} }$ 。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>参数方程求导<ul>
+<li>$\begin{cases} x = x(t) \\ y = y(t) \end{cases}$ ，$t$ 为参数</li>
+<li>$\dfrac{ {\rm d}y }{ {\rm d}x } = \dfrac{ {\rm d}y / {\rm d}t }{ {\rm d}x / {\rm d}t } = \dfrac{y’_t}{x’_t}$ ，类似于反函数求导，是谁的函数就对谁求导，缺什么补什么。</li>
+<li>例题<ul>
+<li>设函数 $y = f(x)$ 由参数方程 $\begin{cases} x = 2t + t^2 \\ y = \varphi(t) \end{cases} , (t &gt; -1)$ 所确定，其中 $\varphi(t)$ 具有二阶导数，且已知 $\dfrac{ {\rm d}^2 y }{ {\rm d}x^2 } = \dfrac{3}{4(1 + t)}$ ，证明：函数 $\varphi(t)$ 满足方程 $\varphi’’(t) - \dfrac{1}{1 + t} \varphi’(t) = 3(1 + t)$ 。<ul>
+<li>$\dfrac{ {\rm d}y }{ {\rm d}x } = \dfrac{ {\rm d}y / {\rm d}t }{ {\rm d}x / {\rm d}t } = \dfrac{\varphi’(t)}{2 + 2t}$ </li>
+<li>$\dfrac{ {\rm d}^2 y }{ {\rm d}x^2 } = \dfrac{ {\rm d}(\dfrac{ {\rm d}y }{ {\rm d}x }) }{ {\rm d}x } = \dfrac{ {\rm d}(\dfrac{ {\rm d}y }{ {\rm d}x }) / {\rm d}t }{ {\rm d}x / {\rm d}t } = \dfrac{ \dfrac{ \varphi’’(t)(2 + 2t) - 2\varphi’(t) }{(2 + 2t)^2} }{2 + 2t}$ </li>
+<li>$\therefore \dfrac{ \varphi’’(t)(2 + 2t) - 2\varphi’(t) }{(2 + 2t)^3 } = \dfrac{ \varphi’’(t)(1 + 1t) - \varphi’(t) }{4(1 + t)^3 } = \dfrac{3}{4(1 + t)}$ </li>
+<li>$\implies \varphi’’(t) - \dfrac{1}{1 + t} \varphi’(t) = 3(1 + t)$ 。</li>
+</ul>
+</li>
+<li>设 $\begin{cases} x = t + e^t \\ y = \sin t \end{cases}$ ，则 $\left. \dfrac{ {\rm d}^2 y}{ {\rm d}x^2 } \right|_{t = 0} = ______$ 。<ul>
+<li>$-\dfrac{1}{8}$ </li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>高阶导数<ul>
+<li>$\text{高阶导数} \begin{cases} \text{莱布尼兹公式} \\ \text{找规律用数学归纳法} \\ \text{展开式法} \end{cases}$ </li>
+<li>莱布尼兹公式<ul>
+<li>$\begin{cases} (u \pm v)^{(n)} &amp; = u^{(n)} \pm v^{(n)} \[1em] (uv)^{(n)} &amp; = \sum_{k=0}^{k=n} C_n^k u^{(n - k)} v^{(k)} \\ &amp; = u^{(n)}v + n \cdot u^{(n - 1)}v’ + \dfrac{n(n - 1)}{2} \cdot u^{(n - 2)}v’’ + … + uv^{(n)} \end{cases}$ </li>
+<li>$(a^x)^{(n)} = a^x(\ln a)^n, \quad (e^x)^{(n)} = e^x$ </li>
+<li>$(\sin kx)^{(n)} = k^n \sin( kx + \frac{\pi}{2} \cdot n  )$ </li>
+<li>$(\cos kx)^{(n)} = k^n \cos( kx + \frac{\pi}{2} \cdot n  )$ </li>
+<li>$(\ln x)^{(n)} = (-1)^{(n - 1)} \cdot \dfrac{(n - 1)!}{x^n}, (x &gt; 0)$ </li>
+<li>$[\ln(x + 1)]^{(n)} = (-1)^{(n - 1)} \cdot \dfrac{(n - 1)!}{(1 + x)^n}, (x &gt; -1)$ </li>
+<li>$(\dfrac{1}{x + a})^{(n)} = (-1)^n \cdot \dfrac{n!}{ (x + a)^{(n + 1)} }$ </li>
+</ul>
+</li>
+<li>例题<ul>
+<li>$y = x^2 \sin 2x$ ，求 $y^{(50)}$ 。<ul>
+<li>$\begin{array}{l} y^{(50)} &amp; = x^2 \cdot (\sin 2x)^{(50)} + 50(x^2)’ \cdot (\sin 2x)^{(49)} + \dfrac{50 \cdot 49}{2}(x^2)’’ \cdot (\sin 2x)^{(48)} \[1em] &amp; = -2^{50}x^2 \sin 2x + 50 \cdot 2^{50}x \cos 2x + 50 \cdot 49 \cdot 2^{48} \sin 2x \end{array}$ </li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="微分中值定理"><a href="#微分中值定理" class="headerlink" title="微分中值定理"></a>微分中值定理</h3><h5 id="十大定理"><a href="#十大定理" class="headerlink" title="十大定理"></a>十大定理</h5><ol>
+<li><p>涉及到 $f(x)$ 的定理</p>
+<ul>
+<li>设 $f(x)$ 在 $[a,b]$ 连续，则：</li>
+</ul>
+<ol>
+<li>有界性定理<ul>
+<li>$\exists K &gt; 0$ ，使 $|f(x)| \leq K$ ，$\forall x \in [a, b]$ 。</li>
+<li>连续函数在闭区间上有界。</li>
+</ul>
+</li>
+<li><strong>最值定理</strong><ul>
+<li>$m \leq f(x) \leq M$ ，其中 $m$ ，$M$ 分别为 $f(x)$ 在 $[a, b]$ 上的最小、最大值。</li>
+</ul>
+</li>
+<li><strong>介值定理</strong><ul>
+<li>当 $m \leq \mu \leq M$ 时，则 $\exists \xi \in [a, b]$ ，使 $f(\xi) = \mu$ 。</li>
+</ul>
+</li>
+<li><strong>零点定理</strong><ul>
+<li>当在 $f(a) \cdot f(b) &lt; 0$ 时，则 $\exists \xi \in (a, b)$ ，使 $f(\xi) = 0$ 。</li>
+<li>（方程的根）</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><p>涉及 $f’(x)$ 的定理</p>
+<ol>
+<li>费马定理<ul>
+<li>设 $f(x)$ 在 $x = x_0$ 处 $\begin{cases} 1) \text{可导} \[1em] 2) \text{取极值} \end{cases} \implies f’(x_0) = 0$ 。</li>
+<li>《费马大定理》</li>
+<li>证明见《高数 18 讲》</li>
+</ul>
+</li>
+<li><p><strong>罗尔定理</strong></p>
+<ul>
+<li>设 $f(x)$ 满足以下三条 $\begin{cases} 1) [a, b] \text{ 连续} \[1em] 2) (a, b) \text{ 内可导} \[1em] 3) f(a) = f(b) \end{cases} \implies \exists \xi \in (a, b) \text{ 使 } f’(\xi) = 0$ 。</li>
+</ul>
+</li>
+<li>拉格朗日中值定理<ul>
+<li>设 $f(x)$ 满足 $\begin{cases}  1) [a, b] \text{上连续} \[1em] 2) (a, b) \text{内可导}\end{cases}$ ，则 $\exists \xi \in (a, b)$ ，使 $f’(\xi) = \dfrac{f(b) - f(a)}{b - a}$ 。</li>
+<li>若 $f(b) = f(a)$ ，则 $f’(\xi) = 0$ ，即为罗尔定理。</li>
+</ul>
+</li>
+<li>柯西中值定理<ul>
+<li>设 $f(x)$ ， $g(x)$ 满足 $\begin{cases} 1) [a, b] \text{连续} \[1em] 2) (a, b) \text{内可导} \[1em] g’(x) \not= 0 \end{cases}$ ，则 $\dfrac{f’(\xi)}{g’(\xi)} = \dfrac{f(b) - f(a)}{g(b) - g(a)}$ 。</li>
+<li>若取 $g(x) = x \implies \dfrac{f(b) - f(a)}{b - a} = \dfrac{f’(\xi)}{1}$ ，即为拉格朗日中值定理。</li>
+<li>柯西中值定理 $\implies$ 拉格朗日中值定理 $\implies$ 罗尔定理</li>
+</ul>
+</li>
+<li>泰勒定理（泰勒公式）<ul>
+<li>任何可导函数 $ f(x) = \sum a_n x^n $ 。</li>
+</ul>
+<ol>
+<li>带拉格朗日余项的泰勒公式<ul>
+<li>证明 / 推证某些结果</li>
+<li>$ f(x) $  $ n + 1 $ 阶可导：</li>
+<li>$ f(x) = f(x_0) + f’(x_0)(x - x_0) + \dfrac{ f’’(x_0) }{ 2! }(x - x_0)^2 + … + \dfrac{ f^{(n)}(x_0) }{ n! }(x - x_0)^n + \dfrac{ f^{(n + 1)}(\xi) }{ (n + 1)! }(x - x_0)^{n + 1} $ <ul>
+<li>$ \dfrac{ f^{(n)}(x_0) }{ n! }(x - x_0)^n $ 是通项。</li>
+<li>$ \dfrac{ f^{(n + 1)}(\xi) }{ (n + 1)! }(x - x_0)^{n + 1} $ 是拉格朗日余项。</li>
+<li>$ x_0 $ 介于 $ x $ 和 $ x_0 $ 之间。</li>
+</ul>
+</li>
+<li>当 $ x_0 = 0 $ 时，泰勒公式成为麦克劳林公式<ul>
+<li>$ f(x) = f(0) + f’(0)x + \dfrac{ f’’(0) }{ 2! }x^2 + … + \dfrac{ f^{(n)}(0) }{ n! } x^n + \dfrac{ f^{(n + 1)}(\xi) }{ (n + 1)! }x^{n + 1}  $</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>带佩亚诺余项的泰勒公式<ul>
+<li>用于计算</li>
+<li>$ f(x) $  $ n $ 阶可导：</li>
+<li>$ f(x) = f(x_0) + f’(x_0)(x - x_0) + \dfrac{ f’’(x_0) }{ 2! }(x - x_0)^2 + … + \dfrac{ f^{(n)}(x_0) }{ n! }(x - x_0)^n + o( (x - x_n)^n ) $ </li>
+</ul>
+</li>
+</ol>
+</li>
+<li>积分中值定理</li>
+</ol>
+</li>
+</ol>
+<h5 id="五大方面的应用"><a href="#五大方面的应用" class="headerlink" title="五大方面的应用"></a>五大方面的应用</h5><ol>
+<li><p>涉及 $f(x)$ 的应用（1-4）</p>
+<ul>
+<li>设 $f(x)$ 在 $[a, b]$ 上连续，证明 $\exists \xi \in [a, b]$ ，使 $\int_a^b{f(x) {\rm d} x = f(\xi)(b - a)}$ 。<ul>
+<li>由于 $f(x)$ 在 $[a, b]$ 上连续，所以存在 $m \leq f(x) \leq M (x \in [a, b])$ ，$m$ 为最小值，$M$ 为最大值。</li>
+<li>所以 $\begin{array}{l} &amp; \int_a^b{m} {\rm d}x \leq \int_a^bf(x){\rm d}x \leq \int_a^b{M}{\rm d}x \[1em] \implies &amp; m(b - a) \leq \int_a^b{f(x)}{\rm d}x \leq M(b - a) \[1em] \implies &amp; m \leq \dfrac{ \int_a^b{f(x){\rm d}x} }{b - a} \leq M \end{array}$ 。 </li>
+<li>所以 $\exists \xi \in [a, b]$ ，使 $f(\xi) = \dfrac{\int_a^b{f(x)}{\rm d}x}{b - a}$ 。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>罗尔定理的应用（6）</p>
+<ul>
+<li><strong>求导公式逆用法</strong><ul>
+<li>分析<ul>
+<li>$F(a) = F(b) \implies F’(\xi) = 0$ </li>
+<li>由 $(uv)’ = u’v + uv’$ ，【倒着看】<ul>
+<li>取 $u = f(x)$ ，$v = x$ ，<ul>
+<li>记 $F(x) = f(x) \cdot x \implies F’(x) = f’(x) \cdot x + f(x)$ ，</li>
+<li>则可证 $f’(\xi) \cdot \xi + f(\xi) = 0$ 。 </li>
+</ul>
+</li>
+<li>取 $u = f(x)$ ，$v = e^x$ ，<ul>
+<li>记 $F(x) = f(x) \cdot e^x \implies F’(x) = f’(x) \cdot e^x + f(x)e^x$ ，</li>
+<li>则可证 $F’(\xi) = f’(\xi) \cdot e^{\xi} + f(\xi) \cdot e^{\xi} = 0 \implies f’(\xi) + f(\xi) = 0$ 。</li>
+</ul>
+</li>
+<li>取 $u = f(x)$ ，$v = e^{\varphi(x)}$ ，<ul>
+<li>记 $F(x) = f(x) \cdot e^{\varphi(x)} \implies F’(x) = f’(x) \cdot e^{\varphi(x)} + f(x) \cdot e^{\varphi(x)} \cdot \varphi’(x)$ ，</li>
+<li>则可证 $F’(\xi) = f’(\xi) \cdot e^{\varphi(\xi)} + f(\xi) \cdot e^{\varphi(\xi)} \cdot \varphi’(\xi) = 0 \implies f’(\xi) + f(\xi) \cdot \varphi’(\xi)$ 。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>例题<ul>
+<li>设 $f(x)$ 在 $[0, 1]$ 上连续，$(0, 1)$ 内可导，$f(1) = 0$ ，证明 $\exists \xi \in (0, 1)$ ，使 $f(\xi) + \xi f’(\xi) = 0$ 。</li>
+<li>设 $f(x)$ 在 $[0, 1]$ 上二阶可导，且 $f(1) &gt; 0$ ，$\lim_{x \to 0^+}\dfrac{f(x)}{x} &lt; 0$ ，证明：1⃣️方程 $f(x) = 0$ 在 $(0, 1)$ 内至少有一个实根。2⃣️方程 $f(x)f’’(x) + [f’(x)]^2 = 0$ 在 $(0, 1)$ 内至少有两个不同的实根。<ul>
+<li>1⃣️</li>
+<li>由 $\lim_{x \to 0^+}\dfrac{f(x)}{x} &lt; 0$ ，所以 $\exists \xi &gt; 0$ ，当 $0 &lt; x &lt;\xi$ 时，$\dfrac{f(x)}{x} &lt; 0$ ，所以当 $0 &lt; x &lt; \xi$ 时，$f(x) &lt; 0$ 。<ul>
+<li>【极限保号性】</li>
+</ul>
+</li>
+<li>取 $a \in (0, \xi)$ ，$f(a) &lt; 0$ ，又因为 $f(1) &gt; 0$ ，所以 $\exists c \in (\xi, 1)$ ，使得 $f(c) = 0$ 。 </li>
+<li>2⃣️</li>
+<li>设 $F(x) = f(x) \cdot f’(x)$ ，$f(0) = \lim_{x \to 0^+}f(x) = \lim_{x \to 0^+}\dfrac{f(x)}{x} \cdot x = 0$ 。<ul>
+<li>函数极限存在，函数有界，所以 $\lim_{x \to 0^+}\dfrac{f(x)}{x}$ 有界。 </li>
+</ul>
+</li>
+<li>由于 $f(0) = f(c) = 0$ ，所以 $\exists b \in (0, c)$ ，使得 $f’(b) = 0$ 。</li>
+<li>所以 $F(0) = F(b) = F(c) = 0$ 。<ul>
+<li>所以 $\exists \xi_1 \in (0, b)$ ，使得 $F’(\xi_1) = 0$ 。</li>
+<li>所以 $\exists \xi_2 \in (b, c)$ ，使得 $F’(\xi_2) = 0$ 。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>$f(x)$ 在 $[0, 1]$ 上连续，$(0, 1)$ 内可导，且 $f(1) = k \int_0^{ \frac{1}{k} } x e^{1 - x} f(x) {\rm d} x, (k&gt;1)$ ，证明 $\exists \xi \in (0, 1)$ ，使 $f’(\xi) = (1 - \dfrac{1}{\xi}) f(\xi)$ 。<ul>
+<li>$f’(\xi) = (1 - \dfrac{1}{\xi}) f(\xi) \implies f’(\xi) + f(\xi)(\dfrac{1}{\xi - 1}) = 0$ <ul>
+<li>令 $F(x) = f(x) \cdot e^{\ln x - x} = f(x) \cdot x \cdot e^{-x}$ </li>
+</ul>
+</li>
+<li><strong>【证明题中，见到 $\int_a^bf(x){\rm d}x$ 先用积分中值定理试试再说】</strong> <ul>
+<li>$k \int_0^{ \frac{1}{k} } x e^{1 - x} f(x) {\rm d} x = \eta \cdot e^{1 - \eta} \cdot f(\eta) = f(1) \quad (0 &lt; \eta &lt; \dfrac{1}{k} &lt; 1)$ </li>
+<li>$F(1) = f(1) \cdot 1 \cdot e^{-1} = \eta \cdot e^{-\eta} \cdot f(\eta) = F(\eta)$ </li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>积分还原法<ul>
+<li>分析<ol>
+<li>将欲证结论中的 $\xi$ 改为 $x$。</li>
+<li>积分（令 $c = 0$）</li>
+<li>移项，使等式一端为 $0$ ，则另一端记为 $F(x)$ 。 </li>
+</ol>
+</li>
+<li>例题<ul>
+<li>证明拉格朗日中值定理：$f’(\xi) = \dfrac{f(b) - f(a)}{b - a}$ 。 <ul>
+<li>$f’(x) = \dfrac{f(b) - f(a)}{b - a}$ </li>
+<li>两边积分<ul>
+<li>$f(x) = \dfrac{f(b) - f(a)}{b - a} \cdot x + c$ ，令 $c = 0$ ，所以 $f(x) = \dfrac{f(b) - f(a)}{b - a} \cdot x$ 。</li>
+</ul>
+</li>
+<li>令 $F(x) = f(x) - \dfrac{f(b) - f(a)}{b - a} \cdot x$ 。<ul>
+<li>$F(a) = \dfrac{f(a)b - f(b)a}{b - a} = F(b)$ </li>
+</ul>
+</li>
+</ul>
+</li>
+<li>证明柯西中值定理：$\dfrac{f’(\xi)}{g’(\xi)} = \dfrac{f(b) - f(a)}{g(b) - g(a)}$ 。<ul>
+<li>$f’(x) = \dfrac{f(b) - f(a)}{g(b) - g(a)} g’(x)$ </li>
+<li>两边积分<ul>
+<li>$f(x) = \dfrac{f(b) - f(a)}{g(b) - g(a)} g(x)$</li>
+</ul>
+</li>
+<li>令 $F(x) = f(x) - \dfrac{f(b) - f(a)}{g(b) - g(a)}g(x)$ <ul>
+<li>$F(a) = ? = F(b)$ </li>
+</ul>
+</li>
+</ul>
+</li>
+<li>设 $f(x)，g(x)$ 在 $[a, b]$ 上二阶可导，$g’’(x) \not= 0$ ，$f(a) = f(b) = g(a) = g(b) = 0$ 。证明：1⃣️ $g(x) \not= 0 \quad \forall x \in (a, b)$ 。2⃣️  $\exists \xi \in (a, b)$，使 $\dfrac{f(\xi)}{g(\xi)} = \dfrac{f’’(\xi)}{g’’(\xi)}$ 。<ul>
+<li>1⃣️</li>
+<li>反证法<ul>
+<li>设 $\exists x_0 \in (a, b)，g(x_0) = 0$ </li>
+</ul>
+</li>
+<li>2⃣️</li>
+<li>$\xi \to x \implies f(x)g’’(x) = g(x)f’’(x)$ </li>
+<li>积分： $\begin{array}{l} \dfrac{f(\xi)}{g(\xi)} = \dfrac{f’’(\xi)}{g’’(\xi)} &amp; \implies \int f(x)g’’(x) {\rm d}x = \int g(x)f’’(x) {\rm d}x \[1em] &amp; \implies f(x)g’(x) - \int g’(x)f’(x){\rm d}x = g(x)f’(x) - \int f’(x)g’(x){\rm d}x \[1em] &amp; \implies f(x)g’(x) = g(x)f’(x) \end{array}$  </li>
+<li>令 $F(x) = f(x)g’(x) - g(x)f’(x)$ <ul>
+<li>$F(a) = f(a)g’(a) - g(a)f’(a) = 0$</li>
+<li>$F(b) = f(b)g’(b) - g(b)f’(b) = 0$  </li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>拉格朗日中值定理的应用（7）</p>
+<ol>
+<li>将 $f$ 复杂化<ul>
+<li>设 $f(x)$ 在 $[a, b]$ 上连续， $(a, b)$ 内可导，证明：$\exists \xi \in (a, b)$ ，使 $bf(b) - af(a) = [f(\xi) + \xi f’(\xi)(b - a)]$ 。</li>
+</ul>
+</li>
+<li>给出相对高阶的条件 $\implies$ 证明低阶不等式<ul>
+<li>设 $f’’(x) &lt; 0，f(0) = 0$ ，证明：$\forall x_1 \not= x_2 &gt; 0$ ，有 $f(x_1 + x_2) &lt; f(x_1) + f(x_2)$ 。<ul>
+<li>【多点最好画图】 </li>
+<li>设 $0 &lt; x_1 &lt; x_2 &lt; x_1 + x_2$ ，找相邻的点研究<ul>
+<li>$[0, x_1] \implies f(x_1) - f(0) = f’(\xi_1) \cdot (x_1 - 0) = f’(\xi_1) \cdot x_1$ </li>
+<li>$[x_2, x_1 + x_2] \implies f(x_1 + x_2) - f(x_2) = f’(\xi_2) \cdot (x_1 + x_2 - x_2) = f’(\xi_2) \cdot x_1$ </li>
+<li>因为 $\xi_1 &lt; \xi_2，f’’(x) &lt; 0$ ，所以 $f(\xi_1) &gt; f(\xi_2)$ 。</li>
+<li>所以 $f(x_1) &gt; f(x_1 + x_2) - f(x_2)$ 。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>给出相对低阶的条件 $\implies$ 证明高阶不等式<ul>
+<li>设 $f(x)$ 二阶可导，且 $f(2) &gt; f(1)，f(2) &gt; \int_2^3 f(x) {\rm d}x$ ，证明 $\exists \xi \in (1, 3)$ ，使 $f’’(\xi) &lt; 0$ 。 <ul>
+<li>$f(2) - f(1) = f’(\xi_1) &gt; 0 \quad \xi_1 \in (1, 2)$ </li>
+<li>【积分中值定理】<ul>
+<li>$f(2) &gt; \int_x^3 f(x){\rm d}x = f(\eta)(3 - 2) = f(\eta) \quad \eta \in (2, 3)$ </li>
+<li>$f(\eta) - f(2) = f’(\xi_2)(\eta - 2) \implies f’(\xi_2) &lt; 0 \quad \xi_2 \in (2, \eta)$ </li>
+</ul>
+</li>
+<li>$f’(\xi_2) - f’(\xi_1) = f’’(\xi)(\xi_2 - \xi_1) \implies f’’(\xi) &lt; 0 \quad \xi \in (1, 3)$ </li>
+</ul>
+</li>
+</ul>
+</li>
+<li>具体化 $f$，由 $a &lt; \xi &lt; b \implies$ 不等式<ul>
+<li>设 $0 &lt; a &lt; b &lt; 1$ ，证明：$\arctan b - \arctan a &lt; \dfrac{b - a}{2ab}$ 。<ul>
+<li>令 $f(x) = \arctan x$ ，在 $[a, b]$ 上根据拉氏定理：</li>
+<li>$\dfrac {\arctan b - \arctan a}{b - a} = \dfrac{1}{1 + \xi^2} \quad (0 &lt; a &lt; \xi &lt;b &lt; 1)$ </li>
+<li>所以 $\arctan b - \arctan a = \dfrac{b - a}{1 + \xi^2} &lt; \dfrac{b - a}{1 + a^2} &lt; \dfrac{b - a}{b^2 + a^2}$ （分母缩小）</li>
+<li>又 $a^2 + b^2 &gt; 2ab$ ，所以 $\arctan b - \arctan a &lt; \dfrac{b - a}{b^2 + a^2} &lt; \dfrac{b - a}{2ab}$ 。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>$\xi$ 的具体表达式<ul>
+<li>设 $f(x) = \arcsin x$ ，$\xi$ 为 $f(x)$ 在 $[0, t]$ 上拉格朗日中值定理的中值点，$0 &lt; t &lt; 1$ ，求极限 $\lim_{t \to 0+}\dfrac{\xi}{t}$ 。<ul>
+<li>$\arcsin t - \arcsin 0 = \dfrac{1}{ \sqrt{1 - \xi^2} } \cdot (t - 0) \quad (0 &lt; \xi &lt; t &lt; 1)$ </li>
+<li>$\arcsin t = \dfrac{t}{ \sqrt{1 - \xi^2} } \implies \xi = \sqrt{1 - (\dfrac{t}{\arcsin t})^2}$ </li>
+<li>令 $\arcsin t = u \quad ( t \to 0^+ \implies u \to 0^+ )$</li>
+<li>所以 $\lim_{t \to 0^+}\dfrac{\xi}{t} = \lim_{u \to 0^+} \sqrt{ \dfrac{ 1 - (\dfrac{\sin u}{u})^2 }{ (\sin u)^2 } } = \lim_{u \to 0^+}\sqrt{ \dfrac{u^2 - (\sin u)^2}{u^2 \cdot (\sin u)^2} }  = \dfrac{1}{ \sqrt{3} }$ </li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><p>柯西中值定理的应用（8）</p>
+<ul>
+<li>例题<ul>
+<li>$f(x)$ 在 $[a, b]$ 上连续，在 $(a, b)$ 内可导，且 $f’(x) \not= 0$ 。证明：$\exists \xi, \eta \in (a, b)$ ，使得 $\dfrac{ f’(\xi) }{ f’(\eta) } = \dfrac{ e^b - e^a }{ b - a }e^{-\eta} $ 。<ul>
+<li>物以类聚，人以群分</li>
+<li>$ f’(\xi) = \dfrac{ e^b - e^a }{ b - a } \cdot \dfrac{ f’(\eta) }{ e^\eta } $ <ul>
+<li>$ \dfrac{ f’(\eta) }{ e^\eta } $ 像柯西中值定理</li>
+</ul>
+</li>
+<li>其中 $ \begin{cases} \dfrac{ f’(\eta) }{ e^\eta } &amp; = \dfrac{ f(b) - f(a) }{ e^b - e^a } \quad ( g(x) = e^x ) \[1em] f’(\xi) &amp; = \dfrac{ f(b) - f(a) }{ b - a } \end{cases} $ 。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>泰勒公式的应用——信号 $ f^{(n)}(\xi), n \geq 2^n $ 。</p>
+<ul>
+<li>设 $ f(x)  $ 在 $ [0, 1] $ 上二阶可导，且 $ \int_0^1 f(x) {\rm d}x = 0 $，则<ul>
+<li>$ A. $ 当 $ f’(x) &lt; 0 $ 时，$ f(\frac{1}{2}) &lt; 0 $ </li>
+<li>$ B. $ 当 $ f’’(x) &lt; 0 $ 时，$ f(\frac{1}{2}) &lt; 0 $ </li>
+<li>$ C. $ 当 $ f’(x) &gt; 0 $ 时，$ f(\frac{1}{2}) &lt; 0 $ </li>
+<li>$ D. $ 当 $ f’’(x) &gt; 0 $ 时，$ f(\frac{1}{2}) &lt; 0 $ </li>
+<li>分析<ul>
+<li>$ f(x) = f(\frac{1}{2}) + f’(\frac{1}{2})(x - \frac{1}{2}) + \dfrac{f’’(\xi)}{2}(x - \frac{1}{2})^2 $ </li>
+<li>两边积分<ul>
+<li>$ \int_0^1 f(x) {\rm d}x = \int_0^1 f(\frac{1}{2}) {\rm d}x + \int_0^1 f’(\frac{1}{2})(x - \frac{1}{2}) {\rm d}x + \int_0^1 \dfrac{f’’(\xi)}{2}(x - \frac{1}{2})^2  $ </li>
+<li>$ \int_0^1 f(x) {\rm d}x = f(\frac{1}{2}) + 0 + \int_0^1 \dfrac{f’’(\xi)}{2}(x - \frac{1}{2})^2 $ </li>
+<li>$ f(\frac{1}{2}) = - \int_0^1 \dfrac{f’’(\xi)}{2}(x - \frac{1}{2})^2 $ </li>
+</ul>
+</li>
+</ul>
+</li>
+<li>$ D $</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+
+                </div>
+            </div>
+            <div class="clearfix"></div>
+            <hr class="nogutter">
+            
+<!-- 当前博客前后两篇博客 -->
+<div class="row justify-content-center">
+    <nav class="m-pagination col-md-8 col-sm-24" role="pagination">
+        
+        <a class="float-left" href="/2018/09/28/hexo_小 BUG/" style="float: left;">
+            ← 
+        </a>
+        
+        
+        <a class="float-right" href="/2018/09/25/VS Code 插件/">
+            VS Code 插件 →
+        </a>
+        
+    </nav>
+</div>
+
+            <div class="col-md-8 col-md-offset-2 col-sm-24"><script type="text/javascript"></script>
+</div>
+        </div>
+    </section>
+
+
+    
+<!-- ============================ Footer =========================== -->
+
+<footer>
+    <div class="container">
+            <div class="copy">
+                <p>
+                    &copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By WaterH2P. All Rights Reserved.
+                </p>
+                <p>Theme By <a href="//go.kieran.top" style="color: #767D84">Kieran</a></p>
+            </div>
+            <div class="social">
+                <ul>
+                    
+                    <li><a href="https://github.com/WaterH2P" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;&nbsp;</li>
+                    
+                    
+                    
+                    
+                    
+                    <li><a href="https://weibo.com/5933348875" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;&nbsp;</li>
+                    
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+</footer>
+
+<!-- ============================ END Footer =========================== -->
+
+    
+    <!-- Load our scripts -->
+    <!-- Resizable 'on-demand' full-height hero -->
+    <script type="text/javascript">
+        var resizeHero = function () {
+            var hero = $(".cover,.heightblock");
+            var window1 = $(window);
+            hero.css({
+                "height": window1.height()
+            });
+        };
+
+        resizeHero();
+
+        $(window).resize(function () {
+            resizeHero();
+        });
+    </script>
+
+    <!-- Bootstrap core and concatenated plugins always load here -->
+    <script src="/js/plugins.min.js"></script>
+
+    <!-- Theme scripts -->
+    <script src="/js/scripts.js"></script>
+
+    
+    <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+    <script src="/fancybox/jquery.fancybox.pack.js"></script>
+    <script type="text/javascript">
+        $('#intro').find('img').each(function(){
+            var alt = this.alt;
+
+            if (alt){
+                $(this).after('<span class="caption" style="display:none">' + alt + '</span>');
+            }
+
+            $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox" rel="gallery" />');
+        });
+        (function($){
+            $('.fancybox').fancybox();
+        })(jQuery);
+    </script>
+    
+
+
+    
+
+    <!-- 设置按钮位置 -->
+    <script>
+        function setPosition() {
+            var max_width = 1450;
+            var min_distance = 20;
+
+            var width = $(window).width();
+            if( width > max_width ){
+                var right_distance = ( width - max_width) / 2;
+                right_distance = ( right_distance > min_distance ) ? right_distance : min_distance;
+                $('#div-back-top').css('right', right_distance + 'px');
+            }
+            else {
+                $('#div-back-top').css('right', min_distance + 'px');
+            }
+        }
+    </script>
+    <script>
+        $(function () {
+            setPosition();
+            $(window).resize(function () {
+                setPosition();
+            });
+
+            // 返回顶端按钮监听
+            $(window).scroll(function () {
+                if( $(document).scrollTop() < 15 ){
+                    $('#div-back-top').hide();
+                }
+                else {
+                    $('#div-back-top').show();
+                }
+            });
+        });
+        function back_to_top(){
+            $('html').animate({scrollTop: 0}, 'slow');
+        }
+    </script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<!-- <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script> -->
+<script src="https://cdn.bootcss.com/mathjax/2.7.4/MathJax.js"></script>
+
+</body>
+</html>
