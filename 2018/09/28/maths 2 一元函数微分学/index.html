@@ -819,14 +819,68 @@
 <li>出现在：无定义点 或者 开区间端点 </li>
 </ul>
 </li>
-<li>水平渐近线<ul>
+<li><p>水平渐近线</p>
+<ul>
 <li>若 $ \lim\limits_{x \to +\infty / -\infty} f(x) = A $ ，则称 $ y = A $ 为 $ f(x) $ 的一条水平渐近线。</li>
 </ul>
 </li>
-<li>斜渐近线<ul>
-<li>若 $ \lim\limits_{x \to +\infty / -\infty} \dfrac{ f(x) }{x} = a \not= 0 $ ，且 $ \lim\limits_{x \to +\infty / -\infty }[ f(x) - ax ] = b \exists $ ，则称 $ y = ax + b ​$ 为一条斜渐近线。</li>
+<li><p>斜渐近线</p>
+<ul>
+<li>若 $ \lim\limits_{x \to +\infty / -\infty} \dfrac{ f(x) }{x} = a \not= 0 $ ，且 $ \lim\limits_{x \to +\infty / -\infty }[ f(x) - ax ] = b \exists $ ，则称 $ y = ax + b  $ 为一条斜渐近线。</li>
 </ul>
 </li>
+<li><p>例题</p>
+<ol>
+<li><p>下列函数中存在斜渐近线的是 $ ( \quad ) $ 。</p>
+<ul>
+<li>$ A. y = x + \sin \dfrac{1}{x} \quad B. y = x + \sin x \quad y = x^2 + \sin \dfrac{1}{x} \quad y = x^2 + \sin x  $ </li>
+<li>$ A $</li>
+</ul>
+</li>
+<li>曲线 $ y = e^{ \frac{1}{x^2} } \cdot \arctan \dfrac{ x^2 + x + 1 }{ ( x - 1 )( x + 2 ) } $ 有 $ ( \quad ) $ 条渐近线。<ul>
+<li>铅直渐近线： $ x = 0 $ </li>
+<li>水平渐近线： $ y = \dfrac{\pi}{4} $ </li>
+<li>$ 2 $ </li>
+</ul>
+</li>
+</ol>
+</li>
+</ol>
+<h5 id="最值"><a href="#最值" class="headerlink" title="最值"></a>最值</h5><ol>
+<li>对于函数 $ f(x) $ ，在 $ [a, b] $ 上找出三类点<ul>
+<li>$ \begin{cases} f’(x) = 0 \implies x_0 \text{驻点} \[1em] f’(x) \text{不} \exists \implies x_1 \text{不可导点} \[1em] \text{端点} a, b  \end{cases} $ </li>
+<li>比较 $ f(x_0) $ ，$ f(x_1) $ ，$ f(a) $ ，$ f(b) $ 大小，取其最大（小）者为最大（小）值。</li>
+</ul>
+</li>
+<li>若在 $ I $ 上求出唯一极大（小）值点，则由实际背景 $ \implies $ 此点即为最大（小）值。<ul>
+<li>若 $ (a, b) $ 内，考虑端点和可能存在的极值点即可。</li>
+</ul>
+</li>
+<li>例题<ol>
+<li>防空洞的截面拟建成矩形加半圆（如图所示），截面的面积为 $5 m^2$ ，问底宽 $ x $ 为多少时才能使建造时所用的材料最省？<ul>
+<li><img src="./images/2.3.4.3.1.png" alt=""></li>
+<li>设矩形的高为 $ y $，则 $ \begin{cases} \text{周长为} L \[1em] \text{面积为} S \end{cases} $ </li>
+<li>$ S = xy + \dfrac{\pi}{8}x^2 = 5 \implies y = \dfrac{5}{x} - \dfrac{\pi}{8}x &gt; 0 \implies x &lt; \sqrt{ \dfrac{40}{\pi} } $ </li>
+<li>$ L = x + 2y + \dfrac{\pi}{2}x = \dfrac{10}{x} + ( \dfrac{\pi}{4} + 1 ) x, \quad x \in ( 0, \sqrt{ \dfrac{40}{\pi} } ) $ </li>
+<li>$ L’ = -\dfrac{10}{x^2} + \dfrac{\pi}{4} + 1 = 0 \implies x = \sqrt{ \dfrac{40}{\pi + 4} } $ </li>
+</ul>
+</li>
+<li>求函数 $ f(x) =nx(1 - x)^n $ 在 $ [0, 1] $ 上的最大值 $ M(n) $ 及 $ \lim\limits_{n \to \infty} M(n) $ 。<ul>
+<li>$ f(0) = f(1) = 0 $ 。</li>
+<li>$ f’(x) = n(1 - x)^n + nx \cdot n(1 - x)^{(n -1)} = n <a href="1- x"> 1 - ( n + 1 )x </a>^{(n - 1)} $ </li>
+<li>$ f’(x) = 0 \implies x_0 = \dfrac{1}{n + 1} \in (0, 1) $</li>
+<li>$ f(x_0) = ( \dfrac{n}{n + 1} )^{(n + 1)} &gt; 0 $ ，所以 $ M(n) = ( \dfrac{n}{n + 1} )^{(n + 1)} $ 。</li>
+<li>$ \lim\limits_{n \to \infty}M(n) = \lim\limits_{n \to \infty}( \dfrac{n}{n + 1} )^{(n + 1)} = e^{ \lim\limits_{n \to \infty} (n + 1)\dfrac{-1}{n + 1}  } = e^{-1} $ </li>
+</ul>
+</li>
+</ol>
+</li>
+</ol>
+<h3 id="四大块"><a href="#四大块" class="headerlink" title="四大块"></a>四大块</h3><ol>
+<li>单调性 + 极值</li>
+<li>凹凸性 + 拐点</li>
+<li>渐近线</li>
+<li>最值问题（综合性）</li>
 </ol>
 
                 </div>
