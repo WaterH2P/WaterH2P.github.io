@@ -199,12 +199,12 @@
     
     
     <span class="tag is-info">
-        <a href='/tags/chrome/'>chrome</a>
+        <a href='/tags/plugin/'>plugin</a>
     </span>
     ,
     
     <span class="tag is-info">
-        <a href='/tags/plugin/'>plugin</a>
+        <a href='/tags/chrome/'>chrome</a>
     </span>
     
     
@@ -265,7 +265,7 @@
 <li><a class="own-underline" href="https://chrome.google.com/webstore/detail/unsplash-instant/pejkokffkapolfffcgbmdmhdelanoaih?utm_source=chrome-ntp-icon" target="_blank">Unsplash Instant</a></li>
 <li><a class="own-underline" href="https://chrome.google.com/webstore/detail/momentum/laookkfknpbbblfpciffpaejjkokdgca/related?utm_source=chrome-ntp-icon" target="_blank">Momentum</a></li>
 <li><a class="own-underline" href="https://chrome.google.com/webstore/detail/infinity-new-tabproductiv/dbfmnekepjoapopniengjbcpnbljalfg?utm_source=chrome-ntp-icon" target="_blank">Infinity 新标签页</a></li>
-<li><a class="own-underline" href="https://chrome.google.com/webstore/detail/%E6%8E%98%E9%87%91/lecdifefmmfjnjjinhaennhdlmcaeeeb?utm_source=chrome-ntp-icon" target="_blank">掘金</a><br>&lt;/div&gt;</li>
+<li><a class="own-underline" href="https://chrome.google.com/webstore/detail/%E6%8E%98%E9%87%91/lecdifefmmfjnjjinhaennhdlmcaeeeb?utm_source=chrome-ntp-icon" target="_blank">掘金</a></li>
 </ul>
 <p><br></p>
 <h3 id="浏览器主题"><a href="#浏览器主题" class="headerlink" title="浏览器主题"></a>浏览器主题</h3><ul>
@@ -426,5 +426,22 @@
             $('html').animate({scrollTop: 0}, 'slow');
         }
     </script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<!-- <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
 </body>
 </html>
