@@ -363,7 +363,7 @@
 <li><p>$\dfrac{ {\rm d}^2 y }{ {\rm d} x^2 } = \dfrac{ {\rm d} ( \dfrac{ {\rm d} y }{ {\rm d} x } ) }{ {\rm d} x }$ </p>
 <ul>
 <li>由于 $\dfrac{ {\rm d} y}{ {\rm d} x } = \dfrac{1}{f’(y)}$ 是关于 $y$ 的函数，所以 $\dfrac{ {\rm d} y}{ {\rm d} x }$ 只能对 $y$ 求导。 </li>
-<li>$\begin{array}{l}\dfrac{ {\rm d}^2 y }{ {\rm d} x^2 } &amp; = \dfrac{ {\rm d} ( \dfrac{ {\rm d} y }{ {\rm d} x } ) / {\rm d} y }{ {\rm d} x / {\rm d} y } = \dfrac{ {\rm d} ( \dfrac{1}{f’(y)} ) }{ {\rm d} y } \cdot \dfrac{ {\rm d} y }{ {\rm d} x } \[1em] &amp; = -\dfrac{ f’’(y) }{ [f’(y)]^2 } \cdot \dfrac{1}{f’(y)} \[1em] &amp; = -\dfrac{ f’’(y) }{ [f’(y)]^3 } =-\dfrac{ f’’(f^{-1}(x)) }{ \{f’[f^{-1}(x)]\}^3 } \end{array}$ </li>
+<li>$\begin{array}{l}\dfrac{ {\rm d}^2 y }{ {\rm d} x^2 } &amp; = \dfrac{ {\rm d} ( \dfrac{ {\rm d} y }{ {\rm d} x } ) / {\rm d} y }{ {\rm d} x / {\rm d} y } = \dfrac{ {\rm d} ( \dfrac{1}{f’(y)} ) }{ {\rm d} y } \cdot \dfrac{ {\rm d} y }{ {\rm d} x } \\ &amp; = -\dfrac{ f’’(y) }{ [f’(y)]^2 } \cdot \dfrac{1}{f’(y)} \\ &amp; = -\dfrac{ f’’(y) }{ [f’(y)]^3 } =-\dfrac{ f’’(f^{-1}(x)) }{ \{f’[f^{-1}(x)]\}^3 } \end{array}$ </li>
 </ul>
 </li>
 </ul>
@@ -403,7 +403,7 @@
 <li>高阶导数<ul>
 <li>$\text{高阶导数} \begin{cases} \text{莱布尼兹公式} \\ \text{找规律用数学归纳法} \\ \text{展开式法} \end{cases}$ </li>
 <li>莱布尼兹公式<ul>
-<li>$\begin{cases} (u \pm v)^{(n)} &amp; = u^{(n)} \pm v^{(n)} \[1em] (uv)^{(n)} &amp; = \sum_{k=0}^{k=n} C_n^k u^{(n - k)} v^{(k)} \\ &amp; = u^{(n)}v + n \cdot u^{(n - 1)}v’ + \dfrac{n(n - 1)}{2} \cdot u^{(n - 2)}v’’ + … + uv^{(n)} \end{cases}$ </li>
+<li>$\begin{cases} (u \pm v)^{(n)} &amp; = u^{(n)} \pm v^{(n)} \\ (uv)^{(n)} &amp; = \sum_{k=0}^{k=n} C_n^k u^{(n - k)} v^{(k)} \\ &amp; = u^{(n)}v + n \cdot u^{(n - 1)}v’ + \dfrac{n(n - 1)}{2} \cdot u^{(n - 2)}v’’ + … + uv^{(n)} \end{cases}$ </li>
 <li>$(a^x)^{(n)} = a^x(\ln a)^n, \quad (e^x)^{(n)} = e^x$ </li>
 <li>$(\sin kx)^{(n)} = k^n \sin( kx + \frac{\pi}{2} \cdot n  )$ </li>
 <li>$(\cos kx)^{(n)} = k^n \cos( kx + \frac{\pi}{2} \cdot n  )$ </li>
@@ -414,7 +414,7 @@
 </li>
 <li>例题<ol>
 <li>$y = x^2 \sin 2x$ ，求 $y^{(50)}$ 。<ul>
-<li>$\begin{array}{l} y^{(50)} &amp; = x^2 \cdot (\sin 2x)^{(50)} + 50(x^2)’ \cdot (\sin 2x)^{(49)} + \dfrac{50 \cdot 49}{2}(x^2)’’ \cdot (\sin 2x)^{(48)} \[1em] &amp; = -2^{50}x^2 \sin 2x + 50 \cdot 2^{50}x \cos 2x + 50 \cdot 49 \cdot 2^{48} \sin 2x \end{array}$ </li>
+<li>$\begin{array}{l} y^{(50)} &amp; = x^2 \cdot (\sin 2x)^{(50)} + 50(x^2)’ \cdot (\sin 2x)^{(49)} + \dfrac{50 \cdot 49}{2}(x^2)’’ \cdot (\sin 2x)^{(48)} \\ &amp; = -2^{50}x^2 \sin 2x + 50 \cdot 2^{50}x \cos 2x + 50 \cdot 49 \cdot 2^{48} \sin 2x \end{array}$ </li>
 </ul>
 </li>
 </ol>
@@ -451,23 +451,23 @@
 <li><p>涉及 $f’(x)$ 的定理</p>
 <ol>
 <li>费马定理<ul>
-<li>设 $f(x)$ 在 $x = x_0$ 处 $\begin{cases} 1) \text{可导} \[1em] 2) \text{取极值} \end{cases} \implies f’(x_0) = 0$ 。</li>
+<li>设 $f(x)$ 在 $x = x_0$ 处 $\begin{cases} 1) \text{可导} \\ 2) \text{取极值} \end{cases} \implies f’(x_0) = 0$ 。</li>
 <li>《费马大定理》</li>
 <li>证明见《高数 18 讲》</li>
 </ul>
 </li>
 <li><p><strong>罗尔定理</strong></p>
 <ul>
-<li>设 $f(x)$ 满足以下三条 $\begin{cases} 1) [a, b] \text{ 连续} \[1em] 2) (a, b) \text{ 内可导} \[1em] 3) f(a) = f(b) \end{cases} \implies \exists \xi \in (a, b) \text{ 使 } f’(\xi) = 0$ 。</li>
+<li>设 $f(x)$ 满足以下三条 $\begin{cases} 1) [a, b] \text{ 连续} \\ 2) (a, b) \text{ 内可导} \\ 3) f(a) = f(b) \end{cases} \implies \exists \xi \in (a, b) \text{ 使 } f’(\xi) = 0$ 。</li>
 </ul>
 </li>
 <li>拉格朗日中值定理<ul>
-<li>设 $f(x)$ 满足 $\begin{cases}  1) [a, b] \text{上连续} \[1em] 2) (a, b) \text{内可导}\end{cases}$ ，则 $\exists \xi \in (a, b)$ ，使 $f’(\xi) = \dfrac{f(b) - f(a)}{b - a}$ 。</li>
+<li>设 $f(x)$ 满足 $\begin{cases}  1) [a, b] \text{上连续} \\ 2) (a, b) \text{内可导}\end{cases}$ ，则 $\exists \xi \in (a, b)$ ，使 $f’(\xi) = \dfrac{f(b) - f(a)}{b - a}$ 。</li>
 <li>若 $f(b) = f(a)$ ，则 $f’(\xi) = 0$ ，即为罗尔定理。</li>
 </ul>
 </li>
 <li>柯西中值定理<ul>
-<li>设 $f(x)$ ， $g(x)$ 满足 $\begin{cases} 1) [a, b] \text{连续} \[1em] 2) (a, b) \text{内可导} \[1em] g’(x) \not= 0 \end{cases}$ ，则 $\dfrac{f’(\xi)}{g’(\xi)} = \dfrac{f(b) - f(a)}{g(b) - g(a)}$ 。</li>
+<li>设 $f(x)$ ， $g(x)$ 满足 $\begin{cases} 1) [a, b] \text{连续} \\ 2) (a, b) \text{内可导} \\ g’(x) \not= 0 \end{cases}$ ，则 $\dfrac{f’(\xi)}{g’(\xi)} = \dfrac{f(b) - f(a)}{g(b) - g(a)}$ 。</li>
 <li>若取 $g(x) = x \implies \dfrac{f(b) - f(a)}{b - a} = \dfrac{f’(\xi)}{1}$ ，即为拉格朗日中值定理。</li>
 <li>柯西中值定理 $\implies$ 拉格朗日中值定理 $\implies$ 罗尔定理</li>
 </ul>
@@ -508,7 +508,7 @@
 <ul>
 <li>设 $f(x)$ 在 $[a, b]$ 上连续，证明 $\exists \xi \in [a, b]$ ，使 $\int_a^b{f(x) {\rm d} x = f(\xi)(b - a)}$ 。<ul>
 <li>由于 $f(x)$ 在 $[a, b]$ 上连续，所以存在 $m \leq f(x) \leq M (x \in [a, b])$ ，$m$ 为最小值，$M$ 为最大值。</li>
-<li>所以 $\begin{array}{l} &amp; \int_a^b{m} {\rm d}x \leq \int_a^bf(x){\rm d}x \leq \int_a^b{M}{\rm d}x \[1em] \implies &amp; m(b - a) \leq \int_a^b{f(x)}{\rm d}x \leq M(b - a) \[1em] \implies &amp; m \leq \dfrac{ \int_a^b{f(x){\rm d}x} }{b - a} \leq M \end{array}$ 。 </li>
+<li>所以 $\begin{array}{l} &amp; \int_a^b{m} {\rm d}x \leq \int_a^bf(x){\rm d}x \leq \int_a^b{M}{\rm d}x \\ \implies &amp; m(b - a) \leq \int_a^b{f(x)}{\rm d}x \leq M(b - a) \\ \implies &amp; m \leq \dfrac{ \int_a^b{f(x){\rm d}x} }{b - a} \leq M \end{array}$ 。 </li>
 <li>所以 $\exists \xi \in [a, b]$ ，使 $f(\xi) = \dfrac{\int_a^b{f(x)}{\rm d}x}{b - a}$ 。</li>
 </ul>
 </li>
@@ -617,7 +617,7 @@
 </li>
 <li>2⃣️</li>
 <li>$\xi \to x \implies f(x)g’’(x) = g(x)f’’(x)$ </li>
-<li>积分： $\begin{array}{l} \dfrac{f(\xi)}{g(\xi)} = \dfrac{f’’(\xi)}{g’’(\xi)} &amp; \implies \int f(x)g’’(x) {\rm d}x = \int g(x)f’’(x) {\rm d}x \[1em] &amp; \implies f(x)g’(x) - \int g’(x)f’(x){\rm d}x = g(x)f’(x) - \int f’(x)g’(x){\rm d}x \[1em] &amp; \implies f(x)g’(x) = g(x)f’(x) \end{array}$  </li>
+<li>积分： $\begin{array}{l} \dfrac{f(\xi)}{g(\xi)} = \dfrac{f’’(\xi)}{g’’(\xi)} &amp; \implies \int f(x)g’’(x) {\rm d}x = \int g(x)f’’(x) {\rm d}x \\ &amp; \implies f(x)g’(x) - \int g’(x)f’(x){\rm d}x = g(x)f’(x) - \int f’(x)g’(x){\rm d}x \\ &amp; \implies f(x)g’(x) = g(x)f’(x) \end{array}$  </li>
 <li>令 $F(x) = f(x)g’(x) - g(x)f’(x)$ <ul>
 <li>$F(a) = f(a)g’(a) - g(a)f’(a) = 0$</li>
 <li>$F(b) = f(b)g’(b) - g(b)f’(b) = 0$  </li>
@@ -695,7 +695,7 @@
 <li>$ \dfrac{ f’(\eta) }{ e^\eta } $ 像柯西中值定理</li>
 </ul>
 </li>
-<li>其中 $ \begin{cases} \dfrac{ f’(\eta) }{ e^\eta } &amp; = \dfrac{ f(b) - f(a) }{ e^b - e^a } \quad ( g(x) = e^x ) \[1em] f’(\xi) &amp; = \dfrac{ f(b) - f(a) }{ b - a } \end{cases} $ 。</li>
+<li>其中 $ \begin{cases} \dfrac{ f’(\eta) }{ e^\eta } &amp; = \dfrac{ f(b) - f(a) }{ e^b - e^a } \quad ( g(x) = e^x ) \\ f’(\xi) &amp; = \dfrac{ f(b) - f(a) }{ b - a } \end{cases} $ 。</li>
 </ul>
 </li>
 </ol>
@@ -731,7 +731,7 @@
 <ul>
 <li>必须是双侧定义，否则不考虑极值</li>
 <li>若 $ f(x) $ 在 $ x = x_0 $ 处连续，在 $ \bigcup\limits^o (x_0, \delta) $ 内可导，则<ul>
-<li>$ \begin{cases} \text{当} x_0 \in (x_0 - \delta, x_0) \text{时} f’(x) &lt; 0, \text{当} x_0 \in (x_0, x_0 + \delta) \text{时} f’(x) &gt; 0 \implies \text{极小} \[1em] \text{当} x_0 \in (x_0 - \delta, x_0) \text{时} f’(x) &gt; 0, \text{当} x_0 \in (x_0, x_0 + \delta) \text{时} f’(x) &lt; 0 \implies \text{极大} \[1em] \text{若} f’(x) \text{在} (x_0 - \delta, x_0) \text{与} (x_0, x_0 + \delta) \text{内不变号} \implies \text{不是极值} \end{cases} $ </li>
+<li>$ \begin{cases} \text{当} x_0 \in (x_0 - \delta, x_0) \text{时} f’(x) &lt; 0, \text{当} x_0 \in (x_0, x_0 + \delta) \text{时} f’(x) &gt; 0 \implies \text{极小} \\ \text{当} x_0 \in (x_0 - \delta, x_0) \text{时} f’(x) &gt; 0, \text{当} x_0 \in (x_0, x_0 + \delta) \text{时} f’(x) &lt; 0 \implies \text{极大} \\ \text{若} f’(x) \text{在} (x_0 - \delta, x_0) \text{与} (x_0, x_0 + \delta) \text{内不变号} \implies \text{不是极值} \end{cases} $ </li>
 <li>⭐️只需要满足在【去心邻域】内可导</li>
 </ul>
 </li>
@@ -742,7 +742,7 @@
 <ol>
 <li>证明 $ f(x) = ( 1 + \dfrac{1}{x} )^x $ 在 $(0, + \infty) $ 内单调增。 <ul>
 <li>$ f(x) = e^{ x \ln ( 1 + \dfrac{1}{x} ) } = e^{ x [ \ln ( 1 + x ) - \ln x ] } $ </li>
-<li>$ \begin{array}{l} f’(x) &amp; = ( 1 + \dfrac{1}{x} )^x \cdot [ \ln (1 + x) - \ln x + x ( \dfrac{1}{1 + x} - \dfrac{1}{x} ) ] \[1em] &amp; = ( 1 + \dfrac{1}{x} )^x \cdot [ \ln (1 + x) - \ln x - \dfrac{1}{ 1 + x } ] \end{array} $ </li>
+<li>$ \begin{array}{l} f’(x) &amp; = ( 1 + \dfrac{1}{x} )^x \cdot [ \ln (1 + x) - \ln x + x ( \dfrac{1}{1 + x} - \dfrac{1}{x} ) ] \\ &amp; = ( 1 + \dfrac{1}{x} )^x \cdot [ \ln (1 + x) - \ln x - \dfrac{1}{ 1 + x } ] \end{array} $ </li>
 <li>对于 $ \ln (1 + x) - \ln x $ ，令 $ f(t) = \ln t $ 。</li>
 <li>在 $ [x, 1+x] $ 上用拉氏定理<ul>
 <li>$ \ln (1 + x) - \ln x = \dfrac{1}{\xi} \quad (x &lt; \xi &lt; 1 + x) $ </li>
@@ -780,12 +780,12 @@
 </ul>
 </li>
 <li>辨别法：设 $ f(x) $ 在 $ I $ 上二阶可导<ul>
-<li>$ \begin{cases} \text{若} f’’(x) &gt; 0, \forall x \in I \implies f(x) \text{是凹的} \[1em] \text{若} f’’(x) &lt; 0, \forall x \in I \implies f(x) \text{是凸的} \end{cases} $ </li>
+<li>$ \begin{cases} \text{若} f’’(x) &gt; 0, \forall x \in I \implies f(x) \text{是凹的} \\ \text{若} f’’(x) &lt; 0, \forall x \in I \implies f(x) \text{是凸的} \end{cases} $ </li>
 <li>若 $ f(x) $ 在 $ x_0 $ 点的左右邻域 $ f’’(x) $ 变号 $ \implies ( x_0, f(x_0) ) $ 为拐点。</li>
 </ul>
 </li>
 <li>例题<ol>
-<li>已知曲线 $ L \begin{cases} x = t^2 + 1 \[1em] y = 4t - t^2 \end{cases} ( t &gt; 0 ) $ ，讨论曲线 $ L $ 的凹凸性。 <ul>
+<li>已知曲线 $ L \begin{cases} x = t^2 + 1 \\ y = 4t - t^2 \end{cases} ( t &gt; 0 ) $ ，讨论曲线 $ L $ 的凹凸性。 <ul>
 <li>$ \dfrac{ {\rm d}y }{ {\rm d}x } = \dfrac{ {\rm d}y / {\rm d}t }{ {\rm d}x / {\rm d}t } = \dfrac{ 4 - 2t }{2t} = \dfrac{2}{t} - 1 $ </li>
 <li>$ \dfrac{ {\rm d}^2 y }{ {\rm d}x^2 } = \dfrac{ {\rm d} ( \dfrac{ {\rm d}y }{ {\rm d}x } ) / {\rm d}t }{ {\rm d}x / {\rm d}t } = \dfrac{ -\dfrac{2}{t^2} }{2t} = -\dfrac{1}{t^3} &lt; 0 $ </li>
 <li>所以曲线 $ L $ 是凸曲线。</li>
@@ -848,7 +848,7 @@
 </ol>
 <h5 id="最值"><a href="#最值" class="headerlink" title="最值"></a>最值</h5><ol>
 <li>对于函数 $ f(x) $ ，在 $ [a, b] $ 上找出三类点<ul>
-<li>$ \begin{cases} f’(x) = 0 \implies x_0 \text{驻点} \[1em] f’(x) \text{不} \exists \implies x_1 \text{不可导点} \[1em] \text{端点} a, b  \end{cases} $ </li>
+<li>$ \begin{cases} f’(x) = 0 \implies x_0 \text{驻点} \\ f’(x) \text{不} \exists \implies x_1 \text{不可导点} \\ \text{端点} a, b  \end{cases} $ </li>
 <li>比较 $ f(x_0) $ ，$ f(x_1) $ ，$ f(a) $ ，$ f(b) $ 大小，取其最大（小）者为最大（小）值。</li>
 </ul>
 </li>
@@ -859,7 +859,7 @@
 <li>例题<ol>
 <li>防空洞的截面拟建成矩形加半圆（如图所示），截面的面积为 $5 m^2$ ，问底宽 $ x $ 为多少时才能使建造时所用的材料最省？<ul>
 <li><img src="./images/2.3.4.3.1.png" alt=""></li>
-<li>设矩形的高为 $ y $，则 $ \begin{cases} \text{周长为} L \[1em] \text{面积为} S \end{cases} $ </li>
+<li>设矩形的高为 $ y $，则 $ \begin{cases} \text{周长为} L \\ \text{面积为} S \end{cases} $ </li>
 <li>$ S = xy + \dfrac{\pi}{8}x^2 = 5 \implies y = \dfrac{5}{x} - \dfrac{\pi}{8}x &gt; 0 \implies x &lt; \sqrt{ \dfrac{40}{\pi} } $ </li>
 <li>$ L = x + 2y + \dfrac{\pi}{2}x = \dfrac{10}{x} + ( \dfrac{\pi}{4} + 1 ) x, \quad x \in ( 0, \sqrt{ \dfrac{40}{\pi} } ) $ </li>
 <li>$ L’ = -\dfrac{10}{x^2} + \dfrac{\pi}{4} + 1 = 0 \implies x = \sqrt{ \dfrac{40}{\pi + 4} } $ </li>
