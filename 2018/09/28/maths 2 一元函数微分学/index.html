@@ -236,16 +236,16 @@
             </div>
             <div class="row justify-content-center">
                 <div class="col-md-8">
-                    <h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><p>$lim_{\Delta x \to 0} \dfrac{f(x_0 + \Delta x) - f(x_0)}{\Delta x}$ 记为 $f’(x_0)$ ：（瞬时）变化率。</p>
+                    <h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><p>$\lim\limits_{\Delta x \to 0} \dfrac{f(x_0 + \Delta x) - f(x_0)}{\Delta x}$ 记为 $f’(x_0)$ ：（瞬时）变化率。</p>
 <ul>
 <li>$f$ 对 $x$ 的变化率：$\dfrac{ {\rm d} f}{ {\rm d} x} = f’_x$ 。</li>
-<li>$\begin{cases} \lim_{\Delta x \to 0}\dfrac{f(x_0 + \Delta x) - f(x_0)}{\Delta x} &amp; \to \text{增量式} \\ \lim_{x \to x_0}\dfrac{f(x) - f(x_0)}{x - x_0} &amp; \to \text{差值式} \end{cases}$ </li>
+<li>$\begin{cases} \lim\limits_{\Delta x \to 0}\dfrac{f(x_0 + \Delta x) - f(x_0)}{\Delta x} &amp; \to \text{增量式} \\ \lim\limits_{x \to x_0}\dfrac{f(x) - f(x_0)}{x - x_0} &amp; \to \text{差值式} \end{cases}$ </li>
 <li><p>【注】</p>
 <ol>
 <li><p>【左右有别】</p>
 <ul>
-<li>$lim_{\Delta x \to 0^+} \dfrac{f(x_0 + \Delta x) - f(x_0)}{\Delta x} = f’_+(x_0)$ 右导数</li>
-<li>$lim_{\Delta x \to 0^-} \dfrac{f(x_0 + \Delta x) - f(x_0)}{\Delta x} = f’_-(x_0)$ 左导数</li>
+<li>$\lim\limits_{\Delta x \to 0^+} \dfrac{f(x_0 + \Delta x) - f(x_0)}{\Delta x} = f’_+(x_0)$ 右导数</li>
+<li>$\lim\limits_{\Delta x \to 0^-} \dfrac{f(x_0 + \Delta x) - f(x_0)}{\Delta x} = f’_-(x_0)$ 左导数</li>
 <li><strong>因此 $f’(x_0)$ 存在 $\iff$ $f’_-(x_0) = f’_+(x_0)$ 。</strong> <ul>
 <li>只有单侧极限，不能确定导数存在。</li>
 </ul>
@@ -254,7 +254,7 @@
 </li>
 <li><p>$\Delta x \to $ （广义化）🐶</p>
 <ul>
-<li>$f’(x_0) = \lim_{🐶 \to 0}\dfrac{f(x_0 + 🐶) - f(x_0)}{🐶}$ </li>
+<li>$f’(x_0) = \lim\limits_{🐶 \to 0}\dfrac{f(x_0 + 🐶) - f(x_0)}{🐶}$ </li>
 <li>三个 🐶 一摸一样（凑定义）</li>
 </ul>
 </li>
@@ -262,13 +262,13 @@
 <ul>
 <li><p>不可违反此原则</p>
 </li>
-<li><p>$\lim_{2 \Delta x \to 0}\dfrac{f(x_0 + \Delta x) - f(x_0 - \Delta x)}{2 \Delta x} = f’(x_0)$ 就是典型错误</p>
+<li><p>$\lim\limits_{2 \Delta x \to 0}\dfrac{f(x_0 + \Delta x) - f(x_0 - \Delta x)}{2 \Delta x} = f’(x_0)$ 就是典型错误</p>
 </li>
 </ul>
 </li>
 <li><p>等价写法（换元法）</p>
 <ul>
-<li>令 $x_0 + \Delta x = x \implies \lim_{x \to x_0}\dfrac{f(x) - f(x_0)}{x - x_0} = f’(x_0)$ 。 </li>
+<li>令 $x_0 + \Delta x = x \implies \lim\limits_{x \to x_0}\dfrac{f(x) - f(x_0)}{x - x_0} = f’(x_0)$ 。 </li>
 </ul>
 </li>
 </ol>
@@ -288,10 +288,10 @@
 </ul>
 </li>
 <li><strong>设 $f(0) = 0$ ，以下极限存在能确定 $f(x)$ 在点 $x = 0$ 可导的是 $()$ 。</strong>【抽象型】<ul>
-<li>$\begin{array}{l} A. \lim_{h \to 0}\dfrac{f(1 - \cos h)}{h^2} &amp; B. \lim_{h \to 0}\dfrac{f(1 - e^h)}{h} \\ C. \lim_{h \to 0}\dfrac{f(h - \sin h)}{h^2} &amp;  D. \lim_{h \to 0}\dfrac{f(2h) - f(h)}{h}\end{array}$ </li>
+<li>$\begin{array}{l} A. \lim\limits_{h \to 0}\dfrac{f(1 - \cos h)}{h^2} &amp; B. \lim\limits_{h \to 0}\dfrac{f(1 - e^h)}{h} \\ C. \lim\limits_{h \to 0}\dfrac{f(h - \sin h)}{h^2} &amp;  D. \lim\limits_{h \to 0}\dfrac{f(2h) - f(h)}{h}\end{array}$ </li>
 <li>分析<ul>
 <li>抽象型使用【增量式】</li>
-<li>$f’(0) = \lim_{🐶 \to 0}\dfrac{f(0 + 🐶) - f(0)}{🐶}$ </li>
+<li>$f’(0) = \lim\limits_{🐶 \to 0}\dfrac{f(0 + 🐶) - f(0)}{🐶}$ </li>
 <li>$h \to 0$ 时，$1 - \cos h \to 1^-$ 。<ul>
 <li>$\because \cos h \leq 1$ </li>
 <li>天生【单侧极限】</li>
@@ -305,13 +305,13 @@
 </ul>
 </li>
 <li>【注】<ul>
-<li>$🐶 \to 0$ 时，$\dfrac{|🐶|}{🐶}$ 有界，但 $\lim_{🐶 \to 0}\dfrac{|🐶|}{🐶}$ 不存在。</li>
+<li>$🐶 \to 0$ 时，$\dfrac{|🐶|}{🐶}$ 有界，但 $\lim\limits_{🐶 \to 0}\dfrac{|🐶|}{🐶}$ 不存在。</li>
 </ul>
 </li>
 </ul>
 </li>
 <li>若 $f(x)$ 是可导的偶函数，证明 $f’(x)$ 的奇函数。【记】<ul>
-<li>$\begin{array}{l}f’(x) &amp; = \lim_{\Delta x \to 0} \dfrac{f(x + \Delta x) - f(x)}{\Delta x} \\ f’(-x) &amp; = \lim_{\Delta x \to 0} \dfrac{f(-x + \Delta x) - f(-x)}{\Delta x} \\ &amp; = \lim_{\Delta x \to 0} \dfrac{f(x+(-\Delta x) - f(x)}{\Delta x} \\ &amp; = -\lim_{-\Delta x \to 0} \dfrac{f(x+(-\Delta x) - f(x)}{-\Delta x} \\ &amp; = -f’(x) \end{array}​$ </li>
+<li>$\begin{array}{l}f’(x) &amp; = \lim\limits_{\Delta x \to 0} \dfrac{f(x + \Delta x) - f(x)}{\Delta x} \\ f’(-x) &amp; = \lim\limits_{\Delta x \to 0} \dfrac{f(-x + \Delta x) - f(-x)}{\Delta x} \\ &amp; = \lim\limits_{\Delta x \to 0} \dfrac{f(x+(-\Delta x) - f(x)}{\Delta x} \\ &amp; = -\lim\limits_{-\Delta x \to 0} \dfrac{f(x+(-\Delta x) - f(x)}{-\Delta x} \\ &amp; = -f’(x) \end{array}​$ </li>
 <li>若 $f(x)$ 是可导的奇函数，证明 $f’(x)$ 的偶函数。</li>
 </ul>
 </li>
@@ -320,7 +320,7 @@
 </ul>
 <h3 id="导数计算"><a href="#导数计算" class="headerlink" title="导数计算"></a>导数计算</h3><h5 id="基本求导公式"><a href="#基本求导公式" class="headerlink" title="基本求导公式"></a>基本求导公式</h5><p>$\begin{array}{l} (\sin x)’ = \cos x &amp; (\cos x)’ = -\sin x \\ (\tan x)’ = \sec^2 x &amp; (\cot x)’ = - \csc^2 x \\ (\sec x)’ = \sec x \tan x &amp; (\csc x)’ = - \csc x \cot x \end{array}$ </p>
 <p>$\begin{array}{l} (\arcsin x)’ = \dfrac{1}{ \sqrt{1 - x^2} } &amp; (\arccos x)’ = - \dfrac{1}{ \sqrt{1 - x^2} } \\ (\arctan x)’ = \dfrac{1}{1 + x^2} &amp; (\arccot x)’ = - \dfrac{1}{1 + x^2} \end{array}$</p>
-<p>$\begin{array}{l} (\ln(x + \sqrt{x^2 + 1}))’ = \dfrac{1}{ \sqrt{x^2 + 1} } \end{array}$ </p>
+<p>$\begin{array}{l} (\ln(x + \sqrt{x^2 + 1}))’ = \dfrac{1}{ \sqrt{x^2 + 1} } \end{array}​$ </p>
 <p>$\begin{array}{l} (\ln(x + \sqrt{x^2 - 1}))’ = \dfrac{1}{ \sqrt{x^2 - 1} } \end{array}$ </p>
 <h5 id="基本求导方法"><a href="#基本求导方法" class="headerlink" title="基本求导方法"></a>基本求导方法</h5><ol>
 <li><p>复合函数求导</p>
@@ -360,7 +360,7 @@
 <li><p>$\dfrac{ {\rm d}^2 y }{ {\rm d} x^2 } = \dfrac{ {\rm d} ( \dfrac{ {\rm d} y }{ {\rm d} x } ) }{ {\rm d} x }$ </p>
 <ul>
 <li>由于 $\dfrac{ {\rm d} y}{ {\rm d} x } = \dfrac{1}{f’(y)}$ 是关于 $y$ 的函数，所以 $\dfrac{ {\rm d} y}{ {\rm d} x }$ 只能对 $y$ 求导。 </li>
-<li>$\begin{array}{l}\dfrac{ {\rm d}^2 y }{ {\rm d} x^2 } &amp; = \dfrac{ {\rm d} ( \dfrac{ {\rm d} y }{ {\rm d} x } ) / {\rm d} y }{ {\rm d} x / {\rm d} y } = \dfrac{ {\rm d} ( \dfrac{1}{f’(y)} ) }{ {\rm d} y } \cdot \dfrac{ {\rm d} y }{ {\rm d} x } \\ &amp; = -\dfrac{ f’’(y) }{ [f’(y)]^2 } \cdot \dfrac{1}{f’(y)} \\ &amp; = -\dfrac{ f’’(y) }{ [f’(y)]^3 } =-\dfrac{ f’’(f^{-1}(x)) }{ \{f’[f^{-1}(x)]\}^3 } \end{array}$ </li>
+<li>$\begin{array}{l}\dfrac{ {\rm d}^2 y }{ {\rm d} x^2 } &amp; = \dfrac{ {\rm d} ( \dfrac{ {\rm d} y }{ {\rm d} x } ) / {\rm d} y }{ {\rm d} x / {\rm d} y } = \dfrac{ {\rm d} ( \dfrac{1}{f’(y)} ) }{ {\rm d} y } \cdot \dfrac{ {\rm d} y }{ {\rm d} x } \[1em] &amp; = -\dfrac{ f’’(y) }{ [f’(y)]^2 } \cdot \dfrac{1}{f’(y)} \[1em] &amp; = -\dfrac{ f’’(y) }{ [f’(y)]^3 } =-\dfrac{ f’’(f^{-1}(x)) }{ \{f’[f^{-1}(x)]\}^3 } \end{array}$ </li>
 </ul>
 </li>
 </ul>
@@ -389,7 +389,7 @@
 <li>$\implies \varphi’’(t) - \dfrac{1}{1 + t} \varphi’(t) = 3(1 + t)$ 。</li>
 </ul>
 </li>
-<li>设 $\begin{cases} x = t + e^t \\ y = \sin t \end{cases}$ ，则 $\left. \dfrac{ {\rm d}^2 y}{ {\rm d}x^2 } \right|_{t = 0} = ​$ ______ 。<ul>
+<li>设 $\begin{cases} x = t + e^t \\ y = \sin t \end{cases}$ ，则 $\left. \dfrac{ {\rm d}^2 y}{ {\rm d}x^2 } \right|_{t = 0} = $ ______。<ul>
 <li>$-\dfrac{1}{8}$ </li>
 </ul>
 </li>
@@ -400,7 +400,7 @@
 <li>高阶导数<ul>
 <li>$\text{高阶导数} \begin{cases} \text{莱布尼兹公式} \\ \text{找规律用数学归纳法} \\ \text{展开式法} \end{cases}$ </li>
 <li>莱布尼兹公式<ul>
-<li>$\begin{cases} (u \pm v)^{(n)} &amp; = u^{(n)} \pm v^{(n)} \\ (uv)^{(n)} &amp; = \sum_{k=0}^{k=n} C_n^k u^{(n - k)} v^{(k)} \\ &amp; = u^{(n)}v + n \cdot u^{(n - 1)}v’ + \dfrac{n(n - 1)}{2} \cdot u^{(n - 2)}v’’ + … + uv^{(n)} \end{cases}$ </li>
+<li>$\begin{cases} (u \pm v)^{(n)} &amp; = u^{(n)} \pm v^{(n)} \[1em] (uv)^{(n)} &amp; = \sum_{k=0}^{k=n} C_n^k u^{(n - k)} v^{(k)} \\ &amp; = u^{(n)}v + n \cdot u^{(n - 1)}v’ + \dfrac{n(n - 1)}{2} \cdot u^{(n - 2)}v’’ + … + uv^{(n)} \end{cases}$ </li>
 <li>$(a^x)^{(n)} = a^x(\ln a)^n, \quad (e^x)^{(n)} = e^x$ </li>
 <li>$(\sin kx)^{(n)} = k^n \sin( kx + \frac{\pi}{2} \cdot n  )$ </li>
 <li>$(\cos kx)^{(n)} = k^n \cos( kx + \frac{\pi}{2} \cdot n  )$ </li>
@@ -411,7 +411,7 @@
 </li>
 <li>例题<ul>
 <li>$y = x^2 \sin 2x$ ，求 $y^{(50)}$ 。<ul>
-<li>$\begin{array}{l} y^{(50)} &amp; = x^2 \cdot (\sin 2x)^{(50)} + 50(x^2)’ \cdot (\sin 2x)^{(49)} + \dfrac{50 \cdot 49}{2}(x^2)’’ \cdot (\sin 2x)^{(48)} \\ &amp; = -2^{50}x^2 \sin 2x + 50 \cdot 2^{50}x \cos 2x + 50 \cdot 49 \cdot 2^{48} \sin 2x \end{array}$ </li>
+<li>$\begin{array}{l} y^{(50)} &amp; = x^2 \cdot (\sin 2x)^{(50)} + 50(x^2)’ \cdot (\sin 2x)^{(49)} + \dfrac{50 \cdot 49}{2}(x^2)’’ \cdot (\sin 2x)^{(48)} \[1em] &amp; = -2^{50}x^2 \sin 2x + 50 \cdot 2^{50}x \cos 2x + 50 \cdot 49 \cdot 2^{48} \sin 2x \end{array}$ </li>
 </ul>
 </li>
 </ul>
@@ -448,23 +448,23 @@
 <li><p>涉及 $f’(x)$ 的定理</p>
 <ol>
 <li>费马定理<ul>
-<li>设 $f(x)$ 在 $x = x_0$ 处 $\begin{cases} 1) \text{可导} \\ 2) \text{取极值} \end{cases} \implies f’(x_0) = 0$ 。</li>
+<li>设 $f(x)$ 在 $x = x_0$ 处 $\begin{cases} 1) \text{可导} \[1em] 2) \text{取极值} \end{cases} \implies f’(x_0) = 0$ 。</li>
 <li>《费马大定理》</li>
 <li>证明见《高数 18 讲》</li>
 </ul>
 </li>
 <li><p><strong>罗尔定理</strong></p>
 <ul>
-<li>设 $f(x)$ 满足以下三条 $\begin{cases} 1) [a, b] \text{ 连续} \\ 2) (a, b) \text{ 内可导} \\ 3) f(a) = f(b) \end{cases} \implies \exists \xi \in (a, b) \text{ 使 } f’(\xi) = 0$ 。</li>
+<li>设 $f(x)$ 满足以下三条 $\begin{cases} 1) [a, b] \text{ 连续} \[1em] 2) (a, b) \text{ 内可导} \[1em] 3) f(a) = f(b) \end{cases} \implies \exists \xi \in (a, b) \text{ 使 } f’(\xi) = 0$ 。</li>
 </ul>
 </li>
 <li>拉格朗日中值定理<ul>
-<li>设 $f(x)$ 满足 $\begin{cases}  1) [a, b] \text{上连续} \\ 2) (a, b) \text{内可导}\end{cases}$ ，则 $\exists \xi \in (a, b)$ ，使 $f’(\xi) = \dfrac{f(b) - f(a)}{b - a}$ 。</li>
+<li>设 $f(x)$ 满足 $\begin{cases}  1) [a, b] \text{上连续} \[1em] 2) (a, b) \text{内可导}\end{cases}$ ，则 $\exists \xi \in (a, b)$ ，使 $f’(\xi) = \dfrac{f(b) - f(a)}{b - a}$ 。</li>
 <li>若 $f(b) = f(a)$ ，则 $f’(\xi) = 0$ ，即为罗尔定理。</li>
 </ul>
 </li>
 <li>柯西中值定理<ul>
-<li>设 $f(x)$ ， $g(x)$ 满足 $\begin{cases} 1) [a, b] \text{连续} \\ 2) (a, b) \text{内可导} \\ g’(x) \not= 0 \end{cases}$ ，则 $\dfrac{f’(\xi)}{g’(\xi)} = \dfrac{f(b) - f(a)}{g(b) - g(a)}$ 。</li>
+<li>设 $f(x)$ ， $g(x)$ 满足 $\begin{cases} 1) [a, b] \text{连续} \[1em] 2) (a, b) \text{内可导} \[1em] g’(x) \not= 0 \end{cases}$ ，则 $\dfrac{f’(\xi)}{g’(\xi)} = \dfrac{f(b) - f(a)}{g(b) - g(a)}$ 。</li>
 <li>若取 $g(x) = x \implies \dfrac{f(b) - f(a)}{b - a} = \dfrac{f’(\xi)}{1}$ ，即为拉格朗日中值定理。</li>
 <li>柯西中值定理 $\implies$ 拉格朗日中值定理 $\implies$ 罗尔定理</li>
 </ul>
@@ -505,7 +505,7 @@
 <ul>
 <li>设 $f(x)$ 在 $[a, b]$ 上连续，证明 $\exists \xi \in [a, b]$ ，使 $\int_a^b{f(x) {\rm d} x = f(\xi)(b - a)}$ 。<ul>
 <li>由于 $f(x)$ 在 $[a, b]$ 上连续，所以存在 $m \leq f(x) \leq M (x \in [a, b])$ ，$m$ 为最小值，$M$ 为最大值。</li>
-<li>所以 $\begin{array}{l} &amp; \int_a^b{m} {\rm d}x \leq \int_a^bf(x){\rm d}x \leq \int_a^b{M}{\rm d}x \\ \implies &amp; m(b - a) \leq \int_a^b{f(x)}{\rm d}x \leq M(b - a) \\ \implies &amp; m \leq \dfrac{ \int_a^b{f(x){\rm d}x} }{b - a} \leq M \end{array}$ 。 </li>
+<li>所以 $\begin{array}{l} &amp; \int_a^b{m} {\rm d}x \leq \int_a^bf(x){\rm d}x \leq \int_a^b{M}{\rm d}x \[1em] \implies &amp; m(b - a) \leq \int_a^b{f(x)}{\rm d}x \leq M(b - a) \[1em] \implies &amp; m \leq \dfrac{ \int_a^b{f(x){\rm d}x} }{b - a} \leq M \end{array}$ 。 </li>
 <li>所以 $\exists \xi \in [a, b]$ ，使 $f(\xi) = \dfrac{\int_a^b{f(x)}{\rm d}x}{b - a}$ 。</li>
 </ul>
 </li>
@@ -538,16 +538,16 @@
 </li>
 <li>例题<ul>
 <li>设 $f(x)$ 在 $[0, 1]$ 上连续，$(0, 1)$ 内可导，$f(1) = 0$ ，证明 $\exists \xi \in (0, 1)$ ，使 $f(\xi) + \xi f’(\xi) = 0$ 。</li>
-<li>设 $f(x)$ 在 $[0, 1]$ 上二阶可导，且 $f(1) &gt; 0$ ，$\lim_{x \to 0^+}\dfrac{f(x)}{x} &lt; 0$ ，证明：1⃣️方程 $f(x) = 0$ 在 $(0, 1)$ 内至少有一个实根。2⃣️方程 $f(x)f’’(x) + [f’(x)]^2 = 0$ 在 $(0, 1)$ 内至少有两个不同的实根。<ul>
+<li>设 $f(x)$ 在 $[0, 1]$ 上二阶可导，且 $f(1) &gt; 0$ ，$\lim\limits_{x \to 0^+}\dfrac{f(x)}{x} &lt; 0$ ，证明：1⃣️方程 $f(x) = 0$ 在 $(0, 1)$ 内至少有一个实根。2⃣️方程 $f(x)f’’(x) + [f’(x)]^2 = 0$ 在 $(0, 1)$ 内至少有两个不同的实根。<ul>
 <li>1⃣️</li>
-<li>由 $\lim_{x \to 0^+}\dfrac{f(x)}{x} &lt; 0$ ，所以 $\exists \xi &gt; 0$ ，当 $0 &lt; x &lt;\xi$ 时，$\dfrac{f(x)}{x} &lt; 0$ ，所以当 $0 &lt; x &lt; \xi$ 时，$f(x) &lt; 0$ 。<ul>
+<li>由 $\lim\limits_{x \to 0^+}\dfrac{f(x)}{x} &lt; 0$ ，所以 $\exists \xi &gt; 0$ ，当 $0 &lt; x &lt;\xi$ 时，$\dfrac{f(x)}{x} &lt; 0$ ，所以当 $0 &lt; x &lt; \xi$ 时，$f(x) &lt; 0$ 。<ul>
 <li>【极限保号性】</li>
 </ul>
 </li>
 <li>取 $a \in (0, \xi)$ ，$f(a) &lt; 0$ ，又因为 $f(1) &gt; 0$ ，所以 $\exists c \in (\xi, 1)$ ，使得 $f(c) = 0$ 。 </li>
 <li>2⃣️</li>
-<li>设 $F(x) = f(x) \cdot f’(x)$ ，$f(0) = \lim_{x \to 0^+}f(x) = \lim_{x \to 0^+}\dfrac{f(x)}{x} \cdot x = 0$ 。<ul>
-<li>函数极限存在，函数有界，所以 $\lim_{x \to 0^+}\dfrac{f(x)}{x}$ 有界。 </li>
+<li>设 $F(x) = f(x) \cdot f’(x)$ ，$f(0) = \lim\limits_{x \to 0^+}f(x) = \lim\limits_{x \to 0^+}\dfrac{f(x)}{x} \cdot x = 0$ 。<ul>
+<li>函数极限存在，函数有界，所以 $\lim\limits_{x \to 0^+}\dfrac{f(x)}{x}$ 有界。 </li>
 </ul>
 </li>
 <li>由于 $f(0) = f(c) = 0$ ，所以 $\exists b \in (0, c)$ ，使得 $f’(b) = 0$ 。</li>
@@ -614,7 +614,7 @@
 </li>
 <li>2⃣️</li>
 <li>$\xi \to x \implies f(x)g’’(x) = g(x)f’’(x)$ </li>
-<li>积分： $\begin{array}{l} \dfrac{f(\xi)}{g(\xi)} = \dfrac{f’’(\xi)}{g’’(\xi)} &amp; \implies \int f(x)g’’(x) {\rm d}x = \int g(x)f’’(x) {\rm d}x \\ &amp; \implies f(x)g’(x) - \int g’(x)f’(x){\rm d}x = g(x)f’(x) - \int f’(x)g’(x){\rm d}x \\ &amp; \implies f(x)g’(x) = g(x)f’(x) \end{array}$  </li>
+<li>积分： $\begin{array}{l} \dfrac{f(\xi)}{g(\xi)} = \dfrac{f’’(\xi)}{g’’(\xi)} &amp; \implies \int f(x)g’’(x) {\rm d}x = \int g(x)f’’(x) {\rm d}x \[1em] &amp; \implies f(x)g’(x) - \int g’(x)f’(x){\rm d}x = g(x)f’(x) - \int f’(x)g’(x){\rm d}x \[1em] &amp; \implies f(x)g’(x) = g(x)f’(x) \end{array}$  </li>
 <li>令 $F(x) = f(x)g’(x) - g(x)f’(x)$ <ul>
 <li>$F(a) = f(a)g’(a) - g(a)f’(a) = 0$</li>
 <li>$F(b) = f(b)g’(b) - g(b)f’(b) = 0$  </li>
@@ -672,11 +672,11 @@
 </ul>
 </li>
 <li>$\xi$ 的具体表达式<ul>
-<li>设 $f(x) = \arcsin x$ ，$\xi$ 为 $f(x)$ 在 $[0, t]$ 上拉格朗日中值定理的中值点，$0 &lt; t &lt; 1$ ，求极限 $\lim_{t \to 0+}\dfrac{\xi}{t}$ 。<ul>
+<li>设 $f(x) = \arcsin x$ ，$\xi$ 为 $f(x)$ 在 $[0, t]$ 上拉格朗日中值定理的中值点，$0 &lt; t &lt; 1$ ，求极限 $\lim\limits_{t \to 0+}\dfrac{\xi}{t}$ 。<ul>
 <li>$\arcsin t - \arcsin 0 = \dfrac{1}{ \sqrt{1 - \xi^2} } \cdot (t - 0) \quad (0 &lt; \xi &lt; t &lt; 1)$ </li>
 <li>$\arcsin t = \dfrac{t}{ \sqrt{1 - \xi^2} } \implies \xi = \sqrt{1 - (\dfrac{t}{\arcsin t})^2}$ </li>
 <li>令 $\arcsin t = u \quad ( t \to 0^+ \implies u \to 0^+ )$</li>
-<li>所以 $\lim_{t \to 0^+}\dfrac{\xi}{t} = \lim_{u \to 0^+} \sqrt{ \dfrac{ 1 - (\dfrac{\sin u}{u})^2 }{ (\sin u)^2 } } = \lim_{u \to 0^+}\sqrt{ \dfrac{u^2 - (\sin u)^2}{u^2 \cdot (\sin u)^2} }  = \dfrac{1}{ \sqrt{3} }$ </li>
+<li>所以 $\lim\limits_{t \to 0^+}\dfrac{\xi}{t} = \lim\limits_{u \to 0^+} \sqrt{ \dfrac{ 1 - (\dfrac{\sin u}{u})^2 }{ (\sin u)^2 } } = \lim\limits_{u \to 0^+}\sqrt{ \dfrac{u^2 - (\sin u)^2}{u^2 \cdot (\sin u)^2} }  = \dfrac{1}{ \sqrt{3} }$ </li>
 </ul>
 </li>
 </ul>
@@ -692,7 +692,7 @@
 <li>$ \dfrac{ f’(\eta) }{ e^\eta } $ 像柯西中值定理</li>
 </ul>
 </li>
-<li>其中 $ \begin{cases} \dfrac{ f’(\eta) }{ e^\eta } &amp; = \dfrac{ f(b) - f(a) }{ e^b - e^a } \quad ( g(x) = e^x ) \\ f’(\xi) &amp; = \dfrac{ f(b) - f(a) }{ b - a } \end{cases} $ 。</li>
+<li>其中 $ \begin{cases} \dfrac{ f’(\eta) }{ e^\eta } &amp; = \dfrac{ f(b) - f(a) }{ e^b - e^a } \quad ( g(x) = e^x ) \[1em] f’(\xi) &amp; = \dfrac{ f(b) - f(a) }{ b - a } \end{cases} $ 。</li>
 </ul>
 </li>
 </ul>
@@ -722,6 +722,44 @@
 </ul>
 </li>
 </ol>
+<h3 id="导数的几何应用"><a href="#导数的几何应用" class="headerlink" title="导数的几何应用"></a>导数的几何应用</h3><p>三点两性一线：极值点、最值点、拐点；单调性、凹凸性；渐近线</p>
+<h5 id="极值与单调性"><a href="#极值与单调性" class="headerlink" title="极值与单调性"></a>极值与单调性</h5><ol>
+<li><p>定义</p>
+<ul>
+<li>必须是双侧定义，否则不考虑极值</li>
+<li>若 $ f(x) $ 在 $ x = x_0 $ 处连续，在 $ \bigcup\limits^o (x_0, \delta) $ 内可导，则<ul>
+<li>$ \begin{cases} \text{当} x_0 \in (x_0 - \delta, x_0) \text{时} f’(x) &lt; 0, \text{当} x_0 \in (x_0, x_0 + \delta) \text{时} f’(x) &gt; 0 \implies \text{极小} \[1em] \text{当} x_0 \in (x_0 - \delta, x_0) \text{时} f’(x) &gt; 0, \text{当} x_0 \in (x_0, x_0 + \delta) \text{时} f’(x) &lt; 0 \implies \text{极大} \[1em] \text{若} f’(x) \text{在} (x_0 - \delta, x_0) \text{与} (x_0, x_0 + \delta) \text{内不变号} \implies \text{不是极值} \end{cases} $ </li>
+<li>⭐️只需要满足在【去心邻域】内可导</li>
+</ul>
+</li>
+<li>$ f(x) $ 在 $ x = x_0 $ 处二阶可导， $ f’(x_0) = 0 $ ，$ f(x_0) $ 是极值。</li>
+</ul>
+</li>
+<li><p>例题</p>
+<ul>
+<li>证明 $ f(x) = ( 1 + \dfrac{1}{x} )^x $ 在 $(0, + \infty) $ 内单调增。 <ul>
+<li>$ f(x) = e^{ x \ln ( 1 + \dfrac{1}{x} ) } = e^{ x [ \ln ( 1 + x ) - \ln x ] } $</li>
+<li>$ \begin{array}{l} f’(x) &amp; = ( 1 + \dfrac{1}{x} )^x \cdot [ \ln (1 + x) - \ln x + x ( \dfrac{1}{1 + x} - \dfrac{1}{x} ) ] \[1em] &amp; = ( 1 + \dfrac{1}{x} )^x \cdot [ \ln (1 + x) - \ln x - \dfrac{1}{ 1 + x } ] \end{array} $<ul>
+<li>对于 $ \ln (1 + x) - \ln x $ ，令 $ f(t) = \ln t $。</li>
+<li>在 $ [x, 1+x] $ 上用拉氏定理<ul>
+<li>$ \ln (1 + x) - \ln x = \dfrac{1}{\xi} \quad (x &lt; \xi &lt; 1 + x) $</li>
+<li>所以 $ \dfrac{1}{\xi} &gt; \dfrac{1}{x} $</li>
+</ul>
+</li>
+<li>所以 $ \ln (1 + x) - \ln x - \dfrac{1}{ 1 + x } &gt; 0 $</li>
+</ul>
+</li>
+<li>又因为 $ ( 1 + \dfrac{1}{x} )^x &gt; 0 $，所以 $ f’(x) &gt; 0 \quad ( x \in (0, \infty) ) $</li>
+</ul>
+</li>
+<li>⭐️设 $ f(x) $ 连续，其 $ f’(x) $ 的图像如下，则 $ f(x) $ 有几个极小值点，几个极大值点。<ul>
+<li><img src="./images/2.3.1.2.3.png" alt=""></li>
+<li>看图说话</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
 
                 </div>
             </div>
@@ -732,13 +770,9 @@
 <div class="row justify-content-center">
     <nav class="m-pagination col-md-8 col-sm-24" role="pagination">
         
-        <a class="float-left" href="/2018/09/28/hexo_小 bug/" style="float: left;">
-            ← hexo 小 bug
-        </a>
         
-        
-        <a class="float-right" href="/2018/09/25/VS Code 插件/">
-            VS Code 插件 →
+        <a class="float-right" href="/2018/09/28/hexo_小 bug/">
+            hexo 小 bug →
         </a>
         
     </nav>
