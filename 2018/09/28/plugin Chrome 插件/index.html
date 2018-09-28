@@ -2,7 +2,7 @@
 
     
 <head>
-    <title>在 Hexo 中渲染 MathJax 数学公式 | H2P&#39;S BLOG</title>
+    <title>Chrome 插件 | H2P&#39;S BLOG</title>
     <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -190,7 +190,7 @@
     <!-- blog 的 date -->
     
         <span>
-            2018-09-21
+            2018-09-28
         </span>
         <span>&nbsp;&nbsp;</span>
     
@@ -199,21 +199,26 @@
     
     
     <span class="tag is-info">
-        <a href='/tags/mathjax/'>mathjax</a>
+        <a href='/tags/chrome/'>chrome</a>
+    </span>
+    ,
+    
+    <span class="tag is-info">
+        <a href='/tags/plugin/'>plugin</a>
     </span>
     
     
     
 </span>
 
-                    <h1>在 Hexo 中渲染 MathJax 数学公式</h1>
+                    <h1>Chrome 插件</h1>
                 </div>
             </div>
             <div class="row justify-content-center">
                 <div class="col-md-8">
                     <div class="div-message div-desc">
                         
-                            <span>显示数学公式看着才爽</span>
+                            <span>记录 Chrome 安装的插件</span>
                             <br>
                         
                         
@@ -221,52 +226,66 @@
                             <br>
                         
                         
+                            <span>Chrome 69.0.3497.81</span>
+                        
                     </div>
                 </div>
             </div>
             <div class="row justify-content-center">
                 <div class="col-md-8">
-                    <p>【转自 冉茂松 的CSDN 博客】<a class="own-underline" href="https://blog.csdn.net/u014630987/article/details/78670258" target="_blank">如何在 hexo 中支持 Mathjax？</a></p>
-<h3 id="1-使用-Kramed-代替-Marked"><a href="#1-使用-Kramed-代替-Marked" class="headerlink" title="1. 使用 Kramed 代替 Marked"></a>1. 使用 Kramed 代替 Marked</h3><ol>
-<li><p>在工程目录下执行以下命令来安装 kramed</p>
- <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm uninstall hexo-renderer-marked --save</span><br><span class="line">npm install hexo-renderer-kramed --save</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>打开 <code>/node_modules/hexo-renderer-kramed/lib/renderer.js</code> ，</p>
-<p> 把</p>
- <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Change inline math rule</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">formatText</span>(<span class="params">text</span>) </span>&#123;</span><br><span class="line">    <span class="comment">// Fit kramed's rule: $$ + \1 + $$</span></span><br><span class="line">    <span class="keyword">return</span> text.replace(<span class="regexp">/`\$(.*?)\$`/g</span>, <span class="string">'$$$$$1$$$$'</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p> 更改为</p>
- <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Change inline math rule</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">formatText</span>(<span class="params">text</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> text;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<p><br></p>
-<h3 id="2-停止使用-hexo-math"><a href="#2-停止使用-hexo-math" class="headerlink" title="2. 停止使用 hexo-math"></a>2. 停止使用 hexo-math</h3><p>如果安装了 <code>hexo-math</code> ，卸载它：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm uninstall hexo-math --save</span><br></pre></td></tr></table></figure>
-<p>然后安装 <a class="own-underline" href="https://github.com/phoenixcw/hexo-renderer-mathjax" target="_blank">hexo-renderer-mathjax</a> 包：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-renderer-mathjax --save</span><br></pre></td></tr></table></figure>
-<p><br></p>
-<h3 id="3-更新-Mathjax-的-CDN-链接"><a href="#3-更新-Mathjax-的-CDN-链接" class="headerlink" title="3. 更新 Mathjax 的 CDN 链接"></a>3. 更新 Mathjax 的 CDN 链接</h3><p>打开 <code>/node_modules/hexo-renderer-mathjax/mathjax.html</code> ，</p>
-<p>把 <code>&lt;script&gt;</code> 更改为：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p><br></p>
-<h3 id="4-更改默认转义规则"><a href="#4-更改默认转义规则" class="headerlink" title="4. 更改默认转义规则"></a>4. 更改默认转义规则</h3><p>打开 <code>node_modules\kramed\lib\rules\inline.js</code> ，</p>
-<p>把</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">escape</span>: <span class="regexp">/^\\([\\`*&#123;&#125;\[\]()#$+\-.!_&gt;])/</span>,</span><br></pre></td></tr></table></figure>
-<p>更改为</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">escape</span>: <span class="regexp">/^\\([`*\[\]()#+\-.!_&gt;])/</span>,</span><br></pre></td></tr></table></figure>
-<p>把</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">em: <span class="regexp">/^\b_((?:__|[\s\S])+?)_\b|^\*((?:\*\*|[\s\S])+?)\*(?!\*)/</span>,</span><br></pre></td></tr></table></figure>
-<p>更改为</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">em: <span class="regexp">/^\*((?:\*\*|[\s\S])+?)\*(?!\*)/</span>,</span><br></pre></td></tr></table></figure>
-<p><br></p>
-<h3 id="5-在主题中开启-mathjax"><a href="#5-在主题中开启-mathjax" class="headerlink" title="5. 在主题中开启 mathjax"></a>5. 在主题中开启 mathjax</h3><p>进入到主题目录，打开 <code>_config.yml</code> ，把 mathjax  修改为 true：</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># MathJax Support</span></span><br><span class="line"><span class="attr">mathjax:</span></span><br><span class="line"><span class="attr">  enable:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
-<p>在需要的文章中的 Front-matter 里开启 mathjax：</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">title:</span> </span><br><span class="line"><span class="attr">date:</span> </span><br><span class="line"><span class="attr">tags:</span></span><br><span class="line"><span class="attr">mathjax:</span> <span class="literal">true</span></span><br><span class="line"><span class="bullet">-</span><span class="bullet">-</span></span><br></pre></td></tr></table></figure>
-<p><br></p>
-<h3 id="更多参考"><a href="#更多参考" class="headerlink" title="更多参考"></a>更多参考</h3><div class="div-message div-desc" style="padding: 0 0 25px 10px ">
+                    <div class="div-message div-desc" style="padding: 0 0 25px 10px ">
     <br>
-    <a class="own-underline" href="https://www.jianshu.com/p/7ab21c7f0674" target="_blank">在Hexo中渲染MathJax数学公式</a>
+    <a class="own-underline" href="https://chrome.google.com/webstore/detail/adblock-plus/cfhdojbkjhnklbpkdaibdccddilifddb?utm_source=chrome-ntp-icon" target="_blank">Adblock Plus</a><br>
+    <a class="own-underline" href="https://chrome.google.com/webstore/detail/clickclean/ghgabhipcejejjmhhchfonmamedcbeod?utm_source=chrome-ntp-icon" target="_blank">Click&Clean</a><br>
+    <a class="own-underline" href="https://chrome.google.com/webstore/detail/onetab/chphlpgkkbolifaimnlloiipkdnihall?utm_source=chrome-ntp-icon" target="_blank">OneTab</a><br>
+    <a class="own-underline" href="https://chrome.google.com/webstore/detail/google-translate/aapbdbdomjkkjkaonfhkkikfgjllcleb?utm_source=chrome-ntp-icon" target="_blank">Google 翻译</a><br>
+    <a class="own-underline" href="https://chrome.google.com/webstore/detail/crxmouse-chrome-gestures/jlgkpaicikihijadgifklkbpdajbkhjo?utm_source=chrome-ntp-icon" target="_blank">crxMouse Chrome™ 手势</a><br>
 </div>
+
+<p><br></p>
+<h3 id="浏览器主题"><a href="#浏览器主题" class="headerlink" title="浏览器主题"></a>浏览器主题</h3><div class="div-message div-desc" style="padding: 0 0 25px 10px ">
+    <br>
+    <a class="own-underline" href="https://chrome.google.com/webstore/detail/midnight-lizard/pbnndmlekkboofhnbonilimejonapojg?utm_source=chrome-ntp-icon" target="_blank">Midnight Lizard</a>
+</div>
+
+<p><br></p>
+<h3 id="下载管理"><a href="#下载管理" class="headerlink" title="下载管理"></a>下载管理</h3><div class="div-message div-desc" style="padding: 0 0 25px 10px ">
+    <br>
+    <a class="own-underline" href="https://chrome.google.com/webstore/detail/chrono-download-manager/mciiogijehkdemklbdcbfkefimifhecn?utm_source=chrome-ntp-icon" target="_blank">Chrono下载管理器</a>
+    <a class="own-underline" href="https://chrome.google.com/webstore/detail/free-download-manager/ahmpjcflkgiildlgicmcieglgoilbfdp?utm_source=chrome-ntp-icon" target="_blank">Free Download Manager</a>
+</div>
+
+<p><br></p>
+<h3 id="页面样式修改"><a href="#页面样式修改" class="headerlink" title="页面样式修改"></a>页面样式修改</h3><div class="div-message div-desc" style="padding: 0 0 25px 10px ">
+    <br>
+    <a class="own-underline" href="https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo?utm_source=chrome-ntp-icon" target="_blank"><b>Tampermonkey</b></a>
+    脚本下载网站：<a class="own-underline" href="https://greasyfork.org/zh-CN" target="_blank">Greasy Fork</a>
+  </div>
+
+<p><br></p>
+<h3 id="前端开发工具"><a href="#前端开发工具" class="headerlink" title="前端开发工具"></a>前端开发工具</h3><div class="div-message div-desc" style="padding: 0 0 25px 10px ">
+    <br>
+    <a class="own-underline" href="https://chrome.google.com/webstore/detail/wappalyzer/gppongmhjkpfnbhagpmjfkannfbllamg?utm_source=chrome-ntp-icon" target="_blank">Wappalyzer</a>
+    <a class="own-underline" href="https://chrome.google.com/webstore/detail/cssviewer/ggfgijbpiheegefliciemofobhmofgce?utm_source=chrome-ntp-icon" target="_blank">CSSViewer</a>
+    <a class="own-underline" href="https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei?utm_source=chrome-ntp-icon" target="_blank">LiveReload</a>
+    <a class="own-underline" href="https://chrome.google.com/webstore/detail/web%E5%89%8D%E7%AB%AF%E5%8A%A9%E6%89%8Bfehelper/pkgccpejnmalmdinmhkkfafefagiiiad?utm_source=chrome-ntp-icon" target="_blank">WEB前端助手(FeHelper)</a>
+    <a class="own-underline" href="https://chrome.google.com/webstore/detail/window-resizer/kkelicaakdanhinjdeammmilcgefonfh?utm_source=chrome-ntp-icon" target="_blank">Window Resizer</a>
+</div>
+
+<p><br></p>
+<h3 id="Github-插件"><a href="#Github-插件" class="headerlink" title="Github 插件"></a>Github 插件</h3><div class="div-message div-desc" style="padding: 0 0 25px 10px ">
+    <br>
+    <a class="own-underline" href="https://chrome.google.com/webstore/detail/github-hovercard/mmoahbbnojgkclgceahhakhnccimnplk?utm_source=chrome-ntp-icon" target="_blank">GitHub Hovercard</a>
+    <a class="own-underline" href="https://chrome.google.com/webstore/detail/octotree/bkhaagjahfmjljalopjnoealnfndnagc?utm_source=chrome-ntp-icon" target="_blank">Octotree</a>
+</div>
+<br>
+
+### 学习
+<div class="div-message div-desc" style="padding: 0 0 25px 10px ">
+    <br>
+    <a class="own-underline" href="https://chrome.google.com/webstore/detail/%E6%8E%98%E9%87%91/lecdifefmmfjnjjinhaennhdlmcaeeeb?utm_source=chrome-ntp-icon" target="_blank">掘金</a>
+</div>
+
                 </div>
             </div>
             <div class="clearfix"></div>
@@ -276,13 +295,13 @@
 <div class="row justify-content-center">
     <nav class="m-pagination col-md-8 col-sm-24" role="pagination">
         
-        <a class="float-left" href="/2018/09/25/VS Code 插件/" style="float: left;">
-            ← VS Code 插件
+        <a class="float-left" href="/2018/09/28/hexo 小 bug/" style="float: left;">
+            ← Hexo 小 bug
         </a>
         
         
-        <a class="float-right" href="/2018/09/21/maths 1 极限/">
-            极限 →
+        <a class="float-right" href="/2018/09/28/maths 2 一元函数微分学/">
+            一元函数微分学 →
         </a>
         
     </nav>

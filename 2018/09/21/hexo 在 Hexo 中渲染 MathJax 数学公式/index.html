@@ -2,7 +2,7 @@
 
     
 <head>
-    <title>VS Code 插件 | H2P&#39;S BLOG</title>
+    <title>在 Hexo 中渲染 MathJax 数学公式 | H2P&#39;S BLOG</title>
     <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -190,7 +190,7 @@
     <!-- blog 的 date -->
     
         <span>
-            2018-09-25
+            2018-09-21
         </span>
         <span>&nbsp;&nbsp;</span>
     
@@ -199,103 +199,74 @@
     
     
     <span class="tag is-info">
-        <a href='/tags/vs/'>vs</a>
-    </span>
-    ,
-    
-    <span class="tag is-info">
-        <a href='/tags/vscode/'>vscode</a>
-    </span>
-    ,
-    
-    <span class="tag is-info">
-        <a href='/tags/plugin/'>plugin</a>
+        <a href='/tags/mathjax/'>mathjax</a>
     </span>
     
     
     
 </span>
 
-                    <h1>VS Code 插件</h1>
+                    <h1>在 Hexo 中渲染 MathJax 数学公式</h1>
                 </div>
             </div>
             <div class="row justify-content-center">
                 <div class="col-md-8">
                     <div class="div-message div-desc">
                         
-                            <span>记录 VS Code 安装的插件</span>
+                            <span>显示数学公式看着才爽</span>
                             <br>
                         
                         
-                            <span>最近更新：2018-09-25</span>
+                            <span>最近更新：2018-09-28</span>
                             <br>
                         
-                        
-                            <span>Code 1.27.2</span>
                         
                     </div>
                 </div>
             </div>
             <div class="row justify-content-center">
                 <div class="col-md-8">
-                    <ul>
-<li>Chinese (Simplified) Language Pack for Visual Studio Code<ul>
-<li>此中文（简体）语言包为 VS Code 提供本地化界面。</li>
-</ul>
+                    <p>【转自 冉茂松 的CSDN 博客】<a class="own-underline" href="https://blog.csdn.net/u014630987/article/details/78670258" target="_blank">如何在 hexo 中支持 Mathjax？</a></p>
+<h3 id="1-使用-Kramed-代替-Marked"><a href="#1-使用-Kramed-代替-Marked" class="headerlink" title="1. 使用 Kramed 代替 Marked"></a>1. 使用 Kramed 代替 Marked</h3><ol>
+<li><p>在工程目录下执行以下命令来安装 kramed</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm uninstall hexo-renderer-marked --save</span><br><span class="line">npm install hexo-renderer-kramed --save</span><br></pre></td></tr></table></figure>
 </li>
-<li>Dash</li>
-</ul>
-<h3 id="代码片段插件"><a href="#代码片段插件" class="headerlink" title="代码片段插件"></a>代码片段插件</h3><ul>
-<li>JavaScript (ES6) code snippets</li>
-</ul>
-<h3 id="代码检测插件"><a href="#代码检测插件" class="headerlink" title="代码检测插件"></a>代码检测插件</h3><ul>
-<li>ESLint</li>
-</ul>
-<h3 id="Node-插件"><a href="#Node-插件" class="headerlink" title="Node 插件"></a>Node 插件</h3><ul>
-<li><p>npm</p>
-<ul>
-<li>This extension supports running npm scripts defined in the <code>package.json</code> file and validating the installed modules against the dependencies defined in the <code>package.json</code>.</li>
-</ul>
+<li><p>打开 <code>/node_modules/hexo-renderer-kramed/lib/renderer.js</code> ，</p>
+<p> 把</p>
+ <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Change inline math rule</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">formatText</span>(<span class="params">text</span>) </span>&#123;</span><br><span class="line">    <span class="comment">// Fit kramed's rule: $$ + \1 + $$</span></span><br><span class="line">    <span class="keyword">return</span> text.replace(<span class="regexp">/`\$(.*?)\$`/g</span>, <span class="string">'$$$$$1$$$$'</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p> 更改为</p>
+ <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Change inline math rule</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">formatText</span>(<span class="params">text</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> text;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>npm Intellisense</p>
-<ul>
-<li>Visual Studio Code plugin that autocompletes npm modules in import statements.</li>
-</ul>
-</li>
-<li>Path Intellisense<ul>
-<li>Visual Studio Code plugin that autocompletes filenames.</li>
-</ul>
-</li>
-</ul>
-<h3 id="代码格式化插件"><a href="#代码格式化插件" class="headerlink" title="代码格式化插件"></a>代码格式化插件</h3><ul>
-<li>Beautify<ul>
-<li>Beautify <code>javascript</code>, <code>JSON</code>, <code>CSS</code>, <code>Sass</code>, and <code>HTML</code> in Visual Studio Code.</li>
-</ul>
-</li>
-</ul>
-<h3 id="浏览器插件"><a href="#浏览器插件" class="headerlink" title="浏览器插件"></a>浏览器插件</h3><ul>
-<li>Debugger for Chrome</li>
-<li>Live Server<ul>
-<li>Launch a development local Server with live reload feature for static &amp; dynamic pages.</li>
-</ul>
-</li>
-</ul>
-<h3 id="框架类插件"><a href="#框架类插件" class="headerlink" title="框架类插件"></a>框架类插件</h3><ul>
-<li>Vetur<ul>
-<li>Vue tooling for VS Code</li>
-</ul>
-</li>
-</ul>
+</ol>
+<p><br></p>
+<h3 id="2-停止使用-hexo-math"><a href="#2-停止使用-hexo-math" class="headerlink" title="2. 停止使用 hexo-math"></a>2. 停止使用 hexo-math</h3><p>如果安装了 <code>hexo-math</code> ，卸载它：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm uninstall hexo-math --save</span><br></pre></td></tr></table></figure>
+<p>然后安装 <a class="own-underline" href="https://github.com/phoenixcw/hexo-renderer-mathjax" target="_blank">hexo-renderer-mathjax</a> 包：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-renderer-mathjax --save</span><br></pre></td></tr></table></figure>
+<p><br></p>
+<h3 id="3-更新-Mathjax-的-CDN-链接"><a href="#3-更新-Mathjax-的-CDN-链接" class="headerlink" title="3. 更新 Mathjax 的 CDN 链接"></a>3. 更新 Mathjax 的 CDN 链接</h3><p>打开 <code>/node_modules/hexo-renderer-mathjax/mathjax.html</code> ，</p>
+<p>把 <code>&lt;script&gt;</code> 更改为：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><br></p>
+<h3 id="4-更改默认转义规则"><a href="#4-更改默认转义规则" class="headerlink" title="4. 更改默认转义规则"></a>4. 更改默认转义规则</h3><p>打开 <code>node_modules\kramed\lib\rules\inline.js</code> ，</p>
+<p>把</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">escape</span>: <span class="regexp">/^\\([\\`*&#123;&#125;\[\]()#$+\-.!_&gt;])/</span>,</span><br></pre></td></tr></table></figure>
+<p>更改为</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">escape</span>: <span class="regexp">/^\\([`*\[\]()#+\-.!_&gt;])/</span>,</span><br></pre></td></tr></table></figure>
+<p>把</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">em: <span class="regexp">/^\b_((?:__|[\s\S])+?)_\b|^\*((?:\*\*|[\s\S])+?)\*(?!\*)/</span>,</span><br></pre></td></tr></table></figure>
+<p>更改为</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">em: <span class="regexp">/^\*((?:\*\*|[\s\S])+?)\*(?!\*)/</span>,</span><br></pre></td></tr></table></figure>
+<p><br></p>
+<h3 id="5-在主题中开启-mathjax"><a href="#5-在主题中开启-mathjax" class="headerlink" title="5. 在主题中开启 mathjax"></a>5. 在主题中开启 mathjax</h3><p>进入到主题目录，打开 <code>_config.yml</code> ，把 mathjax  修改为 true：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># MathJax Support</span></span><br><span class="line"><span class="attr">mathjax:</span></span><br><span class="line"><span class="attr">  enable:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+<p>在需要的文章中的 Front-matter 里开启 mathjax：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">title:</span> </span><br><span class="line"><span class="attr">date:</span> </span><br><span class="line"><span class="attr">tags:</span></span><br><span class="line"><span class="attr">mathjax:</span> <span class="literal">true</span></span><br><span class="line"><span class="bullet">-</span><span class="bullet">-</span></span><br></pre></td></tr></table></figure>
+<p><br></p>
 <h3 id="更多参考"><a href="#更多参考" class="headerlink" title="更多参考"></a>更多参考</h3><div class="div-message div-desc" style="padding: 0 0 25px 10px ">
     <br>
-    <a class="own-underline" href="https://www.jianshu.com/p/34fa629358f7" target="_blank">这些必备的 VS Code 插件你都用过吗？</a><br>
+    <a class="own-underline" href="https://www.jianshu.com/p/7ab21c7f0674" target="_blank">在Hexo中渲染MathJax数学公式</a>
 </div>
-
-
-
-
-
-
                 </div>
             </div>
             <div class="clearfix"></div>
@@ -305,13 +276,13 @@
 <div class="row justify-content-center">
     <nav class="m-pagination col-md-8 col-sm-24" role="pagination">
         
-        <a class="float-left" href="/2018/09/28/maths 2 一元函数微分学/" style="float: left;">
-            ← 一元函数微分学
+        <a class="float-left" href="/2018/09/25/plugin VS Code 插件/" style="float: left;">
+            ← VS Code 插件
         </a>
         
         
-        <a class="float-right" href="/2018/09/21/hexo_在 Hexo 中渲染 MathJax 数学公式/">
-            在 Hexo 中渲染 MathJax 数学公式 →
+        <a class="float-right" href="/2018/09/21/maths 1 极限/">
+            极限 →
         </a>
         
     </nav>
