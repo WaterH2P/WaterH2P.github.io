@@ -3562,7 +3562,7 @@ pre .deletion {
 }
 
 .card-blog:hover {
-    cursor: pointer;
+    /* cursor: pointer; */
     transform: scale(1.05);
     transition: all .25s ease-in-out 0s;
     -webkit-transform: scale(1.05);
