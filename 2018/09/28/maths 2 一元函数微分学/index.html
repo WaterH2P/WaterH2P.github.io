@@ -236,10 +236,13 @@
             </div>
             <div class="row justify-content-center">
                 <div class="col-md-8">
-                    <h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><p>$\lim\limits_{\Delta x \to 0} \dfrac{f(x_0 + \Delta x) - f(x_0)}{\Delta x}$ 记为 $f’(x_0)$ ：（瞬时）变化率。</p>
+                    <h3 id="一、定义"><a href="#一、定义" class="headerlink" title="一、定义"></a>一、定义</h3><ul>
+<li><p>$\lim\limits_{\Delta x \to 0} \dfrac{f(x_0 + \Delta x) - f(x_0)}{\Delta x}​$ 记为 $f’(x_0)​$ ：（瞬时）变化率。</p>
 <ul>
 <li>$f$ 对 $x$ 的变化率：$\dfrac{ {\rm d} f}{ {\rm d} x} = f’_x$ 。</li>
 <li>$\begin{cases} \lim\limits_{\Delta x \to 0}\dfrac{f(x_0 + \Delta x) - f(x_0)}{\Delta x} &amp; \to \text{增量式} \\ \lim\limits_{x \to x_0}\dfrac{f(x) - f(x_0)}{x - x_0} &amp; \to \text{差值式} \end{cases}$ </li>
+</ul>
+</li>
 <li><p>【注】</p>
 <ol>
 <li><p>【左右有别】</p>
@@ -274,7 +277,7 @@
 </ol>
 </li>
 <li><p>例题</p>
-<ul>
+<ol>
 <li>下列函数中，在 $x = 0$ 处不可导的是 $()$ 。【具体型】<ul>
 <li>$\begin{array}{l} A. f(x) = |x| \sin |x| &amp; B. f(x) = |x| \sin \sqrt{|x|} \\ C. f(x) = \cos |x| &amp; D. f(x) = \cos \sqrt{|x|} \end{array}$ </li>
 <li>分析<ul>
@@ -315,7 +318,7 @@
 <li>若 $f(x)$ 是可导的奇函数，证明 $f’(x)$ 的偶函数。</li>
 </ul>
 </li>
-</ul>
+</ol>
 </li>
 </ul>
 <h3 id="导数计算"><a href="#导数计算" class="headerlink" title="导数计算"></a>导数计算</h3><h5 id="基本求导公式"><a href="#基本求导公式" class="headerlink" title="基本求导公式"></a>基本求导公式</h5><p>$\begin{array}{l} (\sin x)’ = \cos x &amp; (\cos x)’ = -\sin x \\ (\tan x)’ = \sec^2 x &amp; (\cot x)’ = - \csc^2 x \\ (\sec x)’ = \sec x \tan x &amp; (\csc x)’ = - \csc x \cot x \end{array}$ </p>
@@ -350,7 +353,7 @@
 <li><p>注意写法即可</p>
 </li>
 <li><p>例题</p>
-<ul>
+<ol>
 <li><p>设函数 $f(y)$ 的反函数 $f^{-1}(x)$ 及 $f’[f^{-1}(x)]$ 与 $f’’[f^{-1}(x)]$ 都存在，且 $f’[f^{-1}(x)] \not= 0$ 。证明：$\dfrac{ {\rm d}^2 f^{-1}(x) }{ {\rm d} x^2 } = -\dfrac{ f’’[f^{-1}(x)] }{ \{f’[f^{-1}(x)]\}^3 }$ 。</p>
 <ul>
 <li><p>$\because x = f(y) \implies y = f^{-1}(x), \quad \therefore \dfrac{ {\rm d}^2 f^{-1}(x) }{ {\rm d} x^2 } = \dfrac{ {\rm d}^2 y }{ {\rm d} x^2 }$ 。</p>
@@ -374,14 +377,14 @@
 <li>所以 $x’_y = \dfrac{1}{y’_x} = -x(1 + x^4)^{ \frac{3}{4} }$ 。</li>
 </ul>
 </li>
-</ul>
+</ol>
 </li>
 </ul>
 </li>
 <li>参数方程求导<ul>
 <li>$\begin{cases} x = x(t) \\ y = y(t) \end{cases}$ ，$t$ 为参数</li>
 <li>$\dfrac{ {\rm d}y }{ {\rm d}x } = \dfrac{ {\rm d}y / {\rm d}t }{ {\rm d}x / {\rm d}t } = \dfrac{y’_t}{x’_t}$ ，类似于反函数求导，是谁的函数就对谁求导，缺什么补什么。</li>
-<li>例题<ul>
+<li>例题<ol>
 <li>设函数 $y = f(x)$ 由参数方程 $\begin{cases} x = 2t + t^2 \\ y = \varphi(t) \end{cases} , (t &gt; -1)$ 所确定，其中 $\varphi(t)$ 具有二阶导数，且已知 $\dfrac{ {\rm d}^2 y }{ {\rm d}x^2 } = \dfrac{3}{4(1 + t)}$ ，证明：函数 $\varphi(t)$ 满足方程 $\varphi’’(t) - \dfrac{1}{1 + t} \varphi’(t) = 3(1 + t)$ 。<ul>
 <li>$\dfrac{ {\rm d}y }{ {\rm d}x } = \dfrac{ {\rm d}y / {\rm d}t }{ {\rm d}x / {\rm d}t } = \dfrac{\varphi’(t)}{2 + 2t}$ </li>
 <li>$\dfrac{ {\rm d}^2 y }{ {\rm d}x^2 } = \dfrac{ {\rm d}(\dfrac{ {\rm d}y }{ {\rm d}x }) }{ {\rm d}x } = \dfrac{ {\rm d}(\dfrac{ {\rm d}y }{ {\rm d}x }) / {\rm d}t }{ {\rm d}x / {\rm d}t } = \dfrac{ \dfrac{ \varphi’’(t)(2 + 2t) - 2\varphi’(t) }{(2 + 2t)^2} }{2 + 2t}$ </li>
@@ -393,7 +396,7 @@
 <li>$-\dfrac{1}{8}$ </li>
 </ul>
 </li>
-</ul>
+</ol>
 </li>
 </ul>
 </li>
@@ -409,12 +412,12 @@
 <li>$(\dfrac{1}{x + a})^{(n)} = (-1)^n \cdot \dfrac{n!}{ (x + a)^{(n + 1)} }$ </li>
 </ul>
 </li>
-<li>例题<ul>
+<li>例题<ol>
 <li>$y = x^2 \sin 2x$ ，求 $y^{(50)}$ 。<ul>
 <li>$\begin{array}{l} y^{(50)} &amp; = x^2 \cdot (\sin 2x)^{(50)} + 50(x^2)’ \cdot (\sin 2x)^{(49)} + \dfrac{50 \cdot 49}{2}(x^2)’’ \cdot (\sin 2x)^{(48)} \[1em] &amp; = -2^{50}x^2 \sin 2x + 50 \cdot 2^{50}x \cos 2x + 50 \cdot 49 \cdot 2^{48} \sin 2x \end{array}$ </li>
 </ul>
 </li>
-</ul>
+</ol>
 </li>
 </ul>
 </li>
@@ -536,7 +539,7 @@
 </li>
 </ul>
 </li>
-<li>例题<ul>
+<li>例题<ol>
 <li>设 $f(x)$ 在 $[0, 1]$ 上连续，$(0, 1)$ 内可导，$f(1) = 0$ ，证明 $\exists \xi \in (0, 1)$ ，使 $f(\xi) + \xi f’(\xi) = 0$ 。</li>
 <li>设 $f(x)$ 在 $[0, 1]$ 上二阶可导，且 $f(1) &gt; 0$ ，$\lim\limits_{x \to 0^+}\dfrac{f(x)}{x} &lt; 0$ ，证明：1⃣️方程 $f(x) = 0$ 在 $(0, 1)$ 内至少有一个实根。2⃣️方程 $f(x)f’’(x) + [f’(x)]^2 = 0$ 在 $(0, 1)$ 内至少有两个不同的实根。<ul>
 <li>1⃣️</li>
@@ -570,7 +573,7 @@
 </li>
 </ul>
 </li>
-</ul>
+</ol>
 </li>
 </ul>
 </li>
@@ -581,7 +584,7 @@
 <li>移项，使等式一端为 $0$ ，则另一端记为 $F(x)$ 。 </li>
 </ol>
 </li>
-<li>例题<ul>
+<li>例题<ol>
 <li>证明拉格朗日中值定理：$f’(\xi) = \dfrac{f(b) - f(a)}{b - a}$ 。 <ul>
 <li>$f’(x) = \dfrac{f(b) - f(a)}{b - a}$ </li>
 <li>两边积分<ul>
@@ -622,7 +625,7 @@
 </li>
 </ul>
 </li>
-</ul>
+</ol>
 </li>
 </ul>
 </li>
@@ -685,7 +688,7 @@
 </li>
 <li><p>柯西中值定理的应用（8）</p>
 <ul>
-<li>例题<ul>
+<li>例题<ol>
 <li>$f(x)$ 在 $[a, b]$ 上连续，在 $(a, b)$ 内可导，且 $f’(x) \not= 0$ 。证明：$\exists \xi, \eta \in (a, b)$ ，使得 $\dfrac{ f’(\xi) }{ f’(\eta) } = \dfrac{ e^b - e^a }{ b - a }e^{-\eta} $ 。<ul>
 <li>物以类聚，人以群分</li>
 <li>$ f’(\xi) = \dfrac{ e^b - e^a }{ b - a } \cdot \dfrac{ f’(\eta) }{ e^\eta } $ <ul>
@@ -695,12 +698,12 @@
 <li>其中 $ \begin{cases} \dfrac{ f’(\eta) }{ e^\eta } &amp; = \dfrac{ f(b) - f(a) }{ e^b - e^a } \quad ( g(x) = e^x ) \[1em] f’(\xi) &amp; = \dfrac{ f(b) - f(a) }{ b - a } \end{cases} $ 。</li>
 </ul>
 </li>
-</ul>
+</ol>
 </li>
 </ul>
 </li>
 <li><p>泰勒公式的应用——信号 $ f^{(n)}(\xi), n \geq 2^n $ 。</p>
-<ul>
+<ol>
 <li>设 $ f(x)  $ 在 $ [0, 1] $ 上二阶可导，且 $ \int_0^1 f(x) {\rm d}x = 0 $，则<ul>
 <li>$ A. $ 当 $ f’(x) &lt; 0 $ 时，$ f(\frac{1}{2}) &lt; 0 $ </li>
 <li>$ B. $ 当 $ f’’(x) &lt; 0 $ 时，$ f(\frac{1}{2}) &lt; 0 $ </li>
@@ -716,10 +719,10 @@
 </li>
 </ul>
 </li>
-<li>$ D $</li>
+<li>$ D $ </li>
 </ul>
 </li>
-</ul>
+</ol>
 </li>
 </ol>
 <h3 id="导数的几何应用"><a href="#导数的几何应用" class="headerlink" title="导数的几何应用"></a>导数的几何应用</h3><p>三点两性一线：极值点、最值点、拐点；单调性、凹凸性；渐近线</p>
@@ -736,27 +739,92 @@
 </ul>
 </li>
 <li><p>例题</p>
-<ul>
+<ol>
 <li>证明 $ f(x) = ( 1 + \dfrac{1}{x} )^x $ 在 $(0, + \infty) $ 内单调增。 <ul>
-<li>$ f(x) = e^{ x \ln ( 1 + \dfrac{1}{x} ) } = e^{ x [ \ln ( 1 + x ) - \ln x ] } $</li>
-<li>$ \begin{array}{l} f’(x) &amp; = ( 1 + \dfrac{1}{x} )^x \cdot [ \ln (1 + x) - \ln x + x ( \dfrac{1}{1 + x} - \dfrac{1}{x} ) ] \[1em] &amp; = ( 1 + \dfrac{1}{x} )^x \cdot [ \ln (1 + x) - \ln x - \dfrac{1}{ 1 + x } ] \end{array} $<ul>
-<li>对于 $ \ln (1 + x) - \ln x $ ，令 $ f(t) = \ln t $。</li>
+<li>$ f(x) = e^{ x \ln ( 1 + \dfrac{1}{x} ) } = e^{ x [ \ln ( 1 + x ) - \ln x ] } $ </li>
+<li>$ \begin{array}{l} f’(x) &amp; = ( 1 + \dfrac{1}{x} )^x \cdot [ \ln (1 + x) - \ln x + x ( \dfrac{1}{1 + x} - \dfrac{1}{x} ) ] \[1em] &amp; = ( 1 + \dfrac{1}{x} )^x \cdot [ \ln (1 + x) - \ln x - \dfrac{1}{ 1 + x } ] \end{array} $ </li>
+<li>对于 $ \ln (1 + x) - \ln x $ ，令 $ f(t) = \ln t $ 。</li>
 <li>在 $ [x, 1+x] $ 上用拉氏定理<ul>
-<li>$ \ln (1 + x) - \ln x = \dfrac{1}{\xi} \quad (x &lt; \xi &lt; 1 + x) $</li>
-<li>所以 $ \dfrac{1}{\xi} &gt; \dfrac{1}{x} $</li>
+<li>$ \ln (1 + x) - \ln x = \dfrac{1}{\xi} \quad (x &lt; \xi &lt; 1 + x) $ </li>
+<li>所以 $ \dfrac{1}{\xi} &gt; \dfrac{1}{x} $ </li>
 </ul>
 </li>
-<li>所以 $ \ln (1 + x) - \ln x - \dfrac{1}{ 1 + x } &gt; 0 $</li>
-</ul>
-</li>
-<li>又因为 $ ( 1 + \dfrac{1}{x} )^x &gt; 0 $，所以 $ f’(x) &gt; 0 \quad ( x \in (0, \infty) ) $</li>
+<li>所以 $ \ln (1 + x) - \ln x - \dfrac{1}{ 1 + x } &gt; 0 $ </li>
+<li>又因为 $ ( 1 + \dfrac{1}{x} )^x &gt; 0 $，所以 $ f’(x) &gt; 0 \quad ( x \in (0, \infty) ) $ </li>
 </ul>
 </li>
 <li>⭐️设 $ f(x) $ 连续，其 $ f’(x) $ 的图像如下，则 $ f(x) $ 有几个极小值点，几个极大值点。<ul>
 <li><img src="./images/2.3.1.2.3.png" alt=""></li>
 <li>看图说话</li>
+<li>4 个极值点</li>
+<li>3 个零点和 $ (0, 0) $ </li>
 </ul>
 </li>
+</ol>
+</li>
+</ol>
+<h5 id="凹凸性-与-拐点"><a href="#凹凸性-与-拐点" class="headerlink" title="凹凸性 与 拐点"></a>凹凸性 与 拐点</h5><ol>
+<li>凹凸性<ul>
+<li>$ \forall x_1, x_2 \in I $ ，有：<ul>
+<li>$ \dfrac{ f(x_1) + f(x_2) }{2} &gt; f(\dfrac{ x_1 + x_2 }{2}) \implies f(x) $ 是凹曲线</li>
+<li>$ \dfrac{ f(x_1) + f(x_2) }{2} &lt; f(\dfrac{ x_1 + x_2 }{2}) \implies f(x) $ 是凸曲线</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>拐点<ul>
+<li>连续曲线凹凸弧的分界点<ul>
+<li>不一定需要可导</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>辨别法：设 $ f(x) $ 在 $ I $ 上二阶可导<ul>
+<li>$ \begin{cases} \text{若} f’’(x) &gt; 0, \forall x \in I \implies f(x) \text{是凹的} \[1em] \text{若} f’’(x) &lt; 0, \forall x \in I \implies f(x) \text{是凸的} \end{cases} $ </li>
+<li>若 $ f(x) $ 在 $ x_0 $ 点的左右邻域 $ f’’(x) $ 变号 $ \implies ( x_0, f(x_0) ) $ 为拐点。</li>
+</ul>
+</li>
+<li>例题<ol>
+<li>已知曲线 $ L \begin{cases} x = t^2 + 1 \[1em] y = 4t - t^2 \end{cases} ( t &gt; 0 ) $ ，讨论曲线 $ L $ 的凹凸性。 <ul>
+<li>$ \dfrac{ {\rm d}y }{ {\rm d}x } = \dfrac{ {\rm d}y / {\rm d}t }{ {\rm d}x / {\rm d}t } = \dfrac{ 4 - 2t }{2t} = \dfrac{2}{t} - 1 $ </li>
+<li>$ \dfrac{ {\rm d}^2 y }{ {\rm d}x^2 } = \dfrac{ {\rm d} ( \dfrac{ {\rm d}y }{ {\rm d}x } ) / {\rm d}t }{ {\rm d}x / {\rm d}t } = \dfrac{ -\dfrac{2}{t^2} }{2t} = -\dfrac{1}{t^3} &lt; 0 $ </li>
+<li>所以曲线 $ L $ 是凸曲线。</li>
+</ul>
+</li>
+<li>设 $ y = f(x) $ 三阶导数连续，$ f’’(x_0) = 0 $，$ f’’’(x_0) &gt; 0 $ 。证明 $ ( x_0, f(x_0) ) $ 为拐点。<ul>
+<li>构造 $ \lim\limits_{x \to x_0} \dfrac{ f’’(x) }{ x - x_0 } = \lim\limits_{x \to x_0} \dfrac{ f’’(x) - f’’(x_0) }{ x - x_0 } = f’’’(x_0) $ </li>
+<li>$ \implies \dfrac{ f’’(x_0) }{ x - x_0 } &gt; 0 $ </li>
+<li>⭐️$ f^{(n)}(x_0) = 0, f^{(n + 1)}(x_0) \not= 0 $ <ul>
+<li>构造 $ \lim\limits_{x \to x_0} \dfrac{ f^{(n)}(x) }{ x - x_0 } $ </li>
+</ul>
+</li>
+</ul>
+</li>
+<li>设 $ y = ( x -1 )( x -2 )^2( x - 3 )^3( x - 4 )^4 $ ，则其一个拐点为 $ ( \quad ) $ 。<ul>
+<li>$ A.(1, 0) \quad B.(2, 0) \quad C.(3, 0) \quad D.(4, 0) $ </li>
+<li>根据上一例题，只考虑 $(x - 3)^3$ 。</li>
+<li>令 $ ( x - 1 )( x - 2 )^2( x - 4 )^4 = g(x) \implies y = ( x - 3 )^3 g(x) $</li>
+<li>$ y’ = 3( x - 3 )^2 \cdot g + ( x - 3 )^3 \cdot g’ $ </li>
+<li>$ y’’ = 6( x - 3 ) \cdot g + (…)^2 + (…)^2 + (…)^3 \implies y’’(3) = 0 $ </li>
+<li>$ y’’’ = 6 \cdot g + (…) + (…) + (…)^2 + (…)^2 + (…)^3 \implies y’’’(3) \not= 0 $ </li>
+<li>$ C $ </li>
+</ul>
+</li>
+</ol>
+</li>
+</ol>
+<h5 id="渐近线"><a href="#渐近线" class="headerlink" title="渐近线"></a>渐近线</h5><ol>
+<li>铅直渐近线<ul>
+<li>若 $ \lim\limits_{x \to x_0^+ / x_0^-} f(x) = \infty $ ，则称 $ x = x_0 $ 为 $ f(x) $ 的一条铅直渐近线。</li>
+<li>出现在：无定义点 或者 开区间端点 </li>
+</ul>
+</li>
+<li>水平渐近线<ul>
+<li>若 $ \lim\limits_{x \to +\infty / -\infty} f(x) = A $ ，则称 $ y = A $ 为 $ f(x) $ 的一条水平渐近线。</li>
+</ul>
+</li>
+<li>斜渐近线<ul>
+<li>若 $ \lim\limits_{x \to +\infty / -\infty} \dfrac{ f(x) }{x} = a \not= 0 $ ，且 $ \lim\limits_{x \to +\infty / -\infty }[ f(x) - ax ] = b \exists $ ，则称 $ y = ax + b ​$ 为一条斜渐近线。</li>
 </ul>
 </li>
 </ol>
@@ -770,9 +838,13 @@
 <div class="row justify-content-center">
     <nav class="m-pagination col-md-8 col-sm-24" role="pagination">
         
+        <a class="float-left" href="/2018/09/28/hexo_小 bug/" style="float: left;">
+            ← hexo 小 bug
+        </a>
         
-        <a class="float-right" href="/2018/09/28/hexo_小 bug/">
-            hexo 小 bug →
+        
+        <a class="float-right" href="/2018/09/25/VS Code 插件/">
+            VS Code 插件 →
         </a>
         
     </nav>
