@@ -25,6 +25,7 @@
     <script src="/js/jquery-3.3.1.min.js"></script>
     <script src="/js/popper.min.js"></script>
     <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/vue.min.js"></script>
 
     
     
@@ -85,52 +86,6 @@
     </div>
 
     <!-- ============================ END Off-canvas navigation =========================== -->
-
-    <!-- ============================ #sb-site Main Page Wrapper =========================== -->
-
-    <!--&lt;!&ndash; 首页顶端中间显示的内容 &ndash;&gt;-->
-    <!--<div id="sb-site">-->
-        <!--&lt;!&ndash; #sb-site - All page content should be contained within this id, except the off-canvas navigation itself &ndash;&gt;-->
-        <!--&lt;!&ndash; ============================ Header & Logo bar =========================== &ndash;&gt;-->
-
-        <!--<div id="navigation" class="navbar navbar-expand-lg navbar-fixed-top" style="z-index: 5; width: 100%; padding: 0;">-->
-            <!--<div class="navbar-inner" style="width: 100%">-->
-                <!--<div class="container">-->
-                    <!--&lt;!&ndash; Nav logo &ndash;&gt;-->
-                    <!--<div class="logo">-->
-                        <!--<a href="/" title="Logo" class="animsition-link">-->
-                        <!-- <img src="/img/wolf_orange_small.png" alt="Logo" width="35px;"/> -->
-                        <!--</a>-->
-                    <!--</div>-->
-                    <!--&lt;!&ndash; // Nav logo &ndash;&gt;-->
-                    <!--&lt;!&ndash; Info-bar &ndash;&gt;-->
-                    <!--<ul class="navbar-nav justify-content-center">-->
-                        <!--<li class="nav-item nolink">-->
-                            <!--<a href="/" class="animsition-link">H2P'S BLOG</a>-->
-                        <!--</li>-->
-                        <!---->
-                            <!--<li class="nav-item nolink"><a href="https://github.com/WaterH2P" title="Github" target="_blank"><i class="icon-github"></i></a></li>-->
-                        <!---->
-                        <!---->
-                            <!--<li class="nav-item nolink"><a href="https://weibo.com/5933348875" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>-->
-                        <!---->
-                        <!--<li class="nav-item nolink" style="border-right: none"><span>Welcome!</span></li>-->
-                    <!--</ul>-->
-                    <!--&lt;!&ndash;// Info-bar &ndash;&gt;-->
-                <!--</div>-->
-                <!--&lt;!&ndash; // .container &ndash;&gt;-->
-                <!--<div class="learnmore sb-toggle-right">More</div>-->
-                <!--<button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">-->
-                    <!--<span class="icon-bar before"></span>-->
-                    <!--<span class="icon-bar main"></span>-->
-                    <!--<span class="icon-bar after"></span>-->
-                <!--</button>-->
-            <!--</div>-->
-            <!--&lt;!&ndash; // .navbar-inner &ndash;&gt;-->
-        <!--</div>-->
-
-        <!--&lt;!&ndash; ============================ Header & Logo bar =========================== &ndash;&gt;-->
-    <!--</div>-->
 
     <!-- 首页顶端中间显示的内容 -->
     <div id="sb-site">
@@ -293,13 +248,13 @@
 <div class="row justify-content-center">
     <nav class="m-pagination col-md-8 col-sm-24" role="pagination">
         
-        <a class="float-left" href="/2018/09/28/plugin Tampermonkey 脚本/" style="float: left;">
-            ← Tampermonkey 脚本
+        <a class="float-left" href="/2018/09/28/hexo 小 bug/" style="float: left;">
+            ← Hexo 小 bug
         </a>
         
         
-        <a class="float-right" href="/2018/09/26/maths 2 一元函数微分学/">
-            一元函数微分学 →
+        <a class="float-right" href="/2018/09/28/plugin Tampermonkey 脚本/">
+            Tampermonkey 脚本 →
         </a>
         
     </nav>
@@ -426,22 +381,5 @@
             $('html').animate({scrollTop: 0}, 'slow');
         }
     </script>
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<!-- <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-
 </body>
 </html>
