@@ -717,7 +717,7 @@
 </ul>
 </li>
 <li>⭐️设 $ f(x) $ 连续，其 $ f’(x) $ 的图像如下，则 $ f(x) $ 有几个极小值点，几个极大值点。<ul>
-<li><img src="./images/2.3.1.2.3.png" alt=""></li>
+<li><img src="./images/2-4.1.2.3.png" alt=""></li>
 <li>看图说话</li>
 <li>4 个极值点</li>
 <li>3 个零点和 $ (0, 0) $ </li>
@@ -811,7 +811,8 @@
 </ol>
 </li>
 </ol>
-<h5 id="最值"><a href="#最值" class="headerlink" title="最值"></a>最值</h5><ol>
+<p><br></p>
+<h4 id="最值"><a href="#最值" class="headerlink" title="最值"></a>最值</h4><ol>
 <li>对于函数 $ f(x) $ ，在 $ [a, b] $ 上找出三类点<ul>
 <li>$ \begin{cases} f’(x) = 0 \implies x_0 \text{驻点} \\ f’(x) \text{不} \exists \implies x_1 \text{不可导点} \\ \text{端点} a, b  \end{cases} $ </li>
 <li>比较 $ f(x_0) $ ，$ f(x_1) $ ，$ f(a) $ ，$ f(b) $ 大小，取其最大（小）者为最大（小）值。</li>
@@ -823,7 +824,7 @@
 </li>
 <li>例题<ol>
 <li>防空洞的截面拟建成矩形加半圆（如图所示），截面的面积为 $5 m^2$ ，问底宽 $ x $ 为多少时才能使建造时所用的材料最省？<ul>
-<li><img src="./images/2.3.4.3.1.png" alt=""></li>
+<li><img src="./images/2-4.4.3.1.png" alt=""></li>
 <li>设矩形的高为 $ y $，则 $ \begin{cases} \text{周长为} L \\ \text{面积为} S \end{cases} $ </li>
 <li>$ S = xy + \dfrac{\pi}{8}x^2 = 5 \implies y = \dfrac{5}{x} - \dfrac{\pi}{8}x &gt; 0 \implies x &lt; \sqrt{ \dfrac{40}{\pi} } $ </li>
 <li>$ L = x + 2y + \dfrac{\pi}{2}x = \dfrac{10}{x} + ( \dfrac{\pi}{4} + 1 ) x, \quad x \in ( 0, \sqrt{ \dfrac{40}{\pi} } ) $ </li>
@@ -991,5 +992,22 @@
             $('html').animate({scrollTop: 0}, 'slow');
         }
     </script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<!-- <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
 </body>
 </html>
