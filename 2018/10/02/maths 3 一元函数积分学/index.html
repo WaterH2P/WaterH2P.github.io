@@ -182,7 +182,7 @@
                             <br>
                         
                         
-                            <span>最近更新：2018-10-03</span>
+                            <span>最近更新：2018-10-04</span>
                             <br>
                         
                         
@@ -193,13 +193,13 @@
                 <div class="col-md-8">
                     <h2 id="一、定义"><a href="#一、定义" class="headerlink" title="一、定义"></a>一、定义</h2><ol>
 <li>不定积分<strong>【 +C 】</strong> <ul>
-<li>$ \forall x \in I $ ，使 $ F’(x) = f(x) $ ，则称 $ F(x) $ 是 $ f(x) $ 在 $ I $ 上的一个原函数。</li>
+<li>$ \forall x \in I $ ，使 $ F’(x) = f(x) $ ，则称 $ F(x) $ 是 $ f(x) $ 在 $ I ​$ 上的一个原函数。</li>
 <li>全体原函数就叫不定积分，记成：$ \int f(x) {\rm d}x  = F(x) + C $ 。</li>
 </ul>
 </li>
 <li>定积分<ul>
 <li>黎曼积分 </li>
-<li>$ \int_a^b f(x) {\rm d}x ​$ </li>
+<li>$ \int_a^b f(x) {\rm d}x $ </li>
 </ul>
 </li>
 <li>小结<ul>
@@ -436,7 +436,11 @@
 <li>$ \begin{array}{l} I &amp; = -\dfrac{1}{2} \int ( \dfrac{ \dfrac{1}{2} \cdot 2x - 1 }{ x^2 + 1 } ) {\rm d}x -\dfrac{1}{2} \int \dfrac{1}{x - 1} {\rm d}x \\ &amp; = -\dfrac{1}{4} \ln(x^2 + 1) + \dfrac{1}{2} \arctan x + \dfrac{1}{2} \ln |x - 1| + C \end{array} $ </li>
 </ul>
 </li>
-<li>计算 $ I = \int \dfrac{t^3 - 3t}{ (t - 1)^2(t + 1)^2 } {\rm d}t ​$ </li>
+<li>计算 $ I = \int \dfrac{t^3 - 3t}{ (t - 1)^2(t + 1)^2 } {\rm d}t $<ul>
+<li>$ \dfrac{t^3 - 3t}{ (t - 1)^2(t + 1)^2 } = \dfrac{ \dfrac{1}{2} }{t - 1} + \dfrac{ -\dfrac{1}{2} }{ (t - 1)^2 } + \dfrac{ \dfrac{1}{2} }{t + 1} + \dfrac{ \dfrac{1}{2} }{ (t + 1)^2 } $ </li>
+<li>$ I = \dfrac{1}{2} ( \ln |t - 1| + \dfrac{1}{t - 1} + \ln |t + 1| - \dfrac{1}{t + 1} ) = \dfrac{1}{2} \ln |t^2 - 1| + \dfrac{1}{t^2 - 1} ​$ </li>
+</ul>
+</li>
 </ol>
 </li>
 </ol>
