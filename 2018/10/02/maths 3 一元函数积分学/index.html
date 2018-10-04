@@ -199,7 +199,7 @@
 </li>
 <li>定积分<ul>
 <li>黎曼积分 </li>
-<li>$ \int_a^b f(x) {\rm d}x $ </li>
+<li>$ \int_a^b f(x) {\rm d}x ​$ </li>
 </ul>
 </li>
 <li>小结<ul>
@@ -228,12 +228,12 @@
 </ul>
 </li>
 <li>例题<ol>
-<li>$ \int \dfrac{ {\rm d}x }{ (2 - x) \sqrt{1 - x} } $ <ul>
+<li>$ \int \dfrac{1}{ (2 - x) \sqrt{1 - x} } {\rm d}x $ <ul>
 <li>$ = - \int \dfrac{1}{2 - x} \cdot \dfrac{ {\rm d}(1 - x) }{ \sqrt{1 - x} } = -2 \int \dfrac{ {\rm d} \sqrt{1 - x} }{ 2 - x } $ </li>
 <li>$ = -2 \int \dfrac{ {\rm d} \sqrt{1 - x} }{ 1 + ( \sqrt{1 - x} )^2 } = -2 \arctan \sqrt{1 - x} + C $ </li>
 </ul>
 </li>
-<li>$ \int \dfrac{x}{ (2 - x^2) \sqrt{1 - x^2} } {\rm d}x $ </li>
+<li>$ \int \dfrac{x}{ (2 - x^2) \sqrt{1 - x^2} } {\rm d}x ​$ </li>
 <li>$ \int \dfrac{ \cos^2 x - \sin x }{ \cos x(1 + \cos x e^{\sin x}) } {\rm d}x $ <ul>
 <li><strong>定理</strong> <ul>
 <li>对于 $ \int f(x) {\rm d}x $ ，$ f(x) $ 越复杂 $ \implies $ 越有规律可循。</li>
@@ -395,6 +395,48 @@
 <li>$ \begin{array}{l} \int f(x) {\rm d}x &amp; = \int \ln (1 + e^x) \cdot e^{-x} {\rm d}x \\ &amp; = - e^{-x} \ln(1 + e^x) + \int \dfrac{1 + e^x - e^x}{1 + e^x} {\rm d}x \\ &amp; = - e^{-x} \ln(1 + e^x) + x - \ln(1 + e^x) + C \\ &amp; = x - ( e^{-x} + 1 )\ln (1 + e^x) + C \end{array} $ </li>
 </ul>
 </li>
+</ol>
+</li>
+</ol>
+<p><br></p>
+<h4 id="㊃、有理函数积分"><a href="#㊃、有理函数积分" class="headerlink" title="㊃、有理函数积分"></a>㊃、有理函数积分</h4><ol>
+<li>定义<ul>
+<li>形如 $ \int \dfrac{ P_n(x) }{ Q_m(x) } {\rm d}x, \quad (n &lt; m) $ 的积分。 </li>
+</ul>
+</li>
+<li>方法<ol>
+<li>将 $ Q_m(x) $ 因式分解</li>
+<li>将 $ \dfrac{ P_n(x) }{ Q_m(x) } $ 拆成若干最简有理公式之和</li>
+</ol>
+</li>
+<li>拆分原则<ol>
+<li>$ Q_m(x) $ 分解出 $ (ax + b)^k \implies $ 产生 $ k $ 项。<ul>
+<li>$ \dfrac{A_1}{ ax + b } + \dfrac{A_2}{ (ax + b)^2 } + … + \dfrac{A_k}{ (ax + b)^k }, \quad k = 1, 2, … $ </li>
+</ul>
+</li>
+<li>$ Q_m(x) $ 分解出 $ (px^2 + qx + r)^k \implies $ 产生 $ k $ 项。<ul>
+<li>$ \dfrac{ A_1x + B_1 }{ px^2 + qx +r } + \dfrac{ A_2x + B }{ (px^2 + qx + r)^2 } + … + \dfrac{ A_kx + B_k }{ (px^2 + qx + r)^k }, \quad k = 1, 2, … $ </li>
+</ul>
+</li>
+</ol>
+</li>
+<li>例题<ol>
+<li>计算 $ I = \int \dfrac{ 4x^2 - 6x -1 }{ (x + 1)(2x - 1)^2 } {\rm d}x $ 。<ul>
+<li>$ \dfrac{ 4x^2 - 6x -1 }{ (x + 1)(2x - 1)^2 } = \dfrac{1}{x + 1} - \dfrac{2}{ (2x - 1)^2 } $ </li>
+<li>$ 4x^2 - 6x -1 = A(2x - 1)^2 + B(x - 1)(2x - 1) + C(x + 1) $ <ul>
+<li>$ \begin{cases} \text{取} x = \dfrac{1}{2}, \quad -3 = C( \dfrac{1}{2} + 1 ) &amp; \implies C = -2 \\ \text{取} x = -1, \quad 9 = 9A &amp; \implies A = 1 \\ \text{比较} x^2 \text{的系数}, \quad 4 = 4A + 2B &amp; \implies B = 0 \end{cases} $</li>
+</ul>
+</li>
+<li>$ I = \int \dfrac{1}{x + 1} {\rm d}x - 2 \int \dfrac{1}{ (2x - 1)^2 } {\rm d}x = \ln |x + 1| + \dfrac{1}{2x - 1} + C $ </li>
+</ul>
+</li>
+<li>计算 $ I = \int \dfrac{x}{x^3 - x^2 + x - 1} {\rm d}x $ <ul>
+<li>$ I = I = \int \dfrac{x}{ (x^2 + 1)(x - 1) } {\rm d}x $ </li>
+<li>$ \dfrac{x}{ (x^2 + 1)(x - 1) } = \dfrac{1}{2} ( \dfrac{-x + 1}{x^2 + 1} + \dfrac{1}{x - 1} ) $ </li>
+<li>$ \begin{array}{l} I &amp; = -\dfrac{1}{2} \int ( \dfrac{ \dfrac{1}{2} \cdot 2x - 1 }{ x^2 + 1 } ) {\rm d}x -\dfrac{1}{2} \int \dfrac{1}{x - 1} {\rm d}x \\ &amp; = -\dfrac{1}{4} \ln(x^2 + 1) + \dfrac{1}{2} \arctan x + \dfrac{1}{2} \ln |x - 1| + C \end{array} $ </li>
+</ul>
+</li>
+<li>计算 $ I = \int \dfrac{t^3 - 3t}{ (t - 1)^2(t + 1)^2 } {\rm d}t ​$ </li>
 </ol>
 </li>
 </ol>
