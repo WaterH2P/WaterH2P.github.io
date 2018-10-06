@@ -182,7 +182,7 @@
                             <br>
                         
                         
-                            <span>最近更新：2018-10-04</span>
+                            <span>最近更新：2018-10-06</span>
                             <br>
                         
                         
@@ -233,7 +233,7 @@
 <li>$ = -2 \int \dfrac{ {\rm d} \sqrt{1 - x} }{ 1 + ( \sqrt{1 - x} )^2 } = -2 \arctan \sqrt{1 - x} + C $ </li>
 </ul>
 </li>
-<li>$ \int \dfrac{x}{ (2 - x^2) \sqrt{1 - x^2} } {\rm d}x ​$ </li>
+<li>$ \int \dfrac{x}{ (2 - x^2) \sqrt{1 - x^2} } {\rm d}x $ </li>
 <li>$ \int \dfrac{ \cos^2 x - \sin x }{ \cos x(1 + \cos x e^{\sin x}) } {\rm d}x $ <ul>
 <li><strong>定理</strong> <ul>
 <li>对于 $ \int f(x) {\rm d}x $ ，$ f(x) $ 越复杂 $ \implies $ 越有规律可循。</li>
@@ -267,7 +267,7 @@
 </ul>
 </li>
 <li>解答<ul>
-<li>$ \begin{array}{l} I = \int \dfrac{ \dfrac{1 - \ln x}{x^2} }{ ( \dfrac{x - \ln x}{x} )^2 } {\rm d}x = - \int \dfrac{ {\rm d} \dfrac{x - \ln x}{x} }{ ( \dfrac{x - \ln x}{x} )^2 } = \dfrac{x}{x - \ln x} + C \end{array} ​$ </li>
+<li>$ \begin{array}{l} I = \int \dfrac{ \dfrac{1 - \ln x}{x^2} }{ ( \dfrac{x - \ln x}{x} )^2 } {\rm d}x = - \int \dfrac{ {\rm d} \dfrac{x - \ln x}{x} }{ ( \dfrac{x - \ln x}{x} )^2 } = \dfrac{x}{x - \ln x} + C \end{array} $ </li>
 </ul>
 </li>
 </ul>
@@ -445,8 +445,8 @@
 </li>
 </ol>
 <p><br></p>
-<h2 id="定积分的计算"><a href="#定积分的计算" class="headerlink" title="定积分的计算"></a>定积分的计算</h2><ol>
-<li>方法<ul>
+<h2 id="三、定积分的计算"><a href="#三、定积分的计算" class="headerlink" title="三、定积分的计算"></a>三、定积分的计算</h2><ol>
+<li>定义<ul>
 <li>$ \int_a^b f(x) {\rm d}x = F(b) - F(a) $ <ul>
 <li>若 $ a $ 或 $ b $ 不存在，则计算其极限。 </li>
 </ul>
@@ -523,6 +523,99 @@
 </ol>
 </li>
 </ol>
+<p><br></p>
+<h2 id="四、一元函数积分学的应用"><a href="#四、一元函数积分学的应用" class="headerlink" title="四、一元函数积分学的应用"></a>四、一元函数积分学的应用</h2><p><br></p>
+<h4 id="㊀、用积分表达和计算平面图形的面积"><a href="#㊀、用积分表达和计算平面图形的面积" class="headerlink" title="㊀、用积分表达和计算平面图形的面积"></a>㊀、用积分表达和计算平面图形的面积</h4><ol>
+<li>概念<ul>
+<li>$ y = y_1(x), y = y_2(x), x = a, x = b, (a &lt; b) $ 所围成的平面图形的面积。</li>
+<li>$ S = \int_a^b | y_2(x) - y_1(x) | {\rm d}x $ </li>
+</ul>
+</li>
+<li>例题<ol>
+<li>设函数 $ f(x) $ 在 $ [0, 1] $ 上连续，在 $ (0, 1) $ 内大于零，并且满足 $ xf’(x) = f(x) + \dfrac{3a}{2} x^2, (a \text{ 为常数}) $ ，又曲线 $ y = f(x) $ 与 $ x = 1, y = 0 $ 所围的图形 $ S $ 的面积为 $ 2 $ 。1⃣️求函数 $ y = f(x) $ 。2⃣️ $ a $ 为何值时，图形 $ S $ 绕 $ x $ 轴旋转一周所得的旋转体的体积最小。<ul>
+<li>1⃣️</li>
+<li>$ x \not= 0 $ 时，$ ( \dfrac{ f(x) }{x} )’ = \dfrac{ xf’(x) - f(x) }{x^2} = \dfrac{3a}{2} \\ \implies \dfrac{ f(x) }{x} = \dfrac{3a}{2} x + C \\ \implies f(x) = \dfrac{3a}{2} x^2 + Cx, \quad x \in [0, 1]  $ </li>
+<li>又 $ S = 2 = \int_0^1 [ ( \dfrac{3a}{2} x^2 + Cx ) - 0 ] {\rm d}x = \dfrac{a}{2} + \dfrac{C}{2} \\ \implies C = 4 - a \\ \implies f(x) = \dfrac{3a}{2} x^2 + (4 - a)x $ </li>
+</ul>
+</li>
+</ol>
+</li>
+</ol>
+<p><br></p>
+<h4 id="㊁、用积分表达和计算旋转体的体积"><a href="#㊁、用积分表达和计算旋转体的体积" class="headerlink" title="㊁、用积分表达和计算旋转体的体积"></a>㊁、用积分表达和计算旋转体的体积</h4><ol>
+<li>概念<ul>
+<li>$ y = y(x) $ 与 $ x = a, x = b, (a &lt; b) $ 及 $ x $ 轴所围图形绕 $ x $ 轴旋转一周所得的旋转体体积。<ul>
+<li><img src="./images/绕x轴旋转体的体积.png" alt=""> </li>
+<li>$ V_x = \int_a^b \pi f^2(x) {\rm d}x $ </li>
+</ul>
+</li>
+<li>$ y = y(x) $ 与 $ x = a, x = b, (a &lt; b) $ 及 $ x $ 轴所围图形绕 $ y $ 轴旋转一周所得的旋转体体积。<ul>
+<li><img src="./images/绕y轴旋转体的体积.png" alt=""> </li>
+<li>$ V_y = \int_a^b 2 \pi x | f(x) | {\rm d}x $<ul>
+<li>柱壳法 </li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>例题</p>
+<ol>
+<li><p>设函数 $ f(x) $ 在 $ [0, 1] $ 上连续，在 $ (0, 1) $ 内大于零，并且满足 $ xf’(x) = f(x) + \dfrac{3a}{2} x^2, (a \text{ 为常数}) $ ，又曲线 $ y = f(x) $ 与 $ x = 1, y = 0 $ 所围的图形 $ S $ 的面积为 $ 2 $ 。1⃣️求函数 $ y = f(x) $ 。2⃣️ $ a $ 为何值时，图形 $ S $ 绕 $ x $ 轴旋转一周所得的旋转体的体积最小。</p>
+<ul>
+<li>1⃣️</li>
+<li>$ f(x) = \dfrac{3a}{2} x^2 + (4 - a)x $ </li>
+<li>2⃣️</li>
+<li>$ \begin{array}{l} V &amp; = \int_0^1 \pi f^2(x) {\rm d}x \\ &amp; = \pi ( \dfrac{9}{4}a^2 \cdot \dfrac{1}{5} + 3a(4 - a) \cdot \dfrac{1}{4} + (4 - a)^2 \cdot \dfrac{1}{3} ) \\ &amp; = ( \dfrac{1}{30} a^2 + \dfrac{1}{3} a + \dfrac{16}{3} ) \pi  \end{array} $ </li>
+<li>$ V_a’ = ( \dfrac{1}{15} a + \dfrac{1}{3} ) \pi = 0 \implies a = -5 $ </li>
+<li>且 $ V_a’’ = \dfrac{1}{15} \pi &gt; 0 $ ，所以 $ a = -5 $ 时 $ V_{min} = \dfrac{9}{2} \pi $ </li>
+</ul>
+</li>
+<li><p>设平面图形 $ \sigma $ 由 $ y = x^2 - 2x, y = 0, x = 1, x = 3 $ 围成，求 $ \sigma $ 绕 $ y $ 轴旋转一周所得的旋转体体积。</p>
+<ul>
+<li><img src="./images/3-4.2.2.2.png" alt=""> </li>
+<li>$ \begin{array}{l} V &amp; = \int_1^3 2 \pi x | f(x) | {\rm d}x \\ &amp; = 2 \pi [ -\int_1^2 x(x^2 - 2x) {\rm d}x - \int_2^3 x(x^2 - 2x) {\rm d}x ] \\ &amp; = 9 \pi \end{array} $ </li>
+</ul>
+</li>
+<li><p>过原点作 $ y = e^x $ 的切线，该切线与 $ y = e^x $、$ x $ 轴所围成的向 $ x $ 轴负向无限伸展的平面图形记为 $ D $ ，1⃣️求 $ D $ 的面积 $ S $ ，2⃣️ $ D $ 绕 $ x = 1 $ 旋转一周的旋转体的体积 $ V $ 。</p>
+<ul>
+<li><p><img src="./images/3-4.2.2.3.png" alt=""></p>
+</li>
+<li><p>1⃣️</p>
+</li>
+<li>设切点 $ ( x_0, e^{x_0} ) $，所以 $ k = y’(x_0) = e^{x_0} $ <ul>
+<li>切线方程为 $ y - e^{x_0} = e^{x_0} (x - x_0) $ ，过原点，$ \implies x_0 = 1 $ </li>
+<li>$ \implies $ 切线方程 $ y = ex $ </li>
+</ul>
+</li>
+<li>$ S = \int_{-\infty}^0 e^x {\rm d}x + \int_0^1 ( e^x - ex ) {\rm d}x = \int_0^e ( \dfrac{y}{e} - \ln y ) {\rm d}y $ <ul>
+<li>$ S = \left. \dfrac{y^2}{2e} \right|_0^e - \left. y \ln y \right|_0^e + \left. y \right|_0^e = \dfrac{e}{2} + \lim\limits_{y \to 0^+} y \ln y $ </li>
+<li>$ S = \dfrac{e}{2} $ </li>
+</ul>
+</li>
+<li>2⃣️<ul>
+<li>$ \begin{array}{l} V &amp; = \int_0^e \pi (1 - \ln y)^2 {\rm d}y - \dfrac{\pi e}{3} \\ &amp; = \int_0^e \pi ( 1 - 2 \ln y + \ln^2 y ) {\rm d} y - \dfrac{\pi e}{3} \\ &amp; = \pi [ \left. y \right|_0^e - \left. 2( y \ln y - y ) \right|_0^e + \left. ( y \ln^2 y - 2y \ln y + 2y ) \right|_0^e ] - \dfrac{\pi e}{3} \\ &amp; = \dfrac{5 \pi}{3}e \end{array} $ </li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+</ol>
+<p><br></p>
+<h4 id="㊀、用积分表达和计算函数的平均值"><a href="#㊀、用积分表达和计算函数的平均值" class="headerlink" title="㊀、用积分表达和计算函数的平均值"></a>㊀、用积分表达和计算函数的平均值</h4><ol>
+<li>概念<ul>
+<li>$ y(x) $ 在 $ [a, b] $ 上的平均值 $ ave = \dfrac{ \int_a^b y(x) {\rm d}x }{b - a} $ </li>
+</ul>
+</li>
+<li>例题<ol>
+<li>函数 $ y = \ln x $ 在区间 $ [1, e] $ 上的平均值为 ________ 。<ul>
+<li>$ ave = \dfrac{ \int_1^e \ln x {\rm d}x }{e - 1} = \dfrac{1}{e - 1} $ </li>
+</ul>
+</li>
+</ol>
+</li>
+</ol>
 
                 </div>
             </div>
@@ -534,8 +627,8 @@
     <nav class="m-pagination col-md-8 col-sm-24" role="pagination">
         
         
-        <a class="float-right" href="/2018/09/28/plugin Chrome 插件/">
-            Chrome 插件 →
+        <a class="float-right" href="/2018/09/28/hexo 小 bug/">
+            Hexo 小 bug →
         </a>
         
     </nav>
