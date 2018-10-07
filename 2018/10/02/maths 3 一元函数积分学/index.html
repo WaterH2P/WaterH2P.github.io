@@ -182,7 +182,7 @@
                             <br>
                         
                         
-                            <span>最近更新：2018-10-06</span>
+                            <span>最近更新：2018-10-04</span>
                             <br>
                         
                         
@@ -321,7 +321,7 @@
 <li>$ \sqrt[n]{ax + b} = t $ ， $ \sqrt{ \dfrac{ax + b}{cx + d} } = t $ ， $ \sqrt{ ae^{bx} + c } = t $ （根式代换）</li>
 <li>$ a^x, e^x = t $ （指数代换）</li>
 <li>$ \ln x = t $ （对数代换）</li>
-<li>$ \arcsin x, \arctan x = t $ （反三角函数代换）$ … $ </li>
+<li>$ \arcsin x, \arctan x = t $ （反三角函数代换）$ \cdots $ </li>
 </ul>
 </li>
 <li>例题<ol>
@@ -368,15 +368,15 @@
 <ul>
 <li><p>【注】分部积分公式的推广为：</p>
 <ul>
-<li><p>$ \int uv^{(n + 1)} {\rm d}x = uv^{(n)} - u’v^{(n - 1)} + u’’v^{(n - 2)} - … + (-1)^n u^{(n)}v + (-1)^{n + 1} \int u^{(n + 1)}v {\rm d}x $ </p>
+<li><p>$ \int uv^{(n + 1)} {\rm d}x = uv^{(n)} - u’v^{(n - 1)} + u’’v^{(n - 2)} - \cdots + (-1)^n u^{(n)}v + (-1)^{n + 1} \int u^{(n + 1)}v {\rm d}x $ </p>
 </li>
-<li><p>| $ u $ | $ u’ $ | $ u’’ $ | $ … $ | $ u^{(n)} $ | $ u^{(n + 1)} $ |<br>| :——: | :——: | :——-: | :——-: | :————-: | :——————-: |<br>| $ v^{(n + 1)} $ | $ v^{(n)} $ | $ v^{(n - 1)} $ | $ … $ | … | $ v $ |</p>
+<li><p>| $ u $ | $ u’ $ | $ u’’ $ | $ \cdots $ | $ u^{(n)} $ | $ u^{(n + 1)} $ |<br>| :——: | :——: | :——-: | :——-: | :————-: | :——————-: |<br>| $ v^{(n + 1)} $ | $ v^{(n)} $ | $ v^{(n - 1)} $ | $ \cdots $ | $ \cdots $ | $ v $ |</p>
 </li>
 <li><p>对 $ u $ 求导，对 $ v^{(n + 1)} $ 积分</p>
 </li>
 <li>交错相乘、正负相间、首项为正</li>
 <li>最后一项（列）相乘再积分</li>
-<li><img src="./images/分部积分公式的推广.png" alt=""></li>
+<li><img src="./images/3-2.3 分部积分公式的推广.png" alt=""></li>
 </ul>
 </li>
 </ul>
@@ -411,11 +411,11 @@
 </li>
 <li>拆分原则<ol>
 <li>$ Q_m(x) $ 分解出 $ (ax + b)^k \implies $ 产生 $ k $ 项。<ul>
-<li>$ \dfrac{A_1}{ ax + b } + \dfrac{A_2}{ (ax + b)^2 } + … + \dfrac{A_k}{ (ax + b)^k }, \quad k = 1, 2, … $ </li>
+<li>$ \dfrac{A_1}{ ax + b } + \dfrac{A_2}{ (ax + b)^2 } + \cdots + \dfrac{A_k}{ (ax + b)^k }, \quad k = 1, 2, \ldots $ </li>
 </ul>
 </li>
 <li>$ Q_m(x) $ 分解出 $ (px^2 + qx + r)^k \implies $ 产生 $ k $ 项。<ul>
-<li>$ \dfrac{ A_1x + B_1 }{ px^2 + qx +r } + \dfrac{ A_2x + B }{ (px^2 + qx + r)^2 } + … + \dfrac{ A_kx + B_k }{ (px^2 + qx + r)^k }, \quad k = 1, 2, … $ </li>
+<li>$ \dfrac{ A_1x + B_1 }{ px^2 + qx +r } + \dfrac{ A_2x + B }{ (px^2 + qx + r)^2 } + \cdots + \dfrac{ A_kx + B_k }{ (px^2 + qx + r)^k }, \quad k = 1, 2, \ldots $ </li>
 </ul>
 </li>
 </ol>
@@ -473,8 +473,8 @@
 <li>方法</li>
 <li>$ n &gt; 1 $ 时<ul>
 <li>$ \begin{array}{l} I_n &amp; = \int_0^{ \frac{\pi}{2} } \sin^{n - 1} x \cdot \sin x {\rm d}x = - \int_0^{ \frac{\pi}{2} } \sin^{n - 1} x {\rm d} \cos x \\ &amp; = \left. - \sin^{n - 1} x \cos x \right|_0^{ \frac{\pi}{2} } + \int_0^{ \frac{\pi}{2} } \cos x \cdot (n - 1) \cdot \sin^{n - 2}x \cdot \cos x {\rm d}x \\ &amp; = (n - 1) \int_0^{ \frac{\pi}{2} } (1 - \sin^2 x) \sin^{n - 2} x {\rm d}x \\ &amp; = (n - 1) \int_0^{ \frac{\pi}{2} } \sin^{n - 2} x {\rm d}x - (n - 1) \int_0^{ \frac{\pi}{2} } \sin^n x {\rm d}x \\ &amp; = (n - 1) I_{n - 2} - (n - 1) I_n \end{array} $ </li>
-<li>$ \implies I_n = \dfrac{n - 1}{n} I_{n - 2}, \quad n = 2, 3, … $ </li>
-<li>⭐️ $ I_n = \begin{cases} \dfrac{n - 1}{n} \cdot \dfrac{n - 2}{n - 3} … \dfrac{1}{2} \cdot \dfrac{\pi}{2}, \quad &amp; n \text{ 为正偶数} \\ \dfrac{n - 1}{n} \cdot \dfrac{n - 2}{n - 3} … \dfrac{2}{3} \cdot 1, \quad &amp; n \text{ 为大于1的奇数} \end{cases} $ <ul>
+<li>$ \implies I_n = \dfrac{n - 1}{n} I_{n - 2}, \quad n = 2, 3, \ldots $ </li>
+<li>⭐️ $ I_n = \begin{cases} \dfrac{n - 1}{n} \cdot \dfrac{n - 2}{n - 3} \cdots \dfrac{1}{2} \cdot \dfrac{\pi}{2}, \quad &amp; n \text{ 为正偶数} \\ \dfrac{n - 1}{n} \cdot \dfrac{n - 2}{n - 3} \cdots \dfrac{2}{3} \cdot 1, \quad &amp; n \text{ 为大于1的奇数} \end{cases} $ <ul>
 <li>华里士公式</li>
 </ul>
 </li>
@@ -545,12 +545,12 @@
 <h4 id="㊁、用积分表达和计算旋转体的体积"><a href="#㊁、用积分表达和计算旋转体的体积" class="headerlink" title="㊁、用积分表达和计算旋转体的体积"></a>㊁、用积分表达和计算旋转体的体积</h4><ol>
 <li>概念<ul>
 <li>$ y = y(x) $ 与 $ x = a, x = b, (a &lt; b) $ 及 $ x $ 轴所围图形绕 $ x $ 轴旋转一周所得的旋转体体积。<ul>
-<li><img src="./images/绕x轴旋转体的体积.png" alt=""> </li>
+<li><img src="./images/3-4.2 绕x轴旋转体的体积.png" alt=""> </li>
 <li>$ V_x = \int_a^b \pi f^2(x) {\rm d}x $ </li>
 </ul>
 </li>
 <li>$ y = y(x) $ 与 $ x = a, x = b, (a &lt; b) $ 及 $ x $ 轴所围图形绕 $ y $ 轴旋转一周所得的旋转体体积。<ul>
-<li><img src="./images/绕y轴旋转体的体积.png" alt=""> </li>
+<li><img src="./images/3-4.2 绕y轴旋转体的体积.png" alt=""> </li>
 <li>$ V_y = \int_a^b 2 \pi x | f(x) | {\rm d}x $<ul>
 <li>柱壳法 </li>
 </ul>
@@ -625,6 +625,10 @@
 <!-- 当前博客前后两篇博客 -->
 <div class="row justify-content-center">
     <nav class="m-pagination col-md-8 col-sm-24" role="pagination">
+        
+        <a class="float-left" href="/2018/10/07/maths 4 多元函数微分学/" style="float: left;">
+            ← 多元函数微分学
+        </a>
         
         
         <a class="float-right" href="/2018/09/28/hexo 小 bug/">
