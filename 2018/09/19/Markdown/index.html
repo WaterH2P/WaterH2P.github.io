@@ -183,39 +183,39 @@
                 <div class="col-lg-8 col-md-10">
                     <p>【转自 codeep】Cmd Markdown 公式指导手册</p>
 <h2 id="一、数学公式"><a href="#一、数学公式" class="headerlink" title="一、数学公式"></a>一、数学公式</h2><p><br></p>
-<h4 id="插入公式"><a href="#插入公式" class="headerlink" title="插入公式"></a>插入公式</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ 数学公式 $</span><br></pre></td></tr></table></figure>
+<h4 id="1-插入公式"><a href="#1-插入公式" class="headerlink" title="1. 插入公式"></a>1. 插入公式</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ 数学公式 $</span><br></pre></td></tr></table></figure>
 <p>或<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$$ 数学公式 $$</span><br></pre></td></tr></table></figure></p>
 <p><br></p>
-<h4 id="输入上下标"><a href="#输入上下标" class="headerlink" title="输入上下标"></a>输入上下标</h4><p>输入上标使用：<code>^</code>，输入下标使用：<code>_</code>。</p>
+<h4 id="2-输入上下标"><a href="#2-输入上下标" class="headerlink" title="2. 输入上下标"></a>2. 输入上下标</h4><p>输入上标使用：<code>^</code>，输入下标使用：<code>_</code>。</p>
 <p>例如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ x_0^+ $</span><br></pre></td></tr></table></figure></p>
 <p>显示 ：$ x_0^+ $ </p>
 <p><br></p>
-<h4 id="括号"><a href="#括号" class="headerlink" title="括号"></a>括号</h4><p><code>()</code>,<code>[]</code>,<code>|</code> 可以直接使用标识符号本身，<code>\{\}</code> 来表示大括号。当要显示大号的括号或分隔符时，要用 <code>\left</code> 和 <code>\right</code> 命令。</p>
+<h4 id="3-括号"><a href="#3-括号" class="headerlink" title="3. 括号"></a>3. 括号</h4><p><code>()</code>,<code>[]</code>,<code>|</code> 可以直接使用标识符号本身，<code>\{\}</code> 来表示大括号。当要显示大号的括号或分隔符时，要用 <code>\left</code> 和 <code>\right</code> 命令。</p>
 <p>例如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ f(x) = \left( \dfrac&#123;x - \ln x&#125;&#123;x&#125; \right)^2 $</span><br></pre></td></tr></table></figure></p>
 <p>显示：$ f(x) = \left( \dfrac{x - \ln x}{x} \right)^2 $ </p>
 <p>如果一边符号不需要显示时使用 <code>\left.</code> 或 <code>\right.</code> 。</p>
 <p>例如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ \left. \dfrac&#123; &#123;\rm d&#125;^2 y&#125;&#123; &#123;\rm d&#125;x^2 &#125; \right|_&#123;t = 0&#125; $</span><br></pre></td></tr></table></figure></p>
 <p>显示：$ \left. \dfrac{ {\rm d}^2 y}{ {\rm d}x^2 } \right|_{t = 0} $ </p>
 <p><br></p>
-<h4 id="输入分数"><a href="#输入分数" class="headerlink" title="输入分数"></a>输入分数</h4><p>通常使用 <code>\frac {分子} {分母}</code> 命令产生一个分数，分数可嵌套。 </p>
+<h4 id="4-输入分数"><a href="#4-输入分数" class="headerlink" title="4. 输入分数"></a>4. 输入分数</h4><p>通常使用 <code>\frac {分子} {分母}</code> 命令产生一个分数，分数可嵌套。 </p>
 <p>便捷情况可直接输入 <code>\frac ab</code> 来快速生成一个 $ \frac ab $ 。</p>
 <p>也可以使用 <code>\dfreac</code> 代替 <code>\frac</code> ，使得分式看起来更好看一点。</p>
 <p>例如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ \frac&#123;a-1&#125;&#123;b-1&#125; \quad \text&#123;and&#125; \quad \dfrac&#123;a-1&#125;&#123;b-1&#125; $</span><br></pre></td></tr></table></figure></p>
 <p>显示：$ \frac{a-1}{b-1} \quad \text{and} \quad \dfrac{a-1}{b-1} $ </p>
 <p><br></p>
-<h4 id="输入开方"><a href="#输入开方" class="headerlink" title="输入开方"></a>输入开方</h4><p>使用 <code>\sqrt [根指数] {被开方数}</code> 命令输入开方（如果不输入根指数，默认为2）。</p>
+<h4 id="5-输入开方"><a href="#5-输入开方" class="headerlink" title="5. 输入开方"></a>5. 输入开方</h4><p>使用 <code>\sqrt [根指数] {被开方数}</code> 命令输入开方（如果不输入根指数，默认为2）。</p>
 <p>例如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ \sqrt&#123;1 + x^2&#125; \quad \text&#123;and&#125; \quad \sqrt[n]&#123;ax + b&#125; $</span><br></pre></td></tr></table></figure></p>
 <p>显示：$ \sqrt{1 + x^2} \quad \text{and} \quad \sqrt[n]{ax + b} $ </p>
 <p><br></p>
-<h4 id="输入省略号"><a href="#输入省略号" class="headerlink" title="输入省略号"></a>输入省略号</h4><p><code>\cdot</code> 可以表示乘号， <code>\ldots</code> 表示与文本底线对齐的省略号，<code>\cdots</code> 表示与文本中线对齐的省略号。</p>
+<h4 id="6-输入省略号"><a href="#6-输入省略号" class="headerlink" title="6. 输入省略号"></a>6. 输入省略号</h4><p><code>\cdot</code> 可以表示乘号， <code>\ldots</code> 表示与文本底线对齐的省略号，<code>\cdots</code> 表示与文本中线对齐的省略号。</p>
 <p>例如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ f(x_1,x_2, \ldots,x_n) = k \cdot x_1^2 + x_2^2 + \cdots + x_n^2 $</span><br></pre></td></tr></table></figure></p>
 <p>显示：$ f(x_1,x_2, \ldots,x_n) = k \cdot x_1^2 + x_2^2 + \cdots + x_n^2 $ </p>
 <p><br></p>
-<h4 id="输入积分"><a href="#输入积分" class="headerlink" title="输入积分"></a>输入积分</h4><p>使用 <code>int_积分下限^积分上限 {被积表达式}</code> 来输入一个积分。</p>
+<h4 id="7-输入积分"><a href="#7-输入积分" class="headerlink" title="7. 输入积分"></a>7. 输入积分</h4><p>使用 <code>int_积分下限^积分上限 {被积表达式}</code> 来输入一个积分。</p>
 <p>例如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ \int_a^b f(x) &#123;\rm d&#125;x $</span><br></pre></td></tr></table></figure></p>
 <p>显示：$ \int_a^b f(x) {\rm d}x $ </p>
 <p><br></p>
-<h4 id="输入极限"><a href="#输入极限" class="headerlink" title="输入极限"></a>输入极限</h4><p>使用 <code>\lim_{变量 \to 表达式} 表达式</code> 来输入一个极限，也可以使用 <code>\lim\limits_{变量 \to 表达式} 表达式</code> 将条件放到极限符号下面。</p>
+<h4 id="8-输入极限"><a href="#8-输入极限" class="headerlink" title="8. 输入极限"></a>8. 输入极限</h4><p>使用 <code>\lim_{变量 \to 表达式} 表达式</code> 来输入一个极限，也可以使用 <code>\lim\limits_{变量 \to 表达式} 表达式</code> 将条件放到极限符号下面。</p>
 <p>例如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ \lim_&#123;x \to x_0&#125;f(x) = A \quad \text&#123;and&#125; \quad \lim\limits_&#123;x \to x_0&#125;f(x) = A $</span><br></pre></td></tr></table></figure></p>
 <p>显示：$ \lim_{x \to x_0}f(x) = A \quad \text{and} \quad \lim\limits_{x \to x_0}f(x) = A $ </p>
 <p><br></p>
@@ -233,8 +233,8 @@
 <div class="row justify-content-center">
     <nav class="m-pagination col-md-8 col-sm-24" role="pagination">
         
-        <a class="float-left" href="/2018/09/21/hexo 在 Hexo 中渲染 MathJax 数学公式/" style="float: left;">
-            ← 在 Hexo 中渲染 MathJax 数学公式
+        <a class="float-left" href="/2018/09/21/maths 1 极限/" style="float: left;">
+            ← 极限
         </a>
         
         
@@ -370,22 +370,5 @@
             $('html').animate({scrollTop: 0}, 'slow');
         }
     </script>
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<!-- <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-
 </body>
 </html>
