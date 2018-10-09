@@ -326,13 +326,13 @@
 </li>
 <li>例题<ol>
 <li>求 $ I = \int \sqrt{ \dfrac{1 - x}{1 + x} } \cdot \dfrac{ {\rm d}x }{x} $ 。<ul>
-<li>解1⃣️<ul>
+<li>解 ㊀<ul>
 <li>令 $ \sqrt{ \dfrac{1 - x}{1 + x} } = t, \quad x = \dfrac{1 - t^2}{1 + t^2} $ </li>
 <li>所以： $ \begin{array}{l} I &amp; = \int t \cdot \dfrac{1 + t^2}{1 - t^2} \cdot \dfrac{-4t}{ (1 + t^2)^2 } {\rm d}t \\ &amp; = -4 \int \dfrac{t^2}{ (1 - t^2)(1 + t^2) } {\rm d}t \\ &amp; = 2 \int ( \dfrac{1}{1 + t^2} - \dfrac{1}{1 - t^2} ) {\rm d}t \\ &amp; = 2 \arctan t - \ln| \dfrac{1 + t}{1 - t} | + C \end{array} $</li>
 <li><strong>回代</strong>：$ I = 2 \arctan \sqrt{ \dfrac{1 - x}{1 + x} } - \ln | \dfrac{ \sqrt{1 + x} - \sqrt{1 - x} }{ \sqrt{1 + x} - \sqrt{1 - x} } | + C $ </li>
 </ul>
 </li>
-<li>解2⃣️<ul>
+<li>解 ㊁<ul>
 <li>$ I = \int \sqrt{ \dfrac{1 - x}{1 + x} } \cdot \dfrac{ {\rm d}x }{x} = \int \dfrac{ \sqrt{1 - x^2} }{(1 + x)x} {\rm d}x $ </li>
 <li>令 $ s = \sin t, t \in ( -\dfrac{\pi}{2}, \dfrac{\pi}{2} ) $ </li>
 <li>$ \begin{array}{l} I &amp; = \int \dfrac{ \cos^2 t }{ (1 + \sin t) \sin t } {\rm d}t \\ &amp; = \int \dfrac{ (1 + \sin t)(1 - \sin t) }{ (1 + \sin t) \sin t } {\rm d}t \\ &amp; = \int \csc t {\rm d}t - \int 1 {\rm d}t \\ &amp; = \ln| \csc t - \cot t | - t + C \end{array} $ </li>
@@ -582,15 +582,13 @@
 <li><p><img src="./images/3-4.2.2.3.png" alt=""></p>
 </li>
 <li><p>1⃣️</p>
-</li>
+<ul>
 <li>设切点 $ ( x_0, e^{x_0} ) $，所以 $ k = y’(x_0) = e^{x_0} $ <ul>
 <li>切线方程为 $ y - e^{x_0} = e^{x_0} (x - x_0) $ ，过原点，$ \implies x_0 = 1 $ </li>
 <li>$ \implies $ 切线方程 $ y = ex $ </li>
 </ul>
 </li>
-<li>$ S = \int_{-\infty}^0 e^x {\rm d}x + \int_0^1 ( e^x - ex ) {\rm d}x = \int_0^e ( \dfrac{y}{e} - \ln y ) {\rm d}y $ <ul>
-<li>$ S = \left. \dfrac{y^2}{2e} \right|_0^e - \left. y \ln y \right|_0^e + \left. y \right|_0^e = \dfrac{e}{2} + \lim\limits_{y \to 0^+} y \ln y $ </li>
-<li>$ S = \dfrac{e}{2} $ </li>
+<li>$ \begin{array}{l} S &amp; = \int_{-\infty}^0 e^x {\rm d}x + \int_0^1 ( e^x - ex ) {\rm d}x = \int_0^e ( \dfrac{y}{e} - \ln y ) {\rm d}y \\ &amp; = \left. \dfrac{y^2}{2e} \right|_0^e - \left. y \ln y \right|_0^e + \left. y \right|_0^e = \dfrac{e}{2} + \lim\limits_{y \to 0^+} y \ln y \\ &amp; = \dfrac{e}{2} \end{array} $ </li>
 </ul>
 </li>
 <li>2⃣️<ul>
