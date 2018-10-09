@@ -181,14 +181,7 @@
             </div>
             <div class="row justify-content-center">
                 <div class="col-lg-8 col-md-10">
-                    <h2 id="数学公式"><a href="#数学公式" class="headerlink" title="数学公式"></a>数学公式</h2><div class="div-message div-desc" style="padding: 0 0 25px 10px ">
-    <br>
-    <a class="own-underline" href="https://www.zybuluo.com/codeep/note/163962" target="_blank">Cmd Markdown 公式指导手册</a><br>
-    <a class="own-underline" href="https://blog.csdn.net/thither_shore/article/details/52260742" target="_blank">CSDN-markdown 之 LaTeX 特殊公式格式笔记</a><br>
-    <a class="own-underline" href="https://blog.csdn.net/yzr1183739890/article/details/64130912" target="_blank">markdown数学公式</a>
-</div>
-
-
+                    <h2 id="一、数学公式"><a href="#一、数学公式" class="headerlink" title="一、数学公式"></a>一、数学公式</h2><p>【转自 codeep】<a class="own-underline" href="https://www.zybuluo.com/codeep/note/163962" target="_blank">Cmd Markdown 公式指导手册</a></p>
 <p><br></p>
 <h4 id="插入公式"><a href="#插入公式" class="headerlink" title="插入公式"></a>插入公式</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ 数学公式 $</span><br></pre></td></tr></table></figure>
 <p>或<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$$ 数学公式 $$</span><br></pre></td></tr></table></figure></p>
@@ -210,8 +203,27 @@
 <p>例如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ \frac&#123;a-1&#125;&#123;b-1&#125; \quad \text&#123;and&#125; \quad \dfrac&#123;a-1&#125;&#123;b-1&#125; $</span><br></pre></td></tr></table></figure></p>
 <p>显示：$ \frac{a-1}{b-1} \quad \text{and} \quad \dfrac{a-1}{b-1} $ </p>
 <p><br></p>
-<h4 id="输入开方"><a href="#输入开方" class="headerlink" title="输入开方"></a>输入开方</h4><p><br></p>
-<h4 id="输入省略号"><a href="#输入省略号" class="headerlink" title="输入省略号"></a>输入省略号</h4>
+<h4 id="输入开方"><a href="#输入开方" class="headerlink" title="输入开方"></a>输入开方</h4><p>使用 <code>\sqrt [根指数] {被开方数}</code> 命令输入开方（如果不输入根指数，默认为2）。</p>
+<p>例如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ \sqrt&#123;1 + x^2&#125; \quad \text&#123;and&#125; \quad \sqrt[n]&#123;ax + b&#125; $</span><br></pre></td></tr></table></figure></p>
+<p>显示：$ \sqrt{1 + x^2} \quad \text{and} \quad \sqrt[n]{ax + b} $ </p>
+<p><br></p>
+<h4 id="输入省略号"><a href="#输入省略号" class="headerlink" title="输入省略号"></a>输入省略号</h4><p><code>\cdot</code> 可以表示乘号， <code>\ldots</code> 表示与文本底线对齐的省略号，<code>\cdots</code> 表示与文本中线对齐的省略号。</p>
+<p>例如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ f(x_1,x_2, \ldots,x_n) = k \cdot x_1^2 + x_2^2 + \cdots + x_n^2 $</span><br></pre></td></tr></table></figure></p>
+<p>显示：$ f(x_1,x_2, \ldots,x_n) = k \cdot x_1^2 + x_2^2 + \cdots + x_n^2 $ </p>
+<p><br></p>
+<h4 id="输入积分"><a href="#输入积分" class="headerlink" title="输入积分"></a>输入积分</h4><p>使用 <code>int_积分下限^积分上限 {被积表达式}</code> 来输入一个积分。</p>
+<p>例如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ \int_a^b f(x) &#123;\rm d&#125;x $</span><br></pre></td></tr></table></figure></p>
+<p>显示：$ \int_a^b f(x) {\rm d}x $ </p>
+<p><br></p>
+<h4 id="输入极限"><a href="#输入极限" class="headerlink" title="输入极限"></a>输入极限</h4><p>使用 <code>\lim_{变量 \to 表达式} 表达式</code> 来输入一个极限，也可以使用 <code>\lim\limits_{变量 \to 表达式} 表达式</code> 将条件放到极限符号下面。</p>
+<p>例如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ \lim_&#123;x \to x_0&#125;f(x) = A \quad \text&#123;and&#125; \quad \lim\limits_&#123;x \to x_0&#125;f(x) = A $</span><br></pre></td></tr></table></figure></p>
+<p>显示：$ \lim_{x \to x_0}f(x) = A \quad \text{and} \quad \lim\limits_{x \to x_0}f(x) = A $ </p>
+<p><br></p>
+<h2 id="二、更多参考"><a href="#二、更多参考" class="headerlink" title="二、更多参考"></a>二、更多参考</h2><div class="div-message div-desc" style="padding: 0 0 25px 10px ">
+    <br>
+    <a class="own-underline" href="https://blog.csdn.net/thither_shore/article/details/52260742" target="_blank">CSDN-markdown 之 LaTeX 特殊公式格式笔记</a><br>
+    <a class="own-underline" href="https://blog.csdn.net/yzr1183739890/article/details/64130912" target="_blank">markdown数学公式</a>
+</div>
                 </div>
             </div>
             <div class="clearfix"></div>
@@ -221,8 +233,8 @@
 <div class="row justify-content-center">
     <nav class="m-pagination col-md-8 col-sm-24" role="pagination">
         
-        <a class="float-left" href="/2018/09/21/maths 1 极限/" style="float: left;">
-            ← 极限
+        <a class="float-left" href="/2018/09/21/hexo 在 Hexo 中渲染 MathJax 数学公式/" style="float: left;">
+            ← 在 Hexo 中渲染 MathJax 数学公式
         </a>
         
         
