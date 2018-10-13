@@ -363,7 +363,29 @@
 <li>$ \iint\limits_D f(x, y) {\rm d} \sigma = \int_{\alpha}^{\beta} {\rm d} \theta \int_{ r_1(\theta) }^{ r_2(\theta) } f(r \cos \theta, r \sin \theta) r {\rm d}r $ </li>
 </ul>
 </li>
-<li>计算 $ \iint\limits_D (x^2 + y^2) {\rm d}x {\rm d}y $</li>
+<li>计算 $ \iint\limits_D (x^2 + y^2) {\rm d}x {\rm d}y $ ，其中 $ D $ 由 $ y = -x, x^2 + y^2 = 4, y = \sqrt{2x - x^2} $ 所围成的在第一、二象限的部分。<ul>
+<li>分析<ul>
+<li>当被积函数含 $ f(x^2, y^2) $ ，且 $ D $ 为圆的部分时，一般选极坐标系。<ul>
+<li>首要的是 $ f(x^2, y^2) $ </li>
+</ul>
+</li>
+<li>否则，一般选直角坐标系。</li>
+</ul>
+</li>
+<li><img src="./images/5-2.2.2.png" width="40%"></li>
+<li>$ \begin{array}{l} I &amp; = \int_0^{ \frac{\pi}{2} } {\rm d} \theta \int_{2 \cos \theta}^2 r^2 \cdot r {\rm d}r + \int_{ \frac{\pi}{2} }^{ \frac{3 \pi}{4} } {\rm d} \theta \int_0^2 r^2 \cdot r {\rm d}r \\ &amp; = \int_0^{ \frac{\pi}{2} } \left( \left. \dfrac{r^4}{4} \right|_{2 \cos \theta}^2 \right) {\rm d} \theta + \dfrac{\pi}{4} \cdot \left. \dfrac{r^4}{4} \right|_0^2 \\ &amp; = \int_0^{ \frac{\pi}{2} } \left( 4 - 4 \cos^4 \theta \right) {\rm d} \theta + \pi \\ &amp; = 3 \pi - 4 \int_0^{ \frac{\pi}{2} } \cos^4 \theta {\rm d} \theta \\ &amp; = \dfrac{9}{4} \pi \end{array} $</li>
+<li>or</li>
+<li>$ \begin{array}{l} I &amp; = \int_0^{ \frac{3 \pi}{4} } {\rm d} \theta \int_0^2 r^3 {\rm d}r - \int_0^{ \frac{\pi}{2} } {\rm d}\theta \int_0^{2 \cos \theta} r^3 {\rm d}r \\ &amp; = \dfrac{3\pi}{4} \cdot 4 - 4 \int_0^{ \frac{\pi}{2} } \cos^4 \theta {\rm d}\theta \\ &amp; = \dfrac{9}{4} \pi \end{array} $ </li>
+</ul>
+</li>
+<li>计算 $ I = \iint\limits_D \sqrt{ 1 - r^2 \cos 2 \theta } \text{ } r^2 \sin \theta \text{ } {\rm d}r {\rm d}\theta $ ，其中 $ D = \left\lbrace \left. (r, \theta) \right| 0 \leq r \leq \sec \theta, 0 \leq \theta \leq \dfrac{\pi}{4} \right\rbrace $ 。<ul>
+<li>分析<ul>
+<li>$ r \leq \sec \theta \implies r \cos \theta \leq 1 \implies x \leq 1 $ </li>
+</ul>
+</li>
+<li>$ \begin{array}{l} I &amp; = \iint\limits_D y \sqrt{1 - x^2 + y^2} \text{ } {\rm d}x {\rm d}y \\ &amp; = \dfrac{1}{2} \int_0^1 {\rm d}x \int_0^x \sqrt{1 - x^2 + y^2} \text{ } {\rm d}( 1 - x^2 + y^2 ) \\ &amp; = \dfrac{1}{ \enclose{downdiagonalstrike}2 } \cdot \dfrac{ \enclose{downdiagonalstrike}2 }{3} \cdot \int_0^1 \left[ \left. (1 - x^2 + y^2)^{ \frac{3}{2} } \right|_{y = 0}^{y = x} \right] {\rm d}x \\ &amp; = \dfrac{1}{3} - \dfrac{1}{3} \int_0^1 (1 - x^2)^{ \frac{3}{2} } {\rm d}x = \dfrac{1}{3} - \dfrac{1}{3} \int_0^{ \frac{\pi}{2} } \cos^4 t {\rm d} t \\ &amp; = \dfrac{1}{3} - \dfrac{\pi}{16} \end{array} ​$ </li>
+</ul>
+</li>
 </ol>
 
                 </div>
