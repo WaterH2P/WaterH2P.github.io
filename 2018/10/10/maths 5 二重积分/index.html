@@ -182,7 +182,7 @@
                             <br>
                         
                         
-                            <span>最近更新：2018-10-12</span>
+                            <span>最近更新：2018-10-10</span>
                             <br>
                         
                         
@@ -202,7 +202,7 @@
 </li>
 <li>例题<ol>
 <li>设平面区域 $ D $ 由曲线 $ y = \sin x ( -\dfrac{\pi}{2} \leq x \leq \dfrac{\pi}{2} ) $ ，$ x = -\dfrac{\pi}{2} $ ，$ y = 1 $ 围成，则 $ \iint\limits_D (xy^3 - 1) {\rm d} \sigma = $ ________ 。<ul>
-<li><img src="./images/5-1.1.2.1.png" alt=""></li>
+<li><img src="./images/5-1.1.2.1.png" width="50%"></li>
 <li>做辅助线 $ y = -\sin x $ 将区域 $ D $ 划分为关于 $ y $ 轴对称的区域 $ D_2 $ 和关于 $ x $ 轴对称的区域 $ D_1 $ 。</li>
 <li>$ \begin{array}{l} \iint\limits_D (xy^3 - 1) {\rm d} \sigma = \iint\limits_D xy^3 {\rm d} \sigma - \iint\limits_D 1 {\rm d} \sigma = \iint\limits_{D_1} xy^3 {\rm d} \sigma + \iint\limits_{D_2} xy^3 {\rm d} \sigma - \pi \end{array} $<ul>
 <li>由于区域 $ D_1 $ 关于 $ x $ 轴对称，且 $ f(x, y) = -f(x, -y) $ ，所以 $ \iint\limits_{D_1} xy^3 {\rm d} \sigma = 0 $ 。</li>
@@ -284,15 +284,86 @@
 <li>$ \implies \text{左 } = \dfrac{1}{2} \iint\limits_D \left[ \dfrac{ f(x) }{ f(y) } + \dfrac{ f(y) }{ f(x) } \right] {\rm d}\sigma \geq \dfrac{1}{2} \iint\limits_D 2 {\rm d}\sigma = (b - a)^2 = \text{ 右} $ </li>
 </ul>
 </li>
+<li>解法 3⃣️ <ul>
+<li>由柯西积分不等式<ul>
+<li>$ \left( \int_a^b f(x) g(x) {\rm d}x \right)^2 \leq \int_a^b f^2(x) \cdot \int_a^b g^2(x) {\rm d}x $ </li>
 </ul>
 </li>
-<li>【记住】⭐️计算 $ \int_{-\infty}^{+\infty} e^{-x^2} {\rm d}x $ <ul>
-<li><img src="./images/5-1.3.2 高斯曲线.png" alt=""> </li>
+<li>$ \implies \begin{array}{l} \int_a^b f(x) {\rm d}x \cdot \int_a^b \dfrac{1}{ f(x) } {\rm d}x &amp; = \int_a^b \left( \sqrt{ f(x) } \right)^2 {\rm d}x \cdot \int_a^b \left( \dfrac{1}{ \sqrt{ f(x) } } \right)^2 {\rm d}x \\ &amp; = \left( \int_a^b \sqrt{ f(x) } \cdot \dfrac{1}{ \sqrt{ f(x) } } {\rm d}x \right)^2 = (b - a)^2 \end{array} $ </li>
+</ul>
+</li>
+</ul>
+</li>
+<li>【记住】⭐️计算 $ \int_{-\infty}^{+\infty} e^{-x^2} {\rm d}x ​$ <ul>
+<li><img src="./images/5-1.3.2 高斯曲线.png" width="50%"></li>
 <li>显然，$ \int_{-\infty}^{+\infty} e^{-x^2} {\rm d}x = \int_{-\infty}^{+\infty} e^{-y^2} {\rm d}y $ </li>
 <li>$ \begin{array}{l} I^2 &amp; = \int_{-\infty}^{+\infty} e^{-x^2} {\rm d}x \cdot \int_{-\infty}^{+\infty} e^{-y^2} {\rm d}y \\ &amp; = \iint\limits_D e^{ -(x^2 + y^2) } {\rm d} \sigma \\ &amp; = \int_0^{2\pi} {\rm d}\theta \int_0^{+\infty} e^{-r^2} r {\rm d}r \\ &amp; = 2\pi \cdot ( -\dfrac{1}{2} ) \cdot \left. e^{-r^2} \right|_0^{+\infty} \\ &amp; = \pi \end{array} $ </li>
 <li>$ \implies I = \sqrt{\pi} $ </li>
 </ul>
 </li>
+</ol>
+<p><br></p>
+<h2 id="二、计算"><a href="#二、计算" class="headerlink" title="二、计算"></a>二、计算</h2><p><br></p>
+<h4 id="㊀、直角坐标系"><a href="#㊀、直角坐标系" class="headerlink" title="㊀、直角坐标系"></a>㊀、直角坐标系</h4><ol>
+<li>概念<ul>
+<li>$ \iint\limits_D f(x, y) {\rm d} \sigma = \iint\limits_D f(x, y) {\rm d}x {\rm d}y $ <ul>
+<li>由于定义中 $ {\rm d} \sigma &gt; 0 $ ，所以分部积分中 $ {\rm d}x &gt; 0 \text{  and  } {\rm d}y &gt; 0 $ </li>
+<li>即 $ \int_a^b {\rm d}x $ 中 $ a &lt; b $ </li>
+</ul>
+</li>
+<li>$ X $ 型区域（上下型）<ul>
+<li>$ \int_a^b {\rm d}x \int_{y_1(x)}^{y_2(x)} f(x, y) {\rm d}x $ <ul>
+<li>后积先定限（小 $ \to $ 大）</li>
+<li>限内画条线（小 $ \to $ 大）</li>
+<li>先交下曲线</li>
+<li>后交上曲线</li>
+<li><img src="./images/5-2.1.2 X型二重积分.png" width="50%"></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>例题<ol>
+<li>交换 $ \int_{-1}^0 {\rm d}y \int_2^{1 - y} f(x, y) {\rm d}x $ 的积分次序为 ________ 。<ul>
+<li>分析<ul>
+<li>$ {\rm d}x &gt; 0, {\rm d}y &lt; 0 \implies $ 不是二重积分</li>
+<li>修改为 $ {\rm d}x &gt;0, {\rm d}y &gt; 0 $ <ul>
+<li>$ I = -\int_{-1}^0 {\rm d}y \int_{1 - y}^2 f(x, y) {\rm d}x $ </li>
+</ul>
+</li>
+</ul>
+</li>
+<li>$ I = -\int_1^2 {\rm d}x \int_{1 - x}^0 f(x, y) {\rm d}y $</li>
+</ul>
+<ol>
+<li>已知 $ I = \int_0^2 {\rm d}x \int_0^{ \frac{x^2}{2} } f(x, y) {\rm d}x + \int_2^{ 2 \sqrt{2} } {\rm d}x \int_0^{ \sqrt{8 - x^2} } f(x, y) {\rm d}y $ ，则 $ I = ( \text{  A  } ) $ 。</li>
+</ol>
+<ul>
+<li>$ \begin{array}{l} A. \int_0^2 {\rm d}y \int_{ \sqrt{2y} }^{ \sqrt{8 - y^2} } f(x, y) {\rm d}x &amp; B.\int_0^2{\rm d}y \int_1^{ \sqrt{ 8 - y^2 } } f(x, y) {\rm d}x \\ C. \int_0^1 {\rm d}y \int_{ \sqrt{2y} }^{ \sqrt{8 - y^2} } f(x, y) {\rm d}x &amp; D.\int_0^2 {\rm d}y \int_{ \sqrt{2y} }^1 f(x, y) {\rm d}x \end{array} $ </li>
+</ul>
+<ol>
+<li>计算 $ \int_{ \frac{1}{4} }^{ \frac{1}{2} } {\rm d}y \int_{ \frac{1}{2} }^{ \sqrt{y} } e^{ \frac{y}{x} } {\rm d}x + \int_{ \frac{1}{2} }^1 {\rm d}y \int_y^{ \sqrt{y} } e^{ \frac{y}{x} } {\rm d}x $</li>
+</ol>
+<ul>
+<li>换序<ul>
+<li>$ I = \int_{ \frac{1}{2} }^1 {\rm d}x \int_{x^2}^x e^{ \frac{y}{x} } {\rm d}y = \dfrac{3}{8} e - \dfrac{ \sqrt{e} }{2} $ </li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+</ol>
+<p><br></p>
+<h4 id="㊁、极坐标系"><a href="#㊁、极坐标系" class="headerlink" title="㊁、极坐标系"></a>㊁、极坐标系</h4><ol>
+<li>概念<ul>
+<li>$ {\rm d} \sigma = {\rm d}\theta \cdot r {\rm d}r $ </li>
+<li><img src="./images/5-2.2.1 极坐标二重积分.png" width="50%"></li>
+<li>$ \iint\limits_D f(x, y) {\rm d} \sigma = \int_{\alpha}^{\beta} {\rm d} \theta \int_{ r_1(\theta) }^{ r_2(\theta) } f(r \cos \theta, r \sin \theta) r {\rm d}r $ </li>
+</ul>
+</li>
+<li>计算 $ \iint\limits_D (x^2 + y^2) {\rm d}x {\rm d}y $</li>
 </ol>
 
                 </div>
@@ -437,22 +508,5 @@
             $('html').animate({scrollTop: 0}, 'slow');
         }
     </script>
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<!-- <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-
 </body>
 </html>
