@@ -137,6 +137,19 @@
     
     
     <section id="intro">
+        <div id="div-side-navigation-left" class="col-lg-3 col-md-3" style="position: fixed; top: 46px; left: 0; padding-top: 0; padding-right: 50px" v-if="show">
+            <div class="list-group" v-for="header in headers">
+                <a class="list-group-item list-group-item-action" :href="IDToHref(header.id)">{{header.id}}</a>
+                <div class="row justify-content-end" v-if="ownChild(header.children)">
+                    <div class="col-lg-11 col-md-11" style="padding-top: 0; padding-bottom: 0">
+                        <div class="list-group" v-for="child in header.children">
+                            <a class="list-group-item list-group-item-action" style="padding: 4px 10px" :href="IDToHref(child.id)">{{child.id}}</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-8 col-md-10">
@@ -238,6 +251,64 @@
             </div>
         </div>
     </section>
+    
+    <script>
+        var num_map = [ '零', '一', '二', '三', '四', '五', '六', '七', '八', '九' ];
+        $(function(){
+            var preH2 = undefined;
+            $('h2').each(function(index, element){
+                var circleTimes = $(element).nextAll('h2').length > 0 ? 1 : 2;
+                if( index === 0 ){
+                    preH2 = element;
+                }
+                else {
+                    for( var i = 0; i < circleTimes; i++ ){
+                        var content = $(preH2).text().toString();
+                        var header = content.indexOf('、') > 0 ? content.split('、')[1] : content;
+                        var id = num_map[index + i] + '. ' + header + '';
+                        $(preH2).attr('id', id);
+                        var header = {'id':id, 'children':[]};
+                        $(preH2).nextUntil(element, 'h4').each( function(index, element){
+                            var child_content = $(element).text().toString();
+                            var child_header = child_content.indexOf('、') > 0 ? child_content.split('、')[1] : child_content;
+                            var child_id = (index + 1 ) + '.' + child_header + '';
+                            $(element).attr('id', child_id);
+                            header.children.push({'id':child_id});
+                        });
+                        div_side_navigation_left.headers.push(header);
+                        
+                        preH2 = element;
+                    }
+                }
+            });
+        });
+
+        $(window).resize(function(){
+            var width = $(window).width();
+            if( width > 576 ){
+                div_side_navigation_left.show = true;
+            }
+            else {
+                div_side_navigation_left.show = false;
+            }
+        });
+        
+        var div_side_navigation_left = new Vue({
+            el : '#div-side-navigation-left',
+            data : {
+                show : true,
+                headers : []
+            },
+            methods : {
+                IDToHref : function(id){
+                    return "#" + id;
+                },
+                ownChild : function(children){
+                    return children instanceof Array && children.length > 0; 
+                }
+            }
+        });
+    </script>
 
 
     
