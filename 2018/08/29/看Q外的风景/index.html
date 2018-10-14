@@ -408,13 +408,15 @@
                 else {
                     for( var i = 0; i < circleTimes; i++ ){
                         var content = $(preH2).text().toString();
-                        var header = content.indexOf('、') > 0 ? content.split('、')[1] : content;
+                        var header = content.indexOf('、') > 0 ? content.split('、')[1] : 
+                            content.indexOf('.') > 0 ? content.split('.')[1] : content;
                         var id = num_map[index + i] + '. ' + header + '';
                         $(preH2).attr('id', id);
                         var header = {'id':id, 'children':[]};
                         $(preH2).nextUntil(element, 'h4').each( function(index, element){
                             var child_content = $(element).text().toString();
-                            var child_header = child_content.indexOf('、') > 0 ? child_content.split('、')[1] : child_content;
+                            var child_header = child_content.indexOf('、') > 0 ? child_content.split('、')[1] : 
+                            child_content.indexOf('.') > 0 ? child_content.split('.')[1] : child_content;;
                             var child_id = (index + 1 ) + '.' + child_header + '';
                             $(element).attr('id', child_id);
                             header.children.push({'id':child_id});
