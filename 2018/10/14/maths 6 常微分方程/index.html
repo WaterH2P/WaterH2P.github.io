@@ -2,7 +2,7 @@
 
     
 <head>
-    <title>H2P&#39;S BLOG</title>
+    <title>常微分方程 | H2P&#39;S BLOG</title>
     <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -42,7 +42,7 @@
 </head>
 
     <!--
-    <body class="home-template">
+    <body class="post-template">
     -->
 <body id="index" class="lightnav animsition">
     <!-- 返回页面顶端 -->
@@ -135,37 +135,30 @@
     </div>
 
     
-    <!-- ============================ Hero Image =========================== -->
-
-    <section id="hero" class="scrollme">
-        <div class="container-fluid element-img" style="background: url(/img/zly_small.jpg) no-repeat center center fixed;background-size: cover">
-            <div class="herofade beige-dk"></div>
-        </div>
-    </section>
-
-    <!-- Height spacing helper -->
-    <div class="heightblock"></div>
-    <!-- // End height spacing helper -->
-
-    <!-- ============================ END Hero Image =========================== -->
-    <!-- ============================ Content =========================== -->
-
+    
     <section id="intro">
+        <div id="div-side-navigation-left" class="col-lg-3 col-md-3" style="position: fixed; top: 46px; left: 0; padding-top: 0; padding-right: 50px" v-if="show">
+            <div class="list-group" v-for="header in headers">
+                <a class="list-group-item list-group-item-action" :href="IDToHref(header.id)">{{header.id}}</a>
+                <div class="row justify-content-end" v-if="ownChild(header.children)">
+                    <div class="col-lg-11 col-md-11" style="padding-top: 0; padding-bottom: 0">
+                        <div class="list-group" v-for="child in header.children">
+                            <a class="list-group-item list-group-item-action" style="padding: 4px 10px" :href="IDToHref(child.id)">{{child.id}}</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div class="container">
-            
-            
-                <div class="row justify-content-center">
-                    <div class="col-lg-8 col-md-10 opening-statement">
-                        <div class="row">
-                            <div class="col-lg-4 col-md-4">
-                                <h3><a href="/2018/09/21/maths 1 极限/">极限</a></h3>
-                                <span>
-                                    
+            <div class="row justify-content-center">
+                <div class="col-lg-8 col-md-10">
+                    
 <span class="post-meta">
     <!-- blog 的 date -->
     
         <span>
-            2018-09-21
+            2018-10-14
         </span>
         <span>&nbsp;&nbsp;</span>
     
@@ -191,252 +184,166 @@
     
 </span>
 
-                                </span>
-                            </div>
-                            <div class="col-lg-8 col-md-8 div-message">
-                                <p>
-                                  
-                                    做笔记，喝凉茶，看高数
-                                  
-                                </p>
-                                
-                                    <p class="pull-right readMore" style="margin:0">
-                                        <a href="/2018/09/21/maths 1 极限/">Read More...</a>
-                                    </p>
-                                
-                            </div>
-                        </div>
-                        <div class="clearfix"></div>
-                        <hr class="nogutter">
-                    </div>
+                    <h1>常微分方程</h1>
                 </div>
-            
-                <div class="row justify-content-center">
-                    <div class="col-lg-8 col-md-10 opening-statement">
-                        <div class="row">
-                            <div class="col-lg-4 col-md-4">
-                                <h3><a href="/2018/09/19/Markdown/">MarkDown 使用教程</a></h3>
-                                <span>
-                                    
-<span class="post-meta">
-    <!-- blog 的 date -->
-    
-        <span>
-            2018-09-19
-        </span>
-        <span>&nbsp;&nbsp;</span>
-    
-    <!-- blog 的 tags -->
-    
-    
-    
-    <span class="tag is-info">
-        <a href='/tags/markdown/'>markdown</a>
-    </span>
-    
-    
-    
-</span>
-
-                                </span>
-                            </div>
-                            <div class="col-lg-8 col-md-8 div-message">
-                                <p>
-                                  
-                                    markdown 一些教程链接
-                                  
-                                </p>
-                                
-                                    <p class="pull-right readMore" style="margin:0">
-                                        <a href="/2018/09/19/Markdown/">Read More...</a>
-                                    </p>
-                                
-                            </div>
-                        </div>
-                        <div class="clearfix"></div>
-                        <hr class="nogutter">
-                    </div>
-                </div>
-            
-                <div class="row justify-content-center">
-                    <div class="col-lg-8 col-md-10 opening-statement">
-                        <div class="row">
-                            <div class="col-lg-4 col-md-4">
-                                <h3><a href="/2018/08/29/看Q外的风景/">看 Q 外的风景</a></h3>
-                                <span>
-                                    
-<span class="post-meta">
-    <!-- blog 的 date -->
-    
-        <span>
-            2018-08-29
-        </span>
-        <span>&nbsp;&nbsp;</span>
-    
-    <!-- blog 的 tags -->
-    
-    
-    
-    <span class="tag is-info">
-        <a href='/tags/vultr/'>vultr</a>
-    </span>
-    ,
-    
-    <span class="tag is-info">
-        <a href='/tags/ss/'>ss</a>
-    </span>
-    ,
-    
-    <span class="tag is-info">
-        <a href='/tags/ssr/'>ssr</a>
-    </span>
-    
-    
-    
-</span>
-
-                                </span>
-                            </div>
-                            <div class="col-lg-8 col-md-8 div-message">
-                                <p>
-                                  
-                                    搭建 SSR，翻越 Q，看风景
-                                  
-                                </p>
-                                
-                                    <p class="pull-right readMore" style="margin:0">
-                                        <a href="/2018/08/29/看Q外的风景/">Read More...</a>
-                                    </p>
-                                
-                            </div>
-                        </div>
-                        <div class="clearfix"></div>
-                        <hr class="nogutter">
-                    </div>
-                </div>
-            
-                <div class="row justify-content-center">
-                    <div class="col-lg-8 col-md-10 opening-statement">
-                        <div class="row">
-                            <div class="col-lg-4 col-md-4">
-                                <h3><a href="/2018/06/29/hexo 使用 Hexo 搭建 Blog/">使用 Hexo 搭建 Blog</a></h3>
-                                <span>
-                                    
-<span class="post-meta">
-    <!-- blog 的 date -->
-    
-        <span>
-            2018-06-29
-        </span>
-        <span>&nbsp;&nbsp;</span>
-    
-    <!-- blog 的 tags -->
-    
-    
-    
-    <span class="tag is-info">
-        <a href='/tags/hexo/'>hexo</a>
-    </span>
-    ,
-    
-    <span class="tag is-info">
-        <a href='/tags/blog/'>blog</a>
-    </span>
-    
-    
-    
-</span>
-
-                                </span>
-                            </div>
-                            <div class="col-lg-8 col-md-8 div-message">
-                                <p>
-                                  
-                                    此文介绍使用 Hexo + Github 架构搭建个人博客的详细步骤
-                                  
-                                </p>
-                                
-                                    <p class="pull-right readMore" style="margin:0">
-                                        <a href="/2018/06/29/hexo 使用 Hexo 搭建 Blog/">Read More...</a>
-                                    </p>
-                                
-                            </div>
-                        </div>
-                        <div class="clearfix"></div>
-                        <hr class="nogutter">
-                    </div>
-                </div>
-            
-                <div class="row justify-content-center">
-                    <div class="col-lg-8 col-md-10 opening-statement">
-                        <div class="row">
-                            <div class="col-lg-4 col-md-4">
-                                <h3><a href="/2018/06/20/Mysql/">Mysql</a></h3>
-                                <span>
-                                    
-<span class="post-meta">
-    <!-- blog 的 date -->
-    
-        <span>
-            2018-06-20
-        </span>
-        <span>&nbsp;&nbsp;</span>
-    
-    <!-- blog 的 tags -->
-    
-    
-    
-    <span class="tag is-info">
-        <a href='/tags/sql/'>sql</a>
-    </span>
-    ,
-    
-    <span class="tag is-info">
-        <a href='/tags/mysql/'>mysql</a>
-    </span>
-    
-    
-    
-</span>
-
-                                </span>
-                            </div>
-                            <div class="col-lg-8 col-md-8 div-message">
-                                <p>
-                                  
-                                    MySQL 的一些基本语法，以及与 Java 一起使用
-                                  
-                                </p>
-                                
-                                    <p class="pull-right readMore" style="margin:0">
-                                        <a href="/2018/06/20/Mysql/">Read More...</a>
-                                    </p>
-                                
-                            </div>
-                        </div>
-                        <div class="clearfix"></div>
-                        <hr class="nogutter">
-                    </div>
-                </div>
-            
+            </div>
             <div class="row justify-content-center">
                 <div class="col-lg-8 col-md-10">
-                    
-                        <a class="float-left" href="/">← Newer Posts</a>
-                    
-                    
+                    <div class="div-message div-desc">
+                        
+                            <span>做笔记，喝凉茶，看高数</span>
+                            <br>
+                        
+                        
+                            <span>最近更新：2018-10-14</span>
+                            <br>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8 col-md-10">
+                    <h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><p><strong>按类求解，对号入座</strong></p>
+<ol>
+<li>含有未知函数的导数（或者微分）的方程称为<strong>微分方程</strong> <ul>
+<li>一般写成 $ F(x, y, y’, y’’, \ldots, y^{ (n) }) = 0 $ </li>
+</ul>
+</li>
+<li>阶数：方程中 $ y $ 的最高阶导数的阶数</li>
+<li>通解<ul>
+<li>解中所含独立常数的个数 = 方程的阶数</li>
+<li>$ \begin{cases} 独立常数 \not= 任意常数 \\ 通解 \not= 全部解 \end{cases} $ </li>
+</ul>
+</li>
+</ol>
+<p><br></p>
+<h2 id="一阶方程的求解"><a href="#一阶方程的求解" class="headerlink" title="一阶方程的求解"></a>一阶方程的求解</h2><p><br></p>
+<h4 id="变量可分离型"><a href="#变量可分离型" class="headerlink" title="变量可分离型"></a>变量可分离型</h4><ol>
+<li>形如 $ \dfrac{ {\rm  d}y }{ {\rm d}x } = f(x, y) $ <ul>
+<li>若 $ f(x, y) = g(x) h(y) $ </li>
+<li>$ \implies \dfrac{ {\rm d}y }{ h(y) } = g(x) {\rm d}x \implies \int \dfrac{ {\rm d}y }{ h(y) } = \int g(x) {\rm d}x $ </li>
+</ul>
+</li>
+<li>例题<ol>
+<li>微分方程 $ y’ + \dfrac{1}{y} e^{y^2 + 3x} = 0 $ 的通解（其中 $ C $ 为任意常数）是 $ ( \text{  C  } ) $ 。<ul>
+<li>$ \begin{array}{l} A. 2e^{3x} + 3e^{y^2} = C &amp; B.2e^{3x} + 3e^{-y^2} = C \\ C. 2e^{3x} - 3e^{-y^2} = C &amp; D.e^{3x} - e^{-y^2} = C \end{array} $ </li>
+</ul>
+</li>
+<li>微分方程的通解 ________ （一定 / 不一定）包含了所有的解，请举例说明。<ul>
+<li>不一定</li>
+<li>如求 $ ( y^2 - 1 ) {\rm d}x = (x - 1)y {\rm d}y $ 的通解<ul>
+<li>$ \implies \dfrac{1}{2} \ln \left| y^2 - 1 \right|= \ln \left| x - 1 \right| + \ln C_1 \quad ( C_1 &gt; 0 ) $ </li>
+<li>$ \implies \sqrt{ \left| y^2 - 1 \right| } = C_1 \left| x - 1 \right| $ </li>
+<li>$ \implies \left| y^2 - 1 \right| = C_1^2 (x - 1)^2 $ </li>
+<li>$ \implies y^2 - 1 = \pm C_1^2 (x - 1)^2 = C(x - 1)^2 $ </li>
+<li>通解为 $ y^2 = C (x - 1)^2 + 1 \quad ( C \not= 0 ) $ <ul>
+<li>考研<strong>只考通解</strong>，不考虑奇解</li>
+</ul>
+</li>
+<li>但是 $ y = \pm 1 $ 也是上述方程的解，成为<strong>奇解</strong></li>
+</ul>
+</li>
+<li>$ \begin{cases} \text{线性} &amp; \text{通解} = \text{全部解} \\ \text{非线性} &amp; \text{通解} \not= \text{全部解} \end{cases} ​$ </li>
+</ul>
+</li>
+</ol>
+</li>
+</ol>
+
+                </div>
+            </div>
+            <div class="clearfix"></div>
+            <hr class="nogutter">
+            
+<!-- 当前博客前后两篇博客 -->
+<div class="row justify-content-center">
+    <nav class="m-pagination col-md-8 col-sm-24" role="pagination">
+        
+        
+        <a class="float-right" href="/2018/10/10/maths 5 二重积分/">
+            二重积分 →
+        </a>
+        
+    </nav>
+</div>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-8 col-md-10">
+                    <script type="text/javascript"></script>
+
                 </div>
             </div>
         </div>
     </section>
-    <section id="statement">
-        <div class="container text-center wow fadeInUp" data-wow-delay="0.5s">
-            <div class="row justify-content-center">
-                <p>给岁月以文明，给时光以生命。</p>
-            </div>
-        </div>
-    </section>
-    <!-- ============================ END Content =========================== -->
+    
+    <script>
+        var num_map = [ '零', '一', '二', '三', '四', '五', '六', '七', '八', '九' ];
+        $(function(){
+            var width = $(window).width();
+            if( width > 576 ){
+                div_side_navigation_left.show = true;
+            }
+            else {
+                div_side_navigation_left.show = false;
+            }
+            
+            var preH2 = undefined;
+            $('h2').each(function(index, element){
+                var circleTimes = $(element).nextAll('h2').length > 0 ? 1 : 2;
+                if( index === 0 ){
+                    preH2 = element;
+                }
+                else {
+                    for( var i = 0; i < circleTimes; i++ ){
+                        var content = $(preH2).text().toString();
+                        var header = content.indexOf('、') > 0 ? content.split('、')[1] : 
+                            content.indexOf('.') > 0 ? content.split('.')[1] : content;
+                        var id = num_map[index + i] + '. ' + header + '';
+                        $(preH2).attr('id', id);
+                        var header = {'id':id, 'children':[]};
+                        $(preH2).nextUntil(element, 'h4').each( function(index, element){
+                            var child_content = $(element).text().toString();
+                            var child_header = child_content.indexOf('、') > 0 ? child_content.split('、')[1] : 
+                            child_content.indexOf('.') > 0 ? child_content.split('.')[1] : child_content;;
+                            var child_id = (index + 1 ) + '.' + child_header + '';
+                            $(element).attr('id', child_id);
+                            header.children.push({'id':child_id});
+                        });
+                        div_side_navigation_left.headers.push(header);
+                        
+                        preH2 = element;
+                    }
+                }
+            });
+        });
+
+        $(window).resize(function(){
+            var width = $(window).width();
+            if( width > 576 ){
+                div_side_navigation_left.show = true;
+            }
+            else {
+                div_side_navigation_left.show = false;
+            }
+        });
+        
+        var div_side_navigation_left = new Vue({
+            el : '#div-side-navigation-left',
+            data : {
+                show : true,
+                headers : []
+            },
+            methods : {
+                IDToHref : function(id){
+                    return "#" + id;
+                },
+                ownChild : function(children){
+                    return children instanceof Array && children.length > 0; 
+                }
+            }
+        });
+    </script>
 
 
     
