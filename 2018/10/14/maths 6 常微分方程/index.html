@@ -204,7 +204,7 @@
             </div>
             <div class="row justify-content-center">
                 <div class="col-lg-8 col-md-10">
-                    <h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><p><strong>按类求解，对号入座</strong></p>
+                    <h2 id="一、概念"><a href="#一、概念" class="headerlink" title="一、概念"></a>一、概念</h2><p><strong>按类求解，对号入座</strong></p>
 <ol>
 <li>含有未知函数的导数（或者微分）的方程称为<strong>微分方程</strong> <ul>
 <li>一般写成 $ F(x, y, y’, y’’, \ldots, y^{ (n) }) = 0 $ </li>
@@ -218,8 +218,8 @@
 </li>
 </ol>
 <p><br></p>
-<h2 id="一阶方程的求解"><a href="#一阶方程的求解" class="headerlink" title="一阶方程的求解"></a>一阶方程的求解</h2><p><br></p>
-<h4 id="变量可分离型"><a href="#变量可分离型" class="headerlink" title="变量可分离型"></a>变量可分离型</h4><ol>
+<h2 id="二、一阶方程的求解"><a href="#二、一阶方程的求解" class="headerlink" title="二、一阶方程的求解"></a>二、一阶方程的求解</h2><p><br></p>
+<h4 id="㊀、变量可分离型"><a href="#㊀、变量可分离型" class="headerlink" title="㊀、变量可分离型"></a>㊀、变量可分离型</h4><ol>
 <li>概念<ul>
 <li>形如 $ \dfrac{ {\rm  d}y }{ {\rm d}x } = f(x, y) $ <ul>
 <li>若 $ f(x, y) = g(x) h(y) $ </li>
@@ -252,7 +252,7 @@
 </li>
 </ol>
 <p><br></p>
-<h4 id="齐次型方程"><a href="#齐次型方程" class="headerlink" title="齐次型方程"></a>齐次型方程</h4><ol>
+<h4 id="㊁、齐次型方程"><a href="#㊁、齐次型方程" class="headerlink" title="㊁、齐次型方程"></a>㊁、齐次型方程</h4><ol>
 <li>概念<ul>
 <li>形如 $ \dfrac{ {\rm d}y }{ {\rm d}x } = f \left( \dfrac{y}{x} \right) $ <ul>
 <li>令 $ y = ux \implies y’ = u’x + u \implies u’x + u = f(u) $ </li>
@@ -277,7 +277,7 @@
 </li>
 </ol>
 <p><br></p>
-<h4 id="一阶线性型"><a href="#一阶线性型" class="headerlink" title="一阶线性型"></a>一阶线性型</h4><ol>
+<h4 id="㊂、一阶线性型"><a href="#㊂、一阶线性型" class="headerlink" title="㊂、一阶线性型"></a>㊂、一阶线性型</h4><ol>
 <li>概念<ul>
 <li>形如 $ y’ + p(x)y = q(x) $ ，$ p(x), q(x) $ 为已知的连续函数。<ul>
 <li>$ (uv)’ = u’v + uv’ $ ， 且 $ ( e^🐶 )’ = e^🐶 \cdot (🐶)’ $ <ul>
@@ -298,7 +298,22 @@
 </li>
 </ol>
 <p><br></p>
-<h2 id="二阶方程的求解"><a href="#二阶方程的求解" class="headerlink" title="二阶方程的求解"></a>二阶方程的求解</h2>
+<h2 id="三、二阶方程的求解"><a href="#三、二阶方程的求解" class="headerlink" title="三、二阶方程的求解"></a>三、二阶方程的求解</h2><p><br></p>
+<h4 id="㊀、二阶常系数齐次线性微分方程"><a href="#㊀、二阶常系数齐次线性微分方程" class="headerlink" title="㊀、二阶常系数齐次线性微分方程"></a>㊀、二阶常系数齐次线性微分方程</h4><ol>
+<li>概念<ul>
+<li>形如 $ y’’ + py’ + qy = 0 $ <ul>
+<li>考虑 $ y = e^{ \lambda x } \implies e^{ \lambda x } ( \lambda^2 + p \lambda + q ) = 0 $ </li>
+</ul>
+<ol>
+<li>写 $ \lambda^2 + p \lambda + q = 0 \implies \lambda_1, \lambda_2 $ </li>
+<li>$ \begin{cases} \Delta &gt; 0 &amp; \implies \lambda_1 \not= \lambda_2 &amp; \implies y = C_1 e^{ \lambda_1 x } + C_2 e^{ \lambda_2 x } \\ \Delta = 0 &amp; \implies \lambda_1 = \lambda_2 = \lambda &amp; \implies y = ( C_1 + C_2 x ) e^{ \lambda x } \\ \Delta &lt; 0 &amp; \implies \lambda_{1,2} = \alpha \pm \beta {\rm i} &amp; \implies y = e^{\alpha x} \left( C_1 \cos \beta x + C_2 \sin \beta x \right) \end{cases} $ </li>
+</ol>
+</li>
+</ul>
+</li>
+</ol>
+<p><br></p>
+<h4 id="㊁、二阶常系数非齐次线性微分方程"><a href="#㊁、二阶常系数非齐次线性微分方程" class="headerlink" title="㊁、二阶常系数非齐次线性微分方程"></a>㊁、二阶常系数非齐次线性微分方程</h4>
                 </div>
             </div>
             <div class="clearfix"></div>
