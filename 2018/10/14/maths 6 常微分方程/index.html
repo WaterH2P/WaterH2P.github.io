@@ -313,7 +313,68 @@
 </li>
 </ol>
 <p><br></p>
-<h4 id="㊁、二阶常系数非齐次线性微分方程"><a href="#㊁、二阶常系数非齐次线性微分方程" class="headerlink" title="㊁、二阶常系数非齐次线性微分方程"></a>㊁、二阶常系数非齐次线性微分方程</h4>
+<h4 id="㊁、二阶常系数非齐次线性微分方程"><a href="#㊁、二阶常系数非齐次线性微分方程" class="headerlink" title="㊁、二阶常系数非齐次线性微分方程"></a>㊁、二阶常系数非齐次线性微分方程</h4><ol>
+<li>概念<ul>
+<li>形如 $ y’’ + py’ + qy = f(x) $ <ol>
+<li>当 $ f(x) = e^{\alpha x} P_n(x) $ 时<ul>
+<li>$ y_{ \text{通解} } = y_{ \text{齐次通解} } + y_{ \text{非齐次特解} } $ </li>
+</ul>
+<ol>
+<li>照搬 ㊀ 求 $ y_{ \text{齐次通解} } $ </li>
+<li>$ y^\ast = e^{\alpha x} \cdot Q_n(x) \cdot x^k $ <ul>
+<li>$ Q_n(x) $ 为 $ x $ 的 $ n $ 次待定系数的一般多项式</li>
+<li>若 $ P_3 (x) = x^3 - 1 $ ，则 $ Q_3(x) = ax^3 + bx^2 + cx + d $ 。</li>
+<li>$ k $ 值的确定</li>
+</ul>
+<ol>
+<li>看：自由项 $ e^{\alpha x} P_n(x) $ 中的 $ \alpha $ </li>
+<li>计算： $ \lambda_1, \lambda_2 $ （在上面已经计算过了）</li>
+<li>比较： $ k = \begin{cases} 0 , &amp; \alpha \not= \lambda_1, \alpha \not= \lambda_2 \\ 1, &amp; \alpha = \lambda_1 \text{ 或 } \lambda_2 \\ 2, &amp; \alpha = \lambda_1 = \lambda_2 \end{cases} $ </li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>例题<ol>
+<li>微分方程 $ y’’ + 2y’ + y = {\rm sh} x $ 的一个特解应具有的形式（其中 $ a, b $ 为常数）$ ( \text{  C  } ) $ <ul>
+<li>$ \begin{array}{l} A. a{\rm sh}x \quad &amp; B. a {\rm ch}x \\ C. ax^2e^{-x} + be^x \quad &amp; D.axe^{-x} + be^x \end{array} $ </li>
+<li>$ {\rm sh} x = \dfrac{ e^x - e^{-x} }{2}, \quad {\rm ch}x = \dfrac{ e^x + e^{-x} }{2} $ </li>
+</ul>
+<ol>
+<li>$ y’’ + 2y’ + y = e^x \cdot \dfrac{1}{2} $ </li>
+</ol>
+<ul>
+<li>$ \lambda^2 + 2\lambda + 1 = 0 \implies \lambda_1 = \lambda_2 = -1 \implies y_{ \text{齐次通解} } = ( C_1 + C_2 x )e^{-x} $ </li>
+<li>设 $ y_1^{\ast} = e^x \cdot A \cdot x^0 = Ae^x $ </li>
+</ul>
+<ol>
+<li>$ y’’ + 2y’ + y = e^x \cdot ( -\dfrac{1}{2} ) $ </li>
+</ol>
+<ul>
+<li>$ \lambda_1 = \lambda_2 = -1 $ </li>
+<li>设 $ y_2^{\ast} = e^{-x} \cdot B \cdot x^2 = Bx^2 e^{-x} $</li>
+</ul>
+<ol>
+<li>$ y^{\ast} = Ae^x + Bx^2e^{-x} $ </li>
+</ol>
+</li>
+<li>求微分方程 $ y’’ + 5y’ + 6y = 2e^{-x} $ 的通解。<ul>
+<li>$ \lambda^2 + 5\lambda + 6 = 0 \implies \lambda_1 = -2, \lambda_2 = -3 $ </li>
+<li>$ \implies y_{ \text{齐次通解} } = C_1e^{-2x} + C_2e^{-3x} $ </li>
+<li>设 $ y^{\ast} = e^{-x} \cdot A \cdot x^0 = Ae^{-x} $ </li>
+<li>将 $ y^{\ast} $ 代入原方程</li>
+<li>$ Ae^{-x} - 5Ae^{-x} + 6Ae^{-x} = 2Ae^{-x} = 2e^{-x} \implies A = 1 $ </li>
+<li>所以 $ y^{\ast} = e^{-x} $ </li>
+<li>$ y = C_1e^{-2x} + C_2e^{-3x} + e^{-x} $ </li>
+</ul>
+</li>
+</ol>
+</li>
+</ol>
+
                 </div>
             </div>
             <div class="clearfix"></div>
