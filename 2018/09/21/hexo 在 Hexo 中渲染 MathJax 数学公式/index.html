@@ -245,13 +245,13 @@
 <div class="row justify-content-center">
     <nav class="m-pagination col-md-8 col-sm-24" role="pagination">
         
-        <a class="float-left" href="/2018/09/25/plugin VS Code 插件/" style="float: left;">
-            ← VS Code 插件
+        <a class="float-left" href="/2018/09/21/maths 1 极限/" style="float: left;">
+            ← 极限
         </a>
         
         
-        <a class="float-right" href="/2018/09/21/maths 1 极限/">
-            极限 →
+        <a class="float-right" href="/2018/09/19/Markdown/">
+            MarkDown 使用教程 →
         </a>
         
     </nav>
@@ -295,7 +295,7 @@
                             var child_content = $(element).text().toString();
                             var child_header = child_content.indexOf('、') > 0 ? child_content.split('、')[1] : 
                             child_content.indexOf('.') > 0 ? child_content.split('.')[1] : child_content;;
-                            var child_id = (index + 1 ) + '.' + child_header + '';
+                            var child_id = (index + 1 ) + '. ' + child_header + '';
                             $(element).attr('id', child_id);
                             header.children.push({'id':child_id});
                         });

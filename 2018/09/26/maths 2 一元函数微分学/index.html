@@ -880,8 +880,8 @@
 <div class="row justify-content-center">
     <nav class="m-pagination col-md-8 col-sm-24" role="pagination">
         
-        <a class="float-left" href="/2018/09/28/hexo 小 bug/" style="float: left;">
-            ← Hexo 小 bug
+        <a class="float-left" href="/2018/09/28/plugin Tampermonkey 脚本/" style="float: left;">
+            ← Tampermonkey 脚本
         </a>
         
         
@@ -930,7 +930,7 @@
                             var child_content = $(element).text().toString();
                             var child_header = child_content.indexOf('、') > 0 ? child_content.split('、')[1] : 
                             child_content.indexOf('.') > 0 ? child_content.split('.')[1] : child_content;;
-                            var child_id = (index + 1 ) + '.' + child_header + '';
+                            var child_id = (index + 1 ) + '. ' + child_header + '';
                             $(element).attr('id', child_id);
                             header.children.push({'id':child_id});
                         });

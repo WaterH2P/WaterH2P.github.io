@@ -281,7 +281,7 @@
                             var child_content = $(element).text().toString();
                             var child_header = child_content.indexOf('、') > 0 ? child_content.split('、')[1] : 
                             child_content.indexOf('.') > 0 ? child_content.split('.')[1] : child_content;;
-                            var child_id = (index + 1 ) + '.' + child_header + '';
+                            var child_id = (index + 1 ) + '. ' + child_header + '';
                             $(element).attr('id', child_id);
                             header.children.push({'id':child_id});
                         });
