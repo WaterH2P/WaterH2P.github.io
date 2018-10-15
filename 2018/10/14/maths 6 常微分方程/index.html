@@ -172,7 +172,7 @@
     ,
     
     <span class="tag is-info">
-        <a href='/tags/cs/'>cs</a>
+        <a href='/tags/高数/'>高数</a>
     </span>
     ,
     
@@ -372,6 +372,17 @@
 </ul>
 </li>
 </ol>
+</li>
+</ol>
+<p><br></p>
+<h2 id="四、⭐️应用"><a href="#四、⭐️应用" class="headerlink" title="四、⭐️应用"></a>四、⭐️应用</h2><ol>
+<li>已知曲线 $ y = y(x) $ 经过点 $ (1, e^{-1}) $ ，且在点 $ (x, y) $ 处的切线在 $ y $ 轴上的截距为 $ xy $ ，求该曲线方程的表达式。<ul>
+<li>切线方程为：$ Y - y = y’( X - x ) $ </li>
+<li>令 $ X = 0 \implies Y = y - xy’ = xy $ </li>
+<li>$ \begin{array}{l} \implies \dfrac{ {\rm d}y }{y} = \left( \dfrac{1}{x} - 1 \right) {\rm d}x \\ \implies \int \dfrac{ {\rm d}y }{y} = \int \left( \dfrac{1}{x} - 1 \right) {\rm d}x \\ \implies \ln |y| = \ln |x| - \ln e^x + \ln C_1 \\ \implies |y| = \dfrac{ C_1 |x| }{e^x} \\ \implies y = C \cdot \dfrac{x}{e^x} \end{array} $ </li>
+<li>过点 $ ( 1, e^{-1} ) \implies C = 1 $ 。</li>
+<li>所以曲线方程为 $ y = \dfrac{x}{e^x} $ 。</li>
+</ul>
 </li>
 </ol>
 
@@ -585,22 +596,5 @@
             $('html').animate({scrollTop: 0}, 'slow');
         }
     </script>
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<!-- <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-
 </body>
 </html>
