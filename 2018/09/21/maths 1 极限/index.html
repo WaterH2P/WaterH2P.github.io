@@ -195,7 +195,7 @@
                             <br>
                         
                         
-                            <span>最近更新：2018-10-02</span>
+                            <span>最近更新：2018-10-16</span>
                             <br>
                         
                         
@@ -241,7 +241,7 @@
 </ul>
 </li>
 <li>讨论 $f(x)$ 在指定区间 $I$ 上的有界性：<ul>
-<li>若 $I$ 为 $[a,b]$ ，用“连续函数 $f(x)$ 在 $[a,b]$ 上必有界”。</li>
+<li>若 $I$ 为 $[a,b]$ ，用<strong>连续函数 $f(x)$ 在 $[a,b]$ 上必有界</strong>。</li>
 <li>若 $I$ 为 $(a,b)$ ，<ul>
 <li><script type="math/tex; mode=display">\left. \begin{array} \text{\lim\limits_{x \to a^+}f(x) 存在} & \implies & \text{f(x) 在 a 的右邻域有界} \\ \lim\limits_{x \to b^-}f(x) 存在 & \implies & \text{f(x) 在 b 的左邻域有界} \\ & & \text{f(x) 在 (a,b) 内连续} \end{array} \right \} \implies f(x) 在 (a,b) 内有界</script></li>
 <li>通常 $f(x)$ 在 $(a,b)$ 内连续必成立<ul>
@@ -291,21 +291,25 @@
 <li>$x \to 🐶$ </li>
 </ul>
 </li>
-<li>及时提出 极限不为0 的因式</li>
+<li>及时提出<strong>极限不为0</strong>的因式</li>
 </ul>
 </li>
-<li>例题<ul>
+<li>例题<ol>
 <li>$\lim\limits_{x \to 1^-}\ln x \times \ln(1 - x)$ <ul>
-<li>$\lim\limits_{x \to 1}\ln x$ = $\lim\limits_{x \to 1}\ln(1 + x - 1)$ ~ $\lim\limits_{x \to 1}x-1$ </li>
+<li>$\lim\limits_{x \to 1}\ln x$ = $\lim\limits_{x \to 1}\ln(1 + x - 1)$ ~ $\lim\limits_{x \to 1} (x-1)$ </li>
 </ul>
 </li>
-</ul>
+</ol>
 </li>
 </ul>
 </li>
 <li>$\infty - \infty$ <ul>
 <li>有分母，则通分<ul>
-<li>$\lim\limits_{x \to 0} \left(\dfrac{e^x + xe^x}{e^x - 1} - \dfrac{1}{x} \right)$ </li>
+<li>$ I = \lim\limits_{x \to 0} \left(\dfrac{e^x + xe^x}{e^x - 1} - \dfrac{1}{x} \right)$ <ul>
+<li>$ I = \lim\limits_{x \to 0} \dfrac{ xe^x + x^2 e^x - e^x + 1 }{ x ( e^x - 1 ) } = \lim\limits_{x \to 0} \dfrac{ (x^2 + x - 1) e^x + 1 }{x^2} $ </li>
+<li>两次洛必达，$ I = \dfrac{3}{2} $ 。</li>
+</ul>
+</li>
 </ul>
 </li>
 <li>没有分母，创造分母<ul>
@@ -313,33 +317,42 @@
 <li>令 $x = \dfrac{1}{t}$ </li>
 </ul>
 </li>
-<li>$\lim\limits_{x \to +\infty}[x^2(e^{\frac{1}{x} - 1} - x)]$ </li>
+<li>$ I = \lim\limits_{x \to +\infty} \left[ x^2 \left(e^{ \frac{1}{x} } - 1 \right) - x \right] $ <ul>
+<li>$ I = \dfrac{1}{2} $ </li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
 </li>
 <li>$\infty^0$ , $0^0$ , $1^\infty$ <ul>
 <li>$U(x)^{V(x)} = e^{V(x) \ln U(x)}$ </li>
-<li>例题<ul>
-<li>$\lim\limits_{x \to \infty}(x + \sqrt{1 + x^2})^\frac{1}{x}$ <ul>
-<li>$(\ln (x + \sqrt{1 + x^2}))’ = \dfrac{1}{ \sqrt{1 + x^2} }$ </li>
+<li>例题<ol>
+<li>$ I = \lim\limits_{x \to \infty}(x + \sqrt{1 + x^2})^\frac{1}{x} $ <ul>
+<li>$ I = e^{ \lim\limits_{x \to \infty} \dfrac{ x + \sqrt{1 + x^2} }{x} } $ <ul>
+<li>$ \left( \ln ( x + \sqrt{1 + x^2} ) \right)’ = \dfrac{1}{ \sqrt{1 + x^2} } $ </li>
 </ul>
 </li>
-<li>$\lim\limits_{ x \to \frac{\pi}{4} }(\tan x)^{ \dfrac{1}{\cos x - \sin x} }$ <ul>
+<li>$ I = e^{ \lim\limits_{x \to \infty} \dfrac{1}{ \sqrt{1 + x^2} } } = e^0 = 1 $ </li>
+</ul>
+</li>
+<li>$ I = \lim\limits_{ x \to \frac{\pi}{4} }(\tan x)^{ \dfrac{1}{\cos x - \sin x} } $ <ul>
 <li>$1^\infty \implies \lim u^v = e^{\lim v\ln u} = e^{\lim v(u - 1)}$ </li>
+<li>$ I = e^{ -\sqrt{2} } $ </li>
 </ul>
+</li>
+</ol>
 </li>
 </ul>
 </li>
 </ul>
 </li>
+<li>泰勒公式<ul>
+<li>任何<strong>可导</strong>函数 $f(x) = \sum a_nx^n$ <ul>
+<li>$ f(x) = \dfrac{ f(a) }{ 0! } + \dfrac{ f’(a) }{1!} (x - a) + \dfrac{ f’’(a) }{2!} (x - a)^2 + \cdots + \dfrac{ f^{ (n) }(a) }{n!} (x - a)^n + R(n) $ </li>
 </ul>
 </li>
-<li><p>泰勒公式</p>
-<ul>
-<li>任何可导函数 $f(x) = \sum a_nx^n$ </li>
-<li><p>$x \to 0$</p>
-<ul>
+<li>$x \to 0$<ul>
 <li>$\sin x = x - \dfrac{1}{3!}x^3 + o(x^3)$ <ul>
 <li>$x - \sin x$ ~ $\dfrac{1}{6}x^3$  $\quad \text{and} \quad$  $x + \sin x$ ~ $2x$ <ul>
 <li>$x^2 - {\sin^2 x}$ ~ $\dfrac{1}{3}x^4$ </li>
@@ -356,28 +369,51 @@
 <li>$\cos x = 1 - \dfrac{1}{2!}x^2 + \dfrac{1}{4!}x^4 + o(x^4)$ </li>
 <li>$\ln(1 + x) = x - \dfrac{x^2}{2} + \dfrac{x^3}{3} - \dfrac{x^4}{4} + o(x^4)$ </li>
 <li>$e^x = 1 + x + \dfrac{x^2}{2!} + \dfrac{x^3}{3!} + o(x^3)$ </li>
-<li>$\dfrac{1}{1 - x} = 1 + x + x^2 + x^3 + o(x^3) (\mid x \mid &lt; 1)$ </li>
+<li>$ \dfrac{1}{1 - x} = 1 + x + x^2 + x^3 + o(x^3), \quad (| x| &lt; 1) $ <ul>
+<li>$ \dfrac{1}{1 + x} = 1 - x + x^2 - x^3 + o(x^3) $ <ul>
+<li>是对 $ \ln(1 + x) $ 右边逐项求导</li>
 </ul>
 </li>
-<li><p>解题思路</p>
-<ul>
+</ul>
+</li>
+</ul>
+</li>
+<li>解题思路<ul>
 <li>$\dfrac{A}{B}$ 型<ul>
 <li>见到 $\dfrac{A}{B}$ 型，用【上下同阶】原则<ul>
 <li>若分母（分子）是 $x^k$ ，则分子（分母）展开至 $x^k$ 。</li>
 </ul>
 </li>
-<li>$\lim\limits_{x \to 0}\dfrac{\arcsin x - \arctan x}{x^3}$ </li>
+<li>例题<ol>
+<li>$ I = \lim\limits_{x \to 0}\dfrac{\arcsin x - \arctan x}{x^3} ​$<ul>
+<li>$ I = \dfrac{1}{2} $  </li>
 </ul>
 </li>
-<li><p>$A - B$ 型</p>
-<ul>
-<li><p>见到 $A - B$ 型，用【幂次最低】原则</p>
-<ul>
+</ol>
+</li>
+</ul>
+</li>
+<li>$A - B$ 型<ul>
+<li>见到 $A - B$ 型，用【幂次最低】原则<ul>
 <li>将 $A, B$ 分别展开至系数不想等的 $x$ 的最低次幂为止。</li>
 </ul>
 </li>
-<li>当 $x \to 0$ 时，$\cos x - e^{ -\frac{x^2}{2} }$ 与 $cx^k$ 为等价无穷小，求 $c, k$ 。</li>
-<li>设 $f(x)$ 在 $x = 0$ 的某邻域内有定义，且 $\lim\limits_{x \to 0} \dfrac{f(x) \tan x - \sin 4x}{x^3} = 0$ ，计算 $\lim\limits_{x \to 0} \dfrac{f(x) - 4}{x^2}$ 。</li>
+<li>例题<ol>
+<li>当 $x \to 0$ 时，$\cos x - e^{ -\frac{x^2}{2} }$ 与 $cx^k$ 为等价无穷小，求 $c, k$ 。<ul>
+<li>$ c = -\dfrac{1}{12}, \quad k = 4 $ </li>
+</ul>
+</li>
+<li>设 $ f(x) $ 在 $ x = 0 $ 的某邻域内有定义，且 $ I_1 = \lim\limits_{x \to 0} \dfrac{f(x) \tan x - \sin 4x}{x^3} = 0 $ ，计算 $ I_2 = \lim\limits_{x \to 0} \dfrac{f(x) - 4}{x^2} $ 。<ul>
+<li>$ f(x) $ 抽象 $ \implies $ 干掉 $ f(x) $ </li>
+<li>$ I_2 = I_2 \cdot \dfrac{ \tan x }{ \tan x } = \lim\limits_{x \to 0} \dfrac{ f(x) \tan x - 4 \tan x }{x^3} $ </li>
+<li>$ I_1 = 0 \implies I_2 = I_2 - I_1 = \lim\limits_{x \to 0} \dfrac{ \sin 4x - 4 \tan x }{x^3} $ <ul>
+<li>$ I_2 = \lim\limits_{x \to 0} \dfrac{ \sin 4x - 4x }{x^3} + \lim\limits_{x \to 0} \dfrac{ 4x - 4 \tan x }{x^3} = -\dfrac{32}{3} - \dfrac{4}{3} = -12 $ </li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+</li>
 </ul>
 </li>
 </ul>
@@ -389,8 +425,9 @@
 <h2 id="五、数列极限的计算"><a href="#五、数列极限的计算" class="headerlink" title="五、数列极限的计算"></a>五、数列极限的计算</h2><ol>
 <li>若 $\lbrace x_n \rbrace$ 易于连续化，转化为函数极限计算。<ul>
 <li>依据：若 $\lim\limits_{x \to +\infty}f(x) = A$ ，则 $\lim\limits_{n \to \infty}f(n) = A$ 。【归结定理】</li>
-<li>$\lim\limits_{n \to \infty} \left(n \times \tan \dfrac{1}{n} \right)^{n^2}$ <ul>
-<li>$1^\infty$ </li>
+<li>$ I = \lim\limits_{n \to \infty} \left(n \times \tan \dfrac{1}{n} \right)^{n^2} $ <ul>
+<li>$ 1^\infty $</li>
+<li>令 $ x = \dfrac{1}{t} $ ，$ I = e^{ \lim\limits_{t \to 0} \dfrac{ \frac{ \tan t }{t} - 1 }{t^2} } = e^{ \frac{1}{3} } $ </li>
 </ul>
 </li>
 </ul>
@@ -398,16 +435,18 @@
 <li>若 $\lbrace x_n \rbrace$ 不易于连续化，用【夹逼准则】或【定积分定义】。<ul>
 <li>当分子分母都在变化的时候<ul>
 <li>只改分母，不动分子</li>
-<li>$\lim\limits_{n \to \infty} \left(\dfrac{1}{n^2 + n + 1} + \dfrac{2}{n^2 + n + 2} + … + \dfrac{n}{n^2 + n + n} \right)$ <ul>
-<li>$\sum\limits_{i=1}^n \dfrac{i}{n^2 + n + n} \leq 原式 \leq \sum\limits_{i=1}^n \dfrac{i}{n^2 + n + 1}$  </li>
+<li>$ I = \lim\limits_{n \to \infty} \left(\dfrac{1}{n^2 + n + 1} + \dfrac{2}{n^2 + n + 2} + … + \dfrac{n}{n^2 + n + n} \right) $ <ul>
+<li>$ \sum\limits_{i=1}^n \dfrac{i}{n^2 + n + n} \leq 原式 \leq \sum\limits_{i=1}^n \dfrac{i}{n^2 + n + 1} $ </li>
+<li>$ I = \dfrac{1}{2} $ </li>
 </ul>
 </li>
 </ul>
 </li>
 <li>抓【隐蔽】条件：函数天生的有界性<ul>
-<li>$\lim\limits_{n \to \infty}\sqrt[n]{n \arctan n}$ <ul>
+<li>$ I = \lim\limits_{n \to \infty}\sqrt[n]{n \arctan n} $ <ul>
 <li>$\dfrac{\pi}{4} &lt; \lim\limits_{n \to \infty}\arctan n &lt; \dfrac{\pi}{2}$ </li>
 <li>$\lim\limits_{n \to \infty} \left(n \times \dfrac{\pi}{4} \right)^\dfrac{1}{n} &lt; \lim\limits_{n \to \infty}\sqrt[n]{n \arctan n} &lt; \lim\limits_{n \to \infty} \left(n \times \dfrac{\pi}{2} \right)^\dfrac{1}{n}$ </li>
+<li>$ I = 1 $ </li>
 </ul>
 </li>
 </ul>
@@ -431,7 +470,7 @@
 <p><br></p>
 <h2 id="六、极限的应用"><a href="#六、极限的应用" class="headerlink" title="六、极限的应用"></a>六、极限的应用</h2><ol>
 <li>基本常识<ul>
-<li>任何初等函数在其定义区间内连续，故考研中之研究两类特殊的点：<ul>
+<li>任何初等函数在其定义区间内连续，故考研中只研究两类特殊的点：<ul>
 <li>分段函数的分段点（可能间断）</li>
 <li>无定义点（必然间断）</li>
 </ul>
@@ -468,11 +507,22 @@
 </ul>
 </li>
 <li>求函数 $ F(x) = \begin{cases} \dfrac{x(\pi + 2x)}{2 \cos x}, &amp; x \leq 0 \\ \sin\dfrac{1}{x^2 -1}, &amp; x &gt; 0 \end{cases} $ 的间断点，并判断它们的类型。<ol>
-<li>分段点：$ x = 0 $ </li>
+<li>分段点：$ x = 0 $ <ul>
+<li>$ \lim\limits_{x \to 0^-} \dfrac{x(\pi + 2x)}{2 \cos x} = 0 \not= \lim\limits_{x \to 0^+} \sin\dfrac{1}{x^2 -1} = -\sin 1 $</li>
+<li>所以 $ x = 0 $ 为跳跃间断点</li>
+</ul>
+</li>
 <li>无定义点<ul>
-<li>$ x &gt; 0 $ 时，分母不为 $ 0 $ ，$ x = 1 $ 。</li>
+<li>$ x &gt; 0 $ 时，分母不为 $ 0 $ ，$ x = 1 $ 。<ul>
+<li>$ x = 1 $ 为振荡间断点。</li>
+</ul>
+</li>
 <li>$ x &lt; 0 $ 时，$ x_k = -k \pi - \dfrac{\pi}{2}, (k = 0, 1, …) $ 。<ul>
-<li>$ x_0 = -\dfrac{\pi}{2} $ ，$ \lim\limits_{ x \to -\frac{\pi}{2} }\dfrac{x(\pi + 2x)}{2 \cos x}$ 是 $\dfrac{0}{0} $ 。</li>
+<li>$ x_0 = -\dfrac{\pi}{2} $ ，$ \lim\limits_{ x \to -\frac{\pi}{2} }\dfrac{x(\pi + 2x)}{2 \cos x}$ 是 $\dfrac{0}{0} $ ，$ \lim\limits_{ x \to -\frac{\pi}{2} } F(x) = -\dfrac{\pi}{2} $ 。<ul>
+<li>$ x = -\dfrac{\pi}{2} $ 为可去间断点。</li>
+</ul>
+</li>
+<li>$  x_k = -k \pi - \dfrac{\pi}{2}, (k = 1, …) $ 为无穷间断点。</li>
 </ul>
 </li>
 </ul>
@@ -492,13 +542,13 @@
 <div class="row justify-content-center">
     <nav class="m-pagination col-md-8 col-sm-24" role="pagination">
         
-        <a class="float-left" href="/2018/09/25/plugin VS Code 插件/" style="float: left;">
-            ← VS Code 插件
+        <a class="float-left" href="/2018/09/21/hexo 在 Hexo 中渲染 MathJax 数学公式/" style="float: left;">
+            ← 在 Hexo 中渲染 MathJax 数学公式
         </a>
         
         
-        <a class="float-right" href="/2018/09/21/hexo 在 Hexo 中渲染 MathJax 数学公式/">
-            在 Hexo 中渲染 MathJax 数学公式 →
+        <a class="float-right" href="/2018/09/19/Markdown/">
+            MarkDown 使用教程 →
         </a>
         
     </nav>
