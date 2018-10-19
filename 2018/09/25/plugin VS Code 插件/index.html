@@ -284,8 +284,8 @@
         </a>
         
         
-        <a class="float-right" href="/2018/09/21/maths 1 极限/">
-            极限 →
+        <a class="float-right" href="/2018/09/21/hexo 在 Hexo 中渲染 MathJax 数学公式/">
+            在 Hexo 中渲染 MathJax 数学公式 →
         </a>
         
     </nav>
@@ -302,9 +302,10 @@
     
     <script>
         var num_map = [ '零', '一', '二', '三', '四', '五', '六', '七', '八', '九' ];
+        var min_width = 768;
         $(function(){
             var width = $(window).width();
-            if( width > 576 ){
+            if( width > min_width ){
                 div_side_navigation_left.show = true;
             }
             else {

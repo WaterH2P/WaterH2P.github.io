@@ -261,13 +261,13 @@
 <div class="row justify-content-center">
     <nav class="m-pagination col-md-8 col-sm-24" role="pagination">
         
-        <a class="float-left" href="/2018/09/28/plugin Tampermonkey 脚本/" style="float: left;">
-            ← Tampermonkey 脚本
+        <a class="float-left" href="/2018/10/02/maths 3 一元函数积分学/" style="float: left;">
+            ← 一元函数积分学
         </a>
         
         
-        <a class="float-right" href="/2018/09/28/hexo 小 bug/">
-            Hexo 小 bug →
+        <a class="float-right" href="/2018/09/28/plugin Tampermonkey 脚本/">
+            Tampermonkey 脚本 →
         </a>
         
     </nav>
@@ -284,9 +284,10 @@
     
     <script>
         var num_map = [ '零', '一', '二', '三', '四', '五', '六', '七', '八', '九' ];
+        var min_width = 768;
         $(function(){
             var width = $(window).width();
-            if( width > 576 ){
+            if( width > min_width ){
                 div_side_navigation_left.show = true;
             }
             else {
