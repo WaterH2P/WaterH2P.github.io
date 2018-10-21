@@ -195,7 +195,7 @@
                             <br>
                         
                         
-                            <span>最近更新：2018-10-18</span>
+                            <span>最近更新：2018-10-21</span>
                             <br>
                         
                         
@@ -258,7 +258,7 @@
 </ol>
 <p><br></p>
 <h2 id="三、行列式的展开定理"><a href="#三、行列式的展开定理" class="headerlink" title="三、行列式的展开定理"></a>三、行列式的展开定理</h2><p><br></p>
-<h4 id="一、余子式"><a href="#一、余子式" class="headerlink" title="一、余子式"></a>一、余子式</h4><p>在 $ n $ 阶行列式中，去掉元素 $ a_{ij} $ 所在的第 $ i $ 行，第  $ j $ 列元素，由剩下的元素按原来的位置与顺序组成的 $ (n - 1) $ 阶行列式称为元素 $ a_{ij} $ 的余子式，记为 $ M_{ij} $ ，即 </p>
+<h4 id="㊀、余子式"><a href="#㊀、余子式" class="headerlink" title="㊀、余子式"></a>㊀、余子式</h4><p>在 $ n $ 阶行列式中，去掉元素 $ a_{ij} $ 所在的第 $ i $ 行，第  $ j $ 列元素，由剩下的元素按原来的位置与顺序组成的 $ (n - 1) $ 阶行列式称为元素 $ a_{ij} $ 的余子式，记为 $ M_{ij} $ ，即 </p>
 <script type="math/tex; mode=display">
 M_{ij} = 
 \begin{vmatrix} 
@@ -269,9 +269,9 @@ M_{ij} =
   \vdots & & \vdots & \vdots & & \vdots \\ 
   a_{n1} & \cdots & a_{n, j-1} & a_{n, j+1} & \cdots & a_{nn} 
 \end{vmatrix}</script><p><br></p>
-<h4 id="二、代数余子式"><a href="#二、代数余子式" class="headerlink" title="二、代数余子式"></a>二、代数余子式</h4><p>余子式 $ M_{ij} $ 乘 $ (-1)^{i + j} $ 后称为 $ a_{ij} $ 的代数余子式，记为 $ A_{ij} $ ，即 $ A_{ij} = (-1)^{i+j} M_{ij} $ 。</p>
+<h4 id="㊁、代数余子式"><a href="#㊁、代数余子式" class="headerlink" title="㊁、代数余子式"></a>㊁、代数余子式</h4><p>余子式 $ M_{ij} $ 乘 $ (-1)^{i + j} $ 后称为 $ a_{ij} $ 的代数余子式，记为 $ A_{ij} $ ，即 $ A_{ij} = (-1)^{i+j} M_{ij} $ 。</p>
 <p><br></p>
-<h4 id="★-三、行列式按某一行（列）展开的展开公式"><a href="#★-三、行列式按某一行（列）展开的展开公式" class="headerlink" title="★ 三、行列式按某一行（列）展开的展开公式"></a>★ 三、行列式按某一行（列）展开的展开公式</h4><p>行列式的值等于行列式的某行（列）元素分别乘其相应的代数余子式后再求和，即</p>
+<h4 id="★-㊂、行列式按某一行（列）展开的展开公式"><a href="#★-㊂、行列式按某一行（列）展开的展开公式" class="headerlink" title="★ ㊂、行列式按某一行（列）展开的展开公式"></a>★ ㊂、行列式按某一行（列）展开的展开公式</h4><p>行列式的值等于行列式的某行（列）元素分别乘其相应的代数余子式后再求和，即</p>
 <script type="math/tex; mode=display">
 \left| A \right| = 
 \begin{cases}
@@ -283,7 +283,7 @@ M_{ij} =
   a_{i1}A_{k1} + a_{i2}A_{k2} + \cdots + a_{in}A_{kn} = 0, \quad (i \not= k) \\
   a_{1j}A_{1k} + a_{2j}A_{2k} + \cdots + a_{nj}A_{nk} = 0, \quad (j \not= k)
 \end{array}</script><p><br></p>
-<h4 id="四、几个重要的行列式"><a href="#四、几个重要的行列式" class="headerlink" title="四、几个重要的行列式"></a>四、几个重要的行列式</h4><ol>
+<h4 id="㊃、几个重要的行列式"><a href="#㊃、几个重要的行列式" class="headerlink" title="㊃、几个重要的行列式"></a>㊃、几个重要的行列式</h4><ol>
 <li><p>上（下）三角形行列式<br>【注】$ a_{ii} \to a_{nn} $ 称为<strong>主对角线</strong>（$ n \times n $ 阶行列式）</p>
 <script type="math/tex; mode=display">
 \begin{vmatrix}
@@ -405,7 +405,7 @@ b & b & \cdots & a
 </li>
 </ol>
 <p><br></p>
-<h4 id="五、例题"><a href="#五、例题" class="headerlink" title="五、例题"></a>五、例题</h4><ol>
+<h4 id="㊄、例题"><a href="#㊄、例题" class="headerlink" title="㊄、例题"></a>㊄、例题</h4><ol>
 <li><p>消 $ 0 $ 化三角形法</p>
 <ol>
 <li>设 $ n $ 阶矩阵 $ A = \begin{vmatrix} 0 &amp; 1 &amp; 1 &amp; \cdots &amp; 1 &amp; 1 \\ 1 &amp; 0 &amp; 1 &amp; \cdots &amp; 1 &amp; 1 \\ 1 &amp; 1 &amp; 0 &amp; \cdots &amp; 1 &amp; 1 \\ \vdots &amp; \vdots &amp; \vdots &amp; &amp; \vdots &amp; \vdots \\ 1 &amp; 1 &amp; 1 &amp; \cdots &amp; 0 &amp; 1 \\ 1 &amp; 1 &amp; 1 &amp; \cdots &amp; 1 &amp; 0 \end{vmatrix} $ ，则 $ |A| =  $ ________ 。<ul>
@@ -487,6 +487,32 @@ b & b & \cdots & a
 <li>展开公式</li>
 <li>重要行列展开式</li>
 <li>四种计算方法</li>
+</ol>
+<p><br></p>
+<h2 id="五、行列式的综合计算与应用"><a href="#五、行列式的综合计算与应用" class="headerlink" title="五、行列式的综合计算与应用"></a>五、行列式的综合计算与应用</h2><p><br></p>
+<h4 id="㊀、克拉默法则"><a href="#㊀、克拉默法则" class="headerlink" title="㊀、克拉默法则"></a>㊀、克拉默法则</h4><ol>
+<li><p>克拉默法则</p>
+<p> 若 $ n $ 个方程 $ n $ 个未知量构成的非齐次线性方程组 </p>
+<script type="math/tex; mode=display">
+\begin{cases} 
+a_{11}x_1 + a_{12}x_2 + \cdots + a_{1n}x_n = b_1 \\ 
+a_{21}x_1 + a_{22}x_2 + \cdots + a_{2n}x_n = b_2 \\ 
+\quad \cdots \cdots \\ 
+a_{n1}x_1 + a_{n2}x_2 + \cdots + a_{nn}x_n = b_n 
+\end{cases}</script><p>的系数行列式 $ |A| \not= 0 $ ，则方程组有唯一解，且 </p>
+<script type="math/tex; mode=display">
+x_i = \dfrac{ |A_i| }{ |A| }, i = 1, 2, \cdots, n,</script><p>其中 $ |A_i| $ 是 $ |A| $ 中第 $ i $ 列元素（即 $ x_i $ 的系数）替换为方程组右端的常数项 $ b_1, b_2, \cdots, b_n $ 后所构成的行列式。</p>
+</li>
+<li><p>推论</p>
+<p> 若包含 $ n $ 个方程 $ n $ 个未知量的齐次线性方程组</p>
+<script type="math/tex; mode=display">
+\begin{cases} 
+a_{11}x_1 + a_{12}x_2 + \cdots + a_{1n}x_n = 0 \\ 
+a_{21}x_1 + a_{22}x_2 + \cdots + a_{2n}x_n = 0 \\ 
+\quad \cdots \cdots \\ 
+a_{n1}x_1 + a_{n2}x_2 + \cdots + a_{nn}x_n = 0 
+\end{cases}</script><p>的系数行列式 $ |A| \not= 0 $ ，则方程组有唯一零解。<br>​    反之，若齐次线性方程组有非零解，则其系数行列式 $ |A| = 0 $ 。        </p>
+</li>
 </ol>
 
                 </div>
@@ -704,22 +730,5 @@ b & b & \cdots & a
             $('html').animate({scrollTop: 0}, 'slow');
         }
     </script>
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<!-- <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-
 </body>
 </html>
