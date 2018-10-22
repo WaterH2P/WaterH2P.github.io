@@ -284,8 +284,8 @@
         </a>
         
         
-        <a class="float-right" href="/2018/09/21/hexo 在 Hexo 中渲染 MathJax 数学公式/">
-            在 Hexo 中渲染 MathJax 数学公式 →
+        <a class="float-right" href="/2018/09/21/maths 1 极限/">
+            极限 →
         </a>
         
     </nav>
@@ -485,5 +485,23 @@
             $('html').animate({scrollTop: 0}, 'slow');
         }
     </script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<!-- <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<!-- <script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+
 </body>
 </html>
