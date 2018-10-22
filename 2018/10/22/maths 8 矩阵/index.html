@@ -2,7 +2,7 @@
 
     
 <head>
-    <title>Mysql | H2P&#39;S BLOG</title>
+    <title>矩阵 | H2P&#39;S BLOG</title>
     <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -158,7 +158,7 @@
     <!-- blog 的 date -->
     
         <span>
-            2018-06-20
+            2018-10-22
         </span>
         <span>&nbsp;&nbsp;</span>
     
@@ -167,30 +167,35 @@
     
     
     <span class="tag is-info">
-        <a href='/tags/sql/'>sql</a>
+        <a href='/tags/maths/'>maths</a>
     </span>
     ,
     
     <span class="tag is-info">
-        <a href='/tags/mysql/'>mysql</a>
+        <a href='/tags/kaoyan/'>kaoyan</a>
+    </span>
+    ,
+    
+    <span class="tag is-info">
+        <a href='/tags/线代/'>线代</a>
     </span>
     
     
     
 </span>
 
-                    <h1>Mysql</h1>
+                    <h1>矩阵</h1>
                 </div>
             </div>
             <div class="row justify-content-center">
                 <div class="col-lg-8 col-md-10">
                     <div class="div-message div-desc">
                         
-                            <span>MySQL 的一些基本语法，以及与 Java 一起使用</span>
+                            <span>做笔记，喝凉茶，看线代</span>
                             <br>
                         
                         
-                            <span>最近更新：2018-09-28</span>
+                            <span>最近更新：2018-10-22</span>
                             <br>
                         
                         
@@ -199,32 +204,109 @@
             </div>
             <div class="row justify-content-center">
                 <div class="col-lg-8 col-md-10">
-                    <h3 id="建库"><a href="#建库" class="headerlink" title="建库"></a>建库</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">DATABASE</span> databaseName</span><br><span class="line">	<span class="built_in">CHARACTER</span> <span class="keyword">SET</span> utf8</span><br><span class="line">	<span class="keyword">DEFAULT</span> <span class="built_in">CHARACTER</span> <span class="keyword">SET</span> utf8</span><br><span class="line">	<span class="keyword">COLLATE</span> utf8_general_ci</span><br><span class="line">	<span class="keyword">DEFAULT</span> <span class="keyword">COLLATE</span> utf8_general_ci ;</span><br></pre></td></tr></table></figure>
-<p><br></p>
-<h3 id="建表"><a href="#建表" class="headerlink" title="建表"></a>建表</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">DROP</span> <span class="keyword">TABLE</span> <span class="keyword">IF</span> <span class="keyword">EXISTS</span> tableName;</span><br><span class="line"></span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> tableName(</span><br><span class="line">...</span><br><span class="line">)<span class="keyword">ENGINE</span>=<span class="keyword">InnoDB</span> <span class="keyword">DEFAULT</span> <span class="keyword">CHARSET</span>=utf8;</span><br></pre></td></tr></table></figure>
-<p><br></p>
-<h3 id="连接"><a href="#连接" class="headerlink" title="连接"></a>连接</h3><ul>
-<li>jdbc</li>
+                    <h2 id="一、概念"><a href="#一、概念" class="headerlink" title="一、概念"></a>一、概念</h2><p><br></p>
+<h4 id="㊀、矩阵的定义"><a href="#㊀、矩阵的定义" class="headerlink" title="㊀、矩阵的定义"></a>㊀、矩阵的定义</h4><ul>
+<li>由 $ m \times n $ 个数，排成 $ m $ 行 $ n $ 列的矩形表格 <script type="math/tex; mode=display">
+\begin{bmatrix} 
+a_{11} & a_{12} & \cdots & a_{1n} \\ 
+a_{21} & a_{22} & \cdots & a_{2n} \\ 
+\vdots & \vdots & & \vdots \\ 
+a_{m1} & a_{m2} & \cdots & a_{mn} 
+\end{bmatrix} 
+\text{ 或 } 
+\begin{pmatrix} 
+a_{11} & a_{12} & \cdots & a_{1n} \\ 
+a_{21} & a_{22} & \cdots & a_{2n} \\ 
+\vdots & \vdots & & \vdots \\ 
+a_{m1} & a_{m2} & \cdots & a_{mn} 
+\end{pmatrix}</script>称为一个 $ m \times n $ 矩阵，简记为 $ A $ 或 $ ( a_{ij} )_{m \times n} (i=1, 2, \cdots, m; j=1, 2, \cdots, n) $ ，当 $ m = n $ 时，称为 $ n $ 阶方阵（矩阵）。</li>
+<li>两个矩阵 $ A = ( a_{ij} )_{m \times n}, B = ( b_{ij} )_{s \times k} $ ，若 $ m = s, n = k $ ，则称 $ A $ 与 $ B $ 为同型矩阵。</li>
 </ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.sql.Connection;</span><br><span class="line"><span class="keyword">import</span> java.sql.DriverManager;</span><br><span class="line"><span class="keyword">import</span> java.sql.SQLException;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">database</span> </span>&#123;</span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String URL = <span class="string">"jdbc:mysql://localhost:3306/hotel?useSSL=true&amp;characterEncoding=utf8"</span>;</span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String UNAME = <span class="string">"***"</span>;</span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String PWD = <span class="string">"***"</span>;</span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">static</span> Connection connect = <span class="keyword">null</span>;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">static</span>&#123;</span><br><span class="line">		<span class="keyword">try</span>&#123;</span><br><span class="line">			Class.forName(<span class="string">"com.mysql.jdbc.Driver"</span>);</span><br><span class="line">			<span class="comment">//加载MySQL JDBC驱动程序</span></span><br><span class="line">			connect = DriverManager.getConnection(URL,UNAME,PWD);</span><br><span class="line">		&#125;<span class="keyword">catch</span> (ClassNotFoundException e)&#123;</span><br><span class="line">			e.printStackTrace();</span><br><span class="line">		&#125;<span class="keyword">catch</span> (SQLException e)&#123;</span><br><span class="line">		      e.printStackTrace();</span><br><span class="line">		&#125;<span class="keyword">catch</span> (Exception e)&#123;</span><br><span class="line">			e.printStackTrace();</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">protected</span> <span class="keyword">static</span> Connection <span class="title">getInstance</span><span class="params">()</span></span>&#123;</span><br><span class="line">		<span class="keyword">return</span> connect;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p><br></p>
-<h3 id="查询"><a href="#查询" class="headerlink" title="查询"></a>查询</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">String sql = <span class="string">"SELECT ... FROM tableName WHERE ..."</span>;</span><br><span class="line"><span class="keyword">try</span>&#123;</span><br><span class="line">  PreparedStatement pstmt = connect.prepareStatement(sql);</span><br><span class="line">  ResultSet rset = pstmt.executeQuery();</span><br><span class="line">  <span class="keyword">while</span>( rset.next() )&#123;</span><br><span class="line">    ...</span><br><span class="line">  &#125;</span><br><span class="line">  ptst.close()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><br></p>
-<h3 id="插入"><a href="#插入" class="headerlink" title="插入"></a>插入</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p><br></p>
-<h3 id="日期字段相减"><a href="#日期字段相减" class="headerlink" title="日期字段相减"></a>日期字段相减</h3><ul>
-<li>两个 DateTime 字段名分别为 beginDateTime，endDateTime</li>
+<h4 id="㊁、矩阵的基本运算"><a href="#㊁、矩阵的基本运算" class="headerlink" title="㊁、矩阵的基本运算"></a>㊁、矩阵的基本运算</h4><ol>
+<li>相等<ul>
+<li>$ A, B $ 是同型矩阵，且对应元素相等。</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">// 得到日期之间的秒数</span><br><span class="line">UNIX_TIMESTAMP(endDateTime) - UNIX_TIMESTAMP(beginDateTime)</span><br></pre></td></tr></table></figure>
-<ul>
-<li>两个字段都为Time类型</li>
+</li>
+<li>加法<ul>
+<li>两个矩阵是同型矩阵时，可以相加，即 $ C = A + B = ( a_{ij} )_{m \times n} + ( b_{ij} )_{m \times n} = ( c_{ij} )_{m \times n} $ ，其中 $ c_{ij} = a_{ij} + b_{ij} (i=1, 2, \cdots, m; j=1, 2, \cdots, n) $ ，即对应元素相加。</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">// 如果两个时间都在同一天，相减可以得到相差的秒数，但如果跨天，月，年都有问题</span><br><span class="line">TIME_TO_SEC(endDateTime) - TIME_TO_SEC(beginDateTime)</span><br></pre></td></tr></table></figure>
-<p><a href="https://segmentfault.com/q/1010000008617215" target="_blank" rel="noopener">mysql datetime 类型与java.util.Date类型的值如何比较</a></p>
-<p><a href="https://segmentfault.com/q/1010000003055302" target="_blank" rel="noopener">mysql中类型为datetime的时间比较</a></p>
+</li>
+<li>数乘矩阵<ul>
+<li>设 $ k $ 是一个数，$ A $ 是一个 $ m \times n $ 矩阵，数 $ k $ 和 $ A $ 的乘积称为数乘矩阵，即 $ kA = Ak = k \begin{bmatrix}  a_{11} &amp; a_{12} &amp; \cdots &amp; a_{1n} \\  a_{21} &amp; a_{22} &amp; \cdots &amp; a_{2n} \\  \vdots &amp; \vdots &amp; &amp; \vdots \\  a_{m1} &amp; a_{m2} &amp; \cdots &amp; a_{mn} \end{bmatrix} = \begin{bmatrix}  ka_{11} &amp; ka_{12} &amp; \cdots &amp; ka_{1n} \\  ka_{21} &amp; ka_{22} &amp; \cdots &amp; ka_{2n} \\  \vdots &amp; \vdots &amp; &amp; \vdots \\  ka_{m1} &amp; ka_{m2} &amp; \cdots &amp; ka_{mn} \end{bmatrix} $ ，即 $ A $ 的每个元素都乘以 $ k $ 。</li>
+<li>$ | kA_{n \times n} | = k^n |A| $ </li>
+</ul>
+</li>
+<li>⭐️矩阵的乘法<ul>
+<li>设 $ A $ 是 $ m \times s $ 矩阵， $ B $ 是 $ s \times n $ 矩阵（矩阵 $ A $ 的列数必须与矩阵 $ B $ 的行数相等），则 $ A, B $ 可乘，乘积 $ AB $ 是 $ m \times n $ 矩阵，记 $ C = AB = ( c_{ij} )_{m \times n} $ ，$ C $ 的第 $ i $ 行第 $ j $ 列元素 $ c_{ij} $ 是 $ A $ 的第 $ i $ 行的 $ s $ 个元素与 $ B $ 的第 $ j $ 列的 $ s $ 个对应元素两两相乘之和，即 $ c_{ij} = \sum\limits_{k = 1}^s a_{ik}b_{kj} = a_{i1}b_{1j} + a_{i2}b_{2j} + \cdots + a_{is}b_{sj} \quad (i=1, 2, \cdots, m; j=1, 2, \cdots, n) $ 。</li>
+<li>向量内积<ul>
+<li>记 $ \alpha = \begin{pmatrix} a_1 &amp; a_2 &amp; \cdots &amp; a_n \end{pmatrix}, \beta = \begin{pmatrix} b_1 &amp; b_2 &amp; \cdots &amp; b_n \end{pmatrix} $ <ul>
+<li>称 $ (\alpha, \beta) = a_1b_1 + a_2b_2 + \cdots + a_nb_n $ 叫 $ \alpha, \beta $ 的内积。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>特别地<ul>
+<li>$ \begin{pmatrix} a_1 &amp; a_2 &amp; \cdots &amp; a_n \end{pmatrix}_{1 \times n} \begin{pmatrix} b_1 \\ b_2 \\ \vdots \\ b_n \end{pmatrix}_{n \times 1} = \left( \sum\limits_{i = 1}^n a_ib_i \right)_{1 \times 1} $ </li>
+<li>⭐️ $ \underleftarrow{ \begin{pmatrix} b_1 \\ b_2 \\ \vdots \\ b_n \end{pmatrix} \begin{pmatrix} a_1 &amp; a_2 &amp; \cdots &amp; a_n \end{pmatrix}_{1 \times n} = \begin{pmatrix} a_1b_1 &amp; a_2b_1 &amp; \cdots &amp; a_nb_1 \\ a_1b_2 &amp; a_2b_2 &amp; \cdots &amp; a_nb_2 \\ \vdots &amp; \vdots &amp; &amp; \vdots \\ a_1b_n &amp; a_2b_n &amp; \cdots &amp; a_nb_n \end{pmatrix}_{n \times n} } $ <ul>
+<li>逆向思维很重要</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>【注】<ul>
+<li>矩阵的乘法一般情况下不满足交换律，即 $ AB \not= BA $ 。</li>
+<li>例如 $ A = \begin{bmatrix} 1&amp; 1 \\ -1 &amp; -1 \end{bmatrix}, B = \begin{bmatrix} 1 &amp; -1 \\ -1 &amp; 1 \end{bmatrix} $ <ul>
+<li>$ AB = \begin{bmatrix} 1&amp; 1 \\ -1 &amp; -1 \end{bmatrix} \begin{bmatrix} 1 &amp; -1 \\ -1 &amp; 1 \end{bmatrix} = \begin{bmatrix} 0 &amp; 0 \\ 0 &amp; 0 \end{bmatrix} $ </li>
+<li>$ BA = \begin{bmatrix} 1 &amp; -1 \\ -1 &amp; 1 \end{bmatrix} \begin{bmatrix} 1&amp; 1 \\ -1 &amp; -1 \end{bmatrix} = \begin{bmatrix} 2 &amp; 2 \\ -2 &amp; -2 \end{bmatrix} $ </li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
 <p><br></p>
-<h3 id="字符串转-int-double"><a href="#字符串转-int-double" class="headerlink" title="字符串转 int / double"></a>字符串转 int / double</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">CAST(value as type);  </span><br><span class="line">CONVERT(value, type);</span><br><span class="line"></span><br><span class="line">type 可以是：</span><br><span class="line">	二进制:	BINARY    </span><br><span class="line">    字符型:	CHAR()，可带参数     </span><br><span class="line">    日期:		DATE     </span><br><span class="line">    时间: 	TIME     </span><br><span class="line">    日期时间型:DATETIME     </span><br><span class="line">    浮点数:	DECIMAL      </span><br><span class="line">    整数:		SIGNED     </span><br><span class="line">    无符号整数:UNSIGNED</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">eg:</span><br><span class="line">	CONVERT( value, DECIMAL(10,2) )</span><br><span class="line">		保留两位小数</span><br></pre></td></tr></table></figure>
+<h4 id="㊂、例题"><a href="#㊂、例题" class="headerlink" title="㊂、例题"></a>㊂、例题</h4><ol>
+<li>设 $ A = \begin{bmatrix} 1 &amp; -1 &amp; -1 &amp; -1 \\ -1 &amp; 1 &amp; -1 &amp; -1 \\ -1 &amp; -1 &amp; 1 &amp; -1 \\ -1 &amp; -1 &amp; -1 &amp; 1 \end{bmatrix} $ ，计算 $ A^n $ 。【归纳法】<ul>
+<li>$ \begin{array}{l} A^2 &amp;= AA \\ &amp;= \begin{pmatrix} 1 &amp; -1 &amp; -1 &amp; -1 \\ -1 &amp; 1 &amp; -1 &amp; -1 \\ -1 &amp; -1 &amp; 1 &amp; -1 \\ -1 &amp; -1 &amp; -1 &amp; 1 \end{pmatrix} \begin{pmatrix} 1 &amp; -1 &amp; -1 &amp; -1 \\ -1 &amp; 1 &amp; -1 &amp; -1 \\ -1 &amp; -1 &amp; 1 &amp; -1 \\ -1 &amp; -1 &amp; -1 &amp; 1 \end{pmatrix} \\ &amp;= \begin{pmatrix} 4 &amp; 0 &amp; 0 &amp; 0 \\ 0 &amp; 4 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 4 &amp; 0 \\ 0 &amp; 0 &amp; 0 &amp; 4 \end{pmatrix} = 4E \end{array} $ </li>
+<li>$ A^n = \begin{cases} 4^k \cdot E \quad &amp; n = 2k \\ 4^k \cdot A \quad &amp; n = 2k + 1 \end{cases} $</li>
+</ul>
+</li>
+<li>设 $ A = \begin{bmatrix} 1 &amp; 2 &amp; -1 \\ -2 &amp; -4 &amp; 2 \\ 3 &amp; 6 &amp; -3 \end{bmatrix} $ ，则 $ A^n $ ________ 。【秩为 1 】<ul>
+<li>当矩阵每一行之间【成比例关系】时<ul>
+<li>$ A = \begin{pmatrix} 1 \\ -2 \\ 3 \end{pmatrix} \begin{pmatrix} 1 &amp; 2 &amp; -1 \end{pmatrix} $ </li>
+</ul>
+</li>
+<li>记 $ \alpha = \begin{pmatrix} 1 \\ -2 \\ 3 \end{pmatrix}, \beta = \begin{pmatrix} 1 \\ 2 \\ -1 \end{pmatrix} $ <ul>
+<li>代数中，习惯上写【列向量】</li>
+<li>$ A = \alpha \beta^T $ </li>
+</ul>
+</li>
+<li>$ A^2 = A \cdot A = \alpha \beta^T \alpha \beta^T = \alpha \left( \beta^T \alpha \right) \beta^T = \alpha \left( -6 \right) \beta^T = -6A $ </li>
+<li>$ A^n = (-6)^{n-1} \cdot A $</li>
+<li>【注】<ul>
+<li>称 $ \sum\limits_{i=1}^n a_{ii} = {\rm tr} (A) $ ，叫 $ A $ 的迹（trace）。</li>
+<li>若 $ r( A_{n \times n} ) = 1 $ （秩为 $ 1 $ ），即 $ n $ 行元素均称比例。<ul>
+<li>则 $ A^n = \left[ {\rm tr}(A) \right]^{n-1} \cdot A $ </li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>已知 $ A = \begin{bmatrix} 1 &amp; 1 &amp; 0 \\ 0 &amp; 1 &amp; 1 \\ 0 &amp; 0 &amp; 1 \end{bmatrix} $ ，求 $ A^n $ 。【拆项法】<ul>
+<li>令 $ A = B + C $ ，其中 $ C = E $ 最好，$ A^n = (B+E)^n $ <ul>
+<li>由于 $ BE = EB $ ，所以 $ A^n = C_n^0 E^n B^0 + C_n^1E^{n-1}B1 + \cdots + C_n^nE^0B^n $ </li>
+</ul>
+</li>
+<li>$ A = B + E = \begin{bmatrix} 0 &amp; 1 &amp; 0 \\ 0 &amp; 0 &amp; 1 \\ 0 &amp; 0 &amp; 0 \end{bmatrix} + \begin{bmatrix} 1 &amp; 0 &amp; 0 \\ 0 &amp; 1 &amp; 0 \\ 0 &amp; 0 &amp; 1 \end{bmatrix} $ </li>
+<li>$ B^2 = \begin{bmatrix} 0 &amp; 0 &amp; 1 \\ 0 &amp; 0 &amp; 0 \\ 0&amp; 0 &amp; 0 \end{bmatrix}, \quad B^3 = O $ </li>
+<li>所以 $ B^i = O \quad (i=3, 4, \cdots, n) $ </li>
+<li>$ \implies \begin{array}{l} A^n &amp;= E + nB + \dfrac{ n(n-1) }{2}B^2 \\ &amp;= \begin{bmatrix} 1 &amp; 0 &amp; 0 \\ 0 &amp; 1 &amp; 0 \\ 0 &amp; 0 &amp; 1 \end{bmatrix} + \begin{bmatrix} 0 &amp; n &amp; 0 \\ 0 &amp; 0 &amp; n \\ 0 &amp; 0 &amp; 0 \end{bmatrix} + \begin{bmatrix} 0 &amp; 0 &amp; \frac{ n(n-1) }{2} \\ 0 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 0 \end{bmatrix} \\ &amp;= \begin{bmatrix} 1 &amp; n &amp; \frac{ n(n-1) }{2} \\ 0 &amp; 1 &amp; n \\ 0 &amp; 0 &amp; 1 \end{bmatrix} \end{array} ​$ </li>
+</ul>
+</li>
+</ol>
 
                 </div>
             </div>
@@ -235,10 +317,10 @@
 <div class="row justify-content-center">
     <nav class="m-pagination col-md-8 col-sm-24" role="pagination">
         
-        <a class="float-left" href="/2018/06/29/hexo 使用 Hexo 搭建 Blog/" style="float: left;">
-            ← 使用 Hexo 搭建 Blog
-        </a>
         
+        <a class="float-right" href="/2018/10/17/maths 7 行列式/">
+            行列式 →
+        </a>
         
     </nav>
 </div>
