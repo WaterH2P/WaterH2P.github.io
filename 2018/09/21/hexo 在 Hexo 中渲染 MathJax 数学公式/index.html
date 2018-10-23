@@ -245,13 +245,13 @@
 <div class="row justify-content-center">
     <nav class="m-pagination col-md-8 col-sm-24" role="pagination">
         
-        <a class="float-left" href="/2018/09/21/maths 1 极限/" style="float: left;">
-            ← 极限
+        <a class="float-left" href="/2018/09/25/plugin VS Code 插件/" style="float: left;">
+            ← VS Code 插件
         </a>
         
         
-        <a class="float-right" href="/2018/09/19/Markdown/">
-            MarkDown 使用教程 →
+        <a class="float-right" href="/2018/09/21/maths 1 极限/">
+            极限 →
         </a>
         
     </nav>
@@ -284,8 +284,7 @@
                 if( index === 0 ){
                     preH2 = element;
                 }
-                else if(index === 0 && circleTimes === 2 || index > 0 ) {
-                    circleTimes = index === 0 && circleTimes === 2 ? 1 : circleTimes;
+                else {
                     for( var i = 0; i < circleTimes; i++ ){
                         var content = $(preH2).text().toString();
                         var header = content.indexOf('、') > 0 ? content.split('、')[1] : 
