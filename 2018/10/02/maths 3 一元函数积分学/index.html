@@ -639,8 +639,8 @@
         </a>
         
         
-        <a class="float-right" href="/2018/09/28/hexo 小 bug/">
-            Hexo 小 bug →
+        <a class="float-right" href="/2018/09/28/plugin Tampermonkey 脚本/">
+            Tampermonkey 脚本 →
         </a>
         
     </nav>
@@ -673,7 +673,8 @@
                 if( index === 0 ){
                     preH2 = element;
                 }
-                else {
+                else if(index === 0 && circleTimes === 2 || index > 0 ) {
+                    circleTimes = index === 0 && circleTimes === 2 ? 1 : circleTimes;
                     for( var i = 0; i < circleTimes; i++ ){
                         var content = $(preH2).text().toString();
                         var header = content.indexOf('、') > 0 ? content.split('、')[1] : 

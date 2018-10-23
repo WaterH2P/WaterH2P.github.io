@@ -434,7 +434,8 @@
                 if( index === 0 ){
                     preH2 = element;
                 }
-                else {
+                else if(index === 0 && circleTimes === 2 || index > 0 ) {
+                    circleTimes = index === 0 && circleTimes === 2 ? 1 : circleTimes;
                     for( var i = 0; i < circleTimes; i++ ){
                         var content = $(preH2).text().toString();
                         var header = content.indexOf('、') > 0 ? content.split('、')[1] : 
