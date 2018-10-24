@@ -167,12 +167,12 @@
     
     
     <span class="tag is-info">
-        <a href='/tags/maths/'>maths</a>
+        <a href='/tags/kaoyan/'>kaoyan</a>
     </span>
     ,
     
     <span class="tag is-info">
-        <a href='/tags/kaoyan/'>kaoyan</a>
+        <a href='/tags/maths/'>maths</a>
     </span>
     ,
     
@@ -195,7 +195,7 @@
                             <br>
                         
                         
-                            <span>最近更新：2018-10-22</span>
+                            <span>最近更新：2018-10-24</span>
                             <br>
                         
                         
@@ -287,7 +287,7 @@ a_{m1} & a_{m2} & \cdots & a_{mn}
 <li>$ A^n = (-6)^{n-1} \cdot A $</li>
 <li>【注】<ul>
 <li>称 $ \sum\limits_{i=1}^n a_{ii} = {\rm tr} (A) $ ，叫 $ A $ 的迹（trace）。</li>
-<li>若 $ r( A_{n \times n} ) = 1 $ （秩为 $ 1 $ ），即 $ n $ 行元素均称比例。<ul>
+<li>若 $ {\rm r}( A_{n \times n} ) = 1 $ （秩为 $ 1 $ ），即 $ n $ 行元素均称比例。<ul>
 <li>则 $ A^n = \left[ {\rm tr}(A) \right]^{n-1} \cdot A $ </li>
 </ul>
 </li>
@@ -303,7 +303,7 @@ a_{m1} & a_{m2} & \cdots & a_{mn}
 <li>$ A = B + E = \begin{bmatrix} 0 &amp; 1 &amp; 0 \\ 0 &amp; 0 &amp; 1 \\ 0 &amp; 0 &amp; 0 \end{bmatrix} + \begin{bmatrix} 1 &amp; 0 &amp; 0 \\ 0 &amp; 1 &amp; 0 \\ 0 &amp; 0 &amp; 1 \end{bmatrix} $ </li>
 <li>$ B^2 = \begin{bmatrix} 0 &amp; 0 &amp; 1 \\ 0 &amp; 0 &amp; 0 \\ 0&amp; 0 &amp; 0 \end{bmatrix}, \quad B^3 = O $ </li>
 <li>所以 $ B^i = O \quad (i=3, 4, \cdots, n) $ </li>
-<li>$ \implies \begin{array}{l} A^n &amp;= E + nB + \dfrac{ n(n-1) }{2}B^2 \\ &amp;= \begin{bmatrix} 1 &amp; 0 &amp; 0 \\ 0 &amp; 1 &amp; 0 \\ 0 &amp; 0 &amp; 1 \end{bmatrix} + \begin{bmatrix} 0 &amp; n &amp; 0 \\ 0 &amp; 0 &amp; n \\ 0 &amp; 0 &amp; 0 \end{bmatrix} + \begin{bmatrix} 0 &amp; 0 &amp; \frac{ n(n-1) }{2} \\ 0 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 0 \end{bmatrix} \\ &amp;= \begin{bmatrix} 1 &amp; n &amp; \frac{ n(n-1) }{2} \\ 0 &amp; 1 &amp; n \\ 0 &amp; 0 &amp; 1 \end{bmatrix} \end{array} ​$ </li>
+<li>$ \implies \begin{array}{l} A^n &amp;= E + nB + \dfrac{ n(n-1) }{2}B^2 \\ &amp;= \begin{bmatrix} 1 &amp; 0 &amp; 0 \\ 0 &amp; 1 &amp; 0 \\ 0 &amp; 0 &amp; 1 \end{bmatrix} + \begin{bmatrix} 0 &amp; n &amp; 0 \\ 0 &amp; 0 &amp; n \\ 0 &amp; 0 &amp; 0 \end{bmatrix} + \begin{bmatrix} 0 &amp; 0 &amp; \frac{ n(n-1) }{2} \\ 0 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 0 \end{bmatrix} \\ &amp;= \begin{bmatrix} 1 &amp; n &amp; \frac{ n(n-1) }{2} \\ 0 &amp; 1 &amp; n \\ 0 &amp; 0 &amp; 1 \end{bmatrix} \end{array} $ </li>
 </ul>
 </li>
 </ol>
@@ -350,7 +350,7 @@ A^{-1}
   \text{3. 台角位置元素为 1} \\
   \text{4. 台角正上方元素全为 0}
 \end{cases}</script><ul>
-<li>⭐️⭐️⭐️<ul>
+<li>:star: :star: :star: <ul>
 <li>矩阵初等变换中间只能写 $ \to $ </li>
 </ul>
 </li>
@@ -368,6 +368,58 @@ A^{-1}
 </ol>
 </li>
 </ol>
+<p><br></p>
+<h4 id="2、用初等变化求逆矩阵的方法"><a href="#2、用初等变化求逆矩阵的方法" class="headerlink" title="2、用初等变化求逆矩阵的方法"></a>2、用初等变化求逆矩阵的方法</h4><ol>
+<li><p>【Th】</p>
+<ul>
+<li>任何可逆矩阵一定可通过若干次<strong>初等行变换</strong>化成同阶单位矩阵<ul>
+<li>行最简阶梯型矩阵<ul>
+<li>可逆矩阵 $ \to $ 不存在 $ 0 $ 行</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>概念</p>
+<script type="math/tex; mode=display">
+\begin{bmatrix}
+A \mid E
+\end{bmatrix}
+\underrightarrow{初等行变换}
+\begin{bmatrix}
+E \mid A^{-1}
+\end{bmatrix}</script></li>
+</ol>
+<ul>
+<li><ul>
+<li>推导<ul>
+<li>想对 $ A $ 做什么变换，可以先对 $ E $ 做同样的变化得到矩阵 $ P $ </li>
+<li>然后计算 $ PA $ 得到结果</li>
+<li>例如<ul>
+<li>$ A = \begin{bmatrix} 4 &amp; 6 \\ 2 &amp; 1 \end{bmatrix} $ ，想将第二行的 $ -2 $ 倍加到第一行</li>
+<li>先对 $ E = \begin{bmatrix} 1 &amp; 0 \\ 0 &amp; 1 \end{bmatrix} $ 做该变换，得到 $ P = \begin{bmatrix} 1 &amp; -2 \\ 0 &amp; 1 \end{bmatrix} $ </li>
+<li>$ PA = \begin{bmatrix} 1 &amp; -2 \\ 0 &amp; 1 \end{bmatrix} \begin{bmatrix} 4 &amp; 6 \\ 2 &amp; 1 \end{bmatrix} = \begin{bmatrix} 0 &amp; 4 \\ 2 &amp; 1 \end{bmatrix} $ </li>
+</ul>
+</li>
+<li>根据【Th】<ul>
+<li>$ \begin{array}{l} &amp; P_s \cdots P_2P_1A = E \\ \implies &amp; P_s \cdots P_2P_1AA^{-1} = EA^{-1} \\ \implies &amp; P_s \cdots P_2P_1E = A^{-1} \end{array} $</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ol>
+<li>例题<ol>
+<li>设 $ A = \begin{bmatrix} 0 &amp; 2 &amp; -1 \\ 1 &amp; 1 &amp; 2 \\ -1 &amp; -1 &amp; -1 \end{bmatrix} $ ，求 $ A^{-1} $ 。<ul>
+<li>$ \begin{array}{l} \begin{pmatrix} A \mid E \end{pmatrix} = &amp; \begin{pmatrix} 0 &amp; 2 &amp; -1 &amp; \vdots &amp; 1 &amp; 0 &amp; 0 \\ 1 &amp; 1 &amp; 2 &amp; \vdots &amp; 0 &amp; 1 &amp; 0 \\ -1 &amp; -1 &amp; -1 &amp; \vdots &amp; 0 &amp; 0 &amp; 1 \end{pmatrix} \\ \underrightarrow{1 \leftrightarrow 2 \\ 3 + 1 } &amp; \begin{pmatrix} 1 &amp; 1 &amp; 2 &amp; \vdots &amp; 0 &amp; 1 &amp; 0 \\ 0 &amp; 2 &amp; -1 &amp; \vdots &amp; 1 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 1 &amp; \vdots &amp; 0 &amp; 1 &amp; 1 \end{pmatrix} \\ \underrightarrow{2 + 3 \\ \frac{1}{2} 2 } &amp; \begin{pmatrix} 1 &amp; 1 &amp; 0 &amp; \vdots &amp; 0 &amp; -1 &amp; -2 \\ 0 &amp; 1 &amp; 0 &amp; \vdots &amp; \frac{1}{2} &amp; \frac{1}{2} &amp; \frac{1}{2} \\ 0 &amp; 0 &amp; 1 &amp; \vdots &amp; 0 &amp; 1 &amp; 1 \end{pmatrix} \\ \underrightarrow{1-2} &amp; \begin{pmatrix} 1 &amp; 0 &amp; 0 &amp; \vdots &amp; -\frac{1}{2} &amp; -\frac{3}{2} &amp; -\frac{5}{2} \\ 0 &amp; 1 &amp; 0 &amp; \vdots &amp; \frac{1}{2} &amp; \frac{1}{2} &amp; \frac{1}{2} \\ 0 &amp; 0 &amp; 1 &amp; \vdots &amp; 0 &amp; 1 &amp; 1 \end{pmatrix} = \begin{pmatrix} E \mid A^{-1} \end{pmatrix} \end{array} $ </li>
+</ul>
+</li>
+</ol>
+</li>
+</ol>
 
                 </div>
             </div>
@@ -377,6 +429,10 @@ A^{-1}
 <!-- 当前博客前后两篇博客 -->
 <div class="row justify-content-center">
     <nav class="m-pagination col-md-8 col-sm-24" role="pagination">
+        
+        <a class="float-left" href="/2018/10/24/maths 9 方程组/" style="float: left;">
+            ← 方程组【大题】
+        </a>
         
         
         <a class="float-right" href="/2018/10/17/maths 7 行列式/">

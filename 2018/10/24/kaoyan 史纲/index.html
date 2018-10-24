@@ -2,7 +2,7 @@
 
     
 <head>
-    <title>二重积分 | H2P&#39;S BLOG</title>
+    <title>史纲 | H2P&#39;S BLOG</title>
     <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -158,7 +158,7 @@
     <!-- blog 的 date -->
     
         <span>
-            2018-10-10
+            2018-10-24
         </span>
         <span>&nbsp;&nbsp;</span>
     
@@ -167,35 +167,30 @@
     
     
     <span class="tag is-info">
+        <a href='/tags/政治/'>政治</a>
+    </span>
+    ,
+    
+    <span class="tag is-info">
         <a href='/tags/kaoyan/'>kaoyan</a>
-    </span>
-    ,
-    
-    <span class="tag is-info">
-        <a href='/tags/maths/'>maths</a>
-    </span>
-    ,
-    
-    <span class="tag is-info">
-        <a href='/tags/高数/'>高数</a>
     </span>
     
     
     
 </span>
 
-                    <h1>二重积分</h1>
+                    <h1>史纲</h1>
                 </div>
             </div>
             <div class="row justify-content-center">
                 <div class="col-lg-8 col-md-10">
                     <div class="div-message div-desc">
                         
-                            <span>做笔记，喝凉茶，看高数</span>
+                            <span>做笔记，喝凉茶，看史纲</span>
                             <br>
                         
                         
-                            <span>最近更新：2018-10-14</span>
+                            <span>最近更新：2018-10-24</span>
                             <br>
                         
                         
@@ -204,200 +199,16 @@
             </div>
             <div class="row justify-content-center">
                 <div class="col-lg-8 col-md-10">
-                    <h2 id="一、对称性"><a href="#一、对称性" class="headerlink" title="一、对称性"></a>一、对称性</h2><p><br></p>
-<h4 id="㊀-、普通对称性"><a href="#㊀-、普通对称性" class="headerlink" title="㊀ 、普通对称性"></a>㊀ 、普通对称性</h4><ol>
-<li>概念<ul>
-<li>若区域 $ D $ 关于 $ y $ 轴对称<ul>
-<li>$ \begin{cases} \iint\limits_D f(x, y) {\rm d} \sigma = 2 \iint\limits_{D_1} f(x, y) {\rm d} \sigma, &amp; f(x, y) = f(-x, y) \\ \iint\limits_D f(x, y) {\rm d} \sigma = 0, &amp; f(x, y) = -f(-x, y) \end{cases} $ </li>
-</ul>
-</li>
-</ul>
-</li>
-<li>例题<ol>
-<li>设平面区域 $ D $ 由曲线 $ y = \sin x ( -\dfrac{\pi}{2} \leq x \leq \dfrac{\pi}{2} ) $ ，$ x = -\dfrac{\pi}{2} $ ，$ y = 1 $ 围成，则 $ \iint\limits_D (xy^3 - 1) {\rm d} \sigma = $ ________ 。<ul>
-<li><img src="./images/5-1.1.2.1.png" width="50%"></li>
-<li>做辅助线 $ y = -\sin x $ 将区域 $ D $ 划分为关于 $ y $ 轴对称的区域 $ D_2 $ 和关于 $ x $ 轴对称的区域 $ D_1 $ 。</li>
-<li>$ \begin{array}{l} \iint\limits_D (xy^3 - 1) {\rm d} \sigma = \iint\limits_D xy^3 {\rm d} \sigma - \iint\limits_D 1 {\rm d} \sigma = \iint\limits_{D_1} xy^3 {\rm d} \sigma + \iint\limits_{D_2} xy^3 {\rm d} \sigma - \pi \end{array} $<ul>
-<li>由于区域 $ D_1 $ 关于 $ x $ 轴对称，且 $ f(x, y) = -f(x, -y) $ ，所以 $ \iint\limits_{D_1} xy^3 {\rm d} \sigma = 0 $ 。</li>
-<li>由于区域 $ D_2 $ 关于 $ y $ 轴对称，且 $ f(x, y) = -f(-x, y) $ ，所以 $ \iint\limits_{D_2} xy^3 {\rm d} \sigma = 0 $ 。</li>
-</ul>
-</li>
-<li>所以 $ \iint\limits_D (xy^3 - 1) {\rm d} \sigma = -\pi $ 。</li>
-</ul>
-</li>
-</ol>
-</li>
-</ol>
-<p><br></p>
-<h4 id="㊁-、⭐️轮换对称性（直角坐标系）"><a href="#㊁-、⭐️轮换对称性（直角坐标系）" class="headerlink" title="㊁ 、⭐️轮换对称性（直角坐标系）"></a>㊁ 、⭐️轮换对称性（直角坐标系）</h4><ol>
-<li>积分值与用何字母表示无关<ul>
-<li>$ \int_a^b f(x) {\rm d}x = \int_a^b f(t) {\rm d}t = \int_a^b f(u) {\rm d}u = \cdots $ </li>
-</ul>
-</li>
-<li>定义<ul>
-<li>若将 $ D $ 中的 $ x $ 与 $ y $ 对调发现 $ D $ 不变，则 $ \iint\limits_D f(x, y) {\rm d}x {\rm d}y = \iint\limits_D f(y, x) {\rm d}x {\rm d}y $ <ul>
-<li>关于 $ y = x $ 对称</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>例题<ol>
-<li>记平面区域 $ D = \left. \{ (x, y) \right| |x| + |y| \leq 1 \} $ ，计算如下二重积分：1⃣️ $ I_1 = \iint\limits_D \dfrac{ af(x) + bf(y) }{ f(x) + f(y) } {\rm d} \sigma $ ，其中 $ f(t) $ 为定义在 $ (-\infty, +\infty) $ 上的连续正值函数，常数 $ a &gt; 0, b &gt; 0 $ ；2⃣️ $ I_2 = \iint\limits_D ( e^{\lambda x} - e^{- \lambda y} ) {\rm d} \sigma $ ，常数 $ \lambda &gt; 0 $ 。<ul>
-<li>1⃣️<ul>
-<li>$ x \longleftrightarrow y \implies D \text{ 不变} $ <ul>
-<li>$ \iint\limits_D \dfrac{ af(x) + bf(y) }{ f(x) + f(y) } {\rm d} \sigma = \iint\limits_D \dfrac{ af(y) + bf(x) }{ f(y) + f(x) } {\rm d} \sigma $ </li>
-</ul>
-</li>
-<li>$ \implies 2I_1 = \iint\limits_D \dfrac{ (a + b)( f(x) + f(y) ) }{ f(x) + f(y) } {\rm d} \sigma = 2(a + b) $ </li>
-<li>$ \implies I_1 = a + b $ </li>
-</ul>
-</li>
-<li>2⃣️<ul>
-<li>$ \iint\limits_D ( e^{\lambda x} - e^{- \lambda y} ) {\rm d} \sigma = \iint\limits_D ( e^{\lambda y} - e^{- \lambda x} ) {\rm d} \sigma $ </li>
-<li>$ \implies \begin{array}{l} 2I_2 &amp; = \iint\limits_D \left[ ( e^{\lambda x} - e^{- \lambda x} ) + ( e^{\lambda y} - e^{- \lambda y} ) \right] {\rm d}\sigma \\ &amp; = \iint\limits_D ( e^{\lambda x} - e^{- \lambda x} ) {\rm d}\sigma + \iint\limits_D ( e^{\lambda y} - e^{- \lambda y} ) {\rm d}\sigma\end{array} $ <ul>
-<li>考察 $ g(x, y) = e^{\lambda x} - e^{-\lambda x} $ <ul>
-<li>由于积分区域 $ D $ 关于 $ y $ 轴对称</li>
-<li>且 $ g(x, y) = -g(-x, y) $ </li>
-<li>所以 $ g(x, y) = e^{\lambda x} - e^{-\lambda x} $ 在积分区域 $ D $ 上是关于 $ x $ 的奇函数</li>
-<li>$ \implies \iint\limits_D ( e^{\lambda x} - e^{-\lambda x} ) {\rm d} \sigma = 0 $ </li>
-</ul>
-</li>
-</ul>
-</li>
-<li>$ \implies I_2 = 0 $ </li>
-</ul>
-</li>
-</ul>
-</li>
-</ol>
-</li>
-</ol>
-<p><br></p>
-<h4 id="㊂、例题"><a href="#㊂、例题" class="headerlink" title="㊂、例题"></a>㊂、例题</h4><ol>
-<li>设 $ f(x) $ 为恒正的连续函数，证明 $ \int_a^b f(x) {\rm d}x \cdot \int_a^b \dfrac{1}{ f(x) } {\rm d}x \geq (b - a)^2, \quad (a &lt; b) $ <ul>
-<li>解法 1⃣️ <ul>
-<li>设 $ F(x) = \int_a^x f(t) {\rm d}t \cdot \int_a^x \dfrac{1}{ f(x) } {\rm d}t - (x - a)^2 $ </li>
-<li>则 $ \begin{array}{l} F’(x) &amp; = f(x) \cdot \int_a^x \dfrac{1}{ f(t) } {\rm d}t + \int_a^x f(t) {\rm d}t \cdot \dfrac{1}{ f(x) } - 2(x - a) \\ &amp; = \int_a^x \left( \dfrac{ f(x) }{ f(t) } + \dfrac{ f(t) }{ f(x) } \right) {\rm d}t - 2(x - a) \\ &amp; \geq \int_a^x 2 {\rm d}t - 2(x - a) \\ &amp; \geq 2(x - a) - 2(x - a) \\ &amp; \geq 0 \end{array} $ <ul>
-<li>基本不等式 $ a + b \geq 2 \sqrt{ab}, \quad (a, b &gt; 0) $ </li>
-</ul>
-</li>
-<li>$ \implies F’(x) \geq 0 \implies F(b) \geq F(a) = 0 $ </li>
-<li>$ \implies  \int_a^b f(x) {\rm d}x \cdot \int_a^b \dfrac{1}{ f(x) } {\rm d}x \geq (b - a)^2 $ </li>
-</ul>
-</li>
-<li>解法 2⃣️ <ul>
-<li>㊀：显然，$ \int_a^b \dfrac{1}{ f(x) } {\rm d}x = \int_a^b \dfrac{1}{ f(y) } {\rm d}y $ <ul>
-<li>$ \begin{array}{l} \text{左 } &amp; = \int_a^b f(x) {\rm d}x \int_a^b \dfrac{1}{ f(y) } {\rm d}y \\ &amp; = \iint\limits_D \dfrac{ f(x) }{ f(y) } {\rm d} \sigma \end{array} $ </li>
-</ul>
-</li>
-<li>㊁： $ \int_a^b  f(x) {\rm d}x = \int_a^b f(y) {\rm d}y $ <ul>
-<li>$ \begin{array}{l} \text{左 } &amp; = \int_a^b f(y) {\rm d}y \int_a^b \dfrac{1}{ f(x) } {\rm d}x \\ &amp; = \iint\limits_D \dfrac{ f(y) }{ f(x) } {\rm d} \sigma \end{array} $ </li>
-</ul>
-</li>
-<li>$ \implies \text{左 } = \dfrac{1}{2} \iint\limits_D \left[ \dfrac{ f(x) }{ f(y) } + \dfrac{ f(y) }{ f(x) } \right] {\rm d}\sigma \geq \dfrac{1}{2} \iint\limits_D 2 {\rm d}\sigma = (b - a)^2 = \text{ 右} $ </li>
-</ul>
-</li>
-<li>解法 3⃣️ <ul>
-<li>由柯西积分不等式<ul>
-<li>$ \left( \int_a^b f(x) g(x) {\rm d}x \right)^2 \leq \int_a^b f^2(x) \cdot \int_a^b g^2(x) {\rm d}x $ </li>
-</ul>
-</li>
-<li>$ \implies \begin{array}{l} \int_a^b f(x) {\rm d}x \cdot \int_a^b \dfrac{1}{ f(x) } {\rm d}x &amp; = \int_a^b \left( \sqrt{ f(x) } \right)^2 {\rm d}x \cdot \int_a^b \left( \dfrac{1}{ \sqrt{ f(x) } } \right)^2 {\rm d}x \\ &amp; = \left( \int_a^b \sqrt{ f(x) } \cdot \dfrac{1}{ \sqrt{ f(x) } } {\rm d}x \right)^2 = (b - a)^2 \end{array} $ </li>
-</ul>
-</li>
-</ul>
-</li>
-<li>【记住】⭐️计算 $ \int_{-\infty}^{+\infty} e^{-x^2} {\rm d}x ​$ <ul>
-<li><img src="./images/5-1.3.2 高斯曲线.png" width="50%"></li>
-<li>显然，$ \int_{-\infty}^{+\infty} e^{-x^2} {\rm d}x = \int_{-\infty}^{+\infty} e^{-y^2} {\rm d}y $ </li>
-<li>$ \begin{array}{l} I^2 &amp; = \int_{-\infty}^{+\infty} e^{-x^2} {\rm d}x \cdot \int_{-\infty}^{+\infty} e^{-y^2} {\rm d}y \\ &amp; = \iint\limits_D e^{ -(x^2 + y^2) } {\rm d} \sigma \\ &amp; = \int_0^{2\pi} {\rm d}\theta \int_0^{+\infty} e^{-r^2} r {\rm d}r \\ &amp; = 2\pi \cdot ( -\dfrac{1}{2} ) \cdot \left. e^{-r^2} \right|_0^{+\infty} \\ &amp; = \pi \end{array} $ </li>
-<li>$ \implies I = \sqrt{\pi} $ </li>
-</ul>
-</li>
-</ol>
-<p><br></p>
-<h2 id="二、计算"><a href="#二、计算" class="headerlink" title="二、计算"></a>二、计算</h2><p><br></p>
-<h4 id="㊀、直角坐标系"><a href="#㊀、直角坐标系" class="headerlink" title="㊀、直角坐标系"></a>㊀、直角坐标系</h4><ol>
-<li>概念<ul>
-<li>$ \iint\limits_D f(x, y) {\rm d} \sigma = \iint\limits_D f(x, y) {\rm d}x {\rm d}y $ <ul>
-<li>由于定义中 $ {\rm d} \sigma &gt; 0 $ ，所以分部积分中 $ {\rm d}x &gt; 0 \text{  and  } {\rm d}y &gt; 0 $ </li>
-<li>即 $ \int_a^b {\rm d}x $ 中 $ a &lt; b $ </li>
-</ul>
-</li>
-<li>$ X $ 型区域（上下型）<ul>
-<li>$ \int_a^b {\rm d}x \int_{y_1(x)}^{y_2(x)} f(x, y) {\rm d}x $ <ul>
-<li>后积先定限（小 $ \to $ 大）</li>
-<li>限内画条线（小 $ \to $ 大）</li>
-<li>先交下曲线</li>
-<li>后交上曲线</li>
-<li><img src="./images/5-2.1.2 X型二重积分.png" width="50%"></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>例题<ol>
-<li>交换 $ \int_{-1}^0 {\rm d}y \int_2^{1 - y} f(x, y) {\rm d}x $ 的积分次序为 ________ 。<ul>
-<li>分析<ul>
-<li>$ {\rm d}x &gt; 0, {\rm d}y &lt; 0 \implies $ 不是二重积分</li>
-<li>修改为 $ {\rm d}x &gt;0, {\rm d}y &gt; 0 $ <ul>
-<li>$ I = -\int_{-1}^0 {\rm d}y \int_{1 - y}^2 f(x, y) {\rm d}x $ </li>
-</ul>
-</li>
-</ul>
-</li>
-<li>$ I = -\int_1^2 {\rm d}x \int_{1 - x}^0 f(x, y) {\rm d}y $</li>
-</ul>
+                    <h2 id="一、土地政策"><a href="#一、土地政策" class="headerlink" title="一、土地政策"></a>一、土地政策</h2><p><br></p>
+<h4 id="㊀、太平天国"><a href="#㊀、太平天国" class="headerlink" title="㊀、太平天国"></a>㊀、太平天国</h4><p>【耕者有其田】</p>
 <ol>
-<li>已知 $ I = \int_0^2 {\rm d}x \int_0^{ \frac{x^2}{2} } f(x, y) {\rm d}x + \int_2^{ 2 \sqrt{2} } {\rm d}x \int_0^{ \sqrt{8 - x^2} } f(x, y) {\rm d}y $ ，则 $ I = ( \text{  A  } ) $ 。</li>
-</ol>
-<ul>
-<li>$ \begin{array}{l} A. \int_0^2 {\rm d}y \int_{ \sqrt{2y} }^{ \sqrt{8 - y^2} } f(x, y) {\rm d}x &amp; B.\int_0^2{\rm d}y \int_1^{ \sqrt{ 8 - y^2 } } f(x, y) {\rm d}x \\ C. \int_0^1 {\rm d}y \int_{ \sqrt{2y} }^{ \sqrt{8 - y^2} } f(x, y) {\rm d}x &amp; D.\int_0^2 {\rm d}y \int_{ \sqrt{2y} }^1 f(x, y) {\rm d}x \end{array} $ </li>
-</ul>
-<ol>
-<li>计算 $ \int_{ \frac{1}{4} }^{ \frac{1}{2} } {\rm d}y \int_{ \frac{1}{2} }^{ \sqrt{y} } e^{ \frac{y}{x} } {\rm d}x + \int_{ \frac{1}{2} }^1 {\rm d}y \int_y^{ \sqrt{y} } e^{ \frac{y}{x} } {\rm d}x $</li>
-</ol>
-<ul>
-<li>换序<ul>
-<li>$ I = \int_{ \frac{1}{2} }^1 {\rm d}x \int_{x^2}^x e^{ \frac{y}{x} } {\rm d}y = \dfrac{3}{8} e - \dfrac{ \sqrt{e} }{2} $ </li>
-</ul>
-</li>
-</ul>
-</li>
+<li>内容<ol>
+<li>确定把土地平均分配给农民的方案，按照“凡天下田，天下人同耕”的原则。</li>
 </ol>
 </li>
+<li>特点<ol>
+<li>主张上否定“封建土地所有制”，但并未付诸实行。</li>
 </ol>
-<p><br></p>
-<h4 id="㊁、极坐标系"><a href="#㊁、极坐标系" class="headerlink" title="㊁、极坐标系"></a>㊁、极坐标系</h4><ol>
-<li>概念<ul>
-<li>$ {\rm d} \sigma = {\rm d}\theta \cdot r {\rm d}r $ </li>
-<li><img src="./images/5-2.2.1 极坐标二重积分.png" width="50%"></li>
-<li>$ \iint\limits_D f(x, y) {\rm d} \sigma = \int_{\alpha}^{\beta} {\rm d} \theta \int_{ r_1(\theta) }^{ r_2(\theta) } f(r \cos \theta, r \sin \theta) r {\rm d}r $ </li>
-</ul>
-</li>
-<li>计算 $ \iint\limits_D (x^2 + y^2) {\rm d}x {\rm d}y $ ，其中 $ D $ 由 $ y = -x, x^2 + y^2 = 4, y = \sqrt{2x - x^2} $ 所围成的在第一、二象限的部分。<ul>
-<li>分析<ul>
-<li>当被积函数含 $ f(x^2, y^2) $ ，且 $ D $ 为圆的部分时，一般选极坐标系。<ul>
-<li>首要的是 $ f(x^2, y^2) $ </li>
-</ul>
-</li>
-<li>否则，一般选直角坐标系。</li>
-</ul>
-</li>
-<li><img src="./images/5-2.2.2.png" width="40%"></li>
-<li>$ \begin{array}{l} I &amp; = \int_0^{ \frac{\pi}{2} } {\rm d} \theta \int_{2 \cos \theta}^2 r^2 \cdot r {\rm d}r + \int_{ \frac{\pi}{2} }^{ \frac{3 \pi}{4} } {\rm d} \theta \int_0^2 r^2 \cdot r {\rm d}r \\ &amp; = \int_0^{ \frac{\pi}{2} } \left( \left. \dfrac{r^4}{4} \right|_{2 \cos \theta}^2 \right) {\rm d} \theta + \dfrac{\pi}{4} \cdot \left. \dfrac{r^4}{4} \right|_0^2 \\ &amp; = \int_0^{ \frac{\pi}{2} } \left( 4 - 4 \cos^4 \theta \right) {\rm d} \theta + \pi \\ &amp; = 3 \pi - 4 \int_0^{ \frac{\pi}{2} } \cos^4 \theta {\rm d} \theta \\ &amp; = \dfrac{9}{4} \pi \end{array} $</li>
-<li>or</li>
-<li>$ \begin{array}{l} I &amp; = \int_0^{ \frac{3 \pi}{4} } {\rm d} \theta \int_0^2 r^3 {\rm d}r - \int_0^{ \frac{\pi}{2} } {\rm d}\theta \int_0^{2 \cos \theta} r^3 {\rm d}r \\ &amp; = \dfrac{3\pi}{4} \cdot 4 - 4 \int_0^{ \frac{\pi}{2} } \cos^4 \theta {\rm d}\theta \\ &amp; = \dfrac{9}{4} \pi \end{array} $ </li>
-</ul>
-</li>
-<li>计算 $ I = \iint\limits_D \sqrt{ 1 - r^2 \cos 2 \theta } \text{ } r^2 \sin \theta \text{ } {\rm d}r {\rm d}\theta $ ，其中 $ D = \left\lbrace \left. (r, \theta) \right| 0 \leq r \leq \sec \theta, 0 \leq \theta \leq \dfrac{\pi}{4} \right\rbrace $ 。<ul>
-<li>分析<ul>
-<li>$ r \leq \sec \theta \implies r \cos \theta \leq 1 \implies x \leq 1 $ </li>
-</ul>
-</li>
-<li>$ \begin{array}{l} I &amp; = \iint\limits_D y \sqrt{1 - x^2 + y^2} \text{ } {\rm d}x {\rm d}y \\ &amp; = \dfrac{1}{2} \int_0^1 {\rm d}x \int_0^x \sqrt{1 - x^2 + y^2} \text{ } {\rm d}( 1 - x^2 + y^2 ) \\ &amp; = \dfrac{1}{2} \cdot \dfrac{2}{3} \cdot \int_0^1 \left[ \left. (1 - x^2 + y^2)^{ \frac{3}{2} } \right|_{y = 0}^{y = x} \right] {\rm d}x \\ &amp; = \dfrac{1}{3} - \dfrac{1}{3} \int_0^1 (1 - x^2)^{ \frac{3}{2} } {\rm d}x = \dfrac{1}{3} - \dfrac{1}{3} \int_0^{ \frac{\pi}{2} } \cos^4 t {\rm d} t \\ &amp; = \dfrac{1}{3} - \dfrac{\pi}{16} \end{array} $ </li>
-</ul>
 </li>
 </ol>
 
@@ -410,13 +221,9 @@
 <div class="row justify-content-center">
     <nav class="m-pagination col-md-8 col-sm-24" role="pagination">
         
-        <a class="float-left" href="/2018/10/14/maths 6 常微分方程/" style="float: left;">
-            ← 常微分方程
-        </a>
         
-        
-        <a class="float-right" href="/2018/10/07/maths 4 多元函数微分学/">
-            多元函数微分学 →
+        <a class="float-right" href="/2018/10/24/maths 9 方程组/">
+            方程组【大题】 →
         </a>
         
     </nav>
