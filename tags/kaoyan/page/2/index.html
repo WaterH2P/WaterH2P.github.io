@@ -2,7 +2,7 @@
 
     
 <head>
-    <title>Tampermonkey 脚本 | H2P&#39;S BLOG</title>
+    <title>Tag: kaoyan | H2P&#39;S BLOG</title>
     <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -42,7 +42,7 @@
 </head>
 
     <!--
-    <body class="post-template">
+    <body class="home-template">
     -->
 <body id="index" class="lightnav animsition">
     <!-- 返回页面顶端 -->
@@ -141,202 +141,62 @@
     </div>
 
     
-    
-    <section id="intro">
-        <div id="div-side-navigation-left" class="col-lg-3 col-md-3" style="position: fixed; top: 46px; left: 0; padding-top: 0; padding-right: 50px" v-if="show">
-            <div class="list-group" v-for="header in headers">
-                <a class="list-group-item list-group-item-action" :href="IDToHref(header.id)">{{header.id}}</a>
-                <div class="row justify-content-end" v-if="ownChild(header.children)">
-                    <div class="col-lg-11 col-md-11" style="padding-top: 0; padding-bottom: 0">
-                        <div class="list-group" v-for="child in header.children">
-                            <a class="list-group-item list-group-item-action" style="padding: 4px 10px" :href="IDToHref(child.id)">{{child.id}}</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <!-- ============================ Hero Image =========================== -->
 
+    <section id="hero" class="scrollme">
+        <div class="container-fluid element-img" style="background: url(/img/zly_wb_small.jpg) no-repeat center center fixed;background-size: cover">
+            <div class="herofade beige-dk"></div>
+        </div>
+    </section>
+
+    <!-- Height spacing helper -->
+    <div class="heightblock"></div>
+    <!-- // End height spacing helper -->
+
+    <!-- ============================ END Hero Image =========================== -->
+
+    
+
+    
+    <section id="services">
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-lg-8 col-md-10">
-                    
-<span class="post-meta">
-    <!-- blog 的 date -->
-    
-        <span>
-            2018-09-28
-        </span>
-        <span>&nbsp;&nbsp;</span>
-    
-    <!-- blog 的 tags -->
-    
-    
-    
-    <span class="tag is-info">
-        <a href='/tags/tampermonkey/'>tampermonkey</a>
-    </span>
-    ,
-    
-    <span class="tag is-info">
-        <a href='/tags/油猴/'>油猴</a>
-    </span>
-    ,
-    
-    <span class="tag is-info">
-        <a href='/tags/script/'>script</a>
-    </span>
-    
-    
-    
-</span>
-
-                    <h1>Tampermonkey 脚本</h1>
-                </div>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-lg-8 col-md-10">
-                    <div class="div-message div-desc">
-                        
-                            <span>记录 Tampermonkey 安装的脚本</span>
-                            <br>
+                <div class="col-md-10">
+                    <div class="row boxes">
                         
                         
-                            <span>最近更新：2018-10-12</span>
-                            <br>
-                        
+                            
+                            
+                            <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
+                                <div class="card hover-box-shadow card-blog">
+                                    <div class="card-body" style="padding: 15px">
+                                        <h4 class="title"><a href="/2018/09/21/maths 1 极限/">极限</a></h4>
+                                        <p><time datetime="2018-09-20T16:00:00.000Z"><a href="/2018/09/21/maths 1 极限/">2018-09-21</a></time></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
+                                <div class="panel panel-default hover-box-shadow card-blog">
+                                    <div class="panel-body">
+                                        <h4 class="title"><a href="/2018/09/21/maths 1 极限/">极限</a></h4>
+                                        <p><time datetime="2018-09-20T16:00:00.000Z"><a href="/2018/09/21/maths 1 极限/">2018-09-21</a></time></p>
+                                    </div>
+                                </div>
+                            </div> -->
                         
                     </div>
-                </div>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-lg-8 col-md-10">
-                    <!--
-<a class="own-underline" href="" target="_blank"></a>
--->
-<p><br></p>
-<h3 id="Baidu"><a href="#Baidu" class="headerlink" title="Baidu"></a>Baidu</h3><ul>
-<li><a class="own-underline" href="https://greasyfork.org/zh-CN/scripts/14178-ac-baidu-%E9%87%8D%E5%AE%9A%E5%90%91%E4%BC%98%E5%8C%96%E7%99%BE%E5%BA%A6%E6%90%9C%E7%8B%97%E8%B0%B7%E6%AD%8C%E6%90%9C%E7%B4%A2-%E5%8E%BB%E5%B9%BF%E5%91%8A-favicon-%E5%8F%8C%E5%88%97" target="_blank">AC-baidu:重定向优化百度搜狗谷歌搜索_去广告_favicon_双列</a></li>
-<li><a class="own-underline" href="https://greasyfork.org/zh-CN/scripts/39504-%E7%99%BE%E5%BA%A6%E7%BD%91%E7%9B%98%E7%9B%B4%E6%8E%A5%E4%B8%8B%E8%BD%BD%E5%8A%A9%E6%89%8B-%E7%9B%B4%E9%93%BE%E5%8A%A0%E9%80%9F%E7%89%88" target="_blank">百度网盘直接下载助手 直链加速版</a></li>
-</ul>
-<p><br></p>
-<h3 id="Sina"><a href="#Sina" class="headerlink" title="Sina"></a>Sina</h3><ul>
-<li><a class="own-underline" href="https://greasyfork.org/zh-CN/scripts/3249-yet-another-weibo-filter" target="_blank">Yet Another Weibo Filter 看真正想看的微博</a></li>
-</ul>
-<p><br></p>
-<h3 id="页面样式"><a href="#页面样式" class="headerlink" title="页面样式"></a>页面样式</h3><ul>
-<li><a class="own-underline" href="https://greasyfork.org/zh-CN/scripts/14716-%E6%8A%A4%E7%9C%BC%E8%84%9A%E6%9C%AC" target="_blank">护眼脚本</a></li>
-<li><a class="own-underline" href="https://greasyfork.org/zh-CN/scripts/28497-remove-web-limits-modified" target="_blank">网页限制解除(改)</a></li>
-</ul>
-<p><br></p>
-<h3 id="视频播放"><a href="#视频播放" class="headerlink" title="视频播放"></a>视频播放</h3><ul>
-<li><a class="own-underline" href="https://greasyfork.org/zh-CN/scripts/30545-%E8%A7%86%E9%A2%91%E7%AB%99%E5%90%AF%E7%94%A8html5%E6%92%AD%E6%94%BE%E5%99%A8" target="_blank">视频站启用html5播放器</a></li>
-<li><a class="own-underline" href="https://greasyfork.org/zh-CN/scripts/27530-%E7%A0%B4%E8%A7%A3vip%E4%BC%9A%E5%91%98%E8%A7%86%E9%A2%91%E9%9B%86%E5%90%88" target="_blank">破解VIP会员视频集合</a></li>
-</ul>
-<p><br></p>
-<h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><ul>
-<li><a class="own-underline" href="https://greasyfork.org/zh-CN/scripts?utf8=%E2%9C%93&q=%E5%BC%B9%E7%AA%97%E9%98%BB%E6%AD%A2%E7%A8%8B%E5%BA%8F%E8%84%9A%E6%9C%AC" target="_blank">弹窗阻止程序脚本</a></li>
-<li><a class="own-underline" href="https://greasyfork.org/zh-CN/scripts/24508-userscript-show-site-all-userjs" target="_blank">Userscript+ : 显示当前网站所有可用的UserJS脚本 Jaeger</a></li>
-</ul>
-
-                </div>
-            </div>
-            <div class="clearfix"></div>
-            <hr class="nogutter">
-            
-<!-- 当前博客前后两篇博客 -->
-<div class="row justify-content-center">
-    <nav class="m-pagination col-md-8 col-sm-24" role="pagination">
-        
-        <a class="float-left" href="/2018/09/28/hexo 小 bug/" style="float: left;">
-            ← Hexo 小 bug
-        </a>
-        
-        
-        <a class="float-right" href="/2018/09/28/plugin Chrome 插件/">
-            Chrome 插件 →
-        </a>
-        
-    </nav>
-</div>
-
-            <div class="row justify-content-center">
-                <div class="col-lg-8 col-md-10">
-                    <script type="text/javascript"></script>
-
                 </div>
             </div>
         </div>
     </section>
     
-    <script>
-        var num_map = [ '零', '一', '二', '三', '四', '五', '六', '七', '八', '九' ];
-        var min_width = 1050;
-        $(function(){
-            var width = $(window).width();
-            if( width > min_width ){
-                div_side_navigation_left.show = true;
-            }
-            else {
-                div_side_navigation_left.show = false;
-            }
-            
-            var preH2 = undefined;
-            $('h2').each(function(index, element){
-                var circleTimes = $(element).nextAll('h2').length > 0 ? 1 : 2;
-                if( index === 0 ){
-                    preH2 = element;
-                }
-                else {
-                    for( var i = 0; i < circleTimes; i++ ){
-                        var content = $(preH2).text().toString();
-                        var header = content.indexOf('、') > 0 ? content.split('、')[1] : 
-                            content.indexOf('.') > 0 ? content.split('.')[1] : content;
-                        var id = num_map[index + i] + '. ' + header + '';
-                        $(preH2).attr('id', id);
-                        var header = {'id':id, 'children':[]};
-                        $(preH2).nextUntil(element, 'h4').each( function(index, element){
-                            var child_content = $(element).text().toString();
-                            var child_header = child_content.indexOf('、') > 0 ? child_content.split('、')[1] : 
-                            child_content.indexOf('.') > 0 ? child_content.split('.')[1] : child_content;;
-                            var child_id = (index + 1 ) + '. ' + child_header + '';
-                            $(element).attr('id', child_id);
-                            header.children.push({'id':child_id});
-                        });
-                        div_side_navigation_left.headers.push(header);
-                        
-                        preH2 = element;
-                    }
-                }
-            });
-        });
-
-        $(window).resize(function(){
-            var width = $(window).width();
-            if( width > min_width ){
-                div_side_navigation_left.show = true;
-            }
-            else {
-                div_side_navigation_left.show = false;
-            }
-        });
-        
-        var div_side_navigation_left = new Vue({
-            el : '#div-side-navigation-left',
-            data : {
-                show : true,
-                headers : []
-            },
-            methods : {
-                IDToHref : function(id){
-                    return "#" + id;
-                },
-                ownChild : function(children){
-                    return children instanceof Array && children.length > 0; 
-                }
-            }
-        });
-    </script>
-
+    <section id="statement">
+        <div class="container text-center wow fadeInUp" data-wow-delay="0.5s">
+            <div class="row justify-content-center">
+                <p>给岁月以文明，给时光以生命。</p>
+            </div>
+        </div>
+    </section>
 
     
 <!-- ============================ Footer =========================== -->
