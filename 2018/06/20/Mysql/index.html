@@ -300,7 +300,7 @@
                 var content = $(element).text().toString();
                 var header = content.indexOf('、') > 0 ? content.split('、')[1] : 
                     content.indexOf('.') > 0 ? content.split('.')[1] : content;
-                var id = num_map[index + i] + '. ' + header + '';
+                var id = num_map[index + 1] + '. ' + header + '';
                 $(element).attr('id', id);
                 var header = {'id':id, 'children':[]};
                 div_side_navigation_left.headers.push(header);
@@ -465,7 +465,8 @@
     });
 </script>
 <!-- <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script> -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
 <!-- <script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
 
 </body>

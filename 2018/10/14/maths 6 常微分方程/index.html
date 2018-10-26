@@ -273,7 +273,7 @@
 <li>$ (1 + e^{ -\frac{x}{y} }) y {\rm d}x = (x - y){\rm d}y $ </li>
 <li>$ \dfrac{ {\rm d}x }{ {\rm d}y } = \dfrac{x - y}{1 + e^{ -\frac{x}{y} }y } = \dfrac{ \dfrac{x}{y} - 1 }{ 1 + e^{ -\frac{x}{y} } } $ </li>
 <li>令 $ \dfrac{x}{y} = u \implies x = uy \implies \dfrac{ {\rm d}x }{ {\rm d}y } = \dfrac{ {\rm d}u }{ {\rm d}y } \cdot y + u $ <ul>
-<li>$ \begin{array}{l} &amp; \dfrac{ e^u + 1 }{ e^u + u } {\rm d}u = - \dfrac{ {\rm d}y }{y} \\ \implies &amp; \int \dfrac{ e^u + 1 }{ e^u + u } {\rm d}u = - \int \dfrac{ {\rm d}y }{y} \\ \implies &amp; \ln \left| e^u + u \right| = - \ln |y| + \ln C_1 \\ \implies &amp; e^u + u = \dfrac{ \pm C_1 }{y} = \dfrac{C}{y} \end{array} $ </li>
+<li>$ \begin{array}{l} &amp; \dfrac{ e^u + 1 }{ e^u + u } {\rm d}u = - \dfrac{ {\rm d}y }{y} \\\\ \implies &amp; \int \dfrac{ e^u + 1 }{ e^u + u } {\rm d}u = - \int \dfrac{ {\rm d}y }{y} \\\\ \implies &amp; \ln \left| e^u + u \right| = - \ln |y| + \ln C_1 \\\\ \implies &amp; e^u + u = \dfrac{ \pm C_1 }{y} = \dfrac{C}{y} \end{array} $ </li>
 </ul>
 </li>
 <li>$ \implies \left( e^{ \frac{x}{y} } + \dfrac{x}{y} \right) \cdot y = C, \quad (C \not= 0) $ </li>
@@ -290,14 +290,14 @@
 <li>现在 $ (🐶)’ = p(x) \implies 🐶 = \int p(x) {\rm d}x $ </li>
 </ul>
 </li>
-<li>$ \begin{array}{l} \implies e^{ \int p(x) {\rm d}x } \cdot y’ + e^{ \int p(x) } \cdot p(x)y = e^{ \int p(x) {\rm d}x } \cdot q(x) \\ \implies \left( y \cdot e^{ \int px(x) {\rm d}x } \right)’ = e^{ \int p(x) {\rm d}x } \cdot q(x) \\ \implies y = e^{ -\int p(x) {\rm d}x } \left[ \int \left( e^{ \int p(x) {\rm d}x } \cdot q(x) \right) {\rm d}x + C \right] \end{array} $</li>
+<li>$ \begin{array}{l} \implies e^{ \int p(x) {\rm d}x } \cdot y’ + e^{ \int p(x) } \cdot p(x)y = e^{ \int p(x) {\rm d}x } \cdot q(x) \\\\ \implies \left( y \cdot e^{ \int px(x) {\rm d}x } \right)’ = e^{ \int p(x) {\rm d}x } \cdot q(x) \\\\ \implies y = e^{ -\int p(x) {\rm d}x } \left[ \int \left( e^{ \int p(x) {\rm d}x } \cdot q(x) \right) {\rm d}x + C \right] \end{array} $</li>
 </ul>
 </li>
 </ul>
 </li>
 <li>例题<ol>
 <li>微分方程 $ (y^2 + 1) {\rm d}x = y(y - 2x) {\rm d}y $ 的通解是 ________ 。<ul>
-<li>$ \begin{array}{l} &amp; \dfrac{ {\rm d}x }{ {\rm d}y } = \dfrac{-2y}{y^2 + 1} x + \dfrac{y^2}{y^2 + 1} \\ \implies &amp; x’ + \dfrac{2y}{y^2 + 1}x = \dfrac{y^2}{y^2 + 1} \\ \implies &amp; x = e^{ -\int \frac{2y}{y^2 + 1} {\rm d}y } \left[ \int \left( e^{ \int \frac{2y}{y^2 + 1} {\rm d}y } \cdot \dfrac{y^2}{y^2 + 1} \right) {\rm d}y + C \right] \\ \implies &amp; x = e^{ -\ln( y^2 + 1 ) } \left[ \int \left( e^{ \ln( y^2 + 1 ) } \cdot \dfrac{y^2}{y^2 + 1} \right) {\rm d}y + C \right] \\ \implies &amp; x = \dfrac{1}{y^2 + 1} \left( \dfrac{y^3}{3} + C \right), \quad \forall C \end{array} $ </li>
+<li>$ \begin{array}{l} &amp; \dfrac{ {\rm d}x }{ {\rm d}y } = \dfrac{-2y}{y^2 + 1} x + \dfrac{y^2}{y^2 + 1} \\\\ \implies &amp; x’ + \dfrac{2y}{y^2 + 1}x = \dfrac{y^2}{y^2 + 1} \\\\ \implies &amp; x = e^{ -\int \frac{2y}{y^2 + 1} {\rm d}y } \left[ \int \left( e^{ \int \frac{2y}{y^2 + 1} {\rm d}y } \cdot \dfrac{y^2}{y^2 + 1} \right) {\rm d}y + C \right] \\\\ \implies &amp; x = e^{ -\ln( y^2 + 1 ) } \left[ \int \left( e^{ \ln( y^2 + 1 ) } \cdot \dfrac{y^2}{y^2 + 1} \right) {\rm d}y + C \right] \\\\ \implies &amp; x = \dfrac{1}{y^2 + 1} \left( \dfrac{y^3}{3} + C \right), \quad \forall C \end{array} $ </li>
 </ul>
 </li>
 </ol>
@@ -312,7 +312,7 @@
 </ul>
 <ol>
 <li>写 $ \lambda^2 + p \lambda + q = 0 \implies \lambda_1, \lambda_2 $ </li>
-<li>$ \begin{cases} \Delta &gt; 0 &amp; \implies \lambda_1 \not= \lambda_2 &amp; \implies y = C_1 e^{ \lambda_1 x } + C_2 e^{ \lambda_2 x } \\ \Delta = 0 &amp; \implies \lambda_1 = \lambda_2 = \lambda &amp; \implies y = ( C_1 + C_2 x ) e^{ \lambda x } \\ \Delta &lt; 0 &amp; \implies \lambda_{1,2} = \alpha \pm \beta {\rm i} &amp; \implies y = e^{\alpha x} \left( C_1 \cos \beta x + C_2 \sin \beta x \right) \end{cases} $ </li>
+<li>$ \begin{cases} \Delta &gt; 0 &amp; \implies \lambda_1 \not= \lambda_2 &amp; \implies y = C_1 e^{ \lambda_1 x } + C_2 e^{ \lambda_2 x } \\\\ \Delta = 0 &amp; \implies \lambda_1 = \lambda_2 = \lambda &amp; \implies y = ( C_1 + C_2 x ) e^{ \lambda x } \\\\ \Delta &lt; 0 &amp; \implies \lambda_{1,2} = \alpha \pm \beta {\rm i} &amp; \implies y = e^{\alpha x} \left( C_1 \cos \beta x + C_2 \sin \beta x \right) \end{cases} $ </li>
 </ol>
 </li>
 </ul>
@@ -385,7 +385,7 @@
 <li>已知曲线 $ y = y(x) $ 经过点 $ (1, e^{-1}) $ ，且在点 $ (x, y) $ 处的切线在 $ y $ 轴上的截距为 $ xy $ ，求该曲线方程的表达式。<ul>
 <li>切线方程为：$ Y - y = y’( X - x ) $ </li>
 <li>令 $ X = 0 \implies Y = y - xy’ = xy $ </li>
-<li>$ \begin{array}{l} \implies \dfrac{ {\rm d}y }{y} = \left( \dfrac{1}{x} - 1 \right) {\rm d}x \\ \implies \int \dfrac{ {\rm d}y }{y} = \int \left( \dfrac{1}{x} - 1 \right) {\rm d}x \\ \implies \ln |y| = \ln |x| - \ln e^x + \ln C_1 \\ \implies |y| = \dfrac{ C_1 |x| }{e^x} \\ \implies y = C \cdot \dfrac{x}{e^x} \end{array} $ </li>
+<li>$ \begin{array}{l} \implies \dfrac{ {\rm d}y }{y} = \left( \dfrac{1}{x} - 1 \right) {\rm d}x \\\\ \implies \int \dfrac{ {\rm d}y }{y} = \int \left( \dfrac{1}{x} - 1 \right) {\rm d}x \\\\ \implies \ln |y| = \ln |x| - \ln e^x + \ln C_1 \\\\ \implies |y| = \dfrac{ C_1 |x| }{e^x} \\\\ \implies y = C \cdot \dfrac{x}{e^x} \end{array} $ </li>
 <li>过点 $ ( 1, e^{-1} ) \implies C = 1 $ 。</li>
 <li>所以曲线方程为 $ y = \dfrac{x}{e^x} $ 。</li>
 </ul>
@@ -464,7 +464,7 @@
                 var content = $(element).text().toString();
                 var header = content.indexOf('、') > 0 ? content.split('、')[1] : 
                     content.indexOf('.') > 0 ? content.split('.')[1] : content;
-                var id = num_map[index + i] + '. ' + header + '';
+                var id = num_map[index + 1] + '. ' + header + '';
                 $(element).attr('id', id);
                 var header = {'id':id, 'children':[]};
                 div_side_navigation_left.headers.push(header);
@@ -629,7 +629,8 @@
     });
 </script>
 <!-- <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script> -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
 <!-- <script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
 
 </body>

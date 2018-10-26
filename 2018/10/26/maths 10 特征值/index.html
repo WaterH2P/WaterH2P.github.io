@@ -218,8 +218,8 @@ A\xi = \lambda \xi \quad (Ⅰ)</script><p>则称 $ \lambda $ 是 A 的特征值�
 <p>由 (Ⅰ) 式，得</p>
 <script type="math/tex; mode=display">
 \begin{array}{l}
-  \lambda \xi - A \xi = 0 &\implies (\lambda E - A)\xi = 0 \\
-  \because \xi \not= 0 &\implies (\lambda E - A)X = 0 \text{ 对于 X 有非零解 } \\
+  \lambda \xi - A \xi = 0 &\implies (\lambda E - A)\xi = 0 \\\\
+  \because \xi \not= 0 &\implies (\lambda E - A)X = 0 \text{ 对于 X 有非零解 } \\\\
   \text{齐次线性方程组有非零解} &\implies |\lambda E - A| = 0
 \end{array}</script><p>因 $ \xi \not= 0 $ ，故</p>
 <script type="math/tex; mode=display">
@@ -234,13 +234,13 @@ A\xi = \lambda \xi \quad (Ⅰ)</script><p>则称 $ \lambda $ 是 A 的特征值�
 <h4 id="2、例题"><a href="#2、例题" class="headerlink" title="2、例题"></a>2、例题</h4><ol>
 <li>求 $ A = \begin{pmatrix} 0 &amp; 0 &amp; 1 \\ 0 &amp; 1 &amp; 0 \\ 1 &amp; 0 &amp; 0 \end{pmatrix} $ 的特征值与特征向量。<ul>
 <li>1️⃣ 求 $ \lambda $ <ul>
-<li>$ \begin{array}{l} |\lambda E - A| &amp;= \begin{vmatrix} \lambda &amp; 0 &amp; -1 \\ 0 &amp; \lambda - 1 &amp; 0 \\ -1 &amp; 0 &amp; \lambda \end{vmatrix} \\ &amp;= (\lambda -1) \cdot (-1)^{2+2} \cdot \begin{vmatrix} \lambda &amp; -1 \\ -1 &amp; \lambda \end{vmatrix} \\ &amp;= (\lambda - 1)^2(\lambda + 1) = 0 \\ &amp;\implies \lambda_1 = \lambda_2 = 1, \quad \lambda_3 = -1 \end{array} $ </li>
+<li>$ \begin{array}{l} |\lambda E - A| &amp;= \begin{vmatrix} \lambda &amp; 0 &amp; -1 \\ 0 &amp; \lambda - 1 &amp; 0 \\ -1 &amp; 0 &amp; \lambda \end{vmatrix} \\\\ &amp;= (\lambda -1) \cdot (-1)^{2+2} \cdot \begin{vmatrix} \lambda &amp; -1 \\ -1 &amp; \lambda \end{vmatrix} \\\\ &amp;= (\lambda - 1)^2(\lambda + 1) = 0 \\\\ &amp;\implies \lambda_1 = \lambda_2 = 1, \quad \lambda_3 = -1 \end{array} $ </li>
 </ul>
 </li>
 <li>2️⃣ 求 $ \xi $ <ul>
 <li>当 $ \lambda_1 = \lambda_2 = 1 $ 时<ul>
-<li>$ \begin{array}{l} &amp; (\lambda E - A)X = 0 &amp;\implies (E - A)X = 0 \\ \implies &amp; \begin{pmatrix} 1 &amp; 0 &amp; -1 \\ 0 &amp; 0 &amp; 0 \\ -1 &amp; 0 &amp; 1 \end{pmatrix} &amp;\to \begin{pmatrix} 1 &amp; 0 &amp; -1 \\ 0 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 0 \end{pmatrix} \end{array} $</li>
-<li>$ S = n - {\rm r} = 2 \implies \begin{cases} \xi_1 = ( 0 &amp; 1 &amp; 0 )^{\rm T} \\ \xi_2 = ( 1 &amp; 0 &amp; 1 )^{\rm T} \end{cases} $ <ul>
+<li>$ \begin{array}{l} &amp; (\lambda E - A)X = 0 &amp;\implies (E - A)X = 0 \\\\ \implies &amp; \begin{pmatrix} 1 &amp; 0 &amp; -1 \\ 0 &amp; 0 &amp; 0 \\ -1 &amp; 0 &amp; 1 \end{pmatrix} &amp;\to \begin{pmatrix} 1 &amp; 0 &amp; -1 \\ 0 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 0 \end{pmatrix} \end{array} $</li>
+<li>$ S = n - {\rm r} = 2 \implies \begin{cases} \xi_1 = ( 0 &amp; 1 &amp; 0 )^{\rm T} \\\\ \xi_2 = ( 1 &amp; 0 &amp; 1 )^{\rm T} \end{cases} $ <ul>
 <li>取第一列，$ x_2, x_3 $ 为自由变量<ul>
 <li>第二列不可以取，因为 $ {\rm r} \left( \begin{vmatrix} 0 \end{vmatrix} \right) = 0 $ </li>
 </ul>
@@ -251,12 +251,12 @@ A\xi = \lambda \xi \quad (Ⅰ)</script><p>则称 $ \lambda $ 是 A 的特征值�
 </ul>
 </li>
 <li>当 $ \lambda_3 = -1 $ 时<ul>
-<li>$ \begin{array}{l} &amp; (\lambda E - A)X = 0 &amp;\implies (-E - A)X = 0 \\ \implies &amp; \begin{pmatrix} -1 &amp; 0 &amp; -1 \\ 0 &amp; -2 &amp; 0 \\ -1 &amp; 0 &amp; -1 \end{pmatrix} &amp;\to \begin{pmatrix} 1 &amp; 0 &amp; 1 \\ 0 &amp; 1 &amp; 0 \\ 0 &amp; 0 &amp; 0 \end{pmatrix} \end{array} $ </li>
+<li>$ \begin{array}{l} &amp; (\lambda E - A)X = 0 &amp;\implies (-E - A)X = 0 \\\\ \implies &amp; \begin{pmatrix} -1 &amp; 0 &amp; -1 \\ 0 &amp; -2 &amp; 0 \\ -1 &amp; 0 &amp; -1 \end{pmatrix} &amp;\to \begin{pmatrix} 1 &amp; 0 &amp; 1 \\ 0 &amp; 1 &amp; 0 \\ 0 &amp; 0 &amp; 0 \end{pmatrix} \end{array} $ </li>
 <li>$ S = n - {\rm r} = 1 \implies \xi_3 = \begin{pmatrix} -1 &amp; 0 &amp; 1 \end{pmatrix}^{\rm T} $ </li>
 <li>通解为 $ k_3 \xi_3, \quad k_3 \not= 0 $ </li>
 </ul>
 </li>
-<li>所以特征向量为 $ \begin{cases} k_1 \xi_1 + k_2 \xi_2, \quad k_1, k_2 \text{ 为不全为 0 的任意常数} \\ k_3 \xi_3, \quad k_3 \not= 0 \end{cases} $ </li>
+<li>所以特征向量为 $ \begin{cases} k_1 \xi_1 + k_2 \xi_2, \quad k_1, k_2 \text{ 为不全为 0 的任意常数} \\\\ k_3 \xi_3, \quad k_3 \not= 0 \end{cases} $ </li>
 </ul>
 </li>
 </ul>
@@ -278,7 +278,7 @@ A\xi = \lambda \xi \quad (Ⅰ)</script><p>则称 $ \lambda $ 是 A 的特征值�
 </ol>
 <p><br></p>
 <h2 id="四、求可逆矩阵-P"><a href="#四、求可逆矩阵-P" class="headerlink" title="四、求可逆矩阵 P"></a>四、求可逆矩阵 P</h2><ul>
-<li>$ \begin{array}{l} &amp; P^{-1}AP = \Lambda \\ \iff &amp; AP = P \Lambda \\ \iff &amp; A\begin{pmatrix} \xi_1&amp; \xi_2 &amp; \cdots &amp; \xi_n \end{pmatrix} = \begin{pmatrix} \xi_1&amp; \xi_2 &amp; \cdots &amp; \xi_n \end{pmatrix}\begin{pmatrix} \lambda_1 &amp;  &amp;  &amp;  \\  &amp; \lambda_2 &amp; &amp; \\ &amp; &amp; \ddots &amp; \\ &amp; &amp; &amp; \lambda_n \end{pmatrix} \\ \iff &amp; \begin{pmatrix} A\xi_1 &amp; A\xi_2 &amp; \cdots &amp; A\xi_n \end{pmatrix} = \begin{pmatrix} \lambda_1 \xi_1 &amp; \lambda_2 \xi_2 &amp; \cdots &amp; \lambda_n \xi_n \end{pmatrix} \\ \iff &amp; A\xi_i = \lambda_i \xi_i, \quad (i=1, 2, \cdots, n) \end{array} $ <ul>
+<li>$ \begin{array}{l} &amp; P^{-1}AP = \Lambda \\\\ \iff &amp; AP = P \Lambda \\\\ \iff &amp; A\begin{pmatrix} \xi_1&amp; \xi_2 &amp; \cdots &amp; \xi_n \end{pmatrix} = \begin{pmatrix} \xi_1&amp; \xi_2 &amp; \cdots &amp; \xi_n \end{pmatrix}\begin{pmatrix} \lambda_1 &amp;  &amp;  &amp;  \\  &amp; \lambda_2 &amp; &amp; \\ &amp; &amp; \ddots &amp; \\ &amp; &amp; &amp; \lambda_n \end{pmatrix} \\\\ \iff &amp; \begin{pmatrix} A\xi_1 &amp; A\xi_2 &amp; \cdots &amp; A\xi_n \end{pmatrix} = \begin{pmatrix} \lambda_1 \xi_1 &amp; \lambda_2 \xi_2 &amp; \cdots &amp; \lambda_n \xi_n \end{pmatrix} \\\\ \iff &amp; A\xi_i = \lambda_i \xi_i, \quad (i=1, 2, \cdots, n) \end{array} $ <ul>
 <li>所以 $ \Lambda = \begin{bmatrix} \lambda_1 &amp;  &amp;  &amp;  \\  &amp; \lambda_2 &amp; &amp; \\ &amp; &amp; \ddots &amp; \\ &amp; &amp; &amp; \lambda_n \end{bmatrix} $ ，其中 $ \lambda_i (i=1, 2, \cdots, n) $ 为 A 的 n 个特征值。</li>
 <li>$ P = \begin{bmatrix} \xi_1&amp; \xi_2 &amp; \cdots &amp; \xi_n \end{bmatrix}, \xi_i(i=1, 2, \cdots, n) $ 是 A 的 n 个线性无关的特征向量，且 $ \xi_i $ 对应的特征值为 $ \lambda_i $ 。</li>
 <li>A 可以相似对角化 $ \iff $ 存在可逆 P，使得 $ P^{-1} AP = \Lambda $ $ \iff $ A 有 n 个线性无关的特征向量</li>
@@ -289,25 +289,25 @@ A\xi = \lambda \xi \quad (Ⅰ)</script><p>则称 $ \lambda $ 是 A 的特征值�
 <p><br></p>
 <h2 id="五、例题"><a href="#五、例题" class="headerlink" title="五、例题"></a>五、例题</h2><ol>
 <li>设 $ A_{3 \times 3} $ ，且 $ A \xi_i = i \xi_i, i=1, 2, 3 $ ，其中 $ \xi_1 = \begin{pmatrix} 1 \\ 0 \\ 0 \end{pmatrix}, \xi_2 = \begin{pmatrix} 1 \\ 1 \\ 0 \end{pmatrix}, \xi_3 = \begin{pmatrix} 1 \\ 1 \\ 1 \end{pmatrix} $ ，求 A。<ul>
-<li>由定义 $ A \xi = \lambda \xi, \xi \not= 0 $ 可知，$ \left. \begin{array}{l} A\xi_1 = 1 \cdot \xi \\ A \xi_2 = 2 \cdot \xi_2 \\ A\xi_3 = 3 \cdot \xi_3 \end{array} \right\} \implies \begin{cases} \lambda_1 = 1， &amp; \xi_1 = \begin{pmatrix} 1 &amp; 0 &amp; 0 \end{pmatrix}^{\rm T} \\ \lambda_2 = 2， &amp; \xi_2 = \begin{pmatrix} 1 &amp; 1 &amp; 0 \end{pmatrix}^{\rm T} \\ \lambda_3 = 3， &amp; \xi_3 = \begin{pmatrix} 1 &amp; 1 &amp; 1 \end{pmatrix}^{\rm T} \end{cases} $ </li>
+<li>由定义 $ A \xi = \lambda \xi, \xi \not= 0 $ 可知，$ \left. \begin{array}{l} A\xi_1 = 1 \cdot \xi \\\\ A \xi_2 = 2 \cdot \xi_2 \\\\ A\xi_3 = 3 \cdot \xi_3 \end{array} \right\} \implies \begin{cases} \lambda_1 = 1， &amp; \xi_1 = \begin{pmatrix} 1 &amp; 0 &amp; 0 \end{pmatrix}^{\rm T} \\\\ \lambda_2 = 2， &amp; \xi_2 = \begin{pmatrix} 1 &amp; 1 &amp; 0 \end{pmatrix}^{\rm T} \\\\ \lambda_3 = 3， &amp; \xi_3 = \begin{pmatrix} 1 &amp; 1 &amp; 1 \end{pmatrix}^{\rm T} \end{cases} $ </li>
 <li>令 $ P = \begin{pmatrix} \xi_1 &amp; \xi_2 &amp; \xi_3 \end{pmatrix} $ ，所以 $ |P| = \begin{vmatrix} 1 &amp; 1 &amp; 1 \\ 0 &amp; 1 &amp; 1 \\ 0 &amp; 0 &amp; 1 \end{vmatrix} \not= 0 $ 。</li>
 <li>故 $ P^{-1}AP = \Lambda $ ，即 $ \begin{pmatrix} 1 &amp; 1 &amp; 1 \\ 0 &amp; 1 &amp; 1 \\ 0 &amp; 0 &amp; 1 \end{pmatrix}^{-1} A \begin{pmatrix} 1 &amp; 1 &amp; 1 \\ 0 &amp; 1 &amp; 1 \\ 0 &amp; 0 &amp; 1 \end{pmatrix} = \begin{pmatrix} 1 &amp; &amp; \\ &amp; 2 &amp; \\ &amp; &amp; 3 \end{pmatrix} $ </li>
-<li>$ \implies \begin{array}{l} A &amp; = P \Lambda P^{-1} \\ &amp;= \begin{pmatrix} 1 &amp; 1 &amp; 1 \\ 0 &amp; 1 &amp; 1 \\ 0 &amp; 0 &amp; 1 \end{pmatrix} \begin{pmatrix} 1 &amp; &amp; \\ &amp; 2 &amp; \\ &amp; &amp; 3 \end{pmatrix} \begin{pmatrix} 1 &amp; -1 &amp; 0 \\ 0 &amp; 1 &amp; -1 \\ 0 &amp; 0 &amp; 1 \end{pmatrix} \\ &amp;= \begin{pmatrix} 1 &amp; 1 &amp; 1 \\ 0 &amp; 2 &amp;1 \\ 0 &amp; 0 &amp; 3 \end{pmatrix} \end{array} $ </li>
+<li>$ \implies \begin{array}{l} A &amp; = P \Lambda P^{-1} \\\\ &amp;= \begin{pmatrix} 1 &amp; 1 &amp; 1 \\ 0 &amp; 1 &amp; 1 \\ 0 &amp; 0 &amp; 1 \end{pmatrix} \begin{pmatrix} 1 &amp; &amp; \\ &amp; 2 &amp; \\ &amp; &amp; 3 \end{pmatrix} \begin{pmatrix} 1 &amp; -1 &amp; 0 \\ 0 &amp; 1 &amp; -1 \\ 0 &amp; 0 &amp; 1 \end{pmatrix} \\\\ &amp;= \begin{pmatrix} 1 &amp; 1 &amp; 1 \\ 0 &amp; 2 &amp;1 \\ 0 &amp; 0 &amp; 3 \end{pmatrix} \end{array} $ </li>
 </ul>
 </li>
 <li>已知 $ A = \begin{pmatrix} 2 &amp; 2 &amp; 1 \\ 0 &amp; 3 &amp; 0 \\ 3 &amp; -6 &amp; 0 \end{pmatrix} $ ，求 $ A^{100} $ 。<ul>
-<li>$ \begin{array}{l} |\lambda E - A| = 0 &amp;\implies \begin{vmatrix} \lambda -2 &amp; -2 &amp; -1 \\ 0 &amp; \lambda - 3 &amp; 0 \\ -3 &amp; 6 &amp; \lambda \end{vmatrix} = 0 \\ &amp;\implies (\lambda - 3)^2 (\lambda + 1) = 0 \\ &amp;\implies \lambda_1 = \lambda_2 = 3, \quad \lambda_3 = -1 \end{array} $</li>
+<li>$ \begin{array}{l} |\lambda E - A| = 0 &amp;\implies \begin{vmatrix} \lambda -2 &amp; -2 &amp; -1 \\ 0 &amp; \lambda - 3 &amp; 0 \\ -3 &amp; 6 &amp; \lambda \end{vmatrix} = 0 \\\\ &amp;\implies (\lambda - 3)^2 (\lambda + 1) = 0 \\\\ &amp;\implies \lambda_1 = \lambda_2 = 3, \quad \lambda_3 = -1 \end{array} $</li>
 <li>$ \lambda_1 = \lambda_2 = 3 $ 时<ul>
-<li>$ \begin{array}{l} &amp;\implies (3E - A)X = 0 \\ &amp;\implies \begin{pmatrix} 1 &amp; -2 &amp; -1 \\ 0 &amp; 0 &amp; 0 \\ -3 &amp; 6 &amp; 3 \end{pmatrix} \to \begin{pmatrix} 1 &amp; -2 &amp; -1 \\ 0 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 0 \end{pmatrix} \\ &amp;\implies S = 3 - {\rm r} = 2 \\ &amp; \implies \begin{cases} \xi_1 = \begin{pmatrix} 2 &amp; 1 &amp; 0 \end{pmatrix}^{\rm T} \\ \xi_2 = \begin{pmatrix} 1 &amp; 0 &amp; 1 \end{pmatrix}^{\rm T} \end{cases} \end{array} ​$ </li>
+<li>$ \begin{array}{l} &amp;\implies (3E - A)X = 0 \\\\ &amp;\implies \begin{pmatrix} 1 &amp; -2 &amp; -1 \\ 0 &amp; 0 &amp; 0 \\ -3 &amp; 6 &amp; 3 \end{pmatrix} \to \begin{pmatrix} 1 &amp; -2 &amp; -1 \\ 0 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 0 \end{pmatrix} \\\\ &amp;\implies S = 3 - {\rm r} = 2 \\\\ &amp; \implies \begin{cases} \xi_1 = \begin{pmatrix} 2 &amp; 1 &amp; 0 \end{pmatrix}^{\rm T} \\\\ \xi_2 = \begin{pmatrix} 1 &amp; 0 &amp; 1 \end{pmatrix}^{\rm T} \end{cases} \end{array} ​$ </li>
 </ul>
 </li>
 <li>$ \lambda_3 = -1 $ 时<ul>
-<li>$ \begin{array}{l} &amp;\implies (-E - A)X = 0 \\ &amp;\implies \begin{pmatrix} -3 &amp; -2 &amp; -1 \\ 0 &amp; -4 &amp; 0 \\ -3 &amp; 6 &amp; -1 \end{pmatrix} \to \begin{pmatrix} 3 &amp; 2 &amp; 1 \\ 0 &amp; 1 &amp; 0 \\ 0 &amp; 0 &amp; 0 \end{pmatrix} \\ &amp;\implies S = 3 - {\rm r} = 1 \\ &amp;\implies \xi_3 = \begin{pmatrix} -1 &amp; 0 &amp; 3 \end{pmatrix}^{\rm T} \end{array} $ </li>
+<li>$ \begin{array}{l} &amp;\implies (-E - A)X = 0 \\\\ &amp;\implies \begin{pmatrix} -3 &amp; -2 &amp; -1 \\ 0 &amp; -4 &amp; 0 \\ -3 &amp; 6 &amp; -1 \end{pmatrix} \to \begin{pmatrix} 3 &amp; 2 &amp; 1 \\ 0 &amp; 1 &amp; 0 \\ 0 &amp; 0 &amp; 0 \end{pmatrix} \\\\ &amp;\implies S = 3 - {\rm r} = 1 \\\\ &amp;\implies \xi_3 = \begin{pmatrix} -1 &amp; 0 &amp; 3 \end{pmatrix}^{\rm T} \end{array} $ </li>
 </ul>
 </li>
 <li>由于 $ \begin{vmatrix} \xi_1 &amp; \xi_2 &amp; \xi_3 \end{vmatrix} = \begin{vmatrix} 2 &amp; 1 &amp; -1 \\ 1 &amp; 0 &amp; 0 \\ 0 &amp; 1 &amp; 3 \end{vmatrix} \not= 0 $，令 $ P = \begin{pmatrix} \xi_1 &amp; \xi_2 &amp; \xi_3 \end{pmatrix} $ ，P 可逆。</li>
 <li>故 $ P^{-1}AP = \Lambda \implies A = P \Lambda P^{-1} $ </li>
-<li>$ \begin{array}{l} A^{100} &amp;= P \Lambda^{100} P^{-1} \\ &amp;= \begin{pmatrix} 2 &amp; 1 &amp; -1 \\ 1 &amp; 0 &amp; 0 \\ 0 &amp; 1 &amp; 3 \end{pmatrix} \begin{pmatrix} 3^{100} &amp; &amp; \\  &amp; 3^{100} &amp; \\ &amp; &amp; 1 \end{pmatrix} \cdot \dfrac{1}{4} \cdot \begin{pmatrix} 0 &amp; 4 &amp; 0 \\ 3 &amp; -6 &amp; 1 \\ -1 &amp; 2 &amp;1 \end{pmatrix} \\ &amp;= \dfrac{1}{4} \cdot \begin{pmatrix} 2 \cdot 3^{100} &amp; 3^{100} &amp; -1 \\ 3^{100} &amp; 0 &amp; 0 \\ 0 &amp; 3^{100} &amp; 3 \end{pmatrix} \cdot \begin{pmatrix} 0 &amp; 4 &amp; 0 \\ 3 &amp; -6 &amp; 1 \\ -1 &amp; 2 &amp;1 \end{pmatrix} \\ &amp;= \dfrac{1}{4} \cdot \begin{pmatrix} 3^{101} + 1 &amp; 2 \cdot 3^{100} - 2 &amp; 3^{100} - 1 \\ 0 &amp; 4 \cdot 3^{100} &amp; 0 \\ 3^{101} - 3 &amp; -6 \cdot 3^{100} + 6 &amp; 3^{100} + 3 \end{pmatrix} \end{array} $ </li>
+<li>$ \begin{array}{l} A^{100} &amp;= P \Lambda^{100} P^{-1} \\\\ &amp;= \begin{pmatrix} 2 &amp; 1 &amp; -1 \\ 1 &amp; 0 &amp; 0 \\ 0 &amp; 1 &amp; 3 \end{pmatrix} \begin{pmatrix} 3^{100} &amp; &amp; \\  &amp; 3^{100} &amp; \\ &amp; &amp; 1 \end{pmatrix} \cdot \dfrac{1}{4} \cdot \begin{pmatrix} 0 &amp; 4 &amp; 0 \\ 3 &amp; -6 &amp; 1 \\ -1 &amp; 2 &amp;1 \end{pmatrix} \\\\ &amp;= \dfrac{1}{4} \cdot \begin{pmatrix} 2 \cdot 3^{100} &amp; 3^{100} &amp; -1 \\ 3^{100} &amp; 0 &amp; 0 \\ 0 &amp; 3^{100} &amp; 3 \end{pmatrix} \cdot \begin{pmatrix} 0 &amp; 4 &amp; 0 \\ 3 &amp; -6 &amp; 1 \\ -1 &amp; 2 &amp;1 \end{pmatrix} \\\\ &amp;= \dfrac{1}{4} \cdot \begin{pmatrix} 3^{101} + 1 &amp; 2 \cdot 3^{100} - 2 &amp; 3^{100} - 1 \\ 0 &amp; 4 \cdot 3^{100} &amp; 0 \\ 3^{101} - 3 &amp; -6 \cdot 3^{100} + 6 &amp; 3^{100} + 3 \end{pmatrix} \end{array} $ </li>
 </ul>
 </li>
 </ol>
@@ -380,7 +380,7 @@ A\xi = \lambda \xi \quad (Ⅰ)</script><p>则称 $ \lambda $ 是 A 的特征值�
                 var content = $(element).text().toString();
                 var header = content.indexOf('、') > 0 ? content.split('、')[1] : 
                     content.indexOf('.') > 0 ? content.split('.')[1] : content;
-                var id = num_map[index + i] + '. ' + header + '';
+                var id = num_map[index + 1] + '. ' + header + '';
                 $(element).attr('id', id);
                 var header = {'id':id, 'children':[]};
                 div_side_navigation_left.headers.push(header);
@@ -545,7 +545,8 @@ A\xi = \lambda \xi \quad (Ⅰ)</script><p>则称 $ \lambda $ 是 A 的特征值�
     });
 </script>
 <!-- <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script> -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
 <!-- <script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
 
 </body>

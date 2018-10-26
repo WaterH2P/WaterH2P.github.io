@@ -214,7 +214,7 @@
 <h4 id="㊀-、普通对称性"><a href="#㊀-、普通对称性" class="headerlink" title="㊀ 、普通对称性"></a>㊀ 、普通对称性</h4><ol>
 <li>概念<ul>
 <li>若区域 $ D $ 关于 $ y $ 轴对称<ul>
-<li>$ \begin{cases} \iint\limits_D f(x, y) {\rm d} \sigma = 2 \iint\limits_{D_1} f(x, y) {\rm d} \sigma, &amp; f(x, y) = f(-x, y) \\ \iint\limits_D f(x, y) {\rm d} \sigma = 0, &amp; f(x, y) = -f(-x, y) \end{cases} $ </li>
+<li>$ \begin{cases} \iint\limits_D f(x, y) {\rm d} \sigma = 2 \iint\limits_{D_1} f(x, y) {\rm d} \sigma, &amp; f(x, y) = f(-x, y) \\\\ \iint\limits_D f(x, y) {\rm d} \sigma = 0, &amp; f(x, y) = -f(-x, y) \end{cases} $ </li>
 </ul>
 </li>
 </ul>
@@ -260,7 +260,7 @@
 </li>
 <li>2⃣️<ul>
 <li>$ \iint\limits_D ( e^{\lambda x} - e^{- \lambda y} ) {\rm d} \sigma = \iint\limits_D ( e^{\lambda y} - e^{- \lambda x} ) {\rm d} \sigma $ </li>
-<li>$ \implies \begin{array}{l} 2I_2 &amp; = \iint\limits_D \left[ ( e^{\lambda x} - e^{- \lambda x} ) + ( e^{\lambda y} - e^{- \lambda y} ) \right] {\rm d}\sigma \\ &amp; = \iint\limits_D ( e^{\lambda x} - e^{- \lambda x} ) {\rm d}\sigma + \iint\limits_D ( e^{\lambda y} - e^{- \lambda y} ) {\rm d}\sigma\end{array} $ <ul>
+<li>$ \implies \begin{array}{l} 2I_2 &amp; = \iint\limits_D \left[ ( e^{\lambda x} - e^{- \lambda x} ) + ( e^{\lambda y} - e^{- \lambda y} ) \right] {\rm d}\sigma \\\\ &amp; = \iint\limits_D ( e^{\lambda x} - e^{- \lambda x} ) {\rm d}\sigma + \iint\limits_D ( e^{\lambda y} - e^{- \lambda y} ) {\rm d}\sigma\end{array} $ <ul>
 <li>考察 $ g(x, y) = e^{\lambda x} - e^{-\lambda x} $ <ul>
 <li>由于积分区域 $ D $ 关于 $ y $ 轴对称</li>
 <li>且 $ g(x, y) = -g(-x, y) $ </li>
@@ -283,7 +283,7 @@
 <li>设 $ f(x) $ 为恒正的连续函数，证明 $ \int_a^b f(x) {\rm d}x \cdot \int_a^b \dfrac{1}{ f(x) } {\rm d}x \geq (b - a)^2, \quad (a &lt; b) $ <ul>
 <li>解法 1⃣️ <ul>
 <li>设 $ F(x) = \int_a^x f(t) {\rm d}t \cdot \int_a^x \dfrac{1}{ f(x) } {\rm d}t - (x - a)^2 $ </li>
-<li>则 $ \begin{array}{l} F’(x) &amp; = f(x) \cdot \int_a^x \dfrac{1}{ f(t) } {\rm d}t + \int_a^x f(t) {\rm d}t \cdot \dfrac{1}{ f(x) } - 2(x - a) \\ &amp; = \int_a^x \left( \dfrac{ f(x) }{ f(t) } + \dfrac{ f(t) }{ f(x) } \right) {\rm d}t - 2(x - a) \\ &amp; \geq \int_a^x 2 {\rm d}t - 2(x - a) \\ &amp; \geq 2(x - a) - 2(x - a) \\ &amp; \geq 0 \end{array} $ <ul>
+<li>则 $ \begin{array}{l} F’(x) &amp; = f(x) \cdot \int_a^x \dfrac{1}{ f(t) } {\rm d}t + \int_a^x f(t) {\rm d}t \cdot \dfrac{1}{ f(x) } - 2(x - a) \\\\ &amp; = \int_a^x \left( \dfrac{ f(x) }{ f(t) } + \dfrac{ f(t) }{ f(x) } \right) {\rm d}t - 2(x - a) \\\\ &amp; \geq \int_a^x 2 {\rm d}t - 2(x - a) \\\\ &amp; \geq 2(x - a) - 2(x - a) \\\\ &amp; \geq 0 \end{array} $ <ul>
 <li>基本不等式 $ a + b \geq 2 \sqrt{ab}, \quad (a, b &gt; 0) $ </li>
 </ul>
 </li>
@@ -293,11 +293,11 @@
 </li>
 <li>解法 2⃣️ <ul>
 <li>㊀：显然，$ \int_a^b \dfrac{1}{ f(x) } {\rm d}x = \int_a^b \dfrac{1}{ f(y) } {\rm d}y $ <ul>
-<li>$ \begin{array}{l} \text{左 } &amp; = \int_a^b f(x) {\rm d}x \int_a^b \dfrac{1}{ f(y) } {\rm d}y \\ &amp; = \iint\limits_D \dfrac{ f(x) }{ f(y) } {\rm d} \sigma \end{array} $ </li>
+<li>$ \begin{array}{l} \text{左 } &amp; = \int_a^b f(x) {\rm d}x \int_a^b \dfrac{1}{ f(y) } {\rm d}y \\\\ &amp; = \iint\limits_D \dfrac{ f(x) }{ f(y) } {\rm d} \sigma \end{array} $ </li>
 </ul>
 </li>
 <li>㊁： $ \int_a^b  f(x) {\rm d}x = \int_a^b f(y) {\rm d}y $ <ul>
-<li>$ \begin{array}{l} \text{左 } &amp; = \int_a^b f(y) {\rm d}y \int_a^b \dfrac{1}{ f(x) } {\rm d}x \\ &amp; = \iint\limits_D \dfrac{ f(y) }{ f(x) } {\rm d} \sigma \end{array} $ </li>
+<li>$ \begin{array}{l} \text{左 } &amp; = \int_a^b f(y) {\rm d}y \int_a^b \dfrac{1}{ f(x) } {\rm d}x \\\\ &amp; = \iint\limits_D \dfrac{ f(y) }{ f(x) } {\rm d} \sigma \end{array} $ </li>
 </ul>
 </li>
 <li>$ \implies \text{左 } = \dfrac{1}{2} \iint\limits_D \left[ \dfrac{ f(x) }{ f(y) } + \dfrac{ f(y) }{ f(x) } \right] {\rm d}\sigma \geq \dfrac{1}{2} \iint\limits_D 2 {\rm d}\sigma = (b - a)^2 = \text{ 右} $ </li>
@@ -308,7 +308,7 @@
 <li>$ \left( \int_a^b f(x) g(x) {\rm d}x \right)^2 \leq \int_a^b f^2(x) \cdot \int_a^b g^2(x) {\rm d}x $ </li>
 </ul>
 </li>
-<li>$ \implies \begin{array}{l} \int_a^b f(x) {\rm d}x \cdot \int_a^b \dfrac{1}{ f(x) } {\rm d}x &amp; = \int_a^b \left( \sqrt{ f(x) } \right)^2 {\rm d}x \cdot \int_a^b \left( \dfrac{1}{ \sqrt{ f(x) } } \right)^2 {\rm d}x \\ &amp; = \left( \int_a^b \sqrt{ f(x) } \cdot \dfrac{1}{ \sqrt{ f(x) } } {\rm d}x \right)^2 = (b - a)^2 \end{array} $ </li>
+<li>$ \implies \begin{array}{l} \int_a^b f(x) {\rm d}x \cdot \int_a^b \dfrac{1}{ f(x) } {\rm d}x &amp; = \int_a^b \left( \sqrt{ f(x) } \right)^2 {\rm d}x \cdot \int_a^b \left( \dfrac{1}{ \sqrt{ f(x) } } \right)^2 {\rm d}x \\\\ &amp; = \left( \int_a^b \sqrt{ f(x) } \cdot \dfrac{1}{ \sqrt{ f(x) } } {\rm d}x \right)^2 = (b - a)^2 \end{array} $ </li>
 </ul>
 </li>
 </ul>
@@ -316,7 +316,7 @@
 <li>【记住】⭐️计算 $ \int_{-\infty}^{+\infty} e^{-x^2} {\rm d}x ​$ <ul>
 <li><img src="./images/5-1.3.2 高斯曲线.png" width="50%"></li>
 <li>显然，$ \int_{-\infty}^{+\infty} e^{-x^2} {\rm d}x = \int_{-\infty}^{+\infty} e^{-y^2} {\rm d}y $ </li>
-<li>$ \begin{array}{l} I^2 &amp; = \int_{-\infty}^{+\infty} e^{-x^2} {\rm d}x \cdot \int_{-\infty}^{+\infty} e^{-y^2} {\rm d}y \\ &amp; = \iint\limits_D e^{ -(x^2 + y^2) } {\rm d} \sigma \\ &amp; = \int_0^{2\pi} {\rm d}\theta \int_0^{+\infty} e^{-r^2} r {\rm d}r \\ &amp; = 2\pi \cdot ( -\dfrac{1}{2} ) \cdot \left. e^{-r^2} \right|_0^{+\infty} \\ &amp; = \pi \end{array} $ </li>
+<li>$ \begin{array}{l} I^2 &amp; = \int_{-\infty}^{+\infty} e^{-x^2} {\rm d}x \cdot \int_{-\infty}^{+\infty} e^{-y^2} {\rm d}y \\\\ &amp; = \iint\limits_D e^{ -(x^2 + y^2) } {\rm d} \sigma \\\\ &amp; = \int_0^{2\pi} {\rm d}\theta \int_0^{+\infty} e^{-r^2} r {\rm d}r \\\\ &amp; = 2\pi \cdot ( -\dfrac{1}{2} ) \cdot \left. e^{-r^2} \right|_0^{+\infty} \\\\ &amp; = \pi \end{array} $ </li>
 <li>$ \implies I = \sqrt{\pi} $ </li>
 </ul>
 </li>
@@ -359,7 +359,7 @@
 <li>已知 $ I = \int_0^2 {\rm d}x \int_0^{ \frac{x^2}{2} } f(x, y) {\rm d}x + \int_2^{ 2 \sqrt{2} } {\rm d}x \int_0^{ \sqrt{8 - x^2} } f(x, y) {\rm d}y $ ，则 $ I = ( \text{  A  } ) $ 。</li>
 </ol>
 <ul>
-<li>$ \begin{array}{l} A. \int_0^2 {\rm d}y \int_{ \sqrt{2y} }^{ \sqrt{8 - y^2} } f(x, y) {\rm d}x &amp; B.\int_0^2{\rm d}y \int_1^{ \sqrt{ 8 - y^2 } } f(x, y) {\rm d}x \\ C. \int_0^1 {\rm d}y \int_{ \sqrt{2y} }^{ \sqrt{8 - y^2} } f(x, y) {\rm d}x &amp; D.\int_0^2 {\rm d}y \int_{ \sqrt{2y} }^1 f(x, y) {\rm d}x \end{array} $ </li>
+<li>$ \begin{array}{l} A. \int_0^2 {\rm d}y \int_{ \sqrt{2y} }^{ \sqrt{8 - y^2} } f(x, y) {\rm d}x &amp; B.\int_0^2{\rm d}y \int_1^{ \sqrt{ 8 - y^2 } } f(x, y) {\rm d}x \\\\ C. \int_0^1 {\rm d}y \int_{ \sqrt{2y} }^{ \sqrt{8 - y^2} } f(x, y) {\rm d}x &amp; D.\int_0^2 {\rm d}y \int_{ \sqrt{2y} }^1 f(x, y) {\rm d}x \end{array} $ </li>
 </ul>
 <ol>
 <li>计算 $ \int_{ \frac{1}{4} }^{ \frac{1}{2} } {\rm d}y \int_{ \frac{1}{2} }^{ \sqrt{y} } e^{ \frac{y}{x} } {\rm d}x + \int_{ \frac{1}{2} }^1 {\rm d}y \int_y^{ \sqrt{y} } e^{ \frac{y}{x} } {\rm d}x $</li>
@@ -392,9 +392,9 @@
 </ul>
 </li>
 <li><img src="./images/5-2.2.2.png" width="40%"></li>
-<li>$ \begin{array}{l} I &amp; = \int_0^{ \frac{\pi}{2} } {\rm d} \theta \int_{2 \cos \theta}^2 r^2 \cdot r {\rm d}r + \int_{ \frac{\pi}{2} }^{ \frac{3 \pi}{4} } {\rm d} \theta \int_0^2 r^2 \cdot r {\rm d}r \\ &amp; = \int_0^{ \frac{\pi}{2} } \left( \left. \dfrac{r^4}{4} \right|_{2 \cos \theta}^2 \right) {\rm d} \theta + \dfrac{\pi}{4} \cdot \left. \dfrac{r^4}{4} \right|_0^2 \\ &amp; = \int_0^{ \frac{\pi}{2} } \left( 4 - 4 \cos^4 \theta \right) {\rm d} \theta + \pi \\ &amp; = 3 \pi - 4 \int_0^{ \frac{\pi}{2} } \cos^4 \theta {\rm d} \theta \\ &amp; = \dfrac{9}{4} \pi \end{array} $</li>
+<li>$ \begin{array}{l} I &amp; = \int_0^{ \frac{\pi}{2} } {\rm d} \theta \int_{2 \cos \theta}^2 r^2 \cdot r {\rm d}r + \int_{ \frac{\pi}{2} }^{ \frac{3 \pi}{4} } {\rm d} \theta \int_0^2 r^2 \cdot r {\rm d}r \\\\ &amp; = \int_0^{ \frac{\pi}{2} } \left( \left. \dfrac{r^4}{4} \right|_{2 \cos \theta}^2 \right) {\rm d} \theta + \dfrac{\pi}{4} \cdot \left. \dfrac{r^4}{4} \right|_0^2 \\\\ &amp; = \int_0^{ \frac{\pi}{2} } \left( 4 - 4 \cos^4 \theta \right) {\rm d} \theta + \pi \\\\ &amp; = 3 \pi - 4 \int_0^{ \frac{\pi}{2} } \cos^4 \theta {\rm d} \theta \\\\ &amp; = \dfrac{9}{4} \pi \end{array} $</li>
 <li>or</li>
-<li>$ \begin{array}{l} I &amp; = \int_0^{ \frac{3 \pi}{4} } {\rm d} \theta \int_0^2 r^3 {\rm d}r - \int_0^{ \frac{\pi}{2} } {\rm d}\theta \int_0^{2 \cos \theta} r^3 {\rm d}r \\ &amp; = \dfrac{3\pi}{4} \cdot 4 - 4 \int_0^{ \frac{\pi}{2} } \cos^4 \theta {\rm d}\theta \\ &amp; = \dfrac{9}{4} \pi \end{array} $ </li>
+<li>$ \begin{array}{l} I &amp; = \int_0^{ \frac{3 \pi}{4} } {\rm d} \theta \int_0^2 r^3 {\rm d}r - \int_0^{ \frac{\pi}{2} } {\rm d}\theta \int_0^{2 \cos \theta} r^3 {\rm d}r \\\\ &amp; = \dfrac{3\pi}{4} \cdot 4 - 4 \int_0^{ \frac{\pi}{2} } \cos^4 \theta {\rm d}\theta \\\\ &amp; = \dfrac{9}{4} \pi \end{array} $ </li>
 </ul>
 </li>
 <li>计算 $ I = \iint\limits_D \sqrt{ 1 - r^2 \cos 2 \theta } \text{ } r^2 \sin \theta \text{ } {\rm d}r {\rm d}\theta $ ，其中 $ D = \left\lbrace \left. (r, \theta) \right| 0 \leq r \leq \sec \theta, 0 \leq \theta \leq \dfrac{\pi}{4} \right\rbrace $ 。<ul>
@@ -402,7 +402,7 @@
 <li>$ r \leq \sec \theta \implies r \cos \theta \leq 1 \implies x \leq 1 $ </li>
 </ul>
 </li>
-<li>$ \begin{array}{l} I &amp; = \iint\limits_D y \sqrt{1 - x^2 + y^2} \text{ } {\rm d}x {\rm d}y \\ &amp; = \dfrac{1}{2} \int_0^1 {\rm d}x \int_0^x \sqrt{1 - x^2 + y^2} \text{ } {\rm d}( 1 - x^2 + y^2 ) \\ &amp; = \dfrac{1}{2} \cdot \dfrac{2}{3} \cdot \int_0^1 \left[ \left. (1 - x^2 + y^2)^{ \frac{3}{2} } \right|_{y = 0}^{y = x} \right] {\rm d}x \\ &amp; = \dfrac{1}{3} - \dfrac{1}{3} \int_0^1 (1 - x^2)^{ \frac{3}{2} } {\rm d}x = \dfrac{1}{3} - \dfrac{1}{3} \int_0^{ \frac{\pi}{2} } \cos^4 t {\rm d} t \\ &amp; = \dfrac{1}{3} - \dfrac{\pi}{16} \end{array} $ </li>
+<li>$ \begin{array}{l} I &amp; = \iint\limits_D y \sqrt{1 - x^2 + y^2} \text{ } {\rm d}x {\rm d}y \\\\ &amp; = \dfrac{1}{2} \int_0^1 {\rm d}x \int_0^x \sqrt{1 - x^2 + y^2} \text{ } {\rm d}( 1 - x^2 + y^2 ) \\\\ &amp; = \dfrac{1}{2} \cdot \dfrac{2}{3} \cdot \int_0^1 \left[ \left. (1 - x^2 + y^2)^{ \frac{3}{2} } \right|_{y = 0}^{y = x} \right] {\rm d}x \\\\ &amp; = \dfrac{1}{3} - \dfrac{1}{3} \int_0^1 (1 - x^2)^{ \frac{3}{2} } {\rm d}x = \dfrac{1}{3} - \dfrac{1}{3} \int_0^{ \frac{\pi}{2} } \cos^4 t {\rm d} t \\\\ &amp; = \dfrac{1}{3} - \dfrac{\pi}{16} \end{array} $ </li>
 </ul>
 </li>
 </ol>
@@ -479,7 +479,7 @@
                 var content = $(element).text().toString();
                 var header = content.indexOf('、') > 0 ? content.split('、')[1] : 
                     content.indexOf('.') > 0 ? content.split('.')[1] : content;
-                var id = num_map[index + i] + '. ' + header + '';
+                var id = num_map[index + 1] + '. ' + header + '';
                 $(element).attr('id', id);
                 var header = {'id':id, 'children':[]};
                 div_side_navigation_left.headers.push(header);
@@ -644,7 +644,8 @@
     });
 </script>
 <!-- <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script> -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
 <!-- <script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
 
 </body>

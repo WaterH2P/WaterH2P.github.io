@@ -215,7 +215,7 @@
 <ul>
 <li>看成是两个二维向量 $ \alpha_1 = ( a_{11}, a_{12} ) $  $ \alpha_2 = ( a_{21}, a_{22} ) $ ，与 $ x $ 轴夹脚分别是 $ \alpha $  $ \beta $ 。<!-- - <img src="./images/7-1 二阶行列式.png" width="50%"> --></li>
 <li><img src="https://github.com/WaterH2P/WaterH2P.github.io/raw/master/img/images/7-1%20%E4%BA%8C%E9%98%B6%E8%A1%8C%E5%88%97%E5%BC%8F.png" width="50%"> </li>
-<li>$ \begin{array}{l} S_{ABCD} &amp; = |\alpha_1| \cdot |\alpha_2| \cdot \sin (\beta - \alpha) \\ &amp; = lm \cdot ( \sin \beta \cos \alpha - \cos \beta \sin \alpha ) \\ &amp; = l \cos \alpha \cdot m \sin \beta - l \sin \alpha \cdot m \cos \beta \\ &amp; = a_{11}a_{22} - a_{12}a_{21} \end{array} $</li>
+<li>$ \begin{array}{l} S_{ABCD} &amp; = |\alpha_1| \cdot |\alpha_2| \cdot \sin (\beta - \alpha) \\\\ &amp; = lm \cdot ( \sin \beta \cos \alpha - \cos \beta \sin \alpha ) \\\\ &amp; = l \cos \alpha \cdot m \sin \beta - l \sin \alpha \cdot m \cos \beta \\\\ &amp; = a_{11}a_{22} - a_{12}a_{21} \end{array} $</li>
 <li>$ \therefore \begin{vmatrix} a_{11} &amp; a_{12} \\ a_{21} &amp; a_{22} \end{vmatrix} = a_{11}a_{22} - a_{12}a_{21} = S_{ABCD} $ </li>
 </ul>
 <p><br></p>
@@ -281,12 +281,12 @@ M_{ij} =
 <script type="math/tex; mode=display">
 \left| A \right| = 
 \begin{cases}
-  a_{i1}A_{i1} + a_{i2}A_{i2} + \cdots + a_{in}A_{in} & = \sum\limits_{j = 1}^n a_{ij}A_{ij}, \quad (i = 1, 2, \cdots, n) \\
+  a_{i1}A_{i1} + a_{i2}A_{i2} + \cdots + a_{in}A_{in} & = \sum\limits_{j = 1}^n a_{ij}A_{ij}, \quad (i = 1, 2, \cdots, n) \\\\
   a_{1j}A_{1j} + a_{2j}A_{2j} + \cdots + a_{nj}A_{nj} & = \sum\limits_{i = 1}^n a_{ij}A_{ij}, \quad (i = 1, 2, \cdots, n)
 \end{cases}</script><p>但行列式的某行（列）元素分别乘另一行（列）元素的代数余子式后再求和，结果为 $ 0 $ ，即</p>
 <script type="math/tex; mode=display">
 \begin{array}{l}
-  a_{i1}A_{k1} + a_{i2}A_{k2} + \cdots + a_{in}A_{kn} = 0, \quad (i \not= k) \\
+  a_{i1}A_{k1} + a_{i2}A_{k2} + \cdots + a_{in}A_{kn} = 0, \quad (i \not= k) \\\\
   a_{1j}A_{1k} + a_{2j}A_{2k} + \cdots + a_{nj}A_{nk} = 0, \quad (j \not= k)
 \end{array}</script><p><br></p>
 <h4 id="㊃、几个重要的行列式"><a href="#㊃、几个重要的行列式" class="headerlink" title="㊃、几个重要的行列式"></a>㊃、几个重要的行列式</h4><ol>
@@ -378,7 +378,7 @@ a^2 & b^2 & c^2
 \end{vmatrix} = (c-b)(c-a)(b-a)</script></li>
 <li>例题<ol>
 <li>$ I = \begin{vmatrix} a &amp; b &amp; c \\ b+c &amp; a+c &amp; a+b \\ a^2 &amp; b^2 &amp; c^2 \end{vmatrix} = $ ________ 。<ul>
-<li>$ \begin{array}{l} I &amp; = \begin{vmatrix} a &amp; b &amp; c \\ a+b+c &amp; a+b+c &amp; a+b+c \\ a^2 &amp; b^2 &amp; c^2 \end{vmatrix} \\ &amp; = (a+b+c) \cdot (-1) \cdot \begin{vmatrix} 1 &amp; 1 &amp; 1 \\ a &amp; b &amp; c \\ a^2 &amp; b^2 &amp; c^2 \end{vmatrix} \\ &amp; = -(a+b+c)(c-b)(c-a)(b-a) \end{array} $</li>
+<li>$ \begin{array}{l} I &amp; = \begin{vmatrix} a &amp; b &amp; c \\ a+b+c &amp; a+b+c &amp; a+b+c \\ a^2 &amp; b^2 &amp; c^2 \end{vmatrix} \\\\ &amp; = (a+b+c) \cdot (-1) \cdot \begin{vmatrix} 1 &amp; 1 &amp; 1 \\ a &amp; b &amp; c \\ a^2 &amp; b^2 &amp; c^2 \end{vmatrix} \\\\ &amp; = -(a+b+c)(c-b)(c-a)(b-a) \end{array} $</li>
 </ul>
 </li>
 </ol>
@@ -401,7 +401,7 @@ b & b & \cdots & a
 </ul>
 </li>
 <li>将第 $ 1 $ 行乘 $ -1 $ 加到第 $ i(i=2, 3, \cdots, n) $ 行上<ul>
-<li>$ \begin{array}{l} I &amp; = [a + (n-1)b] \begin{vmatrix} 1 &amp; b &amp; b &amp; \cdots &amp; b \\ 0 &amp; a-b &amp; 0 &amp; \cdots &amp; 0 \\ 0 &amp; 0 &amp; a-b &amp; \cdots &amp; 0 \\ \vdots &amp; \vdots &amp; \vdots &amp; &amp; \vdots \\ 0 &amp; 0 &amp; 0 &amp; \cdots &amp; a-b \end{vmatrix}_{n \times n} \\ &amp; = [a + (n-1)b] \begin{vmatrix} a-b &amp; 0 &amp; \cdots &amp; 0 \\ 0 &amp; a-b &amp; \cdots &amp; 0 \\ \vdots &amp; \vdots &amp; &amp; \vdots \\ 0 &amp; 0 &amp; \cdots &amp; a-b \end{vmatrix}_{ (n-1) \times (n-1)} \end{array} $ </li>
+<li>$ \begin{array}{l} I &amp; = [a + (n-1)b] \begin{vmatrix} 1 &amp; b &amp; b &amp; \cdots &amp; b \\ 0 &amp; a-b &amp; 0 &amp; \cdots &amp; 0 \\ 0 &amp; 0 &amp; a-b &amp; \cdots &amp; 0 \\ \vdots &amp; \vdots &amp; \vdots &amp; &amp; \vdots \\ 0 &amp; 0 &amp; 0 &amp; \cdots &amp; a-b \end{vmatrix}_{n \times n} \\\\ &amp; = [a + (n-1)b] \begin{vmatrix} a-b &amp; 0 &amp; \cdots &amp; 0 \\ 0 &amp; a-b &amp; \cdots &amp; 0 \\ \vdots &amp; \vdots &amp; &amp; \vdots \\ 0 &amp; 0 &amp; \cdots &amp; a-b \end{vmatrix}_{ (n-1) \times (n-1)} \end{array} $ </li>
 </ul>
 </li>
 <li>$ I = <a href="a-b"> a + (n-1)b</a>^{n-1} $ </li>
@@ -466,7 +466,7 @@ b & b & \cdots & a
 </ul>
 <ol>
 <li>计算 $ D_5 = \begin{vmatrix} 1-x &amp; x &amp; 0 &amp; 0 &amp; 0 \\ -1 &amp; 1-x &amp; x &amp; 0 &amp; 0 \\ 0 &amp; -1 &amp; 1-x &amp; x &amp; 0 \\ 0 &amp; 0 &amp; -1 &amp; 1-x &amp; x \\ 0 &amp; 0 &amp; 0 &amp; -1 &amp; 1-x \end{vmatrix} $ 。<ul>
-<li>$ \begin{array}{l} D_5 &amp; = (1 - x) \cdot (-1)^{1+1} \cdot D_4 + x \cdot (-1)^{1+2} \cdot \begin{vmatrix} -1 &amp; x &amp; 0 &amp; 0 \\ 0 &amp; 1-x &amp; x &amp; 0 \\ 0 &amp; -1 &amp; 1-x &amp; x \\ 0 &amp; 0 &amp; -1 &amp; 1-x \end{vmatrix} \\ &amp; = (1-x)D_4 + (-x) \cdot (-1) \cdot (-1)^{1+1} \cdot D_3 \\ &amp; = (1-x)D_4 + xD_3 \\ &amp; = D_4 - xD_4 + xD_3 \end{array} $ </li>
+<li>$ \begin{array}{l} D_5 &amp; = (1 - x) \cdot (-1)^{1+1} \cdot D_4 + x \cdot (-1)^{1+2} \cdot \begin{vmatrix} -1 &amp; x &amp; 0 &amp; 0 \\ 0 &amp; 1-x &amp; x &amp; 0 \\ 0 &amp; -1 &amp; 1-x &amp; x \\ 0 &amp; 0 &amp; -1 &amp; 1-x \end{vmatrix} \\\\ &amp; = (1-x)D_4 + (-x) \cdot (-1) \cdot (-1)^{1+1} \cdot D_3 \\\\ &amp; = (1-x)D_4 + xD_3 \\\\ &amp; = D_4 - xD_4 + xD_3 \end{array} $ </li>
 <li>$ \begin{array}{l} \implies D_5 - D_4 = -x (D_4 - D_3) = (-x)^2 (D_3 - D_2) = (-x)^3 (D_2 - D_1) \end{array} $<ul>
 <li>$ D_1 = 1-x $，$ D_2 = \begin{vmatrix} 1-x &amp; x \\ -1 &amp; 1-x \end{vmatrix} = 1 - x + x^2 $ </li>
 <li>$ \begin{cases} D_5 - D_4 = -x^5 \\D_4 - D_3 = x^4 \\ D_3 - D_2 = -x^3 \end{cases} \implies D_5 = 1 - x + x^2 - x^3 + x^4 - x^5 $ </li>
@@ -501,9 +501,9 @@ b & b & \cdots & a
 <p> 若 $ n $ 个方程 $ n $ 个未知量构成的非齐次线性方程组 </p>
 <script type="math/tex; mode=display">
 \begin{cases} 
-a_{11}x_1 + a_{12}x_2 + \cdots + a_{1n}x_n = b_1 \\ 
-a_{21}x_1 + a_{22}x_2 + \cdots + a_{2n}x_n = b_2 \\ 
-\quad \cdots \cdots \\ 
+a_{11}x_1 + a_{12}x_2 + \cdots + a_{1n}x_n = b_1 \\\\ 
+a_{21}x_1 + a_{22}x_2 + \cdots + a_{2n}x_n = b_2 \\\\ 
+\quad \cdots \cdots \\\\ 
 a_{n1}x_1 + a_{n2}x_2 + \cdots + a_{nn}x_n = b_n 
 \end{cases}</script><p>的系数行列式 $ |A| \not= 0 $ ，则方程组有唯一解，且 </p>
 <script type="math/tex; mode=display">
@@ -513,9 +513,9 @@ x_i = \dfrac{ |A_i| }{ |A| }, i = 1, 2, \cdots, n,</script><p>其中 $ |A_i| $ �
 <p> 若包含 $ n $ 个方程 $ n $ 个未知量的齐次线性方程组</p>
 <script type="math/tex; mode=display">
 \begin{cases} 
-a_{11}x_1 + a_{12}x_2 + \cdots + a_{1n}x_n = 0 \\ 
-a_{21}x_1 + a_{22}x_2 + \cdots + a_{2n}x_n = 0 \\ 
-\quad \cdots \cdots \\ 
+a_{11}x_1 + a_{12}x_2 + \cdots + a_{1n}x_n = 0 \\\\ 
+a_{21}x_1 + a_{22}x_2 + \cdots + a_{2n}x_n = 0 \\\\ 
+\quad \cdots \cdots \\\\ 
 a_{n1}x_1 + a_{n2}x_2 + \cdots + a_{nn}x_n = 0 
 \end{cases}</script><p>的系数行列式 $ |A| \not= 0 $ ，则方程组有唯一零解。<br>​    反之，若齐次线性方程组有非零解，则其系数行列式 $ |A| = 0 $ 。        </p>
 </li>
@@ -593,7 +593,7 @@ a_{n1}x_1 + a_{n2}x_2 + \cdots + a_{nn}x_n = 0
                 var content = $(element).text().toString();
                 var header = content.indexOf('、') > 0 ? content.split('、')[1] : 
                     content.indexOf('.') > 0 ? content.split('.')[1] : content;
-                var id = num_map[index + i] + '. ' + header + '';
+                var id = num_map[index + 1] + '. ' + header + '';
                 $(element).attr('id', id);
                 var header = {'id':id, 'children':[]};
                 div_side_navigation_left.headers.push(header);
@@ -758,7 +758,8 @@ a_{n1}x_1 + a_{n2}x_2 + \cdots + a_{nn}x_n = 0
     });
 </script>
 <!-- <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script> -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
 <!-- <script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
 
 </body>
