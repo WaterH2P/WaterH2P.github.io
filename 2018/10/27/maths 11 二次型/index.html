@@ -2,7 +2,7 @@
 
     
 <head>
-    <title>多元函数微分学 | H2P&#39;S BLOG</title>
+    <title>二次型 | H2P&#39;S BLOG</title>
     <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -164,7 +164,7 @@
     <!-- blog 的 date -->
     
         <span>
-            2018-10-07
+            2018-10-27
         </span>
         <span>&nbsp;&nbsp;</span>
     
@@ -178,30 +178,30 @@
     ,
     
     <span class="tag is-info">
-        <a href='/tags/高数/'>高数</a>
+        <a href='/tags/kaoyan/'>kaoyan</a>
     </span>
     ,
     
     <span class="tag is-info">
-        <a href='/tags/kaoyan/'>kaoyan</a>
+        <a href='/tags/线代/'>线代</a>
     </span>
     
     
     
 </span>
 
-                    <h1>多元函数微分学</h1>
+                    <h1>二次型</h1>
                 </div>
             </div>
             <div class="row justify-content-center">
                 <div class="col-lg-8 col-md-10">
                     <div class="div-message div-desc">
                         
-                            <span>做笔记，喝凉茶，看高数</span>
+                            <span>做笔记，喝凉茶，看线代</span>
                             <br>
                         
                         
-                            <span>最近更新：2018-10-09</span>
+                            <span>最近更新：2018-10-27</span>
                             <br>
                         
                         
@@ -210,245 +210,120 @@
             </div>
             <div class="row justify-content-center">
                 <div class="col-lg-8 col-md-10">
-                    <h2 id="一、概念"><a href="#一、概念" class="headerlink" title="一、概念"></a>一、概念</h2><p><br></p>
-<h4 id="㊀、极限"><a href="#㊀、极限" class="headerlink" title="㊀、极限"></a>㊀、极限</h4><ol>
-<li><p>概念</p>
-<ul>
-<li>设 $ f(x, y) $ 的定义域为 $ D $ ，$ P_0(x_0, y_0) $ 是 $ D $ 的聚点。</li>
-<li>$ \forall \varepsilon &gt; 0 $ ， $ \exists \delta &gt; 0 $ , 当 $ P(x, y) \in D \bigcap \bigcup\limits^o ( P_0, \delta ) $ 时，恒有 $ | f(x, y) - A | &lt; \varepsilon \implies \lim\limits_{x \to x_0 \atop y \to y_0} f(x, y) = A $ 。</li>
-</ul>
-</li>
-<li><p>例题</p>
-<ol>
-<li>求 $ I = \lim\limits_{x \to 0 \atop y \to 0} \dfrac{ \sqrt{xy + 1} - 1 }{xy} $ 。<ul>
-<li>其他教材（ $ P(x, y) \in \bigcup\limits^o ( P_0, \delta ) $ ）</li>
-<li>$ x = 0 / y = 0 $ 时，极限不存在</li>
-<li>所以极限不存在</li>
-<li>同济七版教材（考研参考教材）</li>
-<li>$ I = \lim\limits_{x \to 0 \atop y \to 0} \dfrac{xy}{ xy ( \sqrt{xy + 1} + 1 ) } = \dfrac{1}{2} $ 。</li>
-</ul>
-</li>
-</ol>
-</li>
-</ol>
+                    <h2 id="一、二次型"><a href="#一、二次型" class="headerlink" title="一、二次型"></a>一、二次型</h2><p><br></p>
+<h4 id="1、定义"><a href="#1、定义" class="headerlink" title="1、定义"></a>1、定义</h4><p>n 元变量 $ x_1, x_2, \cdots, x_n $ 的二次齐次多项式</p>
+<script type="math/tex; mode=display">
+\begin{array}{l}
+  f(x_1, x_2, \cdots, x_n) = & a_{11}x_1^2 &+& 2a_{12}x_1x_2 &+& \cdots &+& 2a_{1n}x_1x_n \\\\
+  & &+& a_{22}x_2^2 &+& \cdots &+& 2a_{2n}x_2x_n \\\\
+  & && && \cdots \\\\
+  & && && &+& a_{nn}x_n^2
+\end{array}</script><p>称为 n 元二次型，简称二次型。</p>
+<p>因为 $ x_ix_j = x_jx_i $ ，先若令 $ a_{ij} = a_{ji} (i, j=1, 2, \cdots, n) $ ，则 $ 2a_{ij}x_ix_j = a_{ij}x_ix_j + a_{ji}x_jx_i $ ，于是</p>
+<script type="math/tex; mode=display">
+\begin{array}{l}
+  f(x_1, x_2, \cdots, x_n) 
+  & = 
+    & a_{11}x_1^2 + a_{12}x_1x_2 + \cdots + a_{1n}x_1x_n + \\\\ 
+    && a_{21}x_2x_1 + a_{22}x_2^2 + \cdots + a_{2n}x_2x_n + \\\\ 
+    && \cdots \cdots + \\\\ 
+    && a_{n1}x_nx_1 + a_{n2}x_nx_2 + \cdots + a_{nn}x_n^2 \quad & \quad (\ast) \\\\
+  & = 
+    & \sum\limits_{i=1}^{\infty}\sum\limits_{j=1}^{\infty}a_{ij}x_ix_j \quad & \quad (\ast\ast)
+\end{array}</script><p>其中 $ (\ast) $ 式称为完全展开式， $ (\ast\ast) $ 式称为和式。令</p>
+<script type="math/tex; mode=display">
+A = 
+\begin{bmatrix} 
+  a_{11} & a_{12} & \cdots & a_{1n} \\ 
+  a_{21} & a_{22} & \cdots & a_{2n} \\
+  \vdots & \vdots & & \vdots \\
+  a_{n1} & a_{n2} & \cdots & a_{nn}
+\end{bmatrix}, 
+x = 
+\begin{bmatrix} 
+  x_1 \\ x_2 \\ \vdots \\ x_n
+\end{bmatrix}</script><p>则二次型可表示为</p>
+<script type="math/tex; mode=display">
+\begin{array}{l} 
+  f(x) = x^{\rm T} A x (A^{\rm T} = A). \quad & \quad (\ast\ast\ast)
+\end{array}</script><p>$ (\ast\ast\ast) $ 式称为二次型 $ f(x_1, x_2, \cdots, x_n) $ 的矩阵表达式，实<strong>对称</strong>矩阵 A 称为<strong>二次型</strong> $ f(x) $ 的矩阵。</p>
 <p><br></p>
-<h4 id="㊁、连续性"><a href="#㊁、连续性" class="headerlink" title="㊁、连续性"></a>㊁、连续性</h4><ol>
-<li>概念<ul>
-<li>若 $ \lim\limits_{x \to x_0 \atop y \to y_0} f(x, y) = f(x_0, y_0) $ ，则称 $ f(x, y) $ 在 $ (x_0, y_0) $ 处连续。</li>
-<li>【注】<ul>
-<li>若 $ \lim\limits_{x \to x_0 \atop y \to y_0} f(x, y) \not= f(x_0, y_0) $ ，叫不连续，不讨论间断类型。</li>
+<h4 id="2、例题"><a href="#2、例题" class="headerlink" title="2、例题"></a>2、例题</h4><ol>
+<li>写出三元二次型 $ f(x_1, x_2, x_3) = 2x_1^2 + 2x_2^2 + 2x_3^2 - 2x_1x_2 - 2x_2x_3 + 2x_1x_3 $ 的二次型矩阵 A。<ul>
+<li>先写模子：$ \begin{pmatrix} x_1 &amp; x_2 &amp; x_3 \end{pmatrix} \begin{pmatrix} \ast &amp; \ast &amp; \ast \\ \ast &amp; \ast &amp; \ast \\ \ast &amp; \ast &amp; \ast \end{pmatrix} \begin{pmatrix} x_1 \\ x_2 \\ x_3 \end{pmatrix} $ </li>
+<li>主对角线位置抄【平方项】前的系数<ul>
+<li>$ \begin{pmatrix} x_1 &amp; x_2 &amp; x_3 \end{pmatrix} \begin{pmatrix} 2 &amp; \ast &amp; \ast \\ \ast &amp; 2 &amp; \ast \\ \ast &amp; \ast &amp; 2 \end{pmatrix} \begin{pmatrix} x_1 \\ x_2 \\ x_3 \end{pmatrix} $ </li>
 </ul>
 </li>
+<li>把混合项 $ x_ix_j(i \not= j) $ 前的系数平分，写在 $ a_{ij} $ 和 $ a_{ji} $ 的位置<ul>
+<li>$ \begin{pmatrix} x_1 &amp; x_2 &amp; x_3 \end{pmatrix} \begin{pmatrix} 2 &amp; -1 &amp; 1 \\ -1 &amp; 2 &amp; -1 \\ 1 &amp; -1&amp; 2 \end{pmatrix} \begin{pmatrix} x_1 \\ x_2 \\ x_3 \end{pmatrix} $ </li>
 </ul>
 </li>
-</ol>
-<p><br></p>
-<h4 id="㊂、偏导数（必考）"><a href="#㊂、偏导数（必考）" class="headerlink" title="㊂、偏导数（必考）"></a>㊂、偏导数（必考）</h4><ol>
-<li><p>概念</p>
-<ul>
-<li>$ z = f(x, y) $</li>
-<li>$ \left. \dfrac{ \partial f }{ \partial x } \right|_{ (x_0, y_0) } = f’_x(x_0, y_0) = \lim\limits_{ \Delta x \to 0 } \dfrac{ f(x_0 + \Delta x, y_0) - f(x_0, y_0) }{\Delta x} $ 。 </li>
-</ul>
-</li>
-<li><p>例题</p>
-<ol>
-<li>设 $ f(x, y) = e^{ \sqrt{ x^2 + y^6 } } $ ，求 $ f’_x(0, 0) $ ， $ f’_y(0, 0) $ 。<ul>
-<li>⭐️ 见到 $ f’_x(x_0, y_0), f’_y(x_0, y_0) \implies $ 先写定义再说。</li>
-<li>$ f’_x(0, 0) = \lim\limits_{\Delta x \to 0} \dfrac{ f(0 + \Delta x, 0) - f(0, 0) }{\Delta x} = \lim\limits_{\Delta x \to 0} \dfrac{ e^{ |\Delta x| } - 1 }{\Delta x} = \lim\limits_{\Delta x \to 0} \dfrac{ |\Delta x| }{\Delta x} $ </li>
-<li>$ \implies f’_x(0, 0) $ 不存在</li>
-<li>$ f’_y(0, 0) = \lim\limits_{\Delta y \to 0} \dfrac{ f(0, 0 + \Delta y) - f(0, 0) }{\Delta y} = \lim\limits_{\Delta y \to 0} \dfrac{ e^{ |\Delta y|^3 } - 1 }{\Delta y} = \lim\limits_{\Delta y \to 0} \dfrac{ |\Delta y|^3 }{\Delta y} = 0 $ </li>
-</ul>
-</li>
-<li>设 $ f(x, y) = \begin{cases} \dfrac{1}{xy} \sin (x^2 y), &amp; xy \not= 0 \\\\ 0, &amp; xy = 0 \end{cases} $ ，则 $ f’_x(0, 1) =  $ ________ 。<ul>
-<li>$ f’_x(0, 1) = \lim\limits_{\Delta x \to 0} \dfrac{ f(0 + \Delta x, 1) - f(0, 1) }{\Delta x} = \lim\limits_{\Delta x \to 0} \dfrac{ \dfrac{1}{\Delta x} \sin( (\Delta x)^2 ) - 0 }{\Delta x} = 1 $ </li>
-</ul>
-</li>
-</ol>
-</li>
-</ol>
-<p><br></p>
-<h2 id="二、计算（必考）——多元函数微分学"><a href="#二、计算（必考）——多元函数微分学" class="headerlink" title="二、计算（必考）——多元函数微分学"></a>二、计算（必考）——多元函数微分学</h2><p><br></p>
-<h4 id="㊀、链式求导规则"><a href="#㊀、链式求导规则" class="headerlink" title="㊀、链式求导规则"></a>㊀、链式求导规则</h4><ol>
-<li>概念<ul>
-<li>设 $ z = f(u, v, w), u = u(y), v = v(x, y), w = w(x) $ 。</li>
-<li><img src="./images/4-2 链式求导关系图.png" width="50%"></li>
-<li>称 $ x, y $ 叫自变量，$ u, v, w $ 叫中间变量，$ z $ 叫因变量。</li>
-<li>$ \dfrac{ \partial z }{ \partial x } = \dfrac{ \partial z }{ \partial v } \dfrac{ \partial v }{ \partial x } + \dfrac{ \partial z }{ \partial w } \dfrac{ {\rm d}w }{ {\rm d}x } \quad ( \text{ 分叉写 } \partial，\text{ 不分叉写 } {\rm d} ) $ </li>
 </ul>
 </li>
 </ol>
 <p><br></p>
-<h4 id="㊁、高阶偏导数"><a href="#㊁、高阶偏导数" class="headerlink" title="㊁、高阶偏导数"></a>㊁、高阶偏导数</h4><ol>
-<li><p>【注】</p>
-<ul>
-<li>不论 $ z $ 对谁求导，也不论 $ z $ 已经求了几阶导，求导之后的新函数仍与 $ z $ 有相同的复合结构。</li>
-</ul>
-</li>
-<li><p>例题</p>
-<ol>
-<li>设 $ F(u, v) $ 对其变元 $ u, v $ 具有二阶连续偏导数，并设 $ z = F( \dfrac{y}{x}, x^2 + y^2) $ ，则 $ \dfrac{ \partial^2 z }{ \partial x \partial y } = $ ________ 。<ul>
-<li><img src="./images/4-2.2 高阶偏导数例题1.png" width="50%"></li>
-<li>$ \dfrac{ \partial z }{ \partial x } = F’_1 \cdot ( - \dfrac{y}{x^2} ) + F’_2 \cdot 2x $ </li>
-<li>$ \dfrac{ \partial^2 z }{ \partial x \partial y } = \dfrac{ \partial ( \dfrac{ \partial z }{ \partial x } ) }{\partial y} = - \dfrac{1}{x^2} F’_1 - \dfrac{y}{x^3} F’’_{11} + (2 - \dfrac{2y^2}{x^2} ) F’’_{12} + 4xy F’’_{22} $</li>
-</ul>
-</li>
-<li>设 $ f(u, v) $ 二阶偏导数连续，$ z = f(x^2y, \cos x \sin y) $ ，求 $ \dfrac{ \partial^2 z }{ \partial x \partial y } $ 。<ul>
-<li>$ 2xf’_1 - \sin x \cos y f’_2 + 2 x^3 y f’’_{11} + (2xy \cos x \cos y - x^2 \sin x \sin y)f’’_{12} - \sin x \cos x \sin y \ cos y f’’_{22} ​$ </li>
-</ul>
-</li>
-</ol>
-</li>
-</ol>
+<h2 id="二、线性变换"><a href="#二、线性变换" class="headerlink" title="二、线性变换"></a>二、线性变换</h2><p><br></p>
+<h4 id="1、定义-1"><a href="#1、定义-1" class="headerlink" title="1、定义"></a>1、定义</h4><p>对于 n 元二次型 $ f(x_1, x_2, \cdots, x_n) $，若令</p>
+<script type="math/tex; mode=display">
+\begin{cases}
+  x_1 = c_{11}y_1 + c_{12}y_2 + \cdots + c_{1n}yn \\\\
+  x_2 = c_{21}y_1 + c_{22}y_2 + \cdots + c_{2n}yn \\\\
+  \quad \cdots\cdots \\\\
+  x_n = c_{n1}y_1 + c_{n2}y_2 + \cdots + c_{nn}yn \\\\
+\end{cases}</script><p>记 $ x = \begin{bmatrix} x_1 \\ x_2 \\ \vdots \\ x_n \end{bmatrix}, C = \begin{bmatrix} c_{11} &amp; c_{12} &amp; \cdots &amp; c_{1n} \\ c_{21} &amp; c_{22} &amp; \cdots &amp; c_{2n} \\ \vdots &amp; \vdots &amp; &amp; \vdots \\ c_{n1} &amp; c_{n2} &amp; \cdots &amp; c_{nn} \end{bmatrix}, y = \begin{bmatrix} y_1 \\ y_2 \\ \vdots \\ y_n \end{bmatrix} $ ，则可写为 $ x = Cy $ 。</p>
+<p>上式称为从 $ y_1, y_2, \cdots, y_n $ 到 $ x_1, x_2, \cdots, x_n $ 的线性变换。若线性变换的系数矩阵 C 可逆，即 $ |C| \not= 0 $ ，则称为可逆线性变换。现给出 $ f(x) = x^{\rm T} A x $ ，令 $ x = Cy $ ，则</p>
+<script type="math/tex; mode=display">
+f(x_1, x_2, \cdots, x_n) = (Cy)^{\rm T} A (Cy) = y^{\rm T}( C^{\rm T} A C )y</script><p>记 $ B = C^{\rm T} A C $ ，则</p>
+<script type="math/tex; mode=display">
+f(x_1, x_2, \cdots, x_n) = y^{\rm T}By = g(y)</script><p>此时，二次型 $ f(x_1, x_2, \cdots, x_n) = x^{\rm T}Ax $ 通过线性变换 $ x = Cy $ 得到一个新二次型 $ g(y) = y^{\rm T}By $ 。</p>
+<p>【:star: 注】：一定要写 $ x = Cy $ ！如果题目给出 $ y = Cx $ ，则写为 $ x = C^{-1}y $ 。</p>
+<p>若 P 为 n 阶矩阵，则 $ PP^{\rm T} = E \iff P \text{ 为正交矩阵 } \iff P^{-1} = P^{\rm T} \iff P \text{ 由规范正交基组成 } $ 。 </p>
 <p><br></p>
-<h4 id="㊂、多元函数的极最值"><a href="#㊂、多元函数的极最值" class="headerlink" title="㊂、多元函数的极最值"></a>㊂、多元函数的极最值</h4><ol>
-<li><p>概念</p>
-<ul>
-<li>一个点没有去心邻域是不可以谈论极值性的。</li>
+<h4 id="2、例题-1"><a href="#2、例题-1" class="headerlink" title="2、例题"></a>2、例题</h4><ol>
+<li>已知二次型 $ f(x_1, x_2, x_3) = 4x_2^2 - 3x_3^2 + 4x_1x_2 - 4x_1x_3 + 8x_2x_3 $ ，1️⃣ 写出二次型 $ f $ 的矩阵表达式；2️⃣ 用正交变换把二次型 $ f $ 化为标准形，并写出相应的正交矩阵。<ul>
+<li>1️⃣ <ul>
+<li>$ A = \begin{pmatrix} 0 &amp; 2 &amp; -2 \\ 2 &amp; 4 &amp; 4 \\ -2 &amp; 4 &amp; -3 \end{pmatrix} $ </li>
+<li>$ f(x_1, x_2, x_3) = \begin{pmatrix} x_1 &amp; x_2 &amp; x_3 \end{pmatrix} \begin{pmatrix} 0 &amp; 2 &amp; -2 \\ 2 &amp; 4 &amp; 4 \\ -2 &amp; 4 &amp; -3 \end{pmatrix} \begin{pmatrix} x_1 \\ x_2 \\ x_3 \end{pmatrix} $ </li>
 </ul>
 </li>
-<li><p>无条件的极值 $ z = f(x, y) $ </p>
-<ol>
-<li>必要条件<ul>
-<li>设 $ z = f(x, y) $ 在点 $ (x_0, y_0) $ 处 $ \begin{cases} 一阶偏导数存在 \\\\ 取极值 \end{cases} $ ，则 $ f’_x(x_0, y_0) = 0, f’_y(x_0, y_0) = 0 $ 。</li>
-<li>【注】</li>
-<li>适用于三元及以上（常考 2 -5 元）</li>
+<li>2️⃣ <ul>
+<li>$ \begin{vmatrix} \lambda E - A \end{vmatrix} = 0 \implies \begin{cases} \lambda_1 = -6, &amp; \xi_1 = \begin{pmatrix} 1 &amp; -1 &amp; 2 \end{pmatrix}^{\rm T} \\\\ \lambda_2 = 1, &amp; \xi_2 = \begin{pmatrix} -2 &amp; 0 &amp; 1 \end{pmatrix}^{\rm T} \\\\ \lambda_3 = 6, &amp; \xi_3 = \begin{pmatrix} 1 &amp; 5 &amp; 2 \end{pmatrix}^{\rm T} \end{cases} $ </li>
+<li>:star: 写出正交阵 P<ul>
+<li>$ \xi_1, \xi_2, \xi_3 $ 正交化 $ and $ 单位化</li>
+<li>$ P = \begin{pmatrix} \dfrac{1}{ \sqrt{6} } &amp; -\dfrac{2}{ \sqrt{5} } &amp; \dfrac{1}{ \sqrt{30} } \\\\ -\dfrac{1}{ \sqrt{6} } &amp; 0 &amp; \dfrac{5}{ \sqrt{30} } \\\\ \dfrac{2}{ \sqrt{6} } &amp; \dfrac{1}{ \sqrt{5} } &amp; \dfrac{2}{ \sqrt{30} } \end{pmatrix} $ ，则 $ P^{-1} = P^{\rm T} $ 。</li>
 </ul>
 </li>
-<li>充分条件<ul>
-<li>$ \left. \begin{array}{l} f’’_{xx} (x_0, y_0) = A \\\\  f’’_{xy} (x_0, y_0) = B \\\\  f’’_{yy} (x_0, y_0) = C \end{array} \right\} \implies \Delta = B^2 - AC \begin{cases} &lt; 0 \begin{cases} A &gt; 0 \implies \text{极小值点} \\\\ A &lt; 0 \implies \text{极大值点} \end{cases} \\\\ &gt; 0 \implies \text{不是极值点} \\\\ = 0 \implies 该法失效，另谋他法 \end{cases} $ </li>
-<li>只适用于二元</li>
-</ul>
-</li>
-<li><p>例题</p>
-<ol>
-<li>设函数 $ z = z(x, y) $ 是由方程 $ x^2 - 6xy + 10y^2 - 2yz - z^2 + 32 = 0 $ 确定，讨论函数 $ z(x, y) $ 的极大值与极小值。</li>
-</ol>
-<ul>
-<li><p>无条件极值的解题步骤</p>
-<ul>
-<li>函数形式<ul>
-<li>给出 $ z = z(x, y) $（显式）</li>
-<li>$ z = z(x, y) $ 由 $ f(x, y, z) = 0 $ 确定（隐式）</li>
-</ul>
-</li>
-</ul>
-<ol>
-<li>写 $ \begin{cases} z’_x = 0 \\\\ z’_y = 0 \end{cases} \implies Pi(i = 1, 2, \ldots, n) $ </li>
-<li>写 $ \begin{cases} \left. z’’_{xx} \right|_{P_i} = A_i \\\\  \left. z’’_{xy} \right|_{P_i} = B_i \\\\ \left. z’’_{xx} \right|_{P_i} = C_i \end{cases} \implies \Delta_i = B_i^2 - A_i C_i $</li>
-</ol>
-</li>
-<li><p>方程两边对 $ x $ 求偏导 $ 2x - 6y - 2y \cdot z’_x - 2z \cdot z’_x = 0 \implies z’_x = \dfrac{x - 3y}{y + z} $ </p>
-</li>
-<li>方程两边对 $ y $ 求偏导 $ -6x + 20y -2z - 2y \cdot z’_y - 2z \cdot z’_y = 0 \implies z’_y = \dfrac{-3x + 10y - z}{y + z} $ </li>
-<li>$ \begin{cases} z’_x = 0 \\\\ z’_y = 0 \end{cases} \implies \begin{cases} x = 3y \\\\ z = y \end{cases} $ 带入方程解得：$ \begin{cases} x = 12 \\\\ y = 4 \\\\ z = 4 \end{cases} $ 和 $ \begin{cases} x = -12 \\\\ y = -4 \\\\ z = -4 \end{cases} $ 。</li>
-<li>解得 $ \begin{cases} z’’_{xx} = \dfrac{1}{y + z} - (z’_x)^2 \\\\ z’’_{xy} = - \dfrac{3}{y + z} - \dfrac{ ( 1 + z’_y ) \cdot z’_x }{y + z} \\\\ z’’_{yy} = \dfrac{10}{y + z} - \dfrac{z’_y}{y + z} - \dfrac{ (1 + z’_y) \cdot z’_y }{y + z} \end{cases} \implies B^2 - AC = -\dfrac{1}{4y^2} &lt; 0 $ </li>
-</ul>
-<ol>
-<li><p>求二元函数 $ f(x, y) = x^2(2 + y^2) + y \ln y $ 的极值。</p>
-<ul>
-<li>$ \begin{cases} f’_x = 2x(2 + y^2) = 0 \\\\ f’_y = 2x^2y + \ln y + 1 = 0 \end{cases} \implies \begin{cases} x = 0 \\\\ y = \dfrac{1}{e} \end{cases} $ （唯一解）</li>
-<li>$ \begin{cases} f’’_{xx} = 4 + 2y^2 \\\\ f’’_{xy} = 4xy \\\\ f’’_{yy} = 2x^2 + \dfrac{1}{y} \end{cases} \implies \begin{cases} A = 4 + \dfrac{2}{e^2} \\\\ B = 0 \\\\ C = e \end{cases} \implies B^2 - AC = -4e - \dfrac{2}{e} &lt; 0 $</li>
-<li>极小值 $ f( 0, \dfrac{1}{e} ) = -\dfrac{1}{e} $ </li>
-</ul>
-</li>
-</ol>
-</li>
-</ol>
-</li>
-<li><p>条件极（最）值</p>
-<ol>
-<li><p>概念</p>
-<ul>
-<li>求目标函数 $ u = f(x, y, z) $ 在约束条件 $ \begin{cases} \varphi(x, y, z) = 0 \\\\ \psi(x, y, z) = 0 \end{cases} $ 下的极（最）值。</li>
-<li>拉格朗日乘数法<ol>
-<li>构造辅助函数 $ F(x, y, z, \lambda, \mu) = f(x, y, z) + \lambda \varphi(x, y, z) + \mu \psi(x, y, z), ( \lambda \mu \text{ 均可取 0} ) $ 。<ul>
-<li>$ x, y, z, \lambda, \mu $ 是 5 个独立变量。</li>
-</ul>
-</li>
-<li>令 $ \begin{cases} F’_x = 0 \\\\ F’_y = 0 \\\\ F’_z = 0 \\\\ F’_{\lambda} = 0 \\\\ F’_{\mu} = 0  \end{cases} \implies P_i(x_i, y_i, z_i) \implies u(P_i) $ </li>
-<li>比较 $ u(P_i) $ ，取最大值、最小值。 </li>
-</ol>
-</li>
-</ul>
-<ol>
-<li>例题</li>
-<li>求函数 $ u = xy + 2yz $ 在约束条件 $ x^2 + y^2 + z^2 = 10 $ 下的最值。<ul>
-<li>令 $ F(x, y, z, \lambda) = xy + 2yz + \lambda (x^2 + y^2 + z^2 -10 ) $ </li>
-<li>$ \begin{cases} F’_x = y + 2 \lambda x = 0 \\\\ F’_y = x + 2z + 2 \lambda y = 0 \\\\ F’_z = 2y + 2 \lambda z = 0 \\\\ F’_{ \lambda } = x^2 + y^2 + z^2 - 10 = 0 \end{cases} $</li>
-<li>解 ㊀<ul>
-<li>1⃣️<ul>
-<li>若 $ \lambda = 0 \implies y = 0 \implies x = -2z $ </li>
-<li>$ \implies z^2 = 2 \implies z = \pm \sqrt{2} $ </li>
-<li>$ \implies \begin{cases} ( 2\sqrt{2}, 0, -\sqrt{2} ) \\\\ ( -2\sqrt{2}, 0, \sqrt{2} ) \end{cases} $ </li>
-</ul>
-</li>
-<li>2⃣️<ul>
-<li>若 $ \lambda \not= 0 \implies \begin{cases} x = -\dfrac{1}{2 \lambda}y \\\\ z = -\dfrac{1}{\lambda}y \end{cases} \implies \begin{cases} z = 2x \\\\ y = -2 \lambda x \end{cases} $ </li>
-<li>代入 $ F’_y = 0 $ 得 $ \lambda^2 = \dfrac{5}{4} $ </li>
-<li>代入 $ F’_{\lambda} = 0 $ 得 $ x^2 = 1 \implies x = \pm 1 $ </li>
-<li>$ \implies \begin{cases} (1, \sqrt{5}, 2) \\\\ (1, -\sqrt{5}, 2) \\\\ (-1, \sqrt{5}, -2) \\\\ (-1, -\sqrt{5}, -2) \end{cases} $ </li>
-</ul>
-</li>
-<li>将 6 个点代入 $ u = xy + 2yz $ <ul>
-<li>得 $ \begin{cases} ( 2\sqrt{2}, 0, -\sqrt{2} ) &amp; \implies u = 0 \\\\ ( -2\sqrt{2}, 0, \sqrt{2} ) &amp; \implies u = 0 \\\\ (1, \sqrt{5}, 2) &amp; \implies u = 5 \sqrt{5} \\\\ (1, -\sqrt{5}, 2) &amp; \implies u = -5 \sqrt{5} \\\\ (-1, \sqrt{5}, -2) &amp; \implies u = -5\sqrt{5} \\\\ (-1, -\sqrt{5}, -2) &amp; \implies u = 5 \sqrt{5} \end{cases} $ </li>
+<li>令 $ X = PY \implies \begin{array}{l} f &amp;= X^{\rm T}AX \\\\ &amp;= (PY)^{\rm T} A PY \\\\ &amp;= Y^{\rm T}P^{\rm T}APY \\\\ &amp;= Y^{\rm T}P^{-1}APY \\\\ &amp;= Y^{\rm T} \Lambda Y \end{array} $<ul>
+<li>所以 $ f = \begin{pmatrix} y_1 &amp; y_2 &amp; y_3 \end{pmatrix} \begin{pmatrix} -6 &amp; &amp; \\ &amp; 1 &amp; \\ &amp; &amp; 6 \end{pmatrix} \begin{pmatrix} y_1 \\ y_2 \\ y_3 \end{pmatrix} = -6y_1^2 + y_2^2 + 6y_3^3 $</li>
 </ul>
 </li>
 </ul>
 </li>
-<li>解 ㊁<ul>
-<li>$ xF’_x + yF’_y + zF’_z = xy + 2yz + 10 \lambda = 0 \implies u = -10 \lambda $ </li>
-<li>根据解 ㊀，$ \lambda = 0, \dfrac{ \sqrt{5} }{2}, -\dfrac{ \sqrt{5} }{2} $ </li>
+<li>【施式正交法】<ul>
+<li>$ \xi_1 \not\bot \xi_2, \, \xi_1 \bot \xi_3, \, \xi_2 \bot \xi_3 \implies \eta_1 \bot \eta_2, \, \eta_1 \bot \eta_3, \, \eta_2 \bot \eta_3 $ ，其中 $ \eta_3 $ 就是 $ \xi_3 $ ，对 $ \xi_1, \, \xi_2 $ 正交化。</li>
+<li>例题<ul>
+<li>$ A \implies \begin{cases} \xi_1 = \begin{pmatrix} -2 &amp; 1 &amp; 0 \end{pmatrix}^{\rm T} \\\\ \xi_2 = \begin{pmatrix} 2 &amp; 0 &amp; 1 \end{pmatrix}^{\rm T} \\\\ \xi_3 = \begin{pmatrix} 1 &amp; 2 &amp; -1 \end{pmatrix}^{\rm T} \end{cases} $ ，$ \xi_1 \not\bot \xi_2, \, \xi_1 \bot \xi_3, \, \xi_2 \bot \xi_3 $ <ul>
+<li>令 $ \eta_1 = \xi_1, \, \eta_3 = \xi_3 $ </li>
+<li>$ \xi_2 $ 减去 $ \xi_2 \text{ 在 } \xi_1 $ 上的投影，得到的向量与 $ \xi_1 $ 垂直<ul>
+<li><img src="./images/11-2.2 向量正交化.png" width="50%"></li>
+<li>$ \xi_2 \text{ 在 } \xi_1 $ 上的投影 $ = \begin{Vmatrix} \xi_2 \end{Vmatrix} \cos \theta \, \xi_1^o = \dfrac{ \begin{Vmatrix} \xi_1 \end{Vmatrix} \begin{Vmatrix} \xi_2 \end{Vmatrix} \cos \theta }{ \begin{Vmatrix} \xi_1 \end{Vmatrix} \begin{Vmatrix} \xi_1 \end{Vmatrix} } \xi_1 = \dfrac{ (\xi_2, \xi_1) }{ (\xi_1, \xi_1) } \xi $ <ul>
+<li>$ \theta \text{ 是 } \xi_1, \, \xi_2 $ 的夹角，$ \xi_1^o \text{ 是 } \xi_1 $ 方向上的单位向量 </li>
 </ul>
 </li>
-<li>所以最大值是 $ 5 \sqrt{5} $ ，最小值是 $ -5 \sqrt{5} $ 。</li>
+<li>所以 $ \eta_2 = \xi_2 - \dfrac{ (\xi_2, \xi_1) }{ (\xi_1, \xi_1) } \xi $ </li>
 </ul>
 </li>
-</ol>
-</li>
-</ol>
-</li>
-<li><p>例题</p>
-<ol>
-<li>某公司可通过电台和报纸两种方式做销售某种商品的广告，根据统计资料，销售收入 $ R $ （万元）与电台广告费用 $ x_1 $ （万元）及报纸广告费用 $ x_2 $ （万元）之间的关系有如下经验公式：$ R = 15 + 14x_1 + 32x_2 - 8 x_1 x_2 - 2x_1^2 - 10x_2^2 $ 。1⃣️ 在广告费用不限的情况下，求最优广告策略；2⃣️ 若提供的广告费用为 $ 1.5 $ 万元，求相应的最优广告策略。<ul>
-<li>令利润函数为：$ \begin{array}{l} z = f(x_1, x_2) &amp; = R - x_1 - x_2 \\\\ &amp; = 15 + 13x_1 + 31x_2 - 8 x_1 x_2 - 2x_1^2 - 10x_2^2 \end{array} $ </li>
-<li>1⃣️<ul>
-<li>【非条件极值】</li>
-<li>$ \begin{cases} f’_{x_1} = 13 - 8x_2 - 4x_1 = 0 \\\\ f’_{x_2} = 31 - 8x_1 - 20x_2 = 0 \end{cases} $ <ul>
-<li>克拉默法则<ul>
-<li>$ \begin{cases} a_{11} x_1 + a_{12} x_2 = b_1 \\\\ a_{21} x_1 + a_{22} x_2 = b_2 \end{cases} \implies \begin{cases} x_1 = \dfrac{ \begin{vmatrix} b_1 &amp; a_{12} \\ b_2 &amp; a_{22} \end{vmatrix} }{ \begin{vmatrix} a_{11} &amp; a_{12} \\ a_{21} &amp; a_{22} \end{vmatrix} } \\\\ x_2 = \dfrac{ \begin{vmatrix} a_{11} &amp; b_1 \\ a_{21} &amp; b_2 \end{vmatrix} }{ \begin{vmatrix} a_{11} &amp; a_{12} \\ a_{21} &amp; a_{22} \end{vmatrix} } \end{cases} $ </li>
-</ul>
-</li>
-<li>$ \implies \begin{cases} x_1 = \dfrac{3}{4} = 0.75 \\\\ x_2 = \dfrac{5}{4} = 1.25 \end{cases} $ </li>
-</ul>
-</li>
-<li>$ \begin{cases} f’’_{x_1 x_1} = -4 = A \\\\ f’’_{x_1 x_2} = -8 = B \\\\ f’’_{x_2 x_2} = -20 = C \end{cases} \implies B^2 - AC = -16 &lt; 0 \text{ 且 } A &lt; 0 $ </li>
-<li>所以 $ (0.75, 1.25) $ 为极大值点，根据实际问题，此点为最大值点。</li>
-</ul>
-</li>
-<li>2⃣️<ul>
-<li>【条件最值】</li>
-<li>令 $ F(x_1, x_2, \lambda) = 15 + 13x_1 + 31x_2 - 8 x_1 x_2 - 2x_1^2 - 10x_2^2 + \lambda (x_1 + x_2 - 15) $ </li>
-<li>$ \begin{cases} F’_{x_1} = 13 - 8x_2 - 4x_1 + \lambda = 0 \\\\ F’_{x_2} = 31 - 8x_1 - 20x_2 + \lambda = 0 \\\\ F’_{\lambda} = x_1 + x_2 - 1.5 = 0  \end{cases} $</li>
-<li>$ \implies \begin{cases} 4x_1 + 8x_2 + (-1) \lambda = 13 \\\\ 8x_1 + 20x_2 + (-1) \lambda = 31 \\\\ x_1 + x_2 + 0 \cdot \lambda = 1.5 \end{cases} $ <ul>
-<li>$ \begin{vmatrix} 4 &amp; 8 &amp; -1 \\ 8 &amp; 20 &amp; -1 \\ 1 &amp; 1 &amp; 0 \end{vmatrix} = 8 \not= 0 \implies $ 克拉默法则可以使用</li>
-</ul>
-</li>
-<li>所以 $ \begin{cases} x_1 = \dfrac{ \begin{vmatrix} 13 &amp; 8 &amp; -1 \\ 31 &amp; 20 &amp; -1 \\ 1.5 &amp; 1 &amp; 0 \end{vmatrix} }{8} = 0 \\\\ x_2 = \dfrac{ \begin{vmatrix} 4 &amp; 13 &amp; -1 \\ 8 &amp; 31 &amp; -1 \\ 1 &amp; 1.5 &amp; 0 \end{vmatrix} }{8} = \dfrac{12}{8} = 1.5 \end{cases} $ </li>
+<li>$ \begin{array}{l}  \eta_2 &amp;= \xi_2 - \dfrac{ (\xi_2, \xi_1) }{ (\xi_1, \xi_1) } \xi_1 \\\\ &amp;= \begin{pmatrix} 2 \\ 0 \\ 1 \end{pmatrix} - \dfrac{-4}{5} \begin{pmatrix} -2 \\ 1 \\ 0 \end{pmatrix} \\\\ &amp;= \begin{pmatrix} \frac{2}{5} \\ \frac{4}{5} \\ 1 \end{pmatrix} \end{array} $</li>
+<li>$ \eta_1, \, \eta_2, \, \eta_3 $ 正交 </li>
 </ul>
 </li>
 </ul>
 </li>
-</ol>
+</ul>
 </li>
-</ol>
-<p><br></p>
-<h2 id="三、考点"><a href="#三、考点" class="headerlink" title="三、考点"></a>三、考点</h2><ol>
-<li>偏导数定义</li>
-<li>多元函数微分法<ol>
-<li>链式法则</li>
-</ol>
+</ul>
 </li>
-<li>多元函数的极最值问题</li>
 </ol>
 
                 </div>
@@ -460,13 +335,9 @@
 <div class="row justify-content-center">
     <nav class="m-pagination col-md-8 col-sm-24" role="pagination">
         
-        <a class="float-left" href="/2018/10/10/maths 5 二重积分/" style="float: left;">
-            ← 二重积分
-        </a>
         
-        
-        <a class="float-right" href="/2018/10/02/maths 3 一元函数积分学/">
-            一元函数积分学 →
+        <a class="float-right" href="/2018/10/26/maths 10 特征值/">
+            特征值 →
         </a>
         
     </nav>

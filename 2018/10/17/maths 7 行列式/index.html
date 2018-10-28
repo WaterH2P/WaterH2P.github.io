@@ -173,12 +173,12 @@
     
     
     <span class="tag is-info">
-        <a href='/tags/kaoyan/'>kaoyan</a>
+        <a href='/tags/maths/'>maths</a>
     </span>
     ,
     
     <span class="tag is-info">
-        <a href='/tags/maths/'>maths</a>
+        <a href='/tags/kaoyan/'>kaoyan</a>
     </span>
     ,
     
@@ -250,7 +250,7 @@
 <li>行列式中两行（列）元素相等或对应成比例，则行列式为零。</li>
 <li>⭐️⭐️⭐️倍加性质<ul>
 <li>行列式中某行（列）的 $ k $ 倍加到另一行（列），行列式的值不变。</li>
-<li>$ I = \begin{vmatrix} a_{11} &amp; a_{12} &amp; \cdots &amp; a_{1n} \\ \vdots &amp; \vdots &amp;  &amp; \vdots \\ a_{h1} &amp; a_{h2} &amp; \cdots &amp; a_{hn} \\ \vdots &amp; \vdots &amp;  &amp; \vdots \\ a_{i1} + ka_{h1} &amp; a_{i2} + ka_{h2} &amp; \cdots &amp; a_{in} + ka_{hn} \\ \vdots &amp; \vdots &amp;  &amp; \vdots \\ a_{n1} &amp; a_{n2} &amp; \cdots &amp; a_{nn} \end{vmatrix}  ​$ </li>
+<li>$ I = \begin{vmatrix} a_{11} &amp; a_{12} &amp; \cdots &amp; a_{1n} \\ \vdots &amp; \vdots &amp;  &amp; \vdots \\ a_{h1} &amp; a_{h2} &amp; \cdots &amp; a_{hn} \\ \vdots &amp; \vdots &amp;  &amp; \vdots \\ a_{i1} + ka_{h1} &amp; a_{i2} + ka_{h2} &amp; \cdots &amp; a_{in} + ka_{hn} \\ \vdots &amp; \vdots &amp;  &amp; \vdots \\ a_{n1} &amp; a_{n2} &amp; \cdots &amp; a_{nn} \end{vmatrix}  $ </li>
 <li>根据【性质 4】<ul>
 <li>$ I = \begin{vmatrix} a_{11} &amp; a_{12} &amp; \cdots &amp; a_{1n} \\ \vdots &amp; \vdots &amp;  &amp; \vdots \\ a_{h1} &amp; a_{h2} &amp; \cdots &amp; a_{hn} \\ \vdots &amp; \vdots &amp;  &amp; \vdots \\ a_{i1} &amp; a_{i2} &amp; \cdots &amp; a_{in} \\ \vdots &amp; \vdots &amp;  &amp; \vdots \\ a_{n1} &amp; a_{n2} &amp; \cdots &amp; a_{nn} \end{vmatrix} + \begin{vmatrix} a_{11} &amp; a_{12} &amp; \cdots &amp; a_{1n} \\ \vdots &amp; \vdots &amp;  &amp; \vdots \\ a_{h1} &amp; a_{h2} &amp; \cdots &amp; a_{hn} \\ \vdots &amp; \vdots &amp;  &amp; \vdots \\ ka_{h1} &amp; ka_{h2} &amp; \cdots &amp; ka_{hn} \\ \vdots &amp; \vdots &amp;  &amp; \vdots \\ a_{n1} &amp; a_{n2} &amp; \cdots &amp; a_{nn} \end{vmatrix} $ </li>
 </ul>
@@ -373,7 +373,7 @@ x_1^{n-1} & x_2^{n-1} & \cdots & x_n^{n-1}
 <li>盯着第二行，用 $ \text{ 大列位置的元素 } - \text{ 小列位置的元素 } $ ，所有情况相乘。<script type="math/tex; mode=display">
 \begin{vmatrix}
 1 & 1 & 1 \\
-a & b & c & \\
+a & b & c \\
 a^2 & b^2 & c^2
 \end{vmatrix} = (c-b)(c-a)(b-a)</script></li>
 <li>例题<ol>
@@ -518,6 +518,28 @@ a_{21}x_1 + a_{22}x_2 + \cdots + a_{2n}x_n = 0 \\\\
 \quad \cdots \cdots \\\\ 
 a_{n1}x_1 + a_{n2}x_2 + \cdots + a_{nn}x_n = 0 
 \end{cases}</script><p>的系数行列式 $ |A| \not= 0 $ ，则方程组有唯一零解。<br>​    反之，若齐次线性方程组有非零解，则其系数行列式 $ |A| = 0 $ 。        </p>
+</li>
+</ol>
+<p><br></p>
+<h4 id="2、证明-A-0"><a href="#2、证明-A-0" class="headerlink" title="2、证明 $ |A| = 0 $"></a>2、证明 $ |A| = 0 $</h4><ol>
+<li>直接计算行列式</li>
+<li>构造相应的齐次线性方程组，证明其有非零解<ul>
+<li>例题<ol>
+<li>设 $ \xi = \begin{bmatrix} a_1, a_2, \cdots, a_n \end{bmatrix}^{\rm T}, \; \xi^{\rm T}\xi = \sum\limits_{i=1}^na_i^2 = 1 $ ，证明 $ | E - \xi \xi^{\rm T} | = 0 $ 。<ul>
+<li>构造齐次线性方程组 $ ( E - \xi\xi^{\rm T} ) = 0 \qquad (\ast) $ 。</li>
+<li>因为 $ ( E - \xi\xi^{\rm T} )\xi = \xi - \xi\xi^{\rm T}\xi = \xi - \xi(\xi^{\rm T}\xi) = 0 $ ，其中 $ \xi \not= 0 $ 。</li>
+<li>故方程 $ (\ast) $ 有非零解，得证。</li>
+</ul>
+</li>
+<li>设 A 是 n 阶矩阵，满足 $ A^2 = A $ ，且 $ A \not= E $ ，证明 $ |A| = 0 $ 。<ul>
+<li>$ A^2 = A \implies A(A-E) = O $ </li>
+<li>因为 $ A \not= E $ ，所以 $ A-E \not= O $ 。</li>
+<li>将 $ A-E $ 按列分块，设 $ A-E = \begin{bmatrix} \xi_1, \xi_2, \cdots, \xi_n \end{bmatrix} $ ，则 $ A-E $ 的每一列 $ \xi_i(i=1, 2, \cdots, n) $ 均是方程组 $ Ax = 0 $ 的解向量，由于 $ A-E \not= O $ ，所以 $ A-E $ 中至少有一列 $ \xi_i $ 不为零向量，故 $ Ax = 0 $ 存在非零解，从而得证 $ |A|=0 $ 。</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
 </li>
 </ol>
 
