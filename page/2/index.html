@@ -51,7 +51,7 @@
     </div>
 
     
-    <!-- ============================ Off-canvas navigation =========================== -->
+    <!-- ============================ Off-canvas navigation ============================ -->
     <!-- More 显示内容 -->
     <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
         <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
@@ -84,14 +84,13 @@
             <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li>
         </ul>
     </div>
-
-    <!-- ============================ END Off-canvas navigation =========================== -->
+    <!-- ============================ END Off-canvas navigation ============================ -->
 
     <!-- 首页顶端中间显示的内容 -->
     <div id="sb-site">
         <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
-        <!-- ============================ Header & Logo bar =========================== -->
-
+        
+        <!-- ============================ Header & Logo bar ============================ -->
         <div class="nav" style="width: 100%">
             <div class="container-fluid">
                 <div class="row justify-content-center">
@@ -136,10 +135,69 @@
                 </div>
             </div>
         </div>
-
-        <!-- ============================ Header & Logo bar =========================== -->
+        <!-- ============================ END Header & Logo bar ============================ -->
     </div>
 
+    <!-- ============================ Tap Blog's Links ============================ -->
+    <div id="div-side-navigation-right" class="col-lg-3 col-md-3" style="position: fixed; top: 46px; right: 0; padding-top: 0; padding-left: 50px; z-index: 5" v-if="show">
+        <div class="list-group" style="border-radius: .25rem; border: 1px solid rgba(0,0,0,.125)">
+            <div class="list-group-item list-group-item-action" style="padding: 1px 20px; border: 0" v-for="link in links">
+                <a :href="link.href">{{link.text}}</a>
+            </div>
+        </div>
+    </div>
+    <script>
+        'use strict';
+        
+        var min_width = 1050;
+        $(function(){
+            var width = $(window).width();
+            if( width > min_width ){
+                div_side_navigation_right.show = true;
+            }
+            else {
+                div_side_navigation_right.show = false;
+            }
+
+            // 对于链接提取
+            var aCount = 0;
+            var hrefFilter = ['//go.kieran.top', '/archives', '/about.html', '/atom.xml', '/'];
+            var hrefFound = [];
+            $('a').each(function(index, element){
+                var href = $(element).attr('href');
+                var text = $(element).text().toString();
+
+                if( !href || $.inArray(href, hrefFilter)>-1 || $.inArray(href, hrefFound)>-1 || text.indexOf('<img')>-1 || text.indexOf('Read More')>-1 || text.length===0 ){
+                    return;
+                }
+
+                hrefFound[aCount++] = href;
+                $(function(index){
+                    var link = {'href':href, 'text':index + '. ' +text};
+                    div_side_navigation_right.links.push(link);
+                }(aCount));
+            });
+        });
+
+        $(window).resize(function(){
+            var width = $(window).width();
+            if( width > min_width ){
+                div_side_navigation_right.show = true;
+            }
+            else {
+                div_side_navigation_right.show = false;
+            }
+        });
+
+        var div_side_navigation_right = new Vue({
+            el : '#div-side-navigation-right',
+            data : {
+                show : true,
+                links : []
+            }
+        });
+    </script>
+    <!-- ============================ END Tap Blog's Links ============================ -->
     
     <!-- ============================ Hero Image =========================== -->
 
@@ -216,58 +274,6 @@
                     <div class="col-lg-8 col-md-10 opening-statement">
                         <div class="row">
                             <div class="col-lg-4 col-md-4">
-                                <h3><a href="/2018/09/28/plugin Chrome 插件/">Chrome 插件</a></h3>
-                                <span>
-                                    
-<span class="post-meta">
-    <!-- blog 的 date -->
-    
-        <span>
-            2018-09-28
-        </span>
-        <span>&nbsp;&nbsp;</span>
-    
-    <!-- blog 的 tags -->
-    
-    
-    
-    <span class="tag is-info">
-        <a href='/tags/chrome/'>chrome</a>
-    </span>
-    ,
-    
-    <span class="tag is-info">
-        <a href='/tags/plugin/'>plugin</a>
-    </span>
-    
-    
-    
-</span>
-
-                                </span>
-                            </div>
-                            <div class="col-lg-8 col-md-8 div-message">
-                                <p>
-                                  
-                                    记录 Chrome 安装的插件
-                                  
-                                </p>
-                                
-                                    <p class="pull-right readMore" style="margin:0">
-                                        <a href="/2018/09/28/plugin Chrome 插件/">Read More...</a>
-                                    </p>
-                                
-                            </div>
-                        </div>
-                        <div class="clearfix"></div>
-                        <hr class="nogutter">
-                    </div>
-                </div>
-            
-                <div class="row justify-content-center">
-                    <div class="col-lg-8 col-md-10 opening-statement">
-                        <div class="row">
-                            <div class="col-lg-4 col-md-4">
                                 <h3><a href="/2018/09/28/plugin Tampermonkey 脚本/">Tampermonkey 脚本</a></h3>
                                 <span>
                                     
@@ -307,6 +313,58 @@
                                 
                                     <p class="pull-right readMore" style="margin:0">
                                         <a href="/2018/09/28/plugin Tampermonkey 脚本/">Read More...</a>
+                                    </p>
+                                
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                        <hr class="nogutter">
+                    </div>
+                </div>
+            
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 col-md-10 opening-statement">
+                        <div class="row">
+                            <div class="col-lg-4 col-md-4">
+                                <h3><a href="/2018/09/28/plugin Chrome 插件/">Chrome 插件</a></h3>
+                                <span>
+                                    
+<span class="post-meta">
+    <!-- blog 的 date -->
+    
+        <span>
+            2018-09-28
+        </span>
+        <span>&nbsp;&nbsp;</span>
+    
+    <!-- blog 的 tags -->
+    
+    
+    
+    <span class="tag is-info">
+        <a href='/tags/chrome/'>chrome</a>
+    </span>
+    ,
+    
+    <span class="tag is-info">
+        <a href='/tags/plugin/'>plugin</a>
+    </span>
+    
+    
+    
+</span>
+
+                                </span>
+                            </div>
+                            <div class="col-lg-8 col-md-8 div-message">
+                                <p>
+                                  
+                                    记录 Chrome 安装的插件
+                                  
+                                </p>
+                                
+                                    <p class="pull-right readMore" style="margin:0">
+                                        <a href="/2018/09/28/plugin Chrome 插件/">Read More...</a>
                                     </p>
                                 
                             </div>
@@ -434,6 +492,53 @@
                     <div class="col-lg-8 col-md-10 opening-statement">
                         <div class="row">
                             <div class="col-lg-4 col-md-4">
+                                <h3><a href="/2018/09/21/hexo 在 Hexo 中渲染 MathJax 数学公式/">在 Hexo 中渲染 MathJax 数学公式</a></h3>
+                                <span>
+                                    
+<span class="post-meta">
+    <!-- blog 的 date -->
+    
+        <span>
+            2018-09-21
+        </span>
+        <span>&nbsp;&nbsp;</span>
+    
+    <!-- blog 的 tags -->
+    
+    
+    
+    <span class="tag is-info">
+        <a href='/tags/mathjax/'>mathjax</a>
+    </span>
+    
+    
+    
+</span>
+
+                                </span>
+                            </div>
+                            <div class="col-lg-8 col-md-8 div-message">
+                                <p>
+                                  
+                                    显示数学公式看着才爽
+                                  
+                                </p>
+                                
+                                    <p class="pull-right readMore" style="margin:0">
+                                        <a href="/2018/09/21/hexo 在 Hexo 中渲染 MathJax 数学公式/">Read More...</a>
+                                    </p>
+                                
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                        <hr class="nogutter">
+                    </div>
+                </div>
+            
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 col-md-10 opening-statement">
+                        <div class="row">
+                            <div class="col-lg-4 col-md-4">
                                 <h3><a href="/2018/09/21/maths 1 极限/">极限</a></h3>
                                 <span>
                                     
@@ -478,53 +583,6 @@
                                 
                                     <p class="pull-right readMore" style="margin:0">
                                         <a href="/2018/09/21/maths 1 极限/">Read More...</a>
-                                    </p>
-                                
-                            </div>
-                        </div>
-                        <div class="clearfix"></div>
-                        <hr class="nogutter">
-                    </div>
-                </div>
-            
-                <div class="row justify-content-center">
-                    <div class="col-lg-8 col-md-10 opening-statement">
-                        <div class="row">
-                            <div class="col-lg-4 col-md-4">
-                                <h3><a href="/2018/09/21/hexo 在 Hexo 中渲染 MathJax 数学公式/">在 Hexo 中渲染 MathJax 数学公式</a></h3>
-                                <span>
-                                    
-<span class="post-meta">
-    <!-- blog 的 date -->
-    
-        <span>
-            2018-09-21
-        </span>
-        <span>&nbsp;&nbsp;</span>
-    
-    <!-- blog 的 tags -->
-    
-    
-    
-    <span class="tag is-info">
-        <a href='/tags/mathjax/'>mathjax</a>
-    </span>
-    
-    
-    
-</span>
-
-                                </span>
-                            </div>
-                            <div class="col-lg-8 col-md-8 div-message">
-                                <p>
-                                  
-                                    显示数学公式看着才爽
-                                  
-                                </p>
-                                
-                                    <p class="pull-right readMore" style="margin:0">
-                                        <a href="/2018/09/21/hexo 在 Hexo 中渲染 MathJax 数学公式/">Read More...</a>
                                     </p>
                                 
                             </div>

@@ -51,7 +51,7 @@
     </div>
 
     
-    <!-- ============================ Off-canvas navigation =========================== -->
+    <!-- ============================ Off-canvas navigation ============================ -->
     <!-- More 显示内容 -->
     <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
         <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
@@ -84,14 +84,13 @@
             <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li>
         </ul>
     </div>
-
-    <!-- ============================ END Off-canvas navigation =========================== -->
+    <!-- ============================ END Off-canvas navigation ============================ -->
 
     <!-- 首页顶端中间显示的内容 -->
     <div id="sb-site">
         <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
-        <!-- ============================ Header & Logo bar =========================== -->
-
+        
+        <!-- ============================ Header & Logo bar ============================ -->
         <div class="nav" style="width: 100%">
             <div class="container-fluid">
                 <div class="row justify-content-center">
@@ -136,24 +135,75 @@
                 </div>
             </div>
         </div>
-
-        <!-- ============================ Header & Logo bar =========================== -->
+        <!-- ============================ END Header & Logo bar ============================ -->
     </div>
 
+    <!-- ============================ Tap Blog's Links ============================ -->
+    <div id="div-side-navigation-right" class="col-lg-3 col-md-3" style="position: fixed; top: 46px; right: 0; padding-top: 0; padding-left: 50px; z-index: 5" v-if="show">
+        <div class="list-group" style="border-radius: .25rem; border: 1px solid rgba(0,0,0,.125)">
+            <div class="list-group-item list-group-item-action" style="padding: 1px 20px; border: 0" v-for="link in links">
+                <a :href="link.href">{{link.text}}</a>
+            </div>
+        </div>
+    </div>
+    <script>
+        'use strict';
+        
+        var min_width = 1050;
+        $(function(){
+            var width = $(window).width();
+            if( width > min_width ){
+                div_side_navigation_right.show = true;
+            }
+            else {
+                div_side_navigation_right.show = false;
+            }
+
+            // 对于链接提取
+            var aCount = 0;
+            var hrefFilter = ['//go.kieran.top', '/archives', '/about.html', '/atom.xml', '/'];
+            var hrefFound = [];
+            $('a').each(function(index, element){
+                var href = $(element).attr('href');
+                var text = $(element).text().toString();
+
+                if( !href || $.inArray(href, hrefFilter)>-1 || $.inArray(href, hrefFound)>-1 || text.indexOf('<img')>-1 || text.indexOf('Read More')>-1 || text.length===0 ){
+                    return;
+                }
+
+                hrefFound[aCount++] = href;
+                $(function(index){
+                    var link = {'href':href, 'text':index + '. ' +text};
+                    div_side_navigation_right.links.push(link);
+                }(aCount));
+            });
+        });
+
+        $(window).resize(function(){
+            var width = $(window).width();
+            if( width > min_width ){
+                div_side_navigation_right.show = true;
+            }
+            else {
+                div_side_navigation_right.show = false;
+            }
+        });
+
+        var div_side_navigation_right = new Vue({
+            el : '#div-side-navigation-right',
+            data : {
+                show : true,
+                links : []
+            }
+        });
+    </script>
+    <!-- ============================ END Tap Blog's Links ============================ -->
     
     
     <section id="intro">
         <div id="div-side-navigation-left" class="col-lg-3 col-md-3" style="position: fixed; top: 46px; left: 0; padding-top: 0; padding-right: 50px" v-if="show">
-            <div class="list-group" v-for="header in headers">
-                <a class="list-group-item list-group-item-action" :href="IDToHref(header.id)">{{header.id}}</a>
-            </div>
-        </div>
-
-        <div id="div-side-navigation-right" class="col-lg-3 col-md-3" style="position: fixed; top: 46px; right: 0; padding-top: 0; padding-right: 50px" v-if="show">
-            <div class="list-group" v-for="link in links">
-                <div class="ist-group-item list-group-item-action" style="padding: 1px 20px">
-                        <a :href="link.href">{{link.value}}</a>
-                </div>
+            <div class="list-group">
+                <a class="list-group-item list-group-item-action" :href="IDToHref(header.id)" v-for="header in headers">{{header.id}}</a>
             </div>
         </div>
 
@@ -268,13 +318,13 @@
 <div class="row justify-content-center">
     <nav class="m-pagination col-md-8 col-sm-24" role="pagination">
         
-        <a class="float-left" href="/2018/09/28/hexo 小 bug/" style="float: left;">
-            ← Hexo 小 bug
+        <a class="float-left" href="/2018/09/28/plugin Tampermonkey 脚本/" style="float: left;">
+            ← Tampermonkey 脚本
         </a>
         
         
-        <a class="float-right" href="/2018/09/28/plugin Tampermonkey 脚本/">
-            Tampermonkey 脚本 →
+        <a class="float-right" href="/2018/09/26/maths 2 一元函数微分学/">
+            一元函数微分学 →
         </a>
         
     </nav>
@@ -292,21 +342,19 @@
     <script>
         'use strict';
 
-        var num_map = [ '零', '一', '二', '三', '四', '五', '六', '七', '八', '九' ];
         var min_width = 1050;
         $(function(){
             var width = $(window).width();
             if( width > min_width ){
                 div_side_navigation_left.show = true;
-                div_side_navigation_right.show = true;
             }
             else {
                 div_side_navigation_left.show = false;
-                div_side_navigation_right.show = false;
             }
             
             // 对于目录索引
             var preH2 = undefined;
+            var num_map = [ '零', '一', '二', '三', '四', '五', '六', '七', '八', '九' ];
             $('h2').each(function(index, element){
                 var content = $(element).text().toString();
                 var header = content.indexOf('、') > 0 ? content.split('、')[1] : 
@@ -316,32 +364,15 @@
                 var header = {'id':id};
                 div_side_navigation_left.headers.push(header);
             });
-
-            // 对于链接提取
-            $('a').each(function(index, element){
-                var href = $(element).attr('href');
-                var value = $(element).val.toString();
-                var hrefFilter = ['//go.kieran.top', '/archives', '/about.html', '/atom.xml'];
-                var hrefFound = [];
-
-                if( !href || $.inArray(href, hrefFilter) || $.inArray(href, hrefFound) || value.indexOf('<img')>-1 || value.indexOf('Read More')>-1 ){
-                    return;
-                }
-                hrefFound[hrefFound.length] = href;
-                var link = {'href':href, 'value':value};
-                div_side_navigation_right.links.push(link);
-            });
         });
 
         $(window).resize(function(){
             var width = $(window).width();
             if( width > min_width ){
                 div_side_navigation_left.show = true;
-                div_side_navigation_right.show = true;
             }
             else {
                 div_side_navigation_left.show = false;
-                div_side_navigation_right.show = false;
             }
         });
         
@@ -355,14 +386,6 @@
                 IDToHref : function(id){
                     return "#" + id;
                 }
-            }
-        });
-
-        var div_side_navigation_right = new Vue({
-            el : '#div-side-navigation-right',
-            data : {
-                show : true,
-                links : []
             }
         });
     </script>
