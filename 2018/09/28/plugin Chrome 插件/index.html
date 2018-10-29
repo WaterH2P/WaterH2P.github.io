@@ -139,13 +139,49 @@
     </div>
 
     <!-- ============================ Tap Blog's Links ============================ -->
-    <div id="div-side-navigation-right" class="col-lg-3 col-md-3" style="position: fixed; top: 45.5px; right: 0; padding-top: 0; padding-left: 50px; z-index: 5" v-if="show">
+    <div id="div-side-navigation-right" class="col-lg-3 col-md-3" style="position: fixed; top: 46px; right: 0; padding-top: 0; padding-left: 50px; z-index: 5" v-if="show">
         <div class="list-group" style="border-radius: 0; border: 1px solid rgba(0, 0, 0, 0.1)">
-            <div class="list-group-item list-group-item-action" style="padding: 1px 20px; border: 0; border-radius: 0" v-for="link in links">
-                <a :href="link.href">{{link.text}}</a>
-            </div>
+            <a class="list-group-item list-group-item-action" :class="{linkFocus:aShow}" style="padding: 1px 20px; border: 0; border-radius: 0; text-align: center" @click="showALinks()">
+                Links
+            </a>
+            <a class="list-group-item list-group-item-action" :class="{linkFocus:tagShow}" style="padding: 1px 20px; border: 0; border-radius: 0; text-align: center" @click="showTagLinks">
+                Tag Links
+            </a>
+        </div>
+        <div class="width-100-pct height-5 visibility-hidden"></div>
+        <div class="list-group" style="border-radius: 0; border: 1px solid rgba(0, 0, 0, 0.1)">
+            <transition 
+                enter-active-class="animated zoomIn"
+                leave-active-class="">
+                <div v-if="aShow">
+                    <div class="list-group-item list-group-item-action" style="padding: 1px 20px; border: 0; border-radius: 0" v-for="link in links">
+                        <a :href="link.href">{{link.text}}</a>
+                    </div>
+                </div>
+            </transition>
+            <transition
+                enter-active-class="animated zoomIn"
+                leave-active-class="">
+                <div v-if="tagShow">
+                    <div class="list-group-item list-group-item-action" style="padding: 1px 20px; border: 0; border-radius: 0" v-for="link in tags">
+                        <a :href="link.href">{{link.text}}</a>
+                    </div>
+                </div>
+            </transition>
         </div>
     </div>
+
+    <style>
+        .linkFocus {
+            background-color: #5fefe8;
+            user-select:none;
+        }
+        .linkFocus:hover {
+            cursor: auto;
+            background-color: #5fefe8;
+        }
+    </style>
+
     <script>
         'use strict';
         
@@ -161,6 +197,7 @@
 
             // 对于链接提取
             var aCount = 0;
+            var tagCount = 0;
             var hrefFilter = ['//go.kieran.top', '/archives', '/about.html', '/atom.xml', 'http://yellowfefe.cn/', 'http://sheltonlee.cn/'];
             var hrefFound = [];
             $('a').each(function(index, element){
@@ -171,11 +208,23 @@
                     return;
                 }
 
-                hrefFound[aCount++] = href;
+                var currentIndex = href.indexOf('/tag')<0 ? ++aCount : ++tagCount;
+                hrefFound[aCount+tagCount] = href;
                 $(function(index){
-                    var link = {'href':href, 'text':index + '. ' +text};
-                    div_side_navigation_right.links.push(link);
-                }(aCount));
+                    if( index<10 ){
+                        text = index + '.  ' +text;
+                    }
+                    else{
+                        text = index + '. ' +text
+                    }
+                    var link = {'href':href, 'text':text};
+                    if( href.indexOf('/tag')<0 ){
+                        div_side_navigation_right.links.push(link);
+                    }
+                    else{
+                        div_side_navigation_right.tags.push(link);
+                    }
+                }(currentIndex));
             });
         });
 
@@ -193,7 +242,30 @@
             el : '#div-side-navigation-right',
             data : {
                 show : true,
-                links : []
+                aShow : true,
+                tagShow : false,
+                links : [],
+                tags :[]
+            },
+            methods : {
+                showALinks : function(){
+                    if( !div_side_navigation_right.tagShow ){
+                        return;
+                    }
+                    setTimeout(function(){
+                        div_side_navigation_right.aShow = true;
+                    }, 50);
+                    div_side_navigation_right.tagShow = false;
+                },
+                showTagLinks : function(){
+                    if( !div_side_navigation_right.aShow ){
+                        return;
+                    }
+                    div_side_navigation_right.aShow = false;
+                    setTimeout(function(){
+                        div_side_navigation_right.tagShow = true;
+                    }, 50);
+                }
             }
         });
     </script>
@@ -224,12 +296,12 @@
     
     
     <span class="tag is-info">
-        <a href='/tags/chrome/'>chrome</a>
+        <a href='/tags/plugin/'>plugin</a>
     </span>
     ,
     
     <span class="tag is-info">
-        <a href='/tags/plugin/'>plugin</a>
+        <a href='/tags/chrome/'>chrome</a>
     </span>
     
     
@@ -318,13 +390,13 @@
 <div class="row justify-content-center">
     <nav class="m-pagination col-md-8 col-sm-24" role="pagination">
         
-        <a class="float-left" href="/2018/09/28/hexo 小 bug/" style="float: left;">
-            ← Hexo 小 bug
+        <a class="float-left" href="/2018/09/28/plugin Tampermonkey 脚本/" style="float: left;">
+            ← Tampermonkey 脚本
         </a>
         
         
-        <a class="float-right" href="/2018/09/28/plugin Tampermonkey 脚本/">
-            Tampermonkey 脚本 →
+        <a class="float-right" href="/2018/09/26/maths 2 一元函数微分学/">
+            一元函数微分学 →
         </a>
         
     </nav>
