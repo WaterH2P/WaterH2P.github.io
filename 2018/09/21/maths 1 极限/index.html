@@ -146,12 +146,13 @@
         <div id="div-side-navigation-left" class="col-lg-3 col-md-3" style="position: fixed; top: 46px; left: 0; padding-top: 0; padding-right: 50px" v-if="show">
             <div class="list-group" v-for="header in headers">
                 <a class="list-group-item list-group-item-action" :href="IDToHref(header.id)">{{header.id}}</a>
-                <div class="row justify-content-end" v-if="ownChild(header.children)">
-                    <div class="col-lg-11 col-md-11" style="padding-top: 0; padding-bottom: 0">
-                        <div class="list-group" v-for="child in header.children">
-                            <a class="list-group-item list-group-item-action" style="padding: 4px 10px" :href="IDToHref(child.id)">{{child.id}}</a>
-                        </div>
-                    </div>
+            </div>
+        </div>
+
+        <div id="div-side-navigation-right" class="col-lg-3 col-md-3" style="position: fixed; top: 46px; right: 0; padding-top: 0; padding-right: 50px" v-if="show">
+            <div class="list-group" v-for="link in links">
+                <div class="ist-group-item list-group-item-action" style="padding: 1px 20px">
+                        <a :href="link.href">{{link.value}}</a>
                 </div>
             </div>
         </div>
@@ -570,51 +571,46 @@
     </section>
     
     <script>
+        'use strict';
+
         var num_map = [ '零', '一', '二', '三', '四', '五', '六', '七', '八', '九' ];
         var min_width = 1050;
         $(function(){
             var width = $(window).width();
             if( width > min_width ){
                 div_side_navigation_left.show = true;
+                div_side_navigation_right.show = true;
             }
             else {
                 div_side_navigation_left.show = false;
+                div_side_navigation_right.show = false;
             }
             
+            // 对于目录索引
             var preH2 = undefined;
             $('h2').each(function(index, element){
-                // var circleTimes = $(element).nextAll('h2').length > 0 ? 1 : 2;
-                // if( index === 0 ){
-                //     preH2 = element;
-                // }
-                // else {
-                //     for( var i = 0; i < circleTimes; i++ ){
-                //         var content = $(preH2).text().toString();
-                //         var header = content.indexOf('、') > 0 ? content.split('、')[1] : 
-                //             content.indexOf('.') > 0 ? content.split('.')[1] : content;
-                //         var id = num_map[index + i] + '. ' + header + '';
-                //         $(preH2).attr('id', id);
-                //         var header = {'id':id, 'children':[]};
-                //         $(preH2).nextUntil(element, 'h4').each( function(index, element){
-                //             var child_content = $(element).text().toString();
-                //             var child_header = child_content.indexOf('、') > 0 ? child_content.split('、')[1] : 
-                //             child_content.indexOf('.') > 0 ? child_content.split('.')[1] : child_content;;
-                //             var child_id = (index + 1 ) + '. ' + child_header + '';
-                //             $(element).attr('id', child_id);
-                //             header.children.push({'id':child_id});
-                //         });
-                //         div_side_navigation_left.headers.push(header);
-                        
-                //         preH2 = element;
-                //     }
-                // }
                 var content = $(element).text().toString();
                 var header = content.indexOf('、') > 0 ? content.split('、')[1] : 
                     content.indexOf('.') > 0 ? content.split('.')[1] : content;
                 var id = num_map[index + 1] + '. ' + header + '';
                 $(element).attr('id', id);
-                var header = {'id':id, 'children':[]};
+                var header = {'id':id};
                 div_side_navigation_left.headers.push(header);
+            });
+
+            // 对于链接提取
+            $('a').each(function(index, element){
+                var href = $(element).attr('href');
+                var value = $(element).val.toString();
+                var hrefFilter = ['//go.kieran.top', '/archives', '/about.html', '/atom.xml'];
+                var hrefFound = [];
+
+                if( !href || $.inArray(href, hrefFilter) || $.inArray(href, hrefFound) || value.indexOf('<img')>-1 || value.indexOf('Read More')>-1 ){
+                    return;
+                }
+                hrefFound[hrefFound.length] = href;
+                var link = {'href':href, 'value':value};
+                div_side_navigation_right.links.push(link);
             });
         });
 
@@ -622,9 +618,11 @@
             var width = $(window).width();
             if( width > min_width ){
                 div_side_navigation_left.show = true;
+                div_side_navigation_right.show = true;
             }
             else {
                 div_side_navigation_left.show = false;
+                div_side_navigation_right.show = false;
             }
         });
         
@@ -637,10 +635,15 @@
             methods : {
                 IDToHref : function(id){
                     return "#" + id;
-                },
-                ownChild : function(children){
-                    return children instanceof Array && children.length > 0; 
                 }
+            }
+        });
+
+        var div_side_navigation_right = new Vue({
+            el : '#div-side-navigation-right',
+            data : {
+                show : true,
+                links : []
             }
         });
     </script>
