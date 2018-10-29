@@ -139,9 +139,9 @@
     </div>
 
     <!-- ============================ Tap Blog's Links ============================ -->
-    <div id="div-side-navigation-right" class="col-lg-3 col-md-3" style="position: fixed; top: 46px; right: 0; padding-top: 0; padding-left: 50px; z-index: 5" v-if="show">
-        <div class="list-group" style="border-radius: .25rem; border: 1px solid rgba(0,0,0,.125)">
-            <div class="list-group-item list-group-item-action" style="padding: 1px 20px; border: 0" v-for="link in links">
+    <div id="div-side-navigation-right" class="col-lg-3 col-md-3" style="position: fixed; top: 45.5px; right: 0; padding-top: 0; padding-left: 50px; z-index: 5" v-if="show">
+        <div class="list-group" style="border-radius: 0; border: 1px solid rgba(0, 0, 0, 0.1)">
+            <div class="list-group-item list-group-item-action" style="padding: 1px 20px; border: 0; border-radius: 0" v-for="link in links">
                 <a :href="link.href">{{link.text}}</a>
             </div>
         </div>
@@ -161,7 +161,7 @@
 
             // 对于链接提取
             var aCount = 0;
-            var hrefFilter = ['//go.kieran.top', '/archives', '/about.html', '/atom.xml'];
+            var hrefFilter = ['//go.kieran.top', '/archives', '/about.html', '/atom.xml', 'http://yellowfefe.cn/', 'http://sheltonlee.cn/'];
             var hrefFound = [];
             $('a').each(function(index, element){
                 var href = $(element).attr('href');
