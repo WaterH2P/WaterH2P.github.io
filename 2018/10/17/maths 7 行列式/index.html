@@ -151,7 +151,7 @@
         <div class="width-100-pct height-5 visibility-hidden"></div>
         <div class="list-group" style="border-radius: 0; border: 1px solid rgba(0, 0, 0, 0.1)">
             <transition 
-                enter-active-class="animated zoomIn"
+                enter-active-class="animated slideInUp"
                 leave-active-class="">
                 <div v-if="aShow">
                     <div class="list-group-item list-group-item-action" style="padding: 1px 20px; border: 0; border-radius: 0" v-for="link in links">
@@ -160,7 +160,7 @@
                 </div>
             </transition>
             <transition
-                enter-active-class="animated zoomIn"
+                enter-active-class="animated slideInUp"
                 leave-active-class="">
                 <div v-if="tagShow">
                     <div class="list-group-item list-group-item-action" style="padding: 1px 20px; border: 0; border-radius: 0" v-for="link in tags">
@@ -179,6 +179,16 @@
         .linkFocus:hover {
             cursor: auto;
             background-color: #5fefe8;
+        }
+
+        .noFocus {
+            user-select:none;
+            background-color: #fff;
+        }
+        .noFocus:hover {
+            cursor: auto;
+            user-select:none;
+            background-color: #fff;
         }
     </style>
 
@@ -273,12 +283,6 @@
     
     
     <section id="intro">
-        <div id="div-side-navigation-left" class="col-lg-3 col-md-3" style="position: fixed; top: 46px; left: 0; padding-top: 0; padding-right: 50px" v-if="show">
-            <div class="list-group">
-                <a class="list-group-item list-group-item-action" :href="IDToHref(header.id)" v-for="header in headers">{{header.id}}</a>
-            </div>
-        </div>
-
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-8 col-md-10">
@@ -296,17 +300,17 @@
     
     
     <span class="tag is-info">
+        <a href='/tags/kaoyan/'>kaoyan</a>
+    </span>
+    ,
+    
+    <span class="tag is-info">
         <a href='/tags/maths/'>maths</a>
     </span>
     ,
     
     <span class="tag is-info">
         <a href='/tags/线代/'>线代</a>
-    </span>
-    ,
-    
-    <span class="tag is-info">
-        <a href='/tags/kaoyan/'>kaoyan</a>
     </span>
     
     
@@ -694,6 +698,25 @@ a_{n1}x_1 + a_{n2}x_2 + \cdots + a_{nn}x_n = 0
                 </div>
             </div>
         </div>
+
+        <div id="div-side-navigation-left" class="col-lg-3 col-md-3" style="position: fixed; top: 46px; left: 0; padding-top: 0; padding-right: 50px" v-if="show">
+            <div class="list-group" style="border-radius: 0; border: 1px solid rgba(0, 0, 0, 0.1)">
+                <a class="list-group-item list-group-item-action" :class="{linkFocus:header.fillColor}" style="padding: 1px 20px; border: 0; border-radius: 0" :href="IDToHref(header.id)" v-for="header in headers" @click="showChildren(header.index)">{{header.id}}</a>
+            </div>
+            <div class="width-100-pct height-5 visibility-hidden"></div>
+            <div class="list-group" style="border-radius: 0; border: 1px solid rgba(0, 0, 0, 0.1)">
+                <div v-for="header in headers">
+                    <transition 
+                        enter-active-class="animated slideInUp"
+                        leave-active-class="">
+                        <div v-if="header.show">
+                            <a class="list-group-item list-group-item-action" style="padding: 1px 20px; border: 0; border-radius: 0" :href="IDToHref(child.id)" v-for="child in header.children">{{child.id}}</a>
+                        </div>
+                    </transition>
+                </div>
+            </div>
+        </div>
+
     </section>
     
     <script>
@@ -712,15 +735,40 @@ a_{n1}x_1 + a_{n2}x_2 + \cdots + a_{nn}x_n = 0
             // 对于目录索引
             var preH2 = undefined;
             var num_map = [ '零', '一', '二', '三', '四', '五', '六', '七', '八', '九' ];
-            $('h2').each(function(index, element){
-                var content = $(element).text().toString();
-                var header = content.indexOf('、') > 0 ? content.split('、')[1] : 
-                    content.indexOf('.') > 0 ? content.split('.')[1] : content;
-                var id = num_map[index + 1] + '. ' + header + '';
-                $(element).attr('id', id);
-                var header = {'id':id};
+            var h2s = $('h2');
+            var numOfH2 = h2s.length;
+            for(var i=0; i<numOfH2; i++){
+                var h2 = h2s[i];
+                var text = $(h2).text().toString();
+                var header = text.indexOf('、') > 0 ? text.split('、')[1] : 
+                    text.indexOf('.') > 0 ? text.split('.')[1] : text;
+                var id = num_map[i + 1] + '. ' + header + '';
+                $(h2).attr('id', id);
+
+                var h4s = [];
+                if(i<numOfH2-1){
+                    var h2Next = h2s[i+1];
+                    h4s = $(h2).nextUntil(h2Next, 'h4');
+                }
+                else{
+                    h4s = $(h2).nextAll('h4');
+                }
+
+                var h2Children = [];
+                h4s.each(function(index, element){
+                    var childText = $(element).text().toString();
+                    var childHeader = childText.indexOf('、') > 0 ? childText.split('、')[1] : 
+                        childText.indexOf('.') > 0 ? childText.split('.')[1] : childText;
+                    var childId = (index+1) + '. ' + childHeader;
+                    $(element).attr('id', childId);
+                    h2Children[index] = {'id':childId};
+                });
+                var fillColor = i===0 ? true : false;
+                var show = i===0 ? true : false;
+                var header = {'id':id, 'index':i, 'fillColor':fillColor, 'show':show, 'children': h2Children};
+
                 div_side_navigation_left.headers.push(header);
-            });
+            }
         });
 
         $(window).resize(function(){
@@ -736,12 +784,28 @@ a_{n1}x_1 + a_{n2}x_2 + \cdots + a_{nn}x_n = 0
         var div_side_navigation_left = new Vue({
             el : '#div-side-navigation-left',
             data : {
+                currentIndex : 0,
                 show : true,
                 headers : []
             },
             methods : {
                 IDToHref : function(id){
                     return "#" + id;
+                },
+                showChildren : function(index){
+                    if(div_side_navigation_left.currentIndex==index){
+                        return;
+                    }
+                    var currentShow = div_side_navigation_left.headers[div_side_navigation_left.currentIndex];
+                    currentShow['fillColor'] = false;
+                    currentShow['show'] = false;
+                    Vue.set(div_side_navigation_left.headers, div_side_navigation_left.currentIndex, currentShow);
+
+                    div_side_navigation_left.currentIndex = index;
+                    var newShow = div_side_navigation_left.headers[index];
+                    newShow['fillColor'] = true;
+                    newShow['show'] = true;
+                    Vue.set(div_side_navigation_left.headers, index, newShow);
                 }
             }
         });

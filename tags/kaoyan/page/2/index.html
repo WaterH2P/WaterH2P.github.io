@@ -151,7 +151,7 @@
         <div class="width-100-pct height-5 visibility-hidden"></div>
         <div class="list-group" style="border-radius: 0; border: 1px solid rgba(0, 0, 0, 0.1)">
             <transition 
-                enter-active-class="animated zoomIn"
+                enter-active-class="animated slideInUp"
                 leave-active-class="">
                 <div v-if="aShow">
                     <div class="list-group-item list-group-item-action" style="padding: 1px 20px; border: 0; border-radius: 0" v-for="link in links">
@@ -160,7 +160,7 @@
                 </div>
             </transition>
             <transition
-                enter-active-class="animated zoomIn"
+                enter-active-class="animated slideInUp"
                 leave-active-class="">
                 <div v-if="tagShow">
                     <div class="list-group-item list-group-item-action" style="padding: 1px 20px; border: 0; border-radius: 0" v-for="link in tags">
@@ -179,6 +179,16 @@
         .linkFocus:hover {
             cursor: auto;
             background-color: #5fefe8;
+        }
+
+        .noFocus {
+            user-select:none;
+            background-color: #fff;
+        }
+        .noFocus:hover {
+            cursor: auto;
+            user-select:none;
+            background-color: #fff;
         }
     </style>
 
