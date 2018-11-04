@@ -88,8 +88,6 @@
 
     <!-- 首页顶端中间显示的内容 -->
     <div id="sb-site">
-        <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
-        
         <!-- ============================ Header & Logo bar ============================ -->
         <div class="nav" style="width: 100%">
             <div class="container-fluid">
@@ -155,7 +153,7 @@
                 leave-active-class="">
                 <div v-if="aShow">
                     <div class="list-group-item list-group-item-action" style="padding: 1px 20px; border: 0; border-radius: 0" v-for="link in links">
-                        <a :href="link.href">{{link.text}}</a>
+                        <a :href="link.href" :title="link.text">{{link.abbrText}}</a>
                     </div>
                 </div>
             </transition>
@@ -164,7 +162,7 @@
                 leave-active-class="">
                 <div v-if="tagShow">
                     <div class="list-group-item list-group-item-action" style="padding: 1px 20px; border: 0; border-radius: 0" v-for="link in tags">
-                        <a :href="link.href">{{link.text}}</a>
+                        <a :href="link.href" :title="link.text">{{link.abbrText}}</a>
                     </div>
                 </div>
             </transition>
@@ -218,7 +216,8 @@
                     return;
                 }
 
-                var currentIndex = href.indexOf('/tag')<0 ? ++aCount : ++tagCount;
+                var isTag = href.indexOf('/tag')>-1 && href.indexOf('/page/')<0;
+                var currentIndex = isTag ? ++aCount : ++tagCount;
                 hrefFound[aCount+tagCount] = href;
                 $(function(index){
                     if( index<10 ){
@@ -227,8 +226,9 @@
                     else{
                         text = index + '. ' +text
                     }
-                    var link = {'href':href, 'text':text};
-                    if( href.indexOf('/tag')<0 ){
+                    var abbrText = text;
+                    var link = {'href':href, 'text':text, 'abbrText': abbrText};
+                    if( !isTag ){
                         div_side_navigation_right.links.push(link);
                     }
                     else{
@@ -301,13 +301,13 @@
     <section id="services">
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-md-10">
+                <div class="col-lg-8 col-md-8">
                     <div class="row boxes">
                         
                         
                             
                             
-                            <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
+                            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
                                 <div class="card hover-box-shadow card-blog">
                                     <div class="card-body" style="padding: 15px">
                                         <h4 class="title"><a href="/2018/09/21/hexo 在 Hexo 中渲染 MathJax 数学公式/">在 Hexo 中渲染 MathJax 数学公式</a></h4>
@@ -319,6 +319,12 @@
                     </div>
                 </div>
             </div>
+            <div class="row justify-content-center">
+                    <div class="col-lg-8 col-md-8">
+                        
+                        
+                    </div>
+                </div>
         </div>
     </section>
     

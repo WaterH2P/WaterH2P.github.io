@@ -88,8 +88,6 @@
 
     <!-- 首页顶端中间显示的内容 -->
     <div id="sb-site">
-        <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
-        
         <!-- ============================ Header & Logo bar ============================ -->
         <div class="nav" style="width: 100%">
             <div class="container-fluid">
@@ -155,7 +153,7 @@
                 leave-active-class="">
                 <div v-if="aShow">
                     <div class="list-group-item list-group-item-action" style="padding: 1px 20px; border: 0; border-radius: 0" v-for="link in links">
-                        <a :href="link.href">{{link.text}}</a>
+                        <a :href="link.href" :title="link.text">{{link.abbrText}}</a>
                     </div>
                 </div>
             </transition>
@@ -164,7 +162,7 @@
                 leave-active-class="">
                 <div v-if="tagShow">
                     <div class="list-group-item list-group-item-action" style="padding: 1px 20px; border: 0; border-radius: 0" v-for="link in tags">
-                        <a :href="link.href">{{link.text}}</a>
+                        <a :href="link.href" :title="link.text">{{link.abbrText}}</a>
                     </div>
                 </div>
             </transition>
@@ -218,7 +216,8 @@
                     return;
                 }
 
-                var currentIndex = href.indexOf('/tag')<0 ? ++aCount : ++tagCount;
+                var isTag = href.indexOf('/tag')>-1 && href.indexOf('/page/')<0;
+                var currentIndex = isTag ? ++aCount : ++tagCount;
                 hrefFound[aCount+tagCount] = href;
                 $(function(index){
                     if( index<10 ){
@@ -227,8 +226,9 @@
                     else{
                         text = index + '. ' +text
                     }
-                    var link = {'href':href, 'text':text};
-                    if( href.indexOf('/tag')<0 ){
+                    var abbrText = text;
+                    var link = {'href':href, 'text':text, 'abbrText': abbrText};
+                    if( !isTag ){
                         div_side_navigation_right.links.push(link);
                     }
                     else{
@@ -340,7 +340,9 @@
             <div class="row justify-content-center">
                 <div class="col-lg-8 col-md-10">
                     <p>【转】<a class="own-underline" href="https://lccurious.github.io/2018/03/03/vlutr-ssr/" target="_blank">在 Vultr 上搭建 SSR 服务</a></p>
-<h1 id="搭建-ssr"><a href="#搭建-ssr" class="headerlink" title="搭建 ssr"></a>搭建 ssr</h1><h3 id="购买-Vultr-服务器"><a href="#购买-Vultr-服务器" class="headerlink" title="购买 Vultr 服务器"></a>购买 Vultr 服务器</h3><ol>
+<p><br></p>
+<h2 id="搭建-ssr"><a href="#搭建-ssr" class="headerlink" title="搭建 ssr"></a>搭建 ssr</h2><p><br></p>
+<h4 id="购买-Vultr-服务器"><a href="#购买-Vultr-服务器" class="headerlink" title="购买 Vultr 服务器"></a>购买 Vultr 服务器</h4><ol>
 <li><p><a class="own-underline" href="https://www.vultr.com/" target="_blank">Vultr 官网</a></p>
 </li>
 <li><p>注册登录</p>
@@ -359,7 +361,7 @@
 </li>
 </ol>
 <p><br></p>
-<h3 id="配置服务器"><a href="#配置服务器" class="headerlink" title="配置服务器"></a>配置服务器</h3><ol>
+<h4 id="配置服务器"><a href="#配置服务器" class="headerlink" title="配置服务器"></a>配置服务器</h4><ol>
 <li><p>登录服务器 <code>ssh root@服务器IP</code> ，输入密码。</p>
 </li>
 <li><p>输入命令：</p>
@@ -388,9 +390,9 @@
 </li>
 </ol>
 <p><br></p>
-<h3 id="配置客户端"><a href="#配置客户端" class="headerlink" title="配置客户端"></a>配置客户端</h3><p>。。。。。。</p>
+<h4 id="配置客户端"><a href="#配置客户端" class="headerlink" title="配置客户端"></a>配置客户端</h4><p>。。。。。。</p>
 <p><br></p>
-<h3 id="加速"><a href="#加速" class="headerlink" title="加速"></a>加速</h3><p>【转】<a class="own-underline" href="https://www.cokemine.com/vpsyh.html" target="_blank">VPS 网络优化各种方法汇总——锐速/BBR/BBR 魔改版一键安装脚本</a></p>
+<h4 id="加速"><a href="#加速" class="headerlink" title="加速"></a>加速</h4><p>【转】<a class="own-underline" href="https://www.cokemine.com/vpsyh.html" target="_blank">VPS 网络优化各种方法汇总 一键安装脚本</a></p>
 <ol>
 <li><p>BBR 加速器（也可以选择其他的）</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">wget --no-check-certificate https://github.com/teddysun/across/raw/master/bbr.sh</span><br><span class="line">chmod +x bbr.sh</span><br><span class="line">./bbr.sh</span><br></pre></td></tr></table></figure>
@@ -402,14 +404,16 @@
 </li>
 </ol>
 <p><br></p>
-<h3 id="卸载"><a href="#卸载" class="headerlink" title="卸载"></a>卸载</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./shadowsocksR.sh uninstall</span><br></pre></td></tr></table></figure>
+<h4 id="卸载"><a href="#卸载" class="headerlink" title="卸载"></a>卸载</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./shadowsocksR.sh uninstall</span><br></pre></td></tr></table></figure>
 <p><br></p>
-<h3 id="其他命令"><a href="#其他命令" class="headerlink" title="其他命令"></a>其他命令</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">启动：/etc/init.d/shadowsocks start</span><br><span class="line">停止：/etc/init.d/shadowsocks stop</span><br><span class="line">重启：/etc/init.d/shadowsocks restart</span><br><span class="line">状态：/etc/init.d/shadowsocks status</span><br><span class="line"></span><br><span class="line">配置文件路径：/etc/shadowsocks.json</span><br><span class="line">日志文件路径：/var/log/shadowsocks.log</span><br><span class="line">代码安装目录：/usr/local/shadowsocks</span><br></pre></td></tr></table></figure>
+<h4 id="其他命令"><a href="#其他命令" class="headerlink" title="其他命令"></a>其他命令</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">启动：/etc/init.d/shadowsocks start</span><br><span class="line">停止：/etc/init.d/shadowsocks stop</span><br><span class="line">重启：/etc/init.d/shadowsocks restart</span><br><span class="line">状态：/etc/init.d/shadowsocks status</span><br><span class="line"></span><br><span class="line">配置文件路径：/etc/shadowsocks.json</span><br><span class="line">日志文件路径：/var/log/shadowsocks.log</span><br><span class="line">代码安装目录：/usr/local/shadowsocks</span><br></pre></td></tr></table></figure>
 <hr>
 
 
-<p>【转】<a class="own-underline" href="https://www.freeluffy.com/vultr-vps-ss/" target="_blank">Vultr（VPS）搭建 SS 服务器图文教程 三步十分钟带你畅游全网！</a></p>
-<h1 id="搭建-ss"><a href="#搭建-ss" class="headerlink" title="搭建 ss"></a>搭建 ss</h1><h3 id="配置服务器-1"><a href="#配置服务器-1" class="headerlink" title="配置服务器"></a>配置服务器</h3><ol>
+<p>【转】<a class="own-underline" href="https://www.freeluffy.com/vultr-vps-ss/" target="_blank">Vultr 搭建 SS 服务器图文教程</a></p>
+<p><br></p>
+<h2 id="搭建-ss"><a href="#搭建-ss" class="headerlink" title="搭建 ss"></a>搭建 ss</h2><p><br></p>
+<h4 id="配置服务器-1"><a href="#配置服务器-1" class="headerlink" title="配置服务器"></a>配置服务器</h4><ol>
 <li><p>登录服务器 <code>ssh root@服务器IP</code> ，输入密码。</p>
 </li>
 <li><p>输入命令：</p>
@@ -434,11 +438,12 @@
 <hr>
 
 
-<h1 id="更多参考"><a href="#更多参考" class="headerlink" title="更多参考"></a>更多参考</h1><div class="div-message div-desc" style="padding: 0 0 25px 10px ">
+<p><br></p>
+<h2 id="更多参考"><a href="#更多参考" class="headerlink" title="更多参考"></a>更多参考</h2><div class="div-message div-desc" style="padding: 0 0 25px 10px ">
     <br>
     <a class="own-underline" href="https://deeponion.org/community/threads/vpnss-ssr.901/" target="_blank">Vpn 与 ss/ssr 的区别</a><br>
     <a class="own-underline" href="https://blog.csdn.net/mmcooo/article/details/80094194" target="_blank">SSR 高阶协议与混淆的使用</a><br>
-    <a class="own-underline" href="https://juejin.im/entry/5b03ca66518825426d2d753e" target="_blank">关于一次Vultr 搭建酸酸乳（ssr）的详细教程</a><br>
+    <a class="own-underline" href="https://juejin.im/entry/5b03ca66518825426d2d753e" target="_blank">关于一次 Vultr 搭建酸酸乳的详细教程</a><br>
     <a class="own-underline" href="https://github.com/shadowsocksr-backup/shadowsocks-rss/blob/master/ssr.md" target="_blank">ShadowsocksR 协议插件文档</a><br>
     <a class="own-underline" href="https://github.com/shadowsocksr-backup/shadowsocks-rss/wiki/Server-Setup" target="_blank">ShadowsocksR 服务端安装教程</a><br>
     <a class="own-underline" href="https://www.vultryhw.com/vultr-all-guides/" target="_blank">Vultr 教程整理页</a>
@@ -448,16 +453,19 @@
 <hr>
 
 
-<h1 id="其他问题"><a href="#其他问题" class="headerlink" title="其他问题"></a>其他问题</h1><p>【转】<a class="own-underline" href="https://www.centos.bz/2018/03/centos查看端口占用情况和开启端口命令/" target="_blank">CentOS 查看端口占用情况和开启端口命令</a></p>
+<p><br></p>
+<h2 id="其他问题"><a href="#其他问题" class="headerlink" title="其他问题"></a>其他问题</h2><p><br> </p>
+<h4 id="CentOS-查看端口占用情况和开启端口命令"><a href="#CentOS-查看端口占用情况和开启端口命令" class="headerlink" title="CentOS 查看端口占用情况和开启端口命令"></a>CentOS 查看端口占用情况和开启端口命令</h4><p>【转】<a class="own-underline" href="https://www.centos.bz/2018/03/centos查看端口占用情况和开启端口命令/" target="_blank">CentOS 查看端口占用情况和开启端口命令</a></p>
 <ul>
 <li><p>列出所有端口</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netstat -ntlp</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<p><br><br>【转】<a class="own-underline" href="https://www.cnblogs.com/moxiaoan/p/5683743.html" target="_blank">CentOS7使用firewalld打开关闭防火墙与端口</a></p>
+<p><br> </p>
+<h4 id="CentOS7-使用-firewalld-打开关闭防火墙与端口"><a href="#CentOS7-使用-firewalld-打开关闭防火墙与端口" class="headerlink" title="CentOS7 使用 firewalld 打开关闭防火墙与端口"></a>CentOS7 使用 firewalld 打开关闭防火墙与端口</h4><p>【转】<a class="own-underline" href="https://www.cnblogs.com/moxiaoan/p/5683743.html" target="_blank">CentOS7 使用 firewalld 打开关闭防火墙与端口</a></p>
 <ul>
 <li><p>添加端口（以 80 端口为例）</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">firewall-cmd --zone=public --add-port=80/tcp --permanent</span><br><span class="line"><span class="comment"># --permanent 永久生效，没有此参数重启后失效</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">firewall-cmd --zone=public --add-port=80/tcp --permanent</span><br><span class="line"><span class="comment">## --permanent 永久生效，没有此参数重启后失效</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>重新载入</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">firewall-cmd --reload</span><br></pre></td></tr></table></figure>
@@ -469,9 +477,11 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">firewall-cmd --zone= public --remove-port=80/tcp --permanent</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<p><br><br>【转】<a class="own-underline" href="https://blog.csdn.net/looksun/article/details/49562043" target="_blank">centos7.0 没有 netstat 和 ifconfig 命令问题</a></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">yum search ifconfig</span><br><span class="line"><span class="comment"># 通过 yum search 这个命令我们发现 ifconfig 这个命令是在 net-tools.x86_64 这个包里，</span></span><br><span class="line"><span class="comment"># 接下来我们安装这个包就行了</span></span><br><span class="line">yum install net-tools</span><br></pre></td></tr></table></figure>
-<p><br><br>【转】<a class="own-underline" href="https://blog.csdn.net/u010085423/article/details/78157091/" target="_blank">Centos7 开启 SSH 服务</a></p>
+<p><br> </p>
+<h4 id="centos7-0-没有-netstat-和-ifconfig-命令问题"><a href="#centos7-0-没有-netstat-和-ifconfig-命令问题" class="headerlink" title="centos7.0 没有 netstat 和 ifconfig 命令问题"></a>centos7.0 没有 netstat 和 ifconfig 命令问题</h4><p>【转】<a class="own-underline" href="https://blog.csdn.net/looksun/article/details/49562043" target="_blank">centos7.0 没有 netstat 和 ifconfig 命令问题</a></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">yum search ifconfig</span><br><span class="line"><span class="comment">## 通过 yum search 这个命令我们发现 ifconfig 这个命令是在 net-tools.x86_64 这个包里，</span></span><br><span class="line"><span class="comment">## 接下来我们安装这个包就行了</span></span><br><span class="line">yum install net-tools</span><br></pre></td></tr></table></figure>
+<p><br> </p>
+<h4 id="Centos7-开启-SSH-服务"><a href="#Centos7-开启-SSH-服务" class="headerlink" title="Centos7 开启 SSH 服务"></a>Centos7 开启 SSH 服务</h4><p>【转】<a class="own-underline" href="https://blog.csdn.net/u010085423/article/details/78157091/" target="_blank">Centos7 开启 SSH 服务</a></p>
 <ol>
 <li><p>查看本机是否安装SSH软件包</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rpm -qa | grep ssh</span><br></pre></td></tr></table></figure>
@@ -486,9 +496,11 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netstat -ntpl | grep 22</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
-<p><br><br>【转】<a class="own-underline" href="https://blog.csdn.net/sloan6/article/details/41984391" target="_blank">删除 ssh 中旧的 RSA key</a></p>
+<p><br> </p>
+<h4 id="删除-ssh-中旧的-RSA-key"><a href="#删除-ssh-中旧的-RSA-key" class="headerlink" title="删除 ssh 中旧的 RSA key"></a>删除 ssh 中旧的 RSA key</h4><p>【转】<a class="own-underline" href="https://blog.csdn.net/sloan6/article/details/41984391" target="_blank">删除 ssh 中旧的 RSA key</a></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -R IP</span><br></pre></td></tr></table></figure>
-<p><br><br>【转】<a class="own-underline" href="https://toutyrater.github.io/?q=#v2ray-%E9%85%8D%E7%BD%AE%E6%8C%87%E5%8D%97" target="_blank">V2Ray 配置指南</a></p>
+<p><br> </p>
+<h4 id="V2Ray-配置指南"><a href="#V2Ray-配置指南" class="headerlink" title="V2Ray 配置指南"></a>V2Ray 配置指南</h4><p>【转】<a class="own-underline" href="https://toutyrater.github.io/?q=#v2ray-%E9%85%8D%E7%BD%AE%E6%8C%87%E5%8D%97" target="_blank">V2Ray 配置指南</a></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">听说这个好😂</span><br></pre></td></tr></table></figure>
 
                 </div>
