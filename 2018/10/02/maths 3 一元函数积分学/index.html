@@ -375,16 +375,15 @@
 <h6 id="2、例题"><a href="#2、例题" class="headerlink" title="2、例题"></a>2、例题</h6><ol>
 <li>$ \int \dfrac{1}{ (2 - x) \sqrt{1 - x} } {\rm d}x $ <ul>
 <li>$ = - \int \dfrac{1}{2 - x} \cdot \dfrac{ {\rm d}(1 - x) }{ \sqrt{1 - x} } = -2 \int \dfrac{ {\rm d} \sqrt{1 - x} }{ 2 - x } $ </li>
-<li>$ = -2 \int \dfrac{ {\rm d} \sqrt{1 - x} }{ 1 + ( \sqrt{1 - x} )^2 } = -2 \arctan \sqrt{1 - x} + C $ </li>
+<li>$ = -2 \int \dfrac{ {\rm d} \sqrt{1 - x} }{ 1 + ( \sqrt{1 - x} )^2 } = -2 \arctan \sqrt{1 - x} + C $  </li>
 </ul>
 </li>
-<li>$ \int \dfrac{x}{ (2 - x^2) \sqrt{1 - x^2} } {\rm d}x $ </li>
 <li>$ \int \dfrac{ \cos^2 x - \sin x }{ \cos x(1 + \cos x e^{\sin x}) } {\rm d}x $ <ul>
 <li><strong>定理</strong> <ul>
 <li>对于 $ \int f(x) {\rm d}x $ ，$ f(x) $ 越复杂 $ \implies $ 越有规律可循。</li>
 </ul>
 <ol>
-<li>先对<strong>复杂的主要部分( h(x) )</strong>求导<ul>
+<li>先尝试对<strong>复杂的主要部分【h(x)】</strong>求导<ul>
 <li>$ \int f(x) {\rm d}x = \int g(x) \cdot h(x) {\rm d}x $ <ul>
 <li>其中，若 $ h’(x) = A \cdot g(x) \implies {\rm d} h(x) = A \cdot g(x) {\rm d}x $ </li>
 </ul>
@@ -399,7 +398,7 @@
 </li>
 <li>解答<ol>
 <li>$ (\cos x e^{\sin x})’ = - \sin x e^{\sin x} + \cos^2 x e^{\sin x} = e^{\sin x}( \cos^2 x - \sin x ) $ <ul>
-<li>$ \begin{array}{l} I &amp; = \int \dfrac{ e^{\sin x}( \cos^2 x - \sin x ) {\rm d}x }{ e^{\sin x} \cos x( 1 + \cos x e^{\sin x} ) } \\\\ &amp; = \int \dfrac{ {\rm d}( \cos x e^{\sin x} ) }{ \cos x e^{\sin x}( 1 + \cos x e^{\sin x} ) } \quad \quad \left( \dfrac{ {\rm d}u }{ u(1 + u) } \right) \\\\ &amp; = \ln \left| \dfrac{ \cos x e^{\sin x} }{ 1 + \cos x e^{\sin x} } \right| + C \end{array} $ </li>
+<li>$ \begin{array}{l} I &amp; = \int \dfrac{ e^{\sin x}( \cos^2 x - \sin x ) }{ e^{\sin x} \cos x( 1 + \cos x e^{\sin x} ) } {\rm d}x \\\\ &amp; = \int \dfrac{ {\rm d}( \cos x e^{\sin x} ) }{ \cos x e^{\sin x}( 1 + \cos x e^{\sin x} ) } \quad \quad \left( \dfrac{ {\rm d}u }{ u(1 + u) } \right) \\\\ &amp; = \ln \left| \dfrac{ \cos x e^{\sin x} }{ 1 + \cos x e^{\sin x} } \right| + C \end{array} $ </li>
 </ul>
 </li>
 </ol>
@@ -1012,24 +1011,5 @@
             $('html').animate({scrollTop: 0}, 'slow');
         }
     </script>
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<!-- <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
-<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script> -->
-<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
-<!-- <script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
-
 </body>
 </html>
