@@ -300,17 +300,17 @@
     
     
     <span class="tag is-info">
-        <a href='/tags/kaoyan/'>kaoyan</a>
-    </span>
-    ,
-    
-    <span class="tag is-info">
         <a href='/tags/maths/'>maths</a>
     </span>
     ,
     
     <span class="tag is-info">
         <a href='/tags/高数/'>高数</a>
+    </span>
+    ,
+    
+    <span class="tag is-info">
+        <a href='/tags/kaoyan/'>kaoyan</a>
     </span>
     
     
@@ -382,7 +382,7 @@
 </ul>
 </li>
 <li>设 $ f(x, y) = \begin{cases} \dfrac{1}{xy} \sin (x^2 y), &amp; xy \not= 0 \\\\ 0, &amp; xy = 0 \end{cases} $ ，则 $ f’_x(0, 1) =  $ ________ 。<ul>
-<li>$ \begin{array}{l} f’_x(0, 1) &amp;= \lim\limits_{\Delta x \to 0} \dfrac{ f(0 + \Delta x, 1) - f(0, 1) }{\Delta x} \\\\ &amp;= \lim\limits_{\Delta x \to 0} \dfrac{ \dfrac{1}{\Delta x} \sin( (\Delta x)^2 ) - 0 }{\Delta x} \\\\ &amp;= 1 \end{array} $ </li>
+<li>$ \begin{array}{l} f’_x(0, 1) &amp;= \lim\limits_{\Delta x \to 0} \dfrac{ f(0 + \Delta x, 1) - f(0, 1) }{\Delta x} \\\\ &amp;= \lim\limits_{\Delta x \to 0} \dfrac{ \dfrac{1}{\Delta x} \sin \left( (\Delta x)^2 \right) - 0 }{\Delta x} \\\\ &amp;= 1 \end{array} $ </li>
 </ul>
 </li>
 </ol>
@@ -405,11 +405,11 @@
 <li>设 $ F(u, v) $ 对其变元 $ u, v $ 具有二阶连续偏导数，并设 $ z = F( \dfrac{y}{x}, x^2 + y^2) $ ，则 $ \dfrac{ \partial^2 z }{ \partial x \partial y } = $ ________ 。<ul>
 <li><img src="https://github.com/WaterH2P/WaterH2P.github.io/raw/master/img/images/4-2.2%20%E9%AB%98%E9%98%B6%E5%81%8F%E5%AF%BC%E6%95%B0%E4%BE%8B%E9%A2%981.jpg" width="50%"></li>
 <li>$ \dfrac{ \partial z }{ \partial x } = F’_1 \cdot ( - \dfrac{y}{x^2} ) + F’_2 \cdot 2x $ </li>
-<li>$ \dfrac{ \partial^2 z }{ \partial x \partial y } = \dfrac{ \partial ( \dfrac{ \partial z }{ \partial x } ) }{\partial y} = - \dfrac{1}{x^2} F’_1 - \dfrac{y}{x^3} F’’_{11} + (2 - \dfrac{2y^2}{x^2} ) F’’_{12} + 4xy F’’_{22} $</li>
+<li>$ \dfrac{ \partial^2 z }{ \partial x \partial y } = \dfrac{ \partial ( \dfrac{ \partial z }{ \partial x } ) }{\partial y} = - \dfrac{1}{x^2} F’_1 - \dfrac{y}{x^3} F’’_{11} + (2 - \dfrac{2y^2}{x^2} ) F’’_{12} + 4xy F’’_{22} $ </li>
 </ul>
 </li>
 <li>设 $ f(u, v) $ 二阶偏导数连续，$ z = f(x^2y, \cos x \sin y) $ ，求 $ \dfrac{ \partial^2 z }{ \partial x \partial y } $ 。<ul>
-<li>$ \begin{array}{l} &amp; 2xf’_1 - \sin x \cos y f’_2 \\ + &amp; 2 x^3 y f’’_{11} + (2xy \cos x \cos y - x^2 \sin x \sin y)f’’_{12} - \sin x \cos x \sin y \ cos y f’’_{22} \end{array} $ </li>
+<li>$ \begin{array}{l} &amp; 2xf’_1 - \sin x \cos y f’_2 + 2 x^3 y f’’_{11} \\ +&amp; (2xy \cos x \cos y - x^2 \sin x \sin y)f’’_{12} - \sin x \cos x \sin y \ cos y f’’_{22} \end{array} $ </li>
 </ul>
 </li>
 </ol>
