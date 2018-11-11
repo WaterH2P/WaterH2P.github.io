@@ -454,7 +454,7 @@
 <li>方程两边对 $ x $ 求偏导 $ 2x - 6y - 2y \cdot z’_x - 2z \cdot z’_x = 0 \implies z’_x = \dfrac{x - 3y}{y + z} $ </li>
 <li>方程两边对 $ y $ 求偏导 $ -6x + 20y -2z - 2y \cdot z’_y - 2z \cdot z’_y = 0 \implies z’_y = \dfrac{-3x + 10y - z}{y + z} $ </li>
 <li>$ \begin{cases} z’_x = 0 \\\\ z’_y = 0 \end{cases} \implies \begin{cases} x = 3y \\\\ z = y \end{cases} $ 带入方程解得：$ \begin{cases} x = 12 \\\\ y = 4 \\\\ z = 4 \end{cases} $ 和 $ \begin{cases} x = -12 \\\\ y = -4 \\\\ z = -4 \end{cases} $ 。</li>
-<li>解得 $ \begin{cases} z’’_{xx} = \dfrac{1}{y + z} - (z’_x)^2 \\\\ z’’_{xy} = - \dfrac{3}{y + z} - \dfrac{ ( 1 + z’_y ) \cdot z’_x }{y + z} \\\\ z’’_{yy} = \dfrac{10}{y + z} - \dfrac{z’_y}{y + z} - \dfrac{ (1 + z’_y) \cdot z’_y }{y + z} \end{cases} \implies B^2 - AC = -\dfrac{1}{4y^2} &lt; 0 $ </li>
+<li>解得 $ \begin{cases} z’’_{xx} = \dfrac{1}{y + z} - \dfrac{ (z’_x)^2 }{y+z} \\\\ z’’_{xy} = - \dfrac{3}{y + z} - \dfrac{ ( 1 + z’_y ) \cdot z’_x }{y + z} \\\\ z’’_{yy} = \dfrac{10}{y + z} - \dfrac{z’_y}{y + z} - \dfrac{ (1 + z’_y) \cdot z’_y }{y + z} \end{cases} \implies B^2 - AC = -\dfrac{1}{4y^2} &lt; 0 ​$ </li>
 </ul>
 </li>
 <li><p>求二元函数 $ f(x, y) = x^2(2 + y^2) + y \ln y $ 的极值。</p>
