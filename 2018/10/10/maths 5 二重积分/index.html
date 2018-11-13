@@ -350,12 +350,12 @@
 <li>设平面区域 $ D $ 由曲线 $ y = \sin x \; ( -\dfrac{\pi}{2} \leq x \leq \dfrac{\pi}{2} ) $ ，$ x = -\dfrac{\pi}{2} $ ，$ y = 1 $ 围成，则 $ \iint\limits_D (xy^3 - 1) {\rm d} \sigma = $ ________ 。<ul>
 <li><img src="https://github.com/WaterH2P/WaterH2P.github.io/raw/master/img/images/5-1.1.2.1.png" width="50%"></li>
 <li>做辅助线 $ y = -\sin x $ 将区域 $ D $ 划分为关于 $ y $ 轴对称的区域 $ D_2 $ 和关于 $ x $ 轴对称的区域 $ D_1 $ 。</li>
-<li>$ \begin{array}{l} \iint\limits_D (xy^3 - 1) {\rm d} \sigma = \iint\limits_D xy^3 {\rm d} \sigma - \iint\limits_D 1 {\rm d} \sigma = \iint\limits_{D_1} xy^3 {\rm d} \sigma + \iint\limits_{D_2} xy^3 {\rm d} \sigma - \pi \end{array} $<ul>
-<li>由于区域 $ D_1 $ 关于 $ x $ 轴对称，且 $ f(x, y) = -f(x, -y) $ ，所以 $ \iint\limits_{D_1} xy^3 {\rm d} \sigma = 0 $ 。</li>
-<li>由于区域 $ D_2 $ 关于 $ y $ 轴对称，且 $ f(x, y) = -f(-x, y) $ ，所以 $ \iint\limits_{D_2} xy^3 {\rm d} \sigma = 0 $ 。</li>
+<li>$ \begin{array}{l} \iint\limits_D (xy^3 - 1) \, {\rm d} \sigma = \iint\limits_D xy^3 \, {\rm d} \sigma - \iint\limits_D 1 \, {\rm d} \sigma = \iint\limits_{D_1} xy^3 \, {\rm d} \sigma + \iint\limits_{D_2} xy^3 \, {\rm d} \sigma - \pi \end{array} $ <ul>
+<li>由于区域 $ D_1 $ 关于 $ x $ 轴对称，且 $ f(x, y) = -f(x, -y) $ ，所以 $ \iint\limits_{D_1} xy^3 \, {\rm d} \sigma = 0 $ 。</li>
+<li>由于区域 $ D_2 $ 关于 $ y $ 轴对称，且 $ f(x, y) = -f(-x, y) $ ，所以 $ \iint\limits_{D_2} xy^3 \, {\rm d} \sigma = 0 $ 。</li>
 </ul>
 </li>
-<li>所以 $ \iint\limits_D (xy^3 - 1) {\rm d} \sigma = -\pi $ 。</li>
+<li>所以 $ \iint\limits_D (xy^3 - 1) \, {\rm d} \sigma = -\pi $ 。</li>
 </ul>
 </li>
 </ol>
@@ -364,11 +364,11 @@
 <p><br></p>
 <h4 id="㊁-、⭐️轮换对称性（直角坐标系）"><a href="#㊁-、⭐️轮换对称性（直角坐标系）" class="headerlink" title="㊁ 、⭐️轮换对称性（直角坐标系）"></a>㊁ 、⭐️轮换对称性（直角坐标系）</h4><ol>
 <li>积分值与用何字母表示无关<ul>
-<li>$ \int_a^b f(x) {\rm d}x = \int_a^b f(t) {\rm d}t = \int_a^b f(u) {\rm d}u = \cdots $ </li>
+<li>$ \int_a^b f(x) \, {\rm d}x = \int_a^b f(t) \, {\rm d}t = \int_a^b f(u) \, {\rm d}u = \cdots $ </li>
 </ul>
 </li>
 <li>定义<ul>
-<li>若将 $ D $ 中的 $ x $ 与 $ y $ 对调发现 $ D $ 不变，则 $ \iint\limits_D f(x, y) {\rm d}x {\rm d}y = \iint\limits_D f(y, x) {\rm d}x {\rm d}y $ <ul>
+<li>若将 $ D $ 中的 $ x $ 与 $ y $ 对调发现 $ D $ 不变，则 $ \iint\limits_D f(x, y) \, {\rm d}x {\rm d}y = \iint\limits_D f(y, x) \, {\rm d}x {\rm d}y $ <ul>
 <li>关于 $ y = x $ 对称</li>
 </ul>
 </li>
@@ -386,13 +386,13 @@
 </ul>
 </li>
 <li>2⃣️<ul>
-<li>$ \iint\limits_D ( e^{\lambda x} - e^{- \lambda y} ) {\rm d} \sigma = \iint\limits_D ( e^{\lambda y} - e^{- \lambda x} ) {\rm d} \sigma $ </li>
-<li>$ \implies \begin{array}{l} 2I_2 &amp; = \iint\limits_D \left[ ( e^{\lambda x} - e^{- \lambda x} ) + ( e^{\lambda y} - e^{- \lambda y} ) \right] {\rm d}\sigma \\\\ &amp; = \iint\limits_D ( e^{\lambda x} - e^{- \lambda x} ) {\rm d}\sigma + \iint\limits_D ( e^{\lambda y} - e^{- \lambda y} ) {\rm d}\sigma\end{array} $ <ul>
+<li>$ \iint\limits_D ( e^{\lambda x} - e^{- \lambda y} ) \, {\rm d} \sigma = \iint\limits_D ( e^{\lambda y} - e^{- \lambda x} ) \, {\rm d} \sigma $ </li>
+<li>$ \implies \begin{array}{l} 2I_2 &amp; = \iint\limits_D \left[ ( e^{\lambda x} - e^{- \lambda x} ) + ( e^{\lambda y} - e^{- \lambda y} ) \right] {\rm d}\sigma \\\\ &amp; = \iint\limits_D ( e^{\lambda x} - e^{- \lambda x} ) \, {\rm d}\sigma + \iint\limits_D ( e^{\lambda y} - e^{- \lambda y} ) \, {\rm d}\sigma\end{array} $ <ul>
 <li>考察 $ g(x, y) = e^{\lambda x} - e^{-\lambda x} $ <ul>
 <li>由于积分区域 $ D $ 关于 $ y $ 轴对称</li>
 <li>且 $ g(x, y) = -g(-x, y) $ </li>
 <li>所以 $ g(x, y) = e^{\lambda x} - e^{-\lambda x} $ 在积分区域 $ D $ 上是关于 $ x $ 的奇函数</li>
-<li>$ \implies \iint\limits_D ( e^{\lambda x} - e^{-\lambda x} ) {\rm d} \sigma = 0 $ </li>
+<li>$ \implies \iint\limits_D ( e^{\lambda x} - e^{-\lambda x} ) \, {\rm d} \sigma = 0 $ </li>
 </ul>
 </li>
 </ul>
