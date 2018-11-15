@@ -356,7 +356,7 @@
 <li>概念<ul>
 <li>形如 $ \dfrac{ {\rm  d}y }{ {\rm d}x } = f(x, y) $ <ul>
 <li>若 $ f(x, y) = g(x) h(y) $ </li>
-<li>$ \implies \dfrac{ {\rm d}y }{ h(y) } = g(x) {\rm d}x \implies \int \dfrac{ {\rm d}y }{ h(y) } = \int g(x) {\rm d}x $ </li>
+<li>$ \dfrac{ {\rm d}y }{ h(y) } = g(x) {\rm d}x \implies \int \dfrac{ {\rm d}y }{ h(y) } = \int g(x) {\rm d}x ​$ </li>
 </ul>
 </li>
 </ul>
@@ -368,7 +368,7 @@
 </li>
 <li>微分方程的通解 ________ （一定 / 不一定）包含了所有的解，请举例说明。<ul>
 <li>不一定</li>
-<li>如求 $ ( y^2 - 1 ) {\rm d}x = (x - 1)y {\rm d}y $ 的通解</li>
+<li>如求 $ ( y^2 - 1 ) {\rm d}x = (x - 1)y {\rm d}y $ 的通解<ul>
 <li>$ \implies \dfrac{1}{2} \ln \left| y^2 - 1 \right|= \ln \left| x - 1 \right| + \ln C_1 \quad ( C_1 &gt; 0 ) $ </li>
 <li>$ \implies \sqrt{ \left| y^2 - 1 \right| } = C_1 \left| x - 1 \right| $ </li>
 <li>$ \implies \left| y^2 - 1 \right| = C_1^2 (x - 1)^2 $ </li>
@@ -378,6 +378,8 @@
 </ul>
 </li>
 <li>但是 $ y = \pm 1 $ 也是上述方程的解，成为<strong>奇解</strong></li>
+</ul>
+</li>
 <li>$ \begin{cases} \text{线性} &amp; \text{通解} = \text{全部解} \\ \text{非线性} &amp; \text{通解} \not= \text{全部解} \end{cases} $ </li>
 </ul>
 </li>
@@ -398,12 +400,12 @@
 <li>例题<ol>
 <li>求解 $ (1 + e^{ -\frac{x}{y} }) y {\rm d}x + (y - x){\rm d}y = 0 $ 。<ul>
 <li>$ (1 + e^{ -\frac{x}{y} }) y {\rm d}x = (x - y){\rm d}y $ </li>
-<li>$ \dfrac{ {\rm d}x }{ {\rm d}y } = \dfrac{x - y}{1 + e^{ -\frac{x}{y} }y } = \dfrac{ \dfrac{x}{y} - 1 }{ 1 + e^{ -\frac{x}{y} } } $ </li>
+<li>$ \dfrac{ {\rm d}x }{ {\rm d}y } = \dfrac{x - y}{ \left( 1 + e^{ -\frac{x}{y} } \right) y } = \dfrac{ \dfrac{x}{y} - 1 }{ 1 + e^{ -\frac{x}{y} } } $ </li>
 <li>令 $ \dfrac{x}{y} = u \implies x = uy \implies \dfrac{ {\rm d}x }{ {\rm d}y } = \dfrac{ {\rm d}u }{ {\rm d}y } \cdot y + u $ <ul>
 <li>$ \begin{array}{l} &amp; \dfrac{ e^u + 1 }{ e^u + u } {\rm d}u = - \dfrac{ {\rm d}y }{y} \\\\ \implies &amp; \int \dfrac{ e^u + 1 }{ e^u + u } {\rm d}u = - \int \dfrac{ {\rm d}y }{y} \\\\ \implies &amp; \ln \left| e^u + u \right| = - \ln |y| + \ln C_1 \\\\ \implies &amp; e^u + u = \dfrac{ \pm C_1 }{y} = \dfrac{C}{y} \end{array} $ </li>
 </ul>
 </li>
-<li>$ \implies \left( e^{ \frac{x}{y} } + \dfrac{x}{y} \right) \cdot y = C, \quad (C \not= 0) $ </li>
+<li>通解为： $ \left( e^{ \frac{x}{y} } + \dfrac{x}{y} \right) \cdot y = C, \quad (C \not= 0) $ </li>
 </ul>
 </li>
 </ol>
