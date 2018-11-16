@@ -441,13 +441,7 @@ a_{m1} & a_{m2} & \cdots & a_{mn}
 </li>
 </ol>
 <p><br></p>
-<h2 id="二、初等变化法与求-A-1"><a href="#二、初等变化法与求-A-1" class="headerlink" title="二、初等变化法与求 $ A^{-1} $"></a>二、初等变化法与求 $ A^{-1} $</h2><script type="math/tex; mode=display">
-A^{-1} 
-\begin{cases} 
-  \text{1. } A \text{ 必须是方阵} \\\\
-  \text{2. } \text{定义：}AB = E \implies A^{-1} = B, B^{-1} = A \\\\
-  \text{1. } A \text{ 可逆 }\iff |A| \not= 0 
-\end{cases}</script><p><br></p>
+<h2 id="二、初等变化法"><a href="#二、初等变化法" class="headerlink" title="二、初等变化法"></a>二、初等变化法</h2><p><br></p>
 <h4 id="1、初等变换"><a href="#1、初等变换" class="headerlink" title="1、初等变换"></a>1、初等变换</h4><ol>
 <li>倍乘<ul>
 <li>一个非零常数乘矩阵的某一行（列）；</li>
@@ -502,7 +496,24 @@ A^{-1}
 </li>
 </ol>
 <p><br></p>
-<h4 id="2、用初等变化求逆矩阵的方法"><a href="#2、用初等变化求逆矩阵的方法" class="headerlink" title="2、用初等变化求逆矩阵的方法"></a>2、用初等变化求逆矩阵的方法</h4><ol>
+<h2 id="三、-A-1"><a href="#三、-A-1" class="headerlink" title="三、$ A^{-1} $"></a>三、$ A^{-1} $</h2><p><br></p>
+<h4 id="1、定义"><a href="#1、定义" class="headerlink" title="1、定义"></a>1、定义</h4><script type="math/tex; mode=display">
+A^{-1} 
+\begin{cases} 
+  \text{1. } A \text{ 必须是方阵} \\\\
+  \text{2. } \text{定义：}AB = E \implies A^{-1} = B, B^{-1} = A \\\\
+  \text{1. } A \text{ 可逆 }\iff |A| \not= 0 
+\end{cases}</script><p><br></p>
+<h4 id="2、性质"><a href="#2、性质" class="headerlink" title="2、性质"></a>2、性质</h4><ul>
+<li>$ ( A^{-1} )^{-1} = A $ </li>
+<li>若 $ k \not= 0 $ ，则 $ (kA)^{-1} = \dfrac{1}{k}A^{-1} $ </li>
+<li>AB 也可逆，且 $ (AB)^{-1} = B^{-1}A^{-1} $ </li>
+<li>$ A^{\rm T} $ 也可逆，且 $ ( A^{\rm T} )^{-1} = ( A^{-1} )^{\rm T} $ </li>
+<li>$ | A^{-1} | = |A|^{-1} $ </li>
+<li>$ (A + B)^{-1} \not= A^{-1} + B^{-1} $ </li>
+</ul>
+<p><br></p>
+<h4 id="3、用初等变化求逆矩阵的方法"><a href="#3、用初等变化求逆矩阵的方法" class="headerlink" title="3、用初等变化求逆矩阵的方法"></a>3、用初等变化求逆矩阵的方法</h4><ol>
 <li><p>【Th】</p>
 <ul>
 <li>任何可逆矩阵一定可通过若干次<strong>初等行变换</strong>化成同阶单位矩阵<ul>
@@ -553,7 +564,45 @@ E \mid A^{-1}
 </ol>
 </li>
 </ol>
+<p><br></p>
+<h4 id="4、分块矩阵的逆"><a href="#4、分块矩阵的逆" class="headerlink" title="4、分块矩阵的逆"></a>4、分块矩阵的逆</h4><script type="math/tex; mode=display">
+\begin{bmatrix}
+  A & O \\
+  O & B
+\end{bmatrix}^{-1} = 
+\begin{bmatrix}
+  A^{-1} & O \\
+  O & B^{-1}
+\end{bmatrix},\qquad
+\begin{bmatrix}
+  O & A \\
+  B & O
+\end{bmatrix}^{-1} = 
+\begin{bmatrix}
+  O & B^{-1} \\
+  A^{-1} & O
+\end{bmatrix}</script><ul>
+<li>副对角线分块矩阵的逆</li>
+</ul>
+<script type="math/tex; mode=display">
+\begin{array}{l}
+A = 
+\begin{bmatrix}
+  & & & A_1 \\
+  & & A_2 \\
+  & \dots \\
+  A_s
+\end{bmatrix} ,
+\text{ 其中 } A_i(i=1, 2, \cdots, s) \text{ 可逆 ，则 } A \text{ 可逆且 } \\\\
 
+A^{-1} = 
+\begin{bmatrix}
+  & & & A_s^{-1} \\
+  & & \cdots \\
+  & A_2^{-1} \\
+  A_1^{-1}
+\end{bmatrix}
+\end{array}</script>
                 </div>
             </div>
             <div class="clearfix"></div>
@@ -563,8 +612,8 @@ E \mid A^{-1}
 <div class="row justify-content-center">
     <nav class="m-pagination col-md-8 col-sm-24" role="pagination">
         
-        <a class="float-left" href="/2018/10/24/kaoyan 史纲/" style="float: left;">
-            ← 史纲
+        <a class="float-left" href="/2018/10/24/maths 9 方程组/" style="float: left;">
+            ← 方程组【大题】
         </a>
         
         
