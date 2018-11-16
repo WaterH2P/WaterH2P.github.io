@@ -345,6 +345,12 @@ I = \lim\limits_{t \to 0^+} \dfrac{1}{\pi t^2} \iint\limits_D f(x, y) \, {\rm d}
 <h4 id="2"><a href="#2" class="headerlink" title="2"></a>2</h4><p>计算</p>
 <script type="math/tex; mode=display">
 \int_0^a {\rm d}x \int_0^b e^{ \max \{ b^2x^2, \; a^2y^2 \} } \, {\rm d}y \qquad (a, b > 0)</script><p><br></p>
+<h4 id="3"><a href="#3" class="headerlink" title="3"></a>3</h4><p>【6.4】<br>设线性无关的函数 $ y_1(x), \, y_2(x), \, y_3(x) $ 均是方程 $ y’’ + p(x)y’ + q(x)y = f(x) $ 的解，$ C_1, \, C_2 $ 是任意常数，则该方程的通解是 $ ( \quad ) $ 。</p>
+<script type="math/tex; mode=display">
+\begin{array}{l}
+    \text{ (A) } C_1 y_1 + C_2 y_2 + y_3 \qquad & \text{ (B) } C_1 y_1 + C_2 y_2 - ( C_1 + C_2 ) y_3 \\\\
+    \text{ (C) } C_1 y_1 + C_2 y_2 - ( 1 - C_1 - C_2 ) y_3 \qquad & \text{ (D) } C_1 y_1 + C_2 y_2 + ( 1 - C_1 - C_2 ) y_3 
+\end{array}</script><p><br></p>
 <h2 id="参考答案"><a href="#参考答案" class="headerlink" title="参考答案"></a>参考答案</h2><p><br></p>
 <h4 id="1-1"><a href="#1-1" class="headerlink" title="1"></a>1</h4><p>【解析】因被积函数 $ f(x, y) $ 在闭区间 D 上是抽象函数，故无法用先求出重积分的方法求极限，因此考虑：</p>
 <ul>
@@ -366,7 +372,11 @@ f(0, 0)</script><p><br></p>
 = & \int_0^a \dfrac{b}{a} x e^{ b^2 x^2 } \, {\rm d}x + \int_0^b \, {\rm d}y \int_0^{ \frac{a}{b}y } e^{ a^2 y^2 } {\rm d}x \\\\
 = & \dfrac{1}{2ab} \left( e^{ a^2 b^2 } - 1 \right) + \dfrac{1}{2ab} \left( e^{ a^2 b^2 } - 1 \right) \\\\
 = & \dfrac{1}{ab} \left( e^{ a^2 b^2 } - 1 \right)
-\end{array}</script>
+\end{array}</script><p><br></p>
+<h4 id="3-1"><a href="#3-1" class="headerlink" title="3"></a>3</h4><p>$ ( \text{ D } ) $ 由于</p>
+<script type="math/tex; mode=display">
+C_1 y_1 + C_2 y_2 + ( 1 - C_1 - C_2 ) y_3 = C_1 ( y_1 - y_3 ) + C_2 ( y_2 - y_3 ) + y_3</script><p>其中 $ ( y_1 - y_3 ) $ 和 $ ( y_2 - y_3 ) $ 是原方程对应的齐次方程的两个线性无关的解，又 $ y_3 $ 是原方程的一个特解，所以 D 是原方程的通解。</p>
+
                 </div>
             </div>
             <div class="clearfix"></div>
