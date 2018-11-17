@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+
+    
+<head>
+    <title>二次型 | H2P&#39;S BLOG</title>
+    <!-- Meta data -->
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="H2P'S BLOG">
+    <meta name="author" content="WaterH2P">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicon, (keep icon in root folder) -->
+    <link rel="Shortcut Icon" href="/img/wolf_small.png" type="image/ico">
+
+    <link rel="alternate" href="/atom.xml" title="H2P&#39;S BLOG" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/all.css" media="screen" type="text/css">
+    
+    <link rel="stylesheet" href="/highlightjs/vs.css" type="text/css">
+    
+
+    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
+    <script src="/js/jquery-3.3.1.min.js"></script>
+    <script src="/js/popper.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/vue.min.js"></script>
+
+    
+    
+    
+
+    <style>
+        .col-md-8.col-md-offset-2.opening-statement img{display:none;}
+        a:hover {
+            cursor: pointer;
+            color : #96d103;
+        }
+        a.own-underline { text-decoration:underline; }
+    </style>
+</head>
+
+    <!--
+    <body class="post-template">
+    -->
+<body id="index" class="lightnav animsition">
+    <!-- 返回页面顶端 -->
+    <div id="div-back-top" style="position: fixed; right: 20px; bottom: 25px; z-index: 5; display: none">
+        <a class="btn btn-grey" onclick="back_to_top()" title="返回顶端"><strong>↑</strong></a>
+    </div>
+
+    
+    <!-- ============================ Off-canvas navigation ============================ -->
+    <!-- More 显示内容 -->
+    <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
+        <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
+            <img src="/img/close.png" alt="Close"/>
+        </div>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu">
+            <li><a href="/" class="animsition-link" title="Home">Home</a></li>
+            <li><a href="/archives" class="animsition-link" title="archive">archives</a></li>
+            <!-- Dropdown Menu -->
+			 
+            
+            
+            <li>
+                <a class="sb-toggle-submenu">Friends<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                    <li><a href="http://yellowfefe.cn/" class="animsition-link" target="_blank">Yellowfefe</a></li>
+                    
+                    <li><a href="http://sheltonlee.cn/" class="animsition-link" target="_blank">SheltonLee</a></li>
+                    
+                </ul>
+            </li>
+            
+        </ul>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu secondary">
+            
+            <li><a href="/about.html" class="animsition-link" title="about">About</a></li>
+            <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li>
+        </ul>
+    </div>
+    <!-- ============================ END Off-canvas navigation ============================ -->
+
+    <!-- 首页顶端中间显示的内容 -->
+    <div id="sb-site">
+        <!-- ============================ Header & Logo bar ============================ -->
+        <div class="nav" style="width: 100%">
+            <div class="container-fluid">
+                <div class="row justify-content-center">
+                    <!-- Nav logo -->
+                    
+                        <div class="col-lg-2 col-md-2 col-sm-2 col-12" style="padding: 0; vertical-align: center">
+                            <a href="/" title="Logo" class="navbar-brand" style="margin-left: 25px; height:100%">
+                                <img src="/img/wolf_orange_small.png" alt="Logo" style="width: 40px"/>
+                            </a>
+                        </div>
+                    
+                    <!-- Nav logo -->
+                    <!-- <div class="mx-auto"> -->
+                    <div class="col-lg-8 col-md-8 col-sm-8 col-12" style="padding: 0; vertical-align: center">
+                        <ul class="nav justify-content-center">
+                            <li class="nav-item nav-link border-right-1 border-grey" style="padding: 0 16px; margin: 8px 0">
+                                <a href="/">H2P'S BLOG</a>
+                            </li>
+                            
+                                <li class="nav-item nav-link border-right-1 border-grey" style="padding: 0 16px; margin: 8px 0">
+                                    <a href="https://github.com/WaterH2P" title="Github" target="_blank"><i class="icon-github"></i></a>
+                                </li>
+                            
+                            
+                                <li class="nav-item nav-link border-right-1 border-grey" style="padding: 0 16px; margin: 8px 0">
+                                    <a href="https://weibo.com/5933348875" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>
+                                </li>
+                            
+                            <li class="nav-item nav-link">
+                                <span>Welcome!</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-12" style="padding: 0; vertical-align: center">
+                        <div class="learnmore sb-toggle-right">More</div>
+                        <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
+                            <span class="icon-bar before"></span>
+                            <span class="icon-bar main"></span>
+                            <span class="icon-bar after"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ============================ END Header & Logo bar ============================ -->
+    </div>
+
+    <!-- ============================ Tap Blog's Links ============================ -->
+    <div id="div-side-navigation-right" class="col-lg-3 col-md-3" style="position: fixed; top: 46px; right: 0; padding-top: 0; padding-left: 50px; z-index: 5" v-if="show">
+        <div class="list-group" style="border-radius: 0; border: 1px solid rgba(0, 0, 0, 0.1)">
+            <a class="list-group-item list-group-item-action" :class="{linkFocus:aShow}" style="padding: 1px 20px; border: 0; border-radius: 0; text-align: center" @click="showALinks()">
+                Links
+            </a>
+            <a class="list-group-item list-group-item-action" :class="{linkFocus:tagShow}" style="padding: 1px 20px; border: 0; border-radius: 0; text-align: center" @click="showTagLinks">
+                Tag Links
+            </a>
+        </div>
+        <div class="width-100-pct height-5 visibility-hidden"></div>
+        <div class="list-group" style="border-radius: 0; border: 1px solid rgba(0, 0, 0, 0.1)">
+            <transition 
+                enter-active-class="animated slideInUp"
+                leave-active-class="">
+                <div v-if="aShow">
+                    <div class="list-group-item list-group-item-action" style="padding: 1px 20px; border: 0; border-radius: 0" v-for="link in links">
+                        <a :href="link.href" :title="link.text">{{link.abbrText}}</a>
+                    </div>
+                </div>
+            </transition>
+            <transition
+                enter-active-class="animated slideInUp"
+                leave-active-class="">
+                <div v-if="tagShow">
+                    <div class="list-group-item list-group-item-action" style="padding: 1px 20px; border: 0; border-radius: 0" v-for="link in tags">
+                        <a :href="link.href" :title="link.text">{{link.abbrText}}</a>
+                    </div>
+                </div>
+            </transition>
+        </div>
+    </div>
+
+    <style>
+        .linkFocus {
+            background-color: #5fefe8;
+            user-select:none;
+        }
+        .linkFocus:hover {
+            cursor: auto;
+            background-color: #5fefe8;
+        }
+
+        .noFocus {
+            user-select:none;
+            background-color: #fff;
+        }
+        .noFocus:hover {
+            cursor: auto;
+            user-select:none;
+            background-color: #fff;
+        }
+    </style>
+
+    <script>
+        'use strict';
+        
+        var min_width = 1050;
+        $(function(){
+            var width = $(window).width();
+            if( width > min_width ){
+                div_side_navigation_right.show = true;
+            }
+            else {
+                div_side_navigation_right.show = false;
+            }
+
+            // 对于链接提取
+            var aCount = 0;
+            var tagCount = 0;
+            var hrefFilter = ['//go.kieran.top', '/archives', '/about.html', '/atom.xml', 'http://yellowfefe.cn/', 'http://sheltonlee.cn/'];
+            var hrefFound = [];
+            $('a').each(function(index, element){
+                var href = $(element).attr('href');
+                var text = $(element).text().toString();
+
+                if( !href || $.inArray(href, hrefFilter)>-1 || $.inArray(href, hrefFound)>-1 || text.indexOf('<img')>-1 || text.indexOf('Read More')>-1 || text.length===0 ){
+                    return;
+                }
+
+                var isTag = href.indexOf('/tag')>-1 && href.indexOf('/page/')<0;
+                var currentIndex = isTag ? ++aCount : ++tagCount;
+                hrefFound[aCount+tagCount] = href;
+                $(function(index){
+                    if( index<10 ){
+                        text = index + '.  ' +text;
+                    }
+                    else{
+                        text = index + '. ' +text
+                    }
+                    var abbrText = text;
+                    var link = {'href':href, 'text':text, 'abbrText': abbrText};
+                    if( !isTag ){
+                        div_side_navigation_right.links.push(link);
+                    }
+                    else{
+                        div_side_navigation_right.tags.push(link);
+                    }
+                }(currentIndex));
+            });
+        });
+
+        $(window).resize(function(){
+            var width = $(window).width();
+            if( width > min_width ){
+                div_side_navigation_right.show = true;
+            }
+            else {
+                div_side_navigation_right.show = false;
+            }
+        });
+
+        var div_side_navigation_right = new Vue({
+            el : '#div-side-navigation-right',
+            data : {
+                show : true,
+                aShow : true,
+                tagShow : false,
+                links : [],
+                tags :[]
+            },
+            methods : {
+                showALinks : function(){
+                    if( !div_side_navigation_right.tagShow ){
+                        return;
+                    }
+                    setTimeout(function(){
+                        div_side_navigation_right.aShow = true;
+                    }, 50);
+                    div_side_navigation_right.tagShow = false;
+                },
+                showTagLinks : function(){
+                    if( !div_side_navigation_right.aShow ){
+                        return;
+                    }
+                    div_side_navigation_right.aShow = false;
+                    setTimeout(function(){
+                        div_side_navigation_right.tagShow = true;
+                    }, 50);
+                }
+            }
+        });
+    </script>
+    <!-- ============================ END Tap Blog's Links ============================ -->
+    
+    
+    <section id="intro">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 col-md-10 col-sm-12">
+                    
+<span class="post-meta">
+    <!-- blog 的 date -->
+    
+        <span>
+            2018-08-11
+        </span>
+        <span>&nbsp;&nbsp;</span>
+    
+    <!-- blog 的 tags -->
+    
+    
+    
+    <span class="tag is-info">
+        <a href='/tags/kaoyan/'>kaoyan</a>
+    </span>
+    ,
+    
+    <span class="tag is-info">
+        <a href='/tags/maths/'>maths</a>
+    </span>
+    ,
+    
+    <span class="tag is-info">
+        <a href='/tags/线代/'>线代</a>
+    </span>
+    
+    
+    
+</span>
+
+                    <h1>二次型</h1>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8 col-md-10 col-sm-12">
+                    <div class="div-message div-desc">
+                        
+                            <span>做笔记，喝凉茶，看线代</span>
+                            <br>
+                        
+                        
+                            <span>最近更新：2018-10-27</span>
+                            <br>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8 col-md-10 col-sm-12">
+                    <h2 id="一、二次型"><a href="#一、二次型" class="headerlink" title="一、二次型"></a>一、二次型</h2><p><br></p>
+<h4 id="1、定义"><a href="#1、定义" class="headerlink" title="1、定义"></a>1、定义</h4><p>n 元变量 $ x_1, x_2, \cdots, x_n $ 的二次齐次多项式</p>
+<script type="math/tex; mode=display">
+\begin{array}{l}
+  f(x_1, x_2, \cdots, x_n) = & a_{11}x_1^2 &+& 2a_{12}x_1x_2 &+& \cdots &+& 2a_{1n}x_1x_n \\\\
+  & &+& a_{22}x_2^2 &+& \cdots &+& 2a_{2n}x_2x_n \\\\
+  & && && \cdots \\\\
+  & && && &+& a_{nn}x_n^2
+\end{array}</script><p>称为 n 元二次型，简称二次型。</p>
+<p>因为 $ x_ix_j = x_jx_i $ ，先若令 $ a_{ij} = a_{ji} (i, j=1, 2, \cdots, n) $ ，则 $ 2a_{ij}x_ix_j = a_{ij}x_ix_j + a_{ji}x_jx_i $ ，于是</p>
+<script type="math/tex; mode=display">
+\begin{array}{l}
+  f(x_1, x_2, \cdots, x_n) 
+  & = 
+    & a_{11}x_1^2 + a_{12}x_1x_2 + \cdots + a_{1n}x_1x_n + \\\\ 
+    && a_{21}x_2x_1 + a_{22}x_2^2 + \cdots + a_{2n}x_2x_n + \\\\ 
+    && \cdots \cdots + \\\\ 
+    && a_{n1}x_nx_1 + a_{n2}x_nx_2 + \cdots + a_{nn}x_n^2 \quad & \quad (\ast) \\\\
+  & = 
+    & \sum\limits_{i=1}^{\infty}\sum\limits_{j=1}^{\infty}a_{ij}x_ix_j \quad & \quad (\ast\ast)
+\end{array}</script><p>其中 $ (\ast) $ 式称为完全展开式， $ (\ast\ast) $ 式称为和式。令</p>
+<script type="math/tex; mode=display">
+A = 
+\begin{bmatrix} 
+  a_{11} & a_{12} & \cdots & a_{1n} \\ 
+  a_{21} & a_{22} & \cdots & a_{2n} \\
+  \vdots & \vdots & & \vdots \\
+  a_{n1} & a_{n2} & \cdots & a_{nn}
+\end{bmatrix}, 
+x = 
+\begin{bmatrix} 
+  x_1 \\ x_2 \\ \vdots \\ x_n
+\end{bmatrix}</script><p>则二次型可表示为</p>
+<script type="math/tex; mode=display">
+\begin{array}{l} 
+  f(x) = x^{\rm T} A x (A^{\rm T} = A). \quad & \quad (\ast\ast\ast)
+\end{array}</script><p>$ (\ast\ast\ast) $ 式称为二次型 $ f(x_1, x_2, \cdots, x_n) $ 的矩阵表达式，实<strong>对称</strong>矩阵 A 称为<strong>二次型</strong> $ f(x) $ 的矩阵。</p>
+<p><br></p>
+<h4 id="2、例题"><a href="#2、例题" class="headerlink" title="2、例题"></a>2、例题</h4><ol>
+<li>写出三元二次型 $ f(x_1, x_2, x_3) = 2x_1^2 + 2x_2^2 + 2x_3^2 - 2x_1x_2 - 2x_2x_3 + 2x_1x_3 $ 的二次型矩阵 A。<ul>
+<li>先写模子：$ \begin{pmatrix} x_1 &amp; x_2 &amp; x_3 \end{pmatrix} \begin{pmatrix} \ast &amp; \ast &amp; \ast \\ \ast &amp; \ast &amp; \ast \\ \ast &amp; \ast &amp; \ast \end{pmatrix} \begin{pmatrix} x_1 \\ x_2 \\ x_3 \end{pmatrix} $ </li>
+<li>主对角线位置抄【平方项】前的系数<ul>
+<li>$ \begin{pmatrix} x_1 &amp; x_2 &amp; x_3 \end{pmatrix} \begin{pmatrix} 2 &amp; \ast &amp; \ast \\ \ast &amp; 2 &amp; \ast \\ \ast &amp; \ast &amp; 2 \end{pmatrix} \begin{pmatrix} x_1 \\ x_2 \\ x_3 \end{pmatrix} $ </li>
+</ul>
+</li>
+<li>把混合项 $ x_ix_j(i \not= j) $ 前的系数平分，写在 $ a_{ij} $ 和 $ a_{ji} $ 的位置<ul>
+<li>$ \begin{pmatrix} x_1 &amp; x_2 &amp; x_3 \end{pmatrix} \begin{pmatrix} 2 &amp; -1 &amp; 1 \\ -1 &amp; 2 &amp; -1 \\ 1 &amp; -1&amp; 2 \end{pmatrix} \begin{pmatrix} x_1 \\ x_2 \\ x_3 \end{pmatrix} $ </li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<p><br></p>
+<h2 id="二、线性变换"><a href="#二、线性变换" class="headerlink" title="二、线性变换"></a>二、线性变换</h2><p><br></p>
+<h4 id="1、定义-1"><a href="#1、定义-1" class="headerlink" title="1、定义"></a>1、定义</h4><p>对于 n 元二次型 $ f(x_1, x_2, \cdots, x_n) $，若令</p>
+<script type="math/tex; mode=display">
+\begin{cases}
+  x_1 = c_{11}y_1 + c_{12}y_2 + \cdots + c_{1n}yn \\\\
+  x_2 = c_{21}y_1 + c_{22}y_2 + \cdots + c_{2n}yn \\\\
+  \quad \cdots\cdots \\\\
+  x_n = c_{n1}y_1 + c_{n2}y_2 + \cdots + c_{nn}yn \\\\
+\end{cases}</script><p>记 $ x = \begin{bmatrix} x_1 \\ x_2 \\ \vdots \\ x_n \end{bmatrix}, C = \begin{bmatrix} c_{11} &amp; c_{12} &amp; \cdots &amp; c_{1n} \\ c_{21} &amp; c_{22} &amp; \cdots &amp; c_{2n} \\ \vdots &amp; \vdots &amp; &amp; \vdots \\ c_{n1} &amp; c_{n2} &amp; \cdots &amp; c_{nn} \end{bmatrix}, y = \begin{bmatrix} y_1 \\ y_2 \\ \vdots \\ y_n \end{bmatrix} $ ，则可写为 $ x = Cy $ 。</p>
+<p>上式称为从 $ y_1, y_2, \cdots, y_n $ 到 $ x_1, x_2, \cdots, x_n $ 的线性变换。若线性变换的系数矩阵 C 可逆，即 $ |C| \not= 0 $ ，则称为可逆线性变换。现给出 $ f(x) = x^{\rm T} A x $ ，令 $ x = Cy $ ，则</p>
+<script type="math/tex; mode=display">
+f(x_1, x_2, \cdots, x_n) = (Cy)^{\rm T} A (Cy) = y^{\rm T}( C^{\rm T} A C )y</script><p>记 $ B = C^{\rm T} A C $ ，则</p>
+<script type="math/tex; mode=display">
+f(x_1, x_2, \cdots, x_n) = y^{\rm T}By = g(y)</script><p>此时，二次型 $ f(x_1, x_2, \cdots, x_n) = x^{\rm T}Ax $ 通过线性变换 $ x = Cy $ 得到一个新二次型 $ g(y) = y^{\rm T}By $ 。</p>
+<p>【:star: 注】：一定要写 $ x = Cy $ ！如果题目给出 $ y = Cx $ ，则写为 $ x = C^{-1}y $ 。</p>
+<p>若 P 为 n 阶矩阵，则 $ PP^{\rm T} = E \iff P \text{ 为正交矩阵 } \iff P^{-1} = P^{\rm T} \iff P \text{ 由规范正交基组成 } $ 。 </p>
+<p><br></p>
+<h4 id="2、例题-1"><a href="#2、例题-1" class="headerlink" title="2、例题"></a>2、例题</h4><ol>
+<li>已知二次型 $ f(x_1, x_2, x_3) = 4x_2^2 - 3x_3^2 + 4x_1x_2 - 4x_1x_3 + 8x_2x_3 $ ，1️⃣ 写出二次型 $ f $ 的矩阵表达式；2️⃣ 用正交变换把二次型 $ f $ 化为标准形，并写出相应的正交矩阵。<ul>
+<li>1️⃣ <ul>
+<li>$ A = \begin{pmatrix} 0 &amp; 2 &amp; -2 \\ 2 &amp; 4 &amp; 4 \\ -2 &amp; 4 &amp; -3 \end{pmatrix} $ </li>
+<li>$ f(x_1, x_2, x_3) = \begin{pmatrix} x_1 &amp; x_2 &amp; x_3 \end{pmatrix} \begin{pmatrix} 0 &amp; 2 &amp; -2 \\ 2 &amp; 4 &amp; 4 \\ -2 &amp; 4 &amp; -3 \end{pmatrix} \begin{pmatrix} x_1 \\ x_2 \\ x_3 \end{pmatrix} $ </li>
+</ul>
+</li>
+<li>2️⃣ <ul>
+<li>$ \begin{vmatrix} \lambda E - A \end{vmatrix} = 0 \implies \begin{cases} \lambda_1 = -6, &amp; \xi_1 = \begin{pmatrix} 1 &amp; -1 &amp; 2 \end{pmatrix}^{\rm T} \\\\ \lambda_2 = 1, &amp; \xi_2 = \begin{pmatrix} -2 &amp; 0 &amp; 1 \end{pmatrix}^{\rm T} \\\\ \lambda_3 = 6, &amp; \xi_3 = \begin{pmatrix} 1 &amp; 5 &amp; 2 \end{pmatrix}^{\rm T} \end{cases} $ </li>
+<li>:star: 写出正交阵 P<ul>
+<li>$ \xi_1, \xi_2, \xi_3 $ 正交化 $ and $ 单位化</li>
+<li>$ P = \begin{pmatrix} \dfrac{1}{ \sqrt{6} } &amp; -\dfrac{2}{ \sqrt{5} } &amp; \dfrac{1}{ \sqrt{30} } \\\\ -\dfrac{1}{ \sqrt{6} } &amp; 0 &amp; \dfrac{5}{ \sqrt{30} } \\\\ \dfrac{2}{ \sqrt{6} } &amp; \dfrac{1}{ \sqrt{5} } &amp; \dfrac{2}{ \sqrt{30} } \end{pmatrix} $ ，则 $ P^{-1} = P^{\rm T} $ 。</li>
+</ul>
+</li>
+<li>令 $ X = PY \implies \begin{array}{l} f &amp;= X^{\rm T}AX \\\\ &amp;= (PY)^{\rm T} A PY \\\\ &amp;= Y^{\rm T}P^{\rm T}APY \\\\ &amp;= Y^{\rm T}P^{-1}APY \\\\ &amp;= Y^{\rm T} \Lambda Y \end{array} $<ul>
+<li>所以 $ f = \begin{pmatrix} y_1 &amp; y_2 &amp; y_3 \end{pmatrix} \begin{pmatrix} -6 &amp; &amp; \\ &amp; 1 &amp; \\ &amp; &amp; 6 \end{pmatrix} \begin{pmatrix} y_1 \\ y_2 \\ y_3 \end{pmatrix} = -6y_1^2 + y_2^2 + 6y_3^3 $</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>【施式正交法】<ul>
+<li>$ \xi_1 \not\bot \xi_2, \, \xi_1 \bot \xi_3, \, \xi_2 \bot \xi_3 \implies \eta_1 \bot \eta_2, \, \eta_1 \bot \eta_3, \, \eta_2 \bot \eta_3 $ ，其中 $ \eta_3 $ 就是 $ \xi_3 $ ，对 $ \xi_1, \, \xi_2 $ 正交化。</li>
+<li>例题<ul>
+<li>$ A \implies \begin{cases} \xi_1 = \begin{pmatrix} -2 &amp; 1 &amp; 0 \end{pmatrix}^{\rm T} \\\\ \xi_2 = \begin{pmatrix} 2 &amp; 0 &amp; 1 \end{pmatrix}^{\rm T} \\\\ \xi_3 = \begin{pmatrix} 1 &amp; 2 &amp; -1 \end{pmatrix}^{\rm T} \end{cases} $ ，$ \xi_1 \not\bot \xi_2, \, \xi_1 \bot \xi_3, \, \xi_2 \bot \xi_3 $ <ul>
+<li>令 $ \eta_1 = \xi_1, \, \eta_3 = \xi_3 $ </li>
+<li>$ \xi_2 $ 减去 $ \xi_2 \text{ 在 } \xi_1 $ 上的投影，得到的向量与 $ \xi_1 $ 垂直<ul>
+<li><img src="./images/11-2.2 向量正交化.png" width="50%"></li>
+<li>$ \xi_2 \text{ 在 } \xi_1 $ 上的投影 $ = \begin{Vmatrix} \xi_2 \end{Vmatrix} \cos \theta \, \xi_1^o = \dfrac{ \begin{Vmatrix} \xi_1 \end{Vmatrix} \begin{Vmatrix} \xi_2 \end{Vmatrix} \cos \theta }{ \begin{Vmatrix} \xi_1 \end{Vmatrix} \begin{Vmatrix} \xi_1 \end{Vmatrix} } \xi_1 = \dfrac{ (\xi_2, \xi_1) }{ (\xi_1, \xi_1) } \xi $ <ul>
+<li>$ \theta \text{ 是 } \xi_1, \, \xi_2 $ 的夹角，$ \xi_1^o \text{ 是 } \xi_1 $ 方向上的单位向量 </li>
+</ul>
+</li>
+<li>所以 $ \eta_2 = \xi_2 - \dfrac{ (\xi_2, \xi_1) }{ (\xi_1, \xi_1) } \xi $ </li>
+</ul>
+</li>
+<li>$ \begin{array}{l}  \eta_2 &amp;= \xi_2 - \dfrac{ (\xi_2, \xi_1) }{ (\xi_1, \xi_1) } \xi_1 \\\\ &amp;= \begin{pmatrix} 2 \\ 0 \\ 1 \end{pmatrix} - \dfrac{-4}{5} \begin{pmatrix} -2 \\ 1 \\ 0 \end{pmatrix} \\\\ &amp;= \begin{pmatrix} \frac{2}{5} \\ \frac{4}{5} \\ 1 \end{pmatrix} \end{array} $</li>
+<li>$ \eta_1, \, \eta_2, \, \eta_3 $ 正交 </li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+
+                </div>
+            </div>
+            <div class="clearfix"></div>
+            <hr class="nogutter">
+            
+<!-- 当前博客前后两篇博客 -->
+<div class="row justify-content-center">
+    <nav class="m-pagination col-md-8 col-sm-24" role="pagination">
+        
+        <a class="float-left" href="/2018/08/29/看Q外的风景/" style="float: left;">
+            ← 看 Q 外的风景
+        </a>
+        
+        
+        <a class="float-right" href="/2018/08/10/maths 10 特征值/">
+            特征值 →
+        </a>
+        
+    </nav>
+</div>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-8 col-md-10 col-sm-12">
+                    <script type="text/javascript"></script>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Catalog of Blog Titles -->
+        <div id="div-side-navigation-left" class="col-lg-3 col-md-3" style="position: fixed; top: 46px; left: 0; padding-top: 0; padding-right: 50px" v-if="show">
+            <div class="list-group" style="border-radius: 0; border: 1px solid rgba(0, 0, 0, 0.1)">
+                <a class="list-group-item list-group-item-action" :class="{linkFocus:header.fillColor}" style="padding: 1px 20px; border: 0; border-radius: 0" :href="IDToHref(header.id)" v-for="header in headers" @click="showChildren(header.index)">{{header.id}}</a>
+            </div>
+            <div class="width-100-pct height-5 visibility-hidden"></div>
+            <div class="list-group" style="border-radius: 0; border: 1px solid rgba(0, 0, 0, 0.1)">
+                <div v-for="header in headers">
+                    <transition 
+                        enter-active-class="animated slideInUp"
+                        leave-active-class="">
+                        <div v-if="header.show">
+                            <a class="list-group-item list-group-item-action" style="padding: 1px 20px; border: 0; border-radius: 0" :href="IDToHref(child.id)" v-for="child in header.children">{{child.id}}</a>
+                        </div>
+                    </transition>
+                </div>
+            </div>
+        </div>
+        <!-- End Catalog of Blog Titles -->
+
+    </section>
+    
+    <!-- Catalog of Blog Titles Script -->
+    <script>
+        'use strict';
+
+        var min_width = 1050;
+        $(function(){
+            var width = $(window).width();
+            if( width > min_width ){
+                div_side_navigation_left.show = true;
+            }
+            else {
+                div_side_navigation_left.show = false;
+            }
+            
+            // 对于目录索引
+            var preH2 = undefined;
+            var num_map = [ '零', '一', '二', '三', '四', '五', '六', '七', '八', '九' ];
+            var h2s = $('h2');
+            var numOfH2 = h2s.length;
+            for(var i=0; i<numOfH2; i++){
+                var h2 = h2s[i];
+                var text = $(h2).text().toString();
+                var header = text.indexOf('、') > 0 ? text.split('、')[1] : 
+                    text.indexOf('.') > 0 ? text.split('.')[1] : text;
+                var id = num_map[i + 1] + '. ' + header + '';
+                $(h2).attr('id', id);
+
+                var h4s = [];
+                if(i<numOfH2-1){
+                    var h2Next = h2s[i+1];
+                    h4s = $(h2).nextUntil(h2Next, 'h4');
+                }
+                else{
+                    h4s = $(h2).nextAll('h4');
+                }
+
+                var h2Children = [];
+                h4s.each(function(index, element){
+                    var childText = $(element).text().toString();
+                    var childHeader = childText.indexOf('、') > 0 ? childText.split('、')[1] : 
+                        childText.indexOf('.') > 0 ? childText.split('.')[1] : childText;
+                    var childId = (index+1) + '. ' + childHeader;
+                    $(element).attr('id', childId);
+                    h2Children[index] = {'id':childId};
+                });
+                var fillColor = i===0 ? true : false;
+                var show = i===0 ? true : false;
+                var header = {'id':id, 'index':i, 'fillColor':fillColor, 'show':show, 'children': h2Children};
+
+                div_side_navigation_left.headers.push(header);
+            }
+        });
+
+        $(window).resize(function(){
+            var width = $(window).width();
+            if( width > min_width ){
+                div_side_navigation_left.show = true;
+            }
+            else {
+                div_side_navigation_left.show = false;
+            }
+        });
+        
+        var div_side_navigation_left = new Vue({
+            el : '#div-side-navigation-left',
+            data : {
+                currentIndex : 0,
+                show : true,
+                headers : []
+            },
+            methods : {
+                IDToHref : function(id){
+                    return "#" + id;
+                },
+                showChildren : function(index){
+                    if(div_side_navigation_left.currentIndex==index){
+                        return;
+                    }
+                    var currentShow = div_side_navigation_left.headers[div_side_navigation_left.currentIndex];
+                    currentShow['fillColor'] = false;
+                    currentShow['show'] = false;
+                    Vue.set(div_side_navigation_left.headers, div_side_navigation_left.currentIndex, currentShow);
+
+                    div_side_navigation_left.currentIndex = index;
+                    var newShow = div_side_navigation_left.headers[index];
+                    newShow['fillColor'] = true;
+                    newShow['show'] = true;
+                    Vue.set(div_side_navigation_left.headers, index, newShow);
+                }
+            }
+        });
+    </script>
+    <!-- End Catalog of Blog Titles Script -->
+
+
+    
+<!-- ============================ Footer =========================== -->
+
+<footer>
+    <div class="container">
+            <div class="copy">
+                <p>
+                    &copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By WaterH2P. All Rights Reserved.
+                </p>
+                <p>Theme By <a href="//go.kieran.top" style="color: #767D84">Kieran</a></p>
+            </div>
+            <div class="social">
+                <ul>
+                    
+                    <li><a href="https://github.com/WaterH2P" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;&nbsp;</li>
+                    
+                    
+                    
+                    
+                    
+                    <li><a href="https://weibo.com/5933348875" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;&nbsp;</li>
+                    
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+</footer>
+
+<!-- ============================ END Footer =========================== -->
+
+    
+    <!-- Load our scripts -->
+    <!-- Resizable 'on-demand' full-height hero -->
+    <script type="text/javascript">
+        var resizeHero = function () {
+            var hero = $(".cover,.heightblock");
+            var window1 = $(window);
+            hero.css({
+                "height": window1.height()
+            });
+        };
+
+        resizeHero();
+
+        $(window).resize(function () {
+            resizeHero();
+        });
+    </script>
+
+    <!-- Bootstrap core and concatenated plugins always load here -->
+    <script src="/js/plugins.min.js"></script>
+
+    <!-- Theme scripts -->
+    <script src="/js/scripts.js"></script>
+
+    
+    <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+    <script src="/fancybox/jquery.fancybox.pack.js"></script>
+    <script type="text/javascript">
+        $('#intro').find('img').each(function(){
+            var alt = this.alt;
+
+            if (alt){
+                $(this).after('<span class="caption" style="display:none">' + alt + '</span>');
+            }
+
+            $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox" rel="gallery" />');
+        });
+        (function($){
+            $('.fancybox').fancybox();
+        })(jQuery);
+    </script>
+    
+
+
+    
+
+    <!-- 设置按钮位置 -->
+    <script>
+        function setPosition() {
+            var max_width = 1450;
+            var min_distance = 20;
+
+            var width = $(window).width();
+            if( width > max_width ){
+                var right_distance = ( width - max_width) / 2;
+                right_distance = ( right_distance > min_distance ) ? right_distance : min_distance;
+                $('#div-back-top').css('right', right_distance + 'px');
+            }
+            else {
+                $('#div-back-top').css('right', min_distance + 'px');
+            }
+        }
+    </script>
+    <script>
+        $(function () {
+            setPosition();
+            $(window).resize(function () {
+                setPosition();
+            });
+
+            // 返回顶端按钮监听
+            $(window).scroll(function () {
+                if( $(document).scrollTop() < 15 ){
+                    $('#div-back-top').hide();
+                }
+                else {
+                    $('#div-back-top').show();
+                }
+            });
+        });
+        function back_to_top(){
+            $('html').animate({scrollTop: 0}, 'slow');
+        }
+    </script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<!-- <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script> -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+<!-- <script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+
+</body>
+</html>
