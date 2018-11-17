@@ -300,17 +300,17 @@
     
     
     <span class="tag is-info">
-        <a href='/tags/kaoyan/'>kaoyan</a>
-    </span>
-    ,
-    
-    <span class="tag is-info">
         <a href='/tags/maths/'>maths</a>
     </span>
     ,
     
     <span class="tag is-info">
         <a href='/tags/高数/'>高数</a>
+    </span>
+    ,
+    
+    <span class="tag is-info">
+        <a href='/tags/kaoyan/'>kaoyan</a>
     </span>
     
     
@@ -338,29 +338,29 @@
             <div class="row justify-content-center">
                 <div class="col-lg-8 col-md-10 col-sm-12">
                     <h2 id="习题"><a href="#习题" class="headerlink" title="习题"></a>习题</h2><p><br></p>
-<h4 id="1"><a href="#1" class="headerlink" title="1"></a>1</h4><p>设 $ f(x, y) $ 为连续函数，则</p>
+<h4 id="1"><a href="#1" class="headerlink" title="1"></a>1</h4><p>设 $f(x, y)$ 为连续函数，计算</p>
 <script type="math/tex; mode=display">
-I = \lim\limits_{t \to 0^+} \dfrac{1}{\pi t^2} \iint\limits_D f(x, y) \, {\rm d}\sigma \, = \, \text{_________}</script><p>其中 $ D = \left\{ (x, y) \mid x^2 + y^2 \leq t^2 \right\} $ 。</p>
+I = \lim\limits_{t \to 0^+} \dfrac{1}{\pi t^2} \iint\limits_D f(x, y) \, {\rm d}\sigma</script><p>其中 $D = \left\{ (x, y) \mid x^2 + y^2 \leq t^2 \right\}$ 。</p>
 <p><br></p>
 <h4 id="2"><a href="#2" class="headerlink" title="2"></a>2</h4><p>计算</p>
 <script type="math/tex; mode=display">
 \int_0^a {\rm d}x \int_0^b e^{ \max \{ b^2x^2, \; a^2y^2 \} } \, {\rm d}y \qquad (a, b > 0)</script><p><br></p>
-<h4 id="3"><a href="#3" class="headerlink" title="3"></a>3</h4><p>【6.4】<br>设线性无关的函数 $ y_1(x), \, y_2(x), \, y_3(x) $ 均是方程 $ y’’ + p(x)y’ + q(x)y = f(x) $ 的解，$ C_1, \, C_2 $ 是任意常数，则该方程的通解是 $ ( \quad ) $ 。</p>
+<h4 id="3"><a href="#3" class="headerlink" title="3"></a>3</h4><p>【6.4】<br>设线性无关的函数 $y_1(x), \, y_2(x), \, y_3(x)$ 均是方程 $y’’ + p(x)y’ + q(x)y = f(x)$ 的解，$C_1, \, C_2$ 是任意常数，则该方程的通解是 $( \quad )$ 。</p>
 <script type="math/tex; mode=display">
 \begin{array}{l}
     \text{ (A) } C_1 y_1 + C_2 y_2 + y_3 \qquad & \text{ (B) } C_1 y_1 + C_2 y_2 - ( C_1 + C_2 ) y_3 \\\\
     \text{ (C) } C_1 y_1 + C_2 y_2 - ( 1 - C_1 - C_2 ) y_3 \qquad & \text{ (D) } C_1 y_1 + C_2 y_2 + ( 1 - C_1 - C_2 ) y_3 
 \end{array}</script><p><br></p>
 <h2 id="参考答案"><a href="#参考答案" class="headerlink" title="参考答案"></a>参考答案</h2><p><br></p>
-<h4 id="1-1"><a href="#1-1" class="headerlink" title="1"></a>1</h4><p>【解析】因被积函数 $ f(x, y) $ 在闭区间 D 上是抽象函数，故无法用先求出重积分的方法求极限，因此考虑：</p>
+<h4 id="1-1"><a href="#1-1" class="headerlink" title="1"></a>1</h4><p>【解析】因被积函数 $f(x, y)$ 在闭区间 D 上是抽象函数，故无法用先求出重积分的方法求极限，因此考虑：</p>
 <ul>
 <li>1⃣️ 用中值定理先去掉积分号再求极限；</li>
 <li>2⃣️ 用二次积分化分子为积分上限的方法。</li>
 </ul>
 <p>1⃣️ </p>
-<p>因 $ f(x, y) $ 在 D 上连续，有积分中值定理可知，在 D 上至少存在一点 $ (\xi, \eta) $ 使</p>
+<p>因 $f(x, y)$ 在 D 上连续，有积分中值定理可知，在 D 上至少存在一点 $(\xi, \eta)$ 使</p>
 <script type="math/tex; mode=display">
-\iint\limits_D f(x, y) \, {\rm d} \sigma = f(\xi, \eta) \, \sigma = \pi t^2 f(\xi, \eta)</script><p>因 $ (\xi, \eta) $ 在 D 上。所以当 $ t \to 0^+ $ 时，$ (\xi, \eta) \to (0, 0) $ ，于是</p>
+\iint\limits_D f(x, y) \, {\rm d} \sigma = f(\xi, \eta) \, \sigma = \pi t^2 f(\xi, \eta)</script><p>因 $(\xi, \eta)$ 在 D 上。所以当 $t \to 0^+$ 时，$(\xi, \eta) \to (0, 0)$ ，于是</p>
 <script type="math/tex; mode=display">
 \lim\limits_{t \to 0^+} \dfrac{1}{\pi t^2} \iint\limits_D f(x, y) \, {\rm d}\sigma = 
 \lim\limits_{ (\xi, \eta) \to (0, 0) } f(\xi, \eta) = 
@@ -373,9 +373,16 @@ f(0, 0)</script><p><br></p>
 = & \dfrac{1}{2ab} \left( e^{ a^2 b^2 } - 1 \right) + \dfrac{1}{2ab} \left( e^{ a^2 b^2 } - 1 \right) \\\\
 = & \dfrac{1}{ab} \left( e^{ a^2 b^2 } - 1 \right)
 \end{array}</script><p><br></p>
-<h4 id="3-1"><a href="#3-1" class="headerlink" title="3"></a>3</h4><p>$ ( \text{ D } ) $ 由于</p>
+<h4 id="3-1"><a href="#3-1" class="headerlink" title="3"></a>3</h4><p>$( \text{ D } )$ 由于</p>
 <script type="math/tex; mode=display">
-C_1 y_1 + C_2 y_2 + ( 1 - C_1 - C_2 ) y_3 = C_1 ( y_1 - y_3 ) + C_2 ( y_2 - y_3 ) + y_3</script><p>其中 $ ( y_1 - y_3 ) $ 和 $ ( y_2 - y_3 ) $ 是原方程对应的齐次方程的两个线性无关的解，又 $ y_3 $ 是原方程的一个特解，所以 D 是原方程的通解。</p>
+C_1 y_1 + C_2 y_2 + ( 1 - C_1 - C_2 ) y_3 = C_1 ( y_1 - y_3 ) + C_2 ( y_2 - y_3 ) + y_3</script><p>其中 $( y_1 - y_3 )$ 和 $( y_2 - y_3 )$ 是原方程对应的齐次方程的两个线性无关的解，又 $y_3$ 是原方程的一个特解，所以 D 是原方程的通解。</p>
+<p>【注】</p>
+<p>事实上，有下述定理：设 $p(x), \, q(x)$ 与 $f(x)$ 均为连续函数。设 $y_1(x), \, y_2(x), \, y_3(x)$ 为二阶非齐次线性方程</p>
+<script type="math/tex; mode=display">
+y'' + p(x)y' + q(x)y = f(x)</script><p>的 3 个解，A、B、C 为常数，并设</p>
+<script type="math/tex; mode=display">
+Y = Ay_1(x) + By_2(x) + Cy_3(x)</script><p>Y 是 $y’’ + p(x)y’ + q(x)y = f(x)$ 的解得充要条件是 $A + B + C = 1$；</p>
+<p>Y 是 $y’’ + p(x)y’ + q(x)y = 0$ 的解得充要条件是 $A + B + C = 0$ 。</p>
 
                 </div>
             </div>
