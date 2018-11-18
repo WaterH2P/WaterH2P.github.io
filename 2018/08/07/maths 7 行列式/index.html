@@ -537,8 +537,8 @@ I =
 </li>
 </ul>
 <p><br></p>
-<h4 id="㊄、例题"><a href="#㊄、例题" class="headerlink" title="㊄、例题"></a>㊄、例题</h4><ol>
-<li>消 $0$ 化三角形法<ol>
+<h4 id="㊄、例题"><a href="#㊄、例题" class="headerlink" title="㊄、例题"></a>㊄、例题</h4><p><br></p>
+<h6 id="1、消-0-化三角形法"><a href="#1、消-0-化三角形法" class="headerlink" title="1、消 $0$ 化三角形法"></a>1、消 $0$ 化三角形法</h6><ol>
 <li>设 $n$ 阶矩阵 $A = \begin{vmatrix} 0 &amp; 1 &amp; 1 &amp; \cdots &amp; 1 &amp; 1 \\ 1 &amp; 0 &amp; 1 &amp; \cdots &amp; 1 &amp; 1 \\ 1 &amp; 1 &amp; 0 &amp; \cdots &amp; 1 &amp; 1 \\ \vdots &amp; \vdots &amp; \vdots &amp; &amp; \vdots &amp; \vdots \\ 1 &amp; 1 &amp; 1 &amp; \cdots &amp; 0 &amp; 1 \\ 1 &amp; 1 &amp; 1 &amp; \cdots &amp; 1 &amp; 0 \end{vmatrix}$ ，则 $|A| =$________ 。<ul>
 <li>$\mid A \mid = (-1)^{n-1} (n-1)$ </li>
 </ul>
@@ -559,8 +559,8 @@ I =
 </ul>
 </li>
 </ol>
-</li>
-<li>加边法<ul>
+<p><br></p>
+<h6 id="2、加边法"><a href="#2、加边法" class="headerlink" title="2、加边法"></a>2、加边法</h6><ul>
 <li>$|A| = \begin{vmatrix} 1 &amp; \ast &amp; \ast &amp; \ast \\ 0 &amp; \\ \vdots &amp; \\ 0 &amp; \end{vmatrix}_{ (n+1) \times (n+1) }$ <ul>
 <li>其中 $\ast \quad \ast \quad \ast$ 为增加的<strong>边</strong><ul>
 <li>一般选择公共元素</li>
@@ -583,8 +583,8 @@ I =
 </ul>
 </li>
 </ol>
-</li>
-<li>递推法<ul>
+<p><br></p>
+<h6 id="3、递推法"><a href="#3、递推法" class="headerlink" title="3、递推法"></a>3、递推法</h6><ul>
 <li>宽边行列式</li>
 </ul>
 <ol>
@@ -598,14 +598,12 @@ I =
 </ul>
 </li>
 </ol>
-</li>
-<li>范式行列式<ol>
+<p><br></p>
+<h6 id="4、范式行列式"><a href="#4、范式行列式" class="headerlink" title="4、范式行列式"></a>4、范式行列式</h6><ol>
 <li>计算 $D_{n+1} = \begin{vmatrix}  a_1^n &amp; a_1^{n-1}b_1 &amp; a_1^{n-2}b_1^2 &amp; \cdots &amp; a_1b_1^{n-1} &amp; b_1^n \\ a_2^n &amp; a_2^{n-1}b_2 &amp; a_2^{n-2}b_2^2 &amp; \cdots &amp; a_2b_2^{n-1} &amp; b_2^n \\ \vdots &amp; \vdots &amp; \vdots &amp; &amp; \vdots &amp; \vdots \\ a_{n+1}^n &amp; a_{n+1}^{n-1}b_{n+1} &amp; a_{n+1}^{n-2}b_{n+1}^2 &amp; \cdots &amp; a_{n+1}b_{n+1}^{n-1} &amp; b_{n+1}^n \end{vmatrix}, \quad (a_1, a_2, \cdots, a_n \not= 0)$ <ul>
 <li>$D_{n+1} = \prod\limits_{i=1}^{n+1} a_i^n \cdot \begin{vmatrix}  1 &amp; \dfrac{b_1}{a_1} &amp; \left( \dfrac{b_1}{a_1} \right)^2 &amp; \cdots &amp; \left( \dfrac{b_1}{a_1} \right)^n \\ 1 &amp; \dfrac{b_2}{a_2} &amp; \left( \dfrac{b_2}{a_2} \right)^2 &amp; \cdots &amp; \left( \dfrac{b_2}{a_2} \right)^n \\ \vdots &amp; \vdots &amp; \vdots &amp; &amp; \vdots \\ 1 &amp; \dfrac{ b_{n+1} }{ a_{n+1} } &amp; \left( \dfrac{ b_{n+1} }{ a_{n+1} } \right)^2 &amp; \cdots &amp; \left( \dfrac{ b_{n+1} }{ a_{n+1} } \right)^n \end{vmatrix}$ </li>
 <li>$D_{n+1} = \prod\limits_{i=1}^{n+1} a_i^n \cdot \prod\limits_{ 1 \leq i &lt; j \leq (n+1) } \left( \dfrac{b_j}{a_j} - \dfrac{b_i}{a_i} \right)$ </li>
 </ul>
-</li>
-</ol>
 </li>
 </ol>
 <p><br></p>
