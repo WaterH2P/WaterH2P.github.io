@@ -590,9 +590,9 @@ I =
 <ol>
 <li>计算 $D_5 = \begin{vmatrix} 1-x &amp; x &amp; 0 &amp; 0 &amp; 0 \\ -1 &amp; 1-x &amp; x &amp; 0 &amp; 0 \\ 0 &amp; -1 &amp; 1-x &amp; x &amp; 0 \\ 0 &amp; 0 &amp; -1 &amp; 1-x &amp; x \\ 0 &amp; 0 &amp; 0 &amp; -1 &amp; 1-x \end{vmatrix}$ 。<ul>
 <li>$\begin{array}{l} D_5 &amp; = (1 - x) \cdot (-1)^{1+1} \cdot D_4 + x \cdot (-1)^{1+2} \cdot \begin{vmatrix} -1 &amp; x &amp; 0 &amp; 0 \\ 0 &amp; 1-x &amp; x &amp; 0 \\ 0 &amp; -1 &amp; 1-x &amp; x \\ 0 &amp; 0 &amp; -1 &amp; 1-x \end{vmatrix} \\\\ &amp; = (1-x)D_4 + (-x) \cdot (-1) \cdot (-1)^{1+1} \cdot D_3 \\\\ &amp; = (1-x)D_4 + xD_3 \\\\ &amp; = D_4 - xD_4 + xD_3 \end{array}$ </li>
-<li>$\begin{array}{l} \implies D_5 - D_4 = -x (D_4 - D_3) = (-x)^2 (D_3 - D_2) = (-x)^3 (D_2 - D_1) \end{array}$<ul>
+<li>$D_5 - D_4 = -x (D_4 - D_3) = (-x)^2 (D_3 - D_2) = (-x)^3 (D_2 - D_1)$<ul>
 <li>$D_1 = 1-x$，$D_2 = \begin{vmatrix} 1-x &amp; x \\ -1 &amp; 1-x \end{vmatrix} = 1 - x + x^2$ </li>
-<li>$\begin{cases} D_5 - D_4 = -x^5 \\ D_4 - D_3 = x^4 \\ D_3 - D_2 = -x^3 \end{cases} \implies D_5 = 1 - x + x^2 - x^3 + x^4 - x^5$ </li>
+<li>$\begin{cases} D_5 - D_4 = -x^5 \\\\ D_4 - D_3 = x^4 \\\\ D_3 - D_2 = -x^3 \end{cases} \implies D_5 = 1 - x + x^2 - x^3 + x^4 - x^5$ </li>
 </ul>
 </li>
 </ul>
