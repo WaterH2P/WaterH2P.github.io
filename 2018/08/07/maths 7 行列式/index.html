@@ -338,60 +338,58 @@
             <div class="row justify-content-center">
                 <div class="col-lg-8 col-md-10 col-sm-12">
                     <h2 id="一、概念"><a href="#一、概念" class="headerlink" title="一、概念"></a>一、概念</h2><p><br></p>
-<h4 id="㊀、引言"><a href="#㊀、引言" class="headerlink" title="㊀、引言"></a>㊀、引言</h4><p>$ \begin{vmatrix} a_{11} &amp; a_{12} \\ a_{21} &amp; a_{22} \end{vmatrix} $  </p>
+<h4 id="㊀、引言"><a href="#㊀、引言" class="headerlink" title="㊀、引言"></a>㊀、引言</h4><p>$\begin{vmatrix} a_{11} &amp; a_{12} \\ a_{21} &amp; a_{22} \end{vmatrix}$  </p>
 <ul>
-<li>看成是两个二维向量 $ \alpha_1 = ( a_{11}, a_{12} ) $  $ \alpha_2 = ( a_{21}, a_{22} ) $ ，与 $ x $ 轴夹脚分别是 $ \alpha $  $ \beta $ 。<!-- - <img src="./images/7-1 二阶行列式.png" width="50%"> --></li>
+<li>看成是两个二维向量 $\alpha_1 = ( a_{11}, a_{12} ), \; \alpha_2 = ( a_{21}, a_{22} )$ ，与 x 轴夹脚分别是 $\alpha, \, \beta$ 。<!-- - <img src="./images/7-1 二阶行列式.png" width="50%"> --></li>
 <li><img src="https://github.com/WaterH2P/WaterH2P.github.io/raw/master/img/images/7-1%20%E4%BA%8C%E9%98%B6%E8%A1%8C%E5%88%97%E5%BC%8F.png" width="50%"> </li>
-<li>$ \begin{array}{l} S_{ABCD} &amp; = |\alpha_1| \cdot |\alpha_2| \cdot \sin (\beta - \alpha) \\\\ &amp; = lm \cdot ( \sin \beta \cos \alpha - \cos \beta \sin \alpha ) \\\\ &amp; = l \cos \alpha \cdot m \sin \beta - l \sin \alpha \cdot m \cos \beta \\\\ &amp; = a_{11}a_{22} - a_{12}a_{21} \end{array} $</li>
-<li>$ \therefore \begin{vmatrix} a_{11} &amp; a_{12} \\ a_{21} &amp; a_{22} \end{vmatrix} = a_{11}a_{22} - a_{12}a_{21} = S_{ABCD} $ </li>
+<li>$\begin{array}{l} S_{ABCD} &amp; = |\alpha_1| \cdot |\alpha_2| \cdot \sin (\beta - \alpha) \\\\ &amp; = lm \cdot ( \sin \beta \cos \alpha - \cos \beta \sin \alpha ) \\\\ &amp; = l \cos \alpha \cdot m \sin \beta - l \sin \alpha \cdot m \cos \beta \\\\ &amp; = a_{11}a_{22} - a_{12}a_{21} \end{array}$ </li>
+<li>$\therefore \begin{vmatrix} a_{11} &amp; a_{12} \\ a_{21} &amp; a_{22} \end{vmatrix} = a_{11}a_{22} - a_{12}a_{21} = S_{ABCD}$ </li>
 </ul>
 <p><br></p>
 <h4 id="㊁、定义"><a href="#㊁、定义" class="headerlink" title="㊁、定义"></a>㊁、定义</h4><ul>
-<li>$ n $ 阶行列式由 $ n $ 个 $ n $ 维向量 $ \alpha_1 = \left[ a_{11}, a_{12}, \cdots, a_{1n} \right] $，$ \alpha_2 = \left[ a_{21}, a_{22}, \cdots, a_{2n} \right] $，$ \cdots $，$ \alpha_n = \left[ a_{n1}, a_{n2}, \cdots, a_{nn} \right] $ 组成，其结果为以这 $ n $ 个向量为邻边的 $ n $ 维图形的体积（ $ n $ 维体积 ）。</li>
+<li>$n$ 阶行列式由 $n$ 个 $n$ 维向量 $\alpha_1 = \left[ a_{11}, a_{12}, \cdots, a_{1n} \right]$，$\alpha_2 = \left[ a_{21}, a_{22}, \cdots, a_{2n} \right]$，$\cdots$，$\alpha_n = \left[ a_{n1}, a_{n2}, \cdots, a_{nn} \right]$ 组成，其结果为以这 $n$ 个向量为邻边的 $n$ 维图形的体积（ $n$ 维体积 ）。</li>
 </ul>
 <p><br></p>
-<h2 id="二、行列式的性质"><a href="#二、行列式的性质" class="headerlink" title="二、行列式的性质"></a>二、行列式的性质</h2><p>【7 大性质】</p>
-<ol>
-<li>行列互换，其值不变，即 $ |A| = |A^T| $ 。<ul>
-<li>$ |A^T| $ （转置）是将 $ |A| $ 中每一行竖着写。</li>
-<li>$ |A| = \begin{vmatrix} 1 &amp; 2 \\ -1 &amp; 5 \end{vmatrix} \implies |A^T| = \begin{vmatrix} 1 &amp; -1 \\ 2 &amp; 5 \end{vmatrix} $ </li>
+<h2 id="二、行列式七大性质"><a href="#二、行列式七大性质" class="headerlink" title="二、行列式七大性质"></a>二、行列式七大性质</h2><p><br></p>
+<h4 id="㊀、行列互换，其值不变"><a href="#㊀、行列互换，其值不变" class="headerlink" title="㊀、行列互换，其值不变"></a>㊀、行列互换，其值不变</h4><p>即 $\mid A \mid = \mid A^T \mid$ 。</p>
+<ul>
+<li>$\mid A^T \mid$ （转置）是将 $\mid A \mid$ 中每一行竖着写。</li>
+<li>$|A| = \begin{vmatrix} 1 &amp; 2 \\ -1 &amp; 5 \end{vmatrix} \implies |A^T| = \begin{vmatrix} 1 &amp; -1 \\ 2 &amp; 5 \end{vmatrix}$ </li>
 </ul>
-</li>
-<li>行列式中某行（列）元素全为零，则行列式为零。</li>
-<li>⭐️倍乘性质<ul>
-<li>行列式中某行（列）元素有公因子 $ k(k \not= 0) $ ，则 $ k $ 可提到行列式外面，即 $ \begin{vmatrix} a_{11} &amp; a_{12} &amp; \cdots &amp; a_{1n} \\ \vdots &amp; \vdots &amp;  &amp; \vdots \\ ka_{i1} &amp; ka_{i2} &amp; \cdots &amp; ka_{in} \\ \vdots &amp; \vdots &amp;  &amp; \vdots \\ a_{n1} &amp; a_{n2} &amp; \cdots &amp; a_{nn} \end{vmatrix} = k \begin{vmatrix} a_{11} &amp; a_{12} &amp; \cdots &amp; a_{1n} \\ \vdots &amp; \vdots &amp;  &amp; \vdots \\ a_{i1} &amp; a_{i2} &amp; \cdots &amp; a_{in} \\ \vdots &amp; \vdots &amp;  &amp; \vdots \\ a_{n1} &amp; a_{n2} &amp; \cdots &amp; a_{nn} \end{vmatrix} $ </li>
+<p><br></p>
+<h4 id="㊁、行列式中某行（列）元素全为零，则行列式为零。"><a href="#㊁、行列式中某行（列）元素全为零，则行列式为零。" class="headerlink" title="㊁、行列式中某行（列）元素全为零，则行列式为零。"></a>㊁、行列式中某行（列）元素全为零，则行列式为零。</h4><p><br></p>
+<h4 id="㊂、⭐️倍乘性质"><a href="#㊂、⭐️倍乘性质" class="headerlink" title="㊂、⭐️倍乘性质"></a>㊂、⭐️倍乘性质</h4><ul>
+<li>行列式中某行（列）元素有公因子 $k(k \not= 0)$ ，则 $k$ 可提到行列式外面，即 $\begin{vmatrix} a_{11} &amp; a_{12} &amp; \cdots &amp; a_{1n} \\ \vdots &amp; \vdots &amp;  &amp; \vdots \\ ka_{i1} &amp; ka_{i2} &amp; \cdots &amp; ka_{in} \\ \vdots &amp; \vdots &amp;  &amp; \vdots \\ a_{n1} &amp; a_{n2} &amp; \cdots &amp; a_{nn} \end{vmatrix} = k \begin{vmatrix} a_{11} &amp; a_{12} &amp; \cdots &amp; a_{1n} \\ \vdots &amp; \vdots &amp;  &amp; \vdots \\ a_{i1} &amp; a_{i2} &amp; \cdots &amp; a_{in} \\ \vdots &amp; \vdots &amp;  &amp; \vdots \\ a_{n1} &amp; a_{n2} &amp; \cdots &amp; a_{nn} \end{vmatrix}$ </li>
 </ul>
-</li>
-<li>单行（列）可拆（加）<ul>
-<li>行列式中某行（列）元素均是两个元素之和，则可拆成两个行列式之和，即 $ \begin{vmatrix} a_{11} &amp; a_{12} &amp; \cdots &amp; a_{1n} \\ \vdots &amp; \vdots &amp;  &amp; \vdots \\ a_{i1} + b_{i1} &amp; a_{i2} + b_{i2} &amp; \cdots &amp; a_{in} + b_{in} \\ \vdots &amp; \vdots &amp;  &amp; \vdots \\ a_{n1} &amp; a_{n2} &amp; \cdots &amp; a_{nn} \end{vmatrix} = \begin{vmatrix} a_{11} &amp; a_{12} &amp; \cdots &amp; a_{1n} \\ \vdots &amp; \vdots &amp;  &amp; \vdots \\ a_{i1} &amp; a_{i2} &amp; \cdots &amp; a_{in} \\ \vdots &amp; \vdots &amp;  &amp; \vdots \\ a_{n1} &amp; a_{n2} &amp; \cdots &amp; a_{nn} \end{vmatrix} + \begin{vmatrix} a_{11} &amp; a_{12} &amp; \cdots &amp; a_{1n} \\ \vdots &amp; \vdots &amp;  &amp; \vdots \\ b_{i1} &amp; b_{i2} &amp; \cdots &amp; b_{in} \\ \vdots &amp; \vdots &amp;  &amp; \vdots \\ a_{n1} &amp; a_{n2} &amp; \cdots &amp; a_{nn} \end{vmatrix} $ </li>
+<p><br></p>
+<h4 id="㊃、单行（列）可拆（加）"><a href="#㊃、单行（列）可拆（加）" class="headerlink" title="㊃、单行（列）可拆（加）"></a>㊃、单行（列）可拆（加）</h4><ul>
+<li>行列式中某行（列）元素均是两个元素之和，则可拆成两个行列式之和，即 $\begin{vmatrix} a_{11} &amp; a_{12} &amp; \cdots &amp; a_{1n} \\ \vdots &amp; \vdots &amp;  &amp; \vdots \\ a_{i1} + b_{i1} &amp; a_{i2} + b_{i2} &amp; \cdots &amp; a_{in} + b_{in} \\ \vdots &amp; \vdots &amp;  &amp; \vdots \\ a_{n1} &amp; a_{n2} &amp; \cdots &amp; a_{nn} \end{vmatrix} = \begin{vmatrix} a_{11} &amp; a_{12} &amp; \cdots &amp; a_{1n} \\ \vdots &amp; \vdots &amp;  &amp; \vdots \\ a_{i1} &amp; a_{i2} &amp; \cdots &amp; a_{in} \\ \vdots &amp; \vdots &amp;  &amp; \vdots \\ a_{n1} &amp; a_{n2} &amp; \cdots &amp; a_{nn} \end{vmatrix} + \begin{vmatrix} a_{11} &amp; a_{12} &amp; \cdots &amp; a_{1n} \\ \vdots &amp; \vdots &amp;  &amp; \vdots \\ b_{i1} &amp; b_{i2} &amp; \cdots &amp; b_{in} \\ \vdots &amp; \vdots &amp;  &amp; \vdots \\ a_{n1} &amp; a_{n2} &amp; \cdots &amp; a_{nn} \end{vmatrix}$ </li>
 <li>两个行列式可相加<ul>
 <li>只有对应的某一行（列）不同</li>
 </ul>
 </li>
 </ul>
-</li>
-<li>⭐️互换性质<ul>
+<p><br></p>
+<h4 id="㊄、⭐️互换性质"><a href="#㊄、⭐️互换性质" class="headerlink" title="㊄、⭐️互换性质"></a>㊄、⭐️互换性质</h4><ul>
 <li>行列式中两行（列）互换，行列式的值反号。</li>
 </ul>
-</li>
-<li>行列式中两行（列）元素相等或对应成比例，则行列式为零。</li>
-<li>⭐️⭐️⭐️倍加性质<ul>
-<li>行列式中某行（列）的 $ k $ 倍加到另一行（列），行列式的值不变。</li>
-<li>$ I = \begin{vmatrix} a_{11} &amp; a_{12} &amp; \cdots &amp; a_{1n} \\ \vdots &amp; \vdots &amp;  &amp; \vdots \\ a_{h1} &amp; a_{h2} &amp; \cdots &amp; a_{hn} \\ \vdots &amp; \vdots &amp;  &amp; \vdots \\ a_{i1} + ka_{h1} &amp; a_{i2} + ka_{h2} &amp; \cdots &amp; a_{in} + ka_{hn} \\ \vdots &amp; \vdots &amp;  &amp; \vdots \\ a_{n1} &amp; a_{n2} &amp; \cdots &amp; a_{nn} \end{vmatrix}  $ </li>
+<p><br></p>
+<h4 id="㊅、行列式中两行（列）元素相等或对应成比例，则行列式为零。"><a href="#㊅、行列式中两行（列）元素相等或对应成比例，则行列式为零。" class="headerlink" title="㊅、行列式中两行（列）元素相等或对应成比例，则行列式为零。"></a>㊅、行列式中两行（列）元素相等或对应成比例，则行列式为零。</h4><p><br></p>
+<h4 id="㊆、⭐️⭐️⭐️倍加性质"><a href="#㊆、⭐️⭐️⭐️倍加性质" class="headerlink" title="㊆、⭐️⭐️⭐️倍加性质"></a>㊆、⭐️⭐️⭐️倍加性质</h4><ul>
+<li>行列式中某行（列）的 $k$ 倍加到另一行（列），行列式的值不变。</li>
+<li>$I = \begin{vmatrix} a_{11} &amp; a_{12} &amp; \cdots &amp; a_{1n} \\ \vdots &amp; \vdots &amp;  &amp; \vdots \\ a_{h1} &amp; a_{h2} &amp; \cdots &amp; a_{hn} \\ \vdots &amp; \vdots &amp;  &amp; \vdots \\ a_{i1} + ka_{h1} &amp; a_{i2} + ka_{h2} &amp; \cdots &amp; a_{in} + ka_{hn} \\ \vdots &amp; \vdots &amp;  &amp; \vdots \\ a_{n1} &amp; a_{n2} &amp; \cdots &amp; a_{nn} \end{vmatrix}$ </li>
 <li>根据【性质 4】<ul>
-<li>$ I = \begin{vmatrix} a_{11} &amp; a_{12} &amp; \cdots &amp; a_{1n} \\ \vdots &amp; \vdots &amp;  &amp; \vdots \\ a_{h1} &amp; a_{h2} &amp; \cdots &amp; a_{hn} \\ \vdots &amp; \vdots &amp;  &amp; \vdots \\ a_{i1} &amp; a_{i2} &amp; \cdots &amp; a_{in} \\ \vdots &amp; \vdots &amp;  &amp; \vdots \\ a_{n1} &amp; a_{n2} &amp; \cdots &amp; a_{nn} \end{vmatrix} + \begin{vmatrix} a_{11} &amp; a_{12} &amp; \cdots &amp; a_{1n} \\ \vdots &amp; \vdots &amp;  &amp; \vdots \\ a_{h1} &amp; a_{h2} &amp; \cdots &amp; a_{hn} \\ \vdots &amp; \vdots &amp;  &amp; \vdots \\ ka_{h1} &amp; ka_{h2} &amp; \cdots &amp; ka_{hn} \\ \vdots &amp; \vdots &amp;  &amp; \vdots \\ a_{n1} &amp; a_{n2} &amp; \cdots &amp; a_{nn} \end{vmatrix} $ </li>
+<li>$I = \begin{vmatrix} a_{11} &amp; a_{12} &amp; \cdots &amp; a_{1n} \\ \vdots &amp; \vdots &amp;  &amp; \vdots \\ a_{h1} &amp; a_{h2} &amp; \cdots &amp; a_{hn} \\ \vdots &amp; \vdots &amp;  &amp; \vdots \\ a_{i1} &amp; a_{i2} &amp; \cdots &amp; a_{in} \\ \vdots &amp; \vdots &amp;  &amp; \vdots \\ a_{n1} &amp; a_{n2} &amp; \cdots &amp; a_{nn} \end{vmatrix} + \begin{vmatrix} a_{11} &amp; a_{12} &amp; \cdots &amp; a_{1n} \\ \vdots &amp; \vdots &amp;  &amp; \vdots \\ a_{h1} &amp; a_{h2} &amp; \cdots &amp; a_{hn} \\ \vdots &amp; \vdots &amp;  &amp; \vdots \\ ka_{h1} &amp; ka_{h2} &amp; \cdots &amp; ka_{hn} \\ \vdots &amp; \vdots &amp;  &amp; \vdots \\ a_{n1} &amp; a_{n2} &amp; \cdots &amp; a_{nn} \end{vmatrix}$ </li>
 </ul>
 </li>
 <li>根据【性质 6】<ul>
-<li>$ I = \begin{vmatrix} a_{11} &amp; a_{12} &amp; \cdots &amp; a_{1n} \\ \vdots &amp; \vdots &amp;  &amp; \vdots \\ a_{h1} &amp; a_{h2} &amp; \cdots &amp; a_{hn} \\ \vdots &amp; \vdots &amp;  &amp; \vdots \\ a_{i1} &amp; a_{i2} &amp; \cdots &amp; a_{in} \\ \vdots &amp; \vdots &amp;  &amp; \vdots \\ a_{n1} &amp; a_{n2} &amp; \cdots &amp; a_{nn} \end{vmatrix} $ </li>
+<li>$I = \begin{vmatrix} a_{11} &amp; a_{12} &amp; \cdots &amp; a_{1n} \\ \vdots &amp; \vdots &amp;  &amp; \vdots \\ a_{h1} &amp; a_{h2} &amp; \cdots &amp; a_{hn} \\ \vdots &amp; \vdots &amp;  &amp; \vdots \\ a_{i1} &amp; a_{i2} &amp; \cdots &amp; a_{in} \\ \vdots &amp; \vdots &amp;  &amp; \vdots \\ a_{n1} &amp; a_{n2} &amp; \cdots &amp; a_{nn} \end{vmatrix}$ </li>
 </ul>
 </li>
 </ul>
-</li>
-</ol>
 <p><br></p>
 <h2 id="三、行列式的展开定理"><a href="#三、行列式的展开定理" class="headerlink" title="三、行列式的展开定理"></a>三、行列式的展开定理</h2><p><br></p>
-<h4 id="㊀、余子式"><a href="#㊀、余子式" class="headerlink" title="㊀、余子式"></a>㊀、余子式</h4><p>在 $ n $ 阶行列式中，去掉元素 $ a_{ij} $ 所在的第 $ i $ 行，第  $ j $ 列元素，由剩下的元素按原来的位置与顺序组成的 $ (n - 1) $ 阶行列式称为元素 $ a_{ij} $ 的余子式，记为 $ M_{ij} $ ，即 </p>
+<h4 id="㊀、余子式"><a href="#㊀、余子式" class="headerlink" title="㊀、余子式"></a>㊀、余子式</h4><p>在 $n$ 阶行列式中，去掉元素 $a_{ij}$ 所在的第 $i$ 行，第 $j$ 列元素，由剩下的元素按原来的位置与顺序组成的 $(n - 1)$ 阶行列式称为元素 $a_{ij}$ 的余子式，记为 $M_{ij}$ ，即 </p>
 <script type="math/tex; mode=display">
 M_{ij} = 
 \begin{vmatrix} 
@@ -402,7 +400,7 @@ M_{ij} =
   \vdots & & \vdots & \vdots & & \vdots \\ 
   a_{n1} & \cdots & a_{n, j-1} & a_{n, j+1} & \cdots & a_{nn} 
 \end{vmatrix}</script><p><br></p>
-<h4 id="㊁、代数余子式"><a href="#㊁、代数余子式" class="headerlink" title="㊁、代数余子式"></a>㊁、代数余子式</h4><p>余子式 $ M_{ij} $ 乘 $ (-1)^{i + j} $ 后称为 $ a_{ij} $ 的代数余子式，记为 $ A_{ij} $ ，即 $ A_{ij} = (-1)^{i+j} M_{ij} $ 。</p>
+<h4 id="㊁、代数余子式"><a href="#㊁、代数余子式" class="headerlink" title="㊁、代数余子式"></a>㊁、代数余子式</h4><p>余子式 $M_{ij}$ 乘 $(-1)^{i + j}$ 后称为 $a_{ij}$ 的代数余子式，记为 $a_{ij}$ ，即 $A_{ij} = (-1)^{i+j} M_{ij}$ 。</p>
 <p><br></p>
 <h4 id="★-㊂、行列式按某一行（列）展开的展开公式"><a href="#★-㊂、行列式按某一行（列）展开的展开公式" class="headerlink" title="★ ㊂、行列式按某一行（列）展开的展开公式"></a>★ ㊂、行列式按某一行（列）展开的展开公式</h4><p>行列式的值等于行列式的某行（列）元素分别乘其相应的代数余子式后再求和，即</p>
 <script type="math/tex; mode=display">
@@ -410,162 +408,163 @@ M_{ij} =
 \begin{cases}
   a_{i1}A_{i1} + a_{i2}A_{i2} + \cdots + a_{in}A_{in} & = \sum\limits_{j = 1}^n a_{ij}A_{ij}, \quad (i = 1, 2, \cdots, n) \\\\
   a_{1j}A_{1j} + a_{2j}A_{2j} + \cdots + a_{nj}A_{nj} & = \sum\limits_{i = 1}^n a_{ij}A_{ij}, \quad (i = 1, 2, \cdots, n)
-\end{cases}</script><p>但行列式的某行（列）元素分别乘另一行（列）元素的代数余子式后再求和，结果为 $ 0 $ ，即</p>
+\end{cases}</script><p>但行列式的某行（列）元素分别乘另一行（列）元素的代数余子式后再求和，结果为 $0$ ，即</p>
 <script type="math/tex; mode=display">
 \begin{array}{l}
   a_{i1}A_{k1} + a_{i2}A_{k2} + \cdots + a_{in}A_{kn} = 0, \quad (i \not= k) \\\\
   a_{1j}A_{1k} + a_{2j}A_{2k} + \cdots + a_{nj}A_{nk} = 0, \quad (j \not= k)
 \end{array}</script><p><br></p>
 <h4 id="㊃、几个重要的行列式"><a href="#㊃、几个重要的行列式" class="headerlink" title="㊃、几个重要的行列式"></a>㊃、几个重要的行列式</h4><ol>
-<li><p>上（下）三角形行列式<br>【注】$ a_{ii} \to a_{nn} $ 称为<strong>主对角线</strong>（$ n \times n $ 阶行列式）</p>
+<li>上（下）三角形行列式<br>【注】$a_{ii} \to a_{nn}$ 称为<strong>主对角线</strong>（$n \times n$ 阶行列式）</li>
+</ol>
 <script type="math/tex; mode=display">
 \begin{vmatrix}
-a_{11} & 0 & \cdots & 0 \\
-a_{21} & a_{22} & \cdots & 0 \\
-\vdots & \vdots & & \vdots \\
-a_{n1} & a_{n2} & \cdots & a_{nn}
+  a_{11} & 0 & \cdots & 0 \\
+  a_{21} & a_{22} & \cdots & 0 \\
+  \vdots & \vdots & & \vdots \\
+  a_{n1} & a_{n2} & \cdots & a_{nn}
 \end{vmatrix} = 
 \begin{vmatrix}
-a_{11} & a_{12} & \cdots & a_{1n} \\
-0 & a_{22} & \cdots & a_{2n} \\
-\vdots & \vdots & & \vdots \\
-0 & 0 & \cdots & a_{nn}
+  a_{11} & a_{12} & \cdots & a_{1n} \\
+  0 & a_{22} & \cdots & a_{2n} \\
+  \vdots & \vdots & & \vdots \\
+  0 & 0 & \cdots & a_{nn}
 \end{vmatrix} = 
 \begin{vmatrix}
-a_{11} & 0 & \cdots & 0 \\
-0 & a_{22} & \cdots & 0 \\
-\vdots & \vdots & & \vdots \\
-0 & 0 & \cdots & a_{nn}
+  a_{11} & 0 & \cdots & 0 \\
+  0 & a_{22} & \cdots & 0 \\
+  \vdots & \vdots & & \vdots \\
+  0 & 0 & \cdots & a_{nn}
 \end{vmatrix} = 
-\prod\limits_{i = 1}^{n} a_{ii}</script></li>
-<li><p>副对角线行列式</p>
+\prod\limits_{i = 1}^{n} a_{ii}</script><ol>
+<li>副对角线行列式</li>
+</ol>
 <script type="math/tex; mode=display">
 \begin{vmatrix}
-a_{11} & a_{12} & \cdots & a_{1, n-1} & a_{1n} \\
-a_{21} & a_{22} & \cdots & a_{2, n-1} & 0 \\
-\vdots & \vdots & & \vdots & \vdots \\
-a_{n1} & 0 & \cdots & 0 & 0
+  a_{11} & a_{12} & \cdots & a_{1, n-1} & a_{1n} \\
+  a_{21} & a_{22} & \cdots & a_{2, n-1} & 0 \\
+  \vdots & \vdots & & \vdots & \vdots \\
+  a_{n1} & 0 & \cdots & 0 & 0
 \end{vmatrix} = 
 \begin{vmatrix}
-0 & \cdots & 0 & a_{1n} \\
-0 & \cdots & a_{2, n-1} & a_{2n} \\
-\vdots & & \vdots & \vdots \\
-a_{n1} & \cdots & a_{n, n-1} & a_{nn}
+  0 & \cdots & 0 & a_{1n} \\
+  0 & \cdots & a_{2, n-1} & a_{2n} \\
+  \vdots & & \vdots & \vdots \\
+  a_{n1} & \cdots & a_{n, n-1} & a_{nn}
 \end{vmatrix} = 
 \begin{vmatrix}
-0 & \cdots & 0 & a_{1n} \\
-0 & \cdots & a_{2, n-1} & 0 \\
-\vdots & & \vdots & \vdots \\
-a_{n1} & \cdots & 0 & 0 
+  0 & \cdots & 0 & a_{1n} \\
+  0 & \cdots & a_{2, n-1} & 0 \\
+  \vdots & & \vdots & \vdots \\
+  a_{n1} & \cdots & 0 & 0 
 \end{vmatrix}</script><script type="math/tex; mode=display">
-= (-1)^{ \frac{ n(n-1) }{2} }a_{1n}a_{2, n-1} \cdots a_{n1}</script></li>
-<li><p>两个特殊的拉普拉斯展开式</p>
+= (-1)^{ \frac{ n(n-1) }{2} }a_{1n}a_{2, n-1} \cdots a_{n1}</script><ol>
+<li>两个特殊的拉普拉斯展开式</li>
+</ol>
 <script type="math/tex; mode=display">
 \begin{vmatrix}
-A_{m \times m} & O \\
-O & B_{n \times n}
+  A_{m \times m} & O \\
+  O & B_{n \times n}
 \end{vmatrix} = 
 \begin{vmatrix}
-A & C \\
-O & B
+  A & C \\
+  O & B
 \end{vmatrix} = 
 \begin{vmatrix}
-A & O \\
-C & B
+  A & O \\
+  C & B
 \end{vmatrix} = 
 |A||B|</script><script type="math/tex; mode=display">
 \begin{vmatrix}
-O & A_{n \times n} \\
-B_{m \times m} & O
+  O & A_{n \times n} \\
+  B_{m \times m} & O
 \end{vmatrix} = 
 \begin{vmatrix}
-C & A \\
-B & O
+  C & A \\
+  B & O
 \end{vmatrix} = 
 \begin{vmatrix}
-O & A \\
-B & C
+  O & A \\
+  B & C
 \end{vmatrix} = 
-(-1)^{mn}|A||B|</script></li>
-<li><p>范德蒙德（范式）行列式</p>
+(-1)^{mn}|A||B|</script><ol>
+<li>范德蒙德（范式）行列式</li>
+</ol>
 <script type="math/tex; mode=display">
 \begin{vmatrix}
-1 & 1 & \cdots & 1 \\
-x_1 & x_2 & \cdots & x_n \\
-x_1^2 & x_2^2 & \cdots & x_n^2 \\
-\vdots & \vdots & & \vdots \\
-x_1^{n-1} & x_2^{n-1} & \cdots & x_n^{n-1}
+  1 & 1 & \cdots & 1 \\
+  x_1 & x_2 & \cdots & x_n \\
+  x_1^2 & x_2^2 & \cdots & x_n^2 \\
+  \vdots & \vdots & & \vdots \\
+  x_1^{n-1} & x_2^{n-1} & \cdots & x_n^{n-1}
 \end{vmatrix} = 
-\prod\limits_{1 \leq i < j \leq n} (x_j - x_i)</script><ul>
-<li>盯着第二行，用 $ \text{ 大列位置的元素 } - \text{ 小列位置的元素 } $ ，所有情况相乘。<script type="math/tex; mode=display">
+\prod\limits_{1 \leq i < j \leq n} (x_j - x_i)</script><p>盯着第二行，用 $\text{ 大列位置的元素 } - \text{ 小列位置的元素 }$ ，所有情况相乘。</p>
+<script type="math/tex; mode=display">
 \begin{vmatrix}
-1 & 1 & 1 \\
-a & b & c \\
-a^2 & b^2 & c^2
-\end{vmatrix} = (c-b)(c-a)(b-a)</script></li>
+  1 & 1 & 1 \\
+  a & b & c \\
+  a^2 & b^2 & c^2
+\end{vmatrix} = (c-b)(c-a)(b-a)</script><ul>
 <li>例题<ol>
-<li>$ I = \begin{vmatrix} a &amp; b &amp; c \\ b+c &amp; a+c &amp; a+b \\ a^2 &amp; b^2 &amp; c^2 \end{vmatrix} = $ ________ 。<ul>
-<li>$ \begin{array}{l} I &amp; = \begin{vmatrix} a &amp; b &amp; c \\ a+b+c &amp; a+b+c &amp; a+b+c \\ a^2 &amp; b^2 &amp; c^2 \end{vmatrix} \\\\ &amp; = (a+b+c) \cdot (-1) \cdot \begin{vmatrix} 1 &amp; 1 &amp; 1 \\ a &amp; b &amp; c \\ a^2 &amp; b^2 &amp; c^2 \end{vmatrix} \\\\ &amp; = -(a+b+c)(c-b)(c-a)(b-a) \end{array} $</li>
+<li>$I = \begin{vmatrix} a &amp; b &amp; c \\ b+c &amp; a+c &amp; a+b \\ a^2 &amp; b^2 &amp; c^2 \end{vmatrix} =$________ 。<ul>
+<li>$\begin{array}{l} I &amp; = \begin{vmatrix} a &amp; b &amp; c \\ a+b+c &amp; a+b+c &amp; a+b+c \\ a^2 &amp; b^2 &amp; c^2 \end{vmatrix} \\\\ &amp; = (a+b+c) \cdot (-1) \cdot \begin{vmatrix} 1 &amp; 1 &amp; 1 \\ a &amp; b &amp; c \\ a^2 &amp; b^2 &amp; c^2 \end{vmatrix} \\\\ &amp; = -(a+b+c)(c-b)(c-a)(b-a) \end{array}$</li>
 </ul>
 </li>
 </ol>
 </li>
 </ul>
-</li>
-<li><p>行和或列和相等的行列式<br>（行和是指每一行元素相加的和，列和同理）</p>
+<ol>
+<li>行和或列和相等的行列式<br>（行和是指每一行元素相加的和，列和同理）</li>
+</ol>
 <script type="math/tex; mode=display">
 I = 
 \begin{vmatrix}
-a & b & \cdots & b \\
-b & a & \cdots & b \\
-\vdots & \vdots & & \vdots \\
-b & b & \cdots & a
+  a & b & \cdots & b \\
+  b & a & \cdots & b \\
+  \vdots & \vdots & & \vdots \\
+  b & b & \cdots & a
 \end{vmatrix}_{n \times n} = 
 \left[ a + (n-1)b \right](a-b)^{n-1}</script><ul>
 <li>推导<ul>
-<li>将第 $ j(j=2, 3, \cdots, n) $ 列乘 $ 1 $ 加到第 $ 1 $ 列上<ul>
-<li>$ I = [a + (n-1)b] \begin{vmatrix} 1 &amp; b &amp; \cdots &amp; b \\ 1 &amp; a &amp; \cdots &amp; b \\ \vdots &amp; \vdots &amp; &amp; \vdots \\ 1 &amp; b &amp; \cdots &amp; a \end{vmatrix}_{n \times n} $ </li>
+<li>将第 $ j(j=2, 3, \cdots, n)$ 列乘 $1$ 加到第 $1$ 列上<ul>
+<li>$I = [a + (n-1)b] \begin{vmatrix} 1 &amp; b &amp; \cdots &amp; b \\ 1 &amp; a &amp; \cdots &amp; b \\ \vdots &amp; \vdots &amp; &amp; \vdots \\ 1 &amp; b &amp; \cdots &amp; a \end{vmatrix}_{n \times n}$ </li>
 </ul>
 </li>
-<li>将第 $ 1 $ 行乘 $ -1 $ 加到第 $ i(i=2, 3, \cdots, n) $ 行上<ul>
-<li>$ \begin{array}{l} I &amp; = [a + (n-1)b] \begin{vmatrix} 1 &amp; b &amp; b &amp; \cdots &amp; b \\ 0 &amp; a-b &amp; 0 &amp; \cdots &amp; 0 \\ 0 &amp; 0 &amp; a-b &amp; \cdots &amp; 0 \\ \vdots &amp; \vdots &amp; \vdots &amp; &amp; \vdots \\ 0 &amp; 0 &amp; 0 &amp; \cdots &amp; a-b \end{vmatrix}_{n \times n} \\\\ &amp; = [a + (n-1)b] \begin{vmatrix} a-b &amp; 0 &amp; \cdots &amp; 0 \\ 0 &amp; a-b &amp; \cdots &amp; 0 \\ \vdots &amp; \vdots &amp; &amp; \vdots \\ 0 &amp; 0 &amp; \cdots &amp; a-b \end{vmatrix}_{ (n-1) \times (n-1)} \end{array} $ </li>
+<li>将第 $1$ 行乘 $-1$ 加到第 $i(i=2, 3, \cdots, n)$ 行上<ul>
+<li>$\begin{array}{l} I &amp; = [a + (n-1)b] \begin{vmatrix} 1 &amp; b &amp; b &amp; \cdots &amp; b \\ 0 &amp; a-b &amp; 0 &amp; \cdots &amp; 0 \\ 0 &amp; 0 &amp; a-b &amp; \cdots &amp; 0 \\ \vdots &amp; \vdots &amp; \vdots &amp; &amp; \vdots \\ 0 &amp; 0 &amp; 0 &amp; \cdots &amp; a-b \end{vmatrix}_{n \times n} \\\\ &amp; = [a + (n-1)b] \begin{vmatrix} a-b &amp; 0 &amp; \cdots &amp; 0 \\ 0 &amp; a-b &amp; \cdots &amp; 0 \\ \vdots &amp; \vdots &amp; &amp; \vdots \\ 0 &amp; 0 &amp; \cdots &amp; a-b \end{vmatrix}_{ (n-1) \times (n-1)} \end{array}$ </li>
 </ul>
 </li>
-<li>$ I = <a href="a-b"> a + (n-1)b</a>^{n-1} $ </li>
+<li>$I = \left[ a + (n-1)b \right] (a-b)^{n-1}$ </li>
 </ul>
 </li>
 </ul>
-</li>
-</ol>
 <p><br></p>
 <h4 id="㊄、例题"><a href="#㊄、例题" class="headerlink" title="㊄、例题"></a>㊄、例题</h4><ol>
-<li><p>消 $ 0 $ 化三角形法</p>
-<ol>
-<li>设 $ n $ 阶矩阵 $ A = \begin{vmatrix} 0 &amp; 1 &amp; 1 &amp; \cdots &amp; 1 &amp; 1 \\ 1 &amp; 0 &amp; 1 &amp; \cdots &amp; 1 &amp; 1 \\ 1 &amp; 1 &amp; 0 &amp; \cdots &amp; 1 &amp; 1 \\ \vdots &amp; \vdots &amp; \vdots &amp; &amp; \vdots &amp; \vdots \\ 1 &amp; 1 &amp; 1 &amp; \cdots &amp; 0 &amp; 1 \\ 1 &amp; 1 &amp; 1 &amp; \cdots &amp; 1 &amp; 0 \end{vmatrix} $ ，则 $ |A| =  $ ________ 。<ul>
-<li>$ |A| = (-1)^{n-1} (n-1) $ </li>
+<li>消 $0$ 化三角形法<ol>
+<li>设 $n$ 阶矩阵 $A = \begin{vmatrix} 0 &amp; 1 &amp; 1 &amp; \cdots &amp; 1 &amp; 1 \\ 1 &amp; 0 &amp; 1 &amp; \cdots &amp; 1 &amp; 1 \\ 1 &amp; 1 &amp; 0 &amp; \cdots &amp; 1 &amp; 1 \\ \vdots &amp; \vdots &amp; \vdots &amp; &amp; \vdots &amp; \vdots \\ 1 &amp; 1 &amp; 1 &amp; \cdots &amp; 0 &amp; 1 \\ 1 &amp; 1 &amp; 1 &amp; \cdots &amp; 1 &amp; 0 \end{vmatrix}$ ，则 $|A| =$________ 。<ul>
+<li>$\mid A \mid = (-1)^{n-1} (n-1)$ </li>
 </ul>
 </li>
-<li>计算行列式 $ I = \begin{vmatrix} x+1 &amp; x &amp; x &amp; \cdots &amp; x \\ x &amp; x+\dfrac{1}{2} &amp; x &amp; \cdots &amp; x \\ x &amp; x &amp; x+\dfrac{1}{3} &amp; \cdots &amp; x \\ \vdots &amp; \vdots &amp; \vdots &amp; &amp; \vdots \\ x &amp; x &amp; x &amp; \cdots &amp; x+\dfrac{1}{n} \end{vmatrix} $ 。<ul>
-<li>第 $ 1 $ 行乘 $ -1 $ 加到第 $ i(i=2, 3, \cdots, n) $  行</li>
-<li>$ I = \begin{vmatrix} x+1 &amp; x &amp; x &amp; \cdots &amp; x \\ -1 &amp; \dfrac{1}{2} &amp; 0 &amp; \cdots &amp; 0 \\ -1 &amp; 0 &amp; \dfrac{1}{3} &amp; \cdots &amp; 0 \\ \vdots &amp; \vdots &amp; \vdots &amp; &amp; \vdots \\ -1 &amp; 0 &amp; 0 &amp; \cdots &amp; \dfrac{1}{n} \end{vmatrix} $ <ul>
-<li>将 $ \begin{vmatrix} \cdot &amp; \cdots &amp; \cdots \\ \vdots &amp; \ \ddots &amp; \\ \vdots &amp; &amp; \ddots \end{vmatrix} $，$ \begin{vmatrix} \cdots &amp; \cdots &amp; \cdot \\ &amp; \ \cdot &amp; \vdots \\ \cdot &amp; &amp; \vdots \end{vmatrix} $，$ \begin{vmatrix} \ddots &amp; &amp; \vdots \\ &amp; \ \ddots &amp; \vdots \\ \cdots &amp; \cdots &amp; \cdot \end{vmatrix} $，$ \begin{vmatrix} \vdots &amp; &amp; \cdot \\ \vdots &amp; \ \cdot &amp; \\ \cdot &amp; \cdots &amp; \cdots \end{vmatrix} $ 等称为【爪型】行列式<ul>
+<li>计算行列式 $I = \begin{vmatrix} x+1 &amp; x &amp; x &amp; \cdots &amp; x \\ x &amp; x+\dfrac{1}{2} &amp; x &amp; \cdots &amp; x \\ x &amp; x &amp; x+\dfrac{1}{3} &amp; \cdots &amp; x \\ \vdots &amp; \vdots &amp; \vdots &amp; &amp; \vdots \\ x &amp; x &amp; x &amp; \cdots &amp; x+\dfrac{1}{n} \end{vmatrix}$ 。<ul>
+<li>第 $1$ 行乘 $-1$ 加到第 $i(i=2, 3, \cdots, n)$  行<ul>
+<li>$I = \begin{vmatrix} x+1 &amp; x &amp; x &amp; \cdots &amp; x \\ -1 &amp; \dfrac{1}{2} &amp; 0 &amp; \cdots &amp; 0 \\ -1 &amp; 0 &amp; \dfrac{1}{3} &amp; \cdots &amp; 0 \\ \vdots &amp; \vdots &amp; \vdots &amp; &amp; \vdots \\ -1 &amp; 0 &amp; 0 &amp; \cdots &amp; \dfrac{1}{n} \end{vmatrix}$ </li>
+<li>将 $\begin{vmatrix} \cdot &amp; \cdots &amp; \cdots \\ \vdots &amp; \ \ddots &amp; \\ \vdots &amp; &amp; \ddots \end{vmatrix}$，$\begin{vmatrix} \cdots &amp; \cdots &amp; \cdot \\ &amp; \ \cdot &amp; \vdots \\ \cdot &amp; &amp; \vdots \end{vmatrix}$，$\begin{vmatrix} \ddots &amp; &amp; \vdots \\ &amp; \ \ddots &amp; \vdots \\ \cdots &amp; \cdots &amp; \cdot \end{vmatrix}$，$\begin{vmatrix} \vdots &amp; &amp; \cdot \\ \vdots &amp; \ \cdot &amp; \\ \cdot &amp; \cdots &amp; \cdots \end{vmatrix}$ 等称为【爪型】行列式<ul>
 <li>用<strong>斜爪</strong>消去<strong>平爪</strong>（水平/铅垂）</li>
 </ul>
 </li>
 </ul>
 </li>
-<li>将第 $ i(i=2, 3, \cdots, n) $ 列元素乘 $ i(i=2, 3, \cdots, n) $ 加到第 $ 1 $ 列<ul>
-<li>$ I = \begin{vmatrix} 1 + \dfrac{ n(n+1) }{2}x &amp; x &amp; x &amp; \cdots &amp; x \\ 0 &amp; \dfrac{1}{2} &amp; 0 &amp; \cdots &amp; 0 \\ 0 &amp; 0 &amp; \dfrac{1}{3} &amp; \cdots  &amp; 0 \\ \vdots &amp; \vdots &amp; \vdots &amp; &amp; \vdots \\ 0 &amp; 0 &amp; 0 &amp; \cdots &amp; \dfrac{1}{n} \end{vmatrix} = \left[ 1 + \dfrac{ n(n+1) }{2}x \right] \cdot \dfrac{1}{n!} $ </li>
+<li>将第 $I(i=2, 3, \cdots, n)$ 列元素乘 $I(i=2, 3, \cdots, n)$ 加到第 $1$ 列<ul>
+<li>$I = \begin{vmatrix} 1 + \dfrac{ n(n+1) }{2}x &amp; x &amp; x &amp; \cdots &amp; x \\ 0 &amp; \dfrac{1}{2} &amp; 0 &amp; \cdots &amp; 0 \\ 0 &amp; 0 &amp; \dfrac{1}{3} &amp; \cdots  &amp; 0 \\ \vdots &amp; \vdots &amp; \vdots &amp; &amp; \vdots \\ 0 &amp; 0 &amp; 0 &amp; \cdots &amp; \dfrac{1}{n} \end{vmatrix} = \left[ 1 + \dfrac{ n(n+1) }{2}x \right] \cdot \dfrac{1}{n!}$ </li>
 </ul>
 </li>
 </ul>
 </li>
 </ol>
 </li>
-<li><p>加边法</p>
-<ul>
-<li>$ |A| = \begin{vmatrix} 1 &amp; \ast &amp; \ast &amp; \ast \\ 0 &amp; \\ \vdots &amp; \\ 0 &amp; \end{vmatrix}_{ (n+1) \times (n+1) } $ <ul>
-<li>其中 $ \ast \quad \ast \quad \ast $ 为增加的<strong>边</strong><ul>
+<li>加边法<ul>
+<li>$|A| = \begin{vmatrix} 1 &amp; \ast &amp; \ast &amp; \ast \\ 0 &amp; \\ \vdots &amp; \\ 0 &amp; \end{vmatrix}_{ (n+1) \times (n+1) }$ <ul>
+<li>其中 $\ast \quad \ast \quad \ast$ 为增加的<strong>边</strong><ul>
 <li>一般选择公共元素</li>
 </ul>
 </li>
@@ -573,41 +572,39 @@ b & b & \cdots & a
 </li>
 </ul>
 <ol>
-<li>计算 $ n $ 阶行列式：$ D_n = \begin{vmatrix} 1+x_1^2 &amp; x_1 x_2 &amp; \cdots &amp; x_1 x_n \\ x_2 x_1 &amp; 1+x_2^2 &amp; \cdots &amp; x_2 x_n \\ \vdots &amp; \vdots &amp; &amp; \vdots \\ x_n x_1 &amp; x_n x_2 &amp; \cdots &amp; 1+x_n^2 \end{vmatrix} $ 。<ul>
-<li>$ D_n = \begin{vmatrix} 1 &amp; x_1 &amp; x_2 &amp; \cdots &amp; x_n \\ 0 &amp; 1+x_1^2 &amp; x_1 x_2 &amp; \cdots &amp; x_1 x_n \\ 0 &amp; x_2 x_1 &amp; 1+x_2^2 &amp; \cdots &amp; x_2 x_n \\ \vdots &amp; \vdots &amp; \vdots &amp; &amp; \vdots \\ 0 &amp; x_n x_1 &amp; x_n x_2 &amp; \cdots &amp; 1+x_n^2 \end{vmatrix} $</li>
-<li>第 $ 1 $ 行乘 $ -x_i(i=1, 2, \cdots, n) $ 加到第 $ i(i=1, 2, \cdots, n) $ 行 <ul>
-<li>$ D_n = \begin{vmatrix} 1 &amp; x_1 &amp; x_2 &amp; \cdots &amp; x_n \\ -x_1 &amp; 1 &amp; 0 &amp; \cdots &amp; 0 \\ -x_2 &amp; 0 &amp; 1 &amp; \cdots &amp; 0 \\ \vdots &amp; \vdots &amp; \vdots &amp; &amp; \vdots \\ -x_n &amp; 0 &amp; 0 &amp; \cdots &amp; 1 \end{vmatrix} $ </li>
+<li>计算 $n$ 阶行列式：$D_n = \begin{vmatrix} 1+x_1^2 &amp; x_1 x_2 &amp; \cdots &amp; x_1 x_n \\ x_2 x_1 &amp; 1+x_2^2 &amp; \cdots &amp; x_2 x_n \\ \vdots &amp; \vdots &amp; &amp; \vdots \\ x_n x_1 &amp; x_n x_2 &amp; \cdots &amp; 1+x_n^2 \end{vmatrix}$ 。<ul>
+<li>$D_n = \begin{vmatrix} 1 &amp; x_1 &amp; x_2 &amp; \cdots &amp; x_n \\ 0 &amp; 1+x_1^2 &amp; x_1 x_2 &amp; \cdots &amp; x_1 x_n \\ 0 &amp; x_2 x_1 &amp; 1+x_2^2 &amp; \cdots &amp; x_2 x_n \\ \vdots &amp; \vdots &amp; \vdots &amp; &amp; \vdots \\ 0 &amp; x_n x_1 &amp; x_n x_2 &amp; \cdots &amp; 1+x_n^2 \end{vmatrix}$</li>
+<li>第 $1$ 行乘 $-x_i(i=1, 2, \cdots, n)$ 加到第 $I(i=1, 2, \cdots, n)$ 行 <ul>
+<li>$D_n = \begin{vmatrix} 1 &amp; x_1 &amp; x_2 &amp; \cdots &amp; x_n \\ -x_1 &amp; 1 &amp; 0 &amp; \cdots &amp; 0 \\ -x_2 &amp; 0 &amp; 1 &amp; \cdots &amp; 0 \\ \vdots &amp; \vdots &amp; \vdots &amp; &amp; \vdots \\ -x_n &amp; 0 &amp; 0 &amp; \cdots &amp; 1 \end{vmatrix}$ </li>
 </ul>
 </li>
-<li>第 $ i(i=2, 3, \cdots, n) $ 列乘 $ x_i(i=2, 3, \cdots, n) $ 加到第 $ 1 $ 列<ul>
-<li>$ D_n = \begin{vmatrix} 1 + \sum\limits_{i=1}^n x_i^2 &amp; x_1 &amp; x_2 &amp; \cdots &amp; x_n \\ 0 &amp; 1 &amp; 0 &amp; \cdots &amp; 0 \\ 0 &amp; 0 &amp; 1 &amp; \cdots &amp; 0 \\ \vdots &amp; \vdots &amp; \vdots &amp; &amp; \vdots \\ 0 &amp; 0 &amp; 0 &amp; \cdots &amp; 1 \end{vmatrix} = 1 + \sum\limits_{i=1}^n x_i^2 $ </li>
+<li>第 $I(i=2, 3, \cdots, n)$ 列乘 $ x_i(i=2, 3, \cdots, n)$ 加到第 $1$ 列<ul>
+<li>$D_n = \begin{vmatrix} 1 + \sum\limits_{i=1}^n x_i^2 &amp; x_1 &amp; x_2 &amp; \cdots &amp; x_n \\ 0 &amp; 1 &amp; 0 &amp; \cdots &amp; 0 \\ 0 &amp; 0 &amp; 1 &amp; \cdots &amp; 0 \\ \vdots &amp; \vdots &amp; \vdots &amp; &amp; \vdots \\ 0 &amp; 0 &amp; 0 &amp; \cdots &amp; 1 \end{vmatrix} = 1 + \sum\limits_{i=1}^n x_i^2 $ </li>
 </ul>
 </li>
 </ul>
 </li>
 </ol>
 </li>
-<li><p>递推法</p>
-<ul>
+<li>递推法<ul>
 <li>宽边行列式</li>
 </ul>
 <ol>
-<li>计算 $ D_5 = \begin{vmatrix} 1-x &amp; x &amp; 0 &amp; 0 &amp; 0 \\ -1 &amp; 1-x &amp; x &amp; 0 &amp; 0 \\ 0 &amp; -1 &amp; 1-x &amp; x &amp; 0 \\ 0 &amp; 0 &amp; -1 &amp; 1-x &amp; x \\ 0 &amp; 0 &amp; 0 &amp; -1 &amp; 1-x \end{vmatrix} $ 。<ul>
-<li>$ \begin{array}{l} D_5 &amp; = (1 - x) \cdot (-1)^{1+1} \cdot D_4 + x \cdot (-1)^{1+2} \cdot \begin{vmatrix} -1 &amp; x &amp; 0 &amp; 0 \\ 0 &amp; 1-x &amp; x &amp; 0 \\ 0 &amp; -1 &amp; 1-x &amp; x \\ 0 &amp; 0 &amp; -1 &amp; 1-x \end{vmatrix} \\\\ &amp; = (1-x)D_4 + (-x) \cdot (-1) \cdot (-1)^{1+1} \cdot D_3 \\\\ &amp; = (1-x)D_4 + xD_3 \\\\ &amp; = D_4 - xD_4 + xD_3 \end{array} $ </li>
-<li>$ \begin{array}{l} \implies D_5 - D_4 = -x (D_4 - D_3) = (-x)^2 (D_3 - D_2) = (-x)^3 (D_2 - D_1) \end{array} $<ul>
-<li>$ D_1 = 1-x $，$ D_2 = \begin{vmatrix} 1-x &amp; x \\ -1 &amp; 1-x \end{vmatrix} = 1 - x + x^2 $ </li>
-<li>$ \begin{cases} D_5 - D_4 = -x^5 \\D_4 - D_3 = x^4 \\ D_3 - D_2 = -x^3 \end{cases} \implies D_5 = 1 - x + x^2 - x^3 + x^4 - x^5 $ </li>
+<li>计算 $D_5 = \begin{vmatrix} 1-x &amp; x &amp; 0 &amp; 0 &amp; 0 \\ -1 &amp; 1-x &amp; x &amp; 0 &amp; 0 \\ 0 &amp; -1 &amp; 1-x &amp; x &amp; 0 \\ 0 &amp; 0 &amp; -1 &amp; 1-x &amp; x \\ 0 &amp; 0 &amp; 0 &amp; -1 &amp; 1-x \end{vmatrix}$ 。<ul>
+<li>$\begin{array}{l} D_5 &amp; = (1 - x) \cdot (-1)^{1+1} \cdot D_4 + x \cdot (-1)^{1+2} \cdot \begin{vmatrix} -1 &amp; x &amp; 0 &amp; 0 \\ 0 &amp; 1-x &amp; x &amp; 0 \\ 0 &amp; -1 &amp; 1-x &amp; x \\ 0 &amp; 0 &amp; -1 &amp; 1-x \end{vmatrix} \\\\ &amp; = (1-x)D_4 + (-x) \cdot (-1) \cdot (-1)^{1+1} \cdot D_3 \\\\ &amp; = (1-x)D_4 + xD_3 \\\\ &amp; = D_4 - xD_4 + xD_3 \end{array}$ </li>
+<li>$\begin{array}{l} \implies D_5 - D_4 = -x (D_4 - D_3) = (-x)^2 (D_3 - D_2) = (-x)^3 (D_2 - D_1) \end{array}$<ul>
+<li>$D_1 = 1-x$，$D_2 = \begin{vmatrix} 1-x &amp; x \\ -1 &amp; 1-x \end{vmatrix} = 1 - x + x^2$ </li>
+<li>$\begin{cases} D_5 - D_4 = -x^5 \\ D_4 - D_3 = x^4 \\ D_3 - D_2 = -x^3 \end{cases} \implies D_5 = 1 - x + x^2 - x^3 + x^4 - x^5$ </li>
 </ul>
 </li>
 </ul>
 </li>
 </ol>
 </li>
-<li><p>范式行列式</p>
-<ol>
-<li>计算 $ D_{n+1} = \begin{vmatrix}  a_1^n &amp; a_1^{n-1}b_1 &amp; a_1^{n-2}b_1^2 &amp; \cdots &amp; a_1b_1^{n-1} &amp; b_1^n \\ a_2^n &amp; a_2^{n-1}b_2 &amp; a_2^{n-2}b_2^2 &amp; \cdots &amp; a_2b_2^{n-1} &amp; b_2^n \\ \vdots &amp; \vdots &amp; \vdots &amp; &amp; \vdots &amp; \vdots \\ a_{n+1}^n &amp; a_{n+1}^{n-1}b_{n+1} &amp; a_{n+1}^{n-2}b_{n+1}^2 &amp; \cdots &amp; a_{n+1}b_{n+1}^{n-1} &amp; b_{n+1}^n \end{vmatrix}, \quad (a_1, a_2, \cdots, a_n \not= 0) $ 。<ul>
-<li>$ D_{n+1} = \prod\limits_{i=1}^{n+1} a_i^n \cdot \begin{vmatrix}  1 &amp; \dfrac{b_1}{a_1} &amp; \left( \dfrac{b_1}{a_1} \right)^2 &amp; \cdots &amp; \left( \dfrac{b_1}{a_1} \right)^n \\ 1 &amp; \dfrac{b_2}{a_2} &amp; \left( \dfrac{b_2}{a_2} \right)^2 &amp; \cdots &amp; \left( \dfrac{b_2}{a_2} \right)^n \\ \vdots &amp; \vdots &amp; \vdots &amp; &amp; \vdots \\ 1 &amp; \dfrac{ b_{n+1} }{ a_{n+1} } &amp; \left( \dfrac{ b_{n+1} }{ a_{n+1} } \right)^2 &amp; \cdots &amp; \left( \dfrac{ b_{n+1} }{ a_{n+1} } \right)^n \end{vmatrix} $ </li>
-<li>$ D_{n+1} = \prod\limits_{i=1}^{n+1} a_i^n \cdot \prod\limits_{ 1 \leq i &lt; j \leq (n+1) } \left( \dfrac{b_j}{a_j} - \dfrac{b_i}{a_i} \right) $ </li>
+<li>范式行列式<ol>
+<li>计算 $D_{n+1} = \begin{vmatrix}  a_1^n &amp; a_1^{n-1}b_1 &amp; a_1^{n-2}b_1^2 &amp; \cdots &amp; a_1b_1^{n-1} &amp; b_1^n \\ a_2^n &amp; a_2^{n-1}b_2 &amp; a_2^{n-2}b_2^2 &amp; \cdots &amp; a_2b_2^{n-1} &amp; b_2^n \\ \vdots &amp; \vdots &amp; \vdots &amp; &amp; \vdots &amp; \vdots \\ a_{n+1}^n &amp; a_{n+1}^{n-1}b_{n+1} &amp; a_{n+1}^{n-2}b_{n+1}^2 &amp; \cdots &amp; a_{n+1}b_{n+1}^{n-1} &amp; b_{n+1}^n \end{vmatrix}, \quad (a_1, a_2, \cdots, a_n \not= 0)$ <ul>
+<li>$D_{n+1} = \prod\limits_{i=1}^{n+1} a_i^n \cdot \begin{vmatrix}  1 &amp; \dfrac{b_1}{a_1} &amp; \left( \dfrac{b_1}{a_1} \right)^2 &amp; \cdots &amp; \left( \dfrac{b_1}{a_1} \right)^n \\ 1 &amp; \dfrac{b_2}{a_2} &amp; \left( \dfrac{b_2}{a_2} \right)^2 &amp; \cdots &amp; \left( \dfrac{b_2}{a_2} \right)^n \\ \vdots &amp; \vdots &amp; \vdots &amp; &amp; \vdots \\ 1 &amp; \dfrac{ b_{n+1} }{ a_{n+1} } &amp; \left( \dfrac{ b_{n+1} }{ a_{n+1} } \right)^2 &amp; \cdots &amp; \left( \dfrac{ b_{n+1} }{ a_{n+1} } \right)^n \end{vmatrix}$ </li>
+<li>$D_{n+1} = \prod\limits_{i=1}^{n+1} a_i^n \cdot \prod\limits_{ 1 \leq i &lt; j \leq (n+1) } \left( \dfrac{b_j}{a_j} - \dfrac{b_i}{a_i} \right)$ </li>
 </ul>
 </li>
 </ol>
@@ -623,52 +620,43 @@ b & b & \cdots & a
 </ol>
 <p><br></p>
 <h2 id="五、行列式的综合计算与应用"><a href="#五、行列式的综合计算与应用" class="headerlink" title="五、行列式的综合计算与应用"></a>五、行列式的综合计算与应用</h2><p><br></p>
-<h4 id="㊀、克拉默法则"><a href="#㊀、克拉默法则" class="headerlink" title="㊀、克拉默法则"></a>㊀、克拉默法则</h4><ol>
-<li><p>克拉默法则</p>
-<p> 若 $ n $ 个方程 $ n $ 个未知量构成的非齐次线性方程组 </p>
+<h4 id="㊀、克拉默法则"><a href="#㊀、克拉默法则" class="headerlink" title="㊀、克拉默法则"></a>㊀、克拉默法则</h4><h6 id="1、克拉默法则"><a href="#1、克拉默法则" class="headerlink" title="1、克拉默法则"></a>1、克拉默法则</h6><p>若 $n$ 个方程 $n$ 个未知量构成的非齐次线性方程组 </p>
 <script type="math/tex; mode=display">
 \begin{cases} 
-a_{11}x_1 + a_{12}x_2 + \cdots + a_{1n}x_n = b_1 \\\\ 
-a_{21}x_1 + a_{22}x_2 + \cdots + a_{2n}x_n = b_2 \\\\ 
-\quad \cdots \cdots \\\\ 
-a_{n1}x_1 + a_{n2}x_2 + \cdots + a_{nn}x_n = b_n 
-\end{cases}</script><p>的系数行列式 $ |A| \not= 0 $ ，则方程组有唯一解，且 </p>
+  a_{11}x_1 + a_{12}x_2 + \cdots + a_{1n}x_n = b_1 \\\\ 
+  a_{21}x_1 + a_{22}x_2 + \cdots + a_{2n}x_n = b_2 \\\\ 
+  \quad \cdots \cdots \\\\ 
+  a_{n1}x_1 + a_{n2}x_2 + \cdots + a_{nn}x_n = b_n 
+\end{cases}</script><p>的系数行列式 $|A| \not= 0$ ，则方程组有唯一解，且 </p>
 <script type="math/tex; mode=display">
-x_i = \dfrac{ |A_i| }{ |A| }, i = 1, 2, \cdots, n,</script><p>其中 $ |A_i| $ 是 $ |A| $ 中第 $ i $ 列元素（即 $ x_i $ 的系数）替换为方程组右端的常数项 $ b_1, b_2, \cdots, b_n $ 后所构成的行列式。</p>
-</li>
-<li><p>推论</p>
-<p> 若包含 $ n $ 个方程 $ n $ 个未知量的齐次线性方程组</p>
-<script type="math/tex; mode=display">
-\begin{cases} 
-a_{11}x_1 + a_{12}x_2 + \cdots + a_{1n}x_n = 0 \\\\ 
-a_{21}x_1 + a_{22}x_2 + \cdots + a_{2n}x_n = 0 \\\\ 
-\quad \cdots \cdots \\\\ 
-a_{n1}x_1 + a_{n2}x_2 + \cdots + a_{nn}x_n = 0 
-\end{cases}</script><p>的系数行列式 $ |A| \not= 0 $ ，则方程组有唯一零解。<br>​    反之，若齐次线性方程组有非零解，则其系数行列式 $ |A| = 0 $ 。        </p>
-</li>
-</ol>
+x_i = \dfrac{ |A_i| }{ |A| }, i = 1, 2, \cdots, n,</script><p>其中 $|A_i|$ 是 $|A|$ 中第 $i$ 列元素（即 $x_i$ 的系数）替换为方程组右端的常数项 $b_1, b_2, \cdots, b_n$ 后所构成的行列式。</p>
 <p><br></p>
-<h4 id="2、证明-A-0"><a href="#2、证明-A-0" class="headerlink" title="2、证明 $ |A| = 0 $"></a>2、证明 $ |A| = 0 $</h4><ol>
-<li>直接计算行列式</li>
-<li>构造相应的齐次线性方程组，证明其有非零解<ul>
+<h6 id="2、推论"><a href="#2、推论" class="headerlink" title="2、推论"></a>2、推论</h6><p>若包含 $n$ 个方程 $n$ 个未知量的齐次线性方程组</p>
+<script type="math/tex; mode=display">
+\begin{cases} 
+  a_{11}x_1 + a_{12}x_2 + \cdots + a_{1n}x_n = 0 \\\\ 
+  a_{21}x_1 + a_{22}x_2 + \cdots + a_{2n}x_n = 0 \\\\ 
+  \quad \cdots \cdots \\\\ 
+  a_{n1}x_1 + a_{n2}x_2 + \cdots + a_{nn}x_n = 0 
+\end{cases}</script><p>的系数行列式 $|A| \not= 0$ ，则方程组有唯一零解。<br>​反之，若齐次线性方程组有非零解，则其系数行列式 $|A| = 0$ 。        </p>
+<p><br></p>
+<h4 id="2、证明-A-0"><a href="#2、证明-A-0" class="headerlink" title="2、证明 $|A| = 0$"></a>2、证明 $|A| = 0$</h4><h6 id="1、直接计算行列式"><a href="#1、直接计算行列式" class="headerlink" title="1、直接计算行列式"></a>1、直接计算行列式</h6><h6 id="2、构造相应的齐次线性方程组，证明其有非零解"><a href="#2、构造相应的齐次线性方程组，证明其有非零解" class="headerlink" title="2、构造相应的齐次线性方程组，证明其有非零解"></a>2、构造相应的齐次线性方程组，证明其有非零解</h6><ul>
 <li>例题<ol>
-<li>设 $ \xi = \begin{bmatrix} a_1, a_2, \cdots, a_n \end{bmatrix}^{\rm T}, \; \xi^{\rm T}\xi = \sum\limits_{i=1}^na_i^2 = 1 $ ，证明 $ | E - \xi \xi^{\rm T} | = 0 $ 。<ul>
-<li>构造齐次线性方程组 $ ( E - \xi\xi^{\rm T} ) = 0 \qquad (\ast) $ 。</li>
-<li>因为 $ ( E - \xi\xi^{\rm T} )\xi = \xi - \xi\xi^{\rm T}\xi = \xi - \xi(\xi^{\rm T}\xi) = 0 $ ，其中 $ \xi \not= 0 $ 。</li>
-<li>故方程 $ (\ast) $ 有非零解，得证。</li>
+<li>设 $\xi = \begin{bmatrix} a_1, a_2, \cdots, a_n \end{bmatrix}^{\rm T}, \; \xi^{\rm T}\xi = \sum\limits_{i=1}^na_i^2 = 1$ ，证明 $\mid E - \xi \xi^{\rm T} \mid = 0$ 。<ul>
+<li>构造齐次线性方程组 $( E - \xi\xi^{\rm T} ) = 0 \qquad (\ast)$ 。</li>
+<li>因为 $( E - \xi\xi^{\rm T} )\xi = \xi - \xi\xi^{\rm T}\xi = \xi - \xi(\xi^{\rm T}\xi) = 0$ ，其中 $\xi \not= 0$ 。</li>
+<li>故方程 $(\ast)$ 有非零解，得证。</li>
 </ul>
 </li>
-<li>设 A 是 n 阶矩阵，满足 $ A^2 = A $ ，且 $ A \not= E $ ，证明 $ |A| = 0 $ 。<ul>
-<li>$ A^2 = A \implies A(A-E) = O $ </li>
-<li>因为 $ A \not= E $ ，所以 $ A-E \not= O $ 。</li>
-<li>将 $ A-E $ 按列分块，设 $ A-E = \begin{bmatrix} \xi_1, \xi_2, \cdots, \xi_n \end{bmatrix} $ ，则 $ A-E $ 的每一列 $ \xi_i(i=1, 2, \cdots, n) $ 均是方程组 $ Ax = 0 $ 的解向量，由于 $ A-E \not= O $ ，所以 $ A-E $ 中至少有一列 $ \xi_i $ 不为零向量，故 $ Ax = 0 $ 存在非零解，从而得证 $ |A|=0 $ 。</li>
-</ul>
-</li>
-</ol>
-</li>
+<li>设 A 是 n 阶矩阵，满足 $A^2 = A$ ，且 $A \not= E$ ，证明 $|A| = 0$ 。<ul>
+<li>$A^2 = A \implies A(A-E) = O$ </li>
+<li>因为 $A \not= E$ ，所以 $A-E \not= O$ 。</li>
+<li>将 $A-E$ 按列分块，设 $A-E = \begin{bmatrix} \xi_1, \xi_2, \cdots, \xi_n \end{bmatrix}$ ，则 $A-E$ 的每一列 $\xi_i(i=1, 2, \cdots, n)$ 均是方程组 $Ax = 0$ 的解向量，由于 $A-E \not= O $ ，所以 $A-E$ 中至少有一列 $\xi_i $ 不为零向量，故 $Ax = 0$ 存在非零解，从而得证 $|A|=0$ 。</li>
 </ul>
 </li>
 </ol>
+</li>
+</ul>
 
                 </div>
             </div>
