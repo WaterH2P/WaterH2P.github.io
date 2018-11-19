@@ -337,133 +337,140 @@
             </div>
             <div class="row justify-content-center">
                 <div class="col-lg-8 col-md-10 col-sm-12">
-                    <h2 id="一、概念"><a href="#一、概念" class="headerlink" title="一、概念"></a>一、概念</h2><p><br></p>
-<h4 id="1、矩阵的定义"><a href="#1、矩阵的定义" class="headerlink" title="1、矩阵的定义"></a>1、矩阵的定义</h4><ul>
-<li>由 $ m \times n $ 个数，排成 $ m $ 行 $ n $ 列的矩形表格 <script type="math/tex; mode=display">
+                    <h2 id="一、矩阵的定义"><a href="#一、矩阵的定义" class="headerlink" title="一、矩阵的定义"></a>一、矩阵的定义</h2><ul>
+<li>由 $m \times n​$ 个数，排成 $m​$ 行 $n​$ 列的矩形表格</li>
+</ul>
+<script type="math/tex; mode=display">
 \begin{bmatrix} 
-a_{11} & a_{12} & \cdots & a_{1n} \\ 
-a_{21} & a_{22} & \cdots & a_{2n} \\ 
-\vdots & \vdots & & \vdots \\ 
-a_{m1} & a_{m2} & \cdots & a_{mn} 
+  a_{11} & a_{12} & \cdots & a_{1n} \\ 
+  a_{21} & a_{22} & \cdots & a_{2n} \\ 
+  \vdots & \vdots & & \vdots \\ 
+  a_{m1} & a_{m2} & \cdots & a_{mn} 
 \end{bmatrix} 
 \text{ 或 } 
 \begin{pmatrix} 
-a_{11} & a_{12} & \cdots & a_{1n} \\ 
-a_{21} & a_{22} & \cdots & a_{2n} \\ 
-\vdots & \vdots & & \vdots \\ 
-a_{m1} & a_{m2} & \cdots & a_{mn} 
-\end{pmatrix}</script>称为一个 $ m \times n $ 矩阵，简记为 $ A $ 或 $ ( a_{ij} )_{m \times n} (i=1, 2, \cdots, m; j=1, 2, \cdots, n) $ ，当 $ m = n $ 时，称为 $ n $ 阶方阵（矩阵）。</li>
-<li>两个矩阵 $ A = ( a_{ij} )_{m \times n}, B = ( b_{ij} )_{s \times k} $ ，若 $ m = s, n = k $ ，则称 $ A $ 与 $ B $ 为同型矩阵。</li>
+  a_{11} & a_{12} & \cdots & a_{1n} \\ 
+  a_{21} & a_{22} & \cdots & a_{2n} \\ 
+  \vdots & \vdots & & \vdots \\ 
+  a_{m1} & a_{m2} & \cdots & a_{mn} 
+\end{pmatrix}</script><p>称为一个 $m \times n$ 矩阵，简记为 $A$ 或 $( a_{ij} )_{m \times n} (i=1, 2, \cdots, m; \, j=1, 2, \cdots, n)$ ，当 $m = n$ 时，称为 $n$ 阶方阵（矩阵）。</p>
+<ul>
+<li>两个矩阵 $A = ( a_{ij} )_{m \times n}, \, B = ( b_{ij} )_{s \times k}$ ，若 $m = s, n = k$ ，则称 $A$ 与 $B$ 为同型矩阵。</li>
 </ul>
 <p><br></p>
-<h4 id="2、矩阵的基本运算"><a href="#2、矩阵的基本运算" class="headerlink" title="2、矩阵的基本运算"></a>2、矩阵的基本运算</h4><ol>
-<li>相等<ul>
-<li>$ A, B $ 是同型矩阵，且对应元素相等。</li>
+<h2 id="二、矩阵的基本运算"><a href="#二、矩阵的基本运算" class="headerlink" title="二、矩阵的基本运算"></a>二、矩阵的基本运算</h2><p><br></p>
+<h4 id="1、相等"><a href="#1、相等" class="headerlink" title="1、相等"></a>1、相等</h4><ul>
+<li>$A, B$ 是同型矩阵，且对应元素相等。</li>
 </ul>
-</li>
-<li>加法<ul>
-<li>两个矩阵是同型矩阵时，可以相加，即 $ C = A + B = ( a_{ij} )_{m \times n} + ( b_{ij} )_{m \times n} = ( c_{ij} )_{m \times n} $ ，其中 $ c_{ij} = a_{ij} + b_{ij} (i=1, 2, \cdots, m; j=1, 2, \cdots, n) $ ，即对应元素相加。</li>
+<p><br></p>
+<h4 id="2、加法"><a href="#2、加法" class="headerlink" title="2、加法"></a>2、加法</h4><ul>
+<li>两个矩阵是同型矩阵时，可以相加，即 $c = A + B = ( a_{ij} )_{m \times n} + ( b_{ij} )_{m \times n} = ( c_{ij} )_{m \times n}$ ，其中 $c_{ij} = a_{ij} + b_{ij} (i=1, 2, \cdots, m; \, j=1, 2, \cdots, n)​$ ，即对应元素相加。</li>
 </ul>
-</li>
-<li>数乘矩阵<ul>
-<li>设 $ k $ 是一个数，$ A $ 是一个 $ m \times n $ 矩阵，数 $ k $ 和 $ A $ 的乘积称为数乘矩阵，即 $ kA = Ak = k \begin{bmatrix}  a_{11} &amp; a_{12} &amp; \cdots &amp; a_{1n} \\  a_{21} &amp; a_{22} &amp; \cdots &amp; a_{2n} \\  \vdots &amp; \vdots &amp; &amp; \vdots \\  a_{m1} &amp; a_{m2} &amp; \cdots &amp; a_{mn} \end{bmatrix} = \begin{bmatrix}  ka_{11} &amp; ka_{12} &amp; \cdots &amp; ka_{1n} \\  ka_{21} &amp; ka_{22} &amp; \cdots &amp; ka_{2n} \\  \vdots &amp; \vdots &amp; &amp; \vdots \\  ka_{m1} &amp; ka_{m2} &amp; \cdots &amp; ka_{mn} \end{bmatrix} $ ，即 $ A $ 的每个元素都乘以 $ k $ 。</li>
-<li>$ | kA_{n \times n} | = k^n |A| $ </li>
+<p><br></p>
+<h4 id="3、数乘矩阵"><a href="#3、数乘矩阵" class="headerlink" title="3、数乘矩阵"></a>3、数乘矩阵</h4><ul>
+<li>设 $k$ 是一个数，$A$ 是一个 $m \times n$ 矩阵，数 $k$ 和 $A$ 的乘积称为数乘矩阵，即 $kA = Ak = k \begin{bmatrix}  a_{11} &amp; a_{12} &amp; \cdots &amp; a_{1n} \\  a_{21} &amp; a_{22} &amp; \cdots &amp; a_{2n} \\  \vdots &amp; \vdots &amp; &amp; \vdots \\  a_{m1} &amp; a_{m2} &amp; \cdots &amp; a_{mn} \end{bmatrix} = \begin{bmatrix}  ka_{11} &amp; ka_{12} &amp; \cdots &amp; ka_{1n} \\  ka_{21} &amp; ka_{22} &amp; \cdots &amp; ka_{2n} \\  \vdots &amp; \vdots &amp; &amp; \vdots \\  ka_{m1} &amp; ka_{m2} &amp; \cdots &amp; ka_{mn} \end{bmatrix}$ ，即 $A$ 的每个元素都乘以 $k$ 。</li>
+<li>$\mid kA_{n \times n} \mid = k^n \mid A \mid$ </li>
 </ul>
-</li>
-<li>⭐️矩阵的乘法<ul>
-<li>设 $ A $ 是 $ m \times s $ 矩阵， $ B $ 是 $ s \times n $ 矩阵（矩阵 $ A $ 的列数必须与矩阵 $ B $ 的行数相等），则 $ A, B $ 可乘，乘积 $ AB $ 是 $ m \times n $ 矩阵，记 $ C = AB = ( c_{ij} )_{m \times n} $ ，$ C $ 的第 $ i $ 行第 $ j $ 列元素 $ c_{ij} $ 是 $ A $ 的第 $ i $ 行的 $ s $ 个元素与 $ B $ 的第 $ j $ 列的 $ s $ 个对应元素两两相乘之和，即 $ c_{ij} = \sum\limits_{k = 1}^s a_{ik}b_{kj} = a_{i1}b_{1j} + a_{i2}b_{2j} + \cdots + a_{is}b_{sj} \quad (i=1, 2, \cdots, m; j=1, 2, \cdots, n) $ 。</li>
+<p><br></p>
+<h4 id="4、⭐️矩阵的乘法"><a href="#4、⭐️矩阵的乘法" class="headerlink" title="4、⭐️矩阵的乘法"></a>4、⭐️矩阵的乘法</h4><ul>
+<li>设 $A$ 是 $m \times s$ 矩阵， $B$ 是 $s \times n$ 矩阵（矩阵 $A$ 的列数必须与矩阵 $B$ 的行数相等），则 $A, B$ 可乘，乘积 $AB$ 是 $m \times n$ 矩阵，记 $c = AB = ( c_{ij} )_{m \times n}$ ，$C$ 的第 $ i $ 行第 $ j $ 列元素 $c_{ij}$ 是 $A$ 的第 $ i $ 行的 $s$ 个元素与 $B$ 的第 $ j $ 列的 $s$ 个对应元素两两相乘之和，即 $c_{ij} = \sum\limits_{k = 1}^s a_{ik}b_{kj} = a_{i1}b_{1j} + a_{i2}b_{2j} + \cdots + a_{is}b_{sj} \quad (i=1, 2, \cdots, m; \, j=1, 2, \cdots, n)$ 。</li>
 <li>向量内积<ul>
-<li>记 $ \alpha = \begin{pmatrix} a_1 &amp; a_2 &amp; \cdots &amp; a_n \end{pmatrix}, \beta = \begin{pmatrix} b_1 &amp; b_2 &amp; \cdots &amp; b_n \end{pmatrix} $ <ul>
-<li>称 $ (\alpha, \beta) = a_1b_1 + a_2b_2 + \cdots + a_nb_n $ 叫 $ \alpha, \beta $ 的内积。</li>
+<li>记 $\alpha = \begin{pmatrix} a_1 &amp; a_2 &amp; \cdots &amp; a_n \end{pmatrix}, \, \beta = \begin{pmatrix} b_1 &amp; b_2 &amp; \cdots &amp; b_n \end{pmatrix}$ <ul>
+<li>称 $(\alpha, \beta) = a_1b_1 + a_2b_2 + \cdots + a_nb_n$ 叫 $\alpha, \, \beta$ 的内积。</li>
 </ul>
 </li>
 </ul>
 </li>
 <li>特别地<ul>
-<li>$ \begin{pmatrix} a_1 &amp; a_2 &amp; \cdots &amp; a_n \end{pmatrix}_{1 \times n} \begin{pmatrix} b_1 \\ b_2 \\ \vdots \\ b_n \end{pmatrix}_{n \times 1} = \left( \sum\limits_{i = 1}^n a_ib_i \right)_{1 \times 1} $ </li>
-<li>⭐️ $ \underleftarrow{ \begin{pmatrix} b_1 \\ b_2 \\ \vdots \\ b_n \end{pmatrix} \begin{pmatrix} a_1 &amp; a_2 &amp; \cdots &amp; a_n \end{pmatrix}_{1 \times n} = \begin{pmatrix} a_1b_1 &amp; a_2b_1 &amp; \cdots &amp; a_nb_1 \\ a_1b_2 &amp; a_2b_2 &amp; \cdots &amp; a_nb_2 \\ \vdots &amp; \vdots &amp; &amp; \vdots \\ a_1b_n &amp; a_2b_n &amp; \cdots &amp; a_nb_n \end{pmatrix}_{n \times n} } $ <ul>
+<li>$\begin{pmatrix} a_1 &amp; a_2 &amp; \cdots &amp; a_n \end{pmatrix}_{1 \times n} \begin{pmatrix} b_1 \\ b_2 \\ \vdots \\ b_n \end{pmatrix}_{n \times 1} = \left( \sum\limits_{i = 1}^n a_ib_i \right)_{1 \times 1}$ </li>
+<li>⭐️ $\underleftarrow{ \begin{pmatrix} b_1 \\ b_2 \\ \vdots \\ b_n \end{pmatrix} \begin{pmatrix} a_1 &amp; a_2 &amp; \cdots &amp; a_n \end{pmatrix}_{1 \times n} = \begin{pmatrix} a_1b_1 &amp; a_2b_1 &amp; \cdots &amp; a_nb_1 \\ a_1b_2 &amp; a_2b_2 &amp; \cdots &amp; a_nb_2 \\ \vdots &amp; \vdots &amp; &amp; \vdots \\ a_1b_n &amp; a_2b_n &amp; \cdots &amp; a_nb_n \end{pmatrix}_{n \times n} }$ <ul>
 <li>逆向思维很重要</li>
 </ul>
 </li>
 </ul>
 </li>
 <li>【注】<ul>
-<li>矩阵的乘法一般情况下不满足交换律，即 $ AB \not= BA $ 。</li>
-<li>例如 $ A = \begin{bmatrix} 1&amp; 1 \\ -1 &amp; -1 \end{bmatrix}, B = \begin{bmatrix} 1 &amp; -1 \\ -1 &amp; 1 \end{bmatrix} $ <ul>
-<li>$ AB = \begin{bmatrix} 1&amp; 1 \\ -1 &amp; -1 \end{bmatrix} \begin{bmatrix} 1 &amp; -1 \\ -1 &amp; 1 \end{bmatrix} = \begin{bmatrix} 0 &amp; 0 \\ 0 &amp; 0 \end{bmatrix} $ </li>
-<li>$ BA = \begin{bmatrix} 1 &amp; -1 \\ -1 &amp; 1 \end{bmatrix} \begin{bmatrix} 1&amp; 1 \\ -1 &amp; -1 \end{bmatrix} = \begin{bmatrix} 2 &amp; 2 \\ -2 &amp; -2 \end{bmatrix} $ </li>
+<li>矩阵的乘法一般情况下不满足交换律，即 $AB \not= BA$ 。</li>
+<li>例如 $A = \begin{bmatrix} 1&amp; 1 \\ -1 &amp; -1 \end{bmatrix}, \, B = \begin{bmatrix} 1 &amp; -1 \\ -1 &amp; 1 \end{bmatrix}$ <ul>
+<li>$AB = \begin{bmatrix} 1&amp; 1 \\ -1 &amp; -1 \end{bmatrix} \begin{bmatrix} 1 &amp; -1 \\ -1 &amp; 1 \end{bmatrix} = \begin{bmatrix} 0 &amp; 0 \\ 0 &amp; 0 \end{bmatrix}$ </li>
+<li>$BA = \begin{bmatrix} 1 &amp; -1 \\ -1 &amp; 1 \end{bmatrix} \begin{bmatrix} 1&amp; 1 \\ -1 &amp; -1 \end{bmatrix} = \begin{bmatrix} 2 &amp; 2 \\ -2 &amp; -2 \end{bmatrix}$ </li>
 </ul>
 </li>
+</ul>
+</li>
+</ul>
+<p><br></p>
+<h4 id="5、例题"><a href="#5、例题" class="headerlink" title="5、例题"></a>5、例题</h4><p><br></p>
+<h6 id="1、归纳法"><a href="#1、归纳法" class="headerlink" title="1、归纳法"></a>1、归纳法</h6><ol>
+<li>设 $A = \begin{bmatrix} 1 &amp; -1 &amp; -1 &amp; -1 \\ -1 &amp; 1 &amp; -1 &amp; -1 \\ -1 &amp; -1 &amp; 1 &amp; -1 \\ -1 &amp; -1 &amp; -1 &amp; 1 \end{bmatrix}$ ，计算 $A^n$ 。<ul>
+<li>$\begin{array}{l} A^2 &amp;= AA \\\\ &amp;= \begin{pmatrix} 1 &amp; -1 &amp; -1 &amp; -1 \\ -1 &amp; 1 &amp; -1 &amp; -1 \\ -1 &amp; -1 &amp; 1 &amp; -1 \\ -1 &amp; -1 &amp; -1 &amp; 1 \end{pmatrix} \begin{pmatrix} 1 &amp; -1 &amp; -1 &amp; -1 \\ -1 &amp; 1 &amp; -1 &amp; -1 \\ -1 &amp; -1 &amp; 1 &amp; -1 \\ -1 &amp; -1 &amp; -1 &amp; 1 \end{pmatrix} \\\\ &amp;= \begin{pmatrix} 4 &amp; 0 &amp; 0 &amp; 0 \\ 0 &amp; 4 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 4 &amp; 0 \\ 0 &amp; 0 &amp; 0 &amp; 4 \end{pmatrix} = 4E \end{array}$ <ul>
+<li>$A^n = \begin{cases} 4^k \cdot E \quad &amp; ( n = 2k ) \\\\ 4^k \cdot A \quad &amp; ( n = 2k + 1 ) \end{cases}$ </li>
 </ul>
 </li>
 </ul>
 </li>
 </ol>
 <p><br></p>
-<h4 id="3、例题"><a href="#3、例题" class="headerlink" title="3、例题"></a>3、例题</h4><ol>
-<li>设 $ A = \begin{bmatrix} 1 &amp; -1 &amp; -1 &amp; -1 \\ -1 &amp; 1 &amp; -1 &amp; -1 \\ -1 &amp; -1 &amp; 1 &amp; -1 \\ -1 &amp; -1 &amp; -1 &amp; 1 \end{bmatrix} $ ，计算 $ A^n $ 。【归纳法】<ul>
-<li>$ \begin{array}{l} A^2 &amp;= AA \\\\ &amp;= \begin{pmatrix} 1 &amp; -1 &amp; -1 &amp; -1 \\ -1 &amp; 1 &amp; -1 &amp; -1 \\ -1 &amp; -1 &amp; 1 &amp; -1 \\ -1 &amp; -1 &amp; -1 &amp; 1 \end{pmatrix} \begin{pmatrix} 1 &amp; -1 &amp; -1 &amp; -1 \\ -1 &amp; 1 &amp; -1 &amp; -1 \\ -1 &amp; -1 &amp; 1 &amp; -1 \\ -1 &amp; -1 &amp; -1 &amp; 1 \end{pmatrix} \\\\ &amp;= \begin{pmatrix} 4 &amp; 0 &amp; 0 &amp; 0 \\ 0 &amp; 4 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 4 &amp; 0 \\ 0 &amp; 0 &amp; 0 &amp; 4 \end{pmatrix} = 4E \end{array} $ </li>
-<li>$ A^n = \begin{cases} 4^k \cdot E \quad &amp; n = 2k \\\\ 4^k \cdot A \quad &amp; n = 2k + 1 \end{cases} $</li>
-</ul>
-</li>
-<li>设 $ A = \begin{bmatrix} 1 &amp; 2 &amp; -1 \\ -2 &amp; -4 &amp; 2 \\ 3 &amp; 6 &amp; -3 \end{bmatrix} $ ，则 $ A^n $ ________ 。【秩为 1 】<ul>
+<h6 id="2、秩为-1"><a href="#2、秩为-1" class="headerlink" title="2、秩为 1"></a>2、秩为 1</h6><ol>
+<li>设 $A = \begin{bmatrix} 1 &amp; 2 &amp; -1 \\ -2 &amp; -4 &amp; 2 \\ 3 &amp; 6 &amp; -3 \end{bmatrix}$ ，则 $A^n$________ 。<ul>
 <li>当矩阵每一行之间【成比例关系】时<ul>
-<li>$ A = \begin{pmatrix} 1 \\ -2 \\ 3 \end{pmatrix} \begin{pmatrix} 1 &amp; 2 &amp; -1 \end{pmatrix} $ </li>
+<li>$A = \begin{pmatrix} 1 \\ -2 \\ 3 \end{pmatrix} \begin{pmatrix} 1 &amp; 2 &amp; -1 \end{pmatrix}$ </li>
 </ul>
 </li>
-<li>记 $ \alpha = \begin{pmatrix} 1 \\ -2 \\ 3 \end{pmatrix}, \beta = \begin{pmatrix} 1 \\ 2 \\ -1 \end{pmatrix} $ <ul>
+<li>记 $\alpha = \begin{pmatrix} 1 \\ -2 \\ 3 \end{pmatrix}, \beta = \begin{pmatrix} 1 \\ 2 \\ -1 \end{pmatrix}$ <ul>
 <li>代数中，习惯上写【列向量】</li>
-<li>$ A = \alpha \beta^T $ </li>
+<li>$A = \alpha \beta^T $ </li>
 </ul>
 </li>
-<li>$ A^2 = A \cdot A = \alpha \beta^T \alpha \beta^T = \alpha \left( \beta^T \alpha \right) \beta^T = \alpha \left( -6 \right) \beta^T = -6A $ </li>
-<li>$ A^n = (-6)^{n-1} \cdot A $</li>
+<li>$A^2 = A \cdot A = \alpha \beta^T \alpha \beta^T = \alpha \left( \beta^T \alpha \right) \beta^T = \alpha \left( -6 \right) \beta^T = -6A$ </li>
+<li>$A^n = (-6)^{n-1} \cdot A$</li>
 <li>【注】<ul>
-<li>称 $ \sum\limits_{i=1}^n a_{ii} = {\rm tr} (A) $ ，叫 $ A $ 的迹（trace）。</li>
-<li>若 $ {\rm r}( A_{n \times n} ) = 1 $ （秩为 $ 1 $ ），即 $ n $ 行元素均称比例。<ul>
-<li>则 $ A^n = \left[ {\rm tr}(A) \right]^{n-1} \cdot A $ </li>
+<li>称 $\sum\limits_{i=1}^n a_{ii} = {\rm tr} (A)$ ，叫 $A$ 的迹（trace）。</li>
+<li>若 $ {\rm r}( A_{n \times n} ) = 1 $ （秩为 $ 1 $ ），即 $n$ 行元素均称比例。<ul>
+<li>则 $A^n = \left[ \, {\rm tr}(A) \, \right]^{n-1} \cdot A$ </li>
 </ul>
 </li>
 </ul>
 </li>
-</ul>
-</li>
-<li>已知 $ A = \begin{bmatrix} 1 &amp; 1 &amp; 0 \\ 0 &amp; 1 &amp; 1 \\ 0 &amp; 0 &amp; 1 \end{bmatrix} $ ，求 $ A^n $ 。【拆项法】<ul>
-<li>令 $ A = B + C $ ，其中 $ C = E $ 最好，$ A^n = (B+E)^n $ <ul>
-<li>由于 $ BE = EB $ ，所以 $ A^n = C_n^0 E^n B^0 + C_n^1E^{n-1}B1 + \cdots + C_n^nE^0B^n $ </li>
-</ul>
-</li>
-<li>$ A = B + E = \begin{bmatrix} 0 &amp; 1 &amp; 0 \\ 0 &amp; 0 &amp; 1 \\ 0 &amp; 0 &amp; 0 \end{bmatrix} + \begin{bmatrix} 1 &amp; 0 &amp; 0 \\ 0 &amp; 1 &amp; 0 \\ 0 &amp; 0 &amp; 1 \end{bmatrix} $ </li>
-<li>$ B^2 = \begin{bmatrix} 0 &amp; 0 &amp; 1 \\ 0 &amp; 0 &amp; 0 \\ 0&amp; 0 &amp; 0 \end{bmatrix}, \quad B^3 = O $ </li>
-<li>所以 $ B^i = O \quad (i=3, 4, \cdots, n) $ </li>
-<li>$ \implies \begin{array}{l} A^n &amp;= E + nB + \dfrac{ n(n-1) }{2}B^2 \\\\ &amp;= \begin{bmatrix} 1 &amp; 0 &amp; 0 \\ 0 &amp; 1 &amp; 0 \\ 0 &amp; 0 &amp; 1 \end{bmatrix} + \begin{bmatrix} 0 &amp; n &amp; 0 \\ 0 &amp; 0 &amp; n \\ 0 &amp; 0 &amp; 0 \end{bmatrix} + \begin{bmatrix} 0 &amp; 0 &amp; \frac{ n(n-1) }{2} \\ 0 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 0 \end{bmatrix} \\\\ &amp;= \begin{bmatrix} 1 &amp; n &amp; \frac{ n(n-1) }{2} \\ 0 &amp; 1 &amp; n \\ 0 &amp; 0 &amp; 1 \end{bmatrix} \end{array} $ </li>
 </ul>
 </li>
 </ol>
 <p><br></p>
-<h2 id="二、初等变化法"><a href="#二、初等变化法" class="headerlink" title="二、初等变化法"></a>二、初等变化法</h2><p><br></p>
-<h4 id="1、初等变换"><a href="#1、初等变换" class="headerlink" title="1、初等变换"></a>1、初等变换</h4><ol>
-<li>倍乘<ul>
+<h6 id="3、拆项法"><a href="#3、拆项法" class="headerlink" title="3、拆项法"></a>3、拆项法</h6><ol>
+<li>已知 $A = \begin{bmatrix} 1 &amp; 1 &amp; 0 \\ 0 &amp; 1 &amp; 1 \\ 0 &amp; 0 &amp; 1 \end{bmatrix}$ ，求 $A^n$ 。<ul>
+<li>令 $A = B + C$ ，其中 $c = E$ 最好，$A^n = (B+E)^n$ <ul>
+<li>由于 $BE = EB$ ，所以 $A^n = C_n^0 E^n B^0 + C_n^1E^{n-1}B1 + \cdots + C_n^nE^0B^n$ </li>
+</ul>
+</li>
+<li>$A = B + E = \begin{bmatrix} 0 &amp; 1 &amp; 0 \\ 0 &amp; 0 &amp; 1 \\ 0 &amp; 0 &amp; 0 \end{bmatrix} + \begin{bmatrix} 1 &amp; 0 &amp; 0 \\ 0 &amp; 1 &amp; 0 \\ 0 &amp; 0 &amp; 1 \end{bmatrix}$ </li>
+<li>$B^2 = \begin{bmatrix} 0 &amp; 0 &amp; 1 \\ 0 &amp; 0 &amp; 0 \\ 0&amp; 0 &amp; 0 \end{bmatrix}, \quad B^3 = O​$ <ul>
+<li>$\therefore \, B^i = O \quad (i=3, 4, \cdots, n)$ </li>
+</ul>
+</li>
+<li>$\begin{array}{l} A^n &amp;= E + nB + \dfrac{ n(n-1) }{2}B^2 \\\\ &amp;= \begin{bmatrix} 1 &amp; 0 &amp; 0 \\ 0 &amp; 1 &amp; 0 \\ 0 &amp; 0 &amp; 1 \end{bmatrix} + \begin{bmatrix} 0 &amp; n &amp; 0 \\ 0 &amp; 0 &amp; n \\ 0 &amp; 0 &amp; 0 \end{bmatrix} + \begin{bmatrix} 0 &amp; 0 &amp; \frac{ n(n-1) }{2} \\ 0 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 0 \end{bmatrix} \\\\ &amp;= \begin{bmatrix} 1 &amp; n &amp; \frac{ n(n-1) }{2} \\ 0 &amp; 1 &amp; n \\ 0 &amp; 0 &amp; 1 \end{bmatrix} \end{array}$ </li>
+</ul>
+</li>
+</ol>
+<p><br></p>
+<h2 id="三、初等变换法"><a href="#三、初等变换法" class="headerlink" title="三、初等变换法"></a>三、初等变换法</h2><p><br></p>
+<h4 id="1、倍乘"><a href="#1、倍乘" class="headerlink" title="1、倍乘"></a>1、倍乘</h4><ul>
 <li>一个非零常数乘矩阵的某一行（列）；</li>
 </ul>
-</li>
-<li>互换<ul>
+<p><br></p>
+<h4 id="2、互换"><a href="#2、互换" class="headerlink" title="2、互换"></a>2、互换</h4><ul>
 <li>互换矩阵中某两行（列）的位置；</li>
 </ul>
-</li>
-<li>倍加<ul>
-<li>将某行（列）的 $ k $ 倍加到另一行（列）。</li>
+<p><br></p>
+<h4 id="3、倍加"><a href="#3、倍加" class="headerlink" title="3、倍加"></a>3、倍加</h4><ul>
+<li>将某行（列）的 $k$ 倍加到另一行（列）。</li>
 </ul>
-</li>
-</ol>
-<ul>
-<li>【注】<ul>
+<p><br></p>
+<h4 id="4、【注】"><a href="#4、【注】" class="headerlink" title="4、【注】"></a>4、【注】</h4><ul>
 <li>行列式中操作目标是对应的面积体积是否变化。</li>
 <li>矩阵中操作目标是方程组的解是否保持同解。</li>
 </ul>
-</li>
-</ul>
-<script type="math/tex; mode=display">
+<p><br></p>
+<h4 id="5、行阶梯型矩阵"><a href="#5、行阶梯型矩阵" class="headerlink" title="5、行阶梯型矩阵"></a>5、行阶梯型矩阵</h4><script type="math/tex; mode=display">
 \text{行阶梯型矩阵}
 \begin{cases}
   \text{1. 若有 0 行，全在下方} \\\\
@@ -477,91 +484,80 @@ a_{m1} & a_{m2} & \cdots & a_{mn}
   \text{3. 台角位置元素为 1} \\\\
   \text{4. 台角正上方元素全为 0}
 \end{cases}</script><ul>
-<li>:star: :star: :star: <ul>
-<li>矩阵初等变换中间只能写 $ \to $ </li>
+<li>⭐️⭐️⭐️ <ul>
+<li>矩阵初等变换中间只能写 $\longrightarrow$ </li>
 </ul>
 </li>
 </ul>
-<ol>
-<li>例题<ol>
-<li>化 $ A = \begin{bmatrix} 1 &amp; 1 &amp; 0 &amp; -3 &amp; -1 \\ 1 &amp; -1 &amp; 2 &amp; -1 &amp; 0 \\ 4 &amp; -2 &amp; 6 &amp; 3 &amp; -4 \\ 2 &amp; 4 &amp; -2 &amp; 4 &amp; -7 \end{bmatrix} $ 为行阶梯型矩阵。<ul>
-<li>$ \begin{array}{l} A &amp; \to \begin{bmatrix} 1 &amp; 1 &amp; 0 &amp; -3 &amp; -1 \\ 0 &amp; -2 &amp; 2 &amp; 2 &amp; 1 \\ 0 &amp; -6 &amp; 6 &amp; 15 &amp; 0 \\ 0 &amp; 2 &amp; -2 &amp; 10 &amp; -5 \end{bmatrix} \\\\ &amp; \to \begin{bmatrix} 1 &amp; 1 &amp; 0 &amp; -3 &amp; -1 \\ 0 &amp; -2 &amp; 2 &amp; 2 &amp; 1 \\ 0 &amp; 0 &amp; 0 &amp; 9 &amp; -3 \\ 0 &amp; 0 &amp; 0 &amp; 12 &amp; -4 \end{bmatrix} \to \begin{bmatrix} 1 &amp; 1 &amp; 0 &amp; -3 &amp; -1 \\ 0 &amp; -2 &amp; 2 &amp; 2 &amp; 1 \\ 0 &amp; 0 &amp; 0 &amp; 3 &amp; -1 \\ 0 &amp; 0 &amp; 0 &amp; 12 &amp; -4 \end{bmatrix} \\\\ &amp; \to \begin{bmatrix} 1 &amp; 1 &amp; 0 &amp; -3 &amp; -1 \\ 0 &amp; -2 &amp; 2 &amp; 2 &amp; 1 \\ 0 &amp; 0 &amp; 0 &amp; 3 &amp; -1 \\ 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 \end{bmatrix} \end{array} $ </li>
+<p><br></p>
+<h4 id="6、例题"><a href="#6、例题" class="headerlink" title="6、例题"></a>6、例题</h4><ol>
+<li>化 $A = \begin{bmatrix} 1 &amp; 1 &amp; 0 &amp; -3 &amp; -1 \\ 1 &amp; -1 &amp; 2 &amp; -1 &amp; 0 \\ 4 &amp; -2 &amp; 6 &amp; 3 &amp; -4 \\ 2 &amp; 4 &amp; -2 &amp; 4 &amp; -7 \end{bmatrix}$ 为行阶梯型矩阵。<ul>
+<li>$\begin{array}{l} A &amp; \to \begin{bmatrix} 1 &amp; 1 &amp; 0 &amp; -3 &amp; -1 \\ 0 &amp; -2 &amp; 2 &amp; 2 &amp; 1 \\ 0 &amp; -6 &amp; 6 &amp; 15 &amp; 0 \\ 0 &amp; 2 &amp; -2 &amp; 10 &amp; -5 \end{bmatrix} \\\\ &amp; \to \begin{bmatrix} 1 &amp; 1 &amp; 0 &amp; -3 &amp; -1 \\ 0 &amp; -2 &amp; 2 &amp; 2 &amp; 1 \\ 0 &amp; 0 &amp; 0 &amp; 9 &amp; -3 \\ 0 &amp; 0 &amp; 0 &amp; 12 &amp; -4 \end{bmatrix} \to \begin{bmatrix} 1 &amp; 1 &amp; 0 &amp; -3 &amp; -1 \\ 0 &amp; -2 &amp; 2 &amp; 2 &amp; 1 \\ 0 &amp; 0 &amp; 0 &amp; 3 &amp; -1 \\ 0 &amp; 0 &amp; 0 &amp; 12 &amp; -4 \end{bmatrix} \\\\ &amp; \to \begin{bmatrix} 1 &amp; 1 &amp; 0 &amp; -3 &amp; -1 \\ 0 &amp; -2 &amp; 2 &amp; 2 &amp; 1 \\ 0 &amp; 0 &amp; 0 &amp; 3 &amp; -1 \\ 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 \end{bmatrix} \end{array}$ </li>
 </ul>
 </li>
-<li>化 $ B = \begin{bmatrix} 1 &amp; 1 &amp; 0 &amp; -3 &amp; -1 \\ 0 &amp; -2 &amp; 2 &amp; 2 &amp; 1 \\ 0 &amp; 0 &amp; 0 &amp; 3 &amp; -1 \\ 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 \end{bmatrix} $ 为行最简阶梯型矩阵。<ul>
-<li>$ \begin{array}{l} B &amp; \to \begin{bmatrix} 1 &amp; 1 &amp; 0 &amp; 0 &amp; -2 \\ 0 &amp; -2 &amp; 2 &amp; 0 &amp; \frac{5}{3} \\ 0 &amp; 0 &amp; 0 &amp; 1 &amp; -\frac{1}{3} \\ 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 \end{bmatrix} \\\\ &amp; \to \begin{bmatrix} 1 &amp; 0 &amp; 1 &amp; 0 &amp; -\frac{7}{6} \\ 0 &amp; 1 &amp; -1 &amp; 0 &amp; -\frac{5}{6}  \\ 0 &amp; 0 &amp; 0 &amp; 1 &amp; -\frac{1}{3} \\ 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 \end{bmatrix} \end{array} $ </li>
+<li>化 $B = \begin{bmatrix} 1 &amp; 1 &amp; 0 &amp; -3 &amp; -1 \\ 0 &amp; -2 &amp; 2 &amp; 2 &amp; 1 \\ 0 &amp; 0 &amp; 0 &amp; 3 &amp; -1 \\ 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 \end{bmatrix}$ 为行最简阶梯型矩阵。<ul>
+<li>$\begin{array}{l} B &amp; \to \begin{bmatrix} 1 &amp; 1 &amp; 0 &amp; 0 &amp; -2 \\ 0 &amp; -2 &amp; 2 &amp; 0 &amp; \frac{5}{3} \\ 0 &amp; 0 &amp; 0 &amp; 1 &amp; -\frac{1}{3} \\ 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 \end{bmatrix} \\\\ &amp; \to \begin{bmatrix} 1 &amp; 0 &amp; 1 &amp; 0 &amp; -\frac{7}{6} \\ 0 &amp; 1 &amp; -1 &amp; 0 &amp; -\frac{5}{6}  \\ 0 &amp; 0 &amp; 0 &amp; 1 &amp; -\frac{1}{3} \\ 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 \end{bmatrix} \end{array}$ </li>
 </ul>
-</li>
-</ol>
 </li>
 </ol>
 <p><br></p>
-<h2 id="三、-A-1"><a href="#三、-A-1" class="headerlink" title="三、$ A^{-1} $"></a>三、$ A^{-1} $</h2><p><br></p>
+<h2 id="四、矩阵的逆"><a href="#四、矩阵的逆" class="headerlink" title="四、矩阵的逆"></a>四、矩阵的逆</h2><p><br></p>
 <h4 id="1、定义"><a href="#1、定义" class="headerlink" title="1、定义"></a>1、定义</h4><script type="math/tex; mode=display">
 A^{-1} 
 \begin{cases} 
-  \text{1. } A \text{ 必须是方阵} \\\\
-  \text{2. } \text{定义：}AB = E \implies A^{-1} = B, B^{-1} = A \\\\
-  \text{1. } A \text{ 可逆 }\iff |A| \not= 0 
+  \text{1. } \, A \text{ 必须是方阵} \\\\
+  \text{2. } \, \text{定义：}AB = E \implies A^{-1} = B, \, B^{-1} = A \\\\
+  \text{3. } \, A \text{ 可逆 }\iff \mid A \mid \not= 0
 \end{cases}</script><p><br></p>
 <h4 id="2、性质"><a href="#2、性质" class="headerlink" title="2、性质"></a>2、性质</h4><ul>
-<li>$ ( A^{-1} )^{-1} = A $ </li>
-<li>若 $ k \not= 0 $ ，则 $ (kA)^{-1} = \dfrac{1}{k}A^{-1} $ </li>
-<li>AB 也可逆，且 $ (AB)^{-1} = B^{-1}A^{-1} $ </li>
-<li>$ A^{\rm T} $ 也可逆，且 $ ( A^{\rm T} )^{-1} = ( A^{-1} )^{\rm T} $ </li>
-<li>$ | A^{-1} | = |A|^{-1} $ </li>
-<li>$ (A + B)^{-1} \not= A^{-1} + B^{-1} $ </li>
+<li>$( A^{-1} )^{-1} = A$ </li>
+<li>若 $k \not= 0$ ，则 $(kA)^{-1} = \dfrac{1}{k}A^{-1}$ </li>
+<li>$AB$ 也可逆，且 $(AB)^{-1} = B^{-1}A^{-1}$ </li>
+<li>$A^{\rm T}$ 也可逆，且 $( A^{\rm T} )^{-1} = ( A^{-1} )^{\rm T}$ </li>
+<li>$\mid  A^{-1} \mid \, = \, \mid A \mid ^{-1}$ </li>
+<li>$(A + B)^{-1} \not= A^{-1} + B^{-1}$ </li>
 </ul>
 <p><br></p>
-<h4 id="3、用初等变化求逆矩阵的方法"><a href="#3、用初等变化求逆矩阵的方法" class="headerlink" title="3、用初等变化求逆矩阵的方法"></a>3、用初等变化求逆矩阵的方法</h4><ol>
-<li><p>【Th】</p>
-<ul>
+<h4 id="3、用初等变化求逆矩阵的方法"><a href="#3、用初等变化求逆矩阵的方法" class="headerlink" title="3、用初等变化求逆矩阵的方法"></a>3、用初等变化求逆矩阵的方法</h4><p><br></p>
+<h6 id="1、【Th】"><a href="#1、【Th】" class="headerlink" title="1、【Th】"></a>1、【Th】</h6><ul>
 <li>任何可逆矩阵一定可通过若干次<strong>初等行变换</strong>化成同阶单位矩阵<ul>
 <li>行最简阶梯型矩阵<ul>
-<li>可逆矩阵 $ \to $ 不存在 $ 0 $ 行</li>
+<li>可逆矩阵 $\longrightarrow$ 不存在 $ 0$ 行</li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
-</li>
-<li><p>概念</p>
-<script type="math/tex; mode=display">
+<p><br></p>
+<h6 id="2、概念"><a href="#2、概念" class="headerlink" title="2、概念"></a>2、概念</h6><script type="math/tex; mode=display">
 \begin{bmatrix}
-A \mid E
+  A \mid E
 \end{bmatrix}
 \underrightarrow{初等行变换}
 \begin{bmatrix}
-E \mid A^{-1}
-\end{bmatrix}</script></li>
-</ol>
-<ul>
-<li><ul>
+  E \mid A^{-1}
+\end{bmatrix}</script><ul>
 <li>推导<ul>
-<li>想对 $ A $ 做什么变换，可以先对 $ E $ 做同样的变化得到矩阵 $ P $ </li>
-<li>然后计算 $ PA $ 得到结果</li>
+<li>想对 $A$ 做什么变换，可以先对 $ E$ 做同样的变化得到矩阵 $ P $ </li>
+<li>然后计算 $ PA$ 得到结果</li>
 <li>例如<ul>
-<li>$ A = \begin{bmatrix} 4 &amp; 6 \\ 2 &amp; 1 \end{bmatrix} $ ，想将第二行的 $ -2 $ 倍加到第一行</li>
-<li>先对 $ E = \begin{bmatrix} 1 &amp; 0 \\ 0 &amp; 1 \end{bmatrix} $ 做该变换，得到 $ P = \begin{bmatrix} 1 &amp; -2 \\ 0 &amp; 1 \end{bmatrix} $ </li>
-<li>$ PA = \begin{bmatrix} 1 &amp; -2 \\ 0 &amp; 1 \end{bmatrix} \begin{bmatrix} 4 &amp; 6 \\ 2 &amp; 1 \end{bmatrix} = \begin{bmatrix} 0 &amp; 4 \\ 2 &amp; 1 \end{bmatrix} $ </li>
+<li>$A = \begin{bmatrix} 4 &amp; 6 \\ 2 &amp; 1 \end{bmatrix}$ ，想将第二行的 $ -2 $ 倍加到第一行</li>
+<li>先对 $ E = \begin{bmatrix} 1 &amp; 0 \\ 0 &amp; 1 \end{bmatrix}$ 做该变换，得到 $ P = \begin{bmatrix} 1 &amp; -2 \\ 0 &amp; 1 \end{bmatrix}$ </li>
+<li>$ PA = \begin{bmatrix} 1 &amp; -2 \\ 0 &amp; 1 \end{bmatrix} \begin{bmatrix} 4 &amp; 6 \\ 2 &amp; 1 \end{bmatrix} = \begin{bmatrix} 0 &amp; 4 \\ 2 &amp; 1 \end{bmatrix}$ </li>
 </ul>
 </li>
 <li>根据【Th】<ul>
-<li>$ \begin{array}{l} &amp; P_s \cdots P_2P_1A = E \\\\ \implies &amp; P_s \cdots P_2P_1AA^{-1} = EA^{-1} \\\\ \implies &amp; P_s \cdots P_2P_1E = A^{-1} \end{array} $</li>
+<li>$\begin{array}{l} &amp; P_s \cdots P_2P_1A = E \\\\ \implies &amp; P_s \cdots P_2P_1AA^{-1} = EA^{-1} \\\\ \implies &amp; P_s \cdots P_2P_1E = A^{-1} \end{array}$ </li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
-</li>
+<p><br></p>
+<h6 id="3、例题"><a href="#3、例题" class="headerlink" title="3、例题"></a>3、例题</h6><ol>
+<li>设 $A = \begin{bmatrix} 0 &amp; 2 &amp; -1 \\ 1 &amp; 1 &amp; 2 \\ -1 &amp; -1 &amp; -1 \end{bmatrix}$ ，求 $A^{-1}$。<ul>
+<li>$\begin{array}{l} \begin{pmatrix} A \mid E \end{pmatrix} = &amp; \begin{pmatrix} 0 &amp; 2 &amp; -1 &amp; \vdots &amp; 1 &amp; 0 &amp; 0 \\ 1 &amp; 1 &amp; 2 &amp; \vdots &amp; 0 &amp; 1 &amp; 0 \\ -1 &amp; -1 &amp; -1 &amp; \vdots &amp; 0 &amp; 0 &amp; 1 \end{pmatrix} \\\\ \underrightarrow{1 \leftrightarrow 2 \\ 3 + 1 } &amp; \begin{pmatrix} 1 &amp; 1 &amp; 2 &amp; \vdots &amp; 0 &amp; 1 &amp; 0 \\ 0 &amp; 2 &amp; -1 &amp; \vdots &amp; 1 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 1 &amp; \vdots &amp; 0 &amp; 1 &amp; 1 \end{pmatrix} \\\\ \underrightarrow{2 + 3 \\ \frac{1}{2} 2 } &amp; \begin{pmatrix} 1 &amp; 1 &amp; 0 &amp; \vdots &amp; 0 &amp; -1 &amp; -2 \\ 0 &amp; 1 &amp; 0 &amp; \vdots &amp; \frac{1}{2} &amp; \frac{1}{2} &amp; \frac{1}{2} \\ 0 &amp; 0 &amp; 1 &amp; \vdots &amp; 0 &amp; 1 &amp; 1 \end{pmatrix} \\\\ \underrightarrow{1-2} &amp; \begin{pmatrix} 1 &amp; 0 &amp; 0 &amp; \vdots &amp; -\frac{1}{2} &amp; -\frac{3}{2} &amp; -\frac{5}{2} \\ 0 &amp; 1 &amp; 0 &amp; \vdots &amp; \frac{1}{2} &amp; \frac{1}{2} &amp; \frac{1}{2} \\ 0 &amp; 0 &amp; 1 &amp; \vdots &amp; 0 &amp; 1 &amp; 1 \end{pmatrix} = \begin{pmatrix} E \mid A^{-1} \end{pmatrix} \end{array}$ </li>
 </ul>
-<ol>
-<li>例题<ol>
-<li>设 $ A = \begin{bmatrix} 0 &amp; 2 &amp; -1 \\ 1 &amp; 1 &amp; 2 \\ -1 &amp; -1 &amp; -1 \end{bmatrix} $ ，求 $ A^{-1} $ 。<ul>
-<li>$ \begin{array}{l} \begin{pmatrix} A \mid E \end{pmatrix} = &amp; \begin{pmatrix} 0 &amp; 2 &amp; -1 &amp; \vdots &amp; 1 &amp; 0 &amp; 0 \\ 1 &amp; 1 &amp; 2 &amp; \vdots &amp; 0 &amp; 1 &amp; 0 \\ -1 &amp; -1 &amp; -1 &amp; \vdots &amp; 0 &amp; 0 &amp; 1 \end{pmatrix} \\\\ \underrightarrow{1 \leftrightarrow 2 \\ 3 + 1 } &amp; \begin{pmatrix} 1 &amp; 1 &amp; 2 &amp; \vdots &amp; 0 &amp; 1 &amp; 0 \\ 0 &amp; 2 &amp; -1 &amp; \vdots &amp; 1 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 1 &amp; \vdots &amp; 0 &amp; 1 &amp; 1 \end{pmatrix} \\\\ \underrightarrow{2 + 3 \\ \frac{1}{2} 2 } &amp; \begin{pmatrix} 1 &amp; 1 &amp; 0 &amp; \vdots &amp; 0 &amp; -1 &amp; -2 \\ 0 &amp; 1 &amp; 0 &amp; \vdots &amp; \frac{1}{2} &amp; \frac{1}{2} &amp; \frac{1}{2} \\ 0 &amp; 0 &amp; 1 &amp; \vdots &amp; 0 &amp; 1 &amp; 1 \end{pmatrix} \\\\ \underrightarrow{1-2} &amp; \begin{pmatrix} 1 &amp; 0 &amp; 0 &amp; \vdots &amp; -\frac{1}{2} &amp; -\frac{3}{2} &amp; -\frac{5}{2} \\ 0 &amp; 1 &amp; 0 &amp; \vdots &amp; \frac{1}{2} &amp; \frac{1}{2} &amp; \frac{1}{2} \\ 0 &amp; 0 &amp; 1 &amp; \vdots &amp; 0 &amp; 1 &amp; 1 \end{pmatrix} = \begin{pmatrix} E \mid A^{-1} \end{pmatrix} \end{array} $ </li>
-</ul>
-</li>
-</ol>
 </li>
 </ol>
 <p><br></p>
