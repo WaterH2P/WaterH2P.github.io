@@ -338,15 +338,15 @@
             <div class="row justify-content-center">
                 <div class="col-lg-8 col-md-10 col-sm-12">
                     <h2 id="一、二次型"><a href="#一、二次型" class="headerlink" title="一、二次型"></a>一、二次型</h2><p><br></p>
-<h4 id="1、定义"><a href="#1、定义" class="headerlink" title="1、定义"></a>1、定义</h4><p>n 元变量 $ x_1, x_2, \cdots, x_n $ 的二次齐次多项式</p>
+<h4 id="1、定义"><a href="#1、定义" class="headerlink" title="1、定义"></a>1、定义</h4><p>n 元变量 $x_1, x_2, \cdots, x_n$ 的二次齐次多项式</p>
 <script type="math/tex; mode=display">
 \begin{array}{l}
   f(x_1, x_2, \cdots, x_n) = & a_{11}x_1^2 &+& 2a_{12}x_1x_2 &+& \cdots &+& 2a_{1n}x_1x_n \\\\
   & &+& a_{22}x_2^2 &+& \cdots &+& 2a_{2n}x_2x_n \\\\
   & && && \cdots \\\\
   & && && &+& a_{nn}x_n^2
-\end{array}</script><p>称为 n 元二次型，简称二次型。</p>
-<p>因为 $ x_ix_j = x_jx_i $ ，先若令 $ a_{ij} = a_{ji} (i, j=1, 2, \cdots, n) $ ，则 $ 2a_{ij}x_ix_j = a_{ij}x_ix_j + a_{ji}x_jx_i $ ，于是</p>
+\end{array}</script><p>称为 $n$ 元二次型，简称二次型。</p>
+<p>因为 $x_ix_j = x_jx_i$ ，先若令 $a_{ij} = a_{ji} (i, j=1, 2, \cdots, n)$ ，则 $2a_{ij}x_ix_j = a_{ij}x_ix_j + a_{ji}x_jx_i$ ，于是</p>
 <script type="math/tex; mode=display">
 \begin{array}{l}
   f(x_1, x_2, \cdots, x_n) 
@@ -357,7 +357,7 @@
     && a_{n1}x_nx_1 + a_{n2}x_nx_2 + \cdots + a_{nn}x_n^2 \quad & \quad (\ast) \\\\
   & = 
     & \sum\limits_{i=1}^{\infty}\sum\limits_{j=1}^{\infty}a_{ij}x_ix_j \quad & \quad (\ast\ast)
-\end{array}</script><p>其中 $ (\ast) $ 式称为完全展开式， $ (\ast\ast) $ 式称为和式。令</p>
+\end{array}</script><p>其中 $(\ast)$ 式称为完全展开式， $(\ast\ast)$ 式称为和式。令</p>
 <script type="math/tex; mode=display">
 A = 
 \begin{bmatrix} 
@@ -373,85 +373,85 @@ x =
 <script type="math/tex; mode=display">
 \begin{array}{l} 
   f(x) = x^{\rm T} A x (A^{\rm T} = A). \quad & \quad (\ast\ast\ast)
-\end{array}</script><p>$ (\ast\ast\ast) $ 式称为二次型 $ f(x_1, x_2, \cdots, x_n) $ 的矩阵表达式，实<strong>对称</strong>矩阵 A 称为<strong>二次型</strong> $ f(x) $ 的矩阵。</p>
+\end{array}</script><p>$(\ast\ast\ast)$ 式称为二次型 $f(x_1, x_2, \cdots, x_n)$ 的矩阵表达式，实<strong>对称</strong>矩阵 $A$ 称为<strong>二次型</strong> $f(x)$ 的矩阵。</p>
 <p><br></p>
-<h4 id="2、例题"><a href="#2、例题" class="headerlink" title="2、例题"></a>2、例题</h4><ol>
-<li>写出三元二次型 $ f(x_1, x_2, x_3) = 2x_1^2 + 2x_2^2 + 2x_3^2 - 2x_1x_2 - 2x_2x_3 + 2x_1x_3 $ 的二次型矩阵 A。<ul>
-<li>先写模子：$ \begin{pmatrix} x_1 &amp; x_2 &amp; x_3 \end{pmatrix} \begin{pmatrix} \ast &amp; \ast &amp; \ast \\ \ast &amp; \ast &amp; \ast \\ \ast &amp; \ast &amp; \ast \end{pmatrix} \begin{pmatrix} x_1 \\ x_2 \\ x_3 \end{pmatrix} $ </li>
+<h4 id="2、例题"><a href="#2、例题" class="headerlink" title="2、例题"></a>2、例题</h4><p><br></p>
+<h6 id="1"><a href="#1" class="headerlink" title="1"></a>1</h6><p>写出三元二次型</p>
+<script type="math/tex; mode=display">
+f(x_1, x_2, x_3) = 2x_1^2 + 2x_2^2 + 2x_3^2 - 2x_1x_2 - 2x_2x_3 + 2x_1x_3</script><p>的二次型矩阵 $A$。</p>
+<ul>
+<li>先写模子：$\begin{pmatrix} x_1 &amp; x_2 &amp; x_3 \end{pmatrix} \begin{pmatrix} \ast &amp; \ast &amp; \ast \\ \ast &amp; \ast &amp; \ast \\ \ast &amp; \ast &amp; \ast \end{pmatrix} \begin{pmatrix} x_1 \\ x_2 \\ x_3 \end{pmatrix}$ </li>
 <li>主对角线位置抄【平方项】前的系数<ul>
-<li>$ \begin{pmatrix} x_1 &amp; x_2 &amp; x_3 \end{pmatrix} \begin{pmatrix} 2 &amp; \ast &amp; \ast \\ \ast &amp; 2 &amp; \ast \\ \ast &amp; \ast &amp; 2 \end{pmatrix} \begin{pmatrix} x_1 \\ x_2 \\ x_3 \end{pmatrix} $ </li>
+<li>$\begin{pmatrix} x_1 &amp; x_2 &amp; x_3 \end{pmatrix} \begin{pmatrix} 2 &amp; \ast &amp; \ast \\ \ast &amp; 2 &amp; \ast \\ \ast &amp; \ast &amp; 2 \end{pmatrix} \begin{pmatrix} x_1 \\ x_2 \\ x_3 \end{pmatrix}$ </li>
 </ul>
 </li>
-<li>把混合项 $ x_ix_j(i \not= j) $ 前的系数平分，写在 $ a_{ij} $ 和 $ a_{ji} $ 的位置<ul>
-<li>$ \begin{pmatrix} x_1 &amp; x_2 &amp; x_3 \end{pmatrix} \begin{pmatrix} 2 &amp; -1 &amp; 1 \\ -1 &amp; 2 &amp; -1 \\ 1 &amp; -1&amp; 2 \end{pmatrix} \begin{pmatrix} x_1 \\ x_2 \\ x_3 \end{pmatrix} $ </li>
+<li>把混合项 $x_ix_j \, (i \not= j)$ 前的系数平分，写在 $a_{ij}$ 和 $a_{ji}$ 的位置<ul>
+<li>$\begin{pmatrix} x_1 &amp; x_2 &amp; x_3 \end{pmatrix} \begin{pmatrix} 2 &amp; -1 &amp; 1 \\ -1 &amp; 2 &amp; -1 \\ 1 &amp; -1&amp; 2 \end{pmatrix} \begin{pmatrix} x_1 \\ x_2 \\ x_3 \end{pmatrix}$ </li>
 </ul>
 </li>
 </ul>
-</li>
-</ol>
 <p><br></p>
 <h2 id="二、线性变换"><a href="#二、线性变换" class="headerlink" title="二、线性变换"></a>二、线性变换</h2><p><br></p>
-<h4 id="1、定义-1"><a href="#1、定义-1" class="headerlink" title="1、定义"></a>1、定义</h4><p>对于 n 元二次型 $ f(x_1, x_2, \cdots, x_n) $，若令</p>
+<h4 id="1、定义-1"><a href="#1、定义-1" class="headerlink" title="1、定义"></a>1、定义</h4><p>对于 n 元二次型 $f(x_1, x_2, \cdots, x_n)$，若令</p>
 <script type="math/tex; mode=display">
 \begin{cases}
   x_1 = c_{11}y_1 + c_{12}y_2 + \cdots + c_{1n}yn \\\\
   x_2 = c_{21}y_1 + c_{22}y_2 + \cdots + c_{2n}yn \\\\
   \quad \cdots\cdots \\\\
-  x_n = c_{n1}y_1 + c_{n2}y_2 + \cdots + c_{nn}yn \\\\
-\end{cases}</script><p>记 $ x = \begin{bmatrix} x_1 \\ x_2 \\ \vdots \\ x_n \end{bmatrix}, C = \begin{bmatrix} c_{11} &amp; c_{12} &amp; \cdots &amp; c_{1n} \\ c_{21} &amp; c_{22} &amp; \cdots &amp; c_{2n} \\ \vdots &amp; \vdots &amp; &amp; \vdots \\ c_{n1} &amp; c_{n2} &amp; \cdots &amp; c_{nn} \end{bmatrix}, y = \begin{bmatrix} y_1 \\ y_2 \\ \vdots \\ y_n \end{bmatrix} $ ，则可写为 $ x = Cy $ 。</p>
-<p>上式称为从 $ y_1, y_2, \cdots, y_n $ 到 $ x_1, x_2, \cdots, x_n $ 的线性变换。若线性变换的系数矩阵 C 可逆，即 $ |C| \not= 0 $ ，则称为可逆线性变换。现给出 $ f(x) = x^{\rm T} A x $ ，令 $ x = Cy $ ，则</p>
+  x_n = c_{n1}y_1 + c_{n2}y_2 + \cdots + c_{nn}yn
+\end{cases}</script><p>记 $x = \begin{bmatrix} x_1 \\ x_2 \\ \vdots \\ x_n \end{bmatrix}, C = \begin{bmatrix} c_{11} &amp; c_{12} &amp; \cdots &amp; c_{1n} \\ c_{21} &amp; c_{22} &amp; \cdots &amp; c_{2n} \\ \vdots &amp; \vdots &amp; &amp; \vdots \\ c_{n1} &amp; c_{n2} &amp; \cdots &amp; c_{nn} \end{bmatrix}, y = \begin{bmatrix} y_1 \\ y_2 \\ \vdots \\ y_n \end{bmatrix}$ ，则可写为 $x = Cy$ 。</p>
+<p>上式称为从 $y_1, y_2, \cdots, y_n$ 到 $x_1, x_2, \cdots, x_n$ 的线性变换。若线性变换的系数矩阵 C 可逆，即 $ |C| \not= 0$ ，则称为可逆线性变换。现给出 $f(x) = x^{\rm T} A x$ ，令 $x = Cy$ ，则</p>
 <script type="math/tex; mode=display">
-f(x_1, x_2, \cdots, x_n) = (Cy)^{\rm T} A (Cy) = y^{\rm T}( C^{\rm T} A C )y</script><p>记 $ B = C^{\rm T} A C $ ，则</p>
+f(x_1, x_2, \cdots, x_n) = (Cy)^{\rm T} A (Cy) = y^{\rm T}( C^{\rm T} A C )y</script><p>记 $B = C^{\rm T} A C$ ，则</p>
 <script type="math/tex; mode=display">
-f(x_1, x_2, \cdots, x_n) = y^{\rm T}By = g(y)</script><p>此时，二次型 $ f(x_1, x_2, \cdots, x_n) = x^{\rm T}Ax $ 通过线性变换 $ x = Cy $ 得到一个新二次型 $ g(y) = y^{\rm T}By $ 。</p>
-<p>【:star: 注】：一定要写 $ x = Cy $ ！如果题目给出 $ y = Cx $ ，则写为 $ x = C^{-1}y $ 。</p>
-<p>若 P 为 n 阶矩阵，则 $ PP^{\rm T} = E \iff P \text{ 为正交矩阵 } \iff P^{-1} = P^{\rm T} \iff P \text{ 由规范正交基组成 } $ 。 </p>
+f(x_1, x_2, \cdots, x_n) = y^{\rm T}By = g(y)</script><p>此时，二次型 $f(x_1, x_2, \cdots, x_n) = x^{\rm T}Ax$ 通过线性变换 $x = Cy$ 得到一个新二次型 $g(y) = y^{\rm T}By$ 。</p>
+<p>【⭐️ 注】：一定要写 $x = Cy$ ！如果题目给出 $y = Cx$ ，则写为 $x = C^{-1}y$ 。</p>
+<p>若 $P$ 为 $n$ 阶矩阵，则 $PP^{\rm T} = E \iff P \text{ 为正交矩阵 } \iff P^{-1} = P^{\rm T} \iff P \text{ 由规范正交基组成 }$ 。 </p>
 <p><br></p>
-<h4 id="2、例题-1"><a href="#2、例题-1" class="headerlink" title="2、例题"></a>2、例题</h4><ol>
-<li>已知二次型 $ f(x_1, x_2, x_3) = 4x_2^2 - 3x_3^2 + 4x_1x_2 - 4x_1x_3 + 8x_2x_3 $ ，1️⃣ 写出二次型 $ f $ 的矩阵表达式；2️⃣ 用正交变换把二次型 $ f $ 化为标准形，并写出相应的正交矩阵。<ul>
+<h4 id="2、例题-1"><a href="#2、例题-1" class="headerlink" title="2、例题"></a>2、例题</h4><p><br></p>
+<h6 id="1-1"><a href="#1-1" class="headerlink" title="1"></a>1</h6><p>已知二次型 $f(x_1, x_2, x_3) = 4x_2^2 - 3x_3^2 + 4x_1x_2 - 4x_1x_3 + 8x_2x_3$ ，1️⃣ 写出二次型 $f$ 的矩阵表达式；2️⃣ 用正交变换把二次型 $f$ 化为标准形，并写出相应的正交矩阵。</p>
+<ul>
 <li>1️⃣ <ul>
-<li>$ A = \begin{pmatrix} 0 &amp; 2 &amp; -2 \\ 2 &amp; 4 &amp; 4 \\ -2 &amp; 4 &amp; -3 \end{pmatrix} $ </li>
-<li>$ f(x_1, x_2, x_3) = \begin{pmatrix} x_1 &amp; x_2 &amp; x_3 \end{pmatrix} \begin{pmatrix} 0 &amp; 2 &amp; -2 \\ 2 &amp; 4 &amp; 4 \\ -2 &amp; 4 &amp; -3 \end{pmatrix} \begin{pmatrix} x_1 \\ x_2 \\ x_3 \end{pmatrix} $ </li>
+<li>$a = \begin{pmatrix} 0 &amp; 2 &amp; -2 \\ 2 &amp; 4 &amp; 4 \\ -2 &amp; 4 &amp; -3 \end{pmatrix}$ </li>
+<li>$f(x_1, x_2, x_3) = \begin{pmatrix} x_1 &amp; x_2 &amp; x_3 \end{pmatrix} \begin{pmatrix} 0 &amp; 2 &amp; -2 \\ 2 &amp; 4 &amp; 4 \\ -2 &amp; 4 &amp; -3 \end{pmatrix} \begin{pmatrix} x_1 \\ x_2 \\ x_3 \end{pmatrix}$ </li>
 </ul>
 </li>
 <li>2️⃣ <ul>
-<li>$ \begin{vmatrix} \lambda E - A \end{vmatrix} = 0 \implies \begin{cases} \lambda_1 = -6, &amp; \xi_1 = \begin{pmatrix} 1 &amp; -1 &amp; 2 \end{pmatrix}^{\rm T} \\\\ \lambda_2 = 1, &amp; \xi_2 = \begin{pmatrix} -2 &amp; 0 &amp; 1 \end{pmatrix}^{\rm T} \\\\ \lambda_3 = 6, &amp; \xi_3 = \begin{pmatrix} 1 &amp; 5 &amp; 2 \end{pmatrix}^{\rm T} \end{cases} $ </li>
-<li>:star: 写出正交阵 P<ul>
-<li>$ \xi_1, \xi_2, \xi_3 $ 正交化 $ and $ 单位化</li>
-<li>$ P = \begin{pmatrix} \dfrac{1}{ \sqrt{6} } &amp; -\dfrac{2}{ \sqrt{5} } &amp; \dfrac{1}{ \sqrt{30} } \\\\ -\dfrac{1}{ \sqrt{6} } &amp; 0 &amp; \dfrac{5}{ \sqrt{30} } \\\\ \dfrac{2}{ \sqrt{6} } &amp; \dfrac{1}{ \sqrt{5} } &amp; \dfrac{2}{ \sqrt{30} } \end{pmatrix} $ ，则 $ P^{-1} = P^{\rm T} $ 。</li>
+<li>$\begin{vmatrix} \lambda E - A \end{vmatrix} = 0 \implies \begin{cases} \lambda_1 = -6, &amp; \xi_1 = \begin{pmatrix} 1 &amp; -1 &amp; 2 \end{pmatrix}^{\rm T} \\\\ \lambda_2 = 1, &amp; \xi_2 = \begin{pmatrix} -2 &amp; 0 &amp; 1 \end{pmatrix}^{\rm T} \\\\ \lambda_3 = 6, &amp; \xi_3 = \begin{pmatrix} 1 &amp; 5 &amp; 2 \end{pmatrix}^{\rm T} \end{cases}$ </li>
+<li>⭐️ 写出正交阵 P<ul>
+<li>$\xi_1, \xi_2, \xi_3$ 正交化 $and$ 单位化</li>
 </ul>
 </li>
-<li>令 $ X = PY \implies \begin{array}{l} f &amp;= X^{\rm T}AX \\\\ &amp;= (PY)^{\rm T} A PY \\\\ &amp;= Y^{\rm T}P^{\rm T}APY \\\\ &amp;= Y^{\rm T}P^{-1}APY \\\\ &amp;= Y^{\rm T} \Lambda Y \end{array} $<ul>
-<li>所以 $ f = \begin{pmatrix} y_1 &amp; y_2 &amp; y_3 \end{pmatrix} \begin{pmatrix} -6 &amp; &amp; \\ &amp; 1 &amp; \\ &amp; &amp; 6 \end{pmatrix} \begin{pmatrix} y_1 \\ y_2 \\ y_3 \end{pmatrix} = -6y_1^2 + y_2^2 + 6y_3^3 $</li>
+<li>$P = \begin{pmatrix} \dfrac{1}{ \sqrt{6} } &amp; -\dfrac{2}{ \sqrt{5} } &amp; \dfrac{1}{ \sqrt{30} } \\\\ -\dfrac{1}{ \sqrt{6} } &amp; 0 &amp; \dfrac{5}{ \sqrt{30} } \\\\ \dfrac{2}{ \sqrt{6} } &amp; \dfrac{1}{ \sqrt{5} } &amp; \dfrac{2}{ \sqrt{30} } \end{pmatrix}$ ，则 $P^{-1} = P^{\rm T}$ 。</li>
+<li>令 $x = PY \implies \begin{array}{l} \\ f &amp;= X^{\rm T}AX \\\\ &amp;= (PY)^{\rm T} A PY \\\\ &amp;= Y^{\rm T}P^{\rm T}APY \\\\ &amp;= Y^{\rm T}P^{-1}APY \\\\ &amp;= Y^{\rm T} \Lambda Y \\ &amp; \end{array}$<ul>
+<li>所以 $f = \begin{pmatrix} y_1 &amp; y_2 &amp; y_3 \end{pmatrix} \begin{pmatrix} -6 &amp; &amp; \\ &amp; 1 &amp; \\ &amp; &amp; 6 \end{pmatrix} \begin{pmatrix} y_1 \\ y_2 \\ y_3 \end{pmatrix} = -6y_1^2 + y_2^2 + 6y_3^3$</li>
 </ul>
 </li>
 </ul>
 </li>
-<li>【施式正交法】<ul>
-<li>$ \xi_1 \not\bot \xi_2, \, \xi_1 \bot \xi_3, \, \xi_2 \bot \xi_3 \implies \eta_1 \bot \eta_2, \, \eta_1 \bot \eta_3, \, \eta_2 \bot \eta_3 $ ，其中 $ \eta_3 $ 就是 $ \xi_3 $ ，对 $ \xi_1, \, \xi_2 $ 正交化。</li>
-<li>例题<ul>
-<li>$ A \implies \begin{cases} \xi_1 = \begin{pmatrix} -2 &amp; 1 &amp; 0 \end{pmatrix}^{\rm T} \\\\ \xi_2 = \begin{pmatrix} 2 &amp; 0 &amp; 1 \end{pmatrix}^{\rm T} \\\\ \xi_3 = \begin{pmatrix} 1 &amp; 2 &amp; -1 \end{pmatrix}^{\rm T} \end{cases} $ ，$ \xi_1 \not\bot \xi_2, \, \xi_1 \bot \xi_3, \, \xi_2 \bot \xi_3 $ <ul>
-<li>令 $ \eta_1 = \xi_1, \, \eta_3 = \xi_3 $ </li>
-<li>$ \xi_2 $ 减去 $ \xi_2 \text{ 在 } \xi_1 $ 上的投影，得到的向量与 $ \xi_1 $ 垂直<ul>
+</ul>
+<p><br></p>
+<h6 id="2、施式正交法"><a href="#2、施式正交法" class="headerlink" title="2、施式正交法"></a>2、施式正交法</h6><ul>
+<li>$\xi_1 \not\bot \xi_2, \, \xi_1 \bot \xi_3, \, \xi_2 \bot \xi_3 \implies \eta_1 \bot \eta_2, \, \eta_1 \bot \eta_3, \, \eta_2 \bot \eta_3$ ，其中 $\eta_3$ 就是 $\xi_3$ ，对 $\xi_1, \, \xi_2$ 正交化。</li>
+<li>例题<ol>
+<li>$a \implies \begin{cases} \xi_1 = \begin{pmatrix} -2 &amp; 1 &amp; 0 \end{pmatrix}^{\rm T} \\\\ \xi_2 = \begin{pmatrix} 2 &amp; 0 &amp; 1 \end{pmatrix}^{\rm T} \\\\ \xi_3 = \begin{pmatrix} 1 &amp; 2 &amp; -1 \end{pmatrix}^{\rm T} \end{cases}$ ，$\xi_1 \not\bot \xi_2, \, \xi_1 \bot \xi_3, \, \xi_2 \bot \xi_3$ <ul>
+<li>令 $\eta_1 = \xi_1, \, \eta_3 = \xi_3$ </li>
+<li>$\xi_2$ 减去 $\xi_2 \text{ 在 } \xi_1$ 上的投影，得到的向量与 $\xi_1$ 垂直<ul>
 <li><img src="./images/11-2.2 向量正交化.png" width="50%"></li>
-<li>$ \xi_2 \text{ 在 } \xi_1 $ 上的投影 $ = \begin{Vmatrix} \xi_2 \end{Vmatrix} \cos \theta \, \xi_1^o = \dfrac{ \begin{Vmatrix} \xi_1 \end{Vmatrix} \begin{Vmatrix} \xi_2 \end{Vmatrix} \cos \theta }{ \begin{Vmatrix} \xi_1 \end{Vmatrix} \begin{Vmatrix} \xi_1 \end{Vmatrix} } \xi_1 = \dfrac{ (\xi_2, \xi_1) }{ (\xi_1, \xi_1) } \xi $ <ul>
-<li>$ \theta \text{ 是 } \xi_1, \, \xi_2 $ 的夹角，$ \xi_1^o \text{ 是 } \xi_1 $ 方向上的单位向量 </li>
+<li>$\xi_2 \text{ 在 } \xi_1$ 上的投影 $= \begin{Vmatrix} \xi_2 \end{Vmatrix} \cos \theta \, \xi_1^o = \dfrac{ \begin{Vmatrix} \xi_1 \end{Vmatrix} \begin{Vmatrix} \xi_2 \end{Vmatrix} \cos \theta }{ \begin{Vmatrix} \xi_1 \end{Vmatrix} \begin{Vmatrix} \xi_1 \end{Vmatrix} } \xi_1 = \dfrac{ (\xi_2, \xi_1) }{ (\xi_1, \xi_1) } \xi$ <ul>
+<li>$\theta \text{ 是 } \xi_1, \, \xi_2$ 的夹角，$\xi_1^o \text{ 是 } \xi_1$ 方向上的单位向量 </li>
 </ul>
 </li>
-<li>所以 $ \eta_2 = \xi_2 - \dfrac{ (\xi_2, \xi_1) }{ (\xi_1, \xi_1) } \xi $ </li>
+<li>所以 $\eta_2 = \xi_2 - \dfrac{ (\xi_2, \xi_1) }{ (\xi_1, \xi_1) } \xi$ </li>
+<li>$\begin{array}{l} \\ \eta_2 &amp;= \xi_2 - \dfrac{ (\xi_2, \xi_1) }{ (\xi_1, \xi_1) } \xi_1 \\\\ &amp;= \begin{pmatrix} 2 \\ 0 \\ 1 \end{pmatrix} - \dfrac{-4}{5} \begin{pmatrix} -2 \\ 1 \\ 0 \end{pmatrix} \\\\ &amp;= \begin{pmatrix} \frac{2}{5} \\ \frac{4}{5} \\ 1 \end{pmatrix} \\ &amp; \end{array}$</li>
 </ul>
 </li>
-<li>$ \begin{array}{l}  \eta_2 &amp;= \xi_2 - \dfrac{ (\xi_2, \xi_1) }{ (\xi_1, \xi_1) } \xi_1 \\\\ &amp;= \begin{pmatrix} 2 \\ 0 \\ 1 \end{pmatrix} - \dfrac{-4}{5} \begin{pmatrix} -2 \\ 1 \\ 0 \end{pmatrix} \\\\ &amp;= \begin{pmatrix} \frac{2}{5} \\ \frac{4}{5} \\ 1 \end{pmatrix} \end{array} $</li>
-<li>$ \eta_1, \, \eta_2, \, \eta_3 $ 正交 </li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
+<li>$\eta_1, \, \eta_2, \, \eta_3$ 正交 </li>
 </ul>
 </li>
 </ol>
+</li>
+</ul>
 
                 </div>
             </div>

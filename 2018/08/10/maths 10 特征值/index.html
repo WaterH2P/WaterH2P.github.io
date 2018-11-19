@@ -356,7 +356,6 @@ A\xi = \lambda \xi \quad (Ⅰ)</script><p>则称 $\lambda$ 是 A 的特征值，
   \vdots & \vdots & & \vdots \\
   -a_{n1} & -a_{n2} & \cdots & \lambda - a_{nn}
 \end{vmatrix} = 0 \qquad (Ⅱ)</script><p>$(Ⅱ)$ 式称为 A 的特征方程，是未知量 $\lambda$ 的 $n$ 次方程，有 $n$ 个根（重根按照重数计），$\lambda E - A$ 称为特征矩阵，$\mid \lambda E - A \mid$ 称为特征多项式。</p>
-<p>$(Ⅱ)$ 式称为 A 的特征方程，是未知量 $\lambda$ 的 $n$ 次方程，有 $n$ 个根（重根按照重数计），$\lambda E - A$ 称为特征矩阵，$\mid \lambda E - A \mid$ 称为特征多项式。</p>
 <p><br></p>
 <h4 id="2、例题"><a href="#2、例题" class="headerlink" title="2、例题"></a>2、例题</h4><p>求 $A = \begin{pmatrix} 0 &amp; 0 &amp; 1 \\ 0 &amp; 1 &amp; 0 \\ 1 &amp; 0 &amp; 0 \end{pmatrix}$ 的特征值与特征向量。</p>
 <ul>
@@ -395,10 +394,10 @@ A\xi = \lambda \xi \quad (Ⅰ)</script><p>则称 $\lambda$ 是 A 的特征值，
 <h4 id="㊀、定义-1"><a href="#㊀、定义-1" class="headerlink" title="㊀、定义"></a>㊀、定义</h4><p>若存在可逆矩阵 P，使得 $P^{-1}AP = \Lambda$ ，其中 $\Lambda$ 是对角矩阵，则称 A 可相似对角化，记 A ~ $\Lambda$ ，称 $\Lambda$ 是 A 的相似标准形。</p>
 <p><br></p>
 <h2 id="四、求可逆矩阵-P"><a href="#四、求可逆矩阵-P" class="headerlink" title="四、求可逆矩阵 P"></a>四、求可逆矩阵 P</h2><ul>
-<li>$\begin{array}{l} &amp; P^{-1}AP = \Lambda \\\\ \iff &amp; AP = P \Lambda \\\\ \iff &amp; A\begin{pmatrix} \xi_1&amp; \xi_2 &amp; \cdots &amp; \xi_n \end{pmatrix} = \begin{pmatrix} \xi_1&amp; \xi_2 &amp; \cdots &amp; \xi_n \end{pmatrix}\begin{pmatrix} \lambda_1 &amp;  &amp;  &amp;  \\  &amp; \lambda_2 &amp; &amp; \\ &amp; &amp; \ddots &amp; \\ &amp; &amp; &amp; \lambda_n \end{pmatrix} \\\\ \iff &amp; \begin{pmatrix} A\xi_1 &amp; A\xi_2 &amp; \cdots &amp; A\xi_n \end{pmatrix} = \begin{pmatrix} \lambda_1 \xi_1 &amp; \lambda_2 \xi_2 &amp; \cdots &amp; \lambda_n \xi_n \end{pmatrix} \\\\ \iff &amp; A\xi_i = \lambda_i \xi_i, \quad (i=1, 2, \cdots, n) \end{array}$ </li>
-<li>所以 $\Lambda = \begin{bmatrix} \lambda_1 &amp;  &amp;  &amp;  \\  &amp; \lambda_2 &amp; &amp; \\ &amp; &amp; \ddots &amp; \\ &amp; &amp; &amp; \lambda_n \end{bmatrix}$ ，其中 $\lambda_i (i=1, 2, \cdots, n) $ 为 A 的 n 个特征值。</li>
-<li>$P = \begin{bmatrix} \xi_1&amp; \xi_2 &amp; \cdots &amp; \xi_n \end{bmatrix}, \xi_i(i=1, 2, \cdots, n) $ 是 A 的 n 个线性无关的特征向量，且 $\xi_i$ 对应的特征值为 $\lambda_i$ 。</li>
-<li>A 可以相似对角化 $\iff $ 存在可逆 P，使得 $P^{-1} AP = \Lambda$ $\iff $A 有 n 个线性无关的特征向量<ul>
+<li>$\begin{array}{l} &amp; P^{-1}AP = \Lambda \\\\ \iff &amp; AP = P \Lambda \\\\ \iff &amp; A\begin{pmatrix} \xi_1&amp; \xi_2 &amp; \cdots &amp; \xi_n \end{pmatrix} = \begin{pmatrix} \xi_1&amp; \xi_2 &amp; \cdots &amp; \xi_n \end{pmatrix}\begin{pmatrix} \lambda_1 &amp;  &amp;  &amp;  \\  &amp; \lambda_2 &amp; &amp; \\ &amp; &amp; \ddots &amp; \\ &amp; &amp; &amp; \lambda_n \end{pmatrix} \\\\ \iff &amp; \begin{pmatrix} A\xi_1 &amp; A\xi_2 &amp; \cdots &amp; A\xi_n \end{pmatrix} = \begin{pmatrix} \lambda_1 \xi_1 &amp; \lambda_2 \xi_2 &amp; \cdots &amp; \lambda_n \xi_n \end{pmatrix} \\\\ \iff &amp; A\xi_i = \lambda_i \xi_i, \quad (i=1, 2, \cdots, n) \\ &amp; \end{array}$ </li>
+<li>所以 $\Lambda = \begin{bmatrix} \lambda_1 &amp;  &amp;  &amp;  \\  &amp; \lambda_2 &amp; &amp; \\ &amp; &amp; \ddots &amp; \\ &amp; &amp; &amp; \lambda_n \end{bmatrix}$ ，其中 $\lambda_i (i=1, 2, \cdots, n)$ 为 $A$ 的 $n$ 个特征值。</li>
+<li>$P = \begin{bmatrix} \xi_1&amp; \xi_2 &amp; \cdots &amp; \xi_n \end{bmatrix}, \xi_i(i=1, 2, \cdots, n)$ 是 $A$ 的 $n$ 个线性无关的特征向量，且 $\xi_i$ 对应的特征值为 $\lambda_i$ 。</li>
+<li>$A$ 可以相似对角化 $\iff$ 存在可逆 $P$，使得 $P^{-1} AP = \Lambda \iff A$ 有 $n$ 个线性无关的特征向量<ul>
 <li>即 $\begin{vmatrix} \xi_1 &amp; \xi_2 &amp; \cdots &amp; \xi_n \end{vmatrix} \not= 0$ </li>
 </ul>
 </li>
