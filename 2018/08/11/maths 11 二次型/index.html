@@ -420,13 +420,11 @@ f(x_1, x_2, \cdots, x_n) = y^{\rm T}By = g(y)</script><p>此时，二次型 $f(x
 <li>$\begin{vmatrix} \lambda E - A \end{vmatrix} = 0 \implies \begin{cases} \lambda_1 = -6, &amp; \xi_1 = \begin{pmatrix} 1 &amp; -1 &amp; 2 \end{pmatrix}^{\rm T} \\\\ \lambda_2 = 1, &amp; \xi_2 = \begin{pmatrix} -2 &amp; 0 &amp; 1 \end{pmatrix}^{\rm T} \\\\ \lambda_3 = 6, &amp; \xi_3 = \begin{pmatrix} 1 &amp; 5 &amp; 2 \end{pmatrix}^{\rm T} \end{cases}$ </li>
 <li>⭐️ 写出正交阵 P<ul>
 <li>$\xi_1, \xi_2, \xi_3$ 正交化 $and$ 单位化</li>
-</ul>
-</li>
 <li>$P = \begin{pmatrix} \dfrac{1}{ \sqrt{6} } &amp; -\dfrac{2}{ \sqrt{5} } &amp; \dfrac{1}{ \sqrt{30} } \\\\ -\dfrac{1}{ \sqrt{6} } &amp; 0 &amp; \dfrac{5}{ \sqrt{30} } \\\\ \dfrac{2}{ \sqrt{6} } &amp; \dfrac{1}{ \sqrt{5} } &amp; \dfrac{2}{ \sqrt{30} } \end{pmatrix}$ ，则 $P^{-1} = P^{\rm T}$ 。</li>
-<li>令 $x = PY \implies \begin{array}{l} \\ f &amp;= X^{\rm T}AX \\\\ &amp;= (PY)^{\rm T} A PY \\\\ &amp;= Y^{\rm T}P^{\rm T}APY \\\\ &amp;= Y^{\rm T}P^{-1}APY \\\\ &amp;= Y^{\rm T} \Lambda Y \\ &amp; \end{array}$<ul>
-<li>所以 $f = \begin{pmatrix} y_1 &amp; y_2 &amp; y_3 \end{pmatrix} \begin{pmatrix} -6 &amp; &amp; \\ &amp; 1 &amp; \\ &amp; &amp; 6 \end{pmatrix} \begin{pmatrix} y_1 \\ y_2 \\ y_3 \end{pmatrix} = -6y_1^2 + y_2^2 + 6y_3^3$</li>
 </ul>
 </li>
+<li>令 $x = PY \implies \begin{array}{l} \\ f &amp;= X^{\rm T}AX &amp;= (PY)^{\rm T} A PY \\\\ &amp;= Y^{\rm T}P^{\rm T}APY &amp;= Y^{\rm T}P^{-1}APY \\\\ &amp;= Y^{\rm T} \Lambda Y \\ &amp; \end{array}$</li>
+<li>$f = \begin{pmatrix} y_1 &amp; y_2 &amp; y_3 \end{pmatrix} \begin{pmatrix} -6 &amp; &amp; \\ &amp; 1 &amp; \\ &amp; &amp; 6 \end{pmatrix} \begin{pmatrix} y_1 \\ y_2 \\ y_3 \end{pmatrix} = -6y_1^2 + y_2^2 + 6y_3^3$</li>
 </ul>
 </li>
 </ul>
