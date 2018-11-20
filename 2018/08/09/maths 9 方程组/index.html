@@ -451,7 +451,7 @@ Ax =
   a_{11}x_1 + a_{12}x_2 + \cdots + a_{1n}x_n = b_1 \\\\
   a_{21}x_1 + a_{22}x_2 + \cdots + a_{2n}x_n = b_2 \\\\
   \cdots \cdots \\\\ 
-  a_{m1}x_1 + a_{m2}x_2 + \cdots + a_{mn}x_n = b_m \\\\
+  a_{m1}x_1 + a_{m2}x_2 + \cdots + a_{mn}x_n = b_m
 \end{cases} \quad (Ⅱ)</script><p>称为 $m$ 个方程 $n$ 个未知量的齐次线性方程组，其向量形式为</p>
 <script type="math/tex; mode=display">
 x_1 \alpha_1 + x_2 \alpha_2 + \cdots + x_n \alpha_n = b</script><p>其中</p>
@@ -839,5 +839,24 @@ Ax =
             $('html').animate({scrollTop: 0}, 'slow');
         }
     </script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<!-- <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script> -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+<!-- <script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+
 </body>
 </html>

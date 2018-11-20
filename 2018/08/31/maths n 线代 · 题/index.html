@@ -2,7 +2,7 @@
 
     
 <head>
-    <title>多元函数微分学 | H2P&#39;S BLOG</title>
+    <title>线代 · 题 | H2P&#39;S BLOG</title>
     <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -291,7 +291,7 @@
     <!-- blog 的 date -->
     
         <span>
-            2018-08-04
+            2018-08-31
         </span>
         <span>&nbsp;&nbsp;</span>
     
@@ -310,25 +310,25 @@
     ,
     
     <span class="tag is-info">
-        <a href='/tags/高数/'>高数</a>
+        <a href='/tags/线代/'>线代</a>
     </span>
     
     
     
 </span>
 
-                    <h1>多元函数微分学</h1>
+                    <h1>线代 · 题</h1>
                 </div>
             </div>
             <div class="row justify-content-center">
                 <div class="col-lg-8 col-md-10 col-sm-12">
                     <div class="div-message div-desc">
                         
-                            <span>做笔记，喝凉茶，看高数</span>
+                            <span>做笔记，喝凉茶，做习题</span>
                             <br>
                         
                         
-                            <span>最近更新：2018-11-15</span>
+                            <span>最近更新：2018-11-20</span>
                             <br>
                         
                         
@@ -337,248 +337,35 @@
             </div>
             <div class="row justify-content-center">
                 <div class="col-lg-8 col-md-10 col-sm-12">
-                    <h2 id="一、概念"><a href="#一、概念" class="headerlink" title="一、概念"></a>一、概念</h2><p><br></p>
-<h4 id="㊀、极限"><a href="#㊀、极限" class="headerlink" title="㊀、极限"></a>㊀、极限</h4><p><br></p>
-<h6 id="1、概念"><a href="#1、概念" class="headerlink" title="1、概念"></a>1、概念</h6><ul>
-<li>设 $ f(x, y) $ 的定义域为 $ D $ ，$ P_0(x_0, y_0) $ 是 $ D $ 的聚点。</li>
-<li>$ \forall \varepsilon &gt; 0 $ ， $ \exists \, \delta &gt; 0 $ , 当 $ P(x, y) \in D \bigcap \bigcup\limits^o ( P_0, \delta ) $ 时，恒有 $ | f(x, y) - A | &lt; \varepsilon \implies \lim\limits_{x \to x_0 \atop y \to y_0} f(x, y) = A $ 。</li>
-</ul>
+                    <p><br></p>
+<blockquote>
+<p>数学二 1000 题 线性代数</p>
+</blockquote>
 <p><br></p>
-<h6 id="2、例题"><a href="#2、例题" class="headerlink" title="2、例题"></a>2、例题</h6><ol>
-<li>求 $ I = \lim\limits_{x \to 0 \atop y \to 0} \dfrac{ \sqrt{xy + 1} - 1 }{xy} $ 。<ul>
-<li>其他教材（ $ P(x, y) \in \bigcup\limits^o ( P_0, \delta ) $ ）<ul>
-<li>$ x = 0 / y = 0 $ 时，极限不存在</li>
-<li>所以极限不存在</li>
-</ul>
-</li>
-<li>同济七版教材（考研参考教材）<ul>
-<li>$ I = \lim\limits_{x \to 0 \atop y \to 0} \dfrac{xy}{ xy ( \sqrt{xy + 1} + 1 ) } = \dfrac{1}{2} $ 。</li>
-</ul>
-</li>
-</ul>
-</li>
-</ol>
-<p><br></p>
-<h4 id="㊁、连续性"><a href="#㊁、连续性" class="headerlink" title="㊁、连续性"></a>㊁、连续性</h4><p><br></p>
-<h6 id="1、概念-1"><a href="#1、概念-1" class="headerlink" title="1、概念"></a>1、概念</h6><ul>
-<li>若 $ \lim\limits_{x \to x_0 \atop y \to y_0} f(x, y) = f(x_0, y_0) $ ，则称 $ f(x, y) $ 在 $ (x_0, y_0) $ 处连续。</li>
-<li>【注】<ul>
-<li>若 $ \lim\limits_{x \to x_0 \atop y \to y_0} f(x, y) \not= f(x_0, y_0) $ ，叫不连续，不讨论间断类型。</li>
-</ul>
-</li>
-</ul>
-<p><br></p>
-<h4 id="㊂、偏导数（必考）"><a href="#㊂、偏导数（必考）" class="headerlink" title="㊂、偏导数（必考）"></a>㊂、偏导数（必考）</h4><p><br></p>
-<h6 id="1、概念-2"><a href="#1、概念-2" class="headerlink" title="1、概念"></a>1、概念</h6><ul>
-<li>$ z = f(x, y) $</li>
-<li>$ \left. \dfrac{ \partial f }{ \partial x } \right|_{ (x_0, y_0) } = f’_x(x_0, y_0) = \lim\limits_{ \Delta x \to 0 } \dfrac{ f(x_0 + \Delta x, y_0) - f(x_0, y_0) }{\Delta x} $ 。 </li>
-</ul>
-<p><br></p>
-<h6 id="2、例题-1"><a href="#2、例题-1" class="headerlink" title="2、例题"></a>2、例题</h6><ol>
-<li>设 $ f(x, y) = e^{ \sqrt{ x^2 + y^6 } } $ ，求 $ f’_x(0, 0) $ ， $ f’_y(0, 0) $ 。<ul>
-<li>⭐️ 见到 $ f’_x(x_0, y_0), f’_y(x_0, y_0) \implies $ 先写定义再说。</li>
-<li>$ \begin{array}{l} f’_x(0, 0) &amp;= \lim\limits_{\Delta x \to 0} \dfrac{ f(0 + \Delta x, 0) - f(0, 0) }{\Delta x} \\\\ &amp;= \lim\limits_{\Delta x \to 0} \dfrac{ e^{ |\Delta x| } - 1 }{\Delta x} \\\\ &amp;= \lim\limits_{\Delta x \to 0} \dfrac{ |\Delta x| }{\Delta x} \implies f’_x(0, 0) \text{ 不存在 } \end{array} $ </li>
-<li>$ \begin{array}{l} f’_y(0, 0) &amp;= \lim\limits_{\Delta y \to 0} \dfrac{ f(0, 0 + \Delta y) - f(0, 0) }{\Delta y} \\\\ &amp;= \lim\limits_{\Delta y \to 0} \dfrac{ e^{ |\Delta y|^3 } - 1 }{\Delta y} \\\\ &amp;= \lim\limits_{\Delta y \to 0} \dfrac{ |\Delta y|^3 }{\Delta y} = 0 \end{array} $ </li>
-</ul>
-</li>
-<li>设 $ f(x, y) = \begin{cases} \dfrac{1}{xy} \sin (x^2 y), &amp; xy \not= 0 \\\\ 0, &amp; xy = 0 \end{cases} $ ，则 $ f’_x(0, 1) =  $ ________ 。<ul>
-<li>$ \begin{array}{l} f’_x(0, 1) &amp;= \lim\limits_{\Delta x \to 0} \dfrac{ f(0 + \Delta x, 1) - f(0, 1) }{\Delta x} \\\\ &amp;= \lim\limits_{\Delta x \to 0} \dfrac{ \dfrac{1}{\Delta x} \sin \left( (\Delta x)^2 \right) - 0 }{\Delta x} \\\\ &amp;= 1 \end{array} $ </li>
-</ul>
-</li>
-</ol>
-<p><br></p>
-<h2 id="二、计算（必考）"><a href="#二、计算（必考）" class="headerlink" title="二、计算（必考）"></a>二、计算（必考）</h2><p><br></p>
-<h4 id="㊀、链式求导规则"><a href="#㊀、链式求导规则" class="headerlink" title="㊀、链式求导规则"></a>㊀、链式求导规则</h4><p><br></p>
-<h6 id="1、概念-3"><a href="#1、概念-3" class="headerlink" title="1、概念"></a>1、概念</h6><ul>
-<li>设 $ z = f(u, v, w), u = u(y), v = v(x, y), w = w(x) $ 。</li>
-<li><img src="https://github.com/WaterH2P/WaterH2P.github.io/raw/master/img/images/4-2%20%E9%93%BE%E5%BC%8F%E6%B1%82%E5%AF%BC%E5%85%B3%E7%B3%BB%E5%9B%BE.png" width="50%"></li>
-<li>称 $ x, y $ 叫自变量，$ u, v, w $ 叫中间变量，$ z $ 叫因变量。</li>
-<li>$ \dfrac{ \partial z }{ \partial x } = \dfrac{ \partial z }{ \partial v } \dfrac{ \partial v }{ \partial x } + \dfrac{ \partial z }{ \partial w } \dfrac{ {\rm d}w }{ {\rm d}x } \quad ( \text{ 分叉写 } \partial，\text{ 不分叉写 } {\rm d} ) $ </li>
-</ul>
-<p><br></p>
-<h4 id="㊁、高阶偏导数"><a href="#㊁、高阶偏导数" class="headerlink" title="㊁、高阶偏导数"></a>㊁、高阶偏导数</h4><p><br></p>
-<h6 id="1、【注】"><a href="#1、【注】" class="headerlink" title="1、【注】"></a>1、【注】</h6><ul>
-<li>不论 $ z $ 对谁求导，也不论 $ z $ 已经求了几阶导，求导之后的新函数仍与 $ z $ 有相同的复合结构。</li>
-</ul>
-<p><br></p>
-<h6 id="2、例题-2"><a href="#2、例题-2" class="headerlink" title="2、例题"></a>2、例题</h6><ol>
-<li>设 $ F(u, v) $ 对其变元 $ u, v $ 具有二阶连续偏导数，并设 $ z = F( \dfrac{y}{x}, x^2 + y^2) $ ，则 $ \dfrac{ \partial^2 z }{ \partial x \partial y } = $ ________ 。<ul>
-<li><img src="https://github.com/WaterH2P/WaterH2P.github.io/raw/master/img/images/4-2.2%20%E9%AB%98%E9%98%B6%E5%81%8F%E5%AF%BC%E6%95%B0%E4%BE%8B%E9%A2%981.jpg" width="50%"></li>
-<li>$ \dfrac{ \partial z }{ \partial x } = F’_1 \cdot ( - \dfrac{y}{x^2} ) + F’_2 \cdot 2x $ </li>
-<li>$ \dfrac{ \partial^2 z }{ \partial x \partial y } = \dfrac{ \partial ( \dfrac{ \partial z }{ \partial x } ) }{\partial y} = - \dfrac{1}{x^2} F’_1 - \dfrac{y}{x^3} F’’_{11} + (2 - \dfrac{2y^2}{x^2} ) F’’_{12} + 4xy F’’_{22} $ </li>
-</ul>
-</li>
-<li>设 $ f(u, v) $ 二阶偏导数连续，$ z = f(x^2y, \cos x \sin y) $ ，求 $ \dfrac{ \partial^2 z }{ \partial x \partial y } $ 。<ul>
-<li>$ \begin{array}{l} &amp; 2xf’_1 - \sin x \cos y f’_2 + 2 x^3 y f’’_{11} \\ +&amp; (2xy \cos x \cos y - x^2 \sin x \sin y)f’’_{12} - \sin x \cos x \sin y \ cos y f’’_{22} \end{array} $ </li>
-</ul>
-</li>
-</ol>
-<p><br></p>
-<h4 id="㊂、多元函数的极最值"><a href="#㊂、多元函数的极最值" class="headerlink" title="㊂、多元函数的极最值"></a>㊂、多元函数的极最值</h4><p><br></p>
-<h6 id="1、概念-4"><a href="#1、概念-4" class="headerlink" title="1、概念"></a>1、概念</h6><ul>
-<li>一个点没有去心邻域是不可以谈论极值性的。</li>
-</ul>
-<p><br></p>
-<h6 id="2、无条件的极值-z-f-x-y"><a href="#2、无条件的极值-z-f-x-y" class="headerlink" title="2、无条件的极值 $ z = f(x, y) $"></a>2、无条件的极值 $ z = f(x, y) $</h6><ol>
-<li>必要条件<ul>
-<li>设 $ z = f(x, y) $ 在点 $ (x_0, y_0) $ 处 $ \begin{cases} 一阶偏导数存在 \\\\ 取极值 \end{cases} $ ，则 $ f’_x(x_0, y_0) = 0, f’_y(x_0, y_0) = 0 $ 。</li>
-<li>【注】<ul>
-<li>适用于三元及以上（常考 2 -5 元）</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>充分条件<ul>
-<li>$ \left. \begin{array}{l} f’’_{xx} (x_0, y_0) = A \\\\  f’’_{xy} (x_0, y_0) = B \\\\  f’’_{yy} (x_0, y_0) = C \end{array} \right\} \implies \Delta = B^2 - AC \begin{cases} &lt; 0 \begin{cases} A &gt; 0 \implies \text{极小值点} \\\\ A &lt; 0 \implies \text{极大值点} \end{cases} \\\\ &gt; 0 \implies \text{不是极值点} \\\\ = 0 \implies 该法失效，另谋他法 \end{cases} $ <ul>
-<li>只适用于二元</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>例题</p>
-<ol>
-<li><p>设函数 $ z = z(x, y) $ 是由方程 $ x^2 - 6xy + 10y^2 - 2yz - z^2 + 32 = 0 $ 确定，讨论函数 $ z(x, y) $ 的极大值与极小值。</p>
-<ul>
-<li>无条件极值的解题步骤<ul>
-<li>函数形式<ul>
-<li>给出 $ z = z(x, y) $（显式）</li>
-<li>$ z = z(x, y) $ 由 $ f(x, y, z) = 0 $ 确定（隐式）</li>
-</ul>
-</li>
-</ul>
-<ol>
-<li>写 $ \begin{cases} z’_x = 0 \\\\ z’_y = 0 \end{cases} \implies Pi(i = 1, 2, \ldots, n) $ </li>
-<li>写 $ \begin{cases} \left. z’’_{xx} \right|_{P_i} = A_i \\\\  \left. z’’_{xy} \right|_{P_i} = B_i \\\\ \left. z’’_{xx} \right|_{P_i} = C_i \end{cases} \implies \Delta_i = B_i^2 - A_i C_i $</li>
-</ol>
-</li>
-<li>方程两边对 $ x $ 求偏导 $ 2x - 6y - 2y \cdot z’_x - 2z \cdot z’_x = 0 \implies z’_x = \dfrac{x - 3y}{y + z} $ </li>
-<li>方程两边对 $ y $ 求偏导 $ -6x + 20y -2z - 2y \cdot z’_y - 2z \cdot z’_y = 0 \implies z’_y = \dfrac{-3x + 10y - z}{y + z} $ </li>
-<li>$ \begin{cases} z’_x = 0 \\\\ z’_y = 0 \end{cases} \implies \begin{cases} x = 3y \\\\ z = y \end{cases} $ 带入方程解得：$ \begin{cases} x = 12 \\\\ y = 4 \\\\ z = 4 \end{cases} $ 和 $ \begin{cases} x = -12 \\\\ y = -4 \\\\ z = -4 \end{cases} $ 。</li>
-<li>解得 $ \begin{cases} z’’_{xx} = \dfrac{1}{y + z} - \dfrac{ (z’_x)^2 }{y+z} \\\\ z’’_{xy} = - \dfrac{3}{y + z} - \dfrac{ ( 1 + z’_y ) \cdot z’_x }{y + z} \\\\ z’’_{yy} = \dfrac{10}{y + z} - \dfrac{z’_y}{y + z} - \dfrac{ (1 + z’_y) \cdot z’_y }{y + z} \end{cases} \implies B^2 - AC = -\dfrac{1}{4y^2} &lt; 0 ​$ </li>
-</ul>
-</li>
-<li><p>求二元函数 $ f(x, y) = x^2(2 + y^2) + y \ln y $ 的极值。</p>
-<ul>
-<li>$ \begin{cases} f’_x = 2x(2 + y^2) = 0 \\\\ f’_y = 2x^2y + \ln y + 1 = 0 \end{cases} \implies \begin{cases} x = 0 \\\\ y = \dfrac{1}{e} \end{cases} $ （唯一解）</li>
-<li>$ \begin{cases} f’’_{xx} = 4 + 2y^2 \\\\ f’’_{xy} = 4xy \\\\ f’’_{yy} = 2x^2 + \dfrac{1}{y} \end{cases} \implies \begin{cases} A = 4 + \dfrac{2}{e^2} \\\\ B = 0 \\\\ C = e \end{cases} \implies B^2 - AC = -4e - \dfrac{2}{e} &lt; 0 $</li>
-<li>极小值 $ f( 0, \dfrac{1}{e} ) = -\dfrac{1}{e} $ </li>
-</ul>
-</li>
-</ol>
-</li>
-</ol>
-<p><br></p>
-<h6 id="3、条件极（最）值"><a href="#3、条件极（最）值" class="headerlink" title="3、条件极（最）值"></a>3、条件极（最）值</h6><ol>
-<li><p>概念</p>
-<ul>
-<li>求目标函数 $ u = f(x, y, z) $ 在约束条件 $ \begin{cases} \varphi(x, y, z) = 0 \\\\ \psi(x, y, z) = 0 \end{cases} $ 下的极（最）值。</li>
-<li>拉格朗日乘数法<ol>
-<li>构造辅助函数 $ F(x, y, z, \lambda, \mu) = f(x, y, z) + \lambda \varphi(x, y, z) + \mu \psi(x, y, z), ( \lambda \mu \text{ 均可取 0} ) $ 。<ul>
-<li>$ x, y, z, \lambda, \mu $ 是 5 个独立变量。</li>
-</ul>
-</li>
-<li>令 $ \begin{cases} F’_x = 0 \\\\ F’_y = 0 \\\\ F’_z = 0 \\\\ F’_{\lambda} = 0 \\\\ F’_{\mu} = 0  \end{cases} \implies P_i(x_i, y_i, z_i) \implies u(P_i) $ </li>
-<li>比较 $ u(P_i) $ ，取最大值、最小值。 </li>
-</ol>
-</li>
-</ul>
-</li>
-<li><p>例题</p>
-<ol>
-<li>求函数 $ u = xy + 2yz $ 在约束条件 $ x^2 + y^2 + z^2 = 10 $ 下的最值。<ul>
-<li>令 $ F(x, y, z, \lambda) = xy + 2yz + \lambda (x^2 + y^2 + z^2 -10 ) $ </li>
-<li>$ \begin{cases} F’_x = y + 2 \lambda x = 0 \\\\ F’_y = x + 2z + 2 \lambda y = 0 \\\\ F’_z = 2y + 2 \lambda z = 0 \\\\ F’_{ \lambda } = x^2 + y^2 + z^2 - 10 = 0 \end{cases} $</li>
-<li>解 ㊀<ul>
-<li>1️⃣ <ul>
-<li>若 $ \lambda = 0 \implies y = 0 \implies x = -2z $ </li>
-<li>$ \implies z^2 = 2 \implies z = \pm \sqrt{2} $ </li>
-<li>$ \implies \begin{cases} ( 2\sqrt{2}, 0, -\sqrt{2} ) \\\\ ( -2\sqrt{2}, 0, \sqrt{2} ) \end{cases} $ </li>
-</ul>
-</li>
-<li>2️⃣ <ul>
-<li>若 $ \lambda \not= 0 \implies \begin{cases} x = -\dfrac{1}{2 \lambda}y \\\\ z = -\dfrac{1}{\lambda}y \end{cases} \implies \begin{cases} z = 2x \\\\ y = -2 \lambda x \end{cases} $ </li>
-<li>代入 $ F’_y = 0 $ 得 $ \lambda^2 = \dfrac{5}{4} $ </li>
-<li>代入 $ F’_{\lambda} = 0 $ 得 $ x^2 = 1 \implies x = \pm 1 $ </li>
-<li>$ \implies \begin{cases} (1, \sqrt{5}, 2) \\\\ (1, -\sqrt{5}, 2) \\\\ (-1, \sqrt{5}, -2) \\\\ (-1, -\sqrt{5}, -2) \end{cases} $ </li>
-</ul>
-</li>
-<li>将 6 个点代入 $ u = xy + 2yz $ <ul>
-<li>得 $ \begin{cases} ( 2\sqrt{2}, 0, -\sqrt{2} ) &amp; \implies u = 0 \\\\ ( -2\sqrt{2}, 0, \sqrt{2} ) &amp; \implies u = 0 \\\\ (1, \sqrt{5}, 2) &amp; \implies u = 5 \sqrt{5} \\\\ (1, -\sqrt{5}, 2) &amp; \implies u = -5 \sqrt{5} \\\\ (-1, \sqrt{5}, -2) &amp; \implies u = -5\sqrt{5} \\\\ (-1, -\sqrt{5}, -2) &amp; \implies u = 5 \sqrt{5} \end{cases} $ </li>
-</ul>
-</li>
-</ul>
-</li>
-<li>解 ㊁<ul>
-<li>$ xF’_x + yF’_y + zF’_z = xy + 2yz + 10 \lambda = 0 \implies u = -10 \lambda $ </li>
-<li>根据解 ㊀，$ \lambda = 0, \dfrac{ \sqrt{5} }{2}, -\dfrac{ \sqrt{5} }{2} $ </li>
-</ul>
-</li>
-<li>所以最大值是 $ 5 \sqrt{5} $ ，最小值是 $ -5 \sqrt{5} $ 。</li>
-</ul>
-</li>
-</ol>
-</li>
-</ol>
-<p><br></p>
-<h6 id="4、例题"><a href="#4、例题" class="headerlink" title="4、例题"></a>4、例题</h6><ol>
-<li>某公司可通过电台和报纸两种方式做销售某种商品的广告，根据统计资料，销售收入 $ R $ （万元）与电台广告费用 $ x_1 $ （万元）及报纸广告费用 $ x_2 $ （万元）之间的关系有如下经验公式：$ R = 15 + 14x_1 + 32x_2 - 8 x_1 x_2 - 2x_1^2 - 10x_2^2 $ 。1️⃣  在广告费用不限的情况下，求最优广告策略；2️⃣  若提供的广告费用为 $ 1.5 $ 万元，求相应的最优广告策略。<ul>
-<li>令利润函数为：$ \begin{array}{l} z = f(x_1, x_2) &amp; = R - x_1 - x_2 \\\\ &amp; = 15 + 13x_1 + 31x_2 - 8 x_1 x_2 - 2x_1^2 - 10x_2^2 \end{array} $ </li>
-<li>1️⃣ <ul>
-<li>【非条件极值】</li>
-<li>$ \begin{cases} f’_{x_1} = 13 - 8x_2 - 4x_1 = 0 \\\\ f’_{x_2} = 31 - 8x_1 - 20x_2 = 0 \end{cases} $ <ul>
-<li>克拉默法则<ul>
-<li>$ \begin{cases} a_{11} x_1 + a_{12} x_2 = b_1 \\\\ a_{21} x_1 + a_{22} x_2 = b_2 \end{cases} \implies \begin{cases} x_1 = \dfrac{ \begin{vmatrix} b_1 &amp; a_{12} \\ b_2 &amp; a_{22} \end{vmatrix} }{ \begin{vmatrix} a_{11} &amp; a_{12} \\ a_{21} &amp; a_{22} \end{vmatrix} } \\\\ x_2 = \dfrac{ \begin{vmatrix} a_{11} &amp; b_1 \\ a_{21} &amp; b_2 \end{vmatrix} }{ \begin{vmatrix} a_{11} &amp; a_{12} \\ a_{21} &amp; a_{22} \end{vmatrix} } \end{cases} $ </li>
-</ul>
-</li>
-<li>$ \implies \begin{cases} x_1 = \dfrac{3}{4} = 0.75 \\\\ x_2 = \dfrac{5}{4} = 1.25 \end{cases} $ </li>
-</ul>
-</li>
-<li>$ \begin{cases} f’’_{x_1 x_1} = -4 = A \\\\ f’’_{x_1 x_2} = -8 = B \\\\ f’’_{x_2 x_2} = -20 = C \end{cases} \implies B^2 - AC = -16 &lt; 0 \text{ 且 } A &lt; 0 $ </li>
-<li>所以 $ (0.75, \, 1.25) $ 为极大值点，根据实际问题，此点为最大值点。</li>
-</ul>
-</li>
-<li>2️⃣ <ul>
-<li>【条件最值】</li>
-<li>令 $ F(x_1, x_2, \lambda) = 15 + 13x_1 + 31x_2 - 8 x_1 x_2 - 2x_1^2 - 10x_2^2 + \lambda (x_1 + x_2 - 1.5) $ </li>
-<li>$ \begin{cases} F’_{x_1} = 13 - 8x_2 - 4x_1 + \lambda = 0 \\\\ F’_{x_2} = 31 - 8x_1 - 20x_2 + \lambda = 0 \\\\ F’_{\lambda} = x_1 + x_2 - 1.5 = 0  \end{cases} $</li>
-<li>$ \implies \begin{cases} 4x_1 + 8x_2 + (-1) \lambda = 13 \\\\ 8x_1 + 20x_2 + (-1) \lambda = 31 \\\\ x_1 + x_2 + 0 \cdot \lambda = 1.5 \end{cases} $ <ul>
-<li>$ \begin{vmatrix} 4 &amp; 8 &amp; -1 \\ 8 &amp; 20 &amp; -1 \\ 1 &amp; 1 &amp; 0 \end{vmatrix} = 8 \not= 0 \implies $ 克拉默法则可以使用</li>
-</ul>
-</li>
-<li>所以 $ \begin{cases} x_1 = \dfrac{ \begin{vmatrix} 13 &amp; 8 &amp; -1 \\ 31 &amp; 20 &amp; -1 \\ 1.5 &amp; 1 &amp; 0 \end{vmatrix} }{8} = 0 \\\\ x_2 = \dfrac{ \begin{vmatrix} 4 &amp; 13 &amp; -1 \\ 8 &amp; 31 &amp; -1 \\ 1 &amp; 1.5 &amp; 0 \end{vmatrix} }{8} = \dfrac{12}{8} = 1.5 \end{cases} $ </li>
-</ul>
-</li>
-</ul>
-</li>
-</ol>
-<p><br></p>
-<h2 id="三、考点"><a href="#三、考点" class="headerlink" title="三、考点"></a>三、考点</h2><ol>
-<li>偏导数定义</li>
-<li>多元函数微分法<ol>
-<li>链式法则</li>
-</ol>
-</li>
-<li>多元函数的极最值问题</li>
-</ol>
-<p><br></p>
-<h2 id="四、王全安复习全书"><a href="#四、王全安复习全书" class="headerlink" title="四、王全安复习全书"></a>四、王全安复习全书</h2><p><br></p>
-<h5 id="可导而不连续的例子"><a href="#可导而不连续的例子" class="headerlink" title="可导而不连续的例子"></a>可导而不连续的例子</h5><p>【P130】</p>
-<p>试证明函数 </p>
+<h2 id="习题"><a href="#习题" class="headerlink" title="习题"></a>习题</h2><p><br></p>
+<h4 id="1-【A-1】"><a href="#1-【A-1】" class="headerlink" title="1 【A.1】"></a>1 【A.1】</h4><p>设三阶行列式</p>
 <script type="math/tex; mode=display">
-f(x,y) = 
-\begin{cases} 
-    \dfrac{xy}{x^2 + y^2}, & (x,y) \not= (0,0) \\\\
-    0, & (x,y) = (0,0)
-\end{cases}</script><p>在 $ ( 0, 0 ) $ 点可导，但在 $ ( 0, 0 ) $ 点不连续。</p>
+\mid A \mid = 
+\begin{vmatrix} 
+    a_{11} & a_{12} & a_{13} \\
+    a_{21} & a_{22} & a_{23} \\
+    a_{31} & a_{32} & a_{33} 
+\end{vmatrix}</script><p>其中 $a_{ij} = 1 \text{ 或 } -1, \, (i=1, 2, 3; \, j=1, 2, 3)$，则 $\mid A \mid$ 的最大值是 <strong>____</strong> 。</p>
 <p><br></p>
-<h5 id="两个一阶偏导数都不连续但函数可微"><a href="#两个一阶偏导数都不连续但函数可微" class="headerlink" title="两个一阶偏导数都不连续但函数可微"></a>两个一阶偏导数都不连续但函数可微</h5><p>【P132】</p>
-<p>设 </p>
+<h4 id="2-【A-6】"><a href="#2-【A-6】" class="headerlink" title="2 【A.6】"></a>2 【A.6】</h4><p>线性方程组</p>
 <script type="math/tex; mode=display">
-f(x,y) = 
-\begin{cases} 
-    (x^2 + y^2) \sin \left( \dfrac{1}{x^2 + y^2} \right), & (x,y) \not= (0,0) \\\\ 
-    0, &(x,y) = (0,0) 
-\end{cases}</script><p>试证明 $ f(x,y) $ 的两个一阶偏导数 $ f’_x(x,y) $ 和 $ f’_y(x,y) $ 在 $ (0,0) $ 点处都不连续，但 $ f(x,y) $ 在 $ (0,0) $ 点可微。</p>
+\begin{cases}
+  a_{11}x_1 + a_{12}x_2 + \cdots + a_{1n}x_n = b_1 \\\\
+  a_{21}x_1 + a_{22}x_2 + \cdots + a_{2n}x_n = b_2 \\\\
+  \cdots \cdots \\\\ 
+  a_{m1}x_1 + a_{m2}x_2 + \cdots + a_{mn}x_n = b_m
+\end{cases}</script><p>则 $(\qquad)$ 。</p>
+<p>$\begin{array}{l} ( {\rm A} ) \text{ 若方程组无解，则必有系数行列式 } \mid A \mid = 0 \\\\ ( {\rm B} ) \text{ 若方程组有解，则必有系数行列式 } \mid A \mid \not= 0 \\\\ ( {\rm C} ) \text{ 系数行列式 } \mid A \mid = 0 \text{ ，则方程组必无解 } \\\\ ( {\rm D} ) \text{ 系数行列式 } \mid A \mid = 0 \text{ 是方程组有唯一解的充分非必要条件 } \end{array}$ </p>
+<p><br></p>
+<h2 id="参考答案"><a href="#参考答案" class="headerlink" title="参考答案"></a>参考答案</h2><p><br></p>
+<h4 id="1"><a href="#1" class="headerlink" title="1"></a>1</h4><p>最大值：4。</p>
+<p><br></p>
+<h4 id="2"><a href="#2" class="headerlink" title="2"></a>2</h4><p>${\rm A}$ 。</p>
 
                 </div>
             </div>
@@ -589,13 +376,13 @@ f(x,y) =
 <div class="row justify-content-center">
     <nav class="m-pagination col-md-8 col-sm-24" role="pagination">
         
-        <a class="float-left" href="/2018/08/05/maths 5 二重积分/" style="float: left;">
-            ← 二重积分
+        <a class="float-left" href="/2018/09/19/Markdown/" style="float: left;">
+            ← MarkDown 使用教程
         </a>
         
         
-        <a class="float-right" href="/2018/08/03/maths 3 一元函数积分学/">
-            一元函数积分学 →
+        <a class="float-right" href="/2018/08/30/maths n 高数 · 题/">
+            高数 · 题 →
         </a>
         
     </nav>
