@@ -442,7 +442,7 @@ f(x_1, x_2, \cdots, x_n) = y^{\rm T}By = g(y)</script><p>此时，二次型 $f(x
 <li>$\theta \text{ 是 } \xi_1, \, \xi_2$ 的夹角，$\xi_1^o \text{ 是 } \xi_1$ 方向上的单位向量 </li>
 </ul>
 </li>
-<li>所以：$\begin{array}{l} \\ \eta_2 &amp;= \xi_2 - \dfrac{ (\xi_2, \xi_1) }{ (\xi_1, \xi_1) } \xi_1 \\\\ &amp;= \begin{pmatrix} 2 \\ 0 \\ 1 \end{pmatrix} - (-\dfrac{4}{5} ) \begin{pmatrix} -2 \\ 1 \\ 0 \end{pmatrix} \\\\ &amp;= \begin{pmatrix} \dfrac{2}{5} &amp; \dfrac{4}{5} &amp; 1 \end{pmatrix}^{\rm T} \\ &amp; \end{array}$ </li>
+<li>所以：$\begin{array}{l} \\ \eta_2 &amp;= \xi_2 - \dfrac{ (\xi_2, \xi_1) }{ (\xi_1, \xi_1) } \xi_1 \\\\ &amp;= \begin{pmatrix} 2 \\ 0 \\ 1 \end{pmatrix} - \dfrac{-4}{5} \begin{pmatrix} -2 \\ 1 \\ 0 \end{pmatrix} \\\\ &amp;= \begin{pmatrix} \dfrac{2}{5} &amp; \dfrac{4}{5} &amp; 1 \end{pmatrix}^{\rm T} \\ &amp; \end{array}$ </li>
 <li>$\eta_1, \, \eta_2, \, \eta_3$ 正交 </li>
 </ul>
 </li>
@@ -711,24 +711,5 @@ f(x_1, x_2, \cdots, x_n) = y^{\rm T}By = g(y)</script><p>此时，二次型 $f(x
             $('html').animate({scrollTop: 0}, 'slow');
         }
     </script>
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<!-- <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
-<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script> -->
-<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
-<!-- <script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
-
 </body>
 </html>
