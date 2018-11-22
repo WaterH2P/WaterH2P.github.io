@@ -383,6 +383,8 @@ $\begin{array}{l} ( {\rm A} ) \, 1 \qquad & ( {\rm B} ) \, 2 \\\\ ( {\rm C} ) \,
 <h4 id="6【A-28】-1"><a href="#6【A-28】-1" class="headerlink" title="6【A.28】"></a>6【A.28】</h4><p>设 $A$ 为 $m \times n$ 矩阵，齐次线性方程组 $AX = \overrightarrow{0}$ 仅有零解的充分条件是 $(\quad)$ 。</p>
 <p>$\begin{array}{l} ( {\rm A} ) \, A \text{ 的列向量线性无关 } \qquad &amp; ( {\rm B} ) \, A \text{ 的列向量线性相关 } \\\\ ( {\rm C} ) \, A \text{ 的行向量线性无关 } \qquad &amp; ( {\rm D} ) \, A \text{ 的行向量线性相关 } \end{array}$ </p>
 <p><br></p>
+<h4 id="6【A-49】"><a href="#6【A-49】" class="headerlink" title="6【A.49】"></a>6【A.49】</h4><p>设 $A$ 为奇数矩阵，$AA^{\rm T} = A^{\rm T}A = E$，且 $\mid A \mid &gt; 0$，则 $\mid A - E \mid =$ <strong>____</strong> 。</p>
+<p><br></p>
 <h2 id="参考答案"><a href="#参考答案" class="headerlink" title="参考答案"></a>参考答案</h2><p><br></p>
 <h4 id="1【A-1】-1"><a href="#1【A-1】-1" class="headerlink" title="1【A.1】"></a>1【A.1】</h4><p>最大值：4。</p>
 <p><br></p>
@@ -423,6 +425,12 @@ PQ = O \implies {\rm r}(P) + {\rm r}(Q) \leq 3 \implies 1 \leq {\rm r}(P) \leq 3
 <p><br></p>
 <h4 id="6【A-28】-3"><a href="#6【A-28】-3" class="headerlink" title="6【A.28】"></a>6【A.28】</h4><p>$( {\rm A} )$ 。</p>
 <p>$A$ 的列向量线性无关 $\iff AX = \overrightarrow{0}$ 有唯一零解。</p>
+<p><br></p>
+<h4 id="6【A-49】-1"><a href="#6【A-49】-1" class="headerlink" title="6【A.49】"></a>6【A.49】</h4><p>${0}$ 。</p>
+<p>由题可知，$\begin{array}{l} \mid A - E \mid &amp;= \mid A - AA^{\rm T} \mid &amp;= \mid A \, ( E - A^{\rm T} ) \mid \\\\ &amp;= \mid A \mid \cdot \mid ( E - A ）^{\rm T} \mid \\\\ &amp;= \mid A \mid \cdot \mid E - A \mid \end{array}$ </p>
+<p>又由于 $AA^{\rm T} = A^{\rm T}A = E$，可知 $\mid A \mid^2 = 1$。又由 $\mid A \mid &gt; 0$，可知 $\mid A \mid = 1$。又 $A$ 为奇数矩阵，故</p>
+<script type="math/tex; mode=display">
+\mid E - A \mid \, = \, \mid - (A - E) \mid \, = \, - \mid A - E \mid</script><p>从而有 $\mid A - E \mid \, = - \mid A - E \mid$，可知 $\mid A - E \mid - 0$。</p>
 
                 </div>
             </div>
