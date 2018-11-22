@@ -337,14 +337,26 @@
             </div>
             <div class="row justify-content-center">
                 <div class="col-lg-8 col-md-10 col-sm-12">
-                    <h2 id="一、练习题"><a href="#一、练习题" class="headerlink" title="一、练习题"></a>一、练习题</h2><p><br></p>
+                    <!-- 
+$\begin{array}{l} ( {\rm A} ) \, 1 \qquad & ( {\rm B} ) \, 2 \\\\ ( {\rm C} ) \, 3 \qquad & ( {\rm D} ) \, 4 \end{array}$ 
+-->
+<h2 id="一、练习题"><a href="#一、练习题" class="headerlink" title="一、练习题"></a>一、练习题</h2><p><br></p>
 <h4 id="1"><a href="#1" class="headerlink" title="1"></a>1</h4><p>设正项数列 $\{ x_n \}$ 满足 $\lim\limits_{n \to \infty} \dfrac{ x_{n+1} }{x_n} = \dfrac{1}{2}$ ，则 $( \text{ A } )$ 。</p>
 <p>$\begin{array}{l} (A) \, \lim\limits_{n \to \infty} x_n = 0 &amp; (B) \, \lim\limits_{n \to \infty} x_n \text{ 存在，但不为零} \\\\ (C) \, \lim\limits_{n \to \infty} x_n \text{ 不存在 } \quad &amp; (D) \, \lim\limits_{n \to \infty} x_n \text{ 可能存在，也可能不存在 } \end{array}$ </p>
 <p><br></p>
-<h4 id="2"><a href="#2" class="headerlink" title="2"></a>2</h4><p>$f(x) = e^{ \frac{1}{x} } \dfrac{ \sin \pi x }{ (x^2 - 1) \mid x \mid }$ 无界的一个区间是 $( \text{  } )$ 。</p>
+<h4 id="2"><a href="#2" class="headerlink" title="2"></a>2</h4><p>$f(x) = e^{ 1/x } \dfrac{ \sin \pi x }{ (x^2 - 1) \mid x \mid }$ 无界的一个区间是 $( \text{  } )$ 。</p>
 <p>$\begin{array}{l} (A) \, (-\infty, -1) &amp; (B) \, (-1, 0) \\\\ (C) \, (0, 1) &amp; (D) \, (1, +\infty) \end{array}$ </p>
 <p><br></p>
 <h4 id="3"><a href="#3" class="headerlink" title="3"></a>3</h4><p>若 $\lim\limits_{x \to 0} \dfrac{ f(x) - f(0) }{ x^2 } = \ln 2$，则 $f(x)$ 在 $x=0$ 处 <strong>____</strong> 。</p>
+<p><br></p>
+<h4 id="4"><a href="#4" class="headerlink" title="4"></a>4</h4><p>求极限 $\lim\limits_{x \to 1} \dfrac{x - x^x}{1 - x + \ln x}$ 。</p>
+<p><br></p>
+<h4 id="5"><a href="#5" class="headerlink" title="5"></a>5</h4><p>求极限 $\lim\limits_{x \to 0} \dfrac{ a \left( x^2 - \sin^2 x \right) + b \arcsin x }{ c \left( e^x - 1 \right) + d \ln( 1 + x^3) }$ 。</p>
+<p><br></p>
+<h4 id="5-1"><a href="#5-1" class="headerlink" title="5"></a>5</h4><p>$\begin{array}{l} x \to 0 : \quad &amp; e^{\alpha x} \gg x^{\beta} \gg \ln^\gamma x \quad (\alpha, \, \beta, \gamma &gt; 0) \\\\ x \to 0^+ : \quad &amp; \dfrac{1}{x^\alpha} \gg \mid \ln x \mid \end{array}$</p>
+<p><br></p>
+<h4 id="6"><a href="#6" class="headerlink" title="6"></a>6</h4><p>如果 $\lim\limits_{x \to 0} \dfrac{ x - \sin x + f(x) }{ x^4 }$ 存在，则 $\lim\limits_{x \to 0} \dfrac{x^3}{ f(x) } = (\quad)$ 。</p>
+<p>$\begin{array}{l} ( {\rm A} ) \, -36 \quad &amp; ( {\rm B} ) \, 36 \quad &amp; ( {\rm C} ) \, 6 \quad &amp; ( {\rm D} ) \, -6 \end{array}$ </p>
 <p><br></p>
 <h2 id="二、参考答案"><a href="#二、参考答案" class="headerlink" title="二、参考答案"></a>二、参考答案</h2><p><br></p>
 <h4 id="1-1"><a href="#1-1" class="headerlink" title="1"></a>1</h4><ul>
@@ -393,12 +405,7 @@
 </ol>
 </li>
 <li>计算<ul>
-<li>$\lim\limits_{x \to -\infty} e^{ \frac{1}{x} } \dfrac{ \sin \pi x }{ (x^2 - 1) \mid x \mid } = 0$ </li>
-<li>$\lim\limits_{x \to -1 } e^{ \frac{1}{x} } \dfrac{ \sin \pi x }{ (x^2 - 1) \mid x \mid } = \dfrac{1}{e} \lim\limits_{x \to -1} \dfrac{\sin \pi x}{x^2 - 1} = \dfrac{1}{e} \lim\limits_{x \to -1} \dfrac{\pi \cos \pi x}{2x} = \dfrac{\pi}{2e}$ </li>
-<li>$\lim\limits_{x \to 0^-} e^{ \frac{1}{x} } \dfrac{ \sin \pi x }{ (x^2 - 1) \mid x \mid } = -\pi$ </li>
-<li>$\lim\limits_{x \to 0+} e^{ \frac{1}{x} } \dfrac{ \sin \pi x }{ (x^2 - 1) \mid x \mid } = -\infty$ </li>
-<li>$\lim\limits_{x \to -1 } e^{ \frac{1}{x} } \dfrac{ \sin \pi x }{ (x^2 - 1) \mid x \mid } = \dfrac{1}{e} \lim\limits_{x \to 1} \dfrac{\sin \pi x}{x^2 - 1} = e \lim\limits_{x \to 1} \dfrac{\pi \cos \pi x}{2x} = -\dfrac{\pi e}{2}$ </li>
-<li>$\lim\limits_{x \to +\infty} e^{ \frac{1}{x} } \dfrac{ \sin \pi x }{ (x^2 - 1) \mid x \mid } = 0$ </li>
+<li>$\begin{array}{l} \lim\limits_{x \to -\infty} e^{ 1/x } \dfrac{ \sin \pi x }{ (x^2 - 1) \mid x \mid } = 0 \\\\ \lim\limits_{x \to -1 } e^{ 1/x } \dfrac{ \sin \pi x }{ (x^2 - 1) \mid x \mid } = \dfrac{1}{e} \lim\limits_{x \to -1} \dfrac{\sin \pi x}{x^2 - 1} = \dfrac{1}{e} \lim\limits_{x \to -1} \dfrac{\pi \cos \pi x}{2x} = \dfrac{\pi}{2e} \\\\ \lim\limits_{x \to 0^-} e^{ 1/x } \dfrac{ \sin \pi x }{ (x^2 - 1) \mid x \mid } = -\pi \\\\ \lim\limits_{x \to 0+} e^{ 1/x } \dfrac{ \sin \pi x }{ (x^2 - 1) \mid x \mid } = -\infty \\\\ \lim\limits_{x \to -1 } e^{ 1/x } \dfrac{ \sin \pi x }{ (x^2 - 1) \mid x \mid } = \dfrac{1}{e} \lim\limits_{x \to 1} \dfrac{\sin \pi x}{x^2 - 1} = e \lim\limits_{x \to 1} \dfrac{\pi \cos \pi x}{2x} = -\dfrac{\pi e}{2} \\\\ \lim\limits_{x \to +\infty} e^{ 1/x } \dfrac{ \sin \pi x }{ (x^2 - 1) \mid x \mid } = 0 \end{array}$ </li>
 </ul>
 </li>
 </ul>
@@ -412,6 +419,20 @@
 </li>
 <li>所以 取极小值</li>
 </ul>
+<p><br></p>
+<h4 id="4-1"><a href="#4-1" class="headerlink" title="4"></a>4</h4><p>$2$。</p>
+<p>$\begin{array}{l} \lim\limits_{x \to 1} \dfrac{x - x^x}{1 - x + \ln x} &amp;= \lim\limits_{x \to 1} \dfrac{ x (1 - x^{x - 1} ) }{1 - x + \ln x} &amp; = \lim\limits_{x \to 1} \dfrac{ x (1 - e^{ (x-1) \ln x } ) }{1 - x + \ln x} \\\\ &amp;= \lim\limits_{x \to 1} \dfrac{ x \left[ -(x-1) \ln x \right] }{1 - x + \ln x} &amp;= \lim\limits_{x \to 1} \dfrac{ (x-1) \ln x }{x - 1 - \ln x} \\\\ &amp;= \lim\limits_{x \to 1} \dfrac{ (x-1) (x-1) }{x - 1 - \ln x} &amp;= \lim\limits_{x \to 1} \dfrac{ x^2 - 2x + 1 }{x - 1 - \ln x} \\\\ &amp;= \lim\limits_{x \to 1} \dfrac{ 2x - 2 }{ 1 - \dfrac{1}{x} } &amp;= \lim\limits_{x \to 1} \dfrac{ 2x (x - 1) }{ x - 1 } \\\\ &amp;= 2 \end{array}$ </p>
+<p><br></p>
+<h4 id="5-2"><a href="#5-2" class="headerlink" title="5"></a>5</h4><p>$\dfrac{b}{c}$。</p>
+<p>找“带头大哥”：</p>
+<p><img src="https://github.com/WaterH2P/WaterH2P.github.io/raw/master/img/images/%E6%9E%81%E9%99%90%20-%20%E5%B8%A6%E5%A4%B4%E5%A4%A7%E5%93%A5.jpg" width="80%"></p>
+<p>$\begin{array}{l} x^2 - \sin^2 x \sim \dfrac{1}{3}x^4 \quad &amp; \arcsin x \sim x &amp; \implies x^4 &lt; x \\\\ e^x - 1 \sim x \quad &amp; \ln(1 + x^3) \sim x^3 &amp; \implies x &gt; x^3 \end{array}$</p>
+<p>$\therefore \quad \lim\limits_{x \to 0} \dfrac{ a \left( x^2 - \sin^2 x \right) + b \arcsin x }{ c \left( e^x - 1 \right) + d \ln( 1 + x^3) } = \dfrac{b}{c}$ </p>
+<p><br></p>
+<h4 id="6-1"><a href="#6-1" class="headerlink" title="6"></a>6</h4><p>$( {\rm D} )$ 。</p>
+<p>$\lim\limits_{x \to 0} \dfrac{ x - \sin x + f(x) }{ x^4 } = A \text{ (唯一) }$ </p>
+<p>$\begin{array}{l} \\ &amp; \lim\limits_{x \to 0} \dfrac{ x - \sin x + f(x) }{ x^3 } = \lim\limits_{x \to 0} \dfrac{ x - \sin x + f(x) }{ x^4 } \cdot x = 0 \\\\ \implies &amp; \lim\limits_{x \to 0} \dfrac{ x - \sin x }{ x^3 } + \dfrac{ f(x) }{ x^3 } = 0 \\\\ \implies &amp; \lim\limits_{x \to 0} \dfrac{ f(x) }{ x^3 } = -\dfrac{1}{6} \\ &amp; \end{array}$ </p>
+<p>$\therefore \quad \lim\limits_{x \to 0} \dfrac{ x^3 }{ f(x) } = -6$</p>
 
                 </div>
             </div>
