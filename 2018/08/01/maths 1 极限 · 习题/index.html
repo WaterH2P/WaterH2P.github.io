@@ -300,17 +300,17 @@
     
     
     <span class="tag is-info">
-        <a href='/tags/kaoyan/'>kaoyan</a>
-    </span>
-    ,
-    
-    <span class="tag is-info">
         <a href='/tags/maths/'>maths</a>
     </span>
     ,
     
     <span class="tag is-info">
         <a href='/tags/高数/'>高数</a>
+    </span>
+    ,
+    
+    <span class="tag is-info">
+        <a href='/tags/kaoyan/'>kaoyan</a>
     </span>
     
     
@@ -357,6 +357,16 @@ $\begin{array}{l} ( {\rm A} ) \, 1 \qquad & ( {\rm B} ) \, 2 \\\\ ( {\rm C} ) \,
 <p><br></p>
 <h4 id="6"><a href="#6" class="headerlink" title="6"></a>6</h4><p>如果 $\lim\limits_{x \to 0} \dfrac{ x - \sin x + f(x) }{ x^4 }$ 存在，则 $\lim\limits_{x \to 0} \dfrac{x^3}{ f(x) } = (\quad)$ 。</p>
 <p>$\begin{array}{l} ( {\rm A} ) \, -36 \quad &amp; ( {\rm B} ) \, 36 \quad &amp; ( {\rm C} ) \, 6 \quad &amp; ( {\rm D} ) \, -6 \end{array}$ </p>
+<p><br></p>
+<h4 id="7"><a href="#7" class="headerlink" title="7"></a>7</h4><p>1️⃣ 设 $f(x)$ 在 $(0, +\infty)$ 内可导，$f’(x) &gt; 0，\, x \in (0, +\infty)$，证明 $f(x)$ 在 $(0, +\infty)$ 内单调增加。</p>
+<p>2️⃣ 证明 $f(x) = (n^x + 1)^{ -(1/x) }$ 在 $(0, +\infty)$ 内单调增加，$n &gt; 0$。</p>
+<p>3️⃣ 给 $\{ x_n \}, \, x_n = \sum\limits_{k=1}^n (n^k + 1)^{ -(1/k) }$，求 $\lim\limits_{n \to +\infty} x_n$。</p>
+<p><br></p>
+<h4 id="8"><a href="#8" class="headerlink" title="8"></a>8</h4><p>1️⃣ 证明方程 $x = 2 \ln (1+x)$ 在 $(0, +\infty)$ 内有唯一实根 $\xi$ 。</p>
+<p>2️⃣ 设 $x_1 &gt; \xi$，定义 $x_{n+1} = 2\ln(1 + x_n), \, n=1, 2, \cdots$，证明 $\lim\limits_{n \to \infty} x_n = \xi$ 。</p>
+<p><br></p>
+<p>9</p>
+<p>$f(x) = \dfrac{\mid x \mid^x - 1}{x \, (x+1) \ln \mid x \mid}$ 的可去间断点的个数为 <strong>____</strong> 。</p>
 <p><br></p>
 <h2 id="二、参考答案"><a href="#二、参考答案" class="headerlink" title="二、参考答案"></a>二、参考答案</h2><p><br></p>
 <h4 id="1-1"><a href="#1-1" class="headerlink" title="1"></a>1</h4><ul>
@@ -433,6 +443,37 @@ $\begin{array}{l} ( {\rm A} ) \, 1 \qquad & ( {\rm B} ) \, 2 \\\\ ( {\rm C} ) \,
 <p>$\lim\limits_{x \to 0} \dfrac{ x - \sin x + f(x) }{ x^4 } = A \text{ (唯一) }$ </p>
 <p>$\begin{array}{l} \\ &amp; \lim\limits_{x \to 0} \dfrac{ x - \sin x + f(x) }{ x^3 } = \lim\limits_{x \to 0} \dfrac{ x - \sin x + f(x) }{ x^4 } \cdot x = 0 \\\\ \implies &amp; \lim\limits_{x \to 0} \dfrac{ x - \sin x }{ x^3 } + \dfrac{ f(x) }{ x^3 } = 0 \\\\ \implies &amp; \lim\limits_{x \to 0} \dfrac{ f(x) }{ x^3 } = -\dfrac{1}{6} \\ &amp; \end{array}$ </p>
 <p>$\therefore \quad \lim\limits_{x \to 0} \dfrac{ x^3 }{ f(x) } = -6$</p>
+<p><br></p>
+<h4 id="7-1"><a href="#7-1" class="headerlink" title="7"></a>7</h4><p>1️⃣</p>
+<p>设任意 $0 &lt; x_1 &lt; x_2$ ，由拉氏定理（拉格朗日中值定理）得</p>
+<script type="math/tex; mode=display">
+\dfrac{ f(x_2) - f(x_1) }{ x_2 - x_1 } = f'(\xi) \quad (x_1 < \xi < x_2)</script><p>由题可知 $f’(x) &gt; 0$，所以 $\dfrac{ f(x_2) - f(x_1) }{ x_2 - x_1 } &gt; 0$，且 $x_2 &gt; x_1$，所以 $f(x_2) &gt; f(x_1)$ 。</p>
+<p>所以当 $x_2 &gt; x_1 &gt; 0$ 时，$f(x_2) &gt; f(x_1)$ 。</p>
+<p>2️⃣</p>
+<p>设 $g(x) = \ln f(x) = -\dfrac{ \ln (n^x + 1) }{x}$， </p>
+<script type="math/tex; mode=display">
+g'(x) = \dfrac{ \ln(n^x + 1) }{ x^2 } - \dfrac{ n^x \ln n }{ x(n^x + 1) } > \dfrac{ \ln n^x }{ x^2 } - \dfrac{ n^x \ln n }{ x n^x } = 0</script><p>所以 $g(x)$ 在 $(0, +\infty)$ 内单调增加，所以 $f(x)$ 在 $(0, +\infty)$ 内单调增加。</p>
+<p>3️⃣</p>
+<p>放缩</p>
+<script type="math/tex; mode=display">
+n \cdot (n+1)^{-1} < \sum\limits_{k=1}^n (n^k + 1)^{ -(1/k) } < n \cdot (n^n + 1)^{ -(1/n) }</script><p>$\begin{array}{l} \lim\limits_{n \to +\infty} n \cdot (n+1)^{-1} = \lim\limits_{n \to +\infty} \dfrac{n}{n+1} = 1 \\\\ \lim\limits_{n \to +\infty} n \cdot (n^n + 1)^{ -(1/n) } = \lim\limits_{n \to +\infty} \dfrac{ (n^n)^{1/n} }{ (n^n + 1)^{1/n} } = \lim\limits_{n \to +\infty} \left[ 1 + \left( -\dfrac{1}{ n^n + 1 } \right) \right]^{1/n} = 1 \end{array}$ </p>
+<p>由【哪里跑】或【夹逼定理】，$\lim\limits_{n \to +\infty} x_n = 1$ 。</p>
+<p><br></p>
+<h4 id="8-1"><a href="#8-1" class="headerlink" title="8"></a>8</h4><p>1️⃣</p>
+<p>设 $f(x) = x - 2\ln (1 + x)$ ，$f’(x) = 1 - \dfrac{2}{1+x} = 0 \implies x=1$ 。</p>
+<p>当 $0&lt;x&lt;1$ 时，$f’(x) &lt; 0$ 且 $f(0) = 0$ ，所以 $f(x) &lt; 0$ 。</p>
+<p>当 $x&gt;1$ 时，$f’(x) &gt; 0$ 且 $\lim\limits_{x \to +\infty} f(x) = +\infty$ ，所以存在唯一实根 $\xi$ 使得 $f(\xi) = 0$ 。</p>
+<p>2️⃣</p>
+<p>$x_1 &gt; \xi \implies \begin{cases} x_1 &gt; 2 \ln (1 + x_1) = x_2 \\\\ x_2 = 2 \ln (1 + x_1) &gt; 2\ln (1 + \xi) = \xi \end{cases}$ ，</p>
+<p>设 $x_{n-1} &gt; x_n &gt; \xi$ ，所以 $\begin{cases} x_n &gt; 2 \ln (1 + x_n) = x_{n+1} \\\\ x_{n+1} = 2 \ln (1 + x_n) &gt; 2\ln (1 + \xi) = \xi \end{cases}$</p>
+<p>所以 $\{ x_n \}$ 单调减小且 $x_n &gt; \xi$ ，设  $\lim\limits_{n \to \infty} x_n = A &gt; 0$ 。</p>
+<p>所以 $A = 2 \ln (1 + A)$ ，由 $( {\rm I} )$ 可知 $A = \xi$ 。</p>
+<p><br></p>
+<p>9</p>
+<p>$2$ 。</p>
+<p>由题可知，只考虑无定义点 $x=0, \, -1, \, 1$ 。</p>
+<p>$\begin{array}{l} \lim\limits_{x \to 0} \dfrac{\mid x \mid^x - 1}{x \, (x+1) \ln \mid x \mid} = \dfrac{ e^{x \ln \mid x \mid} - 1}{x \, (x+1) \ln \mid x \mid} = \lim\limits_{x \to 0} \dfrac{x \ln \mid x \mid}{x \, (x+1) \ln \mid x \mid} = 1 \\\\ \lim\limits_{x \to -1} \dfrac{\mid x \mid^x - 1}{x \, (x+1) \ln \mid x \mid} = \dfrac{ e^{x \ln \mid x \mid} - 1}{x \, (x+1) \ln \mid x \mid} = \lim\limits_{x \to -1} \dfrac{x \ln \mid x \mid}{x \, (x+1) \ln \mid x \mid} = \infty \\\\ \lim\limits_{x \to 1} \dfrac{\mid x \mid^x - 1}{x \, (x+1) \ln \mid x \mid} = \dfrac{ e^{x \ln \mid x \mid} - 1}{x \, (x+1) \ln \mid x \mid} = \lim\limits_{x \to 1} \dfrac{x \ln \mid x \mid}{x \, (x+1) \ln \mid x \mid} = \dfrac{1}{2} \end{array}$ </p>
+<p>所以 $x=0, \, 1$ 是可去间断点。</p>
 
                 </div>
             </div>
@@ -443,13 +484,13 @@ $\begin{array}{l} ( {\rm A} ) \, 1 \qquad & ( {\rm B} ) \, 2 \\\\ ( {\rm C} ) \,
 <div class="row justify-content-center">
     <nav class="m-pagination col-md-8 col-sm-24" role="pagination">
         
-        <a class="float-left" href="/2018/08/02/maths 2 一元函数微分学/" style="float: left;">
-            ← 一元函数微分学
+        <a class="float-left" href="/2018/08/01/maths 1 极限/" style="float: left;">
+            ← 极限
         </a>
         
         
-        <a class="float-right" href="/2018/08/01/maths 1 极限/">
-            极限 →
+        <a class="float-right" href="/2018/06/29/hexo 使用 Hexo 搭建 Blog/">
+            使用 Hexo 搭建 Blog →
         </a>
         
     </nav>

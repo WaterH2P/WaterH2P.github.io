@@ -300,17 +300,17 @@
     
     
     <span class="tag is-info">
-        <a href='/tags/kaoyan/'>kaoyan</a>
-    </span>
-    ,
-    
-    <span class="tag is-info">
         <a href='/tags/maths/'>maths</a>
     </span>
     ,
     
     <span class="tag is-info">
         <a href='/tags/高数/'>高数</a>
+    </span>
+    ,
+    
+    <span class="tag is-info">
+        <a href='/tags/kaoyan/'>kaoyan</a>
     </span>
     
     
@@ -566,17 +566,19 @@
 </li>
 </ul>
 <p><br></p>
-<h2 id="五、数列极限的计算"><a href="#五、数列极限的计算" class="headerlink" title="五、数列极限的计算"></a>五、数列极限的计算</h2><ol>
-<li>若 $\lbrace x_n \rbrace$ 易于连续化，转化为函数极限计算。<ul>
-<li>依据：若 $\lim\limits_{x \to +\infty}f(x) = A$，则 $\lim\limits_{n \to \infty}f(n) = A$。【归结定理】</li>
+<h2 id="五、数列极限的计算"><a href="#五、数列极限的计算" class="headerlink" title="五、数列极限的计算"></a>五、数列极限的计算</h2><p><br></p>
+<h4 id="①、易于连续化"><a href="#①、易于连续化" class="headerlink" title="①、易于连续化"></a>①、易于连续化</h4><p>若 $\lbrace x_n \rbrace$ 易于连续化，转化为【函数极限】计算，最后由【归结定理】。 </p>
+<ul>
+<li>依据：若 $\lim\limits_{x \to +\infty}f(x) = A$，则 $\lim\limits_{n \to \infty}f(n) = A$。</li>
 <li>$I = \lim\limits_{n \to \infty} \left(n \times \tan \dfrac{1}{n} \right)^{n^2}$<ul>
 <li>$1^\infty$</li>
 <li>令 $x = \dfrac{1}{t}$，$I = e^{ \lim\limits_{t \to 0} \dfrac{ \frac{ \tan t }{t} - 1 }{t^2} } = e^{ \frac{1}{3} }$</li>
 </ul>
 </li>
 </ul>
-</li>
-<li>若 $\lbrace x_n \rbrace$ 不易于连续化，用【夹逼准则】或【定积分定义】。<ul>
+<p><br></p>
+<h4 id="②、不易于连续化"><a href="#②、不易于连续化" class="headerlink" title="②、不易于连续化"></a>②、不易于连续化</h4><p>若 $\lbrace x_n \rbrace$ 不易于连续化，用【夹逼准则】或【定积分定义】。</p>
+<ul>
 <li>当分子分母都在变化的时候<ul>
 <li>只改分母，不动分子</li>
 <li>$I = \lim\limits_{n \to \infty} \left(\dfrac{1}{n^2 + n + 1} + \dfrac{2}{n^2 + n + 2} + … + \dfrac{n}{n^2 + n + n} \right)$<ul>
@@ -589,16 +591,17 @@
 <li>抓【隐蔽】条件：函数天生的有界性<ul>
 <li>$I = \lim\limits_{n \to \infty}\sqrt[n]{n \arctan n}$<ul>
 <li>$\dfrac{\pi}{4} &lt; \lim\limits_{n \to \infty}\arctan n &lt; \dfrac{\pi}{2}$</li>
-<li>$\lim\limits_{n \to \infty} \left(n \times \dfrac{\pi}{4} \right)^\dfrac{1}{n} &lt; \lim\limits_{n \to \infty}\sqrt[n]{n \arctan n} &lt; \lim\limits_{n \to \infty} \left(n \times \dfrac{\pi}{2} \right)^\dfrac{1}{n}$</li>
+<li>$\lim\limits_{n \to \infty} \left(n \times \dfrac{\pi}{4} \right)^{1/n} &lt; \lim\limits_{n \to \infty}\sqrt[n]{n \arctan n} &lt; \lim\limits_{n \to \infty} \left(n \times \dfrac{\pi}{2} \right)^{1/n}$ </li>
 <li>$I = 1$</li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
-</li>
-<li>若 $\{x_n\}$ 由递推式 $x_n = f(x_{n-1})$ 给出，用【单调有界准则】。<ul>
-<li>若 $\{x_n\}$ 单调增且有上界或者单调减且有下界 $\implies \lim\limits_{n \to \infty}x_n \text{ 存在 } \iff {x_n} \text{ 收敛 }$。 </li>
+<p><br></p>
+<h4 id="③、-由递推式给出"><a href="#③、-由递推式给出" class="headerlink" title="③、 由递推式给出"></a>③、 由递推式给出</h4><p>若 $\{x_n\}$ 由递推式 $x_n = f(x_{n-1})$ 给出，用【单调有界准则】。</p>
+<ul>
+<li>若 $\{x_n\}$ 单调增且有上界或者单调减且有下界 $\implies \lim\limits_{n \to \infty}x_n \text{ 存在 } \iff {x_n} \text{ 收敛 }$ 。</li>
 <li>设 $x_1 = 1, x_{n+1} = 1+ \dfrac{x_n}{1 + x_n} (n = 1, 2, …)$，证明 $\{x_n\}$ 收敛并求 $\lim\limits_{n \to \infty} x_n$。<ul>
 <li>先证存在，再求极限。</li>
 </ul>
@@ -609,8 +612,6 @@
 </ol>
 </li>
 </ul>
-</li>
-</ol>
 <p><br></p>
 <h2 id="六、极限的应用"><a href="#六、极限的应用" class="headerlink" title="六、极限的应用"></a>六、极限的应用</h2><p><br></p>
 <h4 id="1、基本常识"><a href="#1、基本常识" class="headerlink" title="1、基本常识"></a>1、基本常识</h4><ul>
@@ -622,7 +623,7 @@
 </ul>
 <p><br></p>
 <h4 id="2、连续的定义"><a href="#2、连续的定义" class="headerlink" title="2、连续的定义"></a>2、连续的定义</h4><ul>
-<li>若 $\lim\limits_{x \to x_0}f(x) = f(x_0)$，则 $f(x) $称在 $x = x_0$ 处连续。</li>
+<li>若 $\lim\limits_{x \to x_0}f(x) = f(x_0)$，则 $f(x) $ 称在 $x = x_0$ 处连续。</li>
 <li>【注】<ul>
 <li>$\lim\limits_{x \to x_0^+}f(x) = \lim\limits_{x \to x_0^-}f(x) = f(x_0)$ 三者相等才连续。</li>
 </ul>
@@ -650,7 +651,7 @@
 </li>
 </ul>
 </li>
-<li>求函数 $F(x) = \begin{cases} \dfrac{x(\pi + 2x)}{2 \cos x}, &amp; x \leq 0 \\ \sin\dfrac{1}{x^2 -1}, &amp; x &gt; 0 \end{cases}$ 的间断点，并判断它们的类型。<ol>
+<li>求函数 $F(x) = \begin{cases} \dfrac{x(\pi + 2x)}{2 \cos x}, &amp; x \leq 0 \\\\ \sin\dfrac{1}{x^2 -1}, &amp; x &gt; 0 \end{cases}$ 的间断点，并判断它们的类型。<ol>
 <li>分段点：$x = 0$<ul>
 <li>$\lim\limits_{x \to 0^-} \dfrac{x(\pi + 2x)}{2 \cos x} = 0 \not= \lim\limits_{x \to 0^+} \sin\dfrac{1}{x^2 -1} = -\sin 1$</li>
 <li>所以 $x = 0$ 为跳跃间断点</li>
@@ -684,13 +685,13 @@
 <div class="row justify-content-center">
     <nav class="m-pagination col-md-8 col-sm-24" role="pagination">
         
-        <a class="float-left" href="/2018/08/01/maths 1 极限 · 习题/" style="float: left;">
-            ← 极限 · 习题
+        <a class="float-left" href="/2018/08/02/maths 2 一元函数微分学/" style="float: left;">
+            ← 一元函数微分学
         </a>
         
         
-        <a class="float-right" href="/2018/06/29/hexo 使用 Hexo 搭建 Blog/">
-            使用 Hexo 搭建 Blog →
+        <a class="float-right" href="/2018/08/01/maths 1 极限 · 习题/">
+            极限 · 习题 →
         </a>
         
     </nav>
