@@ -369,13 +369,13 @@
 <div class="row justify-content-center">
     <nav class="m-pagination col-md-8 col-sm-24" role="pagination">
         
-        <a class="float-left" href="/2018/09/28/hexo 小 bug/" style="float: left;">
-            ← Hexo 小 bug
+        <a class="float-left" href="/2018/10/24/kaoyan 史纲/" style="float: left;">
+            ← 史纲
         </a>
         
         
-        <a class="float-right" href="/2018/09/28/plugin Chrome 插件/">
-            Chrome 插件 →
+        <a class="float-right" href="/2018/09/28/hexo 小 bug/">
+            Hexo 小 bug →
         </a>
         
     </nav>
@@ -392,7 +392,8 @@
         <!-- Catalog of Blog Titles -->
         <div id="div-side-navigation-left" class="col-lg-3 col-md-3" style="position: fixed; top: 46px; left: 0; padding-top: 0; padding-right: 50px" v-if="show">
             <div class="list-group" style="border-radius: 0; border: 1px solid rgba(0, 0, 0, 0.1)">
-                <a class="list-group-item list-group-item-action" :class="{linkFocus:header.fillColor}" style="padding: 1px 20px; border: 0; border-radius: 0" :href="IDToHref(header.id)" v-for="header in headers" @click="showChildren(header.index)">{{header.id}}</a>
+                <!-- <a class="list-group-item list-group-item-action" :class="{linkFocus:header.fillColor}" style="padding: 1px 20px; border: 0; border-radius: 0" :href="IDToHref(header.id)" v-for="header in headers" @click="showChildren(header.index)">{{header.id}}</a> -->
+                <a class="list-group-item list-group-item-action" style="padding: 1px 20px; border: 0; border-radius: 0" :href="IDToHref(header.id)" v-for="header in headers" @click="showChildren(header.index)">{{header.id}}</a>
             </div>
             <div class="width-100-pct height-5 visibility-hidden"></div>
             <div class="list-group" style="border-radius: 0; border: 1px solid rgba(0, 0, 0, 0.1)">

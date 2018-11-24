@@ -512,8 +512,8 @@
 <div class="row justify-content-center">
     <nav class="m-pagination col-md-8 col-sm-24" role="pagination">
         
-        <a class="float-left" href="/2018/08/30/maths n 高数 · 公式/" style="float: left;">
-            ← 高数 · 公式
+        <a class="float-left" href="/2018/08/30/maths n 高数 · 题/" style="float: left;">
+            ← 高数 · 题
         </a>
         
         
@@ -535,7 +535,8 @@
         <!-- Catalog of Blog Titles -->
         <div id="div-side-navigation-left" class="col-lg-3 col-md-3" style="position: fixed; top: 46px; left: 0; padding-top: 0; padding-right: 50px" v-if="show">
             <div class="list-group" style="border-radius: 0; border: 1px solid rgba(0, 0, 0, 0.1)">
-                <a class="list-group-item list-group-item-action" :class="{linkFocus:header.fillColor}" style="padding: 1px 20px; border: 0; border-radius: 0" :href="IDToHref(header.id)" v-for="header in headers" @click="showChildren(header.index)">{{header.id}}</a>
+                <!-- <a class="list-group-item list-group-item-action" :class="{linkFocus:header.fillColor}" style="padding: 1px 20px; border: 0; border-radius: 0" :href="IDToHref(header.id)" v-for="header in headers" @click="showChildren(header.index)">{{header.id}}</a> -->
+                <a class="list-group-item list-group-item-action" style="padding: 1px 20px; border: 0; border-radius: 0" :href="IDToHref(header.id)" v-for="header in headers" @click="showChildren(header.index)">{{header.id}}</a>
             </div>
             <div class="width-100-pct height-5 visibility-hidden"></div>
             <div class="list-group" style="border-radius: 0; border: 1px solid rgba(0, 0, 0, 0.1)">

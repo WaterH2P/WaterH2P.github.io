@@ -300,12 +300,12 @@
     
     
     <span class="tag is-info">
-        <a href='/tags/kaoyan/'>kaoyan</a>
+        <a href='/tags/maths/'>maths</a>
     </span>
     ,
     
     <span class="tag is-info">
-        <a href='/tags/maths/'>maths</a>
+        <a href='/tags/kaoyan/'>kaoyan</a>
     </span>
     ,
     
@@ -446,8 +446,8 @@ PQ = O \implies {\rm r}(P) + {\rm r}(Q) \leq 3 \implies 1 \leq {\rm r}(P) \leq 3
         </a>
         
         
-        <a class="float-right" href="/2018/08/30/maths n 高数 · 题/">
-            高数 · 题 →
+        <a class="float-right" href="/2018/08/30/maths n 高数 · 公式/">
+            高数 · 公式 →
         </a>
         
     </nav>
@@ -464,7 +464,8 @@ PQ = O \implies {\rm r}(P) + {\rm r}(Q) \leq 3 \implies 1 \leq {\rm r}(P) \leq 3
         <!-- Catalog of Blog Titles -->
         <div id="div-side-navigation-left" class="col-lg-3 col-md-3" style="position: fixed; top: 46px; left: 0; padding-top: 0; padding-right: 50px" v-if="show">
             <div class="list-group" style="border-radius: 0; border: 1px solid rgba(0, 0, 0, 0.1)">
-                <a class="list-group-item list-group-item-action" :class="{linkFocus:header.fillColor}" style="padding: 1px 20px; border: 0; border-radius: 0" :href="IDToHref(header.id)" v-for="header in headers" @click="showChildren(header.index)">{{header.id}}</a>
+                <!-- <a class="list-group-item list-group-item-action" :class="{linkFocus:header.fillColor}" style="padding: 1px 20px; border: 0; border-radius: 0" :href="IDToHref(header.id)" v-for="header in headers" @click="showChildren(header.index)">{{header.id}}</a> -->
+                <a class="list-group-item list-group-item-action" style="padding: 1px 20px; border: 0; border-radius: 0" :href="IDToHref(header.id)" v-for="header in headers" @click="showChildren(header.index)">{{header.id}}</a>
             </div>
             <div class="width-100-pct height-5 visibility-hidden"></div>
             <div class="list-group" style="border-radius: 0; border: 1px solid rgba(0, 0, 0, 0.1)">
