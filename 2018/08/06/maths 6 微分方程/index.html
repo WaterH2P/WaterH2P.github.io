@@ -175,7 +175,7 @@
             user-select:none;
         }
         .linkFocus:hover {
-            cursor: auto;
+            /* cursor: auto; */
             background-color: #5fefe8;
         }
 
@@ -547,8 +547,7 @@
         <!-- Catalog of Blog Titles -->
         <div id="div-side-navigation-left" class="col-lg-3 col-md-3" style="position: fixed; top: 46px; left: 0; padding-top: 0; padding-right: 50px" v-if="show">
             <div class="list-group" style="border-radius: 0; border: 1px solid rgba(0, 0, 0, 0.1)">
-                <!-- <a class="list-group-item list-group-item-action" :class="{linkFocus:header.fillColor}" style="padding: 1px 20px; border: 0; border-radius: 0" :href="IDToHref(header.id)" v-for="header in headers" @click="showChildren(header.index)">{{header.id}}</a> -->
-                <a class="list-group-item list-group-item-action" style="padding: 1px 20px; border: 0; border-radius: 0" :href="IDToHref(header.id)" v-for="header in headers" @click="showChildren(header.index)">{{header.id}}</a>
+                <a class="list-group-item list-group-item-action" :class="{linkFocus:header.fillColor}" style="padding: 1px 20px; border: 0; border-radius: 0" :href="IDToHref(header.id)" v-for="header in headers" @click="showChildren(header.index)">{{header.id}}</a>
             </div>
             <div class="width-100-pct height-5 visibility-hidden"></div>
             <div class="list-group" style="border-radius: 0; border: 1px solid rgba(0, 0, 0, 0.1)">
@@ -777,24 +776,5 @@
             $('html').animate({scrollTop: 0}, 'slow');
         }
     </script>
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<!-- <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
-<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script> -->
-<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
-<!-- <script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
-
 </body>
 </html>
