@@ -373,6 +373,9 @@ $\begin{array}{l} ( {\rm A} ) \, 1 \qquad & ( {\rm B} ) \, 2 \\\\ ( {\rm C} ) \,
 <p><br></p>
 <h4 id="㊈"><a href="#㊈" class="headerlink" title="㊈"></a>㊈</h4><p>$f(x) = \dfrac{\mid x \mid^x - 1}{x \, (x+1) \ln \mid x \mid}$ 的可去间断点的个数为 <strong>____</strong> 。</p>
 <p><br></p>
+<h4 id="Ⅹ"><a href="#Ⅹ" class="headerlink" title="Ⅹ"></a>Ⅹ</h4><p>设 $f(x)$ 二阶可导，$f’(0)=0, \, f’’(0)=2$，计算</p>
+<script type="math/tex; mode=display">
+\lim\limits_{x \to 0} \dfrac{ f(\sin x) - f(x) }{x^4}</script><p><br></p>
 <h2 id="三、参考答案"><a href="#三、参考答案" class="headerlink" title="三、参考答案"></a>三、参考答案</h2><p><br></p>
 <h4 id="㊀-2"><a href="#㊀-2" class="headerlink" title="㊀"></a>㊀</h4><ul>
 <li>由题可知 $x_n &gt; 0$ 且 $x_n$ 单调减，因此 $\lim\limits_{n \to \infty} x_n$ 存在</li>
@@ -478,6 +481,8 @@ n \cdot (n+1)^{-1} < \sum\limits_{k=1}^n (n^k + 1)^{ -(1/k) } < n \cdot (n^n + 1
 <p>由题可知，只考虑无定义点 $x=0, \, -1, \, 1$ 。</p>
 <p>$\begin{array}{l} \lim\limits_{x \to 0} \dfrac{\mid x \mid^x - 1}{x \, (x+1) \ln \mid x \mid} = \dfrac{ e^{x \ln \mid x \mid} - 1}{x \, (x+1) \ln \mid x \mid} = \lim\limits_{x \to 0} \dfrac{x \ln \mid x \mid}{x \, (x+1) \ln \mid x \mid} = 1 \\\\ \lim\limits_{x \to -1} \dfrac{\mid x \mid^x - 1}{x \, (x+1) \ln \mid x \mid} = \dfrac{ e^{x \ln \mid x \mid} - 1}{x \, (x+1) \ln \mid x \mid} = \lim\limits_{x \to -1} \dfrac{x \ln \mid x \mid}{x \, (x+1) \ln \mid x \mid} = \infty \\\\ \lim\limits_{x \to 1} \dfrac{\mid x \mid^x - 1}{x \, (x+1) \ln \mid x \mid} = \dfrac{ e^{x \ln \mid x \mid} - 1}{x \, (x+1) \ln \mid x \mid} = \lim\limits_{x \to 1} \dfrac{x \ln \mid x \mid}{x \, (x+1) \ln \mid x \mid} = \dfrac{1}{2} \end{array}$ </p>
 <p>所以 $x=0, \, 1$ 是可去间断点。</p>
+<p><br></p>
+<h4 id="Ⅹ-1"><a href="#Ⅹ-1" class="headerlink" title="Ⅹ"></a>Ⅹ</h4><p>$\begin{array}{l} \lim\limits_{x \to 0} \dfrac{ f(\sin x) - f(x) }{x^4} &amp;= \lim\limits_{x \to 0} \dfrac{1}{x^3} \left[ \dfrac{ f(\sin x) - f(0) }{\sin x} \cdot \dfrac{\sin x}{x} - \dfrac{f(x) - f(0)}{x-0} \right] \\\\ &amp;= \lim\limits_{x \to 0} \dfrac{1}{x^3} \left[ f’(x) \cdot \dfrac{\sin x}{x} - f’(x) \right] \\\\ &amp;= \lim\limits_{x \to 0} \dfrac{1}{x^3} \cdot f’(x) \cdot \dfrac{\sin x - x}{x} \\\\ &amp;= \lim\limits_{x \to 0} -\dfrac{1}{6} \cdot \dfrac{ f’(x) - f’(0) }{x} \\\\ &amp;= \lim\limits_{x \to 0} -\dfrac{1}{6} f’’(x) \\\\ &amp;= -\dfrac{1}{3} \end{array}$ </p>
 
                 </div>
             </div>
@@ -740,5 +745,24 @@ n \cdot (n+1)^{-1} < \sum\limits_{k=1}^n (n^k + 1)^{ -(1/k) } < n \cdot (n^n + 1
             $('html').animate({scrollTop: 0}, 'slow');
         }
     </script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<!-- <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script> -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+<!-- <script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+
 </body>
 </html>

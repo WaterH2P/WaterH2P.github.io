@@ -2,7 +2,7 @@
 
     
 <head>
-    <title>Tag: ssr | H2P&#39;S BLOG</title>
+    <title>一元函数微积分学 · 应用 | H2P&#39;S BLOG</title>
     <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -42,7 +42,7 @@
 </head>
 
     <!--
-    <body class="home-template">
+    <body class="post-template">
     -->
 <body id="index" class="lightnav animsition">
     <!-- 返回页面顶端 -->
@@ -281,65 +281,286 @@
     </script>
     <!-- ============================ END Tap Blog's Links ============================ -->
     
-    <!-- ============================ Hero Image =========================== -->
-
-    <section id="hero" class="scrollme">
-        <div class="container-fluid element-img" style="background: url(/img/zly_wb_small.jpg) no-repeat center center fixed;background-size: cover">
-            <div class="herofade beige-dk"></div>
-        </div>
-    </section>
-
-    <!-- Height spacing helper -->
-    <!-- <div class="heightblock"></div> -->
-    <!-- // End height spacing helper -->
-
-    <!-- ============================ END Hero Image =========================== -->
-
     
-
-    
-    <section id="services">
+    <section id="intro">
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-lg-8 col-md-8 col-sm-10">
+                <div class="col-lg-8 col-md-10 col-sm-12">
                     
-                        <h1> ssr </h1>
-                        <hr class="nogutter">
-                    
-                    <div class="row boxes">
+<span class="post-meta">
+    <!-- blog 的 date -->
+    
+        <span>
+            2018-08-02
+        </span>
+        <span>&nbsp;&nbsp;</span>
+    
+    <!-- blog 的 tags -->
+    
+    
+    
+    <span class="tag is-info">
+        <a href='/tags/kaoyan/'>kaoyan</a>
+    </span>
+    ,
+    
+    <span class="tag is-info">
+        <a href='/tags/maths/'>maths</a>
+    </span>
+    ,
+    
+    <span class="tag is-info">
+        <a href='/tags/高数/'>高数</a>
+    </span>
+    
+    
+    
+</span>
+
+                    <h1>一元函数微积分学 · 应用</h1>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8 col-md-10 col-sm-12">
+                    <div class="div-message div-desc">
+                        
+                            <span>做笔记，喝凉茶，做习题</span>
+                            <br>
                         
                         
-                            
-                            
-                            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
-                                <div class="card hover-box-shadow card-blog">
-                                    <div class="card-body" style="padding: 15px">
-                                        <h4 class="title"><a href="/2018/08/29/看Q外的风景/">看 Q 外的风景</a></h4>
-                                        <p><time datetime="2018-08-28T16:00:00.000Z"><a href="/2018/08/29/看Q外的风景/">2018-08-29</a></time></p>
-                                    </div>
-                                </div>
-                            </div>
+                            <span>最近更新：2018-11-25</span>
+                            <br>
+                        
                         
                     </div>
-                    <hr class="nogutter">
                 </div>
             </div>
             <div class="row justify-content-center">
-                <div class="col-lg-8 col-md-8 col-sm-10">
-                    
-                    
+                <div class="col-lg-8 col-md-10 col-sm-12">
+                    <!-- 
+$\begin{array}{l} ( {\rm A} ) \, 1 \qquad & ( {\rm B} ) \, 2 \\\\ ( {\rm C} ) \, 3 \qquad & ( {\rm D} ) \, 4 \end{array}$ 
+-->
+<!-- 
+$\begin{array}{l} \end{array}$
+-->
+<!-- 
+⭐
+️ -->
+<h2 id="一、几何应用"><a href="#一、几何应用" class="headerlink" title="一、几何应用"></a>一、几何应用</h2><p><br></p>
+<h4 id="Ⅰ、极值"><a href="#Ⅰ、极值" class="headerlink" title="Ⅰ、极值"></a>Ⅰ、极值</h4><p><img src="./images/极值判别法.png" width="80%"></p>
+<p><br></p>
+<h6 id="1、证明判别法二"><a href="#1、证明判别法二" class="headerlink" title="1、证明判别法二"></a>1、证明判别法二</h6><p>构造 $\lim\limits_{x \to x_0} \dfrac{ f(x) - f(x_0) }{ (x-x_0)^2 }$ </p>
+<p>由于函数二阶可导，所以 $\lim\limits_{x \to x_0} \dfrac{ f(x) - f(x_0) }{ (x-x_0)^2 } = \dfrac{1}{2} \lim\limits_{x \to x_0} \dfrac{ f’(x) }{x-x_0}$ </p>
+<p>由于 $f’(x_0) = 0$，所以 $\dfrac{1}{2} \lim\limits_{x \to x_0} \dfrac{ f’(x) }{x-x_0} = \dfrac{1}{2} \lim\limits_{x \to x_0} \dfrac{ f’(x) - f’(x_0) }{x-x_0} = \dfrac{1}{2} f’’(x_0)$ </p>
+<p>由于 $\dfrac{1}{2} f’’(x_0)$ 存在，所以 $\lim\limits_{x \to x_0} \dfrac{ f(x) - f(x_0) }{ (x-x_0)^2 }$ 存在。</p>
+<p>则 $x \to x_0$ 时， $\begin{cases} f’’(x_0) &gt; 0 \implies \dfrac{ f(x) - f(x_0) }{ (x-x_0)^2 } &gt; 0 \implies f(x) &gt; f(x_0) \\\\ f’’(x_0) &lt; 0 \implies \dfrac{ f(x) - f(x_0) }{ (x-x_0)^2 } &lt; 0 \implies f(x) &lt; f(x_0) \end{cases}$ </p>
+<p><br></p>
+<h4 id="Ⅱ、拐点"><a href="#Ⅱ、拐点" class="headerlink" title="Ⅱ、拐点"></a>Ⅱ、拐点</h4><p>凹曲线和凸曲线的分界点</p>
+<p><img src="./images/拐点判别法.png" width="80%"></p>
+<p><br></p>
+<h6 id="1、证明判别法二-1"><a href="#1、证明判别法二-1" class="headerlink" title="1、证明判别法二"></a>1、证明判别法二</h6><p>构造 $\lim\limits_{x \to x_0} \dfrac{ f’’(x) - f’’(x_0) }{x-x_0} = f’’’(x_0)$ </p>
+<p>则 $x \to x_0$ 时， $\begin{cases} f’’’(x_0) &gt; 0 \implies \begin{cases} x &lt; x_0 \implies f’’(x) &lt; 0 \\\\ x &gt; x_0 \implies f’’(x) &gt; 0 \end{cases} \\\\ f’’’(x_0) &lt; 0 \implies \begin{cases} x &lt; x_0 \implies f’’(x) &gt; 0 \\\\ x &gt; x_0 \implies f’’(x) &lt; 0 \end{cases} \end{cases}$ </p>
+<p><br></p>
+<h4 id="Ⅲ、渐近线"><a href="#Ⅲ、渐近线" class="headerlink" title="Ⅲ、渐近线"></a>Ⅲ、渐近线</h4><p><img src="./images/渐近线.png" width="80%"></p>
+<p><br></p>
+<h4 id="Ⅳ、最值点"><a href="#Ⅳ、最值点" class="headerlink" title="Ⅳ、最值点"></a>Ⅳ、最值点</h4><p><img src="./images/最值点.png" width="80%"></p>
+<p><br></p>
+<h6 id="sinx-面积"><a href="#sinx-面积" class="headerlink" title="sinx 面积"></a>sinx 面积</h6><p>$(0, \pi)$</p>
+<p><img src="./images/sinx 面积.png" width="60%"></p>
+<p><br></p>
+<h4 id="Ⅴ、平面图形的面积"><a href="#Ⅴ、平面图形的面积" class="headerlink" title="Ⅴ、平面图形的面积"></a>Ⅴ、平面图形的面积</h4><p><br></p>
+<h4 id="Ⅵ、旋转体的体积"><a href="#Ⅵ、旋转体的体积" class="headerlink" title="Ⅵ、旋转体的体积"></a>Ⅵ、旋转体的体积</h4><p><img src="./images/旋转体体积 1.png" width="60%"></p>
+<p><br></p>
+<h4 id="Ⅶ、⭐平均值"><a href="#Ⅶ、⭐平均值" class="headerlink" title="Ⅶ、⭐平均值"></a>Ⅶ、⭐平均值</h4><p>$f(x)$ 在 $[a, \, b]$ 上的平均值 $\overline{f} = \dfrac{ \int_a^b f(x) \, {\rm d}x }{b-a}$ 。</p>
+<p><br></p>
+<h2 id="二、逻辑证明"><a href="#二、逻辑证明" class="headerlink" title="二、逻辑证明"></a>二、逻辑证明</h2><p><br></p>
+<h4 id="Ⅰ、中值定理"><a href="#Ⅰ、中值定理" class="headerlink" title="Ⅰ、中值定理"></a>Ⅰ、中值定理</h4><p><br></p>
+<h2 id="练习题"><a href="#练习题" class="headerlink" title="练习题"></a>练习题</h2><p><br></p>
+<h4 id="渐近线"><a href="#渐近线" class="headerlink" title="渐近线"></a>渐近线</h4><p>曲线 $y = \sqrt{4x^2 + x} \ln \left( 2 + \dfrac{1}{x} \right)$ 的渐近线有 <strong>____</strong> 条。</p>
+<p><br></p>
+<h4 id="平面图形的面积"><a href="#平面图形的面积" class="headerlink" title="平面图形的面积"></a>平面图形的面积</h4><p>设 </p>
+<script type="math/tex; mode=display">
+g(x) = \lim\limits_{t \to +\infty} \left( \dfrac{xt+1}{xt+2} \right)^{x^3t}, \quad f(x) = \int_0^x g(t) \, {\rm d}t</script><p>1️⃣ 证明 $y=f(x)$ 为奇函数，并求其曲线的水平渐近线。2️⃣ 求曲线 $y=f(x)$ 与它所有水平渐近线及 $y$ 轴围成图形的面积。</p>
+<p><br></p>
+<h4 id="旋转体的体积"><a href="#旋转体的体积" class="headerlink" title="旋转体的体积"></a>旋转体的体积</h4><p>设</p>
+<script type="math/tex; mode=display">
+f(x) = \lim\limits_{n \to \infty} \dfrac{x}{e^{-nx} - (x^2+1)}</script><p>求曲线 $y=f(x)$ 与直线 $y=-\dfrac{\pi}{2}$ 所围成平面图形绕 $x$ 轴旋转所成旋转体的体积。</p>
+<p><br></p>
+<h4 id="中值定理"><a href="#中值定理" class="headerlink" title="中值定理"></a>中值定理</h4><p>设 $x&gt;0$，若 $xe^y = e^x - 1$，证明 $0&lt;y&lt;x$。</p>
+<p><br></p>
+<h2 id="参考答案"><a href="#参考答案" class="headerlink" title="参考答案"></a>参考答案</h2><p><br></p>
+<h4 id="渐近线-1"><a href="#渐近线-1" class="headerlink" title="渐近线"></a>渐近线</h4><p>$3$ 条，$1$ 条铅垂，$2$ 条倾斜。</p>
+<p><br></p>
+<h4 id="平面图形的面积-1"><a href="#平面图形的面积-1" class="headerlink" title="平面图形的面积"></a>平面图形的面积</h4><p>1️⃣ </p>
+<p>$\lim\limits_{t \to +\infty} \left( \dfrac{xt+1}{xt+2} \right)^{x^3t} = {\rm exp} \left\{ \lim\limits_{t \to +\infty} \dfrac{-x^3 t}{xt+2} \right\} = e^{-x^2}$ $\implies$ $\begin{cases} g(x) = e^{-x^2} \\\\ f(x) = \int_0^x e^{-t^2} \, {\rm d}t \end{cases}$ </p>
+<p>$f(x)$ 为奇函数，且水平渐近线为 $y = \dfrac{ \sqrt{\pi} }{2}$ 和 $y = -\dfrac{ \sqrt{\pi} }{2}$ 。</p>
+<p>2️⃣ </p>
+<p>$\begin{array}{l} S &amp;= 2 \int_0^{+\infty} \left[ \dfrac{ \sqrt{\pi} }{2} - \int_0^x e^{-t^2} \, {\rm d}t \right] \, {\rm d}x \\\\ &amp;= 2x \left. \left[ \dfrac{ \sqrt{\pi} }{2} - \int_0^x e^{-t^2} \, {\rm d}t \right] \right|_0^{+\infty} + 2 \int_0^{+\infty} x e^{-x^2} \, {\rm d}x \\\\ &amp;= 2 \lim\limits_{x \to +\infty} x \left[ \dfrac{ \sqrt{\pi} }{2} - \int_0^x e^{-t^2} \, {\rm d}t \right] + 1 \\\\ &amp;= 1 \end{array}$ </p>
+<ul>
+<li>其中：<ul>
+<li>$\begin{array}{l} \lim\limits_{x \to +\infty} x \left[ \dfrac{ \sqrt{\pi} }{2} - \int_0^x e^{-t^2} \, {\rm d}t \right] &amp;= \lim\limits_{x \to +\infty} \dfrac{ \dfrac{ \sqrt{\pi} }{2} - \int_0^x e^{-t^2} \, {\rm d}t }{ 1/x } \\\\ &amp;= \lim\limits_{x \to +\infty} \dfrac{x^2}{ e^{x^2} } = 0 \end{array}$ </li>
+<li>$\begin{array}{l} 2 \int_0^{+\infty} x e^{-x^2} \, {\rm d}x &amp;= -\int_0^{+\infty} e^{-x^2} \, {\rm d}(-x^2) \\\\ &amp;= \left. -e^{-x^2} \right|_0^{+\infty} \\\\ &amp;= 1 \end{array}$ </li>
+</ul>
+</li>
+</ul>
+<p><br></p>
+<h4 id="旋转体的体积-1"><a href="#旋转体的体积-1" class="headerlink" title="旋转体的体积"></a>旋转体的体积</h4><p>$f(x) = \begin{cases} 0, \quad &amp; x<0 \\\\="" -\dfrac{x}{x^2+1},="" \quad="" &="" x="">0 \end{cases}$ </0></p>
+<p><img src="./images/旋转体体积 例题.jpg" width="60%"></p>
+<p>$\begin{array}{l} V &amp;= \int_0^1 \pi \left( \dfrac{x}{x^2+1} \right)^2 \, {\rm d}x - \dfrac{1}{3} \cdot \pi \cdot \left( \dfrac{1}{2} \right)^2 \\\\ &amp;= \dfrac{\pi^2}{8} - \dfrac{\pi}{4} - \dfrac{\pi}{12} \\\\ &amp;= \dfrac{\pi^2}{8} - \dfrac{\pi}{3} \end{array}$</p>
+<ul>
+<li>其中<ul>
+<li>令 $x=\tan t$ </li>
+<li>$\begin{array}{l} \int_0^1 \pi \left( \dfrac{x}{x^2+1} \right)^2 \, {\rm d}x &amp;= \pi \int_0^{\pi/4} \dfrac{\tan^2 t}{\sec^4 t} \cdot \sec^2 t \, {\rm d}t \\\\ &amp;= \pi \int_0^{\pi/4} \sin^2 t \, {\rm d}t \\\\ &amp;= \dfrac{\pi^2}{8} - \dfrac{\pi}{4} \end{array}$</li>
+</ul>
+</li>
+</ul>
+<p><br></p>
+<h4 id="中值定理-1"><a href="#中值定理-1" class="headerlink" title="中值定理"></a>中值定理</h4>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+            <hr class="nogutter">
+            
+<!-- 当前博客前后两篇博客 -->
+<div class="row justify-content-center">
+    <nav class="m-pagination col-md-8 col-sm-24" role="pagination">
+        
+        <a class="float-left" href="/2018/08/02/maths 2 一元函数微分学/" style="float: left;">
+            ← 一元函数微分学
+        </a>
+        
+        
+        <a class="float-right" href="/2018/08/02/maths 2 一元函数微积分学 · 习题/">
+            一元函数微积分学 · 习题 →
+        </a>
+        
+    </nav>
+</div>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-8 col-md-10 col-sm-12">
+                    <script type="text/javascript"></script>
+
                 </div>
             </div>
         </div>
+
+        <!-- Catalog of Blog Titles -->
+        <div id="div-side-navigation-left" class="col-lg-3 col-md-3" style="position: fixed; top: 46px; left: 0; padding-top: 0; padding-right: 50px" v-if="show">
+            <div class="list-group" style="border-radius: 0; border: 1px solid rgba(0, 0, 0, 0.1)">
+                <a class="list-group-item list-group-item-action" :class="{linkFocus:header.fillColor}" style="padding: 1px 20px; border: 0; border-radius: 0" :href="IDToHref(header.id)" v-for="header in headers" @click="showChildren(header.index)">{{header.id}}</a>
+            </div>
+            <div class="width-100-pct height-5 visibility-hidden"></div>
+            <div class="list-group" style="border-radius: 0; border: 1px solid rgba(0, 0, 0, 0.1)">
+                <div v-for="header in headers">
+                    <transition 
+                        enter-active-class="animated slideInUp"
+                        leave-active-class="">
+                        <div v-if="header.show">
+                            <a class="list-group-item list-group-item-action" style="padding: 1px 20px; border: 0; border-radius: 0" :href="IDToHref(child.id)" v-for="child in header.children">{{child.id}}</a>
+                        </div>
+                    </transition>
+                </div>
+            </div>
+        </div>
+        <!-- End Catalog of Blog Titles -->
+
     </section>
     
-    <section id="statement">
-        <div class="container text-center wow fadeInUp" data-wow-delay="0.5s">
-            <div class="row justify-content-center">
-                <p>给岁月以文明，给时光以生命。</p>
-            </div>
-        </div>
-    </section>
+    <!-- Catalog of Blog Titles Script -->
+    <script>
+        'use strict';
+
+        var min_width = 1050;
+        $(function(){
+            var width = $(window).width();
+            if( width > min_width ){
+                div_side_navigation_left.show = true;
+            }
+            else {
+                div_side_navigation_left.show = false;
+            }
+            
+            // 对于目录索引
+            var preH2 = undefined;
+            var num_map = [ '零', '一', '二', '三', '四', '五', '六', '七', '八', '九' ];
+            var h2s = $('h2');
+            var numOfH2 = h2s.length;
+            for(var i=0; i<numOfH2; i++){
+                var h2 = h2s[i];
+                var text = $(h2).text().toString();
+                var header = text.indexOf('、') > 0 ? text.split('、')[1] : 
+                    text.indexOf('.') > 0 ? text.split('.')[1] : text;
+                var id = num_map[i + 1] + '. ' + header + '';
+                $(h2).attr('id', id);
+
+                var h4s = [];
+                if(i<numOfH2-1){
+                    var h2Next = h2s[i+1];
+                    h4s = $(h2).nextUntil(h2Next, 'h4');
+                }
+                else{
+                    h4s = $(h2).nextAll('h4');
+                }
+
+                var h2Children = [];
+                h4s.each(function(index, element){
+                    var childText = $(element).text().toString();
+                    var childHeader = childText.indexOf('、') > 0 ? childText.split('、')[1] : 
+                        childText.indexOf('.') > 0 ? childText.split('.')[1] : childText;
+                    var childId = (index+1) + '. ' + childHeader;
+                    $(element).attr('id', childId);
+                    h2Children[index] = {'id':childId};
+                });
+                var fillColor = i===0 ? true : false;
+                var show = i===0 ? true : false;
+                var header = {'id':id, 'index':i, 'fillColor':fillColor, 'show':show, 'children': h2Children};
+
+                div_side_navigation_left.headers.push(header);
+            }
+        });
+
+        $(window).resize(function(){
+            var width = $(window).width();
+            if( width > min_width ){
+                div_side_navigation_left.show = true;
+            }
+            else {
+                div_side_navigation_left.show = false;
+            }
+        });
+        
+        var div_side_navigation_left = new Vue({
+            el : '#div-side-navigation-left',
+            data : {
+                currentIndex : 0,
+                show : true,
+                headers : []
+            },
+            methods : {
+                IDToHref : function(id){
+                    return "#" + id;
+                },
+                showChildren : function(index){
+                    if(div_side_navigation_left.currentIndex==index){
+                        return;
+                    }
+                    var currentShow = div_side_navigation_left.headers[div_side_navigation_left.currentIndex];
+                    currentShow['fillColor'] = false;
+                    currentShow['show'] = false;
+                    Vue.set(div_side_navigation_left.headers, div_side_navigation_left.currentIndex, currentShow);
+
+                    div_side_navigation_left.currentIndex = index;
+                    var newShow = div_side_navigation_left.headers[index];
+                    newShow['fillColor'] = true;
+                    newShow['show'] = true;
+                    Vue.set(div_side_navigation_left.headers, index, newShow);
+                }
+            }
+        });
+    </script>
+    <!-- End Catalog of Blog Titles Script -->
+
 
     
 <!-- ============================ Footer =========================== -->
