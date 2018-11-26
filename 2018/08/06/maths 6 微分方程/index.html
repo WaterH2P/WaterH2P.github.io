@@ -451,14 +451,14 @@ $\begin{array}{l} \end{array}$
 <ol>
 <li>照搬 ㊀ 求 $y_{ \text{齐次通解} }$ </li>
 <li>$y^\ast = e^{\alpha x} \cdot Q_n(x) \cdot x^k$ <ul>
-<li>$ Q_n(x)$ 为 $x$ 的 $n$ 次待定系数的一般多项式<ul>
-<li>若 $P_3 (x) = x^3 - 1$ ，则 $ Q_3(x) = ax^3 + bx^2 + cx + d$ 。</li>
+<li>$Q_n(x)$ 为 $x$ 的 $n$ 次待定系数的一般多项式<ul>
+<li>若 $P_3 (x) = x^3 - 1$ ，则 $Q_3(x) = ax^3 + bx^2 + cx + d$ 。</li>
 </ul>
 </li>
 <li>$k$ 值的确定<ol>
 <li>看：自由项 $e^{\alpha x} P_n(x)$ 中的 $\alpha$ </li>
 <li>计算： $\lambda_1, \lambda_2$ （在上面已经计算过了）</li>
-<li>比较： $\begin{array}{l} \\ k = \begin{cases} 0 , &amp; \alpha \not= \lambda_1, \alpha \not= \lambda_2 \\ 1, &amp; \alpha = \lambda_1 \text{ 或 } \lambda_2 \\ 2, &amp; \alpha = \lambda_1 = \lambda_2 \end{cases} \end{array}$ </li>
+<li>比较： $\begin{array}{l} \\ k = \begin{cases} 0 , &amp; \alpha \not= \lambda_1, \alpha \not= \lambda_2 \\\\ 1, &amp; \alpha = \lambda_1 \text{ 或 } \lambda_2 \\\\ 2, &amp; \alpha = \lambda_1 = \lambda_2 \end{cases} \end{array}$ </li>
 </ol>
 </li>
 </ul>
@@ -530,8 +530,8 @@ $\begin{array}{l} \end{array}$
         </a>
         
         
-        <a class="float-right" href="/2018/08/05/maths 5 二重积分/">
-            二重积分 →
+        <a class="float-right" href="/2018/08/05/maths 5 二重积分 · 习题/">
+            二重积分 · 习题 →
         </a>
         
     </nav>
@@ -777,24 +777,5 @@ $\begin{array}{l} \end{array}$
             $('html').animate({scrollTop: 0}, 'slow');
         }
     </script>
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<!-- <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
-<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script> -->
-<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
-<!-- <script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
-
 </body>
 </html>

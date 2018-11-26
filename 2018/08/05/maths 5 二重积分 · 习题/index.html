@@ -349,15 +349,19 @@ $\begin{array}{l} \end{array}$
 <!-- 
 ⭐
 ㊀ ㊁ ㊂ ㊃ ㊄ ㊅ ㊆ ㊇ ㊈
+
+<img src="" width="80%">
 ️ -->
 <p>概念与对称性：4</p>
 <p>计算（直角坐标系，极坐标系）：10</p>
+<p>【沉浸在计算当中】</p>
 <p><br></p>
 <h2 id="一、概念"><a href="#一、概念" class="headerlink" title="一、概念"></a>一、概念</h2><p><br></p>
 <h2 id="二、对称性"><a href="#二、对称性" class="headerlink" title="二、对称性"></a>二、对称性</h2><p><br></p>
 <h4 id="㊀、普通对称性"><a href="#㊀、普通对称性" class="headerlink" title="㊀、普通对称性"></a>㊀、普通对称性</h4><p><img src="https://github.com/WaterH2P/WaterH2P.github.io/raw/master/img/images/%E4%BA%8C%E9%87%8D%E7%A7%AF%E5%88%86%20%E6%99%AE%E9%80%9A%E5%AF%B9%E7%A7%B0%E6%80%A7.jpg" width="70%"></p>
 <p><br></p>
 <h4 id="㊁、轮换对称性"><a href="#㊁、轮换对称性" class="headerlink" title="㊁、轮换对称性"></a>㊁、轮换对称性</h4><p>【定义】</p>
+<p>只在直角坐标系下使用</p>
 <ul>
 <li>若将 $D$ 中的 $x$ 与 $y$ 对调发现 $D$ 不变，则 $\iint\limits_D f(x, y) \, {\rm d}x {\rm d}y = \iint\limits_D f(y, x) \, {\rm d}x {\rm d}y$ <ul>
 <li>关于 $y = x$ 对称</li>
@@ -365,14 +369,30 @@ $\begin{array}{l} \end{array}$
 </li>
 </ul>
 <p><br></p>
+<h4 id="㊂、平面图形的形心"><a href="#㊂、平面图形的形心" class="headerlink" title="㊂、平面图形的形心"></a>㊂、平面图形的形心</h4><script type="math/tex; mode=display">
+\overline{x} = \dfrac{ \iint\limits_D x \, {\rm d}\sigma }{ \iint\limits_D \, {\rm d}\sigma }, \quad \overline{y} = \dfrac{ \iint\limits_D y \, {\rm d}\sigma }{ \iint\limits_D \, {\rm d}\sigma }</script><p><br></p>
 <h2 id="、练习题"><a href="#、练习题" class="headerlink" title="、练习题"></a>、练习题</h2><p><br></p>
 <h4 id="㊀、轮换对称性"><a href="#㊀、轮换对称性" class="headerlink" title="㊀、轮换对称性"></a>㊀、轮换对称性</h4><p>设 $f(x)$ 在 $[a, \, b]$ 上连续且单调增加，证明</p>
 <script type="math/tex; mode=display">
-\iint_D y f(y) \, {\rm d}\sigma > \dfrac{b^2 - a^2}{2} \int_a^b f(x) \, {\rm d}x</script><p>其中 $D = \{ (x, \, y) \mid a \leq x \leq b, \, a \leq y \leq b \}$。</p>
+\iint\limits_D y f(y) \, {\rm d}\sigma > \dfrac{b^2 - a^2}{2} \int_a^b f(x) \, {\rm d}x</script><p>其中 $D = \{ (x, \, y) \mid a \leq x \leq b, \, a \leq y \leq b \}$。</p>
 <p><br></p>
+<h4 id="㊁"><a href="#㊁" class="headerlink" title="㊁"></a>㊁</h4><p>设平面区域 $D$ 由曲线</p>
+<script type="math/tex; mode=display">
+\begin{cases} x = t - \sin t \\\\ y = 1 - \cos t \end{cases}, \quad (0 \leq t \leq 2\pi)</script><p>与 $x$ 轴围成，计算二重积分</p>
+<script type="math/tex; mode=display">
+\iint\limits_D (x + 2y) \, {\rm d}x \, {\rm d}y.</script><p><br></p>
 <h2 id="、参考答案"><a href="#、参考答案" class="headerlink" title="、参考答案"></a>、参考答案</h2><p><br></p>
-<h4 id="㊀、轮换对称性-1"><a href="#㊀、轮换对称性-1" class="headerlink" title="㊀、轮换对称性"></a>㊀、轮换对称性</h4><p>$\begin{array}{l} \\ &amp; \dfrac{b^2 - a^2}{2} = \int_a^b x \, {\rm d}x, \; \int_a^b f(x) \, {\rm d}x = \int_a^b f(y) \, {\rm d}y \\\\ \text{右边} &amp;= \int_a^b x \, {\rm d}x \, \int_a^b f(y) \, {\rm d}y \\\\ &amp; = \iint_D xf(y) \, {\rm d}\sigma \end{array}$ </p>
-<p>$\begin{array}{l} \\ &amp; \iint_D y f(y) \, {\rm d}\sigma &gt; \iint_D xf(y) \, {\rm d}\sigma \\\\ \implies &amp; \iint_D (y - x)f(y) \, {\rm d}\sigma &gt; 0 \\\\ \iff &amp; \iint_D (x - y)f(x) \, {\rm d} \sigma = I \\\\ \implies &amp; 2I = \iint_D (y - x)\left[ f(y) - f(x) \right] \, {\rm d} \sigma &gt; 0 \\\\ \implies &amp; I &gt; 0 \implies \text{ 左边 } &gt; \text{ 右边 } \end{array}$</p>
+<h4 id="㊀、轮换对称性-1"><a href="#㊀、轮换对称性-1" class="headerlink" title="㊀、轮换对称性"></a>㊀、轮换对称性</h4><p>$\begin{array}{l} \\ &amp; \dfrac{b^2 - a^2}{2} = \int_a^b x \, {\rm d}x, \; \int_a^b f(x) \, {\rm d}x = \int_a^b f(y) \, {\rm d}y \\\\ \text{右边} &amp;= \int_a^b x \, {\rm d}x \, \int_a^b f(y) \, {\rm d}y \\\\ &amp; = \iint\limits_D xf(y) \, {\rm d}\sigma \end{array}$ </p>
+<p>$\begin{array}{l} \\ &amp; \iint\limits_D y f(y) \, {\rm d}\sigma &gt; \iint\limits_D xf(y) \, {\rm d}\sigma \\\\ \implies &amp; \iint\limits_D (y - x)f(y) \, {\rm d}\sigma &gt; 0 \\\\ \iff &amp; \iint\limits_D (x - y)f(x) \, {\rm d} \sigma = I \\\\ \implies &amp; 2I = \iint\limits_D (y - x)\left[ f(y) - f(x) \right] \, {\rm d} \sigma &gt; 0 \\\\ \implies &amp; I &gt; 0 \implies \text{ 左边 } &gt; \text{ 右边 } \end{array}$</p>
+<p><br></p>
+<h4 id="㊁-1"><a href="#㊁-1" class="headerlink" title="㊁"></a>㊁</h4><p><img src="https://github.com/WaterH2P/WaterH2P.github.io/raw/master/img/images/%E4%BA%8C%E9%87%8D%E7%A7%AF%E5%88%86%20%E6%91%86%E7%BA%BF.png" width="60%"></p>
+<p>由于 $D$ 关于 $x=\pi$ 对称</p>
+<p>$\begin{array}{l} \iint\limits_D (x + 2y) \, {\rm d}x \, {\rm d}y &amp;= \iint\limits_D (x - \pi) \, {\rm d}x \, {\rm d}y + \iint\limits_D (2y + \pi) \, {\rm d}x \, {\rm d}y \\\\ &amp;= 0 + \iint\limits_D (2y + \pi) \, {\rm d}x \, {\rm d}y \\\\ &amp; = \iint\limits_D 2y \, {\rm d}x \, {\rm d}y + \pi \iint\limits_D \, {\rm d}x \, {\rm d}y \\\\ &amp;= \int_0^{2\pi} \, {\rm d}x \int_0^{ y(x) } 2y \, {\rm d}y + \pi \int_0^{2\pi} \, {\rm d}x \int_0^{ y(x) } \, {\rm d}y \\\\ &amp;= \int_0^{2\pi} y^2(x) \, {\rm d}x + \pi \int_0^{2\pi} y(x) \, {\rm d}x \end{array}$ </p>
+<p>$\begin{array}{l} \int_0^{2\pi} y^2(x) \, {\rm d}x &amp;= \int_0^{2\pi} (1 - \cos t)^3 \, {\rm d}t \\\\ &amp;= \int_0^{2\pi} 1 - 3\cos t + 3\cos^2 t - \cos^3 t \, {\rm d}t \\\\ &amp;= 2\pi - 0 + 3 \cdot 4 \cdot \dfrac{1}{2} \cdot \dfrac{\pi}{2} - 0 \\\\ &amp;= 5\pi \end{array}$ </p>
+<p>$\begin{array}{l} \int_0^{2\pi} y(x) \, {\rm d}x &amp;= \int_0^{2\pi} (1 - \cos t)^2 \, {\rm d}t \\\\ &amp;= \int_0^{2\pi} 1 - 2\cos t + \cos^2 t \, {\rm d}t \\\\ &amp;= 2\pi - 0 + 4 \cdot \dfrac{1}{2} \cdot \dfrac{\pi}{2} \\\\ &amp;= 3\pi \end{array}$ </p>
+<p>$\begin{array}{l} \iint\limits_D (x + 2y) \, {\rm d}x \, {\rm d}y &amp;= \int_0^{2\pi} y^2(x) \, {\rm d}x + \pi \int_0^{2\pi} y(x) \, {\rm d}x \\\\ &amp;= 5\pi + 3\pi^2 \end{array}$</p>
+<p>⭐</p>
+<p><img src="https://github.com/WaterH2P/WaterH2P.github.io/raw/master/img/images/%E5%8D%8E%E9%87%8C%E5%A3%AB%E5%85%AC%E5%BC%8F.jpg" width="80%"></p>
 
                 </div>
             </div>
@@ -383,13 +403,13 @@ $\begin{array}{l} \end{array}$
 <div class="row justify-content-center">
     <nav class="m-pagination col-md-8 col-sm-24" role="pagination">
         
-        <a class="float-left" href="/2018/08/05/maths 5 二重积分/" style="float: left;">
-            ← 二重积分
+        <a class="float-left" href="/2018/08/06/maths 6 微分方程/" style="float: left;">
+            ← 微分方程
         </a>
         
         
-        <a class="float-right" href="/2018/08/04/maths 4 多元函数微分学 · 习题/">
-            多元函数微积分学 · 应用 →
+        <a class="float-right" href="/2018/08/05/maths 5 二重积分/">
+            二重积分 →
         </a>
         
     </nav>
@@ -635,24 +655,5 @@ $\begin{array}{l} \end{array}$
             $('html').animate({scrollTop: 0}, 'slow');
         }
     </script>
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<!-- <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
-<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script> -->
-<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
-<!-- <script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
-
 </body>
 </html>
