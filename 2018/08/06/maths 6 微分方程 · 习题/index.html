@@ -382,8 +382,17 @@ y' + p(x)y = q(x), \qquad ( \, p(x), \, q(x) \text{ 为已知的连续函数 } )
 <h2 id="三、二阶方程的求解"><a href="#三、二阶方程的求解" class="headerlink" title="三、二阶方程的求解"></a>三、二阶方程的求解</h2><p><br></p>
 <h4 id="㊀、二阶常系数齐次线性微分方程"><a href="#㊀、二阶常系数齐次线性微分方程" class="headerlink" title="㊀、二阶常系数齐次线性微分方程"></a>㊀、二阶常系数齐次线性微分方程</h4><script type="math/tex; mode=display">
 y'' + py' + qy = 0 \qquad ( \, p, \, q \text{ 为常数 } )</script><p><br></p>
-<h4 id="㊁、二阶常系数非齐次线性微分方程"><a href="#㊁、二阶常系数非齐次线性微分方程" class="headerlink" title="㊁、二阶常系数非齐次线性微分方程"></a>㊁、二阶常系数非齐次线性微分方程</h4><script type="math/tex; mode=display">
+<h4 id="㊁、二阶常系数非齐次线性微分方程"><a href="#㊁、二阶常系数非齐次线性微分方程" class="headerlink" title="㊁、二阶常系数非齐次线性微分方程"></a>㊁、二阶常系数非齐次线性微分方程</h4><p><br></p>
+<h6 id="2"><a href="#2" class="headerlink" title="2"></a>2</h6><script type="math/tex; mode=display">
 y'' + py' + qy = e^{\alpha x}P_m(x) \qquad ( \, P_m(x) \text{ 为 } x \text{ 的 } m \text{ 次多项式 })</script><p><br></p>
+<h6 id="2-1"><a href="#2-1" class="headerlink" title="2"></a>2</h6><script type="math/tex; mode=display">
+y'' + py' + qy = e^{\alpha x} \left[ \, P_m(x) \cos \beta x + P_n(x) \sin \beta x \, \right]</script><p>$y^* = e^{\alpha x}\left[ \, Q_{l1}(x) \cos \beta x + Q_{l2}(x) \sin \beta x \, \right] x^k, \qquad l1 = l2 = \max\{ m, \, n \}$ </p>
+<ol>
+<li>一看：自由项中的 $\alpha, \, \beta \implies \alpha \pm \beta i$ </li>
+<li>二算：$\lambda_1, \, \lambda_2$ </li>
+<li>三比：$k = \begin{cases} 1, &amp; \lambda_1, \lambda_2 = \alpha \pm \beta i \\\\ 0 &amp; \lambda_1, \lambda_2 \not= \alpha \pm \beta i \end{cases}$ </li>
+</ol>
+<p><br></p>
 <h2 id="、练习题"><a href="#、练习题" class="headerlink" title="、练习题"></a>、练习题</h2><p><br></p>
 <h4 id="、齐次型方程"><a href="#、齐次型方程" class="headerlink" title="、齐次型方程"></a>、齐次型方程</h4><p>已知函数 $y(x) \, (x&gt;0)$ 可微且满足方程 </p>
 <script type="math/tex; mode=display">
@@ -688,5 +697,24 @@ y(x) - 1 = \int_1^x \left[ \dfrac{ y^2(t) }{t^2} + \dfrac{ y(t) }{t} \right] \, 
             $('html').animate({scrollTop: 0}, 'slow');
         }
     </script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<!-- <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script> -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+<!-- <script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+
 </body>
 </html>

@@ -992,13 +992,13 @@
 <div class="row justify-content-center">
     <nav class="m-pagination col-md-8 col-sm-24" role="pagination">
         
-        <a class="float-left" href="/2018/08/03/maths 3 一元函数积分学/" style="float: left;">
-            ← 一元函数积分学
+        <a class="float-left" href="/2018/08/02/maths 2 一元函数微积分学 · 应用/" style="float: left;">
+            ← 一元函数微积分学 · 应用
         </a>
         
         
-        <a class="float-right" href="/2018/08/02/maths 2 一元函数微积分学 · 应用/">
-            一元函数微积分学 · 应用 →
+        <a class="float-right" href="/2018/08/02/maths 2 一元函数微积分学 · 习题/">
+            一元函数微积分学 · 习题 →
         </a>
         
     </nav>
@@ -1244,5 +1244,24 @@
             $('html').animate({scrollTop: 0}, 'slow');
         }
     </script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<!-- <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script> -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+<!-- <script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+
 </body>
 </html>
