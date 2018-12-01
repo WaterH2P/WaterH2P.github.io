@@ -538,12 +538,12 @@ A^{-1}
   E \mid A^{-1}
 \end{bmatrix}</script><ul>
 <li>推导<ul>
-<li>想对 $A$ 做什么变换，可以先对 $ E$ 做同样的变化得到矩阵 $ P $ </li>
-<li>然后计算 $ PA$ 得到结果</li>
+<li>想对 $A$ 做什么变换，可以先对 $E$ 做同样的变化得到矩阵 $P$ </li>
+<li>然后计算 $PA$ 得到结果</li>
 <li>例如<ul>
 <li>$A = \begin{bmatrix} 4 &amp; 6 \\ 2 &amp; 1 \end{bmatrix}$ ，想将第二行的 $ -2 $ 倍加到第一行</li>
-<li>先对 $ E = \begin{bmatrix} 1 &amp; 0 \\ 0 &amp; 1 \end{bmatrix}$ 做该变换，得到 $ P = \begin{bmatrix} 1 &amp; -2 \\ 0 &amp; 1 \end{bmatrix}$ </li>
-<li>$ PA = \begin{bmatrix} 1 &amp; -2 \\ 0 &amp; 1 \end{bmatrix} \begin{bmatrix} 4 &amp; 6 \\ 2 &amp; 1 \end{bmatrix} = \begin{bmatrix} 0 &amp; 4 \\ 2 &amp; 1 \end{bmatrix}$ </li>
+<li>先对 $E = \begin{bmatrix} 1 &amp; 0 \\ 0 &amp; 1 \end{bmatrix}$ 做该变换，得到 $P = \begin{bmatrix} 1 &amp; -2 \\ 0 &amp; 1 \end{bmatrix}$ </li>
+<li>$PA = \begin{bmatrix} 1 &amp; -2 \\ 0 &amp; 1 \end{bmatrix} \begin{bmatrix} 4 &amp; 6 \\ 2 &amp; 1 \end{bmatrix} = \begin{bmatrix} 0 &amp; 4 \\ 2 &amp; 1 \end{bmatrix}$ </li>
 </ul>
 </li>
 <li>根据【Th】<ul>
@@ -556,7 +556,7 @@ A^{-1}
 <p><br></p>
 <h6 id="3、例题"><a href="#3、例题" class="headerlink" title="3、例题"></a>3、例题</h6><ol>
 <li>设 $A = \begin{bmatrix} 0 &amp; 2 &amp; -1 \\ 1 &amp; 1 &amp; 2 \\ -1 &amp; -1 &amp; -1 \end{bmatrix}$ ，求 $A^{-1}$。<ul>
-<li>$\begin{array}{l} \begin{pmatrix} A \mid E \end{pmatrix} = &amp; \begin{pmatrix} 0 &amp; 2 &amp; -1 &amp; \vdots &amp; 1 &amp; 0 &amp; 0 \\ 1 &amp; 1 &amp; 2 &amp; \vdots &amp; 0 &amp; 1 &amp; 0 \\ -1 &amp; -1 &amp; -1 &amp; \vdots &amp; 0 &amp; 0 &amp; 1 \end{pmatrix} \\\\ \underrightarrow{1 \leftrightarrow 2 \\ 3 + 1 } &amp; \begin{pmatrix} 1 &amp; 1 &amp; 2 &amp; \vdots &amp; 0 &amp; 1 &amp; 0 \\ 0 &amp; 2 &amp; -1 &amp; \vdots &amp; 1 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 1 &amp; \vdots &amp; 0 &amp; 1 &amp; 1 \end{pmatrix} \\\\ \underrightarrow{2 + 3 \\ \frac{1}{2} 2 } &amp; \begin{pmatrix} 1 &amp; 1 &amp; 0 &amp; \vdots &amp; 0 &amp; -1 &amp; -2 \\ 0 &amp; 1 &amp; 0 &amp; \vdots &amp; \frac{1}{2} &amp; \frac{1}{2} &amp; \frac{1}{2} \\ 0 &amp; 0 &amp; 1 &amp; \vdots &amp; 0 &amp; 1 &amp; 1 \end{pmatrix} \\\\ \underrightarrow{1-2} &amp; \begin{pmatrix} 1 &amp; 0 &amp; 0 &amp; \vdots &amp; -\frac{1}{2} &amp; -\frac{3}{2} &amp; -\frac{5}{2} \\ 0 &amp; 1 &amp; 0 &amp; \vdots &amp; \frac{1}{2} &amp; \frac{1}{2} &amp; \frac{1}{2} \\ 0 &amp; 0 &amp; 1 &amp; \vdots &amp; 0 &amp; 1 &amp; 1 \end{pmatrix} = \begin{pmatrix} E \mid A^{-1} \end{pmatrix} \end{array}$ </li>
+<li>$\begin{array}{l} \begin{pmatrix} A \mid E \end{pmatrix} = &amp; \begin{pmatrix} 0 &amp; 2 &amp; -1 &amp; \vdots &amp; 1 &amp; 0 &amp; 0 \\ 1 &amp; 1 &amp; 2 &amp; \vdots &amp; 0 &amp; 1 &amp; 0 \\ -1 &amp; -1 &amp; -1 &amp; \vdots &amp; 0 &amp; 0 &amp; 1 \end{pmatrix} \\\\ \begin{array}{l} 1 \leftrightarrow 2 \\ \underrightarrow{ 3 + 1 } \end{array} &amp; \begin{pmatrix} 1 &amp; 1 &amp; 2 &amp; \vdots &amp; 0 &amp; 1 &amp; 0 \\ 0 &amp; 2 &amp; -1 &amp; \vdots &amp; 1 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 1 &amp; \vdots &amp; 0 &amp; 1 &amp; 1 \end{pmatrix} \\\\ \begin{array}{l} 2 + 3 \\ \underrightarrow{ \frac{1}{2} \cdot 2 } \end{array} &amp; \begin{pmatrix} 1 &amp; 1 &amp; 0 &amp; \vdots &amp; 0 &amp; -1 &amp; -2 \\ 0 &amp; 1 &amp; 0 &amp; \vdots &amp; \frac{1}{2} &amp; \frac{1}{2} &amp; \frac{1}{2} \\ 0 &amp; 0 &amp; 1 &amp; \vdots &amp; 0 &amp; 1 &amp; 1 \end{pmatrix} \\\\ \underrightarrow{1-2} &amp; \begin{pmatrix} 1 &amp; 0 &amp; 0 &amp; \vdots &amp; -\frac{1}{2} &amp; -\frac{3}{2} &amp; -\frac{5}{2} \\ 0 &amp; 1 &amp; 0 &amp; \vdots &amp; \frac{1}{2} &amp; \frac{1}{2} &amp; \frac{1}{2} \\ 0 &amp; 0 &amp; 1 &amp; \vdots &amp; 0 &amp; 1 &amp; 1 \end{pmatrix} = \begin{pmatrix} E \mid A^{-1} \end{pmatrix} \end{array}$ </li>
 </ul>
 </li>
 </ol>
