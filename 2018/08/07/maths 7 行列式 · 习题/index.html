@@ -300,12 +300,12 @@
     
     
     <span class="tag is-info">
-        <a href='/tags/kaoyan/'>kaoyan</a>
+        <a href='/tags/maths/'>maths</a>
     </span>
     ,
     
     <span class="tag is-info">
-        <a href='/tags/maths/'>maths</a>
+        <a href='/tags/kaoyan/'>kaoyan</a>
     </span>
     ,
     
@@ -445,6 +445,33 @@ D_n =
     & 0 & 0 & 0 & \cdots & a^2 & 2a
 \end{vmatrix} = 
 (n+1)a^n</script><p><br></p>
+<h4 id="㊄、抽象型行列式"><a href="#㊄、抽象型行列式" class="headerlink" title="㊄、抽象型行列式"></a>㊄、抽象型行列式</h4><p><br></p>
+<h6 id="1、"><a href="#1、" class="headerlink" title="1、"></a>1、</h6><p>已知 $n$ 阶行列式 $\mid A \mid = a$，$\begin{vmatrix} &amp; A &amp; \beta &amp; \\\\ &amp; \beta^{\rm T} &amp; b &amp; \end{vmatrix} = 0$，其中 $\beta$ 是 $n$ 维列向量，则 $\begin{vmatrix} &amp; A &amp; \beta &amp; \\\\ &amp; \beta^{\rm T} &amp; c &amp; \end{vmatrix} =$ <strong>____</strong> 。</p>
+<p><br></p>
+<h6 id="2、-1"><a href="#2、-1" class="headerlink" title="2、"></a>2、</h6><p>已知 $n$ 阶矩阵 $\mid A \mid = a$，将 $\mid A \mid$ 中的每一列减去其余各列得到的行列式记为 $\mid B \mid$，则 $\mid B \mid =$ <strong>____</strong> 。 </p>
+<p><br></p>
+<h4 id="㊅、展开式法的逆运用"><a href="#㊅、展开式法的逆运用" class="headerlink" title="㊅、展开式法的逆运用"></a>㊅、展开式法的逆运用</h4><p>设 </p>
+<script type="math/tex; mode=display">
+\mid A \mid = 
+\begin{vmatrix} 
+    & -2 & 2 & -2  & 2 & \\\\
+    & 1 & 2 & 3 & 4 & \\\\
+    & 1 & 1 & 1 & 1 & \\\\
+    & 2 & -1 & 3 & 5
+\end{vmatrix}</script><p>计算 1⃣️ $A_{41} + A_{42} + A_{43} + A_{44}$；2⃣️ $M_{31}+M_{32}+M_{33}+M_{34}$。</p>
+<p><br></p>
+<h4 id="㊆、行列式的逆序数法定义"><a href="#㊆、行列式的逆序数法定义" class="headerlink" title="㊆、行列式的逆序数法定义"></a>㊆、行列式的逆序数法定义</h4><p><img src="./images/行列式 逆序数.png" width="80%"></p>
+<p><br></p>
+<h6 id="1、-1"><a href="#1、-1" class="headerlink" title="1、"></a>1、</h6><p>设行列式 </p>
+<script type="math/tex; mode=display">
+D_4 = 
+\begin{vmatrix} 
+    & 5x & 1 & 2 & 3 & \\\\
+    & 2 & 1 & x & 3 & \\\\
+    & x & x & 2 & 3 & \\\\
+    & 1 & 2 & 1 & -3x & 
+\end{vmatrix}</script><p>则 $D_4$ 的展开式中，$x^4$ 的系数是 <strong>____</strong> ，$x^3$ 的系数是 <strong>____</strong> 。</p>
+<p><br></p>
 <h2 id="三、参考答案"><a href="#三、参考答案" class="headerlink" title="三、参考答案"></a>三、参考答案</h2><p><br></p>
 <h4 id="㊀、消零化三角形-1"><a href="#㊀、消零化三角形-1" class="headerlink" title="㊀、消零化三角形"></a>㊀、消零化三角形</h4><p>$(-1)^{ n(n-1)/2 } \cdot n^{n-1} \cdot \dfrac{n+1}{2}$。</p>
 <p>$\begin{array}{l} \\      &amp;&amp; \begin{vmatrix} &amp; 1 &amp; 2 &amp; 3 &amp; \cdots &amp; n-1 &amp; n &amp; \\\\ &amp; 2 &amp; 3 &amp; 4 &amp; \cdots &amp; n &amp; 1 &amp; \\\\ &amp; \vdots &amp; \vdots &amp; \vdots &amp; &amp; \vdots &amp; \vdots &amp; \\\\ &amp; n-1 &amp; n &amp; 1 &amp; \cdots &amp; n-3 &amp; n-2 &amp; \\\\ &amp; n &amp; 1 &amp; 2 &amp; \cdots &amp; n-2 &amp; n-1 \end{vmatrix}_{n \times n} \\\\      \underrightarrow{ a_1 + \sum\limits_{ j=2 }^n a_j } &amp; = &amp; \dfrac{ n(n+1) }{2} \begin{vmatrix} &amp; 1 &amp; 2 &amp; 3 &amp; \cdots &amp; n-1 &amp; n &amp; \\\\ &amp; 1 &amp; 3 &amp; 4 &amp; \cdots &amp; n &amp; 1 &amp; \\\\ &amp; \vdots &amp; \vdots &amp; \vdots &amp; &amp; \vdots &amp; \vdots &amp; \\\\ &amp; 1 &amp; n &amp; 1 &amp; \cdots &amp; n-3 &amp; n-2 &amp; \\\\ &amp; 1 &amp; 1 &amp; 2 &amp; \cdots &amp; n-2 &amp; n-1 &amp; \end{vmatrix}_{n \times n} \\\\      \begin{array}{l} \underrightarrow{ a_i - a_{i-1} } \\ i : n \to 2 \end{array} &amp; = &amp; \dfrac{ n(n+1) }{2} \begin{vmatrix} &amp; 1 &amp; 2 &amp; 3 &amp; \cdots &amp; n-1 &amp; n &amp; \\\\ &amp; 0 &amp; 1 &amp; 1 &amp; \cdots &amp; 1 &amp; 1-n &amp; \\\\ &amp; \vdots &amp; \vdots &amp; \vdots &amp; &amp; \vdots &amp; \vdots &amp; \\\\ &amp; 0 &amp; 1 &amp; 1-n &amp; \cdots &amp; 1 &amp; 1 &amp; \\\\ &amp; 0 &amp; 1-n &amp; 1 &amp; \cdots &amp; 1 &amp; 1 &amp; \end{vmatrix}_{n \times n} \\\\      &amp; = &amp; \dfrac{ n(n+1) }{2} \begin{vmatrix} &amp; 1 &amp; 1 &amp; \cdots &amp; 1 &amp; 1-n &amp; \\\\ &amp; 1 &amp; 1 &amp; \cdots &amp; 1-n &amp; 1 &amp; \\\\ &amp; \vdots &amp; \vdots &amp; &amp; \vdots &amp; \vdots &amp; \\\\ &amp; 1 &amp; 1-n &amp; \cdots &amp; 1 &amp; 1 &amp; \\\\ &amp; 1-n &amp; 1 &amp; \cdots &amp; 1 &amp; 1 &amp; \end{vmatrix}_{ (n-1) \times (n-1) } \\\\      \begin{array}{l} \underrightarrow{ a_i - a_1 } \\ i : 2 \to n \end{array} &amp; = &amp; \dfrac{ n(n+1) }{2} \begin{vmatrix} &amp; 1 &amp; 1 &amp; \cdots &amp; 1 &amp; 1-n &amp; \\\\ &amp; 0 &amp; 0 &amp; \cdots &amp; -n &amp; n &amp; \\\\ &amp; \vdots &amp; \vdots &amp; &amp; \vdots &amp; \vdots &amp; \\\\ &amp; 0 &amp; -n &amp; \cdots &amp; 0 &amp; n &amp; \\\\ &amp; -n &amp; 0 &amp; \cdots &amp; 0 &amp; n &amp; \end{vmatrix}_{ (n-1) \times (n-1) } \qquad ( \text{ 爪型 } ) \\\\      \underrightarrow{ a_n + \sum\limits_{j=1}^{n-1}a_j } &amp; = &amp; \dfrac{ n(n+1) }{2} \begin{vmatrix} &amp; 1 &amp; 1 &amp; \cdots &amp; 1 &amp; -1 &amp; \\\\ &amp; 0 &amp; 0 &amp; \cdots &amp; -n &amp; 0 &amp; \\\\ &amp; \vdots &amp; \vdots &amp; &amp; \vdots &amp; \vdots &amp; \\\\ &amp; 0 &amp; -n &amp; \cdots &amp; 0 &amp; 0 &amp; \\\\ &amp; -n &amp; 0 &amp; \cdots &amp; 0 &amp; 0 &amp; \end{vmatrix}_{ (n-1) \times (n-1) } \\\\       &amp; = &amp; \dfrac{ n(n+1) }{2} \cdot (-1)^{n-1} \cdot (-1)^{ (n-1)(n-2) / 2 } \cdot n^{n-1} \\\\ &amp; = &amp; (-1)^{ n(n-1)/2 } \cdot n^{n-1} \cdot \dfrac{n+1}{2} \end{array}$</p>
@@ -465,7 +492,7 @@ D_n =
 <p>$\begin{array}{l}      D_n &amp;=&amp; \begin{vmatrix} &amp; 1 &amp; 1 &amp; 1 &amp; \cdots &amp; 1 &amp; \\\\ &amp; x_1 &amp; x_2 &amp; x_3 &amp; \cdots &amp; x_n \\\\ &amp; x_1^2 &amp; x_2^2 &amp; x_3^2 &amp; \cdots &amp; x_n^2 \\\\ &amp; \vdots &amp; \vdots &amp; \vdots &amp; &amp; \vdots &amp; \\\\ &amp; x_1^{n-2} &amp; x_2^{ n-2 } &amp; x_3^{ n-2 } &amp; \cdots &amp; x_n^{ n-2 } \\\\ &amp; x_1^{n-1} &amp; x_2^{ n-1 } &amp; x_3^{ n-1 } &amp; \cdots &amp; x_n^{ n-1 } \end{vmatrix} \\\\      \begin{array}{l} \underrightarrow{ x_i-x_1x_{i-1} } \\ i:2 \to n \end{array} &amp;=&amp; \begin{vmatrix} &amp; 1 &amp; 1 &amp; 1 &amp; \cdots &amp; 1 &amp; \\\\ &amp; 0 &amp; x_2 - x_1 &amp; x_3 - x_1 &amp; \cdots &amp; x_n - x_1 \\\\ &amp; 0 &amp; x_2(x_2  - x_1) &amp; x_3(x_3 - x_1) &amp; \cdots &amp; x_n(x_n - x_1) \\\\ &amp; \vdots &amp; \vdots &amp; \vdots &amp; &amp; \vdots &amp; \\\\ &amp; 0 &amp; x_2^{ n-2 }(x_2 - x_1) &amp; x_3^{ n-2 }(x_3 - x_1) &amp; \cdots &amp; x_n^{ n-2 }(x_n - x_1) \end{vmatrix} \\\\      &amp;=&amp; \begin{vmatrix} &amp; x_2 - x_1 &amp; x_3 - x_1 &amp; \cdots &amp; x_n - x_1 \\\\ &amp; x_2(x_2  - x_1) &amp; x_3(x_3 - x_1) &amp; \cdots &amp; x_n(x_n - x_1) \\\\ &amp; \vdots &amp; \vdots &amp; &amp; \vdots &amp; \\\\ &amp; x_2^{ n-2 }(x_2 - x_1) &amp; x_3^{ n-2 }(x_3 - x_1) &amp; \cdots &amp; x_n^{ n-2 }(x_n - x_1) \end{vmatrix} \\\\      &amp;=&amp; \prod\limits_{k=2}^{n}(x_k - x_1) \begin{vmatrix} &amp; 1 &amp; 1 &amp; \cdots &amp; 1 \\\\ &amp; x_2 &amp; x_3 &amp; \cdots &amp; x_n \\\\ &amp; \vdots &amp; \vdots &amp; &amp; \vdots &amp; \\\\ &amp; x_2^{ n-2 } &amp; x_3^{ n-2 } &amp; \cdots &amp; x_n^{ n-2 } \end{vmatrix}_{ (n-1) \times (n-1) } \\\\      &amp;=&amp; \prod\limits_{k=2}^{n}(x_k - x_1) \cdot \prod\limits_{2 \leq i &lt; j \leq n} (x_j - x_i) \\\\      &amp;=&amp; \prod\limits_{1 \leq i &lt; j \leq n} (x_j - x_i) \end{array}$ </p>
 <p>所以 $n$ 时成立。</p>
 <p><br></p>
-<h6 id="2、-1"><a href="#2、-1" class="headerlink" title="2、"></a>2、</h6><p>1️⃣</p>
+<h6 id="2、-2"><a href="#2、-2" class="headerlink" title="2、"></a>2、</h6><p>1️⃣</p>
 <p>$n=1$ 时，$D_1 = 2a = (1+1)a$，成立。</p>
 <p>$n=2$ 时，$D_2 = \begin{vmatrix} 2a &amp; 1 \\ a^2 &amp; 2a \end{vmatrix} = 3a^2 = (2+1)a^2$，成立。</p>
 <p>2️⃣</p>
@@ -474,6 +501,24 @@ D_n =
 <p>$n=k$ 时</p>
 <p>$\begin{array}{l}      D_k &amp;=&amp; 2aD_{k-1} + (-1)^{1+2} \cdot a^2 \cdot D_{k-2} \\\\      &amp;=&amp; 2a \cdot (k-1+1)a^{k-1} - a^2 \cdot (k-2+1)a^{k-2} \\\\      &amp;=&amp; (k+1)a^k \end{array}$</p>
 <p>所以 $n=k$ 时成立。</p>
+<p><br></p>
+<h4 id="㊄、抽象型行列式-1"><a href="#㊄、抽象型行列式-1" class="headerlink" title="㊄、抽象型行列式"></a>㊄、抽象型行列式</h4><p><br></p>
+<h6 id="1、-2"><a href="#1、-2" class="headerlink" title="1、"></a>1、</h6><p>$\begin{array}{l}      \begin{vmatrix} &amp; A &amp; \beta &amp; \\\\ &amp; \beta^{\rm T} &amp; c &amp; \end{vmatrix} &amp;=&amp; \begin{vmatrix} &amp; A &amp; \beta &amp; \\\\ &amp; \beta^{\rm T} &amp; b+c-b &amp; \end{vmatrix} \\\\      &amp;=&amp; \begin{vmatrix} &amp; A &amp; \beta &amp; \\\\ &amp; \beta^{\rm T} &amp; b &amp; \end{vmatrix} + \begin{vmatrix} &amp; A &amp; 0 &amp; \\\\ &amp; \beta^{\rm T} &amp; c-b &amp; \end{vmatrix} \\\\      &amp;=&amp; 0 + (c-b) \cdot (-1)^{n+1+n+1} \cdot \mid A \mid \\\\      &amp;=&amp; (c-b)a \end{array}$</p>
+<p><br></p>
+<h6 id="2、-3"><a href="#2、-3" class="headerlink" title="2、"></a>2、</h6><p>$\begin{array}{l}      \mid B \mid &amp;=&amp; \begin{vmatrix} &amp; \alpha_1 - \sum\limits_{i \not= 1} \alpha_i &amp; \alpha_2 - \sum\limits_{i \not= 2} \alpha_i &amp; \cdots &amp; \alpha_n - \sum\limits_{i \not= n} \alpha_i &amp; \end{vmatrix} \\\\      &amp;=&amp; \begin{vmatrix} \begin{pmatrix} &amp; \alpha_1 &amp; \alpha_2 &amp; \cdots &amp; \alpha_n &amp; \end{pmatrix} \cdot \begin{pmatrix} &amp; 1 &amp; -1 &amp; -1 &amp; \cdots &amp; -1 &amp; \\\\ &amp; -1 &amp; 1 &amp; -1 &amp; \cdots &amp; -1 &amp; \\\\ &amp; -1 &amp; -1 &amp; 1 &amp; \cdots &amp; -1 \\\\ &amp; \vdots &amp; \vdots &amp; \vdots &amp; &amp; \vdots &amp; \\\\ &amp; -1 &amp; -1 &amp; -1 &amp; \cdots &amp; 1 &amp; \end{pmatrix} \end{vmatrix} \\\\      &amp;=&amp; \begin{vmatrix} &amp; \alpha_1 &amp; \alpha_2 &amp; \cdots &amp; \alpha_n &amp; \end{vmatrix} \cdot \begin{vmatrix} &amp; 1 &amp; -1 &amp; -1 &amp; \cdots &amp; -1 &amp; \\\\ &amp; -1 &amp; 1 &amp; -1 &amp; \cdots &amp; -1 &amp; \\\\ &amp; -1 &amp; -1 &amp; 1 &amp; \cdots &amp; -1 \\\\ &amp; \vdots &amp; \vdots &amp; \vdots &amp; &amp; \vdots &amp; \\\\ &amp; -1 &amp; -1 &amp; -1 &amp; \cdots &amp; 1 &amp; \end{vmatrix} \\\\      &amp;=&amp; a \cdot (2-n) \cdot \begin{vmatrix} &amp; 1 &amp; -1 &amp; -1 &amp; \cdots &amp; -1 &amp; \\\\ &amp; 1 &amp; 1 &amp; -1 &amp; \cdots &amp; -1 &amp; \\\\ &amp; 1 &amp; -1 &amp; 1 &amp; \cdots &amp; -1 \\\\ &amp; \vdots &amp; \vdots &amp; \vdots &amp; &amp; \vdots &amp; \\\\ &amp; 1 &amp; -1 &amp; -1 &amp; \cdots &amp; 1 &amp; \end{vmatrix} \\\\      &amp;=&amp; a \cdot (2-n) \cdot 2^{n-1} \end{array}$</p>
+<p><br></p>
+<h4 id="㊅、展开式法的逆运用-1"><a href="#㊅、展开式法的逆运用-1" class="headerlink" title="㊅、展开式法的逆运用"></a>㊅、展开式法的逆运用</h4><p><br></p>
+<h4 id="㊆、行列式的逆序数法定义-1"><a href="#㊆、行列式的逆序数法定义-1" class="headerlink" title="㊆、行列式的逆序数法定义"></a>㊆、行列式的逆序数法定义</h4><p><br></p>
+<h6 id="1、-3"><a href="#1、-3" class="headerlink" title="1、"></a>1、</h6><p>$15$， $-3$。</p>
+<script type="math/tex; mode=display">
+D_4 = 
+\begin{vmatrix} 
+    & 5x & 1 & 2 & 3 & \\\\
+    & 2 & 1 & x & 3 & \\\\
+    & x & x & 2 & 3 & \\\\
+    & 1 & 2 & 1 & -3x & 
+\end{vmatrix}</script><p>$\begin{cases} - &amp; 5x &amp; \cdot &amp; x &amp; \cdot &amp; x &amp; \cdot &amp; (-3x) &amp; = 15x^4 \\\\ - &amp; a_{11} &amp; \cdot &amp; a_{23} &amp; \cdot &amp; a_{32} &amp; \cdot &amp; a_{44} \end{cases} \qquad \tau(1324) = 1$ </p>
+<p>$\begin{cases} + &amp; 1 &amp; \cdot &amp; x &amp; \cdot &amp; x &amp; \cdot &amp; (-3x) &amp; = 15x^4 \\\\ + &amp; a_{12} &amp; \cdot &amp; a_{23} &amp; \cdot &amp; a_{31} &amp; \cdot &amp; a_{44} \end{cases} \qquad \tau(2314) = 2$ </p>
 
                 </div>
             </div>
@@ -484,8 +529,8 @@ D_n =
 <div class="row justify-content-center">
     <nav class="m-pagination col-md-8 col-sm-24" role="pagination">
         
-        <a class="float-left" href="/2018/08/08/maths 8 矩阵/" style="float: left;">
-            ← 矩阵
+        <a class="float-left" href="/2018/08/08/maths 8 矩阵 · 习题/" style="float: left;">
+            ← 矩阵 · 习题
         </a>
         
         
