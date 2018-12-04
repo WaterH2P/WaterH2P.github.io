@@ -581,7 +581,25 @@ C =
 <p>$\begin{array}{l} &amp; A^\ast = \dfrac{ (-1)^{n-1} }{n!} \cdot \begin{pmatrix}  &amp; 0 &amp; 0 &amp; \cdots &amp; 0 &amp; n &amp; \\\\ &amp; 1 &amp; 0 &amp; \cdots &amp; 0 &amp; 0 &amp; \\\\ &amp; 0 &amp; 2 &amp; \cdots &amp; 0 &amp; 0 &amp; \\\\ &amp; \vdots &amp; \vdots &amp; &amp; \vdots &amp; \vdots \\\\ &amp; 0 &amp; 0 &amp; \cdots &amp; 0 &amp; 0 \\\\ &amp; 0 &amp; 0 &amp; \cdots &amp; n-1 &amp; 0 &amp; \end{pmatrix} \\\\      \implies &amp; \begin{array}{l} &amp; \sum\limits_{i=1}^n \sum\limits_{j=1}^n A_{ij} &amp;= \dfrac{ (-1)^{n-1} }{n!} \cdot \dfrac{ n(n+1) }{2} \\\\      &amp;&amp;= (-1)^{n-1} \cdot \dfrac{n+1}{2(n-1)!} \end{array} \end{array}$ </p>
 <p>2️⃣ </p>
 <p>$\sum\limits_{j=1}^n A_{kj} = (-1)^{n-1} \cdot \dfrac{1}{n!}  \cdot k, \; (k=1, 2, \cdot, n)$ </p>
-
+<p><br></p>
+<h2 id="八、矩阵关系"><a href="#八、矩阵关系" class="headerlink" title="八、矩阵关系"></a>八、矩阵关系</h2><p><br></p>
+<h4 id="㊀、等价"><a href="#㊀、等价" class="headerlink" title="㊀、等价"></a>㊀、等价</h4><p>$A, \, B$ 是同型矩阵，则</p>
+<script type="math/tex; mode=display">
+\begin{array}{l}
+    A, \, B \text{ 等价 } & \iff & A \text{ 经过有限次初等行变换得 } B \\\\
+    & \iff & \text{ 有可逆矩阵 } P, \, Q \text{ 使得 } PAQ = B \\\\
+    & \iff & {\rm r}(A) = {\rm r}(B)
+\end{array}</script><p><br></p>
+<h4 id="㊁、相似"><a href="#㊁、相似" class="headerlink" title="㊁、相似"></a>㊁、相似</h4><p>$A, \, B$ 是同阶矩阵，则</p>
+<script type="math/tex; mode=display">
+A, \, B \text{ 相似 } \iff \text{ 有可逆矩阵 } P \text{ 使得 } P^{-1} A P = B</script><p><br></p>
+<h4 id="㊂、合同"><a href="#㊂、合同" class="headerlink" title="㊂、合同"></a>㊂、合同</h4><p>$A, \, B$ 是同阶矩阵，则</p>
+<script type="math/tex; mode=display">
+\begin{array}{l}
+    A, \, B \text{ 合同 } & \iff & \text{ 有可逆矩阵 } C \text{ 使得 } C^{\rm T} A C = B \\\\
+    & \iff & x^{\rm T} A x, \, x^{\rm T} B x \text{ 有相同的正、负惯性指数 } \\\\
+    & \iff & x^{\rm T} A x, \, x^{\rm T} B x \text{ 有相同的秩 }
+\end{array}</script>
                 </div>
             </div>
             <div class="clearfix"></div>
@@ -591,13 +609,13 @@ C =
 <div class="row justify-content-center">
     <nav class="m-pagination col-md-8 col-sm-24" role="pagination">
         
-        <a class="float-left" href="/2018/08/09/maths 9 方程组/" style="float: left;">
-            ← 方程组【大题】
+        <a class="float-left" href="/2018/08/08/maths 8 矩阵/" style="float: left;">
+            ← 矩阵
         </a>
         
         
-        <a class="float-right" href="/2018/08/08/maths 8 矩阵/">
-            矩阵 →
+        <a class="float-right" href="/2018/08/07/maths 7 行列式/">
+            行列式 →
         </a>
         
     </nav>
@@ -843,24 +861,5 @@ C =
             $('html').animate({scrollTop: 0}, 'slow');
         }
     </script>
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<!-- <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
-<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script> -->
-<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
-<!-- <script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
-
 </body>
 </html>
