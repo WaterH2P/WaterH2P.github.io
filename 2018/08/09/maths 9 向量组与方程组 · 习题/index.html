@@ -409,26 +409,27 @@ $\begin{bmatrix} \end{bmatrix}$
 <p><br></p>
 <h4 id="㊁、⭐重要结论"><a href="#㊁、⭐重要结论" class="headerlink" title="㊁、⭐重要结论"></a>㊁、⭐重要结论</h4><p>【Th】⭐$(\, {\rm I} \,) \, (\, {\rm II} \,)$ 等价 $\iff$ ${\rm r}(\, {\rm I} \,) = {\rm r}(\, {\rm II} \,) = {\rm r}(\, {\rm I} \mid {\rm II} \,)$ </p>
 <p><br></p>
-<h2 id="五、齐次-AX-0-和-非齐次-AX-β-的求解"><a href="#五、齐次-AX-0-和-非齐次-AX-β-的求解" class="headerlink" title="五、齐次 AX=0 和 非齐次 AX=β 的求解"></a>五、齐次 AX=0 和 非齐次 AX=β 的求解</h2><div class="div-message div-desc" style="padding: 0 0 25px 10px ">
+<h2 id="五、齐次-AX-0-和-非齐次-AX-β-的求解"><a href="#五、齐次-AX-0-和-非齐次-AX-β-的求解" class="headerlink" title="五、齐次 AX=0 和 非齐次 AX=β 的求解"></a>五、齐次 AX=0 和 非齐次 AX=β 的求解</h2><p><br></p>
+<h4 id="㊀、齐次线性方程组"><a href="#㊀、齐次线性方程组" class="headerlink" title="㊀、齐次线性方程组"></a>㊀、齐次线性方程组</h4><div class="div-message div-desc" style="padding: 0 0 25px 10px ">
     <br>
-    解法见：<a href="https://waterh2p.cn/2018/08/09/maths%209%20%E6%96%B9%E7%A8%8B%E7%BB%84/" target="_blank">方程组【大题】</a>
+    解法见：<a href="https://waterh2p.cn/2018/08/09/maths%209%20%E6%96%B9%E7%A8%8B%E7%BB%84/#%E4%B8%80.%20%E9%BD%90%E6%AC%A1%E7%BA%BF%E6%80%A7%E6%96%B9%E7%A8%8B%E7%BB%84" target="_blank">齐次线性方程组</a>
 </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+<p><br></p>
+<h4 id="㊁、非齐次线性方程组"><a href="#㊁、非齐次线性方程组" class="headerlink" title="㊁、非齐次线性方程组"></a>㊁、非齐次线性方程组</h4><div class="div-message div-desc" style="padding: 0 0 25px 10px ">
+    <br>
+    解法见：<a href="https://waterh2p.cn/2018/08/09/maths%209%20%E6%96%B9%E7%A8%8B%E7%BB%84/#%E4%BA%8C.%20%E9%9D%9E%E9%BD%90%E6%AC%A1%E7%BA%BF%E6%80%A7%E6%96%B9%E7%A8%8B%E7%BB%84" target="_blank">非齐次线性方程组</a>
+</div>
 
 <p><br></p>
+<h4 id="㊂、同解方程组"><a href="#㊂、同解方程组" class="headerlink" title="㊂、同解方程组"></a>㊂、同解方程组</h4><p>若两个方程 $A_{m \times n} x = 0$ 和 $B_{s \times n} x = 0$ 有完全相同的解，则称为同解方程组。</p>
+<p>于是</p>
+<script type="math/tex; mode=display">
+\begin{array}{l}
+    & Ax=0, \, Bx=0 \text{ 是同解方程组 } \\\\
+    \iff & \begin{cases}Ax=0 \text{ 的解满足 } Bx=0 \\\\ Bx=0 \text{ 的解满足 } Ax=0 \end{cases} \qquad & \text{ 抽象型 } \\\\
+    \iff &  {\rm r}(A) = {\rm r}(B) = {\rm r} \left( \begin{bmatrix} A \\ B \end{bmatrix} \right) \qquad & \text{ 具体型 }
+\end{array}</script><p><br></p>
 <h2 id="、练习题"><a href="#、练习题" class="headerlink" title="、练习题"></a>、练习题</h2><p><br></p>
 <h4 id="一、向量组的线性相关性-1"><a href="#一、向量组的线性相关性-1" class="headerlink" title="一、向量组的线性相关性"></a>一、向量组的线性相关性</h4><p>设向量组 $\alpha_1 = (1, \, t_1, \, \cdots, \, t_1^{n-1})^{\rm T}$，$\alpha_2 = (1, \, t_2, \, \cdots, \, t_2^{n-1})^{\rm T}$，$\cdots$，$\alpha_r = (1, \, t_r, \, \cdots, \, t_r^{n-1})^{\rm T}$，其中 $t_1, \, t_2, \, \cdots, t_r$ 是互不相同的数，且 $r \leq n$。证明 $\alpha_1, \, \alpha_2, \, \cdots, \, \alpha_r$ 线性无关。</p>
 <p><br></p>
@@ -436,6 +437,35 @@ $\begin{bmatrix} \end{bmatrix}$
 <p><br></p>
 <h4 id="四、㊁、重要结论"><a href="#四、㊁、重要结论" class="headerlink" title="四、㊁、重要结论"></a>四、㊁、重要结论</h4><p>设向量组 $(\, {\rm I} \,) \begin{cases} \alpha_1 = \begin{bmatrix} 1 &amp; 0 &amp; 2 \end{bmatrix}^{\rm T} \\\\      \alpha_2 = \begin{bmatrix} 0 &amp; 1 &amp; 1 \end{bmatrix}^{\rm T} \\\\      \alpha_3 = \begin{bmatrix} 2 &amp; -1 &amp; a+4 \end{bmatrix}^{\rm T} \end{cases}$，设向量组 $(\, {\rm II} \,) \begin{cases} \beta_1 = \begin{bmatrix} 1 &amp; 2 &amp; 4 \end{bmatrix}^{\rm T} \\\\      \beta_2 = \begin{bmatrix} 1 &amp; -1 &amp; a+2 \end{bmatrix}^{\rm T} \\\\      \beta_3 = \begin{bmatrix} 3 &amp; 3 &amp; 10 \end{bmatrix}^{\rm T} \end{cases}$，矩阵 $A = \begin{bmatrix} &amp; 1 &amp; 0 &amp; 2 &amp; \\\\ &amp; 0 &amp; 1 &amp; -1 &amp; \\\\ &amp; 2 &amp; 1 &amp; a+4 &amp; \end{bmatrix}$，$B = \begin{bmatrix} &amp; 1 &amp; 1 &amp; 3 &amp; \\\\ &amp; 2 &amp; -1 &amp; 3 &amp; \\\\ &amp; 4 &amp; a+2 &amp; 10 &amp; \end{bmatrix}$。</p>
 <p>问：1️⃣ $A, \, B$ 是否等价，说明理由；2️⃣ 向量组 $(\, {\rm I} \,) \alpha_1, \, \alpha_3, \, \alpha_3$ 与 $(\, {\rm II} \,) \beta_1, \, \beta_3, \, \beta_3$ 是否等价，说明理由。</p>
+<p><br></p>
+<h4 id="五、㊂、同解方程组"><a href="#五、㊂、同解方程组" class="headerlink" title="五、㊂、同解方程组"></a>五、㊂、同解方程组</h4><p>设 $A$ 是 $n$ 阶实矩阵，$A^{\rm T}$ 是 $A$ 的转置矩阵。证明：方程组 $(\, {\rm I} \,) Ax=0$ 和 $(\, {\rm II} \,) A^{\rm T}Ax=0$ 是同解方程组。</p>
+<p><br></p>
+<h4 id="五、㊃、综合题"><a href="#五、㊃、综合题" class="headerlink" title="五、㊃、综合题"></a>五、㊃、综合题</h4><p><br></p>
+<h6 id="1、"><a href="#1、" class="headerlink" title="1、"></a>1、</h6><p>已知线性方程组</p>
+<script type="math/tex; mode=display">
+\begin{cases}
+    a_{11}x_1 + a_{12}x_2 + a_{13}x_3 + a_{14}x_4 = a_{15} \\\\
+    a_{21}x_1 + a_{22}x_2 + a_{23}x_3 + a_{24}x_4 = a_{25} \\\\
+    a_{31}x_1 + a_{32}x_2 + a_{33}x_3 + a_{34}x_4 = a_{35} \\\\
+    a_{41}x_1 + a_{42}x_2 + a_{43}x_3 + a_{44}x_4 = a_{45}
+\end{cases}</script><p>的通解为 $\begin{bmatrix} 2 \\ 1 \\ 0 \\ 1 \end{bmatrix} + k\begin{bmatrix} 1 \\ -1 \\ 2 \\ 0 \end{bmatrix}$。记 $\alpha_j = \begin{bmatrix} a_{1j} \\ a_{2j} \\ a_{3j} \\ a_{4j} \end{bmatrix}, \, (j=1, \, 2, \cdots, \, 5)$。问：</p>
+<ul>
+<li><p>1️⃣ $\alpha_4$ 能否由 $\alpha_1, \, \alpha_2, \, \alpha_3, \, \alpha_5$ 线性表出，说明理由；</p>
+</li>
+<li><p>2️⃣ $\alpha_4$ 能否由 $\alpha_1, \, \alpha_2, \, \alpha_3$ 线性表出，说明理由。</p>
+</li>
+</ul>
+<p><br></p>
+<h6 id="2、"><a href="#2、" class="headerlink" title="2、"></a>2、</h6><p>设 $\alpha_i = \begin{bmatrix} a_{i1}, \, a_{i2}, \, \cdots, \, a_{in} \end{bmatrix} \; (i=1, \, 2, \, \cdots, \, m)$ 为齐次线性方程组</p>
+<script type="math/tex; mode=display">
+\begin{cases}
+    a_{11} x_1 + a_{12} x_2 + \cdots + a_{1n} x_n = 0 \\\\
+    a_{21} x_1 + a_{22} x_2 + \cdots + a_{2n} x_n = 0 \\\\
+    \cdots \cdots \\\\
+    a_{m1} x_1 + a_{m2} x_2 + \cdots + a_{mn} x_n = 0 
+\end{cases} \qquad ({\rm I})</script><p>的行向量，已知方程组 $({\rm I})$ 有非零解 $\beta = \begin{bmatrix} b_1, \, b_2, \, \cdots, \, b_n \end{bmatrix}^{\rm T}$，且行向量组的秩 ${\rm r}(\alpha_1, \, \alpha_2, \, \cdots, \, \alpha_m) = m$。证明：向量组 $\alpha_1, \, \alpha_2, \, \cdots, \, \alpha_m, \, \beta^{\rm T}$ 线性无关。 </p>
+<p><br></p>
+<h6 id="3、"><a href="#3、" class="headerlink" title="3、"></a>3、</h6><p>设 $4$ 阶矩阵 $A = \begin{pmatrix} \alpha_1, \, \alpha_2, \, \alpha_3, \, \alpha_4 \end{pmatrix}$，方程组 $Ax = \beta$ 的通解为 $\begin{pmatrix} 1 \\ 2 \\ 2 \\ 1 \end{pmatrix}+ c \begin{pmatrix} 1 \\ -2 \\ 4 \\ 0 \end{pmatrix}$，其中 $c$ 为任意常数。记 $B = (\alpha_3, \, \alpha_2, \, \alpha_1, \, \beta - \alpha_4)$。求方程组 $Bx = \alpha_1 - \alpha_2$ 的通解。 </p>
 <p><br></p>
 <h2 id="、参考答案"><a href="#、参考答案" class="headerlink" title="、参考答案"></a>、参考答案</h2><p><br></p>
 <h4 id="一、向量组的线性相关性-2"><a href="#一、向量组的线性相关性-2" class="headerlink" title="一、向量组的线性相关性"></a>一、向量组的线性相关性</h4><p>设存在一组数 $k_1, \, k_2, \, \cdots, \, k_r$，使 $k_1 \alpha_1 + k_2 \alpha_2 + \cdots + k_r \alpha_r = 0$ 即</p>
@@ -474,6 +504,36 @@ k_r \begin{pmatrix} 1 \\\\ t_r \\\\ \vdots \\\\ t_r^{n-1} \end{pmatrix} = \begin
 <p>$1^\circ \quad$ 若 $a \not= -1 \text{ 且 } a \not= 0$ 时，${\rm r}(A) = {\rm r}(B) = {\rm r}(A \mid B) = 3$ $\implies$ $(\, {\rm I} \,), \, (\, {\rm II} \,)$ 等价。</p>
 <p>$2^\circ \quad$ 若 $a = -1$ 时，${\rm r}(A) = 2 \not= {\rm r}(B) = 3$ $\implies$ $(\, {\rm I} \,), \, (\, {\rm II} \,)$ 不等价。</p>
 <p>$3^\circ \quad$ 若 $a = 0$ 时，${\rm r}(A) = 3, \not= {\rm r}(B) = 2$ $\implies$ $(\, {\rm I} \,), \, (\, {\rm II} \,)$ 不等价。</p>
+<p><br></p>
+<h4 id="五、㊂、同解方程组-1"><a href="#五、㊂、同解方程组-1" class="headerlink" title="五、㊂、同解方程组"></a>五、㊂、同解方程组</h4><p>$1^\circ \;$ 设 $\eta$ 为 $(\, {\rm I} \,)$ 的任一解，即 $A \eta = 0 \implies A^{\rm T}A \eta = 0$，故 $\eta$ 也为 $(\, {\rm II} \,)$ 的解。</p>
+<p>$2^\circ \;$ 设 $\gamma$ 为 $(\, {\rm II} \,)$ 的任一解，即 $A^{\rm T}A \gamma = 0$ $\implies$ $\gamma^{\rm T}A^{\rm T}A \gamma = 0$ $\implies$ $(A\gamma)^{\rm T}A\gamma = 0$ $\implies$ $\begin{Vmatrix} A\gamma \end{Vmatrix} = 0$ $\implies$ $A\gamma=0$，故 $\gamma$ 也为 $(\, {\rm I} \,)$ 的解。</p>
+<ul>
+<li>$\begin{Vmatrix} \alpha \end{Vmatrix} = 0 \iff \alpha = 0$ </li>
+</ul>
+<p>【注】</p>
+<ul>
+<li>此题 $A_{m \times n}$ 时亦成立结论。</li>
+<li>$\begin{array}{l} \\ &amp; \begin{cases} (\, {\rm I} \,) \; AX=0 \\\\ (\, {\rm II} \,) \; A^{\rm T}AX=0 \end{cases} \text{ 同解 } \implies \begin{cases} (\, {\rm I} \,) \\\\ (\, {\rm II} \,) \end{cases} \text{ 的基础解系等价 } \\\\      \implies &amp; S_1 = S_2 \\\\      \implies &amp; n - {\rm r}(A) = n - {\rm r}(A^{\rm T} A) \\\\      \implies &amp; {\rm r}(A) = {\rm r}(A^{\rm T} A) \\ &amp; \end{array}$ <ul>
+<li>$\begin{array}{l} \text{ 又 } \begin{cases} {\rm r}(A^{\rm T}) = {\rm r}(AA^{\rm T}) \\\\ {\rm r}(A) = {\rm r}(A^{\rm T}) \end{cases} \\ &amp; \end{array}$ </li>
+<li>⭐ 故 $A_{m \times n}$，均有 ${\rm r}(A) = {\rm r}(A^{\rm T}) = {\rm r}(A^{\rm T} A) = {\rm r}(AA^{\rm T})$</li>
+</ul>
+</li>
+</ul>
+<p><br></p>
+<h4 id="五、㊃、综合题-1"><a href="#五、㊃、综合题-1" class="headerlink" title="五、㊃、综合题"></a>五、㊃、综合题</h4><p><br></p>
+<h6 id="1、-1"><a href="#1、-1" class="headerlink" title="1、"></a>1、</h6><p>1️⃣ </p>
+<p>$\begin{array}{l} &amp; \begin{bmatrix} 2 \\ 1 \\ 0 \\ 1 \end{bmatrix} + k\begin{bmatrix} 1 \\ -1 \\ 2 \\ 0 \end{bmatrix} = \begin{bmatrix} 2+k \\ 1-k \\ 2k \\ 1 \end{bmatrix} \\\\      \implies &amp; (2+k) \alpha_1 + (1-k) \alpha_2 + 2k \alpha_3 + \alpha_4 = \alpha_5 \\\\ \implies &amp; \alpha_4 = -(2+k) \alpha_1 - (1-k) \alpha_2 - 2k \alpha_3 + \alpha_5 \end{array}$</p>
+<p>2️⃣ </p>
+<p>令 $A = \begin{pmatrix} \alpha_1, \, \alpha_2, \, \alpha_3, \, \alpha_4 \end{pmatrix}$ </p>
+<p>由题可知 $\begin{array}{l} \begin{cases} S = n - {\rm r}(A) \\\\ S=1 \\\\ n=4 \end{cases} \implies {\rm r}(A) = 3 \end{array}$ </p>
+<p>又 $\begin{pmatrix} 1 \\ -1 \\ 2 \\ 0 \end{pmatrix}$ 是 $AX=0$ 的解，$\alpha_1 - \alpha_2 + 2 \alpha_3 = 0 \implies {\rm r}(\alpha_1, \, \alpha_2, \, \alpha_3) &lt; 3$ </p>
+<p>若 $\alpha_4$ 可以由 $\alpha_1, \, \alpha_2, \, \alpha_3$ 表示 $\implies$ ${\rm r}(\alpha_1, \, \alpha_2, \, \alpha_3, \, \alpha_4) = {\rm r}(\alpha_1, \, \alpha_2, \, \alpha_3) &lt; 3$，矛盾。</p>
+<p>所以 $\alpha_4$ 不可以由 $\alpha_1, \, \alpha_2, \, \alpha_3$ 表示。</p>
+<p><br></p>
+<h6 id="2、-1"><a href="#2、-1" class="headerlink" title="2、"></a>2、</h6><p>由于 $\beta$ 是方程组的解，所以 $\alpha_i \beta = 0, \, (i=1, \, 2, \, \cdots, \, m)$。</p>
+<p>假设存在 $k_0, \, k_1, \, k_2, \, \cdots, \, k_m$ 使得 $k_0 \beta^{\rm T} + k_1 \alpha_1 + k_2 \alpha_2 + \cdots + k_m \alpha_m = 0$，在等式两边同时乘以 $\beta$ 得 $\begin{array}{l} \\ &amp; k_0 \beta^{\rm T} \beta + k_1 \alpha_1 \beta + k_2 \alpha_2 \beta + \cdots + k_m \alpha_m \beta = 0 \\\\      \implies &amp; k_0 \beta^{\rm T} \beta = 0 \\\\      \implies &amp; k_0 \begin{Vmatrix} \beta \end{Vmatrix} = 0 \\\\      \implies &amp; k_0 = 0 \end{array}$。</p>
+<p>所以 $k_1 \alpha_1 + k_2 \alpha_2 + \cdots + k_m \alpha_m = 0$，又由于 $\alpha_1, \, \alpha_2, \, \cdots, \, \alpha_m$ 线性无关，所以 $k_1 = k_2 = \cdots = k_m = 0$。</p>
+<p>所以 $\alpha_1, \, \alpha_2, \, \cdots, \, \alpha_m, \, \beta^{\rm T}$ 线性无关。 </p>
 
                 </div>
             </div>
@@ -484,13 +544,13 @@ k_r \begin{pmatrix} 1 \\\\ t_r \\\\ \vdots \\\\ t_r^{n-1} \end{pmatrix} = \begin
 <div class="row justify-content-center">
     <nav class="m-pagination col-md-8 col-sm-24" role="pagination">
         
-        <a class="float-left" href="/2018/08/10/maths 10 特征值/" style="float: left;">
-            ← 特征值
+        <a class="float-left" href="/2018/08/09/maths 9 方程组/" style="float: left;">
+            ← 方程组【大题】
         </a>
         
         
-        <a class="float-right" href="/2018/08/09/maths 9 方程组/">
-            方程组【大题】 →
+        <a class="float-right" href="/2018/08/08/maths 8 矩阵/">
+            矩阵 →
         </a>
         
     </nav>
@@ -736,5 +796,24 @@ k_r \begin{pmatrix} 1 \\\\ t_r \\\\ \vdots \\\\ t_r^{n-1} \end{pmatrix} = \begin
             $('html').animate({scrollTop: 0}, 'slow');
         }
     </script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<!-- <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script> -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+<!-- <script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+
 </body>
 </html>
