@@ -430,6 +430,30 @@ $\begin{bmatrix} \end{bmatrix}$
     \iff & \begin{cases}Ax=0 \text{ 的解满足 } Bx=0 \\\\ Bx=0 \text{ 的解满足 } Ax=0 \end{cases} \qquad & \text{ 抽象型 } \\\\
     \iff &  {\rm r}(A) = {\rm r}(B) = {\rm r} \left( \begin{bmatrix} A \\ B \end{bmatrix} \right) \qquad & \text{ 具体型 }
 \end{array}</script><p><br></p>
+<h2 id="六、关于秩的等式与不等式专题总结"><a href="#六、关于秩的等式与不等式专题总结" class="headerlink" title="六、关于秩的等式与不等式专题总结"></a>六、关于秩的等式与不等式专题总结</h2><p><br></p>
+<h4 id="㊀、定义-4"><a href="#㊀、定义-4" class="headerlink" title="㊀、定义"></a>㊀、定义</h4><p>对于 $A_{m \times n}$，存在 $k$ 阶子式不为 $0$，任意 $k+1$ 阶子式全为 $0$，则 ${\rm r}(A) = k$ $\iff$ 有且仅有 $k$ 个线性无关的向量。</p>
+<ul>
+<li>⭐️ 子式：子行列式</li>
+</ul>
+<p>故秩本质上就是线性无关的向量个数</p>
+<p><br></p>
+<h4 id="㊁、⭐️-重要公式"><a href="#㊁、⭐️-重要公式" class="headerlink" title="㊁、⭐️ 重要公式"></a>㊁、⭐️ 重要公式</h4><script type="math/tex; mode=display">
+\begin{array}{l}
+    1^\circ \quad & 
+    \begin{cases}
+        0 \leq {\rm r}(A_{m \times n}) \leq \min\{m, \, n\} \\\\ 
+        {\rm r}(A_{m \times n}) = 0 \iff A = O
+    \end{cases} \\\\
+    2^\circ \quad & k \not= 0, \; {\rm r}(kA) = {\rm r}(A) \\\\
+    3^\circ \quad & \forall \, A_{m \times n}, \; {\rm r}(A) = {\rm r}( A^{\rm T} ) = {\rm r}( A A^{\rm T} ) = {\rm r}( A^{\rm T} A ) \\\\
+    4^\circ \quad & A_{n \times n} \implies {\rm r}(A^n) = {\rm r}( A^{n+1} ) \\\\
+    5^\circ \quad & \max \{ {\rm r}(A), \, {\rm r}(B) \} \leq {\rm r}(A \mid B) \leq {\rm r}(A) + {\rm r}(B) \\\\
+    6^\circ \quad & {\rm r}(A+B) \leq {\rm r}(A) + {\rm r}(B) \\\\
+    7^\circ \quad & {\rm r}(AB) \leq \min \{ {\rm r}(A), \, {\rm r}(B) \} \\\\
+    8^\circ \quad & \text{ 若 } AB=O \text{ ，则 } {\rm r}(A) + {\rm r}(B) \leq n, \, ( n \text{ 为 } A \text{ 的列数 } ) \\\\
+    9^\circ \quad & \text{ 给 } A_{n \times n}, \, {\rm r}(A^\ast) = \begin{cases} n, & {\rm r}(A) = n; \\\\ 1, & {\rm r}(A) = n-1; \\\\ 0, & {\rm r}(A) < n-1 \end{cases} \\\\
+\end{array}</script><p>$3^\circ, \, 6^\circ, \, 7^\circ, \, 8^\circ, \, 9^\circ$ 相对考的频率更高。</p>
+<p><br></p>
 <h2 id="、练习题"><a href="#、练习题" class="headerlink" title="、练习题"></a>、练习题</h2><p><br></p>
 <h4 id="一、向量组的线性相关性-1"><a href="#一、向量组的线性相关性-1" class="headerlink" title="一、向量组的线性相关性"></a>一、向量组的线性相关性</h4><p>设向量组 $\alpha_1 = (1, \, t_1, \, \cdots, \, t_1^{n-1})^{\rm T}$，$\alpha_2 = (1, \, t_2, \, \cdots, \, t_2^{n-1})^{\rm T}$，$\cdots$，$\alpha_r = (1, \, t_r, \, \cdots, \, t_r^{n-1})^{\rm T}$，其中 $t_1, \, t_2, \, \cdots, t_r$ 是互不相同的数，且 $r \leq n$。证明 $\alpha_1, \, \alpha_2, \, \cdots, \, \alpha_r$ 线性无关。</p>
 <p><br></p>
@@ -467,6 +491,21 @@ $\begin{bmatrix} \end{bmatrix}$
 <p><br></p>
 <h6 id="3、"><a href="#3、" class="headerlink" title="3、"></a>3、</h6><p>设 $4$ 阶矩阵 $A = \begin{pmatrix} \alpha_1, \, \alpha_2, \, \alpha_3, \, \alpha_4 \end{pmatrix}$，方程组 $Ax = \beta$ 的通解为 $\begin{pmatrix} 1 \\ 2 \\ 2 \\ 1 \end{pmatrix}+ c \begin{pmatrix} 1 \\ -2 \\ 4 \\ 0 \end{pmatrix}$，其中 $c$ 为任意常数。记 $B = (\alpha_3, \, \alpha_2, \, \alpha_1, \, \beta - \alpha_4)$。求方程组 $Bx = \alpha_1 - \alpha_2$ 的通解。 </p>
 <p><br></p>
+<h4 id="六、㊁、重要公式"><a href="#六、㊁、重要公式" class="headerlink" title="六、㊁、重要公式"></a>六、㊁、重要公式</h4><p><br></p>
+<h6 id="第四个公式"><a href="#第四个公式" class="headerlink" title="第四个公式"></a>第四个公式</h6><p>证明</p>
+<script type="math/tex; mode=display">
+A_{n \times n} \implies {\rm r}(A^n) = {\rm r}(A^{n+1})</script><p><br></p>
+<h6 id="第六个公式"><a href="#第六个公式" class="headerlink" title="第六个公式"></a>第六个公式</h6><p>证明</p>
+<script type="math/tex; mode=display">
+{\rm r}(A+B) \leq {\rm r}(A) + {\rm r}(B)</script><p><br></p>
+<h6 id="第七个公式"><a href="#第七个公式" class="headerlink" title="第七个公式"></a>第七个公式</h6><p>证明</p>
+<script type="math/tex; mode=display">
+{\rm r}(AB) \leq \min \{ {\rm r}(A), \, {\rm r}(B) \}</script><p><br></p>
+<h6 id="第八个公式"><a href="#第八个公式" class="headerlink" title="第八个公式"></a>第八个公式</h6><p>证明</p>
+<script type="math/tex; mode=display">
+\text{ 若 } AB=O \text{ ，则 } {\rm r}(A) + {\rm r}(B) \leq n, \, ( n \text{ 为 } A \text{ 的列数 } )</script><p><br></p>
+<h6 id="第九个公式"><a href="#第九个公式" class="headerlink" title="第九个公式"></a>第九个公式</h6><script type="math/tex; mode=display">
+\text{ 给 } A_{n \times n}, \, {\rm r}(A^\ast) = \begin{cases} n, & {\rm r}(A) = n; \\\\ 1, & {\rm r}(A) = n-1; \\\\ 0, & {\rm r}(A) < n-1 \end{cases}</script><p><br></p>
 <h2 id="、参考答案"><a href="#、参考答案" class="headerlink" title="、参考答案"></a>、参考答案</h2><p><br></p>
 <h4 id="一、向量组的线性相关性-2"><a href="#一、向量组的线性相关性-2" class="headerlink" title="一、向量组的线性相关性"></a>一、向量组的线性相关性</h4><p>设存在一组数 $k_1, \, k_2, \, \cdots, \, k_r$，使 $k_1 \alpha_1 + k_2 \alpha_2 + \cdots + k_r \alpha_r = 0$ 即</p>
 <script type="math/tex; mode=display">
@@ -533,7 +572,83 @@ k_r \begin{pmatrix} 1 \\\\ t_r \\\\ \vdots \\\\ t_r^{n-1} \end{pmatrix} = \begin
 <h6 id="2、-1"><a href="#2、-1" class="headerlink" title="2、"></a>2、</h6><p>由于 $\beta$ 是方程组的解，所以 $\alpha_i \beta = 0, \, (i=1, \, 2, \, \cdots, \, m)$。</p>
 <p>假设存在 $k_0, \, k_1, \, k_2, \, \cdots, \, k_m$ 使得 $k_0 \beta^{\rm T} + k_1 \alpha_1 + k_2 \alpha_2 + \cdots + k_m \alpha_m = 0$，在等式两边同时乘以 $\beta$ 得 $\begin{array}{l} \\ &amp; k_0 \beta^{\rm T} \beta + k_1 \alpha_1 \beta + k_2 \alpha_2 \beta + \cdots + k_m \alpha_m \beta = 0 \\\\      \implies &amp; k_0 \beta^{\rm T} \beta = 0 \\\\      \implies &amp; k_0 \begin{Vmatrix} \beta \end{Vmatrix} = 0 \\\\      \implies &amp; k_0 = 0 \end{array}$。</p>
 <p>所以 $k_1 \alpha_1 + k_2 \alpha_2 + \cdots + k_m \alpha_m = 0$，又由于 $\alpha_1, \, \alpha_2, \, \cdots, \, \alpha_m$ 线性无关，所以 $k_1 = k_2 = \cdots = k_m = 0$。</p>
-<p>所以 $\alpha_1, \, \alpha_2, \, \cdots, \, \alpha_m, \, \beta^{\rm T}$ 线性无关。 </p>
+<p>所以 $\alpha_1, \, \alpha_2, \, \cdots, \, \alpha_m, \, \beta^{\rm T}$ 线性无关。</p>
+<p><br></p>
+<h6 id="3、-1"><a href="#3、-1" class="headerlink" title="3、"></a>3、</h6><p>由题可知</p>
+<p>$1^\circ \;$ $\begin{pmatrix} 1 \\ -2 \\ 4 \\ 0 \end{pmatrix}$ 是 $AX=0$ 的解 $\implies$ $\alpha_1 - 2\alpha_2 + 4\alpha_3 = 0$ $\implies$ $\alpha_1 = 2\alpha_2 - 4\alpha_3$ </p>
+<p>$2^\circ \;$ $\begin{pmatrix} 1 \\ 2 \\ 2 \\ 1 \end{pmatrix}$ 是 $AX = \beta$ 的解 $\implies$ $\alpha_1 + 2\alpha_2 + 2\alpha_3 + \alpha_4 = \beta$ $\implies$ $\beta - \alpha_4 = 4\alpha_2 - 2\alpha_3$ </p>
+<p>$3^\circ \;$ $1=S=n-{\rm r}(A)$ $\implies$ ${\rm r}(A) = 3$，且由于 $\alpha_1, \, \alpha_2, \, \alpha_3$ 线性相关，所以 ${\rm r}(\alpha_1, \, \alpha_2, \, \alpha_3) = 2$ </p>
+<p>所以 $B = (\alpha_3, \, \alpha_2, \, 2\alpha_2 - 4\alpha_3, \, 4\alpha_2 - 2\alpha_3)$ $\implies$ ${\rm r}(B) = 2$。</p>
+<p>对于 $BX = \alpha_1 - \alpha_2$，即 $(\alpha_3, \, \alpha_2, \, 2\alpha_2 - 4\alpha_3, \, 4\alpha_2 - 2\alpha_3)X = (\alpha_2 - 4\alpha_3)$，$S = n-{\rm r}(B) = 2$。</p>
+<ul>
+<li>$BX=0$ 的两个解为 $\begin{cases} \xi_1 = \begin{pmatrix} 4 &amp; -1 &amp; 1 &amp; 0\end{pmatrix}^{\rm T} \\\\ \xi_2 = \begin{pmatrix} 2 &amp; -4 &amp; 0 &amp; 1 \end{pmatrix}^{\rm T} \end{cases}$。<ul>
+<li>所以 $BX=0$ 的通解为 $\begin{array}{l} \\ k_1 \xi_1 + k_2 \xi_2, \, (k_1, \, k_2 \in {\rm R}) \\ &amp; \end{array}$。</li>
+</ul>
+</li>
+<li>$BX=\alpha_1 - \alpha_2$ 的一个特解为 $\eta = \begin{pmatrix} -4 &amp; 1 &amp; 0 &amp; 0\end{pmatrix}^{\rm T}$。</li>
+</ul>
+<p>所以 $Bx = \alpha_1 - \alpha_2$ 的通解为 $k_1 \xi_1 + k_2 \xi_2 + \eta, \, (k_1, \, k_2 \in {\rm R})$。</p>
+<p><br></p>
+<h4 id="六、㊁、重要公式-1"><a href="#六、㊁、重要公式-1" class="headerlink" title="六、㊁、重要公式"></a>六、㊁、重要公式</h4><p><br></p>
+<h6 id="第四个公式-1"><a href="#第四个公式-1" class="headerlink" title="第四个公式"></a>第四个公式</h6><p>由于 $\begin{cases} AX=0 \\\\ BX=0 \end{cases} \text{同解} \iff {\rm r}(A) = {\rm r}(B) = {\rm r}\begin{pmatrix} A \\ B \end{pmatrix}$，所以构造 $\begin{cases} A^n X = 0 \\\\ A^{n+1} X = 0 \end{cases}$。</p>
+<p>$1^\circ$ </p>
+<p>假设 $\eta$ 是 $A^n X = 0$ 的解，即 $A^n \eta = 0$， 由于 $A^{n+1} \eta = A \cdot A^n \eta = 0$，所以 $\eta$ 也是 $A^{n+1} X = 0$ 的解。</p>
+<p>$2^\circ$ </p>
+<p>假设 $\gamma$ 是 $A^{n+1} X = 0$ 的解，即 $A^{n+1} \gamma = 0$， 同时假设 $\gamma$ 不是 $A^n X = 0$ 的解，即 $A^n \gamma \not= 0$。</p>
+<p>若存在一组数 $k_0, \, k_1, \, \cdots, \, k_{n-1}$ 使得 $k_0 \gamma + k_1 A \gamma + \cdots + k_{n-1} A^{n-1} \gamma \not= 0$ </p>
+<ul>
+<li>两边同时乘以 $A^{n}$ 得 $k_0 A^n \gamma + 0 = 0$，由于 $A^n \gamma \not= 0$，所以 $k_0 = 0$。</li>
+<li>同理，两边同时乘以 $A^{n-1}$ 得 $k_1 = 0$。$\begin{array}{l} \\ &amp; \\ &amp; \end{array}$ </li>
+<li>同理得 $k_0 = k_1 = \cdots = k_{n-1} = 0$，所以 $\gamma, \, A \gamma, \, \cdots, \, A^{n-1} \gamma$ 线性无关。</li>
+</ul>
+<p>由于 $n+1$ 个 $n$ 维向量必线性相关，所以 $\gamma, \, A \gamma, \, \cdots, \, A^{n-1} \gamma, \, A^n \gamma$ 线性相关。</p>
+<p>所以存在一组数 $q_0, \, q_1, \, \cdots, \, q_{n-1}$ 使得 $q_0 \gamma + q_1 A \gamma + \cdots + q_{n-1} A^{n-1} = A^n \gamma$ </p>
+<ul>
+<li>两边同时乘以 $A^{n}$ 得 $q_0 A^n \gamma + 0 = 0$，由于 $A^n \gamma \not= 0$，所以 $q_0 = 0$。</li>
+<li>同理，两边同时乘以 $A^{n-1}$ 得 $q_1 = 0$。$\begin{array}{l} \\ &amp; \\ &amp; \end{array}$ </li>
+<li>同理可得 $q_0 = q_1 = \cdots = q_{n-1} = 0$，所以 $A^n \gamma = 0$，矛盾。</li>
+</ul>
+<p>所以假设不成立，$A^n \gamma = 0$。</p>
+<p>所以 $A^n X = 0$ 和 $A^{n+1} X = 0$ 是同解方程，所以 ${\rm r}(A^n) = {\rm r}( A^{n+1} )$。</p>
+<p><br></p>
+<h6 id="第六个公式-1"><a href="#第六个公式-1" class="headerlink" title="第六个公式"></a>第六个公式</h6><p>由公式 $5^\circ$ 可知，${\rm r}(A \mid B) \leq {\rm r}(A) + {\rm r}(B)$。</p>
+<p>设 $A = (\alpha_1, \, \alpha_2, \, \cdots, \, \alpha_n)$，$B = (\beta_1, \, \beta_2, \, \cdots, \, \beta_n)$ </p>
+<p>因为</p>
+<script type="math/tex; mode=display">
+(\alpha_1 + \beta_1, \, \alpha_2 + \beta_2, \, \cdots, \, \alpha_n + \beta_n) = 
+(\alpha_1, \, \cdots, \, \alpha_n, \, \beta_1, \, \cdots, \, \beta_n) \cdot 
+\begin{pmatrix} 
+    & 1 & \cdots & 0 & \\\\
+    & 0 & \cdots & 0 & \\\\
+    & \vdots & & \vdots & \\\\
+    & 0 & \cdots & 1 & \\\\
+    & 1 & \cdots & 0 & \\\\
+    & 0 & \cdots & 0 & \\\\
+    & \vdots & & \vdots & \\\\
+    & 0 & \cdots & 1 &
+\end{pmatrix}</script><p>左边可以由右边表出 $\implies$ ${\rm r}(A + B) \leq {\rm r}(A \mid B) \leq {\rm r}(A) + {\rm r}(B)$ </p>
+<p>⭐️ 两向量组，被表出的秩不大。</p>
+<p><br></p>
+<h6 id="第七个公式-1"><a href="#第七个公式-1" class="headerlink" title="第七个公式"></a>第七个公式</h6><p>令 $C = AB$，$C^{\rm T} = B^{\rm T} A^{\rm T}$</p>
+<p>由于 $C$ 可以由 $A$ 表出，所以 ${\rm r}(C) \leq {\rm r}(A)$。</p>
+<p>由于 $C^{\rm T}$ 可以由 $B^{\rm T}$ 表出，所以 ${\rm r}( C^{\rm T} ) \leq {\rm r}( B^{\rm T} )$ $\implies$ ${\rm r}(C) \leq {\rm r}(B)$。</p>
+<p>所以 $\begin{cases} {\rm r}(AB) \leq {\rm r}(A) \\\\ {\rm r}(AB) \leq {\rm r}(B) \end{cases}$ $\implies$ ${\rm r}(AB) \leq \min \{ {\rm r}(A), \, {\rm r}(B) \}$。</p>
+<p><br></p>
+<h6 id="第八个公式-1"><a href="#第八个公式-1" class="headerlink" title="第八个公式"></a>第八个公式</h6><p>$AB = O$ $\implies$ $A(\beta_1, \, \beta_2, \, \cdots, \, \beta_n) = (0, \, 0, \, \cdots, \, 0)$ </p>
+<p>所以 $A \beta_i = 0$，其中 $\beta_i$ 均为 $AX = 0$ 的解，且是其部分解，所以 ${\rm r}(B) \leq n - {\rm r}(A)$ $\implies$ ${\rm r}(A) + {\rm r}(B) \leq n$。</p>
+<p><br></p>
+<h6 id="第九个公式-1"><a href="#第九个公式-1" class="headerlink" title="第九个公式"></a>第九个公式</h6><p>${\rm r}(A) = n$ 时：</p>
+<ul>
+<li>$\mid A \mid \not= 0$，所以 $\mid A^\ast \mid = \mid A \mid^{n-1} \not= 0$，所以 ${\rm r}(A^\ast) = n$。</li>
+</ul>
+<p>${\rm r}(A) = n-1$ 时：</p>
+<ul>
+<li>$AA^\ast = O$ $\implies$ ${\rm r}(A^\ast) \leq n - {\rm r}(A) = 1$，又因为 ${\rm r}(A) = n-1$，所以存在一个 $n-1$ 阶子式不为 $0$，即存在某一 $M_{ij}\not= 0$，即 $A_{ij} \not= 0$，所以 $A^\ast \not= O$ $\implies$ ${\rm r}(A^\ast) = 1$。</li>
+</ul>
+<p>${\rm r}(A) &lt; n-1$ 时：</p>
+<ul>
+<li>同上证明 ${\rm r}(A^\ast) = 0$。</li>
+</ul>
 
                 </div>
             </div>
@@ -544,13 +659,13 @@ k_r \begin{pmatrix} 1 \\\\ t_r \\\\ \vdots \\\\ t_r^{n-1} \end{pmatrix} = \begin
 <div class="row justify-content-center">
     <nav class="m-pagination col-md-8 col-sm-24" role="pagination">
         
-        <a class="float-left" href="/2018/08/09/maths 9 方程组/" style="float: left;">
-            ← 方程组【大题】
+        <a class="float-left" href="/2018/08/10/maths 10 特征值/" style="float: left;">
+            ← 特征值
         </a>
         
         
-        <a class="float-right" href="/2018/08/08/maths 8 矩阵/">
-            矩阵 →
+        <a class="float-right" href="/2018/08/09/maths 9 方程组/">
+            方程组【大题】 →
         </a>
         
     </nav>
