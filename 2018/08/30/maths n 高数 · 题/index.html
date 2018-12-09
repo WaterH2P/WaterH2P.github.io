@@ -328,7 +328,7 @@
                             <br>
                         
                         
-                            <span>最近更新：2018-11-15</span>
+                            <span>最近更新：2018-12-09</span>
                             <br>
                         
                         
@@ -337,7 +337,28 @@
             </div>
             <div class="row justify-content-center">
                 <div class="col-lg-8 col-md-10 col-sm-12">
-                    <h2 id="习题"><a href="#习题" class="headerlink" title="习题"></a>习题</h2><p><br></p>
+                    <!-- 
+$\begin{array}{l} ( {\rm A} ) \, 1 \qquad & ( {\rm B} ) \, 2 \\\\ ( {\rm C} ) \, 3 \qquad & ( {\rm D} ) \, 4 \end{array}$ 
+-->
+<!-- 
+$\begin{array}{l} \end{array}$
+
+$\begin{vmatrix} \end{vmatrix}$
+
+$\begin{pmatrix} \end{pmatrix}$
+
+$\begin{bmatrix} \end{bmatrix}$
+
+\begin{array}{l} \\ 
+ \\ & \end{array}
+-->
+<!-- 
+⭐
+㊀ ㊁ ㊂ ㊃ ㊄ ㊅ ㊆ ㊇ ㊈
+
+<img src="" width="80%">
+️ -->
+<h2 id="习题"><a href="#习题" class="headerlink" title="习题"></a>习题</h2><p><br></p>
 <h4 id="1"><a href="#1" class="headerlink" title="1"></a>1</h4><p>设 $f(x, y)$ 为连续函数，计算</p>
 <script type="math/tex; mode=display">
 I = \lim\limits_{t \to 0^+} \dfrac{1}{\pi t^2} \iint\limits_D f(x, y) \, {\rm d}\sigma</script><p>其中 $D = \left\{ (x, y) \mid x^2 + y^2 \leq t^2 \right\}$ 。</p>
@@ -351,6 +372,11 @@ I = \lim\limits_{t \to 0^+} \dfrac{1}{\pi t^2} \iint\limits_D f(x, y) \, {\rm d}
     \text{ (A) } C_1 y_1 + C_2 y_2 + y_3 \qquad & \text{ (B) } C_1 y_1 + C_2 y_2 - ( C_1 + C_2 ) y_3 \\\\
     \text{ (C) } C_1 y_1 + C_2 y_2 - ( 1 - C_1 - C_2 ) y_3 \qquad & \text{ (D) } C_1 y_1 + C_2 y_2 + ( 1 - C_1 - C_2 ) y_3 
 \end{array}</script><p><br></p>
+<h4 id="4、八套卷二（12）"><a href="#4、八套卷二（12）" class="headerlink" title="4、八套卷二（12）"></a>4、八套卷二（12）</h4><p>设函数 $z = f(x, \, y) \, (xy \not= 0)$ 满足 $f(xy, \, \dfrac{y}{x}) = y^2 (x^2 - 1)$，则 ${\rm d}z =$ <strong>____</strong> 。</p>
+<p><br></p>
+<h4 id="5、李林四套卷二（15）"><a href="#5、李林四套卷二（15）" class="headerlink" title="5、李林四套卷二（15）"></a>5、李林四套卷二（15）</h4><p>计算 </p>
+<script type="math/tex; mode=display">
+\lim\limits_{x \to 0} \left[ \left( \left. \dfrac{1}{2} \int_0^2 x \sqrt{ 4 - x^2 u^2 } {\rm d}u - 2x \right) \right/  \ln(1 + x^3) \right]</script><p><br></p>
 <h2 id="参考答案"><a href="#参考答案" class="headerlink" title="参考答案"></a>参考答案</h2><p><br></p>
 <h4 id="1-1"><a href="#1-1" class="headerlink" title="1"></a>1</h4><p>【解析】因被积函数 $f(x, y)$ 在闭区间 D 上是抽象函数，故无法用先求出重积分的方法求极限，因此考虑：</p>
 <ul>
@@ -383,6 +409,11 @@ y'' + p(x)y' + q(x)y = f(x)</script><p>的 3 个解，A、B、C 为常数，并�
 <script type="math/tex; mode=display">
 Y = Ay_1(x) + By_2(x) + Cy_3(x)</script><p>Y 是 $y’’ + p(x)y’ + q(x)y = f(x)$ 的解得充要条件是 $A + B + C = 1$；</p>
 <p>Y 是 $y’’ + p(x)y’ + q(x)y = 0$ 的解得充要条件是 $A + B + C = 0$ 。</p>
+<p><br></p>
+<h4 id="4、八套卷二（12）-1"><a href="#4、八套卷二（12）-1" class="headerlink" title="4、八套卷二（12）"></a>4、八套卷二（12）</h4><p>令 $\begin{cases} u = xy \\\\ v = \dfrac{y}{x} \end{cases}$ $\implies$ $\begin{cases} x^2 = \dfrac{u}{v} \\\\ y^2 = uv \end{cases}$，则 $f(u, \, v) = uv(\dfrac{u}{v} - 1) = u^2 - uv$，即 $z = f(x, \, y) = x^2 - xy$。</p>
+<p>所以 ${\rm d}z = (2x - y){\rm d}x - x{\rm d}y$。</p>
+<p><br></p>
+<h4 id="5、李林四套卷二（15）-1"><a href="#5、李林四套卷二（15）-1" class="headerlink" title="5、李林四套卷二（15）"></a>5、李林四套卷二（15）</h4><p>$\begin{array}{l} \text{原式} &amp;= \lim\limits_{x \to 0} \dfrac{ \dfrac{1}{2} \int_0^2 \sqrt{ 4 - (xu)^2 } \, {\rm d}(xu) - 2x }{ \ln(1 + x^3) } \\\\     \text{令 } t=xu &amp;= \lim\limits_{x \to 0} \dfrac{ \dfrac{1}{2} \int_0^{2x} \sqrt{ 4 - t^2 } \, {\rm d}t -2x }{x^3} \\\\      \text{洛必达} &amp;= \lim\limits_{x \to 0} \dfrac{ \dfrac{1}{2} \sqrt{ 4 - 4x^2 } \cdot 2 - 2 }{3x^2} \\\\      &amp;= 2 \lim\limits_{x \to 0} \dfrac{ \sqrt{ 1 - x^2 } - 1 }{3x^2} \\\\      &amp;= 2 \lim\limits_{x \to 0} \dfrac{ \dfrac{1}{2} (-x^2) }{ 3x^2 } \\\\      &amp;= -\dfrac{1}{3} \end{array}$</p>
 
                 </div>
             </div>
@@ -393,13 +424,13 @@ Y = Ay_1(x) + By_2(x) + Cy_3(x)</script><p>Y 是 $y’’ + p(x)y’ + q(x)y = f
 <div class="row justify-content-center">
     <nav class="m-pagination col-md-8 col-sm-24" role="pagination">
         
-        <a class="float-left" href="/2018/08/30/maths n 高数 · 公式/" style="float: left;">
-            ← 高数 · 公式
+        <a class="float-left" href="/2018/08/31/maths n 线代 · 题/" style="float: left;">
+            ← 线代 · 题
         </a>
         
         
-        <a class="float-right" href="/2018/08/29/看Q外的风景/">
-            看 Q 外的风景 →
+        <a class="float-right" href="/2018/08/30/maths n 高数 · 公式/">
+            高数 · 公式 →
         </a>
         
     </nav>
