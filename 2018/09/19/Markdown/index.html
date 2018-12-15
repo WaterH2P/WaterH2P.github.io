@@ -450,18 +450,18 @@
                 var text = $(h2).text().toString();
                 var header = text.indexOf('、') > 0 ? text.split('、')[1] : 
                     text.indexOf('.') > 0 ? text.split('.')[1] : text;
-                var text = num_map[i + 1] + '. ' + header + '';
-                var ele_id = text + '-' + id_index + '';
-                while( id_exist.indexOf(ele_id) > -1 ){
+                text = num_map[i + 1] + '. ' + header + '';
+                var id = text + '-' + id_index + '';
+                while( id_exist.indexOf(id) > -1 ){
                     id_index++;
-                    ele_id = text + '-' + id_index + '';
+                    id = text + '-' + id_index + '';
                     if( id_index > 5 ){
                         console.log('fuck');
                         break;
                     }
                 }
-                id_exist[id_exist.length] = ele_id;
-                $(h2).attr('id', ele_id);
+                id_exist[id_exist.length] = id;
+                $(h2).attr('id', id);
 
                 var h4s = [];
                 if(i<numOfH2-1){
@@ -479,23 +479,23 @@
                     var childText = $(element).text().toString();
                     var childHeader = childText.indexOf('、') > 0 ? childText.split('、')[1] : 
                         childText.indexOf('.') > 0 ? childText.split('.')[1] : childText;
-                    var childId = (index+1) + '. ' + childHeader + '';
-                    var childele_id = childId + '-' + childId_index + '';
-                    while( id_exist.indexOf(childele_id) > -1 ){
+                    childText = (index+1) + '. ' + childHeader + '';
+                    var childId = childText + '-' + childId_index + '';
+                    while( id_exist.indexOf(childId) > -1 ){
                         childId_index++;
-                        childele_id = text + '-' + childId_index + '';
+                        childId = text + '-' + childId_index + '';
                         if( childId_index > 5 ){
                             console.log('fuck');
                             break;
                         }
                     }
-                    id_exist[id_exist.length] = childele_id;
-                    $(element).attr('id', childele_id);
-                    h2Children[index] = {'id':childele_id, 'text': childId};
+                    id_exist[id_exist.length] = childId;
+                    $(element).attr('id', childId);
+                    h2Children[index] = {'id':childId, 'text': childText};
                 });
                 var fillColor = i===0 ? true : false;
                 var show = i===0 ? true : false;
-                var header = {'id':ele_id, 'text':text, 'index':i, 'fillColor':fillColor, 'show':show, 'children': h2Children};
+                var header = {'id':id, 'text':text, 'index':i, 'fillColor':fillColor, 'show':show, 'children': h2Children};
 
                 div_side_navigation_left.headers.push(header);
             }
