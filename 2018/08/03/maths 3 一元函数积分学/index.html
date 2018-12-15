@@ -804,8 +804,8 @@ s = \int_{\alpha}^{\beta} \sqrt{ {\rm r}^2(\theta) + {\rm r}'^2(\theta) } \, {\r
         </a>
         
         
-        <a class="float-right" href="/2018/08/02/maths 2 一元函数微积分学 · 应用/">
-            一元函数微积分学 · 应用 →
+        <a class="float-right" href="/2018/08/02/maths 2 一元函数微积分学 · 习题/">
+            一元函数微积分学 · 习题 →
         </a>
         
     </nav>
@@ -922,7 +922,7 @@ s = \int_{\alpha}^{\beta} \sqrt{ {\rm r}^2(\theta) + {\rm r}'^2(\theta) } \, {\r
                 var height_work = $(window).height();
                 var scrollTop = $(window).scrollTop();
                 $('h2').each(function(index, element){
-                    if( $(element).offset().top - scrollTop < 10 ){
+                    if( $(element).offset().top - scrollTop > 0 && $(element).offset().top - scrollTop < 20 ){
                         div_side_navigation_left.showChildren(index);
                     }
                 });

@@ -459,8 +459,8 @@ f(x) = \lim\limits_{n \to \infty} \dfrac{x}{e^{-nx} - (x^2+1)}</script><p>求曲
 <div class="row justify-content-center">
     <nav class="m-pagination col-md-8 col-sm-24" role="pagination">
         
-        <a class="float-left" href="/2018/08/03/maths 3 一元函数积分学/" style="float: left;">
-            ← 一元函数积分学
+        <a class="float-left" href="/2018/08/02/maths 2 一元函数微积分学 · 习题/" style="float: left;">
+            ← 一元函数微积分学 · 习题
         </a>
         
         
@@ -582,7 +582,7 @@ f(x) = \lim\limits_{n \to \infty} \dfrac{x}{e^{-nx} - (x^2+1)}</script><p>求曲
                 var height_work = $(window).height();
                 var scrollTop = $(window).scrollTop();
                 $('h2').each(function(index, element){
-                    if( $(element).offset().top - scrollTop < 10 ){
+                    if( $(element).offset().top - scrollTop > 0 && $(element).offset().top - scrollTop < 20 ){
                         div_side_navigation_left.showChildren(index);
                     }
                 });

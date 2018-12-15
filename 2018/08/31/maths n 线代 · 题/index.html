@@ -564,7 +564,7 @@ PQ = O \implies {\rm r}(P) + {\rm r}(Q) \leq 3 \implies 1 \leq {\rm r}(P) \leq 3
                 var height_work = $(window).height();
                 var scrollTop = $(window).scrollTop();
                 $('h2').each(function(index, element){
-                    if( $(element).offset().top - scrollTop < 10 ){
+                    if( $(element).offset().top - scrollTop > 0 && $(element).offset().top - scrollTop < 20 ){
                         div_side_navigation_left.showChildren(index);
                     }
                 });

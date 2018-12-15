@@ -618,13 +618,13 @@ I = \int e^{2x} \arctan \sqrt{e^x-1} \, {\rm d}x</script><p>$\begin{array}{l} I 
 <div class="row justify-content-center">
     <nav class="m-pagination col-md-8 col-sm-24" role="pagination">
         
-        <a class="float-left" href="/2018/08/02/maths 2 一元函数微分学/" style="float: left;">
-            ← 一元函数微分学
+        <a class="float-left" href="/2018/08/03/maths 3 一元函数积分学/" style="float: left;">
+            ← 一元函数积分学
         </a>
         
         
-        <a class="float-right" href="/2018/08/01/maths 1 极限/">
-            极限 →
+        <a class="float-right" href="/2018/08/02/maths 2 一元函数微积分学 · 应用/">
+            一元函数微积分学 · 应用 →
         </a>
         
     </nav>
@@ -741,7 +741,7 @@ I = \int e^{2x} \arctan \sqrt{e^x-1} \, {\rm d}x</script><p>$\begin{array}{l} I 
                 var height_work = $(window).height();
                 var scrollTop = $(window).scrollTop();
                 $('h2').each(function(index, element){
-                    if( $(element).offset().top - scrollTop < 10 ){
+                    if( $(element).offset().top - scrollTop > 0 && $(element).offset().top - scrollTop < 20 ){
                         div_side_navigation_left.showChildren(index);
                     }
                 });

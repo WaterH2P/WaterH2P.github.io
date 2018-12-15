@@ -701,7 +701,7 @@ f(x_1, \, x_2, \, x_3) = (x_1 - ax_2)^2 + (x_2 - bx_3)^2 + (x_3 - cx_1)^2</scrip
                 var height_work = $(window).height();
                 var scrollTop = $(window).scrollTop();
                 $('h2').each(function(index, element){
-                    if( $(element).offset().top - scrollTop < 10 ){
+                    if( $(element).offset().top - scrollTop > 0 && $(element).offset().top - scrollTop < 20 ){
                         div_side_navigation_left.showChildren(index);
                     }
                 });

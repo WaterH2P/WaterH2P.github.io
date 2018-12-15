@@ -616,7 +616,7 @@ n \cdot (n+1)^{-1} < \sum\limits_{k=1}^n (n^k + 1)^{ -(1/k) } < n \cdot (n^n + 1
                 var height_work = $(window).height();
                 var scrollTop = $(window).scrollTop();
                 $('h2').each(function(index, element){
-                    if( $(element).offset().top - scrollTop < 10 ){
+                    if( $(element).offset().top - scrollTop > 0 && $(element).offset().top - scrollTop < 20 ){
                         div_side_navigation_left.showChildren(index);
                     }
                 });
