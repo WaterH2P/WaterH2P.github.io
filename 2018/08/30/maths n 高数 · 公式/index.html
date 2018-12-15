@@ -417,7 +417,7 @@ $\begin{array}{l} \end{array}$
         <!-- Catalog of Blog Titles -->
         <div id="div-side-navigation-left" class="col-lg-3 col-md-3" style="position: fixed; top: 46px; left: 0; padding-top: 0; padding-right: 50px" v-if="show">
             <div class="list-group" style="border-radius: 0; border: 1px solid rgba(0, 0, 0, 0.1)">
-                <a class="list-group-item list-group-item-action" :class="{linkFocus:header.fillColor}" style="padding: 1px 20px; border: 0; border-radius: 0" :href="IDToHref(header.id)" v-for="header in headers" @click="showChildren(header.index)">{{header.id}}</a>
+                <a class="list-group-item list-group-item-action" :class="{linkFocus:header.fillColor}" style="padding: 1px 20px; border: 0; border-radius: 0" :href="IDToHref(header.id)" v-for="header in headers" @click="showChildren(header.index)">{{header.text}}</a>
             </div>
             <div class="width-100-pct height-5 visibility-hidden"></div>
             <div class="list-group" style="border-radius: 0; border: 1px solid rgba(0, 0, 0, 0.1)">
@@ -426,7 +426,7 @@ $\begin{array}{l} \end{array}$
                         enter-active-class="animated slideInUp"
                         leave-active-class="">
                         <div v-if="header.show">
-                            <a class="list-group-item list-group-item-action" style="padding: 1px 20px; border: 0; border-radius: 0" :href="IDToHref(child.id)" v-for="child in header.children">{{child.id}}</a>
+                            <a class="list-group-item list-group-item-action" style="padding: 1px 20px; border: 0; border-radius: 0" :href="IDToHref(child.id)" v-for="child in header.children">{{child.text}}</a>
                         </div>
                     </transition>
                 </div>
@@ -453,15 +453,28 @@ $\begin{array}{l} \end{array}$
             // 对于目录索引
             var preH2 = undefined;
             var num_map = [ '零', '一', '二', '三', '四', '五', '六', '七', '八', '九' ];
+            var id_exist = [];
             var h2s = $('h2');
             var numOfH2 = h2s.length;
             for(var i=0; i<numOfH2; i++){
+                var id_index = 0;
+
                 var h2 = h2s[i];
                 var text = $(h2).text().toString();
                 var header = text.indexOf('、') > 0 ? text.split('、')[1] : 
                     text.indexOf('.') > 0 ? text.split('.')[1] : text;
-                var id = num_map[i + 1] + '. ' + header + '';
-                $(h2).attr('id', id);
+                var text = num_map[i + 1] + '. ' + header + '';
+                var ele_id = text + '-' + id_index + '';
+                while( id_exist.indexOf(ele_id) > -1 ){
+                    id_index++;
+                    ele_id = text + '-' + id_index + '';
+                    if( id_index > 5 ){
+                        console.log('fuck');
+                        break;
+                    }
+                }
+                id_exist[id_exist.length] = ele_id;
+                $(h2).attr('id', ele_id);
 
                 var h4s = [];
                 if(i<numOfH2-1){
@@ -474,19 +487,41 @@ $\begin{array}{l} \end{array}$
 
                 var h2Children = [];
                 h4s.each(function(index, element){
+                    var childId_index = 0;
+
                     var childText = $(element).text().toString();
                     var childHeader = childText.indexOf('、') > 0 ? childText.split('、')[1] : 
                         childText.indexOf('.') > 0 ? childText.split('.')[1] : childText;
-                    var childId = (index+1) + '. ' + childHeader;
-                    $(element).attr('id', childId);
-                    h2Children[index] = {'id':childId};
+                    var childId = (index+1) + '. ' + childHeader + '';
+                    var childele_id = childId + '-' + childId_index + '';
+                    while( id_exist.indexOf(childele_id) > -1 ){
+                        childId_index++;
+                        childele_id = text + '-' + childId_index + '';
+                        if( childId_index > 5 ){
+                            console.log('fuck');
+                            break;
+                        }
+                    }
+                    id_exist[id_exist.length] = childele_id;
+                    $(element).attr('id', childele_id);
+                    h2Children[index] = {'id':childele_id, 'text': childId};
                 });
                 var fillColor = i===0 ? true : false;
                 var show = i===0 ? true : false;
-                var header = {'id':id, 'index':i, 'fillColor':fillColor, 'show':show, 'children': h2Children};
+                var header = {'id':ele_id, 'text':text, 'index':i, 'fillColor':fillColor, 'show':show, 'children': h2Children};
 
                 div_side_navigation_left.headers.push(header);
             }
+
+            $(window).scroll(function(){
+                var height_work = $(window).height();
+                var scrollTop = $(window).scrollTop();
+                $('h2').each(function(index, element){
+                    if( $(element).offset().top - scrollTop < 10 ){
+                        div_side_navigation_left.showChildren(index);
+                    }
+                });
+            });
         });
 
         $(window).resize(function(){
