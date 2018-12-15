@@ -483,13 +483,13 @@ Y = Ay_1(x) + By_2(x) + Cy_3(x)</script><p>Y 是 $y’’ + p(x)y’ + q(x)y = f
 <div class="row justify-content-center">
     <nav class="m-pagination col-md-8 col-sm-24" role="pagination">
         
-        <a class="float-left" href="/2018/08/30/maths n 高数 · 公式/" style="float: left;">
-            ← 高数 · 公式
+        <a class="float-left" href="/2018/08/31/maths n 线代 · 题/" style="float: left;">
+            ← 线代 · 题
         </a>
         
         
-        <a class="float-right" href="/2018/08/29/看Q外的风景/">
-            看 Q 外的风景 →
+        <a class="float-right" href="/2018/08/30/maths n 高数 · 公式/">
+            高数 · 公式 →
         </a>
         
     </nav>
@@ -558,7 +558,7 @@ Y = Ay_1(x) + By_2(x) + Cy_3(x)</script><p>Y 是 $y’’ + p(x)y’ + q(x)y = f
                     id_index++;
                     id = text + '-' + id_index + '';
                     if( id_index > 5 ){
-                        console.log('fuck');
+                        console.log('more than five h2-element named likewise');
                         break;
                     }
                 }
@@ -585,9 +585,9 @@ Y = Ay_1(x) + By_2(x) + Cy_3(x)</script><p>Y 是 $y’’ + p(x)y’ + q(x)y = f
                     var childId = childText + '-' + childId_index + '';
                     while( id_exist.indexOf(childId) > -1 ){
                         childId_index++;
-                        childId = text + '-' + childId_index + '';
+                        childId = childText + '-' + childId_index + '';
                         if( childId_index > 5 ){
-                            console.log('fuck');
+                            console.log('more than five h4-element named likewise');
                             break;
                         }
                     }
@@ -605,11 +605,14 @@ Y = Ay_1(x) + By_2(x) + Cy_3(x)</script><p>Y 是 $y’’ + p(x)y’ + q(x)y = f
             $(window).scroll(function(){
                 var height_work = $(window).height();
                 var scrollTop = $(window).scrollTop();
-                $('h2').each(function(index, element){
-                    if( $(element).offset().top - scrollTop > 0 && $(element).offset().top - scrollTop < 20 ){
-                        div_side_navigation_left.showChildren(index);
+                var h2s = $('h2');
+                for( var i=0; i<h2s.length; i++ ){
+                    var element = h2s[i];
+                    if( $(element).offset().top - scrollTop > -10 && $(element).offset().top - scrollTop < 20 ){
+                        div_side_navigation_left.showChildren(i);
+                        break;
                     }
-                });
+                }
             });
         });
 

@@ -531,7 +531,7 @@ f(x, \, y) = 1 - x - 2y + o( \sqrt{ (x-1)^2 + y^2 } )</script><p>成立，记 $z
                     id_index++;
                     id = text + '-' + id_index + '';
                     if( id_index > 5 ){
-                        console.log('fuck');
+                        console.log('more than five h2-element named likewise');
                         break;
                     }
                 }
@@ -558,9 +558,9 @@ f(x, \, y) = 1 - x - 2y + o( \sqrt{ (x-1)^2 + y^2 } )</script><p>成立，记 $z
                     var childId = childText + '-' + childId_index + '';
                     while( id_exist.indexOf(childId) > -1 ){
                         childId_index++;
-                        childId = text + '-' + childId_index + '';
+                        childId = childText + '-' + childId_index + '';
                         if( childId_index > 5 ){
-                            console.log('fuck');
+                            console.log('more than five h4-element named likewise');
                             break;
                         }
                     }
@@ -578,11 +578,14 @@ f(x, \, y) = 1 - x - 2y + o( \sqrt{ (x-1)^2 + y^2 } )</script><p>成立，记 $z
             $(window).scroll(function(){
                 var height_work = $(window).height();
                 var scrollTop = $(window).scrollTop();
-                $('h2').each(function(index, element){
-                    if( $(element).offset().top - scrollTop > 0 && $(element).offset().top - scrollTop < 20 ){
-                        div_side_navigation_left.showChildren(index);
+                var h2s = $('h2');
+                for( var i=0; i<h2s.length; i++ ){
+                    var element = h2s[i];
+                    if( $(element).offset().top - scrollTop > -10 && $(element).offset().top - scrollTop < 20 ){
+                        div_side_navigation_left.showChildren(i);
+                        break;
                     }
-                });
+                }
             });
         });
 

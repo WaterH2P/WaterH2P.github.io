@@ -613,8 +613,8 @@ A^{-1} =
         </a>
         
         
-        <a class="float-right" href="/2018/08/07/maths 7 行列式 · 习题/">
-            行列式 · 习题 →
+        <a class="float-right" href="/2018/08/07/maths 7 行列式/">
+            行列式 →
         </a>
         
     </nav>
@@ -683,7 +683,7 @@ A^{-1} =
                     id_index++;
                     id = text + '-' + id_index + '';
                     if( id_index > 5 ){
-                        console.log('fuck');
+                        console.log('more than five h2-element named likewise');
                         break;
                     }
                 }
@@ -710,9 +710,9 @@ A^{-1} =
                     var childId = childText + '-' + childId_index + '';
                     while( id_exist.indexOf(childId) > -1 ){
                         childId_index++;
-                        childId = text + '-' + childId_index + '';
+                        childId = childText + '-' + childId_index + '';
                         if( childId_index > 5 ){
-                            console.log('fuck');
+                            console.log('more than five h4-element named likewise');
                             break;
                         }
                     }
@@ -730,11 +730,14 @@ A^{-1} =
             $(window).scroll(function(){
                 var height_work = $(window).height();
                 var scrollTop = $(window).scrollTop();
-                $('h2').each(function(index, element){
-                    if( $(element).offset().top - scrollTop > 0 && $(element).offset().top - scrollTop < 20 ){
-                        div_side_navigation_left.showChildren(index);
+                var h2s = $('h2');
+                for( var i=0; i<h2s.length; i++ ){
+                    var element = h2s[i];
+                    if( $(element).offset().top - scrollTop > -10 && $(element).offset().top - scrollTop < 20 ){
+                        div_side_navigation_left.showChildren(i);
+                        break;
                     }
-                });
+                }
             });
         });
 
