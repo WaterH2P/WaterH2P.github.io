@@ -328,7 +328,7 @@
                             <br>
                         
                         
-                            <span>最近更新：2018-11-02</span>
+                            <span>最近更新：2018-12-20</span>
                             <br>
                         
                         
@@ -340,28 +340,41 @@
                     <h2 id="一、定义"><a href="#一、定义" class="headerlink" title="一、定义"></a>一、定义</h2><ul>
 <li><p>$\lim\limits_{\Delta x \to 0} \dfrac{f(x_0 + \Delta x) - f(x_0)}{\Delta x}$ 记为 $f’(x_0)$ ：（瞬时）变化率。</p>
 <ul>
-<li>$f $ 对 $x$ 的变化率：$\dfrac{ {\rm d} f}{ {\rm d} x} = f’_x$ 。</li>
-<li>$\begin{cases} \lim\limits_{\Delta x \to 0}\dfrac{f(x_0 + \Delta x) - f(x_0)}{\Delta x} &amp; \to \text{增量式} \\\\ \lim\limits_{x \to x_0}\dfrac{f(x) - f(x_0)}{x - x_0} &amp; \to \text{差值式} \end{cases}$ </li>
+<li><p>$f$ 对 $x$ 的变化率：$\dfrac{ {\rm d} f}{ {\rm d} x} = f’_x$ 。</p>
+</li>
+<li><p>$\begin{cases} \lim\limits_{\Delta x \to 0}\dfrac{f(x_0 + \Delta x) - f(x_0)}{\Delta x} &amp; \to \text{增量式} \\\\ \lim\limits_{x \to x_0}\dfrac{f(x) - f(x_0)}{x - x_0} &amp; \to \text{差值式} \end{cases}$ </p>
+</li>
 </ul>
 </li>
 <li><p>【注】</p>
 <ol>
 <li><p>【左右有别】</p>
 <ul>
-<li>$\lim\limits_{\Delta x \to 0^+} \dfrac{f(x_0 + \Delta x) - f(x_0)}{\Delta x} = f’_+(x_0)$ 右导数</li>
-<li>$\lim\limits_{\Delta x \to 0^-} \dfrac{f(x_0 + \Delta x) - f(x_0)}{\Delta x} = f’_-(x_0)$ 左导数</li>
-<li><strong>因此 $f’(x_0)$ 存在 $\iff$ $f’_-(x_0) = f’_+(x_0)$ 。</strong> <ul>
+<li><p>$\lim\limits_{\Delta x \to 0^+} \dfrac{f(x_0 + \Delta x) - f(x_0)}{\Delta x} = f’_+(x_0)$ 右导数</p>
+</li>
+<li><p>$\lim\limits_{\Delta x \to 0^-} \dfrac{f(x_0 + \Delta x) - f(x_0)}{\Delta x} = f’_-(x_0)$ 左导数</p>
+</li>
+<li><p><strong>因此 $f’(x_0)$ 存在 $\iff$ $f’_-(x_0) = f’_+(x_0)$ 。</strong> </p>
+<ul>
 <li>只有单侧极限，不能确定导数存在。</li>
 </ul>
 </li>
 </ul>
 </li>
+</ol>
+</li>
+</ul>
+<ol>
 <li><p>$\Delta x \to$ （广义化）🐶</p>
 <ul>
-<li>$f’(x_0) = \lim\limits_{🐶 \to 0}\dfrac{f(x_0 + 🐶) - f(x_0)}{🐶}$ </li>
-<li>三个 🐶 一摸一样（凑定义）</li>
+<li><p>$f’(x_0) = \lim\limits_{🐶 \to 0}\dfrac{f(x_0 + 🐶) - f(x_0)}{🐶}$ </p>
+</li>
+<li><p>三个 🐶 一摸一样（凑定义）</p>
+</li>
 </ul>
 </li>
+</ol>
+<ol>
 <li><p>一静一动原则</p>
 <ul>
 <li><p>不可违反此原则</p>
@@ -376,47 +389,67 @@
 </ul>
 </li>
 </ol>
-</li>
+<ul>
 <li><p>例题</p>
 <ol>
-<li>下列函数中，在 $x = 0$ 处不可导的是 $( \text{ D } )$ 。【具体型】<ul>
-<li>$\begin{array}{l} A. f(x) = |x| \sin |x| &amp; B. f(x) = |x| \sin \sqrt{|x|} \\\\ C. f(x) = \cos |x| &amp; D. f(x) = \cos \sqrt{|x|} \end{array}$ </li>
-<li>分析<ul>
-<li>只要见到 $f’(x_0)$ $\implies$ 先写导数定义。<ul>
-<li>当题目给出 $f(x)$ ，写【差值式】。</li>
-<li>有界值 $\times $ 无穷小 = 无穷小</li>
-</ul>
+<li><p>下列函数中，在 $x = 0$ 处不可导的是 $( \text{ D } )$ 。【具体型】</p>
+<ul>
+<li><p>$\begin{array}{l} A. f(x) = |x| \sin |x| &amp; B. f(x) = |x| \sin \sqrt{|x|} \\\\ C. f(x) = \cos |x| &amp; D. f(x) = \cos \sqrt{|x|} \end{array}$ </p>
+</li>
+<li><p>分析</p>
+<ul>
+<li><p>只要见到 $f’(x_0)$ $\implies$ 先写导数定义。</p>
+<ul>
+<li><p>当题目给出 $f(x)$ ，写【差值式】。</p>
+</li>
+<li><p>有界值 $\times $ 无穷小 = 无穷小</p>
 </li>
 </ul>
 </li>
 </ul>
 </li>
-<li>设 $f(0) = 0$ ，以下极限存在能确定 $f(x)$ 在点 $x = 0$ 可导的是 $( \text{ B } )$ 。【抽象型】<ul>
-<li>$\begin{array}{l} A. \lim\limits_{h \to 0}\dfrac{f(1 - \cos h)}{h^2} &amp; B. \lim\limits_{h \to 0}\dfrac{f(1 - e^h)}{h} \\\\ C. \lim\limits_{h \to 0}\dfrac{f(h - \sin h)}{h^2} &amp;  D. \lim\limits_{h \to 0}\dfrac{f(2h) - f(h)}{h}\end{array}$ </li>
-<li>分析<ul>
-<li>抽象型使用【增量式】</li>
-<li>$f’(0) = \lim\limits_{🐶 \to 0}\dfrac{f(0 + 🐶) - f(0)}{🐶}$ </li>
-<li>$h \to 0$ 时，$1 - \cos h \to 0^+$ 。<ul>
-<li>$\because \cos h \leq 1$ </li>
-<li>天生【单侧极限】</li>
 </ul>
 </li>
-<li>$D$ 反例<ul>
+<li><p>设 $f(0) = 0$ ，以下极限存在能确定 $f(x)$ 在点 $x = 0$ 可导的是 $( \text{ B } )$ 。【抽象型】</p>
+<ul>
+<li><p>$\begin{array}{l} A. \lim\limits_{h \to 0}\dfrac{f(1 - \cos h)}{h^2} &amp; B. \lim\limits_{h \to 0}\dfrac{f(1 - e^h)}{h} \\\\ C. \lim\limits_{h \to 0}\dfrac{f(h - \sin h)}{h^2} &amp;  D. \lim\limits_{h \to 0}\dfrac{f(2h) - f(h)}{h}\end{array}$ </p>
+</li>
+<li><p>分析</p>
+<ul>
+<li><p>抽象型使用【增量式】</p>
+</li>
+<li><p>$f’(0) = \lim\limits_{🐶 \to 0}\dfrac{f(0 + 🐶) - f(0)}{🐶}$ </p>
+</li>
+<li><p>$h \to 0$ 时，$1 - \cos h \to 0^+$ 。</p>
+<ul>
+<li><p>$\because \cos h \leq 1$ </p>
+</li>
+<li><p>天生【单侧极限】</p>
+</li>
+</ul>
+</li>
+<li><p>$D$ 反例</p>
+<ul>
 <li>$f(x) = \begin{cases} 1, &amp; x\not= 0 \\\\ 0, &amp; x = 0 \end{cases}$ </li>
 </ul>
 </li>
-<li>$\begin{cases} f’(0) \cdot n = \exists &amp; \implies f’(0) \, \exists \\\\ f’(0) \cdot \infty = \exists &amp; \implies f’(0) \, \exists = 0 \\\\ f’(0) \cdot 0 = \exists &amp; \not\implies f’(0) \, \exists \end{cases}$ </li>
+<li><p>$\begin{cases} f’(0) \cdot n = \exists &amp; \implies f’(0) \, \exists \\\\ f’(0) \cdot \infty = \exists &amp; \implies f’(0) \, \exists = 0 \\\\ f’(0) \cdot 0 = \exists &amp; \not\implies f’(0) \, \exists \end{cases}$ </p>
+</li>
 </ul>
 </li>
-<li>【注】<ul>
+<li><p>【注】</p>
+<ul>
 <li>$🐶 \to 0$ 时，$\dfrac{|🐶|}{🐶}$ 有界，但 $\lim\limits_{🐶 \to 0}\dfrac{|🐶|}{🐶}$ 不存在。</li>
 </ul>
 </li>
 </ul>
 </li>
-<li>若 $f(x)$ 是可导的偶函数，证明 $f’(x)$ 的奇函数。【记】<ul>
-<li>$\begin{array}{l}f’(x) &amp; = \lim\limits_{\Delta x \to 0} \dfrac{f(x + \Delta x) - f(x)}{\Delta x} \\\\ f’(-x) &amp; = \lim\limits_{\Delta x \to 0} \dfrac{f(-x + \Delta x) - f(-x)}{\Delta x} \\\\ &amp; = \lim\limits_{\Delta x \to 0} \dfrac{f(x+(-\Delta x) - f(x)}{\Delta x} \\\\ &amp; = -\lim\limits_{-\Delta x \to 0} \dfrac{f(x+(-\Delta x) - f(x)}{-\Delta x} \\\\ &amp; = -f’(x) \end{array}$ </li>
-<li>若 $f(x)$ 是可导的奇函数，证明 $f’(x)$ 的偶函数。</li>
+<li><p>若 $f(x)$ 是可导的偶函数，证明 $f’(x)$ 的奇函数。【记】</p>
+<ul>
+<li><p>$\begin{array}{l}f’(x) &amp; = \lim\limits_{\Delta x \to 0} \dfrac{f(x + \Delta x) - f(x)}{\Delta x} \\\\ f’(-x) &amp; = \lim\limits_{\Delta x \to 0} \dfrac{f(-x + \Delta x) - f(-x)}{\Delta x} \\\\ &amp; = \lim\limits_{\Delta x \to 0} \dfrac{f(x+(-\Delta x) - f(x)}{\Delta x} \\\\ &amp; = -\lim\limits_{-\Delta x \to 0} \dfrac{f(x+(-\Delta x) - f(x)}{-\Delta x} \\\\ &amp; = -f’(x) \end{array}$ </p>
+</li>
+<li><p>若 $f(x)$ 是可导的奇函数，证明 $f’(x)$ 的偶函数。</p>
+</li>
 </ul>
 </li>
 </ol>
@@ -426,8 +459,7 @@
 <h2 id="二、导数计算"><a href="#二、导数计算" class="headerlink" title="二、导数计算"></a>二、导数计算</h2><p><br></p>
 <h4 id="㊀、基本求导公式"><a href="#㊀、基本求导公式" class="headerlink" title="㊀、基本求导公式"></a>㊀、基本求导公式</h4><p>$\begin{array}{l} (\sin x)’ = \cos x &amp; (\cos x)’ = -\sin x \\\\ (\tan x)’ = \sec^2 x &amp; (\cot x)’ = - \csc^2 x \\\\ (\sec x)’ = \sec x \tan x &amp; (\csc x)’ = - \csc x \cot x \end{array}$ </p>
 <p>$\begin{array}{l} (\arcsin x)’ = \dfrac{1}{ \sqrt{1 - x^2} } &amp; (\arccos x)’ = - \dfrac{1}{ \sqrt{1 - x^2} } \\\\ (\arctan x)’ = \dfrac{1}{1 + x^2} &amp; ( {\rm arccot} x)’ = - \dfrac{1}{1 + x^2} \end{array}$</p>
-<p>$\begin{array}{l} \left( \ln(x + \sqrt{x^2 + 1}) \right)’ = \dfrac{1}{ \sqrt{x^2 + 1} } \end{array}$ </p>
-<p>$\begin{array}{l} \left( \ln(x + \sqrt{x^2 - 1}) \right)’ = \dfrac{1}{ \sqrt{x^2 - 1} } \end{array}$ </p>
+<p>$\begin{array}{l} \left( \ln(x + \sqrt{x^2 \pm 1}) \right)’ = \dfrac{1}{ \sqrt{x^2 \pm 1} } \end{array}$ </p>
 <p><br></p>
 <h4 id="㊁、基本求导方法"><a href="#㊁、基本求导方法" class="headerlink" title="㊁、基本求导方法"></a>㊁、基本求导方法</h4><p><br></p>
 <h6 id="1、复合函数求导"><a href="#1、复合函数求导" class="headerlink" title="1、复合函数求导"></a>1、复合函数求导</h6><ul>
@@ -435,40 +467,60 @@
 </ul>
 <p><br></p>
 <h6 id="2、隐函数求导"><a href="#2、隐函数求导" class="headerlink" title="2、隐函数求导"></a>2、隐函数求导</h6><ul>
-<li>显函数：$y = f(x)$ ，隐函数：$F(x, y) = 0$ 。</li>
-<li>方法：在 $F(x, y) = 0$ 两边同时对 $x$ 求导，只需注意 $y = y(x)$ 即可（复合求导）。</li>
-<li>例题<ul>
+<li><p>显函数：$y = f(x)$ ，隐函数：$F(x, y) = 0$ 。</p>
+</li>
+<li><p>方法：在 $F(x, y) = 0$ 两边同时对 $x$ 求导，只需注意 $y = y(x)$ 即可（复合求导）。</p>
+</li>
+<li><p>例题</p>
+<ul>
 <li>设 $y = y(x)$ 是由 $\sin xy = \ln \dfrac{x + e}{y} + 1$ 确定的隐函数，求 $y’(0)$ 和 $y’’(0)$ 的值。</li>
 </ul>
 </li>
 </ul>
 <p><br></p>
 <h6 id="3、对数求导法"><a href="#3、对数求导法" class="headerlink" title="3、对数求导法"></a>3、对数求导法</h6><ul>
-<li>方法：对于多项相乘、相除、开方、乘方得来的式子，先取对数再求导。</li>
-<li>例题<ul>
+<li><p>方法：对于多项相乘、相除、开方、乘方得来的式子，先取对数再求导。</p>
+</li>
+<li><p>例题</p>
+<ul>
 <li>设 $y = (\dfrac{a}{b})^x \cdot (\dfrac{b}{x})^a \cdot (\dfrac{x}{a})^b \quad (a&gt;0, b&gt;0)$ ，求 $y’$ 。</li>
 </ul>
 </li>
 </ul>
 <p><br></p>
 <h6 id="4、反函数求导"><a href="#4、反函数求导" class="headerlink" title="4、反函数求导"></a>4、反函数求导</h6><ul>
-<li>注意写法即可</li>
-<li>例题<ol>
-<li>设函数 $f(y)$ 的反函数 $f^{-1}(x)$ 及 $f’[f^{-1}(x)]$ 与 $f’’[f^{-1}(x)]$ 都存在，且 $f’[f^{-1}(x)] \not= 0$ 。证明：$\dfrac{ {\rm d}^2 f^{-1}(x) }{ {\rm d} x^2 } = -\dfrac{ f’’[f^{-1}(x)] }{ \{f’[f^{-1}(x)]\}^3 }$ 。<ul>
-<li>$\because x = f(y) \implies y = f^{-1}(x), \quad \therefore \dfrac{ {\rm d}^2 f^{-1}(x) }{ {\rm d} x^2 } = \dfrac{ {\rm d}^2 y }{ {\rm d} x^2 }$ 。</li>
-<li>$x = f(y)$ 两边对 $x$ 求导，$1 = f’(y) \cdot \dfrac{ {\rm d} y }{ {\rm d} x } \implies \dfrac{ {\rm d} y }{ {\rm d} x } = \dfrac{1}{f’(y)}$ 。</li>
-<li>$\dfrac{ {\rm d}^2 y }{ {\rm d} x^2 } = \dfrac{ {\rm d} ( \dfrac{ {\rm d} y }{ {\rm d} x } ) }{ {\rm d} x }$ </li>
-<li>由于 $\dfrac{ {\rm d} y}{ {\rm d} x } = \dfrac{1}{f’(y)}$ 是关于 $y$ 的函数，所以 $\dfrac{ {\rm d} y}{ {\rm d} x }$ 只能对 $y$ 求导。</li>
-<li>$\begin{array}{l}\dfrac{ {\rm d}^2 y }{ {\rm d} x^2 } &amp; = \dfrac{ {\rm d} ( \dfrac{ {\rm d} y }{ {\rm d} x } ) / {\rm d} y }{ {\rm d} x / {\rm d} y } = \dfrac{ {\rm d} ( \dfrac{1}{f’(y)} ) }{ {\rm d} y } \cdot \dfrac{ {\rm d} y }{ {\rm d} x } \\\\ &amp; = -\dfrac{ f’’(y) }{ [f’(y)]^2 } \cdot \dfrac{1}{f’(y)} \\\\ &amp; = -\dfrac{ f’’(y) }{ [f’(y)]^3 } =-\dfrac{ f’’(f^{-1}(x)) }{ \{f’[f^{-1}(x)]\}^3 } \end{array}$ </li>
+<li><p>注意写法即可</p>
+</li>
+<li><p>例题</p>
+<ol>
+<li><p>设函数 $f(y)$ 的反函数 $f^{-1}(x)$ 及 $f’[f^{-1}(x)]$ 与 $f’’[f^{-1}(x)]$ 都存在，且 $f’[f^{-1}(x)] \not= 0$ 。证明：$\dfrac{ {\rm d}^2 f^{-1}(x) }{ {\rm d} x^2 } = -\dfrac{ f’’[f^{-1}(x)] }{ \{f’[f^{-1}(x)]\}^3 }$ 。</p>
+<ul>
+<li><p>$\because x = f(y) \implies y = f^{-1}(x), \quad \therefore \dfrac{ {\rm d}^2 f^{-1}(x) }{ {\rm d} x^2 } = \dfrac{ {\rm d}^2 y }{ {\rm d} x^2 }$ 。</p>
+</li>
+<li><p>$x = f(y)$ 两边对 $x$ 求导，$1 = f’(y) \cdot \dfrac{ {\rm d} y }{ {\rm d} x } \implies \dfrac{ {\rm d} y }{ {\rm d} x } = \dfrac{1}{f’(y)}$ 。</p>
+</li>
+<li><p>$\dfrac{ {\rm d}^2 y }{ {\rm d} x^2 } = \dfrac{ {\rm d} ( \dfrac{ {\rm d} y }{ {\rm d} x } ) }{ {\rm d} x }$ </p>
+</li>
+<li><p>由于 $\dfrac{ {\rm d} y}{ {\rm d} x } = \dfrac{1}{f’(y)}$ 是关于 $y$ 的函数，所以 $\dfrac{ {\rm d} y}{ {\rm d} x }$ 只能对 $y$ 求导。</p>
+</li>
+<li><p>$\begin{array}{l}\dfrac{ {\rm d}^2 y }{ {\rm d} x^2 } &amp; = \dfrac{ {\rm d} ( \dfrac{ {\rm d} y }{ {\rm d} x } ) / {\rm d} y }{ {\rm d} x / {\rm d} y } = \dfrac{ {\rm d} ( \dfrac{1}{f’(y)} ) }{ {\rm d} y } \cdot \dfrac{ {\rm d} y }{ {\rm d} x } \\\\ &amp; = -\dfrac{ f’’(y) }{ [f’(y)]^2 } \cdot \dfrac{1}{f’(y)} \\\\ &amp; = -\dfrac{ f’’(y) }{ [f’(y)]^3 } =-\dfrac{ f’’(f^{-1}(x)) }{ \{f’[f^{-1}(x)]\}^3 } \end{array}$ </p>
+</li>
 </ul>
 </li>
-<li>求 $y = \dfrac{1}{2}\arctan \sqrt[4]{1 + x^4} + \ln\sqrt[4]{ \dfrac{ \sqrt[4]{1 + x^4} + 1 }{ \sqrt[4]{1 + x^4} - 1} }$ 的反函数的导数。<ul>
-<li>$\dfrac{ {\rm d} y }{ {\rm d} x } = \dfrac{1}{ \dfrac{ {\rm d} x }{ {\rm d} y } } \implies y’_x = \dfrac{1}{x’_y}$ </li>
-<li>令 $u =  \sqrt[4]{1 + x^4}$ ，$y = \dfrac{1}{2} \arctan u + \ln \sqrt[4]{ \dfrac{u + 1}{u - 1} }$ 。</li>
-<li>$y = \dfrac{1}{2} \arctan u + \dfrac{1}{4}( \ln (u + 1) - \ln(u - 1) )$ </li>
-<li>$y’_x = [\dfrac{1}{2} \cdot \dfrac{1}{u^2 + 1} + \dfrac{1}{4}(\dfrac{1}{u + 1} - \dfrac{1}{u - 1})] \cdot u’_x = - \dfrac{u’_x}{u^4 - 1}$ </li>
-<li>将 $u = \sqrt[4]{1 + x^4}$ 代入得： $y’_x = - \dfrac{ \frac{1}{4} (1 + x^4)^{ -\frac{3}{4} } \cdot 4x^3 }{1 + x^4 - 1} = -\dfrac{1}{ x(1 + x^4)^{ \frac{3}{4} } }$ 。</li>
-<li>所以 $x’_y = \dfrac{1}{y’_x} = -x(1 + x^4)^{ \frac{3}{4} }$ 。</li>
+<li><p>求 $y = \dfrac{1}{2}\arctan \sqrt[4]{1 + x^4} + \ln\sqrt[4]{ \dfrac{ \sqrt[4]{1 + x^4} + 1 }{ \sqrt[4]{1 + x^4} - 1} }$ 的反函数的导数。</p>
+<ul>
+<li><p>$\dfrac{ {\rm d} y }{ {\rm d} x } = \dfrac{1}{ \dfrac{ {\rm d} x }{ {\rm d} y } } \implies y’_x = \dfrac{1}{x’_y}$ </p>
+</li>
+<li><p>令 $u =  \sqrt[4]{1 + x^4}$ ，$y = \dfrac{1}{2} \arctan u + \ln \sqrt[4]{ \dfrac{u + 1}{u - 1} }$ 。</p>
+</li>
+<li><p>$y = \dfrac{1}{2} \arctan u + \dfrac{1}{4}( \ln (u + 1) - \ln(u - 1) )$ </p>
+</li>
+<li><p>$y’_x = [\dfrac{1}{2} \cdot \dfrac{1}{u^2 + 1} + \dfrac{1}{4}(\dfrac{1}{u + 1} - \dfrac{1}{u - 1})] \cdot u’_x = - \dfrac{u’_x}{u^4 - 1}$ </p>
+</li>
+<li><p>将 $u = \sqrt[4]{1 + x^4}$ 代入得： $y’_x = - \dfrac{ \frac{1}{4} (1 + x^4)^{ -\frac{3}{4} } \cdot 4x^3 }{1 + x^4 - 1} = -\dfrac{1}{ x(1 + x^4)^{ \frac{3}{4} } }$ 。</p>
+</li>
+<li><p>所以 $x’_y = \dfrac{1}{y’_x} = -x(1 + x^4)^{ \frac{3}{4} }$ 。</p>
+</li>
 </ul>
 </li>
 </ol>
@@ -476,17 +528,26 @@
 </ul>
 <p><br></p>
 <h6 id="5、参数方程求导"><a href="#5、参数方程求导" class="headerlink" title="5、参数方程求导"></a>5、参数方程求导</h6><ul>
-<li>$\begin{cases} x = x(t) \\\\ y = y(t) \end{cases}$ ，$t$ 为参数</li>
-<li>$\dfrac{ {\rm d}y }{ {\rm d}x } = \dfrac{ {\rm d}y / {\rm d}t }{ {\rm d}x / {\rm d}t } = \dfrac{y’_t}{x’_t}$ ，类似于反函数求导，是谁的函数就对谁求导，缺什么补什么。</li>
-<li>例题<ol>
-<li>设函数 $y = f(x)$ 由参数方程 $\begin{cases} x = 2t + t^2 \\\\ y = \varphi(t) \end{cases} , (t &gt; -1)$ 所确定，其中 $\varphi(t)$ 具有二阶导数，且已知 $\dfrac{ {\rm d}^2 y }{ {\rm d}x^2 } = \dfrac{3}{4(1 + t)}$ ，证明：函数 $\varphi(t)$ 满足方程 $\varphi’’(t) - \dfrac{1}{1 + t} \varphi’(t) = 3(1 + t)$ 。<ul>
-<li>$\dfrac{ {\rm d}y }{ {\rm d}x } = \dfrac{ {\rm d}y / {\rm d}t }{ {\rm d}x / {\rm d}t } = \dfrac{\varphi’(t)}{2 + 2t}$ </li>
-<li>$\dfrac{ {\rm d}^2 y }{ {\rm d}x^2 } = \dfrac{ {\rm d}(\dfrac{ {\rm d}y }{ {\rm d}x }) }{ {\rm d}x } = \dfrac{ {\rm d}(\dfrac{ {\rm d}y }{ {\rm d}x }) / {\rm d}t }{ {\rm d}x / {\rm d}t } = \dfrac{ \dfrac{ \varphi’’(t)(2 + 2t) - 2\varphi’(t) }{(2 + 2t)^2} }{2 + 2t}$ </li>
-<li>$\therefore \dfrac{ \varphi’’(t)(2 + 2t) - 2\varphi’(t) }{(2 + 2t)^3 } = \dfrac{ \varphi’’(t)(1 + 1t) - \varphi’(t) }{4(1 + t)^3 } = \dfrac{3}{4(1 + t)}$ </li>
-<li>$\implies \varphi’’(t) - \dfrac{1}{1 + t} \varphi’(t) = 3(1 + t)$ 。</li>
+<li><p>$\begin{cases} x = x(t) \\\\ y = y(t) \end{cases}$ ，$t$ 为参数</p>
+</li>
+<li><p>$\dfrac{ {\rm d}y }{ {\rm d}x } = \dfrac{ {\rm d}y / {\rm d}t }{ {\rm d}x / {\rm d}t } = \dfrac{y’_t}{x’_t}$ ，类似于反函数求导，是谁的函数就对谁求导，缺什么补什么。</p>
+</li>
+<li><p>例题</p>
+<ol>
+<li><p>设函数 $y = f(x)$ 由参数方程 $\begin{cases} x = 2t + t^2 \\\\ y = \varphi(t) \end{cases} , (t &gt; -1)$ 所确定，其中 $\varphi(t)$ 具有二阶导数，且已知 $\dfrac{ {\rm d}^2 y }{ {\rm d}x^2 } = \dfrac{3}{4(1 + t)}$ ，证明：函数 $\varphi(t)$ 满足方程 $\varphi’’(t) - \dfrac{1}{1 + t} \varphi’(t) = 3(1 + t)$ 。</p>
+<ul>
+<li><p>$\dfrac{ {\rm d}y }{ {\rm d}x } = \dfrac{ {\rm d}y / {\rm d}t }{ {\rm d}x / {\rm d}t } = \dfrac{\varphi’(t)}{2 + 2t}$ </p>
+</li>
+<li><p>$\dfrac{ {\rm d}^2 y }{ {\rm d}x^2 } = \dfrac{ {\rm d}(\dfrac{ {\rm d}y }{ {\rm d}x }) }{ {\rm d}x } = \dfrac{ {\rm d}(\dfrac{ {\rm d}y }{ {\rm d}x }) / {\rm d}t }{ {\rm d}x / {\rm d}t } = \dfrac{ \dfrac{ \varphi’’(t)(2 + 2t) - 2\varphi’(t) }{(2 + 2t)^2} }{2 + 2t}$ </p>
+</li>
+<li><p>$\therefore \dfrac{ \varphi’’(t)(2 + 2t) - 2\varphi’(t) }{(2 + 2t)^3 } = \dfrac{ \varphi’’(t)(1 + 1t) - \varphi’(t) }{4(1 + t)^3 } = \dfrac{3}{4(1 + t)}$ </p>
+</li>
+<li><p>$\implies \varphi’’(t) - \dfrac{1}{1 + t} \varphi’(t) = 3(1 + t)$ 。</p>
+</li>
 </ul>
 </li>
-<li>设 $\begin{cases} x = t + e^t \\\\ y = \sin t \end{cases}$ ，则 $\left. \dfrac{ {\rm d}^2 y}{ {\rm d}x^2 } \right|_{t = 0} =$ ______。<ul>
+<li><p>设 $\begin{cases} x = t + e^t \\\\ y = \sin t \end{cases}$ ，则 $\left. \dfrac{ {\rm d}^2 y}{ {\rm d}x^2 } \right|_{t = 0} =$ <strong>____</strong>。</p>
+<ul>
 <li>$-\dfrac{1}{8}$ </li>
 </ul>
 </li>
@@ -495,41 +556,52 @@
 </ul>
 <p><br></p>
 <h6 id="6、高阶导数"><a href="#6、高阶导数" class="headerlink" title="6、高阶导数"></a>6、高阶导数</h6><ul>
-<li>$\text{高阶导数} \begin{cases} \text{莱布尼兹公式} \\\\ \text{找规律用数学归纳法} \\\\ \text{展开式法} \end{cases}$ </li>
-<li>莱布尼兹公式<ul>
-<li>$\begin{cases} (u \pm v)^{(n)} &amp; = u^{(n)} \pm v^{(n)} \\\\ (uv)^{(n)} &amp; = \sum\limits_{k=0}^{n} C_n^k u^{(n - k)} v^{(k)} \\\\ &amp; = u^{(n)}v + n \cdot u^{(n - 1)}v’ + \dfrac{n(n - 1)}{2} \cdot u^{(n - 2)}v’’ + … + uv^{(n)} \end{cases}$ </li>
-<li>$(a^x)^{(n)} = a^x(\ln a)^n, \quad (e^x)^{(n)} = e^x$ </li>
-<li>$(\sin kx)^{(n)} = k^n \sin( kx + \frac{\pi}{2} \cdot n  )$ </li>
-<li>$(\cos kx)^{(n)} = k^n \cos( kx + \frac{\pi}{2} \cdot n  )$ </li>
-<li>$(\ln x)^{(n)} = (-1)^{(n - 1)} \cdot \dfrac{(n - 1)!}{x^n}, (x &gt; 0)$ </li>
-<li>$[\ln(x + 1)]^{(n)} = (-1)^{(n - 1)} \cdot \dfrac{(n - 1)!}{(1 + x)^n}, (x &gt; -1)$ </li>
-<li>$(\dfrac{1}{x + a})^{(n)} = (-1)^n \cdot \dfrac{n!}{ (x + a)^{(n + 1)} }$ </li>
+<li><p>$\text{高阶导数} \begin{cases} \text{莱布尼兹公式} \\\\ \text{找规律用数学归纳法} \\\\ \text{展开式法} \end{cases}$ </p>
+</li>
+<li><p>莱布尼兹公式</p>
+<ul>
+<li><p>$\begin{cases} (u \pm v)^{(n)} &amp; = u^{(n)} \pm v^{(n)} \\\\ (uv)^{(n)} &amp; = \sum\limits_{k=0}^{n} C_n^k u^{(n - k)} v^{(k)} \\\\ &amp; = u^{(n)}v + n \cdot u^{(n - 1)}v’ + \dfrac{n(n - 1)}{2} \cdot u^{(n - 2)}v’’ + … + uv^{(n)} \end{cases}$ </p>
+</li>
+<li><p>$(a^x)^{(n)} = a^x(\ln a)^n, \quad (e^x)^{(n)} = e^x$ </p>
+</li>
+<li><p>$(\sin kx)^{(n)} = k^n \sin( kx + \frac{\pi}{2} \cdot n  )$ </p>
+</li>
+<li><p>$(\cos kx)^{(n)} = k^n \cos( kx + \frac{\pi}{2} \cdot n  )$ </p>
+</li>
+<li><p>$(\ln x)^{(n)} = (-1)^{(n - 1)} \cdot \dfrac{(n - 1)!}{x^n}, (x &gt; 0)$ </p>
+</li>
+<li><p>$[\ln(x + 1)]^{(n)} = (-1)^{(n - 1)} \cdot \dfrac{(n - 1)!}{(1 + x)^n}, (x &gt; -1)$ </p>
+</li>
+<li><p>$(\dfrac{1}{x + a})^{(n)} = (-1)^n \cdot \dfrac{n!}{ (x + a)^{(n + 1)} }$ </p>
+</li>
 </ul>
 </li>
-<li>例题<ol>
-<li>$y = x^2 \sin 2x$ ，求 $y^{(50)}$ 。<ul>
+<li><p>例题</p>
+<ul>
+<li><p>$y = x^2 \sin 2x$ ，求 $y^{(50)}$ 。</p>
+<ul>
 <li>$\begin{array}{l} y^{(50)} &amp; = x^2 \cdot (\sin 2x)^{(50)} + 50(x^2)’ \cdot (\sin 2x)^{(49)} + \dfrac{50 \cdot 49}{2}(x^2)’’ \cdot (\sin 2x)^{(48)} \\\\ &amp; = -2^{50}x^2 \sin 2x + 50 \cdot 2^{50}x \cos 2x + 50 \cdot 49 \cdot 2^{48} \sin 2x \end{array}$ </li>
 </ul>
 </li>
-</ol>
+</ul>
 </li>
 </ul>
 <p><br></p>
 <h2 id="三、微分中值定理"><a href="#三、微分中值定理" class="headerlink" title="三、微分中值定理"></a>三、微分中值定理</h2><p><br></p>
 <h4 id="㊀、十大定理"><a href="#㊀、十大定理" class="headerlink" title="㊀、十大定理"></a>㊀、十大定理</h4><p><br></p>
-<h6 id="1、涉及到-f-x-的定理"><a href="#1、涉及到-f-x-的定理" class="headerlink" title="1、涉及到 $f(x)$ 的定理"></a>1、涉及到 $f(x)$ 的定理</h6><ul>
+<h6 id="1、涉及到-f-x-的定理"><a href="#1、涉及到-f-x-的定理" class="headerlink" title="1、涉及到 f(x) 的定理"></a>1、涉及到 f(x) 的定理</h6><ul>
 <li>设 $f(x)$ 在 $[a,b]$ 连续，则：<ol>
 <li>有界性定理<ul>
-<li>$\exists K &gt; 0$ ，使 $|f(x)| \leq K$ ，$\forall x \in [a, b]$ 。</li>
+<li>$\exists \, K &gt; 0$ ，使 $\mid f(x) \mid \leq K$ ，$\forall x \in [a, b]$ 。</li>
 <li>连续函数在闭区间上有界。</li>
 </ul>
 </li>
 <li><strong>最值定理</strong><ul>
-<li>$m \leq f(x) \leq M$ ，其中 $m$ ，$M$ 分别为 $f(x)$ 在 $[a, b]$ 上的最小、最大值。</li>
+<li>$m \leq f(x) \leq M$ ，其中 $m, \, M$ 分别为 $f(x)$ 在 $[a, b]$ 上的最小、最大值。</li>
 </ul>
 </li>
 <li><strong>介值定理</strong><ul>
-<li>当 $m \leq \mu \leq M$ 时，则 $\exists \xi \in [a, b]$ ，使 $f(\xi) = \mu$ 。</li>
+<li>当 $m \leq \mu \leq M$ 时，则 $\exists \, \xi \in [a, b]$ ，使 $f(\xi) = \mu$ 。</li>
 </ul>
 </li>
 <li><strong>零点定理</strong><ul>
@@ -541,61 +613,84 @@
 </li>
 </ul>
 <p><br></p>
-<h6 id="2、涉及-f’-x-的定理"><a href="#2、涉及-f’-x-的定理" class="headerlink" title="2、涉及 $f’(x)$ 的定理"></a>2、涉及 $f’(x)$ 的定理</h6><ol>
-<li>费马定理<ul>
-<li>设 $f(x)$ 在 $x = x_0$ 处 $\begin{cases} 1) \text{可导} \\\\ 2) \text{取极值} \end{cases} \implies f’(x_0) = 0$ 。</li>
-<li>《费马大定理》</li>
-<li>证明见《高数 18 讲》</li>
+<h6 id="2、涉及-f’-x-的定理"><a href="#2、涉及-f’-x-的定理" class="headerlink" title="2、涉及 f’(x) 的定理"></a>2、涉及 f’(x) 的定理</h6><ol>
+<li><p>费马定理</p>
+<ul>
+<li><p>设 $f(x)$ 在 $x = x_0$ 处 $\begin{cases} (1) &amp; \text{可导} \\\\ (2) &amp; \text{取极值} \end{cases} \implies f’(x_0) = 0$ 。</p>
+</li>
+<li><p>《费马大定理》</p>
+</li>
+<li><p>证明见《高数 18 讲》</p>
+</li>
 </ul>
 </li>
 <li><p><strong>罗尔定理</strong></p>
 <ul>
-<li>设 $f(x)$ 满足以下三条 $\begin{cases} 1) \; [a, b] \text{ 连续} \\\\ 2) \; (a, b) \text{ 内可导} \\\\ 3) \; f(a) = f(b) \end{cases} \implies \exists \, \xi \in (a, b) \text{ 使 } f’(\xi) = 0$ 。</li>
+<li>设 $f(x)$ 满足以下三条 $\begin{cases} (1) &amp; [a, b] \text{ 连续} \\\\ (2) &amp; (a, b) \text{ 内可导} \\\\ (3) &amp; f(a) = f(b) \end{cases}$ $\implies$ $\exists \, \xi \in (a, b) \text{ 使 } f’(\xi) = 0$ 。</li>
 </ul>
 </li>
-<li>拉格朗日中值定理<ul>
-<li>设 $f(x)$ 满足 $\begin{cases}  1) [a, b] \text{上连续} \\\\ 2) (a, b) \text{内可导}\end{cases}$ ，则 $\exists \xi \in (a, b)$ ，使 $f’(\xi) = \dfrac{f(b) - f(a)}{b - a}$ 。<ul>
+<li><p>拉格朗日中值定理</p>
+<ul>
+<li><p>设 $f(x)$ 满足 $\begin{cases} (1) &amp; [a, b] \text{上连续} \\\\ (2) &amp; (a, b) \text{内可导}\end{cases}$ ，则 $\exists \, \xi \in (a, b)$ ，使 $f’(\xi) = \dfrac{f(b) - f(a)}{b - a}$ 。</p>
+<ul>
 <li>若 $f(b) = f(a)$ ，则 $f’(\xi) = 0$ ，即为罗尔定理。</li>
 </ul>
 </li>
 </ul>
 </li>
-<li>柯西中值定理<ul>
-<li>设 $f(x)$ ， $g(x)$ 满足 $\begin{cases} 1) \; [a, b] \text{连续} \\\\ 2) \; (a, b) \text{内可导} \\\\ g’(x) \not= 0 \end{cases}$ ，则 $\dfrac{f’(\xi)}{g’(\xi)} = \dfrac{f(b) - f(a)}{g(b) - g(a)}$ 。</li>
-<li>若取 $g(x) = x \implies \dfrac{f(b) - f(a)}{b - a} = \dfrac{f’(\xi)}{1}$ ，即为拉格朗日中值定理。<ul>
+<li><p>柯西中值定理</p>
+<ul>
+<li><p>设 $f(x), \, g(x)$ 满足 $\begin{cases} (1) &amp; [a, b] \text{连续} \\\\ (2) &amp; (a, b) \text{内可导} \\\\ (3) &amp; g’(x) \not= 0 \end{cases}$ ，则 $\dfrac{f’(\xi)}{g’(\xi)} = \dfrac{f(b) - f(a)}{g(b) - g(a)}$ 。</p>
+</li>
+<li><p>若取 $g(x) = x \implies \dfrac{f(b) - f(a)}{b - a} = \dfrac{f’(\xi)}{1}$ ，即为拉格朗日中值定理。</p>
+<ul>
 <li>柯西中值定理 $\implies$ 拉格朗日中值定理 $\implies$ 罗尔定理</li>
 </ul>
 </li>
 </ul>
 </li>
-<li>泰勒定理（泰勒公式）<ul>
-<li>任何可导函数 $f(x) = \sum a_n x^n $ 。</li>
+<li><p>泰勒定理（泰勒公式）</p>
+<ul>
+<li>任何可导函数 $f(x) = \sum a_n x^n$ 。</li>
 </ul>
 <ol>
-<li>带拉格朗日余项的泰勒公式<ul>
-<li>证明 / 推证某些结果</li>
-<li>$f(x)$  $n + 1$ 阶可导：</li>
-<li>$f(x) = f(x_0) + f’(x_0)(x - x_0) + \dfrac{ f’’(x_0) }{ 2! }(x - x_0)^2 + … + \dfrac{ f^{(n)}(x_0) }{ n! }(x - x_0)^n + \dfrac{ f^{(n + 1)}(\xi) }{ (n + 1)! }(x - x_0)^{n + 1}$ <ul>
-<li>$\dfrac{ f^{(n)}(x_0) }{ n! }(x - x_0)^n $ 是通项。</li>
-<li>$\dfrac{ f^{(n + 1)}(\xi) }{ (n + 1)! }(x - x_0)^{n + 1}$ 是拉格朗日余项。</li>
-<li>$x_0$ 介于 $x$ 和 $x_0$ 之间。</li>
+<li><p>带拉格朗日余项的泰勒公式</p>
+<ul>
+<li><p>证明 / 推证某些结果</p>
+</li>
+<li><p>$f(x)$  $n + 1$ 阶可导：</p>
+</li>
+<li><p>$f(x) = f(x_0) + f’(x_0)(x - x_0) + \dfrac{ f’’(x_0) }{ 2! }(x - x_0)^2 + … + \dfrac{ f^{(n)}(x_0) }{ n! }(x - x_0)^n + \dfrac{ f^{(n + 1)}(\xi) }{ (n + 1)! }(x - x_0)^{n + 1}$ </p>
+<ul>
+<li><p>$\dfrac{ f^{(n)}(x_0) }{ n! }(x - x_0)^n$ 是通项。</p>
+</li>
+<li><p>$\dfrac{ f^{(n + 1)}(\xi) }{ (n + 1)! }(x - x_0)^{n + 1}$ 是拉格<br>朗日余项。</p>
+</li>
+<li><p>$x_0$ 介于 $x$ 和 $x_0$ 之间。</p>
+</li>
 </ul>
 </li>
-<li>当 $x_0 = 0$ 时，泰勒公式成为麦克劳林公式<ul>
+<li><p>当 $x_0 = 0$ 时，泰勒公式成为麦克劳林公式</p>
+<ul>
 <li>$f(x) = f(0) + f’(0)x + \dfrac{ f’’(0) }{ 2! }x^2 + … + \dfrac{ f^{(n)}(0) }{ n! } x^n + \dfrac{ f^{(n + 1)}(\xi) }{ (n + 1)! }x^{n + 1}$</li>
 </ul>
 </li>
 </ul>
 </li>
-<li>带佩亚诺余项的泰勒公式<ul>
-<li>用于计算</li>
-<li>$f(x)$  $n $ 阶可导：</li>
-<li>$f(x) = f(x_0) + f’(x_0)(x - x_0) + \dfrac{ f’’(x_0) }{ 2! }(x - x_0)^2 + … + \dfrac{ f^{(n)}(x_0) }{ n! }(x - x_0)^n + o( (x - x_n)^n )$ </li>
+<li><p>带佩亚诺余项的泰勒公式</p>
+<ul>
+<li><p>用于计算</p>
+</li>
+<li><p>$f(x)$ $n$ 阶可导：</p>
+</li>
+<li><p>$f(x) = f(x_0) + f’(x_0)(x - x_0) + \dfrac{ f’’(x_0) }{ 2! }(x - x_0)^2 + … + \dfrac{ f^{(n)}(x_0) }{ n! }(x - x_0)^n + o( (x - x_n)^n )$ </p>
+</li>
 </ul>
 </li>
 </ol>
 </li>
-<li>积分中值定理</li>
+<li><p>积分中值定理</p>
+</li>
 </ol>
 <p><br></p>
 <h4 id="㊁、五大方面的应用"><a href="#㊁、五大方面的应用" class="headerlink" title="㊁、五大方面的应用"></a>㊁、五大方面的应用</h4><p><br></p>
@@ -801,7 +896,7 @@
 </li>
 </ul>
 <p><br></p>
-<h6 id="5、泰勒公式的应用——信号-f-n-xi-n-geq-2-n-。"><a href="#5、泰勒公式的应用——信号-f-n-xi-n-geq-2-n-。" class="headerlink" title="5、泰勒公式的应用——信号 $f^{(n)}(\xi), n \geq 2^n $ 。"></a>5、泰勒公式的应用——信号 $f^{(n)}(\xi), n \geq 2^n $ 。</h6><ol>
+<h6 id="5、泰勒公式的应用——信号-f-n-xi-n-geq-2-n-。"><a href="#5、泰勒公式的应用——信号-f-n-xi-n-geq-2-n-。" class="headerlink" title="5、泰勒公式的应用——信号 $f^{(n)}(\xi), n \geq 2^n$ 。"></a>5、泰勒公式的应用——信号 $f^{(n)}(\xi), n \geq 2^n$ 。</h6><ol>
 <li>设 $f(x)$ 在 $[0, 1]$ 上二阶可导，且 $\int_0^1 f(x) {\rm d}x = 0$，则<ul>
 <li>$A. $ 当 $f’(x) &lt; 0$ 时，$f(\frac{1}{2}) &lt; 0$ </li>
 <li>$B. $ 当 $f’’(x) &lt; 0$ 时，$f(\frac{1}{2}) &lt; 0$ </li>
@@ -962,7 +1057,7 @@
 <li>$L’ = -\dfrac{10}{x^2} + \dfrac{\pi}{4} + 1 = 0 \implies x = \sqrt{ \dfrac{40}{\pi + 4} }$ </li>
 </ul>
 </li>
-<li>求函数 $f(x) =nx(1 - x)^n $ 在 $[0, 1]$ 上的最大值 $ M(n)$ 及 $\lim\limits_{n \to \infty} M(n)$ 。<ul>
+<li>求函数 $f(x) =nx(1 - x)^n$ 在 $[0, 1]$ 上的最大值 $ M(n)$ 及 $\lim\limits_{n \to \infty} M(n)$ 。<ul>
 <li>$f(0) = f(1) = 0$ 。</li>
 <li>$f’(x) = n(1 - x)^n + nx \cdot n(1 - x)^{(n -1)} = n <a href="1- x"> 1 - ( n + 1 )x </a>^{(n - 1)}$ <ul>
 <li>$f’(x) = 0 \implies x_0 = \dfrac{1}{n + 1} \in (0, 1)$</li>
