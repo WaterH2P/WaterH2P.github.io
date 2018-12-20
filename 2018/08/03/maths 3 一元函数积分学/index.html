@@ -339,8 +339,10 @@
                 <div class="col-lg-8 col-md-10 col-sm-12">
                     <h2 id="一、定义"><a href="#一、定义" class="headerlink" title="一、定义"></a>一、定义</h2><p><br></p>
 <h4 id="㊀、不定积分【-C-】"><a href="#㊀、不定积分【-C-】" class="headerlink" title="㊀、不定积分【 +C 】"></a>㊀、不定积分【 +C 】</h4><ul>
-<li>$\forall x \in I$ ，使 $F’(x) = f(x)$ ，则称 $F(x)$ 是 $f(x)$ 在 $I$ 上的一个原函数。</li>
-<li>全体原函数就叫不定积分，记成：$\int f(x) {\rm d}x  = F(x) + C$ 。</li>
+<li><p>$\forall x \in I$ ，使 $F’(x) = f(x)$ ，则称 $F(x)$ 是 $f(x)$ 在 $I$ 上的一个原函数。</p>
+</li>
+<li><p>全体原函数就叫不定积分，记成：$\int f(x) \, {\rm d}x  = F(x) + C$ 。</p>
+</li>
 </ul>
 <p><br></p>
 <h4 id="㊁、定积分"><a href="#㊁、定积分" class="headerlink" title="㊁、定积分"></a>㊁、定积分</h4><p>黎曼积分 </p>
@@ -348,65 +350,88 @@
 \int_a^b f(x) \, {\rm d}x</script><p><br></p>
 <h4 id="㊂、小结"><a href="#㊂、小结" class="headerlink" title="㊂、小结"></a>㊂、小结</h4><p>牛顿—莱布尼茨公式</p>
 <script type="math/tex; mode=display">
-\int_a^b f(x) {\rm d}x = \left. F(x) \right|_{x = a}^{x = b} = F(b) - F(a)</script><p><br></p>
+\left. \int_a^b f(x) \, {\rm d}x = F(x) \right|_{x = a}^{x = b} = F(b) - F(a)</script><p><br></p>
 <h2 id="二、计算"><a href="#二、计算" class="headerlink" title="二、计算"></a>二、计算</h2><p><br></p>
 <h4 id="㊀、凑微分法"><a href="#㊀、凑微分法" class="headerlink" title="㊀、凑微分法"></a>㊀、凑微分法</h4><p><br></p>
 <h6 id="1、基本积分公式"><a href="#1、基本积分公式" class="headerlink" title="1、基本积分公式"></a>1、基本积分公式</h6><ul>
-<li>$\int x^k {\rm d}x = \dfrac{1}{k + 1}x^{k + 1} + C, \quad ( k \not= -1 )$ <ul>
-<li>$\begin{cases} \int \dfrac{1}{x^2} {\rm d}x = -\dfrac{1}{x} + C \\\\ \int \dfrac{1}{ \sqrt{x} } {\rm d}x = 2 \sqrt{x} + C \end{cases}$ <ul>
-<li>$\begin{array}{l} {\rm d} \int \dfrac{1}{ \sqrt{x} } {\rm d}x = {\rm d} ( 2 \sqrt{x} + C ) &amp;\implies \dfrac{1}{ \sqrt{x} } {\rm d}x = {\rm d}( 2 \sqrt{x} ) \\ \\ &amp;\implies \dfrac{ {\rm d}u }{ \sqrt{u} } = {\rm d}( 2 \sqrt{u} ) \end{array}$</li>
+<li><p>$\int x^k {\rm d}x = \dfrac{1}{k + 1}x^{k + 1} + C, \quad ( k \not= -1 )$ </p>
+<ul>
+<li><p>$\begin{cases} \int \dfrac{1}{x^2} \, {\rm d}x = -\dfrac{1}{x} + C \\\\ \int \dfrac{1}{ \sqrt{x} } \, {\rm d}x = 2 \sqrt{x} + C \end{cases}$ </p>
+<ul>
+<li>$\dfrac{ {\rm d}u }{ \sqrt{u} } = {\rm d}( 2 \sqrt{u} )$</li>
 </ul>
 </li>
 </ul>
 </li>
-<li>$\int \dfrac{1}{x} {\rm d}x = \ln |x| + C$ </li>
-<li>$\begin{cases} \int a^x {\rm d}x = \dfrac{1}{ \ln a } a^x + C, \quad ( a &gt; 0, a \not= 1 ) \\\\ \int e^x {\rm d}x = e^x + C \end{cases}$ </li>
-<li>$\begin{cases} \int \sin x {\rm d}x = - \cos x + C \quad &amp; \int \tan x{\rm d}x = - \ln | \cos x | + C \\ \\ \int \cos x {\rm d}x = \sin x + C \quad &amp; \int \cot x {\rm d}x = \ln | \sin x | + C \\ \\ \int \sec x {\rm d}x = \ln | \sec x + \tan x | + C \\\\ \int \csc x {\rm d}x = \ln | \csc x - \cot x | + C \\\\ \int \sec^2 x {\rm d}x = \tan x + C \quad &amp; \int \sec x \tan x {\rm d}x = \sec x + C \\\\ \int \csc^2 x {\rm d}x = - \cot x + C \quad &amp; \int \csc x \cot x {\rm d}x = - \csc x + C \end{cases}$ </li>
-<li>$\begin{cases} \int \dfrac{1}{ \sqrt{1 - x^2} }{\rm d}x = \arcsin x + C \quad &amp; \int \dfrac{1}{ \sqrt{x^2 + a^2} } = \ln ( x + \sqrt{x^2 + a^2} ) + C \\\\ \int \dfrac{1}{ \sqrt{a^2 - x^2} }{\rm d}x = \arcsin \dfrac{x}{a} + C \quad &amp; \int \dfrac{1}{ \sqrt{x^2 - a^2} } = \ln ( x + \sqrt{x^2 - a^2} ) + C \\\\ \int \dfrac{1}{1 + x^2}{\rm d}x = \arctan x + C \quad &amp; \int \dfrac{1}{a^2 - x^2} {\rm d}x = \dfrac{1}{2a} \ln |\dfrac{a + x}{a - x}| + C \\\\   \int \dfrac{1}{a^2 + x^2}{\rm d}x = \dfrac{1}{a} \arctan \dfrac{x}{a} + C \quad &amp; \int \dfrac{1}{x^2 - a^2} {\rm d}x = \dfrac{1}{2a} \ln |\dfrac{x - a}{x + a}| + C \end{cases}$</li>
-<li>$\int \sqrt{a^2 - x^2} {\rm d}x = \dfrac{a^2}{2} \arcsin \dfrac{x}{a} + \dfrac{x}{2} \sqrt{a^2 - x^2} + C$ </li>
+<li><p>$\int \dfrac{1}{x} \, {\rm d}x = \ln |x| + C$ </p>
+</li>
+<li><p>$\begin{cases} \int a^x \, {\rm d}x = \dfrac{1}{ \ln a } a^x + C, \quad ( a &gt; 0, a \not= 1 ) \\\\ \int e^x \, {\rm d}x = e^x + C \end{cases}$ </p>
+</li>
+<li><p>$\begin{cases} \int \sin x \, {\rm d}x = - \cos x + C \quad &amp; \int \tan x{\rm d}x = - \ln | \cos x | + C \\ \\ \int \cos x \, {\rm d}x = \sin x + C \quad &amp; \int \cot x \, {\rm d}x = \ln | \sin x | + C \\ \\ \int \sec x \, {\rm d}x = \ln | \sec x + \tan x | + C \\\\ \int \csc x \, {\rm d}x = \ln | \csc x - \cot x | + C \\\\ \int \sec^2 x \, {\rm d}x = \tan x + C \quad &amp; \int \sec x \tan x \, {\rm d}x = \sec x + C \\\\ \int \csc^2 x \, {\rm d}x = - \cot x + C \quad &amp; \int \csc x \cot x \, {\rm d}x = - \csc x + C \end{cases}$ </p>
+</li>
+<li><p>$\begin{cases} \int \dfrac{1}{ \sqrt{1 - x^2} }{\rm d}x = \arcsin x + C \quad &amp; \int \dfrac{1}{ \sqrt{x^2 + a^2} } = \ln ( x + \sqrt{x^2 + a^2} ) + C \\\\ \int \dfrac{1}{ \sqrt{a^2 - x^2} }{\rm d}x = \arcsin \dfrac{x}{a} + C \quad &amp; \int \dfrac{1}{ \sqrt{x^2 - a^2} } = \ln ( x + \sqrt{x^2 - a^2} ) + C \\\\ \int \dfrac{1}{1 + x^2}{\rm d}x = \arctan x + C \quad &amp; \int \dfrac{1}{a^2 - x^2} \, {\rm d}x = \dfrac{1}{2a} \ln |\dfrac{a + x}{a - x}| + C \\\\   \int \dfrac{1}{a^2 + x^2}{\rm d}x = \dfrac{1}{a} \arctan \dfrac{x}{a} + C \quad &amp; \int \dfrac{1}{x^2 - a^2} \, {\rm d}x = \dfrac{1}{2a} \ln |\dfrac{x - a}{x + a}| + C \end{cases}$</p>
+</li>
+<li><p>$\int \sqrt{a^2 - x^2} \, {\rm d}x = \dfrac{a^2}{2} \arcsin \dfrac{x}{a} + \dfrac{x}{2} \sqrt{a^2 - x^2} + C$ </p>
+</li>
 </ul>
 <p><br></p>
 <h6 id="2、例题"><a href="#2、例题" class="headerlink" title="2、例题"></a>2、例题</h6><ol>
-<li>$\int \dfrac{1}{ (2 - x) \sqrt{1 - x} } {\rm d}x$ <ul>
-<li>$= - \int \dfrac{1}{2 - x} \cdot \dfrac{ {\rm d}(1 - x) }{ \sqrt{1 - x} } = -2 \int \dfrac{ {\rm d} \sqrt{1 - x} }{ 2 - x }$ </li>
-<li>$= -2 \int \dfrac{ {\rm d} \sqrt{1 - x} }{ 1 + ( \sqrt{1 - x} )^2 } = -2 \arctan \sqrt{1 - x} + C$ </li>
+<li><p>$\int \dfrac{1}{ (2 - x) \sqrt{1 - x} } \, {\rm d}x$ </p>
+<ul>
+<li><p>$= - \int \dfrac{1}{2 - x} \cdot \dfrac{ {\rm d}(1 - x) }{ \sqrt{1 - x} } = -2 \int \dfrac{ {\rm d} \sqrt{1 - x} }{ 2 - x }$ </p>
+</li>
+<li><p>$= -2 \int \dfrac{ {\rm d} \sqrt{1 - x} }{ 1 + ( \sqrt{1 - x} )^2 } = -2 \arctan \sqrt{1 - x} + C$ </p>
+</li>
 </ul>
 </li>
-<li>$\int \dfrac{x}{ (2 - x^2) \sqrt{1 - x^2} } {\rm d}x$ </li>
-<li>$\int \dfrac{ \cos^2 x - \sin x }{ \cos x(1 + \cos x e^{\sin x}) } {\rm d}x$ <ul>
-<li><strong>定理</strong> <ul>
-<li>对于 $\int f(x) {\rm d}x$ ，$f(x)$ 越复杂 $\implies$ 越有规律可循。</li>
+<li><p>$\int \dfrac{x}{ (2 - x^2) \sqrt{1 - x^2} } \, {\rm d}x$ </p>
+</li>
+<li><p>$\int \dfrac{ \cos^2 x - \sin x }{ \cos x(1 + \cos x e^{\sin x}) } \, {\rm d}x$ </p>
+</li>
+</ol>
+<ul>
+<li><p><strong>定理</strong> </p>
+<ul>
+<li>对于 $\int f(x) \, {\rm d}x$ ，$f(x)$ 越复杂 $\implies$ 越有规律可循。</li>
 </ul>
 <ol>
-<li>先对<strong>复杂的主要部分( h(x) )</strong>求导<ul>
-<li>$\int f(x) {\rm d}x = \int g(x) \cdot h(x) {\rm d}x$ <ul>
+<li><p>先对<strong>复杂的主要部分( h(x) )</strong>求导</p>
+<ul>
+<li><p>$\int f(x) \, {\rm d}x = \int g(x) \cdot h(x) {\rm d}x$ </p>
+<ul>
 <li>其中，若 $ h’(x) = A \cdot g(x) \implies {\rm d} h(x) = A \cdot g(x) {\rm d}x$ </li>
 </ul>
 </li>
 </ul>
 </li>
-<li>凑微分 <ul>
-<li>$\int f(x) {\rm d}x = \dfrac{1}{A} \int h(x) \cdot A \cdot g(x) {\rm d}x = \dfrac{1}{A} \int h(x) {\rm d} h(x)$ </li>
+<li><p>凑微分 </p>
+<ul>
+<li>$\int f(x) \, {\rm d}x = \dfrac{1}{A} \int h(x) \cdot A \cdot g(x) {\rm d}x = \dfrac{1}{A} \int h(x) {\rm d} h(x)$ </li>
 </ul>
 </li>
 </ol>
 </li>
-<li>解答<ol>
-<li>$(\cos x e^{\sin x})’ = - \sin x e^{\sin x} + \cos^2 x e^{\sin x} = e^{\sin x}( \cos^2 x - \sin x )$ <ul>
+<li><p>解答</p>
+<ol>
+<li><p>$(\cos x e^{\sin x})’ = - \sin x e^{\sin x} + \cos^2 x e^{\sin x} = e^{\sin x}( \cos^2 x - \sin x )$ </p>
+<ul>
 <li>$\begin{array}{l} I &amp; = \int \dfrac{ e^{\sin x}( \cos^2 x - \sin x ) {\rm d}x }{ e^{\sin x} \cos x( 1 + \cos x e^{\sin x} ) } \\\\ &amp; = \int \dfrac{ {\rm d}( \cos x e^{\sin x} ) }{ \cos x e^{\sin x}( 1 + \cos x e^{\sin x} ) } \quad \quad \left( \dfrac{ {\rm d}u }{ u(1 + u) } \right) \\\\ &amp; = \ln \left| \dfrac{ \cos x e^{\sin x} }{ 1 + \cos x e^{\sin x} } \right| + C \end{array}$ </li>
 </ul>
 </li>
 </ol>
 </li>
 </ul>
-</li>
-<li>求 $\int \dfrac{1 - \ln x}{ (x - \ln x)^2 } {\rm d}x$ <ul>
-<li>分析<ul>
+<ol>
+<li><p>求 $\int \dfrac{1 - \ln x}{ (x - \ln x)^2 } \, {\rm d}x$ </p>
+<ul>
+<li><p>分析</p>
+<ul>
 <li>$\left( \dfrac{x - \ln x}{x} \right)’ = - \dfrac{1 - \ln x}{x^2}$ </li>
 </ul>
 </li>
-<li>解答<ul>
-<li>$\begin{array}{l} I = \int \dfrac{ \dfrac{1 - \ln x}{x^2} }{ \left( \dfrac{x - \ln x}{x} \right)^2 } {\rm d}x = - \int \dfrac{ {\rm d} \dfrac{x - \ln x}{x} }{ \left( \dfrac{x - \ln x}{x} \right)^2 } = \dfrac{x}{x - \ln x} + C \end{array}$ </li>
+<li><p>解答</p>
+<ul>
+<li>$\begin{array}{l} I = \int \dfrac{ \dfrac{1 - \ln x}{x^2} }{ \left( \dfrac{x - \ln x}{x} \right)^2 } \, {\rm d}x = - \int \dfrac{ {\rm d} \dfrac{x - \ln x}{x} }{ \left( \dfrac{x - \ln x}{x} \right)^2 } = \dfrac{x}{x - \ln x} + C \end{array}$ </li>
 </ul>
 </li>
 </ul>
@@ -416,32 +441,47 @@
 <h4 id="㊁、换元法"><a href="#㊁、换元法" class="headerlink" title="㊁、换元法"></a>㊁、换元法</h4><p>当凑微分法不成功时，考虑换元。</p>
 <p><br></p>
 <h6 id="1、三角换元"><a href="#1、三角换元" class="headerlink" title="1、三角换元"></a>1、三角换元</h6><ul>
-<li>方法<ul>
-<li>当被积函数 $f(x)$ 含有 $\sqrt{a^2 - x^2}$ ，$\sqrt{a^2 + x^2}$ ，$\sqrt{x^2 - a^2} \quad (a &gt; 0)$ 可作如下换元：</li>
-<li>$\sqrt{a^2 - x^2} \implies$ 令 $x = a \sin t, \quad ( -\dfrac{\pi}{2} &lt; t &lt; \dfrac{\pi}{2} )$ <ul>
+<li><p>方法</p>
+<ul>
+<li><p>当被积函数 $f(x)$ 含有 $\sqrt{a^2 - x^2}$ ，$\sqrt{a^2 + x^2}$ ，$\sqrt{x^2 - a^2} \quad (a &gt; 0)$ 可作如下换元：</p>
+</li>
+<li><p>$\sqrt{a^2 - x^2} \implies$ 令 $x = a \sin t, \quad ( -\dfrac{\pi}{2} &lt; t &lt; \dfrac{\pi}{2} )$ </p>
+<ul>
 <li>单调函数 有 反函数（保单调，可回代）</li>
 </ul>
 </li>
-<li>$\sqrt{a^2 + x^2} \implies$ 令 $x = a \tan t, \quad ( -\dfrac{\pi}{2} &lt; t &lt; \dfrac{\pi}{2} )$ </li>
-<li>$\sqrt{x^2 - a^2} \implies$ 令 $x = a \sec t, \quad \begin{cases} x &gt; a,  0 \leq t &lt; \dfrac{\pi}{2} \\\\ x &lt; -a, \dfrac{\pi}{2} &lt; t \leq \pi \end{cases}$ </li>
-<li>若见到 $\sqrt{ax^2 + bx + c}$ ，要先化为 $\sqrt{ \varphi^2(x) - k^2 }$ ，$\sqrt{ k^2 - \varphi^2(x) }$ ，$\sqrt{ \varphi^2(x) + k^2 }$ ，再做三角换元。<ul>
-<li>例题</li>
-</ul>
+<li><p>$\sqrt{a^2 + x^2} \implies$ 令 $x = a \tan t, \quad ( -\dfrac{\pi}{2} &lt; t &lt; \dfrac{\pi}{2} )$ </p>
+</li>
+<li><p>$\sqrt{x^2 - a^2} \implies$ 令 $x = a \sec t, \quad \begin{cases} x &gt; a,  0 \leq t &lt; \dfrac{\pi}{2} \\\\ x &lt; -a, \dfrac{\pi}{2} &lt; t \leq \pi \end{cases}$ </p>
+</li>
+<li><p>若见到 $\sqrt{ax^2 + bx + c}$ ，要先化为 $\sqrt{ \varphi^2(x) - k^2 }$ ，$\sqrt{ k^2 - \varphi^2(x) }$ ，$\sqrt{ \varphi^2(x) + k^2 }$ ，再做三角换元。</p>
 </li>
 </ul>
+<ul>
+<li><p>例题</p>
 <ol>
-<li>求 $\int \dfrac{ {\rm d}x }{x + \sqrt{1 - x^2}}$ <ul>
-<li>令 $x = \sin t, t \in \left( \dfrac{\pi}{2}, \dfrac{\pi}{2} \right)$ </li>
-<li>$I = \dfrac{ \cos t }{ \sin t + \cos t } {\rm d}t = \dfrac{1}{2} \int \dfrac{ \sin t + \cos t + \cos t - \sin t }{ \sin t + \cos t } {\rm d}t$ </li>
-<li>$I = \dfrac{1}{2} \left( \int 1 {\rm d}t + \int \dfrac{ {\rm d} ( \sin t + \cos t ) }{ \sin t + \cos t } \right) = \dfrac{1}{2} \left( t + \ln | \sin t + \cos t | \right)$ </li>
-<li>$I = \dfrac{1}{2} \arcsin x + \dfrac{1}{2} \ln | x + \sqrt{1 - x^2} | + C$ </li>
+<li><p>求 $\int \dfrac{ {\rm d}x }{x + \sqrt{1 - x^2}}$ </p>
+<ul>
+<li><p>令 $x = \sin t, t \in \left( \dfrac{\pi}{2}, \dfrac{\pi}{2} \right)$ </p>
+</li>
+<li><p>$I = \dfrac{ \cos t }{ \sin t + \cos t } {\rm d}t = \dfrac{1}{2} \int \dfrac{ \sin t + \cos t + \cos t - \sin t }{ \sin t + \cos t } {\rm d}t$ </p>
+</li>
+<li><p>$I = \dfrac{1}{2} \left( \int 1 {\rm d}t + \int \dfrac{ {\rm d} ( \sin t + \cos t ) }{ \sin t + \cos t } \right) = \dfrac{1}{2} \left( t + \ln | \sin t + \cos t | \right)$ </p>
+</li>
+<li><p>$I = \dfrac{1}{2} \arcsin x + \dfrac{1}{2} \ln | x + \sqrt{1 - x^2} | + C$ </p>
+</li>
 </ul>
 </li>
 </ol>
 <ul>
-<li>⭐️【注】⭐️<ul>
-<li>$\begin{array}{l} \int \dfrac{ a_2 \sin t + b_2 \cos t }{ a_1 \sin t + b_1 \cos t } {\rm d}t &amp; = \int \dfrac{ A ( a_1 \sin t + b_1 \cos t ) + B ( a_1 \cos t - b_1 \sin t ) }{ a_1 \sin t + b_1 \cos t } {\rm d}t \\\\ &amp; = At + B \ln| a_1 \sin t + b_1 \cos t | + C  \end{array}$ </li>
-<li>其中 $\begin{cases} Aa_1 - Bb_1 = a_2 \\\\ Ab_1 + Ba_1 = b_2 \end{cases}$ </li>
+<li><p>⭐️【注】⭐️</p>
+<ul>
+<li><p>$\begin{array}{l} \int \dfrac{ a_2 \sin t + b_2 \cos t }{ a_1 \sin t + b_1 \cos t } {\rm d}t &amp; = \int \dfrac{ A ( a_1 \sin t + b_1 \cos t ) + B ( a_1 \cos t - b_1 \sin t ) }{ a_1 \sin t + b_1 \cos t } {\rm d}t \\\\ &amp; = At + B \ln| a_1 \sin t + b_1 \cos t | + C  \end{array}$ </p>
+</li>
+<li><p>其中 $\begin{cases} Aa_1 - Bb_1 = a_2 \\\\ Ab_1 + Ba_1 = b_2 \end{cases}$ </p>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -450,35 +490,54 @@
 <p><br></p>
 <h6 id="2、倒带换"><a href="#2、倒带换" class="headerlink" title="2、倒带换"></a>2、倒带换</h6><p>$(x = \dfrac{1}{t})$</p>
 <ul>
-<li>可用于分子次数明显低于分母次数时。</li>
-<li>方法<ul>
-<li>$\left. \begin{array}{l} \int \dfrac{1}{ x^k \sqrt{ a^2 - x^2 } } {\rm d}x \\\\ \int \dfrac{1}{ x^k \sqrt{ a^2 + x^2 } } {\rm d}x \\\\ \int \dfrac{1}{ x^k \sqrt{ x^2 - a^2 } } {\rm d}x \end{array} \right\} \quad k = 1, 2, 4$ </li>
+<li><p>可用于分子次数明显低于分母次数时。</p>
+</li>
+<li><p>方法</p>
+<ul>
+<li>$\left. \begin{array}{l} \int \dfrac{1}{ x^k \sqrt{ a^2 - x^2 } } \, {\rm d}x \\\\ \int \dfrac{1}{ x^k \sqrt{ a^2 + x^2 } } \, {\rm d}x \\\\ \int \dfrac{1}{ x^k \sqrt{ x^2 - a^2 } } \, {\rm d}x \end{array} \right\} \quad k = 1, 2, 4$ </li>
 </ul>
 </li>
 </ul>
 <p><br></p>
 <h6 id="3、复杂部分代换"><a href="#3、复杂部分代换" class="headerlink" title="3、复杂部分代换"></a>3、复杂部分代换</h6><ul>
-<li><strong>令复杂部分 $= t$ </strong>（举重若轻）</li>
-<li>方法<ul>
-<li>$\sqrt[n]{ax + b} = t$ ， $\sqrt{ \dfrac{ax + b}{cx + d} } = t$ ， $\sqrt{ ae^{bx} + c } = t$ （根式代换）</li>
-<li>$a^x, e^x = t$ （指数代换）</li>
-<li>$\ln x = t$ （对数代换）</li>
-<li>$\arcsin x, \arctan x = t$ （反三角函数代换）$\cdots$ </li>
+<li><p>令复杂部分 $= t$（举重若轻）</p>
+</li>
+<li><p>方法</p>
+<ul>
+<li><p>$\sqrt[n]{ax + b} = t$ ， $\sqrt{ \dfrac{ax + b}{cx + d} } = t$ ， $\sqrt{ ae^{bx} + c } = t$ （根式代换）</p>
+</li>
+<li><p>$a^x, \, e^x = t$（指数代换）</p>
+</li>
+<li><p>$\ln x = t$（对数代换）</p>
+</li>
+<li><p>$\arcsin x, \, \arctan x = t$（反三角函数代换）$\cdots$ </p>
+</li>
 </ul>
 </li>
-<li>例题<ol>
-<li>求 $I = \int \sqrt{ \dfrac{1 - x}{1 + x} } \cdot \dfrac{ {\rm d}x }{x}$ 。<ul>
-<li>解 ㊀<ul>
-<li>令 $\sqrt{ \dfrac{1 - x}{1 + x} } = t, \quad x = \dfrac{1 - t^2}{1 + t^2}$ </li>
-<li>所以： $\begin{array}{l} I &amp; = \int t \cdot \dfrac{1 + t^2}{1 - t^2} \cdot \dfrac{-4t}{ (1 + t^2)^2 } {\rm d}t \\\\ &amp; = -4 \int \dfrac{t^2}{ (1 - t^2)(1 + t^2) } {\rm d}t \\\\ &amp; = 2 \int \left( \dfrac{1}{1 + t^2} - \dfrac{1}{1 - t^2} \right) {\rm d}t \\\\ &amp; = 2 \arctan t - \ln \left| \dfrac{1 + t}{1 - t} \right| + C \end{array}$</li>
-<li><strong>回代</strong>：$I = 2 \arctan \sqrt{ \dfrac{1 - x}{1 + x} } - \ln \left| \dfrac{ \sqrt{1 + x} + \sqrt{1 - x} }{ \sqrt{1 + x} - \sqrt{1 - x} } \right| + C$ </li>
+<li><p>例题</p>
+<ol>
+<li><p>求 $I = \int \sqrt{ \dfrac{1 - x}{1 + x} } \cdot \dfrac{ {\rm d}x }{x}$ 。</p>
+<ul>
+<li><p>解 ㊀</p>
+<ul>
+<li><p>令 $\sqrt{ \dfrac{1 - x}{1 + x} } = t, \quad x = \dfrac{1 - t^2}{1 + t^2}$ </p>
+</li>
+<li><p>所以： $\begin{array}{l} I &amp; = \int t \cdot \dfrac{1 + t^2}{1 - t^2} \cdot \dfrac{-4t}{ (1 + t^2)^2 } {\rm d}t \\\\ &amp; = -4 \int \dfrac{t^2}{ (1 - t^2)(1 + t^2) } {\rm d}t \\\\ &amp; = 2 \int \left( \dfrac{1}{1 + t^2} - \dfrac{1}{1 - t^2} \right) {\rm d}t \\\\ &amp; = 2 \arctan t - \ln \left| \dfrac{1 + t}{1 - t} \right| + C \end{array}$</p>
+</li>
+<li><p><strong>回代</strong>：$I = 2 \arctan \sqrt{ \dfrac{1 - x}{1 + x} } - \ln \left| \dfrac{ \sqrt{1 + x} + \sqrt{1 - x} }{ \sqrt{1 + x} - \sqrt{1 - x} } \right| + C$ </p>
+</li>
 </ul>
 </li>
-<li>解 ㊁<ul>
-<li>$I = \int \sqrt{ \dfrac{1 - x}{1 + x} } \cdot \dfrac{ {\rm d}x }{x} = \int \dfrac{ \sqrt{1 - x^2} }{(1 + x)x} {\rm d}x$ </li>
-<li>令 $s = \sin t, t \in \left( -\dfrac{\pi}{2}, \dfrac{\pi}{2} \right)$ </li>
-<li>$\begin{array}{l} I &amp; = \int \dfrac{ \cos^2 t }{ (1 + \sin t) \sin t } {\rm d}t \\\\ &amp; = \int \dfrac{ (1 + \sin t)(1 - \sin t) }{ (1 + \sin t) \sin t } {\rm d}t \\\\ &amp; = \int \csc t {\rm d}t - \int 1 {\rm d}t \\\\ &amp; = \ln| \csc t - \cot t | - t + C \end{array}$ </li>
-<li>回代：$I = \ln \left| \dfrac{1}{x} - \dfrac{ \sqrt{1 - x^2} }{x} \right| - \arcsin x + C$ </li>
+<li><p>解 ㊁</p>
+<ul>
+<li><p>$I = \int \sqrt{ \dfrac{1 - x}{1 + x} } \cdot \dfrac{ {\rm d}x }{x} = \int \dfrac{ \sqrt{1 - x^2} }{(1 + x)x} \, {\rm d}x$ </p>
+</li>
+<li><p>令 $s = \sin t, t \in \left( -\dfrac{\pi}{2}, \dfrac{\pi}{2} \right)$ </p>
+</li>
+<li><p>$\begin{array}{l} I &amp; = \int \dfrac{ \cos^2 t }{ (1 + \sin t) \sin t } {\rm d}t \\\\ &amp; = \int \dfrac{ (1 + \sin t)(1 - \sin t) }{ (1 + \sin t) \sin t } {\rm d}t \\\\ &amp; = \int \csc t \, {\rm d}t - \int 1 {\rm d}t \\\\ &amp; = \ln| \csc t - \cot t | - t + C \end{array}$ </p>
+</li>
+<li><p>回代：$I = \ln \left| \dfrac{1}{x} - \dfrac{ \sqrt{1 - x^2} }{x} \right| - \arcsin x + C$ </p>
+</li>
 </ul>
 </li>
 </ul>
@@ -488,29 +547,38 @@
 </ul>
 <p><br></p>
 <h4 id="㊂、分部积分法"><a href="#㊂、分部积分法" class="headerlink" title="㊂、分部积分法"></a>㊂、分部积分法</h4><p>$\underrightarrow{ \text{反、对、幂、指、三} } \implies \underrightarrow{ \text{更容易求导} \to \text{更容易积分} } \implies \int u {\rm d}v = uv - \int v {\rm d}u$  </p>
-<p>此方法一般是在运算过程中：$\begin{cases} 1. \text{出现了不同类型函数的乘积} \\\\ 2. \text{且求} \int u {\rm d}v \text{ 困难}，而求 \int v {\rm d}u \text{ 简单时} \end{cases}$ </p>
+<p>此方法一般是在运算过程中：$\begin{cases} 1. &amp; \text{出现了不同类型函数的乘积} \\\\ 2. &amp; \text{且求} \int u \, {\rm d}v \text{ 困难}，而求 \int v \, {\rm d}u \text{ 简单时} \end{cases}$ </p>
 <p><br></p>
 <h6 id="1、⭐️方法"><a href="#1、⭐️方法" class="headerlink" title="1、⭐️方法"></a>1、⭐️方法</h6><ol>
-<li>被积函数为 $P_n(x) \cdot e^{kx}$ ，$P_n(x) \sin ax$ ，$P_n(x) \cos ax$ ，选 $P_n(x) = u$ ，其中 $P_n(x)$ 为幂函数多项式。<ul>
+<li><p>被积函数为 $P_n(x) \cdot e^{kx}$ ，$P_n(x) \sin ax$ ，$P_n(x) \cos ax$ ，选 $P_n(x) = u$ ，其中 $P_n(x)$ 为幂函数多项式。</p>
+<ul>
 <li>$u$ 求导至 $0$ 。</li>
 </ul>
 </li>
-<li>被积函数为 $e^{ax} \sin bx$ ，$e^{ax} \cos bx$ ，选谁当 $u$ 都行。<ul>
+<li><p>被积函数为 $e^{ax} \sin bx$ ，$e^{ax} \cos bx$ ，选谁当 $u$ 都行。</p>
+<ul>
 <li>$u$ 求导两次。 </li>
 </ul>
 </li>
-<li>被积函数为 $P_n(x) \ln x$ ，$P_n(x) \arcsin x$ ，$P_n(x) \arctan x$ ，选 $\ln x， \text{arc-} = u$ 。<ul>
+<li><p>被积函数为 $P_n(x) \ln x$ ，$P_n(x) \arcsin x$ ，$P_n(x) \arctan x$ ，选 $\ln x，\, \text{arc-} = u$ 。</p>
+<ul>
 <li>$u$ 求导一次。 </li>
 </ul>
 </li>
 </ol>
 <ul>
-<li>【注】分部积分公式的推广为：<ul>
-<li>$\int uv^{(n + 1)} {\rm d}x = uv^{(n)} - u’v^{(n - 1)} + u’’v^{(n - 2)} - \cdots + (-1)^n u^{(n)}v + (-1)^{n + 1} \int u^{(n + 1)}v {\rm d}x$ </li>
-<li>对 $u$ 求导，对 $v^{(n + 1)}$ 积分</li>
-<li>交错相乘、正负相间、首项为正</li>
-<li>最后一项（列）相乘再积分</li>
-<li><img src="https://github.com/WaterH2P/WaterH2P.github.io/raw/master/img/images/3-2.3%20%E5%88%86%E9%83%A8%E7%A7%AF%E5%88%86%E5%85%AC%E5%BC%8F%E7%9A%84%E6%8E%A8%E5%B9%BF.jpg" width="70%"></li>
+<li><p>【注】分部积分公式的推广为：</p>
+<ul>
+<li><p>$\int uv^{(n + 1)} \, {\rm d}x = uv^{(n)} - u’v^{(n - 1)} + u’’v^{(n - 2)} - \cdots + (-1)^n u^{(n)}v + (-1)^{n + 1} \int u^{(n + 1)}v \, {\rm d}x$ </p>
+</li>
+<li><p>对 $u$ 求导，对 $v^{(n + 1)}$ 积分</p>
+</li>
+<li><p>交错相乘、正负相间、首项为正</p>
+</li>
+<li><p>最后一项（列）相乘再积分</p>
+</li>
+<li><p><img src="https://github.com/WaterH2P/WaterH2P.github.io/raw/master/img/images/3-2.3%20%E5%88%86%E9%83%A8%E7%A7%AF%E5%88%86%E5%85%AC%E5%BC%8F%E7%9A%84%E6%8E%A8%E5%B9%BF.jpg" width="70%"></p>
+</li>
 </ul>
 </li>
 </ul>
@@ -523,91 +591,122 @@
   \hline
 \end{array}</script><p><br></p>
 <h6 id="2、例题-1"><a href="#2、例题-1" class="headerlink" title="2、例题"></a>2、例题</h6><ol>
-<li>求 $\int x^2 \arctan x {\rm d}x$ <ul>
+<li><p>求 $\int x^2 \arctan x \, {\rm d}x$ </p>
+<ul>
 <li>$= \dfrac{1}{3}x^3 \arctan x - \dfrac{1}{6} x^2 - \dfrac{1}{6} \ln (1 + x^2) + C$ </li>
 </ul>
 </li>
-<li>求 $\int e^{2x} \sin 3x {\rm d}x$ <ul>
+<li><p>求 $\int e^{2x} \sin 3x \, {\rm d}x$ </p>
+<ul>
 <li>$= -\dfrac{3}{13} e^{2x} \cos 3x + \dfrac{2}{13} e^{2x} \sin 3x + C$ </li>
 </ul>
 </li>
-<li>设 $f( \ln x ) = \dfrac{ \ln (1 + x) }{x}$ ，计算 $\int f(x) {\rm d}x$ 。<ul>
-<li>令 $\ln x = t, \quad t = e^t \implies f(t) = \dfrac{ \ln(1 + e^t) }{e^t}$ </li>
-<li>$\begin{array}{l} \int f(x) {\rm d}x &amp; = \int \ln (1 + e^x) \cdot e^{-x} {\rm d}x \\\\ &amp; = - e^{-x} \ln(1 + e^x) + \int \dfrac{1 + e^x - e^x}{1 + e^x} {\rm d}x \\\\ &amp; = - e^{-x} \ln(1 + e^x) + x - \ln(1 + e^x) + C \\\\ &amp; = x - ( e^{-x} + 1 )\ln (1 + e^x) + C \end{array}$ </li>
+<li><p>设 $f( \ln x ) = \dfrac{ \ln (1 + x) }{x}$ ，计算 $\int f(x) \, {\rm d}x$ 。</p>
+<ul>
+<li><p>令 $\ln x = t, \quad t = e^t \implies f(t) = \dfrac{ \ln(1 + e^t) }{e^t}$ </p>
+</li>
+<li><p>$\begin{array}{l} \int f(x) \, {\rm d}x &amp; = \int \ln (1 + e^x) \cdot e^{-x} \, {\rm d}x \\\\ &amp; = - e^{-x} \ln(1 + e^x) + \int \dfrac{1 + e^x - e^x}{1 + e^x} \, {\rm d}x \\\\ &amp; = - e^{-x} \ln(1 + e^x) + x - \ln(1 + e^x) + C \\\\ &amp; = x - ( e^{-x} + 1 )\ln (1 + e^x) + C \end{array}$ </p>
+</li>
 </ul>
 </li>
 </ol>
 <p><br></p>
 <h4 id="㊃、有理函数积分"><a href="#㊃、有理函数积分" class="headerlink" title="㊃、有理函数积分"></a>㊃、有理函数积分</h4><p><br></p>
 <h6 id="1、定义"><a href="#1、定义" class="headerlink" title="1、定义"></a>1、定义</h6><ul>
-<li>形如 $\int \dfrac{ P_n(x) }{ Q_m(x) } {\rm d}x, \quad (n &lt; m)$ 的积分。 </li>
+<li>形如 $\int \dfrac{ P_n(x) }{ Q_m(x) } \, {\rm d}x, \quad (n &lt; m)$ 的积分。 </li>
 </ul>
 <p><br></p>
 <h6 id="2、方法"><a href="#2、方法" class="headerlink" title="2、方法"></a>2、方法</h6><ol>
-<li>将 $Q_m(x)$ 因式分解</li>
-<li>将 $\dfrac{ P_n(x) }{ Q_m(x) }$ 拆成若干最简有理公式之和</li>
+<li><p>将 $Q_m(x)$ 因式分解</p>
+</li>
+<li><p>将 $\dfrac{ P_n(x) }{ Q_m(x) }$ 拆成若干最简有理公式之和</p>
+</li>
 </ol>
 <p><br></p>
 <h6 id="3、拆分原则"><a href="#3、拆分原则" class="headerlink" title="3、拆分原则"></a>3、拆分原则</h6><ol>
-<li>$Q_m(x)$ 分解出 $(ax + b)^k \implies$ 产生 $ k $ 项。<ul>
+<li><p>$Q_m(x)$ 分解出 $(ax + b)^k \implies$ 产生 $ k $ 项。</p>
+<ul>
 <li>$\dfrac{A_1}{ ax + b } + \dfrac{A_2}{ (ax + b)^2 } + \cdots + \dfrac{A_k}{ (ax + b)^k }, \quad k = 1, 2, \ldots$ </li>
 </ul>
 </li>
-<li>$Q_m(x)$ 分解出 $(px^2 + qx + r)^k \implies$ 产生 $ k $ 项。<ul>
+<li><p>$Q_m(x)$ 分解出 $(px^2 + qx + r)^k \implies$ 产生 $k$ 项。</p>
+<ul>
 <li>$\dfrac{ A_1x + B_1 }{ px^2 + qx +r } + \dfrac{ A_2x + B }{ (px^2 + qx + r)^2 } + \cdots + \dfrac{ A_kx + B_k }{ (px^2 + qx + r)^k }, \quad k = 1, 2, \ldots$ </li>
 </ul>
 </li>
 </ol>
 <p><br></p>
 <h6 id="4、例题"><a href="#4、例题" class="headerlink" title="4、例题"></a>4、例题</h6><ol>
-<li>计算 $I = \int \dfrac{ 4x^2 - 6x -1 }{ (x + 1)(2x - 1)^2 } {\rm d}x$ 。<ul>
-<li>$\dfrac{ 4x^2 - 6x -1 }{ (x + 1)(2x - 1)^2 } = \dfrac{1}{x + 1} - \dfrac{2}{ (2x - 1)^2 }$ <ul>
-<li>$ 4x^2 - 6x -1 = A(2x - 1)^2 + B(x - 1)(2x - 1) + C(x + 1)$ <ul>
+<li><p>计算 $I = \int \dfrac{ 4x^2 - 6x -1 }{ (x + 1)(2x - 1)^2 } \, {\rm d}x$ 。</p>
+<ul>
+<li><p>$\dfrac{ 4x^2 - 6x -1 }{ (x + 1)(2x - 1)^2 } = \dfrac{1}{x + 1} - \dfrac{2}{ (2x - 1)^2 }$ </p>
+<ul>
+<li><p>$4x^2 - 6x -1 = A(2x - 1)^2 + B(x - 1)(2x - 1) + C(x + 1)$ </p>
+<ul>
 <li>$\begin{cases} \text{ 取 } x = \dfrac{1}{2}, \quad -3 = C( \dfrac{1}{2} + 1 ) &amp; \implies C = -2 \\\\ \text{ 取 } x = -1, \quad 9 = 9A &amp; \implies A = 1 \\\\ \text{ 比较 } x^2 \text{ 的系数}, \quad 4 = 4A + 2B &amp; \implies B = 0 \end{cases}$ </li>
 </ul>
 </li>
 </ul>
 </li>
-<li>$\begin{array}{l} I &amp;= \int \dfrac{1}{x + 1} {\rm d}x - 2 \int \dfrac{1}{ (2x - 1)^2 } {\rm d}x \\ &amp;= \ln |x + 1| + \dfrac{1}{2x - 1} + C \\ \end{array}$ </li>
+<li><p>$\begin{array}{l} I &amp;= \int \dfrac{1}{x + 1} \, {\rm d}x - 2 \int \dfrac{1}{ (2x - 1)^2 } \, {\rm d}x \\ &amp;= \ln |x + 1| + \dfrac{1}{2x - 1} + C \\ \end{array}$ </p>
+</li>
 </ul>
 </li>
-<li>计算 $I = \int \dfrac{x}{x^3 - x^2 + x - 1} {\rm d}x$ <ul>
-<li>$I = \int \dfrac{x}{ (x^2 + 1)(x - 1) } {\rm d}x$ </li>
-<li>$\dfrac{x}{ (x^2 + 1)(x - 1) } = \dfrac{1}{2} \left( \dfrac{-x + 1}{x^2 + 1} + \dfrac{1}{x - 1} \right)$ </li>
-<li>$\begin{array}{l} I &amp; = -\dfrac{1}{2} \int \left( \dfrac{ \frac{1}{2} \cdot 2x - 1 }{ x^2 + 1 } \right) {\rm d}x + \dfrac{1}{2} \int \dfrac{1}{x - 1} {\rm d}x \\ &amp; = -\dfrac{1}{4} \ln(x^2 + 1) + \dfrac{1}{2} \arctan x + \dfrac{1}{2} \ln |x - 1| + C \end{array}$ </li>
+<li><p>计算 $I = \int \dfrac{x}{x^3 - x^2 + x - 1} \, {\rm d}x$ </p>
+<ul>
+<li><p>$I = \int \dfrac{x}{ (x^2 + 1)(x - 1) } \, {\rm d}x$ </p>
+</li>
+<li><p>$\dfrac{x}{ (x^2 + 1)(x - 1) } = \dfrac{1}{2} \left( \dfrac{-x + 1}{x^2 + 1} + \dfrac{1}{x - 1} \right)$ </p>
+</li>
+<li><p>$\begin{array}{l} I &amp; = -\dfrac{1}{2} \int \left( \dfrac{ \frac{1}{2} \cdot 2x - 1 }{ x^2 + 1 } \right) {\rm d}x + \dfrac{1}{2} \int \dfrac{1}{x - 1} \, {\rm d}x \\ &amp; = -\dfrac{1}{4} \ln(x^2 + 1) + \dfrac{1}{2} \arctan x + \dfrac{1}{2} \ln |x - 1| + C \end{array}$ </p>
+</li>
 </ul>
 </li>
-<li>计算 $I = \int \dfrac{t^3 - 3t}{ (t - 1)^2(t + 1)^2 } {\rm d}t$<ul>
-<li>$\dfrac{t^3 - 3t}{ (t - 1)^2(t + 1)^2 } = \dfrac{1}{2} \left[ \dfrac{ 1 }{t - 1} + \dfrac{ -1 }{ (t - 1)^2 } + \dfrac{ 1 }{t + 1} + \dfrac{ 1 }{ (t + 1)^2 } \right]$ </li>
-<li>$\begin{array}{l} I &amp; = \dfrac{1}{2} \left( \ln |t - 1| + \dfrac{1}{t - 1} + \ln |t + 1| - \dfrac{1}{t + 1} \right) + C \\ &amp; = \dfrac{1}{2} \ln |t^2 - 1| + \dfrac{1}{t^2 - 1} + C \end{array}$ </li>
+<li><p>计算 $I = \int \dfrac{t^3 - 3t}{ (t - 1)^2(t + 1)^2 } {\rm d}t$</p>
+<ul>
+<li><p>$\dfrac{t^3 - 3t}{ (t - 1)^2(t + 1)^2 } = \dfrac{1}{2} \left[ \dfrac{ 1 }{t - 1} + \dfrac{ -1 }{ (t - 1)^2 } + \dfrac{ 1 }{t + 1} + \dfrac{ 1 }{ (t + 1)^2 } \right]$ </p>
+</li>
+<li><p>$\begin{array}{l} I &amp; = \dfrac{1}{2} \left( \ln \mid t - 1 \mid + \dfrac{1}{t - 1} + \ln \mid t + 1 \mid - \dfrac{1}{t + 1} \right) + C \\ &amp; = \dfrac{1}{2} \ln \mid t^2 - 1 \mid + \dfrac{1}{t^2 - 1} + C \end{array}$ </p>
+</li>
 </ul>
 </li>
 </ol>
 <p><br></p>
 <h2 id="三、定积分的计算"><a href="#三、定积分的计算" class="headerlink" title="三、定积分的计算"></a>三、定积分的计算</h2><p><br></p>
 <h4 id="㊀、定义"><a href="#㊀、定义" class="headerlink" title="㊀、定义"></a>㊀、定义</h4><script type="math/tex; mode=display">
-\int_a^b f(x) {\rm d}x = F(b) - F(a)</script><p>若 $a$ 或 $b$ 不存在，则计算其极限。 </p>
+\int_a^b f(x) \, {\rm d}x = F(b) - F(a)</script><p>若 $a$ 或 $b$ 不存在，则计算其极限。 </p>
 <p><br></p>
 <h4 id="㊁、例题"><a href="#㊁、例题" class="headerlink" title="㊁、例题"></a>㊁、例题</h4><ol>
-<li>$I =  \int_1^4 \dfrac{1}{ 1 + \sqrt{x} } {\rm d}x$ <ul>
-<li>$I = 2( 1 - \ln 3 + \ln 2 )$ </li>
+<li><p>$I = \int_1^4 \dfrac{1}{ 1 + \sqrt{x} } \, {\rm d}x$ </p>
+<ul>
+<li>$\begin{array}{l} I &amp;= \int_1^2 \dfrac{2t}{1+t} {\rm d}t \\\\      &amp;= \int_1^2 \left( 2 - \dfrac{2}{1+t} \right) {\rm d}t \\\\       &amp;= 2( 1 - \ln 3 + \ln 2 ) \end{array}$ </li>
 </ul>
 </li>
-<li>⭐️ $I_n = \int_0^{ \frac{\pi}{2} } \sin^n x {\rm d}x$ ，$ n $ 为大于 $ 1$ 的整数。<ul>
-<li>正弦曲线一股的面积是 $ 2 $，半股的面积是 $ 1$。<ul>
-<li>$\int_0^{ \frac{\pi}{2} } \sin x {\rm d}x = 1$ </li>
+<li><p>⭐️ $I_n = \int_0^{\pi/2} \sin^n x \, {\rm d}x$，$n$ 为大于 $1$ 的整数。</p>
+<ul>
+<li><p>正弦曲线一股的面积是 $2$，半股的面积是 $1$。</p>
+<ul>
+<li>$\int_0^{\pi/2} \sin x \, {\rm d}x = 1$ </li>
 </ul>
 </li>
-<li>证 $\int_0^{ \frac{\pi}{2} } \sin^n x {\rm d}x = \int_0^{ \frac{\pi}{2} } \cos^n x {\rm d}x$ 。<ul>
-<li>令 $x = \dfrac{\pi}{2} - t$ </li>
-<li>$\int_0^{ \frac{\pi}{2} } \sin^n x {\rm d}x = \int_{ \frac{\pi}{2} }^0 \sin^n (\dfrac{\pi}{2} - t) {\rm d}(-t) = \int_0^{ \frac{\pi}{2} } \cos^n x {\rm d}x$ </li>
+<li><p>证 $\int_0^{\pi/2} \sin^n x \, {\rm d}x = \int_0^{\pi/2} \cos^n x \, {\rm d}x$ 。</p>
+<ul>
+<li><p>令 $x = \dfrac{\pi}{2} - t$ </p>
+</li>
+<li><p>$\int_0^{\pi/2} \sin^n x \, {\rm d}x = \int_{ \pi / 2 }^0 \sin^n (\dfrac{\pi}{2} - t) \, {\rm d}(-t) = \int_0^{\pi/2} \cos^n x \, {\rm d}x$ </p>
+</li>
 </ul>
 </li>
-<li>方法<ul>
-<li>$n &gt; 1$ 时<ul>
-<li>$\begin{array}{l} I_n &amp; = \int_0^{ \frac{\pi}{2} } \sin^{n - 1} x \cdot \sin x {\rm d}x = - \int_0^{ \frac{\pi}{2} } \sin^{n - 1} x {\rm d} \cos x \\\\ &amp; = \left. - \sin^{n - 1} x \cos x \right|_0^{ \frac{\pi}{2} } + \int_0^{ \frac{\pi}{2} } \cos x \cdot (n - 1) \cdot \sin^{n - 2}x \cdot \cos x {\rm d}x \\\\ &amp; = (n - 1) \int_0^{ \frac{\pi}{2} } (1 - \sin^2 x) \sin^{n - 2} x {\rm d}x \\\\ &amp; = (n - 1) \int_0^{ \frac{\pi}{2} } \sin^{n - 2} x {\rm d}x - (n - 1) \int_0^{ \frac{\pi}{2} } \sin^n x {\rm d}x \\\\ &amp; = (n - 1) I_{n - 2} - (n - 1) I_n \end{array}$ </li>
-<li>$\implies I_n = \dfrac{n - 1}{n} I_{n - 2}, \quad n = 2, 3, \ldots$ </li>
-<li>⭐️ $I_n = \begin{cases} \dfrac{n - 1}{n} \cdot \dfrac{n - 2}{n - 3} \cdots \dfrac{1}{2} \cdot \dfrac{\pi}{2}, \quad &amp; n \text{ 为正偶数} \\\\ \dfrac{n - 1}{n} \cdot \dfrac{n - 2}{n - 3} \cdots \dfrac{2}{3} \cdot 1, \quad &amp; n \text{ 为大于1的奇数} \end{cases}$ <ul>
+<li><p>方法</p>
+<ul>
+<li><p>$n &gt; 1$ 时</p>
+<ul>
+<li><p>$\begin{array}{l} I_n &amp; = \int_0^{\pi/2} \sin^{n - 1} x \cdot \sin x \, {\rm d}x = - \int_0^{\pi/2} \sin^{n - 1} x {\rm d} \cos x \\\\      &amp; = \left. - \sin^{n - 1} x \cos x \right|_0^{ \frac{\pi}{2} } + \int_0^{\pi/2} \cos x \cdot (n - 1) \cdot \sin^{n - 2}x \cdot \cos x \, {\rm d}x \\\\      &amp; = (n - 1) \int_0^{\pi/2} (1 - \sin^2 x) \sin^{n - 2} x \, {\rm d}x \\\\      &amp; = (n - 1) \int_0^{\pi/2} \sin^{n - 2} x \, {\rm d}x - (n - 1) \int_0^{\pi/2} \sin^n x \, {\rm d}x \\\\      &amp; = (n - 1) I_{n - 2} - (n - 1) I_n \end{array}$ </p>
+</li>
+<li><p>$\begin{array}{l} \\ \implies I_n = \dfrac{n - 1}{n} I_{n - 2}, \quad n = 2, 3, \ldots \\ &amp; \end{array}$ </p>
+</li>
+<li><p>⭐️ $I_n = \begin{cases} \dfrac{n - 1}{n} \cdot \dfrac{n - 2}{n - 3} \cdots \dfrac{1}{2} \cdot \dfrac{\pi}{2}, \quad &amp; n \text{ 为正偶数} \\\\ \dfrac{n - 1}{n} \cdot \dfrac{n - 2}{n - 3} \cdots \dfrac{2}{3} \cdot 1, \quad &amp; n \text{ 为大于1的奇数} \end{cases}$ </p>
+<ul>
 <li>华里士公式</li>
 </ul>
 </li>
@@ -617,50 +716,70 @@
 </li>
 </ul>
 </li>
-<li>$I = \int_{-1}^1 x^2 \sqrt{1 - x^2} {\rm d}x$ <ul>
-<li>$I = 2 \int_0^1 x^2 \sqrt{1 - x^2} {\rm d}x$ </li>
-<li>令 $x = \sin t$ <ul>
-<li>$\begin{array}{l} I &amp; = 2 \int_0^{ \frac{\pi}{2} } \sin^2 t \cos^2 t {\rm d}t \\\\ &amp; = 2 \int_0^{ \frac{\pi}{2} } \sin^2 t {\rm d}t - 2 \int_0^{ \frac{\pi}{2} } \sin^4 t {\rm d}t \\\\ &amp; = 2 \cdot \dfrac{1}{2} \cdot \dfrac{\pi}{2} - 2 \cdot \dfrac{3}{4} \cdot \dfrac{1}{2} \cdot \dfrac{\pi}{2} \\\\ &amp; = \dfrac{\pi}{8} \end{array}$ </li>
+<li><p>$I = \int_{-1}^1 x^2 \sqrt{1 - x^2} \, {\rm d}x$ </p>
+<ul>
+<li><p>$I = 2 \int_0^1 x^2 \sqrt{1 - x^2} \, {\rm d}x$ </p>
+</li>
+<li><p>令 $x = \sin t$ </p>
+<ul>
+<li>$\begin{array}{l} I &amp; = 2 \int_0^{\pi/2} \sin^2 t \cos t \cdot \cos t \, {\rm d}t \\\\ &amp; = 2 \int_0^{\pi/2} \sin^2 t \, {\rm d}t - 2 \int_0^{\pi/2} \sin^4 t \, {\rm d}t \\\\ &amp; = 2 \cdot \dfrac{1}{2} \cdot \dfrac{\pi}{2} - 2 \cdot \dfrac{3}{4} \cdot \dfrac{1}{2} \cdot \dfrac{\pi}{2} \\\\ &amp; = \dfrac{\pi}{8} \end{array}$ </li>
 </ul>
 </li>
 </ul>
 </li>
-<li>求 $I = \int_0^{2 \pi} \sin^n x {\rm d}x, \quad (n &gt; 1)$ <ul>
-<li>预备定理<ul>
-<li>若 $f(x)$ 以 $ T $ 为周期，连续，则 <ul>
-<li>$\forall a $ ， $\int_0^T f(x) {\rm d}x = \int_a^{a + T} f(x) {\rm d}x$ </li>
+<li><p>求 $I = \int_0^{2 \pi} \sin^n x \, {\rm d}x, \quad (n &gt; 1)$ </p>
+<ul>
+<li><p>预备定理</p>
+<ul>
+<li><p>若 $f(x)$ 以 $T$ 为周期，连续，则 </p>
+<ul>
+<li>$\forall a$，$\int_0^T f(x) \, {\rm d}x = \int_a^{a + T} f(x) \, {\rm d}x$ </li>
 </ul>
 </li>
-<li>证明<ul>
-<li>$\int_a^{a + T} f(x) {\rm d}x = \int_a^0 f(x) {\rm d}x + \int_0^T f(x) {\rm d}x + \int_T^{a + T} f(x) {\rm d}x$ </li>
-<li>令 $x - T = u$ <ul>
-<li>$\int_T^{a + T} f(x) {\rm d}x = \int_0^a f(u + T) {\rm d}u = \int_0^a f(u) {\rm d}u = - \int_a^0 f(x) {\rm d}x$ </li>
+<li><p>证明</p>
+<ul>
+<li><p>$\int_a^{a + T} f(x) \, {\rm d}x = \int_a^0 f(x) \, {\rm d}x + \int_0^T f(x) \, {\rm d}x + \int_T^{a + T} f(x) \, {\rm d}x$ </p>
+</li>
+<li><p>令 $x - T = u$ </p>
+<ul>
+<li>$\int_T^{a + T} f(x) \, {\rm d}x = \int_0^a f(u + T) {\rm d}u = \int_0^a f(u) {\rm d}u = - \int_a^0 f(x) \, {\rm d}x$ </li>
 </ul>
 </li>
-<li>所以 $\int_0^T f(x) {\rm d}x = \int_a^{a + T} f(x) {\rm d}x$ 。</li>
-</ul>
-</li>
-<li>延伸<ul>
-<li>$f(x)$ 是奇函数，$ T $ 为周期，连续，则：</li>
-<li>$\int_0^T f(x) {\rm d}x = \int_{ -\frac{\pi}{2} }^{ \frac{\pi}{2} } f(x) {\rm d}x = 0$ </li>
-</ul>
-</li>
-</ul>
-</li>
-<li>计算<ul>
-<li>$I = \int_{-\pi}^{\pi} \sin^n x {\rm d}x = \begin{cases} 0, &amp; n \text{ 为奇数} \\ 2 \int_0^{\pi} \sin^n x {\rm d}x, &amp; n \text{ 为偶数} \end{cases}$ </li>
-<li>其中 $\int_0^{\pi} \sin^n x {\rm d}x = \int_0^{ \frac{\pi}{2} } \sin^n x {\rm d}x + \int_{ \frac{\pi}{2} }^{\pi} \sin^n x {\rm d}x$ <ul>
-<li>令 $ t = {\pi} - x$ ，$\int_{ \frac{\pi}{2} }^{\pi} \sin^n x {\rm d}x = \int_{ \frac{\pi}{2} }^0 \sin^n ( {\pi} - t )( - {\rm d}t ) = \int_0^{ \frac{\pi}{2} } \sin^n t {\rm d}t$ </li>
-</ul>
-</li>
-<li>⭐️ $\int_{0}^{2 \pi} \cos^n x {\rm d}x = \int_{0}^{2 \pi} \sin^n x {\rm d}x = \begin{cases} 0, &amp; n \text{ 为奇数} \\ 4 \int_0^{ \frac{\pi}{2} } \sin^n x {\rm d}x, &amp; n \text{ 为偶数} \end{cases}$ </li>
-</ul>
+<li><p>所以 $\int_0^T f(x) \, {\rm d}x = \int_a^{a + T} f(x) \, {\rm d}x$ 。</p>
 </li>
 </ul>
 </li>
-<li>计算 $I = \int_0^6 x^2 \sqrt{6x - x^2} {\rm d}x$ 。<ul>
-<li>令 $x = 3 + 3 \sin t$ </li>
-<li>$I = \dfrac{405}{8} \pi$ </li>
+<li><p>延伸</p>
+<ul>
+<li><p>$f(x)$ 是奇函数，$T$ 为周期，连续，则：</p>
+</li>
+<li><p>$\int_0^T f(x) \, {\rm d}x = \int_{ -\frac{\pi}{2} }^{ \frac{\pi}{2} } f(x) \, {\rm d}x = 0$ </p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>计算</p>
+<ul>
+<li><p>$I = \int_{-\pi}^{\pi} \sin^n x \, {\rm d}x = \begin{cases} 0, &amp; n \text{ 为奇数} \\\\ 2 \int_0^{\pi} \sin^n x \, {\rm d}x, &amp; n \text{ 为偶数} \end{cases}$ </p>
+</li>
+<li><p>其中 $\int_0^{\pi} \sin^n x \, {\rm d}x = \int_0^{\pi/2} \sin^n x \, {\rm d}x + \int_{\pi/2}^{\pi} \sin^n x \, {\rm d}x$ </p>
+<ul>
+<li>令 $t = {\pi} - x$ ，$\int_{ \frac{\pi}{2} }^{\pi} \sin^n x \, {\rm d}x = \int_{ \frac{\pi}{2} }^0 \sin^n ( {\pi} - t )( - {\rm d}t ) = \int_0^{\pi/2} \sin^n t \, {\rm d}t$ </li>
+</ul>
+</li>
+<li><p>⭐️ $\int_{0}^{2 \pi} \cos^n x \, {\rm d}x = \int_{0}^{2 \pi} \sin^n x \, {\rm d}x = \begin{cases} 0, &amp; n \text{ 为奇数} \\ 4 \int_0^{\pi/2} \sin^n x \, {\rm d}x, &amp; n \text{ 为偶数} \end{cases}$ </p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>计算 $I = \int_0^6 x^2 \sqrt{6x - x^2} \, {\rm d}x$ 。</p>
+<ul>
+<li><p>令 $x = 3 + 3 \sin t$ </p>
+</li>
+<li><p>$I = \dfrac{405}{8} \pi$ </p>
+</li>
 </ul>
 </li>
 </ol>
@@ -668,15 +787,21 @@
 <h2 id="四、一元函数积分学的应用"><a href="#四、一元函数积分学的应用" class="headerlink" title="四、一元函数积分学的应用"></a>四、一元函数积分学的应用</h2><p><br></p>
 <h4 id="㊀、用积分表达和计算平面图形的面积"><a href="#㊀、用积分表达和计算平面图形的面积" class="headerlink" title="㊀、用积分表达和计算平面图形的面积"></a>㊀、用积分表达和计算平面图形的面积</h4><p><br></p>
 <h6 id="1、概念"><a href="#1、概念" class="headerlink" title="1、概念"></a>1、概念</h6><ul>
-<li>$y = y_1(x), \, y = y_2(x), \, x = a, \, x = b, \, (a &lt; b)$ 所围成的平面图形的面积。</li>
-<li>$ S = \int_a^b \left| y_2(x) - y_1(x) \right| {\rm d}x$ </li>
+<li><p>$y = y_1(x), \, y = y_2(x), \, x = a, \, x = b, \, (a &lt; b)$ 所围成的平面图形的面积。</p>
+</li>
+<li><p>$S = \int_a^b \left| y_2(x) - y_1(x) \right| {\rm d}x$ </p>
+</li>
 </ul>
 <p><br></p>
 <h6 id="2、例题-2"><a href="#2、例题-2" class="headerlink" title="2、例题"></a>2、例题</h6><ol>
-<li>设函数 $f(x)$ 在 $[0, 1]$ 上连续，在 $(0, 1)$ 内大于零，并且满足 $xf’(x) = f(x) + \dfrac{3a}{2} x^2, (a \text{ 为常数})$ ，又曲线 $y = f(x)$ 与 $x = 1, y = 0$ 所围的图形 $S$ 的面积为 $2$ 。1️⃣求函数 $y = f(x)$ 。2️⃣ $a$ 为何值时，图形 $S$ 绕 $x$ 轴旋转一周所得的旋转体的体积最小。<ul>
-<li>1️⃣<ul>
-<li>$x \not= 0$ 时，$\left( \dfrac{ f(x) }{x} \right)’ = \dfrac{ xf’(x) - f(x) }{x^2} = \dfrac{3a}{2} \\\\ \implies \dfrac{ f(x) }{x} = \dfrac{3a}{2} x + C \\\\ \implies f(x) = \dfrac{3a}{2} x^2 + Cx, \quad x \in [0, 1]$ </li>
-<li>又 $ S = 2 = \int_0^1 \left[ \left( \dfrac{3a}{2} x^2 + Cx \right) - 0 \right] {\rm d}x = \dfrac{a}{2} + \dfrac{C}{2} \\\\ \implies C = 4 - a \\\\ \implies f(x) = \dfrac{3a}{2} x^2 + (4 - a)x$ </li>
+<li><p>设函数 $f(x)$ 在 $[0, 1]$ 上连续，在 $(0, 1)$ 内大于零，并且满足 $xf’(x) = f(x) + \dfrac{3a}{2} x^2, (a \text{ 为常数})$ ，又曲线 $y = f(x)$ 与 $x = 1, y = 0$ 所围的图形 $S$ 的面积为 $2$ 。1️⃣求函数 $y = f(x)$ 。2️⃣ $a$ 为何值时，图形 $S$ 绕 $x$ 轴旋转一周所得的旋转体的体积最小。</p>
+<ul>
+<li><p>1️⃣</p>
+<ul>
+<li><p>$x \not= 0$ 时，$\left( \dfrac{ f(x) }{x} \right)’ = \dfrac{ xf’(x) - f(x) }{x^2} = \dfrac{3a}{2} \\\\ \implies \dfrac{ f(x) }{x} = \dfrac{3a}{2} x + C \\\\ \implies f(x) = \dfrac{3a}{2} x^2 + Cx, \quad x \in [0, 1]$ </p>
+</li>
+<li><p>又 $ S = 2 = \int_0^1 \left[ \left( \dfrac{3a}{2} x^2 + Cx \right) - 0 \right] {\rm d}x = \dfrac{a}{2} + \dfrac{C}{2} \\\\ \implies C = 4 - a \\\\ \implies f(x) = \dfrac{3a}{2} x^2 + (4 - a)x$ </p>
+</li>
 </ul>
 </li>
 </ul>
@@ -685,14 +810,20 @@
 <p><br></p>
 <h4 id="㊁、用积分表达和计算旋转体的体积"><a href="#㊁、用积分表达和计算旋转体的体积" class="headerlink" title="㊁、用积分表达和计算旋转体的体积"></a>㊁、用积分表达和计算旋转体的体积</h4><p><br></p>
 <h6 id="1、概念-1"><a href="#1、概念-1" class="headerlink" title="1、概念"></a>1、概念</h6><ul>
-<li>$y = y(x)$ 与 $x = a, x = b, (a &lt; b)$ 及 $x$ 轴所围图形绕 $x$ 轴旋转一周所得的旋转体体积。<ul>
-<li><img src="https://github.com/WaterH2P/WaterH2P.github.io/raw/master/img/images/3-4.2%20%E7%BB%95x%E8%BD%B4%E6%97%8B%E8%BD%AC%E4%BD%93%E7%9A%84%E4%BD%93%E7%A7%AF.jpg" width="40%"></li>
-<li>$V_x = \int_a^b \pi f^2(x) {\rm d}x$ </li>
+<li><p>$y = y(x)$ 与 $x = a, x = b, (a &lt; b)$ 及 $x$ 轴所围图形绕 $x$ 轴旋转一周所得的旋转体体积。</p>
+<ul>
+<li><p><img src="https://github.com/WaterH2P/WaterH2P.github.io/raw/master/img/images/3-4.2%20%E7%BB%95x%E8%BD%B4%E6%97%8B%E8%BD%AC%E4%BD%93%E7%9A%84%E4%BD%93%E7%A7%AF.jpg" width="40%"></p>
+</li>
+<li><p>$V_x = \int_a^b \pi f^2(x) {\rm d}x$ </p>
+</li>
 </ul>
 </li>
-<li>$y = y(x)$ 与 $x = a, x = b, (a &lt; b)$ 及 $x$ 轴所围图形绕 $y $ 轴旋转一周所得的旋转体体积。<ul>
-<li><img src="https://github.com/WaterH2P/WaterH2P.github.io/raw/master/img/images/3-4.2%20%E7%BB%95y%E8%BD%B4%E6%97%8B%E8%BD%AC%E4%BD%93%E7%9A%84%E4%BD%93%E7%A7%AF.jpg" width="40%"> </li>
-<li>$V_y = \int_a^b 2 \pi x | f(x) | {\rm d}x$<ul>
+<li><p>$y = y(x)$ 与 $x = a, x = b, (a &lt; b)$ 及 $x$ 轴所围图形绕 $y $ 轴旋转一周所得的旋转体体积。</p>
+<ul>
+<li><p><img src="https://github.com/WaterH2P/WaterH2P.github.io/raw/master/img/images/3-4.2%20%E7%BB%95y%E8%BD%B4%E6%97%8B%E8%BD%AC%E4%BD%93%E7%9A%84%E4%BD%93%E7%A7%AF.jpg" width="40%"> </p>
+</li>
+<li><p>$V_y = \int_a^b 2 \pi x | f(x) | {\rm d}x$</p>
+<ul>
 <li>柱壳法 </li>
 </ul>
 </li>
@@ -701,36 +832,53 @@
 </ul>
 <p><br></p>
 <h6 id="2、例题-3"><a href="#2、例题-3" class="headerlink" title="2、例题"></a>2、例题</h6><ol>
-<li>设函数 $f(x)$ 在 $[0, 1]$ 上连续，在 $(0, 1)$ 内大于零，并且满足 $xf’(x) = f(x) + \dfrac{3a}{2} x^2, (a \text{ 为常数})$ ，又曲线 $y = f(x)$ 与 $x = 1, y = 0$ 所围的图形 $ S$ 的面积为 $ 2 $ 。1️⃣ 求函数 $y = f(x)$ 。2️⃣ $a $ 为何值时，图形 $ S$ 绕 $x$ 轴旋转一周所得的旋转体的体积最小。<ul>
-<li>1️⃣ <ul>
+<li><p>设函数 $f(x)$ 在 $[0, 1]$ 上连续，在 $(0, 1)$ 内大于零，并且满足 $xf’(x) = f(x) + \dfrac{3a}{2} x^2, (a \text{ 为常数})$ ，又曲线 $y = f(x)$ 与 $x = 1, y = 0$ 所围的图形 $ S$ 的面积为 $ 2 $ 。1️⃣ 求函数 $y = f(x)$ 。2️⃣ $a $ 为何值时，图形 $ S$ 绕 $x$ 轴旋转一周所得的旋转体的体积最小。</p>
+<ul>
+<li><p>1️⃣ </p>
+<ul>
 <li>$f(x) = \dfrac{3a}{2} x^2 + (4 - a)x$ </li>
 </ul>
 </li>
-<li>2️⃣ <ul>
-<li>$\begin{array}{l} V &amp; = \int_0^1 \pi f^2(x) {\rm d}x \\\\ &amp; = \pi \left( \dfrac{9}{4}a^2 \cdot \dfrac{1}{5} + 3a(4 - a) \cdot \dfrac{1}{4} + (4 - a)^2 \cdot \dfrac{1}{3} \right) \\\\ &amp; = \left( \dfrac{1}{30} a^2 + \dfrac{1}{3} a + \dfrac{16}{3} \right) \pi  \end{array}$ </li>
-<li>$V_a’ = \left( \dfrac{1}{15} a + \dfrac{1}{3} \right) \pi = 0 \implies a = -5$ </li>
-<li>且 $V_a’’ = \dfrac{1}{15} \pi &gt; 0$ ，所以 $a = -5 $ 时 $V_{min} = \dfrac{9}{2} \pi$ </li>
-</ul>
+<li><p>2️⃣ </p>
+<ul>
+<li><p>$\begin{array}{l} V &amp; = \int_0^1 \pi f^2(x) {\rm d}x \\\\ &amp; = \pi \left( \dfrac{9}{4}a^2 \cdot \dfrac{1}{5} + 3a(4 - a) \cdot \dfrac{1}{4} + (4 - a)^2 \cdot \dfrac{1}{3} \right) \\\\ &amp; = \left( \dfrac{1}{30} a^2 + \dfrac{1}{3} a + \dfrac{16}{3} \right) \pi  \end{array}$ </p>
+</li>
+<li><p>$V_a’ = \left( \dfrac{1}{15} a + \dfrac{1}{3} \right) \pi = 0 \implies a = -5$ </p>
+</li>
+<li><p>且 $V_a’’ = \dfrac{1}{15} \pi &gt; 0$ ，所以 $a = -5 $ 时 $V_{min} = \dfrac{9}{2} \pi$ </p>
 </li>
 </ul>
 </li>
-<li>设平面图形 $\sigma$ 由 $y = x^2 - 2x, y = 0, x = 1, x = 3$ 围成，求 $\sigma$ 绕 $y$ 轴旋转一周所得的旋转体体积。<ul>
-<li><img src="https://github.com/WaterH2P/WaterH2P.github.io/raw/master/img/images/3-4.2.2.2.jpg" width="40%"> </li>
-<li>$\begin{array}{l} V &amp; = \int_1^3 2 \pi x | f(x) | {\rm d}x \\\\ &amp; = 2 \pi \left[ -\int_1^2 x(x^2 - 2x) {\rm d}x - \int_2^3 x(x^2 - 2x) {\rm d}x \right] \\\\ &amp; = 9 \pi \end{array}$ </li>
 </ul>
 </li>
-<li>过原点作 $y = e^x$ 的切线，该切线与 $y = e^x$、$x$ 轴所围成的向 $x$ 轴负向无限伸展的平面图形记为 $D$ ，1️⃣ 求 $D$ 的面积 $S$ ，2️⃣ $D$ 绕 $x = 1$ 旋转一周的旋转体的体积 $V$ 。<ul>
-<li><img src="https://github.com/WaterH2P/WaterH2P.github.io/raw/master/img/images/3-4.2.2.3.jpg" width="40%"></li>
-<li>1️⃣ <ul>
-<li>设切点 $( x_0, e^{x_0} )$，所以 $ k = y’(x_0) = e^{x_0}$ <ul>
-<li>切线方程为 $y - e^{x_0} = e^{x_0} (x - x_0)$ ，过原点，$\implies x_0 = 1$ </li>
-<li>$\implies$ 切线方程 $y = ex$ </li>
+<li><p>设平面图形 $\sigma$ 由 $y = x^2 - 2x, y = 0, x = 1, x = 3$ 围成，求 $\sigma$ 绕 $y$ 轴旋转一周所得的旋转体体积。</p>
+<ul>
+<li><p><img src="https://github.com/WaterH2P/WaterH2P.github.io/raw/master/img/images/3-4.2.2.2.jpg" width="40%"> </p>
+</li>
+<li><p>$\begin{array}{l} V &amp; = \int_1^3 2 \pi x | f(x) | {\rm d}x \\\\ &amp; = 2 \pi \left[ -\int_1^2 x(x^2 - 2x) {\rm d}x - \int_2^3 x(x^2 - 2x) {\rm d}x \right] \\\\ &amp; = 9 \pi \end{array}$ </p>
+</li>
 </ul>
 </li>
-<li>$\begin{array}{l} S &amp; = \int_{-\infty}^0 e^x {\rm d}x + \int_0^1 ( e^x - ex ) {\rm d}x = \int_0^e ( \dfrac{y}{e} - \ln y ) {\rm d}y \\\\ &amp; = \left. \dfrac{y^2}{2e} \right|_0^e - \left. y \ln y \right|_0^e + \left. y \right|_0^e = \dfrac{e}{2} + \lim\limits_{y \to 0^+} y \ln y \\\\ &amp; = \dfrac{e}{2} \end{array}$ </li>
+<li><p>过原点作 $y = e^x$ 的切线，该切线与 $y = e^x$、$x$ 轴所围成的向 $x$ 轴负向无限伸展的平面图形记为 $D$ ，1️⃣ 求 $D$ 的面积 $S$ ，2️⃣ $D$ 绕 $x = 1$ 旋转一周的旋转体的体积 $V$ 。</p>
+<ul>
+<li><p><img src="https://github.com/WaterH2P/WaterH2P.github.io/raw/master/img/images/3-4.2.2.3.jpg" width="40%"></p>
+</li>
+<li><p>1️⃣ </p>
+<ul>
+<li><p>设切点 $( x_0, e^{x_0} )$，所以 $ k = y’(x_0) = e^{x_0}$ </p>
+<ul>
+<li><p>切线方程为 $y - e^{x_0} = e^{x_0} (x - x_0)$ ，过原点，$\implies x_0 = 1$ </p>
+</li>
+<li><p>$\implies$ 切线方程 $y = ex$ </p>
+</li>
 </ul>
 </li>
-<li>2️⃣ <ul>
+<li><p>$\begin{array}{l} S &amp; = \int_{-\infty}^0 e^x \, {\rm d}x + \int_0^1 ( e^x - ex ) {\rm d}x = \int_0^e ( \dfrac{y}{e} - \ln y ) {\rm d}y \\\\ &amp; = \left. \dfrac{y^2}{2e} \right|_0^e - \left. y \ln y \right|_0^e + \left. y \right|_0^e = \dfrac{e}{2} + \lim\limits_{y \to 0^+} y \ln y \\\\ &amp; = \dfrac{e}{2} \end{array}$ </p>
+</li>
+</ul>
+</li>
+<li><p>2️⃣ </p>
+<ul>
 <li>$\begin{array}{l} V &amp; = \int_0^e \pi (1 - \ln y)^2 {\rm d}y - \dfrac{\pi e}{3} \\\\ &amp; = \int_0^e \pi ( 1 - 2 \ln y + \ln^2 y ) {\rm d} y - \dfrac{\pi e}{3} \\\\ &amp; = \pi \left[ \left. y \right|_0^e - \left. 2( y \ln y - y ) \right|_0^e + \left. ( y \ln^2 y - 2y \ln y + 2y ) \right|_0^e \right] - \dfrac{\pi e}{3} \\\\ &amp; = \dfrac{5 \pi}{3}e \end{array}$ </li>
 </ul>
 </li>
@@ -744,8 +892,9 @@
 </ul>
 <p><br></p>
 <h6 id="2、例题-4"><a href="#2、例题-4" class="headerlink" title="2、例题"></a>2、例题</h6><ol>
-<li>函数 $y = \ln x$ 在区间 $[1, e]$ 上的平均值为 <strong>____</strong> 。<ul>
-<li>$ave = \dfrac{ \int_1^e \ln x {\rm d}x }{e - 1} = \dfrac{1}{e - 1}$ </li>
+<li><p>函数 $y = \ln x$ 在区间 $[1, e]$ 上的平均值为 <strong>____</strong> 。</p>
+<ul>
+<li>$ave = \dfrac{ \int_1^e \ln x \, {\rm d}x }{e - 1} = \dfrac{1}{e - 1}$ </li>
 </ul>
 </li>
 </ol>
@@ -760,8 +909,8 @@
 \end{cases} \qquad (\alpha \leq t \leq \beta)</script><p>给出，其中 $\varphi(t), \, \psi(t) \text{ 在 } [\alpha, \beta]$ 上具有连续导数，t 为参变量，在 $[\alpha, \, \beta]$ 上任一小区间 $[t, \, t+{\rm d}t]$ 的小弧段长度 $\Delta s$ 近似等于弧长。</p>
 <script type="math/tex; mode=display">
 \begin{array}{l}
-  \Delta x = \varphi(t + {\rm d}t) - \varphi(t) \approx {\rm d}x = \varphi'(t) {\rm d}t \\\\
-  \Delta y = \psi(t + {\rm d}t) - \psi(t) \approx {\rm d}x = \psi'(t) {\rm d}t
+  \Delta x = \varphi(t + {\rm d}t) - \varphi(t) \approx \, {\rm d}x = \varphi'(t) {\rm d}t \\\\
+  \Delta y = \psi(t + {\rm d}t) - \psi(t) \approx \, {\rm d}x = \psi'(t) {\rm d}t
 \end{array}</script><p>$\Delta s$ 的近似值（弧微分）及弧长元素为</p>
 <script type="math/tex; mode=display">
 \begin{array}{l}
@@ -799,13 +948,13 @@ s = \int_{\alpha}^{\beta} \sqrt{ {\rm r}^2(\theta) + {\rm r}'^2(\theta) } \, {\r
 <div class="row justify-content-center">
     <nav class="m-pagination col-md-8 col-sm-24" role="pagination">
         
-        <a class="float-left" href="/2018/08/04/maths 4 多元函数微分学/" style="float: left;">
-            ← 多元函数微分学
+        <a class="float-left" href="/2018/08/04/maths 4 多元函数微分学 · 习题/" style="float: left;">
+            ← 多元函数微积分学 · 应用
         </a>
         
         
-        <a class="float-right" href="/2018/08/02/maths 2 一元函数微积分学 · 习题/">
-            一元函数微积分学 · 习题 →
+        <a class="float-right" href="/2018/08/02/maths 2 一元函数微积分学 · 应用/">
+            一元函数微积分学 · 应用 →
         </a>
         
     </nav>
