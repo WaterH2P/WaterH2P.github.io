@@ -2,7 +2,7 @@
 
     
 <head>
-    <title>看 Q 外的风景 | H2P&#39;S BLOG</title>
+    <title>Windows 软件 | H2P&#39;S BLOG</title>
     <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -291,7 +291,7 @@
     <!-- blog 的 date -->
     
         <span>
-            2018-08-29
+            2018-10-28
         </span>
         <span>&nbsp;&nbsp;</span>
     
@@ -300,208 +300,50 @@
     
     
     <span class="tag is-info">
-        <a href='/tags/vultr/'>vultr</a>
-    </span>
-    ,
-    
-    <span class="tag is-info">
-        <a href='/tags/ss/'>ss</a>
-    </span>
-    ,
-    
-    <span class="tag is-info">
-        <a href='/tags/ssr/'>ssr</a>
+        <a href='/tags/windows/'>windows</a>
     </span>
     
     
     
 </span>
 
-                    <h1>看 Q 外的风景</h1>
+                    <h1>Windows 软件</h1>
                 </div>
             </div>
             <div class="row justify-content-center">
                 <div class="col-lg-8 col-md-10 col-sm-12">
                     <div class="div-message div-desc">
                         
-                            <span>搭建 SSR，翻越 Q，看风景</span>
+                            <span>记录 Windows 上安装的软件</span>
                             <br>
                         
                         
-                            <span>最近更新：2018-09-28</span>
+                            <span>最近更新：2018-12-23</span>
                             <br>
                         
-                        
-                            <span>操作系统：MacOS 10.13.6</span>
                         
                     </div>
                 </div>
             </div>
             <div class="row justify-content-center">
                 <div class="col-lg-8 col-md-10 col-sm-12">
-                    <p>【转】<a class="own-underline" href="https://lccurious.github.io/2018/03/03/vlutr-ssr/" target="_blank">在 Vultr 上搭建 SSR 服务</a></p>
-<p><br></p>
-<h2 id="搭建-ssr"><a href="#搭建-ssr" class="headerlink" title="搭建 ssr"></a>搭建 ssr</h2><p><br></p>
-<h4 id="购买-Vultr-服务器"><a href="#购买-Vultr-服务器" class="headerlink" title="购买 Vultr 服务器"></a>购买 Vultr 服务器</h4><ol>
-<li><p><a class="own-underline" href="https://www.vultr.com/" target="_blank">Vultr 官网</a></p>
+                    <ul>
+<li><p>Typora</p>
 </li>
-<li><p>注册登录</p>
+<li><p><a href="https://github.com/zhongyang219/TrafficMonitor" target="_blank" rel="noopener">TrafficMonitor</a></p>
 </li>
-<li><p>点击左侧 <code>Servers</code> ，点击右侧蓝色的 <code>+</code> 号。</p>
+<li><p><a href="https://www.huorong.cn/" target="_blank" rel="noopener">火绒安全</a></p>
 </li>
-<li><p>选择服务器类型</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">我选的是：Los Angeles / CentOS 7 x64 / $3.5</span><br></pre></td></tr></table></figure>
+<li><p><a href="">Bandizip</a></p>
 </li>
-<li><p>Deploy Now</p>
+<li><p><a href="">Free Download Manager</a></p>
 </li>
-<li><p>等服务器处于 <code>Running</code> 状态的时候，首先使用 <code>ssh</code> 登录服务器来判断 IP 是否被墙。</p>
-<p>【转】<a class="own-underline" href="https://www.vultryhw.com/ssh-forbidden/" target="_blank">Vultr 能 ping 通 SSH 连不上</a></p>
-<p>TCP阻断与ICMP阻断</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">首先科普一下，阻断（封/墙）的方式目前有两种，一种是 TCP 阻断，一种是 ICMP 阻断。</span><br><span class="line">ping 命令走的是 ICMP 协议，而 ssh 连接的时候是 TCP 协议。</span><br><span class="line">因此，Vultr 出现能 ping 通，ssh 却连不上的这种情况时，就是 ICMP 包被放行了，而 TCP 包却被拦截了，也就是 TCP 阻断。</span><br><span class="line">这是目前封禁比较常用的方法，我不禁你 IP，我让你端口用不了，自然也就什么都用不了了。</span><br></pre></td></tr></table></figure>
+<li><p><a href="">PotPlayer</a></p>
 </li>
-</ol>
-<p><br></p>
-<h4 id="配置服务器"><a href="#配置服务器" class="headerlink" title="配置服务器"></a>配置服务器</h4><ol>
-<li><p>登录服务器 <code>ssh root@服务器IP</code> ，输入密码。</p>
+<li><p><a href="https://github.com/ChanpleCai/SmartTaskbar" target="_blank" rel="noopener">SmartTaskbar</a></p>
 </li>
-<li><p>输入命令：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">wget --no-check-certificate  https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocksR.sh</span><br><span class="line">chmod +x shadowsocksR.sh</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>输入命令： <code>./shadowsocksR.sh 2&gt;&amp;1 | tee shadowsocksR.log</code> 。</p>
-<ol>
-<li><p>输入 <code>password</code> ，就是将来用于连接的密码。</p>
-</li>
-<li><p>选择端口号。</p>
-</li>
-<li><p>选择加密方式。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">aes-256-cfb</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>选择混淆。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">auth_aes128_md5</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>选择协议。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tls1.2_ticket_auth</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-</li>
-<li><p>【接下来是一段时间的安装过程，可以休息一下】</p>
-</li>
-<li><p>安装完成会显示服务器 ssr 信息。</p>
-</li>
-</ol>
-<p><br></p>
-<h4 id="配置客户端"><a href="#配置客户端" class="headerlink" title="配置客户端"></a>配置客户端</h4><p>。。。。。。</p>
-<p><br></p>
-<h4 id="加速"><a href="#加速" class="headerlink" title="加速"></a>加速</h4><p>【转】<a class="own-underline" href="https://www.cokemine.com/vpsyh.html" target="_blank">VPS 网络优化各种方法汇总 一键安装脚本</a></p>
-<ol>
-<li><p>BBR 加速器（也可以选择其他的）</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">wget --no-check-certificate https://github.com/teddysun/across/raw/master/bbr.sh</span><br><span class="line">chmod +x bbr.sh</span><br><span class="line">./bbr.sh</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>【安装并重启】</p>
-</li>
-<li><p>检测安装是否成功</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lsmod | grep bbr  //返回值有 tcp_bbr 模块即说明bbr已启动。</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<p><br></p>
-<h4 id="卸载"><a href="#卸载" class="headerlink" title="卸载"></a>卸载</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./shadowsocksR.sh uninstall</span><br></pre></td></tr></table></figure>
-<p><br></p>
-<h4 id="其他命令"><a href="#其他命令" class="headerlink" title="其他命令"></a>其他命令</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">启动：/etc/init.d/shadowsocks start</span><br><span class="line">停止：/etc/init.d/shadowsocks stop</span><br><span class="line">重启：/etc/init.d/shadowsocks restart</span><br><span class="line">状态：/etc/init.d/shadowsocks status</span><br><span class="line"></span><br><span class="line">配置文件路径：/etc/shadowsocks.json</span><br><span class="line">日志文件路径：/var/log/shadowsocks.log</span><br><span class="line">代码安装目录：/usr/local/shadowsocks</span><br></pre></td></tr></table></figure>
-<hr>
-
-
-<p>【转】<a class="own-underline" href="https://www.freeluffy.com/vultr-vps-ss/" target="_blank">Vultr 搭建 SS 服务器图文教程</a></p>
-<p><br></p>
-<h2 id="搭建-ss"><a href="#搭建-ss" class="headerlink" title="搭建 ss"></a>搭建 ss</h2><p><br></p>
-<h4 id="配置服务器-1"><a href="#配置服务器-1" class="headerlink" title="配置服务器"></a>配置服务器</h4><ol>
-<li><p>登录服务器 <code>ssh root@服务器IP</code> ，输入密码。</p>
-</li>
-<li><p>输入命令：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">wget --no-check-certificate  https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks.sh</span><br><span class="line">chmod +x shadowsocks.sh</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>输入命令：<code>./shadowsocks.sh 2&gt;&amp;1 | tee shadowsocks.log</code> 。</p>
-<ol>
-<li><p>首先输入的是 <code>password</code> ，就是将来用于连接的密码。</p>
-</li>
-<li><p>接着选择端口号。</p>
-</li>
-<li><p>最后选择加密方式。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">aes-256-gcm</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-</li>
-<li><p>【接下来是一段时间的安装过程，可以休息一下】</p>
-</li>
-<li><p>安装完成会显示服务器 ss 信息。</p>
-</li>
-</ol>
-<hr>
-
-
-<p><br></p>
-<h2 id="更多参考"><a href="#更多参考" class="headerlink" title="更多参考"></a>更多参考</h2><div class="div-message div-desc" style="padding: 0 0 25px 10px ">
-    <br>
-    <a class="own-underline" href="https://deeponion.org/community/threads/vpnss-ssr.901/" target="_blank">Vpn 与 ss/ssr 的区别</a><br>
-    <a class="own-underline" href="https://blog.csdn.net/mmcooo/article/details/80094194" target="_blank">SSR 高阶协议与混淆的使用</a><br>
-    <a class="own-underline" href="https://juejin.im/entry/5b03ca66518825426d2d753e" target="_blank">关于一次 Vultr 搭建酸酸乳的详细教程</a><br>
-    <a class="own-underline" href="https://github.com/shadowsocksr-backup/shadowsocks-rss/blob/master/ssr.md" target="_blank">ShadowsocksR 协议插件文档</a><br>
-    <a class="own-underline" href="https://github.com/shadowsocksr-backup/shadowsocks-rss/wiki/Server-Setup" target="_blank">ShadowsocksR 服务端安装教程</a><br>
-    <a class="own-underline" href="https://www.vultryhw.com/vultr-all-guides/" target="_blank">Vultr 教程整理页</a>
-</div>
-
-
-<hr>
-
-
-<p><br></p>
-<h2 id="其他问题"><a href="#其他问题" class="headerlink" title="其他问题"></a>其他问题</h2><p><br> </p>
-<h4 id="CentOS-查看端口占用情况和开启端口命令"><a href="#CentOS-查看端口占用情况和开启端口命令" class="headerlink" title="CentOS 查看端口占用情况和开启端口命令"></a>CentOS 查看端口占用情况和开启端口命令</h4><p>【转】<a class="own-underline" href="https://www.centos.bz/2018/03/centos查看端口占用情况和开启端口命令/" target="_blank">CentOS 查看端口占用情况和开启端口命令</a></p>
-<ul>
-<li><p>列出所有端口</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netstat -ntlp</span><br></pre></td></tr></table></figure>
-</li>
+<li></li>
 </ul>
-<p><br> </p>
-<h4 id="CentOS7-使用-firewalld-打开关闭防火墙与端口"><a href="#CentOS7-使用-firewalld-打开关闭防火墙与端口" class="headerlink" title="CentOS7 使用 firewalld 打开关闭防火墙与端口"></a>CentOS7 使用 firewalld 打开关闭防火墙与端口</h4><p>【转】<a class="own-underline" href="https://www.cnblogs.com/moxiaoan/p/5683743.html" target="_blank">CentOS7 使用 firewalld 打开关闭防火墙与端口</a></p>
-<ul>
-<li><p>添加端口（以 80 端口为例）</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">firewall-cmd --zone=public --add-port=80/tcp --permanent</span><br><span class="line"><span class="comment">## --permanent 永久生效，没有此参数重启后失效</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>重新载入</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">firewall-cmd --reload</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>查看</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">firewall-cmd --zone= public --query-port=80/tcp</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>删除</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">firewall-cmd --zone= public --remove-port=80/tcp --permanent</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p><br> </p>
-<h4 id="centos7-0-没有-netstat-和-ifconfig-命令问题"><a href="#centos7-0-没有-netstat-和-ifconfig-命令问题" class="headerlink" title="centos7.0 没有 netstat 和 ifconfig 命令问题"></a>centos7.0 没有 netstat 和 ifconfig 命令问题</h4><p>【转】<a class="own-underline" href="https://blog.csdn.net/looksun/article/details/49562043" target="_blank">centos7.0 没有 netstat 和 ifconfig 命令问题</a></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">yum search ifconfig</span><br><span class="line"><span class="comment">## 通过 yum search 这个命令我们发现 ifconfig 这个命令是在 net-tools.x86_64 这个包里，</span></span><br><span class="line"><span class="comment">## 接下来我们安装这个包就行了</span></span><br><span class="line">yum install net-tools</span><br></pre></td></tr></table></figure>
-<p><br> </p>
-<h4 id="Centos7-开启-SSH-服务"><a href="#Centos7-开启-SSH-服务" class="headerlink" title="Centos7 开启 SSH 服务"></a>Centos7 开启 SSH 服务</h4><p>【转】<a class="own-underline" href="https://blog.csdn.net/u010085423/article/details/78157091/" target="_blank">Centos7 开启 SSH 服务</a></p>
-<ol>
-<li><p>查看本机是否安装SSH软件包</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rpm -qa | grep ssh</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>如果没有，则需要安装</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install openssh-server</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>开启 SSH 服务</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service sshd start</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>查看TCP 22端口是否打开</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netstat -ntpl | grep 22</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<p><br> </p>
-<h4 id="删除-ssh-中旧的-RSA-key"><a href="#删除-ssh-中旧的-RSA-key" class="headerlink" title="删除 ssh 中旧的 RSA key"></a>删除 ssh 中旧的 RSA key</h4><p>【转】<a class="own-underline" href="https://blog.csdn.net/sloan6/article/details/41984391" target="_blank">删除 ssh 中旧的 RSA key</a></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -R IP</span><br></pre></td></tr></table></figure>
-<p><br> </p>
-<h4 id="V2Ray-配置指南"><a href="#V2Ray-配置指南" class="headerlink" title="V2Ray 配置指南"></a>V2Ray 配置指南</h4><p>【转】<a class="own-underline" href="https://toutyrater.github.io/?q=#v2ray-%E9%85%8D%E7%BD%AE%E6%8C%87%E5%8D%97" target="_blank">V2Ray 配置指南</a></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">听说这个好😂</span><br></pre></td></tr></table></figure>
 
                 </div>
             </div>
@@ -512,13 +354,9 @@
 <div class="row justify-content-center">
     <nav class="m-pagination col-md-8 col-sm-24" role="pagination">
         
-        <a class="float-left" href="/2018/09/19/Markdown/" style="float: left;">
-            ← MarkDown 使用教程
-        </a>
         
-        
-        <a class="float-right" href="/2018/06/29/hexo 使用 Hexo 搭建 Blog/">
-            使用 Hexo 搭建 Blog →
+        <a class="float-right" href="/2018/09/28/hexo 小 bug/">
+            Hexo 小 bug →
         </a>
         
     </nav>
