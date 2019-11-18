@@ -336,6 +336,9 @@
 </ul>
 <ol>
 <li><p>设置虚拟机 Hardware 下 CD/DVD 中的 Source 为 prl-tools-lin.iso。</p>
+<ul>
+<li><img src="https://github.com/WaterH2P/WaterH2P.github.io/raw/master/img/ParallelsDesktop/CDDVDSource.png" style="width: 80%"></li>
+</ul>
 </li>
 <li><p>进入到虚拟机 <code>cd /media</code> 目录下，创建文件夹 <code>mkdir cdrom</code>。</p>
 </li>
@@ -345,12 +348,21 @@
 </ul>
 </li>
 <li><p>进入到虚拟机 <code>cd /media/cdrom</code> 目录下，执行 <code>./install</code>，然后一直 Next，直到开始安装。</p>
+<ul>
+<li><img src="https://github.com/WaterH2P/WaterH2P.github.io/raw/master/img/ParallelsDesktop/installParallelsTools.png" style="width: 80%"></li>
+</ul>
 </li>
 <li><p>安装成功后执行 <code>reboot</code> 重启虚拟机。</p>
 </li>
 <li><p>设置虚拟机 Options 下 Sharing 中的 Custom Folders，添加本机共享的文件夹，例如下图的 Linux。</p>
+<ul>
+<li><img src="https://github.com/WaterH2P/WaterH2P.github.io/raw/master/img/ParallelsDesktop/shareFloder.png" style="width: 80%"></li>
+</ul>
 </li>
 <li><p>进入到虚拟机 <code>cd /media/psf</code> 下查看是否有共享的文件夹。</p>
+<ul>
+<li><img src="https://github.com/WaterH2P/WaterH2P.github.io/raw/master/img/ParallelsDesktop/mediaPsf.png" style="width: 80%"></li>
+</ul>
 </li>
 <li><p>还可以设置软链接方便文件夹的访问。</p>
 </li>
@@ -655,5 +667,24 @@
             $('html').animate({scrollTop: 0}, 'slow');
         }
     </script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<!-- <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script> -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+<!-- <script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+
 </body>
 </html>
