@@ -2,7 +2,7 @@
 
     
 <head>
-    <title>Archives | H2P&#39;S BLOG</title>
+    <title>CentOS 7 安装 MongoDB | H2P&#39;S BLOG</title>
     <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -42,7 +42,7 @@
 </head>
 
     <!--
-    <body class="home-template">
+    <body class="post-template">
     -->
 <body id="index" class="lightnav animsition">
     <!-- 返回页面顶端 -->
@@ -277,86 +277,269 @@
     </script> -->
     <!-- ============================ END Tap Blog's Links ============================ -->
     
-    <!-- ============================ Hero Image =========================== -->
-
-    <section id="hero" class="scrollme">
-        <div class="container-fluid element-img" style="background: url(/img/BG.jpg) no-repeat center center fixed;background-size: cover">
-            <div class="herofade beige-dk"></div>
-        </div>
-    </section>
-
-    <!-- Height spacing helper -->
-    <!-- <div class="heightblock"></div> -->
-    <!-- // End height spacing helper -->
-
-    <!-- ============================ END Hero Image =========================== -->
-
     
-
-    
-    <section id="services">
+    <section id="intro">
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-lg-8 col-md-8 col-sm-10">
+                <div class="col-lg-8 col-md-10 col-sm-12">
                     
-                    <div class="row boxes">
+<span class="post-meta">
+    <!-- blog 的 date -->
+    
+        <span>
+            2019-12-08
+        </span>
+        <span>&nbsp;&nbsp;</span>
+    
+    <!-- blog 的 tags -->
+    
+    
+    
+    <span class="tag is-info">
+        <a href='/tags/CentOS/'>CentOS</a>
+    </span>
+    ,
+    
+    <span class="tag is-info">
+        <a href='/tags/MongoDB/'>MongoDB</a>
+    </span>
+    
+    
+    
+</span>
+
+                    <h1>CentOS 7 安装 MongoDB</h1>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8 col-md-10 col-sm-12">
+                    <div class="div-message div-desc">
+                        
+                            <span>CentOS 7 安装 MongoDB 4.2.1</span>
+                            <br>
                         
                         
-                            
-                            
-                            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
-                                <div class="card hover-box-shadow card-blog">
-                                    <div class="card-body" style="padding: 15px">
-                                        <h4 class="title"><a href="/2018/08/29/看Q外的风景/">看 Q 外的风景</a></h4>
-                                        <p><time datetime="2018-08-28T16:00:00.000Z"><a href="/2018/08/29/看Q外的风景/">2018-08-29</a></time></p>
-                                    </div>
-                                </div>
-                            </div>
+                            <span>最近更新：2019-12-08</span>
+                            <br>
                         
-                            
-                            
-                            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
-                                <div class="card hover-box-shadow card-blog">
-                                    <div class="card-body" style="padding: 15px">
-                                        <h4 class="title"><a href="/2018/06/29/hexo 使用 Hexo 搭建 Blog/">使用 Hexo 搭建 Blog</a></h4>
-                                        <p><time datetime="2018-06-28T16:00:00.000Z"><a href="/2018/06/29/hexo 使用 Hexo 搭建 Blog/">2018-06-29</a></time></p>
-                                    </div>
-                                </div>
-                            </div>
                         
-                            
-                            
-                            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
-                                <div class="card hover-box-shadow card-blog">
-                                    <div class="card-body" style="padding: 15px">
-                                        <h4 class="title"><a href="/2018/06/20/Mysql/">Mysql</a></h4>
-                                        <p><time datetime="2018-06-19T16:00:00.000Z"><a href="/2018/06/20/Mysql/">2018-06-20</a></time></p>
-                                    </div>
-                                </div>
-                            </div>
+                            <span>MacOS, CentOS 7</span>
                         
                     </div>
-                    <hr class="nogutter">
                 </div>
             </div>
             <div class="row justify-content-center">
-                <div class="col-lg-8 col-md-8 col-sm-10">
-                    
-                        <a class="float-left" href="/archives/">← Prev Page</a>
-                    
-                    
+                <div class="col-lg-8 col-md-10 col-sm-12">
+                    <p>【参考】<a class="own-underline" href="https://docs.mongodb.com/manual/tutorial/install-mongodb-on-red-hat/" target="_blank">Install MongoDB Community Edition on Red Hat or CentOS</a></p>
+<p><br></p>
+<h4 id="创建配置文件"><a href="#创建配置文件" class="headerlink" title="创建配置文件"></a>创建配置文件</h4><p>运行命令</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/yum.repos.d/mongodb-org-4.2.repo</span><br></pre></td></tr></table></figure>
+<p>输入一下内容</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[mongodb-org-4.2]</span><br><span class="line">name=MongoDB Repository</span><br><span class="line">baseurl=https://repo.mongodb.org/yum/redhat/$releasever/mongodb-org/4.2/x86_64/</span><br><span class="line">gpgcheck=1</span><br><span class="line">enabled=1</span><br><span class="line">gpgkey=https://www.mongodb.org/static/pgp/server-4.2.asc</span><br></pre></td></tr></table></figure>
+<p><br></p>
+<h4 id="安装-mongodb-org"><a href="#安装-mongodb-org" class="headerlink" title="安装 mongodb-org"></a>安装 mongodb-org</h4><p>运行命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install -y mongodb-org</span><br></pre></td></tr></table></figure>
+<p>安装完毕后</p>
+<ul>
+<li>默认数据位置：<code>/var/lib/mongo</code> </li>
+<li>默认日志位置：<code>/var/log/mongodb</code></li>
+<li>配置文件位置：<code>/etc/mongod.conf</code></li>
+</ul>
+<p>修改配置文件 <code>/etc/mongod.conf</code>，将 <code>bindIp: 127.0.0.1</code> 改为 <code>bindIp: 0.0.0.0</code>。</p>
+<p><br></p>
+<h4 id="开放端口"><a href="#开放端口" class="headerlink" title="开放端口"></a>开放端口</h4><p>运行命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">firewall-cmd --zone=public --add-port=27017/tcp --permanent</span><br><span class="line">firewall-cmd --reload</span><br></pre></td></tr></table></figure>
+<p><br></p>
+<h4 id="开启-mongod-服务"><a href="#开启-mongod-服务" class="headerlink" title="开启 mongod 服务"></a>开启 mongod 服务</h4><p>运行命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl start mongod</span><br></pre></td></tr></table></figure>
+<p><br></p>
+<h4 id="连接-mongodb"><a href="#连接-mongodb" class="headerlink" title="连接 mongodb"></a>连接 mongodb</h4><p>使用 MongoDB Compass</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Hostname: 服务器 IP</span><br><span class="line">Port: 27017</span><br></pre></td></tr></table></figure>
+<p><br></p>
+<h4 id="更多参考"><a href="#更多参考" class="headerlink" title="更多参考"></a>更多参考</h4><div class="div-message div-desc" style="padding: 0 0 25px 10px ">
+    <br>
+    <a class="own-underline" href="https://www.jianshu.com/p/5b6216966587" target="_blank">CentOS7系统下YUM安装安装Mongodb 4.0</a><br>
+    <a class="own-underline" href="https://www.cnblogs.com/heqiuyong/p/10460150.html" target="_blank">Centos7开放及查看端口</a>
+</div>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+            <hr class="nogutter">
+            
+<!-- 当前博客前后两篇博客 -->
+<div class="row justify-content-center">
+    <nav class="m-pagination col-md-8 col-sm-24" role="pagination">
+        
+        
+        <a class="float-right" href="/2019/11/18/Parallels Desktop 搭建本地小集群/">
+            Parallels Desktop 搭建本地小集群 →
+        </a>
+        
+    </nav>
+</div>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-8 col-md-10 col-sm-12">
+                    <script type="text/javascript"></script>
+
                 </div>
             </div>
         </div>
+
+        <!-- Catalog of Blog Titles -->
+        <!-- <div id="div-side-navigation-left" class="col-lg-3 col-md-3" style="position: fixed; top: 46px; left: 0; padding-top: 0; padding-right: 50px" v-if="show">
+            <div class="list-group" style="border-radius: 0; border: 1px solid rgba(0, 0, 0, 0.1)">
+                <a class="list-group-item list-group-item-action" :class="{linkFocus:header.fillColor}" style="padding: 1px 20px; border: 0; border-radius: 0" :href="IDToHref(header.id)" v-for="header in headers" @click="showChildren(header.index)">{{header.text}}</a>
+            </div>
+            <div class="width-100-pct height-5 visibility-hidden"></div>
+            <div class="list-group" style="border-radius: 0; border: 1px solid rgba(0, 0, 0, 0.1)">
+                <div v-for="header in headers">
+                    <transition 
+                        enter-active-class="animated slideInUp"
+                        leave-active-class="">
+                        <div v-if="header.show">
+                            <a class="list-group-item list-group-item-action" style="padding: 1px 20px; border: 0; border-radius: 0" :href="IDToHref(child.id)" v-for="child in header.children">{{child.text}}</a>
+                        </div>
+                    </transition>
+                </div>
+            </div>
+        </div> -->
+        <!-- End Catalog of Blog Titles -->
+
     </section>
     
-    <section id="statement">
-        <div class="container text-center wow fadeInUp" data-wow-delay="0.5s">
-            <div class="row justify-content-center">
-                <p>给岁月以文明，给时光以生命。</p>
-            </div>
-        </div>
-    </section>
+    <!-- Catalog of Blog Titles Script -->
+    <!-- <script>
+        'use strict';
+
+        var min_width = 1050;
+        $(function(){
+            var width = $(window).width();
+            if( width > min_width ){
+                div_side_navigation_left.show = true;
+            }
+            else {
+                div_side_navigation_left.show = false;
+            }
+            
+            // 对于目录索引
+            var preH2 = undefined;
+            var num_map = [ '零', '一', '二', '三', '四', '五', '六', '七', '八', '九' ];
+            var id_exist = [];
+            var h2s = $('h2');
+            var numOfH2 = h2s.length;
+            for(var i=0; i<numOfH2; i++){
+                var id_index = 0;
+
+                var h2 = h2s[i];
+                var text = $(h2).text().toString();
+                var header = text.indexOf('、') > 0 ? text.split('、')[1] : 
+                    text.indexOf('.') > 0 ? text.split('.')[1] : text;
+                text = num_map[i + 1] + '. ' + header + '';
+                var id = text + '-' + id_index + '';
+                while( id_exist.indexOf(id) > -1 ){
+                    id_index++;
+                    id = text + '-' + id_index + '';
+                    if( id_index > 5 ){
+                        console.log('more than five h2-element named likewise');
+                        break;
+                    }
+                }
+                id_exist[id_exist.length] = id;
+                $(h2).attr('id', id);
+
+                var h4s = [];
+                if(i<numOfH2-1){
+                    var h2Next = h2s[i+1];
+                    h4s = $(h2).nextUntil(h2Next, 'h4');
+                }
+                else{
+                    h4s = $(h2).nextAll('h4');
+                }
+
+                var h2Children = [];
+                h4s.each(function(index, element){
+                    var childId_index = 0;
+
+                    var childText = $(element).text().toString();
+                    var childHeader = childText.indexOf('、') > 0 ? childText.split('、')[1] : 
+                        childText.indexOf('.') > 0 ? childText.split('.')[1] : childText;
+                    childText = (index+1) + '. ' + childHeader + '';
+                    var childId = childText + '-' + childId_index + '';
+                    while( id_exist.indexOf(childId) > -1 ){
+                        childId_index++;
+                        childId = childText + '-' + childId_index + '';
+                        if( childId_index > 5 ){
+                            console.log('more than five h4-element named likewise');
+                            break;
+                        }
+                    }
+                    id_exist[id_exist.length] = childId;
+                    $(element).attr('id', childId);
+                    h2Children[index] = {'id':childId, 'text': childText};
+                });
+                var fillColor = i===0 ? true : false;
+                var show = i===0 ? true : false;
+                var header = {'id':id, 'text':text, 'index':i, 'fillColor':fillColor, 'show':show, 'children': h2Children};
+
+                div_side_navigation_left.headers.push(header);
+            }
+
+            $(window).scroll(function(){
+                var height_work = $(window).height();
+                var scrollTop = $(window).scrollTop();
+                var h2s = $('h2');
+                for( var i=0; i<h2s.length; i++ ){
+                    var element = h2s[i];
+                    if( $(element).offset().top - scrollTop > -10 && $(element).offset().top - scrollTop < 20 ){
+                        div_side_navigation_left.showChildren(i);
+                        break;
+                    }
+                }
+            });
+        });
+
+        $(window).resize(function(){
+            var width = $(window).width();
+            if( width > min_width ){
+                div_side_navigation_left.show = true;
+            }
+            else {
+                div_side_navigation_left.show = false;
+            }
+        });
+        
+        var div_side_navigation_left = new Vue({
+            el : '#div-side-navigation-left',
+            data : {
+                currentIndex : 0,
+                show : true,
+                headers : []
+            },
+            methods : {
+                IDToHref : function(id){
+                    return "#" + id;
+                },
+                showChildren : function(index){
+                    if(div_side_navigation_left.currentIndex==index){
+                        return;
+                    }
+                    var currentShow = div_side_navigation_left.headers[div_side_navigation_left.currentIndex];
+                    currentShow['fillColor'] = false;
+                    currentShow['show'] = false;
+                    Vue.set(div_side_navigation_left.headers, div_side_navigation_left.currentIndex, currentShow);
+
+                    div_side_navigation_left.currentIndex = index;
+                    var newShow = div_side_navigation_left.headers[index];
+                    newShow['fillColor'] = true;
+                    newShow['show'] = true;
+                    Vue.set(div_side_navigation_left.headers, index, newShow);
+                }
+            }
+        });
+    </script> -->
+    <!-- End Catalog of Blog Titles Script -->
+
 
     
 <!-- ============================ Footer =========================== -->
