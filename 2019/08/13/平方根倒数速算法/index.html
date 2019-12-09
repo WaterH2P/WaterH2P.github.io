@@ -168,8 +168,9 @@
       </header>
     
     <div class="article-entry" itemprop="articleBody">
-      
-        <p>【参考维基百科】<a class="own-underline" href="http://en.wikipedia.org/wiki/Fast_inverse_square_root" target="_blank">平方根倒数速算法</a></p>
+      <div style="border-left: 1px solid black;padding: 10px;background: #eaeaea;">
+        
+          <p>【参考维基百科】<a class="own-underline" href="http://en.wikipedia.org/wiki/Fast_inverse_square_root" target="_blank">平方根倒数速算法</a></p>
 <h2 id="源码"><a href="#源码" class="headerlink" title="源码"></a>源码</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">float</span> <span class="title">invSqrt</span><span class="params">(<span class="keyword">float</span> x)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">float</span> halfx = <span class="number">0.5f</span> * x;</span><br><span class="line">	<span class="keyword">float</span> y = x;</span><br><span class="line">	<span class="keyword">long</span> i = *(<span class="keyword">long</span>*)&amp;y;</span><br><span class="line">	i = <span class="number">0x5f3759df</span> - (i&gt;&gt;<span class="number">1</span>);</span><br><span class="line">	y = *(<span class="keyword">float</span>*)&amp;i;</span><br><span class="line">	y = y * (<span class="number">1.5f</span> - (halfx * y * y));</span><br><span class="line">	y = y * (<span class="number">1.5f</span> - (halfx * y * y));</span><br><span class="line">	<span class="keyword">return</span> y;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>该代码是先求出平方根倒数的近似值，然后使用牛顿迭代法进行精确。</p>
 <p><br></p>
@@ -299,7 +300,8 @@ y = \dfrac{1}{ \sqrt{x} }</script><p>对等式的两边取二进制对数有</p>
 <li>所以 $y_{n+1} = \dfrac{ y_n (3 - x’ y_n^2) }{2} = y_n \left(1.5 - \dfrac{1}{2} x’ y_n^2 \right)$ </li>
 </ul>
 
-      
+        
+      </div>
 
       
         <div class="page-reward">
@@ -415,6 +417,8 @@ y = \dfrac{1}{ \sqrt{x} }</script><p>对等式的两边取二进制对数有</p>
     <a href="/2019/11/18/Parallels Desktop 搭建本地小集群/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
+        
+          Parallels Desktop 搭建本地小集群
         
       </div>
     </a>
@@ -568,15 +572,15 @@ MathJax.Hub.Queue(function() {
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">nodejs</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">同步</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">markdown</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">CentOS</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">MongoDB</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -585,14 +589,6 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">mysql</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">nodejs</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">同步</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -605,10 +601,6 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">mathjax</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Parallels</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -633,6 +625,18 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">windows</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Parallels</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">CentOS</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">MongoDB</a>
               </li>
              
               <li class="article-tag-list-item">

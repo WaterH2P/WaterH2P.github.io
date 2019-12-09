@@ -163,39 +163,14 @@
       </header>
     
     <div class="article-entry" itemprop="articleBody">
-      
-        <p>【参考】<a class="own-underline" href="https://docs.mongodb.com/manual/tutorial/install-mongodb-on-red-hat/" target="_blank">Install MongoDB Community Edition on Red Hat or CentOS</a></p>
-<p><br></p>
-<h4 id="创建配置文件"><a href="#创建配置文件" class="headerlink" title="创建配置文件"></a>创建配置文件</h4><p>运行命令</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/yum.repos.d/mongodb-org-4.2.repo</span><br></pre></td></tr></table></figure>
-<p>输入一下内容</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[mongodb-org-4.2]</span><br><span class="line">name=MongoDB Repository</span><br><span class="line">baseurl=https://repo.mongodb.org/yum/redhat/$releasever/mongodb-org/4.2/x86_64/</span><br><span class="line">gpgcheck=1</span><br><span class="line">enabled=1</span><br><span class="line">gpgkey=https://www.mongodb.org/static/pgp/server-4.2.asc</span><br></pre></td></tr></table></figure>
-<p><br></p>
-<h4 id="安装-mongodb-org"><a href="#安装-mongodb-org" class="headerlink" title="安装 mongodb-org"></a>安装 mongodb-org</h4><p>运行命令</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install -y mongodb-org</span><br></pre></td></tr></table></figure>
-<p>安装完毕后</p>
-<ul>
-<li>默认数据位置：<code>/var/lib/mongo</code> </li>
-<li>默认日志位置：<code>/var/log/mongodb</code></li>
-<li>配置文件位置：<code>/etc/mongod.conf</code></li>
-</ul>
-<p>修改配置文件 <code>/etc/mongod.conf</code>，将 <code>bindIp: 127.0.0.1</code> 改为 <code>bindIp: 0.0.0.0</code>。</p>
-<p><br></p>
-<h4 id="开放端口"><a href="#开放端口" class="headerlink" title="开放端口"></a>开放端口</h4><p>运行命令</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">firewall-cmd --zone=public --add-port=27017/tcp --permanent</span><br><span class="line">firewall-cmd --reload</span><br></pre></td></tr></table></figure>
-<p><br></p>
-<h4 id="开启-mongod-服务"><a href="#开启-mongod-服务" class="headerlink" title="开启 mongod 服务"></a>开启 mongod 服务</h4><p>运行命令</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl start mongod</span><br></pre></td></tr></table></figure>
-<p><br></p>
-<h4 id="连接-mongodb"><a href="#连接-mongodb" class="headerlink" title="连接 mongodb"></a>连接 mongodb</h4><p>使用 MongoDB Compass</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Hostname: 服务器 IP</span><br><span class="line">Port: 27017</span><br></pre></td></tr></table></figure>
-<p><br></p>
-<h4 id="更多参考"><a href="#更多参考" class="headerlink" title="更多参考"></a>更多参考</h4><div class="div-message div-desc" style="padding: 0 0 25px 10px ">
-    <br>
-    <a class="own-underline" href="https://www.jianshu.com/p/5b6216966587" target="_blank">CentOS7系统下YUM安装安装Mongodb 4.0</a><br>
-    <a class="own-underline" href="https://www.cnblogs.com/heqiuyong/p/10460150.html" target="_blank">Centos7开放及查看端口</a>
-</div>
-      
+      <div style="border-left: 1px solid black;padding: 10px;background: #eaeaea;">
+        
+          CentOS 7 安装 MongoDB 4.2.1
+          <!-- 
+            <a class="article-more-a" href="/2019/12/08/CentOS 7 安装 MongoDB/#more">more >></a>
+           -->
+        
+      </div>
 
       
     </div>
@@ -270,57 +245,14 @@
       </header>
     
     <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="Parallels-虚拟机与本机文件共享"><a href="#Parallels-虚拟机与本机文件共享" class="headerlink" title="Parallels 虚拟机与本机文件共享"></a>Parallels 虚拟机与本机文件共享</h2><p>【参考】<a class="own-underline" href="https://blog.csdn.net/buyueliuying/article/details/78447810" target="_blank">Parallels Desktop CentOS 安装Parallels Tools和共享文件夹</a></p>
-<p><br></p>
-<h4 id="Parallels-安装虚拟机"><a href="#Parallels-安装虚拟机" class="headerlink" title="Parallels 安装虚拟机"></a>Parallels 安装虚拟机</h4><ul>
-<li>我安装的是 <code>CentOS 7</code></li>
-</ul>
-<p><br></p>
-<h4 id="安装-Parallels-Tools"><a href="#安装-Parallels-Tools" class="headerlink" title="安装 Parallels Tools"></a>安装 Parallels Tools</h4><ul>
-<li>虚拟机和本机实现文件共享需要安装 Parallels Tools</li>
-</ul>
-<ol>
-<li><p>设置虚拟机 Hardware 下 CD/DVD 中的 Source 为 prl-tools-lin.iso。</p>
-<ul>
-<li><img src="https://github.com/WaterH2P/WaterH2P.github.io/raw/master/img/ParallelsDesktop/CDDVDSource.png" style="width: 80%"></li>
-</ul>
-</li>
-<li><p>进入到虚拟机 <code>cd /media</code> 目录下，创建文件夹 <code>mkdir cdrom</code>。</p>
-</li>
-<li><p>执行命令 <code>mount -o exec /dev/cdrom /media/cdrom</code>。</p>
-<ul>
-<li>看到 <code>mount: /dev/sr0 is write-protected, mounting read-only</code> 表示挂载成功。</li>
-</ul>
-</li>
-<li><p>进入到虚拟机 <code>cd /media/cdrom</code> 目录下，执行 <code>./install</code>，然后一直 Next，直到开始安装。</p>
-<ul>
-<li><img src="https://github.com/WaterH2P/WaterH2P.github.io/raw/master/img/ParallelsDesktop/installParallelsTools.png" style="width: 80%"></li>
-</ul>
-</li>
-<li><p>安装成功后执行 <code>reboot</code> 重启虚拟机。</p>
-</li>
-<li><p>设置虚拟机 Options 下 Sharing 中的 Custom Folders，添加本机共享的文件夹，例如下图的 Linux。</p>
-<ul>
-<li><img src="https://github.com/WaterH2P/WaterH2P.github.io/raw/master/img/ParallelsDesktop/shareFloder.png" style="width: 80%"></li>
-</ul>
-</li>
-<li><p>进入到虚拟机 <code>cd /media/psf</code> 下查看是否有共享的文件夹。</p>
-<ul>
-<li><img src="https://github.com/WaterH2P/WaterH2P.github.io/raw/master/img/ParallelsDesktop/mediaPsf.png" style="width: 80%"></li>
-</ul>
-</li>
-<li><p>还可以设置软链接方便文件夹的访问。</p>
-</li>
-</ol>
-<p><br></p>
-<h2 id="Parallels-虚拟机与本机互联"><a href="#Parallels-虚拟机与本机互联" class="headerlink" title="Parallels 虚拟机与本机互联"></a>Parallels 虚拟机与本机互联</h2><p><br></p>
-<div class="div-message div-desc" style="padding: 0 0 25px 10px ">
-    <br>
-    <a class="own-underline" href="https://blog.csdn.net/wuxiangmujingli/article/details/52671448" target="_blank">Parallels Desktop 虚拟机NAT设置</a><br>
-    <a class="own-underline" href="http://www.scoee.com/1940/parallels-desktop-虚拟机同网段独立ip配置方法" target="_blank">Parallels Desktop 虚拟机同网段独立IP配置方法</a>
-</div>
-      
+      <div style="border-left: 1px solid black;padding: 10px;background: #eaeaea;">
+        
+          Parallels Desktop 创建虚拟机并与本机实现文件共享和互联
+          <!-- 
+            <a class="article-more-a" href="/2019/11/18/Parallels Desktop 搭建本地小集群/#more">more >></a>
+           -->
+        
+      </div>
 
       
     </div>
@@ -391,138 +323,14 @@
       </header>
     
     <div class="article-entry" itemprop="articleBody">
-      
-        <p>【参考维基百科】<a class="own-underline" href="http://en.wikipedia.org/wiki/Fast_inverse_square_root" target="_blank">平方根倒数速算法</a></p>
-<h2 id="源码"><a href="#源码" class="headerlink" title="源码"></a>源码</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">float</span> <span class="title">invSqrt</span><span class="params">(<span class="keyword">float</span> x)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">float</span> halfx = <span class="number">0.5f</span> * x;</span><br><span class="line">	<span class="keyword">float</span> y = x;</span><br><span class="line">	<span class="keyword">long</span> i = *(<span class="keyword">long</span>*)&amp;y;</span><br><span class="line">	i = <span class="number">0x5f3759df</span> - (i&gt;&gt;<span class="number">1</span>);</span><br><span class="line">	y = *(<span class="keyword">float</span>*)&amp;i;</span><br><span class="line">	y = y * (<span class="number">1.5f</span> - (halfx * y * y));</span><br><span class="line">	y = y * (<span class="number">1.5f</span> - (halfx * y * y));</span><br><span class="line">	<span class="keyword">return</span> y;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>该代码是先求出平方根倒数的近似值，然后使用牛顿迭代法进行精确。</p>
-<p><br></p>
-<h2 id="浮点数"><a href="#浮点数" class="headerlink" title="浮点数"></a>浮点数</h2><h3 id="浮点数的存储格式"><a href="#浮点数的存储格式" class="headerlink" title="浮点数的存储格式"></a>浮点数的存储格式</h3><p><img src="https://github.com/WaterH2P/WaterH2P.github.io/raw/master/img/blogImg/storage%20format%20of%20float.png" width="80%"></p>
-<ul>
-<li>首位符号位</li>
-<li>8 位表示经过<strong>偏移处理</strong>后的指数，表示范围为 $[-127, \, 128]$ </li>
-<li>最后 23 位表示有效数字中除最高位外的其余数字</li>
-</ul>
-<script type="math/tex; mode=display">
-x = (-1)^{S_i} \cdot (1 + m) \cdot 2^{E - B}</script><ul>
-<li>m 表示有效数字的尾数（$0 \le m \lt 1$）</li>
-<li>偏移量 $B = 127$ </li>
-<li>以上图为例<ul>
-<li>$m = 2^{-2} = 0.25$ </li>
-<li>$E - B = 4 + 8 + 16 + 32 + 64 - 127 = -3$ </li>
-<li>$x = (1 +0.25) \cdot 2^{-3} = 0.15625$ </li>
-</ul>
-</li>
-</ul>
-<p><br></p>
-<h3 id="将浮点数取别名存储为整数"><a href="#将浮点数取别名存储为整数" class="headerlink" title="将浮点数取别名存储为整数"></a>将浮点数取别名存储为整数</h3><p>该整数的数值为</p>
-<script type="math/tex; mode=display">
-I = E \times 2^{23} + M</script><ul>
-<li>$E$ 表示指数</li>
-<li>$M$ 表示有效数字</li>
-<li>以上图为例<ul>
-<li>$E = 124$，$M = 2^{21}$ </li>
-<li>$I = 124 \times 2^{23} + 2^{21}$ </li>
-</ul>
-</li>
-</ul>
-<h3 id="魔术数字"><a href="#魔术数字" class="headerlink" title="魔术数字"></a>魔术数字</h3><div class="table-container">
-<table>
-<thead>
-<tr>
-<th>Sign（符号）</th>
-<th>Exponent（指数）</th>
-<th>Mantissa（尾数）</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1 位</td>
-<td>$b$ 位</td>
-<td>$(n - 1 -b)$ 位</td>
-</tr>
-</tbody>
-</table>
-</div>
-<ul>
-<li>一共 $n$ 位</li>
-<li>浮点数表示实际数值时<ul>
-<li>$x = (1 + m_x) \cdot 2^{e_x}$ </li>
-</ul>
-</li>
-<li>若为整数表示时<ul>
-<li>$I_x = E_x L + M_x$ </li>
-<li>$L = 2^{n - 1 -b}$ </li>
-</ul>
-</li>
-<li>导出<ul>
-<li>$m_x = \dfrac{M_x}{L}$ </li>
-<li>$e_x = E_x - B$，其中 $B = 2^{b-1} - 1$ </li>
-</ul>
-</li>
-</ul>
-<script type="math/tex; mode=display">
-y = \dfrac{1}{ \sqrt{x} }</script><p>对等式的两边取二进制对数有</p>
-<ul>
-<li>$\log_2 (y) = - \dfrac{1}{2} \log_2 (x)$ </li>
-<li>带入 $x = (1 + m_x) \cdot 2^{e_x}$ <ul>
-<li>$\log_2 (1 + m_y) + e_y = - \dfrac{1}{2} \log_2 (1 + m_x) - \dfrac{1}{2} e_x$ </li>
-<li>因为 $0 \lt m_y \lt 1$，$0 \lt m_x \lt 1$ <ul>
-<li>且 $0 \lt x \lt 1$ 时，$\log_2(1 + x) \approx x$ </li>
-<li>设 $0 \le \sigma \le \dfrac{1}{3}$，$\log_2(1 + x) \approx x +\sigma$ </li>
-<li>当近似值 $R = {\rm 0x5f3759df}$ 时，$\sigma \approx 0.04504618758$ </li>
-</ul>
-</li>
-<li>将 $\log_2(1 + x) \approx x +\sigma$ 代入上式<ul>
-<li>$m_y + \sigma + e_y = - \dfrac{1}{2} m_x - \dfrac{1}{2} \sigma - \dfrac{1}{2} e_x$ </li>
-</ul>
-</li>
-<li>带入 $M_x$，$E_x$，$B$ 和 $L$ <ul>
-<li>$M_x + (E_y - B) L = - \dfrac{1}{2} M_x - \dfrac{1}{2} (E_x - B) L - \dfrac{3}{2} \sigma L$ </li>
-<li>$E_y L +M_y = \dfrac{3}{2} (B - \sigma) L - \dfrac{1}{2} (E_x L + M_x)$ </li>
-<li>$\begin{array}{l} I_y &amp;= \dfrac{3}{2} (B - \sigma) L - \dfrac{1}{2} I_x \\ &amp;= R - \dfrac{1}{2} I_x \end{array}$ </li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">R = <span class="number">0x5f3759df</span> = <span class="number">0</span> <span class="number">10111110</span> <span class="number">01101110101100111011111</span> = <span class="number">1597463007</span>;</span><br></pre></td></tr></table></figure>
-<p>$\dfrac{3}{2} (B - \sigma) L = \dfrac{3}{2} B L - \dfrac{3}{2} \sigma L$ </p>
-<ul>
-<li><p>$\begin{array}{l} \dfrac{3}{2} (B - \sigma) L &amp;= \dfrac{3}{2} B L - \dfrac{3}{2} \sigma L \\\\ &amp;= \dfrac{3}{2} ( 2^{b-1} - 1 ) 2^{n-1-b} - \dfrac{3}{2} \sigma L \\\\ &amp;= 3 \cdot 2^{n-3} - \dfrac{3}{2} L - \dfrac{3}{2} \sigma L \\\\ &amp;= 3 \cdot 2^{n-3} - \dfrac{3}{2} (1 + \sigma) L \\\\ \end{array}$ 且 $n = 32$，$b = 8$ </p>
-<ul>
-<li>$3 \cdot 2^{n-3} = 3 \cdot 2^{29} = 1610612736$ </li>
-<li>$L = 2^{b-1} -1 = 127$ <ul>
-<li>$190.5 \le \dfrac{3}{2} (1 + \sigma) L \le 254$ </li>
-</ul>
-</li>
-<li>$1610612545.5 \le 3 \cdot 2^{n-3} - \dfrac{3}{2} (1 + \sigma) L \le 1610612482$ </li>
-</ul>
-</li>
-<li><p>所以 $\dfrac{3}{2} (B - \sigma) L \approx R$ </p>
-</li>
-</ul>
-<p><br></p>
-<h2 id="牛顿迭代法"><a href="#牛顿迭代法" class="headerlink" title="牛顿迭代法"></a>牛顿迭代法</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">近似求解方程的方法</span><br></pre></td></tr></table></figure>
-<ul>
-<li>假设求解方程 $f(x) = 0$，且解为 $x = x_0$ </li>
-<li>在 $x_0$ 旁取一近似点 $x_1$ <ul>
-<li>过 $(x_1, \, f(x_1))$ 作 $f(x)$ 的切线，切线方程为 $y = f(x_1) + f’(x_1)(x - x_1)$ </li>
-<li>切线与 x 轴的交点为 $x_2 = x_1 - \dfrac{ f(x_1) }{ f’(x_1) }$ </li>
-</ul>
-</li>
-<li>将 $x_2$ 作为新的近似点进行迭代，直到 $x_{n+1} - x_n &lt; \text{阈值}$ </li>
-</ul>
-<h3 id="案例"><a href="#案例" class="headerlink" title="案例"></a>案例</h3><p>设 $f(x) = \dfrac{1}{ \sqrt{x} }$，求解 $x = x’$ 时，$f(x’) \approx  ?$ </p>
-<ul>
-<li>即求解 $\dfrac{1}{y^2} - x = 0$ 的解，即 $f(y) = \dfrac{1}{y^2} - x = 0$ </li>
-<li>设求出某一近似点为 $y_n$，则更精确的值为 $y_{n+1} = y_n - \dfrac{ f(y_n) }{ f’(y_n) }$ <ul>
-<li>$f(y_n) = \dfrac{1}{y_n^2} - x’$，$f’(y_{n+1}) = - \dfrac{2}{y_n^3}$ </li>
-</ul>
-</li>
-<li>所以 $y_{n+1} = \dfrac{ y_n (3 - x’ y_n^2) }{2} = y_n \left(1.5 - \dfrac{1}{2} x’ y_n^2 \right)$ </li>
-</ul>
-
-      
+      <div style="border-left: 1px solid black;padding: 10px;background: #eaeaea;">
+        
+          近似求解平方根倒数
+          <!-- 
+            <a class="article-more-a" href="/2019/08/13/平方根倒数速算法/#more">more >></a>
+           -->
+        
+      </div>
 
       
     </div>
@@ -593,15 +401,14 @@ y = \dfrac{1}{ \sqrt{x} }</script><p>对等式的两边取二进制对数有</p>
       </header>
     
     <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="MySQL"><a href="#MySQL" class="headerlink" title="MySQL"></a>MySQL</h2><h3 id="数据库连接"><a href="#数据库连接" class="headerlink" title="数据库连接"></a>数据库连接</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// mysql.js</span></span><br><span class="line"><span class="keyword">const</span> mysql = <span class="built_in">require</span>(<span class="string">'mysql'</span>);</span><br><span class="line"><span class="keyword">const</span> conn  = mysql.createConnection(&#123;</span><br><span class="line">    host     : <span class="string">'localhost'</span>,</span><br><span class="line">    port     : <span class="string">'3306'</span>,</span><br><span class="line">    user     : <span class="string">'root'</span>,</span><br><span class="line">    password : <span class="string">'***'</span>,</span><br><span class="line">    database : <span class="string">'***'</span></span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">conn.connect();</span><br></pre></td></tr></table></figure>
-<h3 id="根据查询结果修改-response"><a href="#根据查询结果修改-response" class="headerlink" title="根据查询结果修改 response"></a>根据查询结果修改 response</h3><p>首先封装查询操作，添加回调函数（callback）</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// mysql.js</span></span><br><span class="line">exports.query = <span class="function">(<span class="params">sql, params, callback</span>) =&gt;</span> &#123;</span><br><span class="line">    conn.query(sql, params, (err, res) =&gt; &#123;</span><br><span class="line">        <span class="keyword">if</span> (err) &#123;</span><br><span class="line">            callback(<span class="literal">false</span>);</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            callback(res);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>调用封装的查询操作</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* ============================ app.js ============================ */</span></span><br><span class="line"><span class="keyword">const</span> userManage = <span class="built_in">require</span>(<span class="string">'./app/service/userManage'</span>);</span><br><span class="line"><span class="comment">// 登录操作</span></span><br><span class="line">app.post(<span class="string">'/signin'</span>, <span class="keyword">async</span> (req, res) =&gt; &#123;</span><br><span class="line">	<span class="keyword">let</span> account = req.body.account;</span><br><span class="line">	<span class="keyword">let</span> password = req.body.password;</span><br><span class="line">	</span><br><span class="line">	userManage.signIn(account, password, (result) =&gt; &#123;</span><br><span class="line">		<span class="keyword">if</span> (result.success) &#123;</span><br><span class="line">			res.json(&#123;</span><br><span class="line">				success : <span class="literal">true</span>,</span><br><span class="line">			&#125;);</span><br><span class="line">		&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">			res.json(&#123;</span><br><span class="line">				success : <span class="literal">false</span>,</span><br><span class="line">				message : <span class="string">'账号或密码错误'</span>,</span><br><span class="line">			&#125;);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* ============================ userManage.js ============================ */</span></span><br><span class="line"><span class="keyword">var</span> signIn = <span class="keyword">async</span> (account, password, callback) =&gt; &#123;</span><br><span class="line">    <span class="keyword">let</span> sql = <span class="string">'SELECT password FROM tableName WHERE account=?'</span>;</span><br><span class="line">    <span class="keyword">let</span> params = [account];</span><br><span class="line">    </span><br><span class="line">    db.query(sql, params, <span class="function"><span class="keyword">function</span>(<span class="params">result</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">let</span> success = <span class="literal">false</span>;</span><br><span class="line">		<span class="keyword">if</span> (result) &#123;</span><br><span class="line">            <span class="keyword">let</span> info = result[<span class="number">0</span>];</span><br><span class="line">            <span class="keyword">if</span> ( password == info.password ) &#123;</span><br><span class="line">                success = <span class="literal">true</span>;</span><br><span class="line">                callback(&#123;<span class="attr">success</span> : <span class="literal">true</span>,&#125;)</span><br><span class="line">            &#125;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (!success) &#123;</span><br><span class="line">            callback(&#123;<span class="attr">success</span>:<span class="literal">false</span>&#125;);</span><br><span class="line">        &#125;</span><br><span class="line">	&#125;);</span><br><span class="line">&#125;</span><br><span class="line">exports.signIn = signIn;</span><br></pre></td></tr></table></figure>
-
-      
+      <div style="border-left: 1px solid black;padding: 10px;background: #eaeaea;">
+        
+          Node.js 一些同步的实现方法
+          <!-- 
+            <a class="article-more-a" href="/2019/04/17/Node.js 同步问题/#more">more >></a>
+           -->
+        
+      </div>
 
       
     </div>
@@ -676,173 +483,14 @@ y = \dfrac{1}{ \sqrt{x} }</script><p>对等式的两边取二进制对数有</p>
       </header>
     
     <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="windows-软件"><a href="#windows-软件" class="headerlink" title="windows 软件"></a>windows 软件</h2><ul>
-<li><p><a href="https://typora.io/" target="_blank" rel="noopener">Typora</a></p>
-</li>
-<li><p><a href="https://github.com/zhongyang219/TrafficMonitor" target="_blank" rel="noopener">TrafficMonitor</a></p>
-</li>
-<li><p><a href="https://www.huorong.cn/" target="_blank" rel="noopener">火绒安全</a></p>
-<ul>
-<li>弹窗阻止的功能很给力</li>
-</ul>
-</li>
-<li><p><a href="https://en.bandisoft.com/bandizip/" target="_blank" rel="noopener">Bandizip</a></p>
-</li>
-<li><p><a href="https://potplayer.daum.net/" target="_blank" rel="noopener">PotPlayer</a></p>
-</li>
-<li><p><a href="https://github.com/ChanpleCai/SmartTaskbar" target="_blank" rel="noopener">SmartTaskbar</a></p>
-</li>
-<li><p><a href="https://u.tools/" target="_blank" rel="noopener">uTools</a></p>
-</li>
-</ul>
-<hr>
-
-<h2 id="Chrome-插件"><a href="#Chrome-插件" class="headerlink" title="Chrome 插件"></a>Chrome 插件</h2><ul>
-<li><a class="own-underline" href="https://chrome.google.com/webstore/detail/adblock-plus/cfhdojbkjhnklbpkdaibdccddilifddb?utm_source=chrome-ntp-icon" target="_blank">Adblock Plus</a></li>
-<li><a class="own-underline" href="https://chrome.google.com/webstore/detail/clickclean/ghgabhipcejejjmhhchfonmamedcbeod?utm_source=chrome-ntp-icon" target="_blank">Click&amp;Clean</a></li>
-<li><a class="own-underline" href="https://chrome.google.com/webstore/detail/onetab/chphlpgkkbolifaimnlloiipkdnihall?utm_source=chrome-ntp-icon" target="_blank">OneTab</a></li>
-<li><a class="own-underline" href="https://chrome.google.com/webstore/detail/crxmouse-chrome-gestures/jlgkpaicikihijadgifklkbpdajbkhjo?utm_source=chrome-ntp-icon" target="_blank">crxMouse Chrome™ 手势</a></li>
-<li><a class="own-underline" href="https://chrome.google.com/webstore/detail/vimium/dbepggeogbaibhgnhhndojpepiihcmeb?utm_source=chrome-ntp-icon" target="_blank">Vimium</a></li>
-</ul>
-<p><br></p>
-<h4 id="页面样式修改"><a href="#页面样式修改" class="headerlink" title="页面样式修改"></a>页面样式修改</h4><ul>
-<li><a class="own-underline" href="https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo?utm_source=chrome-ntp-icon" target="_blank"><b>Tampermonkey</b></a><ul>
-<li>脚本下载网站：<a class="own-underline" href="https://greasyfork.org/zh-CN" target="_blank">Greasy Fork</a></li>
-</ul>
-</li>
-</ul>
-<p><br></p>
-<h4 id="下载管理"><a href="#下载管理" class="headerlink" title="下载管理"></a>下载管理</h4><ul>
-<li><a class="own-underline" href="https://chrome.google.com/webstore/detail/chrono-download-manager/mciiogijehkdemklbdcbfkefimifhecn?utm_source=chrome-ntp-icon" target="_blank">Chrono下载管理器</a></li>
-<li><a class="own-underline" href="https://chrome.google.com/webstore/detail/free-download-manager/ahmpjcflkgiildlgicmcieglgoilbfdp?utm_source=chrome-ntp-icon" target="_blank">Free Download Manager</a></li>
-</ul>
-<p><br></p>
-<h4 id="Github-插件"><a href="#Github-插件" class="headerlink" title="Github 插件"></a>Github 插件</h4><ul>
-<li><a class="own-underline" href="https://chrome.google.com/webstore/detail/github-hovercard/mmoahbbnojgkclgceahhakhnccimnplk?utm_source=chrome-ntp-icon" target="_blank">GitHub Hovercard</a></li>
-<li><a class="own-underline" href="https://chrome.google.com/webstore/detail/octotree/bkhaagjahfmjljalopjnoealnfndnagc?utm_source=chrome-ntp-icon" target="_blank">Octotree</a></li>
-</ul>
-<p><br></p>
-<h4 id="新建标签页"><a href="#新建标签页" class="headerlink" title="新建标签页"></a>新建标签页</h4><ul>
-<li><a class="own-underline" href="https://chrome.google.com/webstore/detail/unsplash-instant/pejkokffkapolfffcgbmdmhdelanoaih?utm_source=chrome-ntp-icon" target="_blank">Unsplash Instant</a></li>
-<li><a class="own-underline" href="https://chrome.google.com/webstore/detail/momentum/laookkfknpbbblfpciffpaejjkokdgca/related?utm_source=chrome-ntp-icon" target="_blank">Momentum</a></li>
-<li><a class="own-underline" href="https://chrome.google.com/webstore/detail/infinity-new-tabproductiv/dbfmnekepjoapopniengjbcpnbljalfg?utm_source=chrome-ntp-icon" target="_blank">Infinity 新标签页</a></li>
-<li><a class="own-underline" href="https://chrome.google.com/webstore/detail/%E6%8E%98%E9%87%91/lecdifefmmfjnjjinhaennhdlmcaeeeb?utm_source=chrome-ntp-icon" target="_blank">掘金</a></li>
-</ul>
-<p><br></p>
-<h4 id="浏览器主题"><a href="#浏览器主题" class="headerlink" title="浏览器主题"></a>浏览器主题</h4><ul>
-<li><a class="own-underline" href="https://chrome.google.com/webstore/detail/midnight-lizard/pbnndmlekkboofhnbonilimejonapojg?utm_source=chrome-ntp-icon" target="_blank">Midnight Lizard</a></li>
-</ul>
-<p><br></p>
-<h4 id="前端开发工具"><a href="#前端开发工具" class="headerlink" title="前端开发工具"></a>前端开发工具</h4><ul>
-<li><a class="own-underline" href="https://chrome.google.com/webstore/detail/wappalyzer/gppongmhjkpfnbhagpmjfkannfbllamg?utm_source=chrome-ntp-icon" target="_blank">Wappalyzer</a></li>
-<li><a class="own-underline" href="https://chrome.google.com/webstore/detail/cssviewer/ggfgijbpiheegefliciemofobhmofgce?utm_source=chrome-ntp-icon" target="_blank">CSSViewer</a></li>
-<li><a class="own-underline" href="https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei?utm_source=chrome-ntp-icon" target="_blank">LiveReload</a><br></li>
-<li><a class="own-underline" href="https://chrome.google.com/webstore/detail/web%E5%89%8D%E7%AB%AF%E5%8A%A9%E6%89%8Bfehelper/pkgccpejnmalmdinmhkkfafefagiiiad?utm_source=chrome-ntp-icon" target="_blank">WEB前端助手(FeHelper)</a></li>
-<li><a class="own-underline" href="https://chrome.google.com/webstore/detail/window-resizer/kkelicaakdanhinjdeammmilcgefonfh?utm_source=chrome-ntp-icon" target="_blank">Window Resizer</a></li>
-</ul>
-<p><br></p>
-<h4 id="更多参考"><a href="#更多参考" class="headerlink" title="更多参考"></a>更多参考</h4><div class="div-message div-desc" style="padding: 0 0 25px 10px ">
-    <br>
-    <a class="own-underline" href="https://blog.csdn.net/lgd_guangdong/article/details/80062649" target="_blank">实用且堪称神器的Chrome插件推荐</a><br>
-</div>
-
-<hr>
-
-<h2 id="VS-Code-插件"><a href="#VS-Code-插件" class="headerlink" title="VS Code 插件"></a>VS Code 插件</h2><ul>
-<li>Chinese (Simplified) Language Pack for Visual Studio Code<ul>
-<li>此中文（简体）语言包为 VS Code 提供本地化界面。</li>
-</ul>
-</li>
-<li>Dash</li>
-</ul>
-<p><br></p>
-<h4 id="代码片段插件"><a href="#代码片段插件" class="headerlink" title="代码片段插件"></a>代码片段插件</h4><ul>
-<li>JavaScript (ES6) code snippets</li>
-</ul>
-<p><br></p>
-<h4 id="代码检测插件"><a href="#代码检测插件" class="headerlink" title="代码检测插件"></a>代码检测插件</h4><ul>
-<li>ESLint</li>
-</ul>
-<p><br></p>
-<h4 id="Node-插件"><a href="#Node-插件" class="headerlink" title="Node 插件"></a>Node 插件</h4><ul>
-<li>npm<ul>
-<li>This extension supports running npm scripts defined in the <code>package.json</code> file and validating the installed modules against the dependencies defined in the <code>package.json</code>.</li>
-</ul>
-</li>
-<li><p>npm Intellisense</p>
-<ul>
-<li>Visual Studio Code plugin that autocompletes npm modules in import statements.</li>
-</ul>
-</li>
-<li>Path Intellisense<ul>
-<li>Visual Studio Code plugin that autocompletes filenames.</li>
-</ul>
-</li>
-</ul>
-<p><br></p>
-<h4 id="代码格式化插件"><a href="#代码格式化插件" class="headerlink" title="代码格式化插件"></a>代码格式化插件</h4><ul>
-<li>Beautify<ul>
-<li>Beautify <code>javascript</code>, <code>JSON</code>, <code>CSS</code>, <code>Sass</code>, and <code>HTML</code> in Visual Studio Code.</li>
-</ul>
-</li>
-</ul>
-<p><br></p>
-<h4 id="浏览器插件"><a href="#浏览器插件" class="headerlink" title="浏览器插件"></a>浏览器插件</h4><ul>
-<li>Debugger for Chrome</li>
-<li>Live Server<ul>
-<li>Launch a development local Server with live reload feature for static &amp; dynamic pages.</li>
-</ul>
-</li>
-</ul>
-<p><br></p>
-<h4 id="框架类插件"><a href="#框架类插件" class="headerlink" title="框架类插件"></a>框架类插件</h4><ul>
-<li>Vetur<ul>
-<li>Vue tooling for VS Code</li>
-</ul>
-</li>
-</ul>
-<p><br></p>
-<h4 id="Markdown"><a href="#Markdown" class="headerlink" title="Markdown"></a>Markdown</h4><ul>
-<li>Markdown+Math<ul>
-<li>在预览中显示 L<sup>A</sup>T<sub>E</sub>X</li>
-</ul>
-</li>
-</ul>
-<p><br></p>
-<h5 id="更多参考-1"><a href="#更多参考-1" class="headerlink" title="更多参考"></a>更多参考</h5><div class="div-message div-desc" style="padding: 0 0 25px 10px ">
-    <br>
-    <a class="own-underline" href="https://www.jianshu.com/p/34fa629358f7" target="_blank">这些必备的 VS Code 插件你都用过吗？</a><br>
-</div>
-
-<hr>
-
-<h2 id="Tampermonkey-脚本"><a href="#Tampermonkey-脚本" class="headerlink" title="Tampermonkey 脚本"></a>Tampermonkey 脚本</h2><p><br></p>
-<h4 id="Baidu"><a href="#Baidu" class="headerlink" title="Baidu"></a>Baidu</h4><ul>
-<li><a class="own-underline" href="https://greasyfork.org/zh-CN/scripts/14178-ac-baidu-%E9%87%8D%E5%AE%9A%E5%90%91%E4%BC%98%E5%8C%96%E7%99%BE%E5%BA%A6%E6%90%9C%E7%8B%97%E8%B0%B7%E6%AD%8C%E6%90%9C%E7%B4%A2-%E5%8E%BB%E5%B9%BF%E5%91%8A-favicon-%E5%8F%8C%E5%88%97" target="_blank">AC-baidu:重定向优化百度搜狗谷歌搜索_去广告_favicon_双列</a></li>
-<li><a class="own-underline" href="https://greasyfork.org/zh-CN/scripts/39504-%E7%99%BE%E5%BA%A6%E7%BD%91%E7%9B%98%E7%9B%B4%E6%8E%A5%E4%B8%8B%E8%BD%BD%E5%8A%A9%E6%89%8B-%E7%9B%B4%E9%93%BE%E5%8A%A0%E9%80%9F%E7%89%88" target="_blank">百度网盘直接下载助手 直链加速版</a></li>
-</ul>
-<p><br></p>
-<h4 id="Sina"><a href="#Sina" class="headerlink" title="Sina"></a>Sina</h4><ul>
-<li><a class="own-underline" href="https://greasyfork.org/zh-CN/scripts/3249-yet-another-weibo-filter" target="_blank">Yet Another Weibo Filter 看真正想看的微博</a></li>
-</ul>
-<p><br></p>
-<h4 id="页面样式"><a href="#页面样式" class="headerlink" title="页面样式"></a>页面样式</h4><ul>
-<li><a class="own-underline" href="https://greasyfork.org/zh-CN/scripts/14716-%E6%8A%A4%E7%9C%BC%E8%84%9A%E6%9C%AC" target="_blank">护眼脚本</a></li>
-<li><a class="own-underline" href="https://greasyfork.org/zh-CN/scripts/28497-remove-web-limits-modified" target="_blank">网页限制解除(改)</a></li>
-</ul>
-<p><br></p>
-<h4 id="视频播放"><a href="#视频播放" class="headerlink" title="视频播放"></a>视频播放</h4><ul>
-<li><a class="own-underline" href="https://greasyfork.org/zh-CN/scripts/30545-%E8%A7%86%E9%A2%91%E7%AB%99%E5%90%AF%E7%94%A8html5%E6%92%AD%E6%94%BE%E5%99%A8" target="_blank">视频站启用html5播放器</a></li>
-<li><a class="own-underline" href="https://greasyfork.org/zh-CN/scripts/27530-%E7%A0%B4%E8%A7%A3vip%E4%BC%9A%E5%91%98%E8%A7%86%E9%A2%91%E9%9B%86%E5%90%88" target="_blank">破解VIP会员视频集合</a></li>
-</ul>
-<p><br></p>
-<h4 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h4><ul>
-<li><a class="own-underline" href="https://greasyfork.org/zh-CN/scripts?utf8=%E2%9C%93&q=%E5%BC%B9%E7%AA%97%E9%98%BB%E6%AD%A2%E7%A8%8B%E5%BA%8F%E8%84%9A%E6%9C%AC" target="_blank">弹窗阻止程序脚本</a></li>
-<li><a class="own-underline" href="https://greasyfork.org/zh-CN/scripts/24508-userscript-show-site-all-userjs" target="_blank">Userscript+ : 显示当前网站所有可用的UserJS脚本 Jaeger</a></li>
-</ul>
-
-      
+      <div style="border-left: 1px solid black;padding: 10px;background: #eaeaea;">
+        
+          记录 VS Code 安装的插件
+          <!-- 
+            <a class="article-more-a" href="/2018/09/25/plugin 软件、插件和脚本/#more">more >></a>
+           -->
+        
+      </div>
 
       
     </div>
@@ -933,51 +581,14 @@ y = \dfrac{1}{ \sqrt{x} }</script><p>对等式的两边取二进制对数有</p>
       </header>
     
     <div class="article-entry" itemprop="articleBody">
-      
-        <p>【转自 冉茂松 的CSDN 博客】<a class="own-underline" href="https://blog.csdn.net/u014630987/article/details/78670258" target="_blank">如何在 hexo 中支持 Mathjax？</a></p>
-<p><br></p>
-<h4 id="1-使用-Kramed-代替-Marked"><a href="#1-使用-Kramed-代替-Marked" class="headerlink" title="1. 使用 Kramed 代替 Marked"></a>1. 使用 Kramed 代替 Marked</h4><p>在工程目录下执行以下命令来安装 kramed</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm uninstall hexo-renderer-marked --save</span><br><span class="line">npm install hexo-renderer-kramed --save</span><br></pre></td></tr></table></figure>
-<p>打开 <code>/node_modules/hexo-renderer-kramed/lib/renderer.js</code> ，</p>
-<p>把</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Change inline math rule</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">formatText</span>(<span class="params">text</span>) </span>&#123;</span><br><span class="line">    <span class="comment">// Fit kramed's rule: $$ + \1 + $$</span></span><br><span class="line">    <span class="keyword">return</span> text.replace(<span class="regexp">/`\$(.*?)\$`/g</span>, <span class="string">'$$$$$1$$$$'</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>更改为</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Change inline math rule</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">formatText</span>(<span class="params">text</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> text;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><br></p>
-<h4 id="2-停止使用-hexo-math"><a href="#2-停止使用-hexo-math" class="headerlink" title="2. 停止使用 hexo-math"></a>2. 停止使用 hexo-math</h4><p>如果安装了 <code>hexo-math</code> ，卸载它：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm uninstall hexo-math --save</span><br></pre></td></tr></table></figure>
-<p>然后安装 <a class="own-underline" href="https://github.com/phoenixcw/hexo-renderer-mathjax" target="_blank">hexo-renderer-mathjax</a> 包：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-renderer-mathjax --save</span><br></pre></td></tr></table></figure>
-<p><br></p>
-<h4 id="3-更新-Mathjax-的-CDN-链接"><a href="#3-更新-Mathjax-的-CDN-链接" class="headerlink" title="3. 更新 Mathjax 的 CDN 链接"></a>3. 更新 Mathjax 的 CDN 链接</h4><p>打开 <code>/node_modules/hexo-renderer-mathjax/mathjax.html</code> ，</p>
-<p>把 <code>&lt;script&gt;</code> 更改为：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML'</span> <span class="attr">async</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p><br></p>
-<h3 id="4-更改默认转义规则"><a href="#4-更改默认转义规则" class="headerlink" title="4. 更改默认转义规则"></a>4. 更改默认转义规则</h3><p>打开 <code>node_modules\kramed\lib\rules\inline.js</code> ，</p>
-<p>把</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">escape</span>: <span class="regexp">/^\\([\\`*&#123;&#125;\[\]()#$+\-.!_&gt;])/</span>,</span><br></pre></td></tr></table></figure>
-<p>更改为</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">escape</span>: <span class="regexp">/^\\([`*\[\]()#+\-.!_&gt;])/</span>,</span><br></pre></td></tr></table></figure>
-<p>把</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">em: <span class="regexp">/^\b_((?:__|[\s\S])+?)_\b|^\*((?:\*\*|[\s\S])+?)\*(?!\*)/</span>,</span><br></pre></td></tr></table></figure>
-<p>更改为</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">em: <span class="regexp">/^\*((?:\*\*|[\s\S])+?)\*(?!\*)/</span>,</span><br></pre></td></tr></table></figure>
-<p><br></p>
-<h4 id="5-在主题中开启-mathjax"><a href="#5-在主题中开启-mathjax" class="headerlink" title="5. 在主题中开启 mathjax"></a>5. 在主题中开启 mathjax</h4><p>进入到主题目录，打开 <code>_config.yml</code> ，把 mathjax  修改为 true：</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># MathJax Support</span></span><br><span class="line"><span class="attr">mathjax:</span></span><br><span class="line"><span class="attr">  enable:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
-<p>在需要的文章中的 Front-matter 里开启 mathjax：</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">title:</span> </span><br><span class="line"><span class="attr">date:</span> </span><br><span class="line"><span class="attr">tags:</span></span><br><span class="line"><span class="attr">mathjax:</span> <span class="literal">true</span></span><br><span class="line"><span class="bullet">-</span><span class="bullet">-</span></span><br></pre></td></tr></table></figure>
-<p><br></p>
-<h2 id="更多参考"><a href="#更多参考" class="headerlink" title="更多参考"></a>更多参考</h2><div class="div-message div-desc" style="padding: 0 0 25px 10px ">
-    <br>
-    <a class="own-underline" href="https://www.jianshu.com/p/7ab21c7f0674" target="_blank">在Hexo中渲染MathJax数学公式</a>
-</div>
-
-<p><br></p>
-<h2 id="遇到的-BUG"><a href="#遇到的-BUG" class="headerlink" title="遇到的 BUG"></a>遇到的 BUG</h2><h4 id="Hexo-编译文件时出现-Template-render-error-unknown-path"><a href="#Hexo-编译文件时出现-Template-render-error-unknown-path" class="headerlink" title="Hexo 编译文件时出现 Template render error: (unknown path)"></a>Hexo 编译文件时出现 Template render error: (unknown path)</h4><p><a class="own-underline" href="https://segmentfault.com/q/1010000008638413" target="_blank">参考链接</a></p>
-<p>Hexo 转义时候发生的错误，文章中可能出现了连续的 <code>{ {</code>, <code>} }</code>, <code>{ %</code>, <code>% }</code> ，将他们分隔开即可。</p>
-
-      
+      <div style="border-left: 1px solid black;padding: 10px;background: #eaeaea;">
+        
+          显示数学公式看着才爽
+          <!-- 
+            <a class="article-more-a" href="/2018/09/21/hexo 在 Hexo 中渲染 MathJax 数学公式/#more">more >></a>
+           -->
+        
+      </div>
 
       
     </div>
@@ -1048,51 +659,14 @@ y = \dfrac{1}{ \sqrt{x} }</script><p>对等式的两边取二进制对数有</p>
       </header>
     
     <div class="article-entry" itemprop="articleBody">
-      
-        <p>【转自 codeep】<a class="own-underline" href="https://www.zybuluo.com/codeep/note/163962" target="_blank">Cmd Markdown 公式指导手册</a></p>
-<h2 id="一、数学公式"><a href="#一、数学公式" class="headerlink" title="一、数学公式"></a>一、数学公式</h2><p><br></p>
-<h4 id="1-插入公式"><a href="#1-插入公式" class="headerlink" title="1. 插入公式"></a>1. 插入公式</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ 数学公式 $</span><br></pre></td></tr></table></figure>
-<p>或<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$$ 数学公式 $$</span><br></pre></td></tr></table></figure></p>
-<p><br></p>
-<h4 id="2-输入上下标"><a href="#2-输入上下标" class="headerlink" title="2. 输入上下标"></a>2. 输入上下标</h4><p>输入上标使用：<code>^</code>，输入下标使用：<code>_</code>。</p>
-<p>例如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ x_0^+ $</span><br></pre></td></tr></table></figure></p>
-<p>显示 ：$ x_0^+ $ </p>
-<p><br></p>
-<h4 id="3-括号"><a href="#3-括号" class="headerlink" title="3. 括号"></a>3. 括号</h4><p><code>()</code>,<code>[]</code>,<code>|</code> 可以直接使用标识符号本身，<code>\{\}</code> 来表示大括号。当要显示大号的括号或分隔符时，要用 <code>\left</code> 和 <code>\right</code> 命令。</p>
-<p>例如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ f(x) = \left( \dfrac&#123;x - \ln x&#125;&#123;x&#125; \right)^2 $</span><br></pre></td></tr></table></figure></p>
-<p>显示：$ f(x) = \left( \dfrac{x - \ln x}{x} \right)^2 $ </p>
-<p>如果一边符号不需要显示时使用 <code>\left.</code> 或 <code>\right.</code> 。</p>
-<p>例如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ \left. \dfrac&#123; &#123;\rm d&#125;^2 y&#125;&#123; &#123;\rm d&#125;x^2 &#125; \right|_&#123;t = 0&#125; $</span><br></pre></td></tr></table></figure></p>
-<p>显示：$ \left. \dfrac{ {\rm d}^2 y}{ {\rm d}x^2 } \right|_{t = 0} $ </p>
-<p><br></p>
-<h4 id="4-输入分数"><a href="#4-输入分数" class="headerlink" title="4. 输入分数"></a>4. 输入分数</h4><p>通常使用 <code>\frac {分子} {分母}</code> 命令产生一个分数，分数可嵌套。 </p>
-<p>便捷情况可直接输入 <code>\frac ab</code> 来快速生成一个 $ \frac ab $ 。</p>
-<p>也可以使用 <code>\dfreac</code> 代替 <code>\frac</code> ，使得分式看起来更好看一点。</p>
-<p>例如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ \frac&#123;a-1&#125;&#123;b-1&#125; \quad \text&#123;and&#125; \quad \dfrac&#123;a-1&#125;&#123;b-1&#125; $</span><br></pre></td></tr></table></figure></p>
-<p>显示：$ \frac{a-1}{b-1} \quad \text{and} \quad \dfrac{a-1}{b-1} $ </p>
-<p><br></p>
-<h4 id="5-输入开方"><a href="#5-输入开方" class="headerlink" title="5. 输入开方"></a>5. 输入开方</h4><p>使用 <code>\sqrt [根指数] {被开方数}</code> 命令输入开方（如果不输入根指数，默认为2）。</p>
-<p>例如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ \sqrt&#123;1 + x^2&#125; \quad \text&#123;and&#125; \quad \sqrt[n]&#123;ax + b&#125; $</span><br></pre></td></tr></table></figure></p>
-<p>显示：$ \sqrt{1 + x^2} \quad \text{and} \quad \sqrt[n]{ax + b} $ </p>
-<p><br></p>
-<h4 id="6-输入省略号"><a href="#6-输入省略号" class="headerlink" title="6. 输入省略号"></a>6. 输入省略号</h4><p><code>\cdot</code> 可以表示乘号， <code>\ldots</code> 表示与文本底线对齐的省略号，<code>\cdots</code> 表示与文本中线对齐的省略号。</p>
-<p>例如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ f(x_1,x_2, \ldots,x_n) = k \cdot x_1^2 + x_2^2 + \cdots + x_n^2 $</span><br></pre></td></tr></table></figure></p>
-<p>显示：$ f(x_1,x_2, \ldots,x_n) = k \cdot x_1^2 + x_2^2 + \cdots + x_n^2 $ </p>
-<p><br></p>
-<h4 id="7-输入积分"><a href="#7-输入积分" class="headerlink" title="7. 输入积分"></a>7. 输入积分</h4><p>使用 <code>int_积分下限^积分上限 {被积表达式}</code> 来输入一个积分。</p>
-<p>例如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ \int_a^b f(x) &#123;\rm d&#125;x $</span><br></pre></td></tr></table></figure></p>
-<p>显示：$ \int_a^b f(x) {\rm d}x $ </p>
-<p><br></p>
-<h4 id="8-输入极限"><a href="#8-输入极限" class="headerlink" title="8. 输入极限"></a>8. 输入极限</h4><p>使用 <code>\lim_{变量 \to 表达式} 表达式</code> 来输入一个极限，也可以使用 <code>\lim\limits_{变量 \to 表达式} 表达式</code> 将条件放到极限符号下面。</p>
-<p>例如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ \lim_&#123;x \to x_0&#125;f(x) = A \quad \text&#123;and&#125; \quad \lim\limits_&#123;x \to x_0&#125;f(x) = A $</span><br></pre></td></tr></table></figure></p>
-<p>显示：$ \lim_{x \to x_0}f(x) = A \quad \text{and} \quad \lim\limits_{x \to x_0}f(x) = A $ </p>
-<p><br></p>
-<h2 id="二、更多参考"><a href="#二、更多参考" class="headerlink" title="二、更多参考"></a>二、更多参考</h2><div class="div-message div-desc" style="padding: 0 0 25px 10px ">
-    <br>
-    <a class="own-underline" href="https://blog.csdn.net/thither_shore/article/details/52260742" target="_blank">CSDN-markdown 之 LaTeX 特殊公式格式笔记</a><br>
-    <a class="own-underline" href="https://blog.csdn.net/yzr1183739890/article/details/64130912" target="_blank">markdown数学公式</a>
-</div>
-      
+      <div style="border-left: 1px solid black;padding: 10px;background: #eaeaea;">
+        
+          markdown 一些教程链接
+          <!-- 
+            <a class="article-more-a" href="/2018/09/19/Markdown/#more">more >></a>
+           -->
+        
+      </div>
 
       
     </div>
@@ -1163,171 +737,14 @@ y = \dfrac{1}{ \sqrt{x} }</script><p>对等式的两边取二进制对数有</p>
       </header>
     
     <div class="article-entry" itemprop="articleBody">
-      
-        <p>【转】<a class="own-underline" href="https://lccurious.github.io/2018/03/03/vlutr-ssr/" target="_blank">在 Vultr 上搭建 SSR 服务</a></p>
-<h2 id="搭建-ssr"><a href="#搭建-ssr" class="headerlink" title="搭建 ssr"></a>搭建 ssr</h2><p><br></p>
-<h4 id="购买-Vultr-服务器"><a href="#购买-Vultr-服务器" class="headerlink" title="购买 Vultr 服务器"></a>购买 Vultr 服务器</h4><ol>
-<li><p><a class="own-underline" href="https://www.vultr.com/" target="_blank">Vultr 官网</a></p>
-</li>
-<li><p>注册登录</p>
-</li>
-<li><p>点击左侧 <code>Servers</code> ，点击右侧蓝色的 <code>+</code> 号。</p>
-</li>
-<li><p>选择服务器类型</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">我选的是：Los Angeles / CentOS 7 x64 / $3.5</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Deploy Now</p>
-</li>
-<li><p>等服务器处于 <code>Running</code> 状态的时候，首先使用 <code>ssh</code> 登录服务器来判断 IP 是否被墙。</p>
-<p>【转】<a class="own-underline" href="https://www.vultryhw.com/ssh-forbidden/" target="_blank">Vultr 能 ping 通 SSH 连不上</a></p>
-<p>TCP阻断与ICMP阻断</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">首先科普一下，阻断（封/墙）的方式目前有两种，一种是 TCP 阻断，一种是 ICMP 阻断。</span><br><span class="line">ping 命令走的是 ICMP 协议，而 ssh 连接的时候是 TCP 协议。</span><br><span class="line">因此，Vultr 出现能 ping 通，ssh 却连不上的这种情况时，就是 ICMP 包被放行了，而 TCP 包却被拦截了，也就是 TCP 阻断。</span><br><span class="line">这是目前封禁比较常用的方法，我不禁你 IP，我让你端口用不了，自然也就什么都用不了了。</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<p><br></p>
-<h4 id="配置服务器"><a href="#配置服务器" class="headerlink" title="配置服务器"></a>配置服务器</h4><ol>
-<li><p>登录服务器 <code>ssh root@服务器IP</code> ，输入密码。</p>
-</li>
-<li><p>输入命令：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">wget --no-check-certificate  https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocksR.sh</span><br><span class="line">chmod +x shadowsocksR.sh</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>输入命令： <code>./shadowsocksR.sh 2&gt;&amp;1 | tee shadowsocksR.log</code> 。</p>
-<ol>
-<li><p>输入 <code>password</code> ，就是将来用于连接的密码。</p>
-</li>
-<li><p>选择端口号。</p>
-</li>
-<li><p>选择加密方式。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">aes-256-cfb</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>选择混淆。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">auth_aes128_md5</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>选择协议。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tls1.2_ticket_auth</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-</li>
-<li><p>【接下来是一段时间的安装过程，可以休息一下】</p>
-</li>
-<li><p>安装完成会显示服务器 ssr 信息。</p>
-</li>
-</ol>
-<p><br></p>
-<h4 id="配置客户端"><a href="#配置客户端" class="headerlink" title="配置客户端"></a>配置客户端</h4><p>。。。。。。</p>
-<p><br></p>
-<h4 id="加速"><a href="#加速" class="headerlink" title="加速"></a>加速</h4><p>【转】<a class="own-underline" href="https://www.cokemine.com/vpsyh.html" target="_blank">VPS 网络优化各种方法汇总 一键安装脚本</a></p>
-<ol>
-<li><p>BBR 加速器（也可以选择其他的）</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">wget --no-check-certificate https://github.com/teddysun/across/raw/master/bbr.sh</span><br><span class="line">chmod +x bbr.sh</span><br><span class="line">./bbr.sh</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>【安装并重启】</p>
-</li>
-<li><p>检测安装是否成功</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lsmod | grep bbr  //返回值有 tcp_bbr 模块即说明bbr已启动。</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<p><br></p>
-<h4 id="卸载"><a href="#卸载" class="headerlink" title="卸载"></a>卸载</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./shadowsocksR.sh uninstall</span><br></pre></td></tr></table></figure>
-<p><br></p>
-<h4 id="其他命令"><a href="#其他命令" class="headerlink" title="其他命令"></a>其他命令</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">启动：/etc/init.d/shadowsocks start</span><br><span class="line">停止：/etc/init.d/shadowsocks stop</span><br><span class="line">重启：/etc/init.d/shadowsocks restart</span><br><span class="line">状态：/etc/init.d/shadowsocks status</span><br><span class="line"></span><br><span class="line">配置文件路径：/etc/shadowsocks.json</span><br><span class="line">日志文件路径：/var/log/shadowsocks.log</span><br><span class="line">代码安装目录：/usr/local/shadowsocks</span><br></pre></td></tr></table></figure>
-<hr>
-
-
-<p>【转】<a class="own-underline" href="https://www.freeluffy.com/vultr-vps-ss/" target="_blank">Vultr 搭建 SS 服务器图文教程</a></p>
-<p><br></p>
-<h2 id="搭建-ss"><a href="#搭建-ss" class="headerlink" title="搭建 ss"></a>搭建 ss</h2><p><br></p>
-<h4 id="配置服务器-1"><a href="#配置服务器-1" class="headerlink" title="配置服务器"></a>配置服务器</h4><ol>
-<li><p>登录服务器 <code>ssh root@服务器IP</code> ，输入密码。</p>
-</li>
-<li><p>输入命令：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">wget --no-check-certificate  https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks.sh</span><br><span class="line">chmod +x shadowsocks.sh</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>输入命令：<code>./shadowsocks.sh 2&gt;&amp;1 | tee shadowsocks.log</code> 。</p>
-<ol>
-<li><p>首先输入的是 <code>password</code> ，就是将来用于连接的密码。</p>
-</li>
-<li><p>接着选择端口号。</p>
-</li>
-<li><p>最后选择加密方式。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">aes-256-gcm</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-</li>
-<li><p>【接下来是一段时间的安装过程，可以休息一下】</p>
-</li>
-<li><p>安装完成会显示服务器 ss 信息。</p>
-</li>
-</ol>
-<hr>
-
-
-<p><br></p>
-<h2 id="更多参考"><a href="#更多参考" class="headerlink" title="更多参考"></a>更多参考</h2><div class="div-message div-desc" style="padding: 0 0 25px 10px ">
-    <br>
-    <a class="own-underline" href="https://deeponion.org/community/threads/vpnss-ssr.901/" target="_blank">Vpn 与 ss/ssr 的区别</a><br>
-    <a class="own-underline" href="https://blog.csdn.net/mmcooo/article/details/80094194" target="_blank">SSR 高阶协议与混淆的使用</a><br>
-    <a class="own-underline" href="https://juejin.im/entry/5b03ca66518825426d2d753e" target="_blank">关于一次 Vultr 搭建酸酸乳的详细教程</a><br>
-    <a class="own-underline" href="https://github.com/shadowsocksr-backup/shadowsocks-rss/blob/master/ssr.md" target="_blank">ShadowsocksR 协议插件文档</a><br>
-    <a class="own-underline" href="https://github.com/shadowsocksr-backup/shadowsocks-rss/wiki/Server-Setup" target="_blank">ShadowsocksR 服务端安装教程</a><br>
-    <a class="own-underline" href="https://www.vultryhw.com/vultr-all-guides/" target="_blank">Vultr 教程整理页</a>
-</div>
-
-
-<hr>
-
-
-<p><br></p>
-<h2 id="其他问题"><a href="#其他问题" class="headerlink" title="其他问题"></a>其他问题</h2><p><br> </p>
-<h4 id="CentOS-查看端口占用情况和开启端口命令"><a href="#CentOS-查看端口占用情况和开启端口命令" class="headerlink" title="CentOS 查看端口占用情况和开启端口命令"></a>CentOS 查看端口占用情况和开启端口命令</h4><p>【转】<a class="own-underline" href="https://www.centos.bz/2018/03/centos查看端口占用情况和开启端口命令/" target="_blank">CentOS 查看端口占用情况和开启端口命令</a></p>
-<ul>
-<li><p>列出所有端口</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netstat -ntlp</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p><br> </p>
-<h4 id="CentOS7-使用-firewalld-打开关闭防火墙与端口"><a href="#CentOS7-使用-firewalld-打开关闭防火墙与端口" class="headerlink" title="CentOS7 使用 firewalld 打开关闭防火墙与端口"></a>CentOS7 使用 firewalld 打开关闭防火墙与端口</h4><p>【转】<a class="own-underline" href="https://www.cnblogs.com/moxiaoan/p/5683743.html" target="_blank">CentOS7 使用 firewalld 打开关闭防火墙与端口</a></p>
-<ul>
-<li><p>添加端口（以 80 端口为例）</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">firewall-cmd --zone=public --add-port=80/tcp --permanent</span><br><span class="line"><span class="comment">## --permanent 永久生效，没有此参数重启后失效</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>重新载入</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">firewall-cmd --reload</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>查看</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">firewall-cmd --zone= public --query-port=80/tcp</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>删除</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">firewall-cmd --zone= public --remove-port=80/tcp --permanent</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p><br> </p>
-<h4 id="centos7-0-没有-netstat-和-ifconfig-命令问题"><a href="#centos7-0-没有-netstat-和-ifconfig-命令问题" class="headerlink" title="centos7.0 没有 netstat 和 ifconfig 命令问题"></a>centos7.0 没有 netstat 和 ifconfig 命令问题</h4><p>【转】<a class="own-underline" href="https://blog.csdn.net/looksun/article/details/49562043" target="_blank">centos7.0 没有 netstat 和 ifconfig 命令问题</a></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">yum search ifconfig</span><br><span class="line"><span class="comment">## 通过 yum search 这个命令我们发现 ifconfig 这个命令是在 net-tools.x86_64 这个包里，</span></span><br><span class="line"><span class="comment">## 接下来我们安装这个包就行了</span></span><br><span class="line">yum install net-tools</span><br></pre></td></tr></table></figure>
-<p><br> </p>
-<h4 id="Centos7-开启-SSH-服务"><a href="#Centos7-开启-SSH-服务" class="headerlink" title="Centos7 开启 SSH 服务"></a>Centos7 开启 SSH 服务</h4><p>【转】<a class="own-underline" href="https://blog.csdn.net/u010085423/article/details/78157091/" target="_blank">Centos7 开启 SSH 服务</a></p>
-<ol>
-<li><p>查看本机是否安装SSH软件包</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rpm -qa | grep ssh</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>如果没有，则需要安装</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install openssh-server</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>开启 SSH 服务</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service sshd start</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>查看TCP 22端口是否打开</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netstat -ntpl | grep 22</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<p><br> </p>
-<h4 id="删除-ssh-中旧的-RSA-key"><a href="#删除-ssh-中旧的-RSA-key" class="headerlink" title="删除 ssh 中旧的 RSA key"></a>删除 ssh 中旧的 RSA key</h4><p>【转】<a class="own-underline" href="https://blog.csdn.net/sloan6/article/details/41984391" target="_blank">删除 ssh 中旧的 RSA key</a></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -R IP</span><br></pre></td></tr></table></figure>
-<p><br> </p>
-<h4 id="V2Ray-配置指南"><a href="#V2Ray-配置指南" class="headerlink" title="V2Ray 配置指南"></a>V2Ray 配置指南</h4><p>【转】<a class="own-underline" href="https://toutyrater.github.io/?q=#v2ray-%E9%85%8D%E7%BD%AE%E6%8C%87%E5%8D%97" target="_blank">V2Ray 配置指南</a></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">听说这个好😂</span><br></pre></td></tr></table></figure>
-
-      
+      <div style="border-left: 1px solid black;padding: 10px;background: #eaeaea;">
+        
+          搭建 SSR，翻越 Q，看风景
+          <!-- 
+            <a class="article-more-a" href="/2018/08/29/看Q外的风景/#more">more >></a>
+           -->
+        
+      </div>
 
       
     </div>
@@ -1406,91 +823,14 @@ y = \dfrac{1}{ \sqrt{x} }</script><p>对等式的两边取二进制对数有</p>
       </header>
     
     <div class="article-entry" itemprop="articleBody">
-      
-        <p>【转自 Shelton Lee 的博客】<a class="own-underline" href="http://sheltonlee.cn/2018/01/29/hexo-blog/" target="_blank">Shelton Lee</a></p>
-<h4 id="本地博客仓库"><a href="#本地博客仓库" class="headerlink" title="本地博客仓库"></a>本地博客仓库</h4><ul>
-<li><p>安装 Node</p>
-</li>
-<li><p>安装 Hexo</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo npm install -g hexo</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>初始化博客</p>
-<p>在本地建立一个文件夹作为存放博客的仓库（名字任意），例如 <code>MyBlog</code> 。</p>
-<p>进入文件夹，执行初始化。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ mkdir MyBlog</span><br><span class="line">$ <span class="built_in">cd</span> MyBlog</span><br><span class="line">$ hexo init</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>生成静态文件</p>
-<p>使用 <code>hexo g</code> 或 <code>hexo generate</code> 命令生成静态页面。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo g</span><br></pre></td></tr></table></figure>
-<ul>
-<li><p>本地启动服务器</p>
-<p>使用 <code>hexo s</code> 或 <code>hexo server</code> 启动本地服务器，可以在本地查看、调试博客。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo s</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>浏览器输入 <code>http://localhost:4000</code> 即可查看</p>
-</li>
-<li><p>使用组合键 <code>ctrl + c</code> 关闭本地服务器</p>
-</li>
-</ul>
-</li>
-<li><p>监视文件变动</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate --watch</span><br><span class="line"><span class="comment"># or</span></span><br><span class="line">$ hexo g -w</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p><br></p>
-<h4 id="Github-托管"><a href="#Github-托管" class="headerlink" title="Github 托管"></a>Github 托管</h4><ul>
-<li><p>安装 Git</p>
-</li>
-<li><p>拥有一个 Github 账户</p>
-</li>
-<li><p>建立托管仓库</p>
-<p>仓库的名字必须是 <code>your_github_username.github.io</code> 。</p>
-<p>例如我的 Github 账户名是 <code>WaterH2P</code> ，我的仓库名称就是 <code>WaterH2P.github.io</code> （暂时不清楚大小写是否敏感）。</p>
-</li>
-<li><p>Github 仓库与本地博客仓库建立关联。</p>
-<ul>
-<li><p>打开本地博客仓库配置文件 <code>_config.yml</code>。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">// 本地博客仓库目录结构如下</span><br><span class="line">MyBlog</span><br><span class="line">　｜</span><br><span class="line">　｜－－ node_modules</span><br><span class="line">　｜－－ public</span><br><span class="line">　｜－－ scaffolds</span><br><span class="line">　｜－－ source</span><br><span class="line">　｜－－ themes</span><br><span class="line">　｜－－ db.json</span><br><span class="line">　｜－－ _config.yml</span><br><span class="line">　｜－－ package.json</span><br></pre></td></tr></table></figure>
-<p>将配置文件中 <code>deploy</code> 相关字段修改为</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repository: https://github.com/your_github_username/your_github_username.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
-<p>执行以下命令使用 Git 部署</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-deployer-git --save</span><br><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>打开 <code>http://your_github_username.github.io/</code> 就可以查看博客了。</p>
-</li>
-</ul>
-</li>
-<li><p>添加博文</p>
-<p>将文章放在 <code>MyBlog/source/_posts</code> 文件夹下即可，文章支持Markdown格式。</p>
-<p>然后生成静态页面并部署，具体命令如下：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo clean</span><br><span class="line">$ hexo generate</span><br><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>或者用一条命令</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</span><br><span class="line"><span class="comment"># or</span></span><br><span class="line">$ hexo g -d</span><br></pre></td></tr></table></figure>
-<p>接着就可以看到你的博客内容更新了。</p>
-</li>
-</ul>
-<p><br></p>
-<h4 id="使用主题"><a href="#使用主题" class="headerlink" title="使用主题"></a>使用主题</h4><p><a class="own-underline" href="https://github.com/hexojs/hexo/wiki/Themes" target="_blank">Hexo 主题列表</a></p>
-<p><br></p>
-<h4 id="绑定个人域名"><a href="#绑定个人域名" class="headerlink" title="绑定个人域名"></a>绑定个人域名</h4><ul>
-<li><p>购买域名（我是在腾讯云注册的域名）</p>
-</li>
-<li><p>添加 CNAME 文件</p>
-<p>在博客所在的主目录下的 source 文件夹下创建 CNAME 文件，文件内容写你注册的顶级域名</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">example.com</span><br></pre></td></tr></table></figure>
-<p>我写的就是 <code>waterh2p.cn</code> 。</p>
-<p>然后执行以下命令部署到Github上</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo g &amp;&amp; hexo d</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>DNS 配置</p>
-<p>在 <code>腾讯云控制台 / 我的域名 / 域名解析</code> 添加记录</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">主机记录        记录类型        记录值                              TTL</span><br><span class="line">@                      A                   185.199.110.153            600</span><br><span class="line">www               CNAME          WaterH2P.github.io.     600</span><br></pre></td></tr></table></figure>
-<p>其中 <code>185.199.110.153</code> 是 <code>ping WaterH2P.github.io</code> 得到的 IP 地址。</p>
-<p>可以 <code>ping your_github_username.github.io</code> 获得自己的 IP 地址。</p>
-<p>然后等几分钟，具体几分钟不知道。我等了好久好久。。。</p>
-</li>
-</ul>
-
-      
+      <div style="border-left: 1px solid black;padding: 10px;background: #eaeaea;">
+        
+          此文介绍使用 Hexo + Github 架构搭建个人博客的详细步骤
+          <!-- 
+            <a class="article-more-a" href="/2018/06/29/hexo 使用 Hexo 搭建 Blog/#more">more >></a>
+           -->
+        
+      </div>
 
       
     </div>
@@ -1565,35 +905,14 @@ y = \dfrac{1}{ \sqrt{x} }</script><p>对等式的两边取二进制对数有</p>
       </header>
     
     <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="建库"><a href="#建库" class="headerlink" title="建库"></a>建库</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">DATABASE</span> databaseName</span><br><span class="line">	<span class="built_in">CHARACTER</span> <span class="keyword">SET</span> utf8</span><br><span class="line">	<span class="keyword">DEFAULT</span> <span class="built_in">CHARACTER</span> <span class="keyword">SET</span> utf8</span><br><span class="line">	<span class="keyword">COLLATE</span> utf8_general_ci</span><br><span class="line">	<span class="keyword">DEFAULT</span> <span class="keyword">COLLATE</span> utf8_general_ci ;</span><br></pre></td></tr></table></figure>
-<p><br></p>
-<h3 id="建表"><a href="#建表" class="headerlink" title="建表"></a>建表</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">DROP</span> <span class="keyword">TABLE</span> <span class="keyword">IF</span> <span class="keyword">EXISTS</span> tableName;</span><br><span class="line"></span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> tableName(</span><br><span class="line">...</span><br><span class="line">)<span class="keyword">ENGINE</span>=<span class="keyword">InnoDB</span> <span class="keyword">DEFAULT</span> <span class="keyword">CHARSET</span>=utf8;</span><br></pre></td></tr></table></figure>
-<p><br></p>
-<h3 id="连接"><a href="#连接" class="headerlink" title="连接"></a>连接</h3><ul>
-<li>jdbc</li>
-</ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.sql.Connection;</span><br><span class="line"><span class="keyword">import</span> java.sql.DriverManager;</span><br><span class="line"><span class="keyword">import</span> java.sql.SQLException;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">database</span> </span>&#123;</span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String URL = <span class="string">"jdbc:mysql://localhost:3306/hotel?useSSL=true&amp;characterEncoding=utf8"</span>;</span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String UNAME = <span class="string">"***"</span>;</span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String PWD = <span class="string">"***"</span>;</span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">static</span> Connection connect = <span class="keyword">null</span>;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">static</span>&#123;</span><br><span class="line">		<span class="keyword">try</span>&#123;</span><br><span class="line">			Class.forName(<span class="string">"com.mysql.jdbc.Driver"</span>);</span><br><span class="line">			<span class="comment">//加载MySQL JDBC驱动程序</span></span><br><span class="line">			connect = DriverManager.getConnection(URL,UNAME,PWD);</span><br><span class="line">		&#125;<span class="keyword">catch</span> (ClassNotFoundException e)&#123;</span><br><span class="line">			e.printStackTrace();</span><br><span class="line">		&#125;<span class="keyword">catch</span> (SQLException e)&#123;</span><br><span class="line">		      e.printStackTrace();</span><br><span class="line">		&#125;<span class="keyword">catch</span> (Exception e)&#123;</span><br><span class="line">			e.printStackTrace();</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">protected</span> <span class="keyword">static</span> Connection <span class="title">getInstance</span><span class="params">()</span></span>&#123;</span><br><span class="line">		<span class="keyword">return</span> connect;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><br></p>
-<h3 id="查询"><a href="#查询" class="headerlink" title="查询"></a>查询</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">String sql = <span class="string">"SELECT ... FROM tableName WHERE ..."</span>;</span><br><span class="line"><span class="keyword">try</span>&#123;</span><br><span class="line">  PreparedStatement pstmt = connect.prepareStatement(sql);</span><br><span class="line">  ResultSet rset = pstmt.executeQuery();</span><br><span class="line">  <span class="keyword">while</span>( rset.next() )&#123;</span><br><span class="line">    ...</span><br><span class="line">  &#125;</span><br><span class="line">  ptst.close()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><br></p>
-<h3 id="插入"><a href="#插入" class="headerlink" title="插入"></a>插入</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p><br></p>
-<h3 id="日期字段相减"><a href="#日期字段相减" class="headerlink" title="日期字段相减"></a>日期字段相减</h3><ul>
-<li>两个 DateTime 字段名分别为 beginDateTime，endDateTime</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">// 得到日期之间的秒数</span><br><span class="line">UNIX_TIMESTAMP(endDateTime) - UNIX_TIMESTAMP(beginDateTime)</span><br></pre></td></tr></table></figure>
-<ul>
-<li>两个字段都为Time类型</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">// 如果两个时间都在同一天，相减可以得到相差的秒数，但如果跨天，月，年都有问题</span><br><span class="line">TIME_TO_SEC(endDateTime) - TIME_TO_SEC(beginDateTime)</span><br></pre></td></tr></table></figure>
-<p><a href="https://segmentfault.com/q/1010000008617215" target="_blank" rel="noopener">mysql datetime 类型与java.util.Date类型的值如何比较</a></p>
-<p><a href="https://segmentfault.com/q/1010000003055302" target="_blank" rel="noopener">mysql中类型为datetime的时间比较</a></p>
-<p><br></p>
-<h3 id="字符串转-int-double"><a href="#字符串转-int-double" class="headerlink" title="字符串转 int / double"></a>字符串转 int / double</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">CAST(value as type);  </span><br><span class="line">CONVERT(value, type);</span><br><span class="line"></span><br><span class="line">type 可以是：</span><br><span class="line">	二进制:	BINARY    </span><br><span class="line">    字符型:	CHAR()，可带参数     </span><br><span class="line">    日期:		DATE     </span><br><span class="line">    时间: 	TIME     </span><br><span class="line">    日期时间型:DATETIME     </span><br><span class="line">    浮点数:	DECIMAL      </span><br><span class="line">    整数:		SIGNED     </span><br><span class="line">    无符号整数:UNSIGNED</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">eg:</span><br><span class="line">	CONVERT( value, DECIMAL(10,2) )</span><br><span class="line">		保留两位小数</span><br></pre></td></tr></table></figure>
-
-      
+      <div style="border-left: 1px solid black;padding: 10px;background: #eaeaea;">
+        
+          MySQL 的一些基本语法，以及与 Java 一起使用
+          <!-- 
+            <a class="article-more-a" href="/2018/06/20/Mysql/#more">more >></a>
+           -->
+        
+      </div>
 
       
     </div>
@@ -1763,15 +1082,15 @@ MathJax.Hub.Queue(function() {
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">nodejs</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">同步</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">markdown</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">CentOS</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">MongoDB</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1780,14 +1099,6 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">mysql</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">nodejs</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">同步</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1800,10 +1111,6 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">mathjax</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Parallels</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1828,6 +1135,18 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">windows</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Parallels</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">CentOS</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">MongoDB</a>
               </li>
              
               <li class="article-tag-list-item">
