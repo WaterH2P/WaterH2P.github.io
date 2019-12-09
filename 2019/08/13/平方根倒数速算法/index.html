@@ -281,7 +281,7 @@
     <section id="intro">
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-lg-10 col-md-11 col-sm-12">
+                <div class="col-lg-9 col-md-10 col-sm-122">
                     
 <span class="post-meta">
     <!-- blog 的 date -->
@@ -307,7 +307,7 @@
                 </div>
             </div>
             <div class="row justify-content-center">
-                <div class="col-lg-10 col-md-11 col-sm-12">
+                <div class="col-lg-9 col-md-10 col-sm-122">
                     <div class="div-message div-desc">
                         
                             <span>近似求解平方根倒数</span>
@@ -322,7 +322,7 @@
                 </div>
             </div>
             <div class="row justify-content-center">
-                <div class="col-lg-10 col-md-11 col-sm-12">
+                <div class="col-lg-9 col-md-10 col-sm-122">
                     <p>【参考维基百科】<a class="own-underline" href="http://en.wikipedia.org/wiki/Fast_inverse_square_root" target="_blank">平方根倒数速算法</a></p>
 <h2 id="源码"><a href="#源码" class="headerlink" title="源码"></a>源码</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">float</span> <span class="title">invSqrt</span><span class="params">(<span class="keyword">float</span> x)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">float</span> halfx = <span class="number">0.5f</span> * x;</span><br><span class="line">	<span class="keyword">float</span> y = x;</span><br><span class="line">	<span class="keyword">long</span> i = *(<span class="keyword">long</span>*)&amp;y;</span><br><span class="line">	i = <span class="number">0x5f3759df</span> - (i&gt;&gt;<span class="number">1</span>);</span><br><span class="line">	y = *(<span class="keyword">float</span>*)&amp;i;</span><br><span class="line">	y = y * (<span class="number">1.5f</span> - (halfx * y * y));</span><br><span class="line">	y = y * (<span class="number">1.5f</span> - (halfx * y * y));</span><br><span class="line">	<span class="keyword">return</span> y;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>该代码是先求出平方根倒数的近似值，然后使用牛顿迭代法进行精确。</p>
@@ -475,7 +475,7 @@ y = \dfrac{1}{ \sqrt{x} }</script><p>对等式的两边取二进制对数有</p>
 </div>
 
             <div class="row justify-content-center">
-                <div class="col-lg-10 col-md-11 col-sm-12">
+                <div class="col-lg-9 col-md-10 col-sm-122">
                     <script type="text/javascript"></script>
 
                 </div>
