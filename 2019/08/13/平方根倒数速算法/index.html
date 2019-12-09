@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+
+    
+<head>
+    <title>平方根倒数速算法 | H2P&#39;S BLOG</title>
+    <!-- Meta data -->
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="H2P'S BLOG">
+    <meta name="author" content="WaterH2P">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicon, (keep icon in root folder) -->
+    <link rel="Shortcut Icon" href="/img/wolf_small.png" type="image/ico">
+
+    <link rel="alternate" href="/atom.xml" title="H2P&#39;S BLOG" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/all.css" media="screen" type="text/css">
+    
+    <link rel="stylesheet" href="/highlightjs/vs.css" type="text/css">
+    
+
+    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
+    <script src="/js/jquery-3.3.1.min.js"></script>
+    <script src="/js/popper.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/vue.min.js"></script>
+
+    
+    
+    
+
+    <style>
+        .col-md-8.col-md-offset-2.opening-statement img{display:none;}
+        a:hover {
+            cursor: pointer;
+            color : #96d103;
+        }
+        a.own-underline { text-decoration:underline; }
+    </style>
+</head>
+
+    <!--
+    <body class="post-template">
+    -->
+<body id="index" class="lightnav animsition">
+    <!-- 返回页面顶端 -->
+    <div id="div-back-top" style="position: fixed; right: 20px; bottom: 25px; z-index: 5; display: none">
+        <a class="btn btn-grey" onclick="back_to_top()" title="返回顶端"><strong>↑</strong></a>
+    </div>
+
+    
+    <!-- ============================ Off-canvas navigation ============================ -->
+    <!-- More 显示内容 -->
+    <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
+        <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
+            <img src="/img/close.png" alt="Close"/>
+        </div>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu">
+            <li><a href="/" class="animsition-link" title="Home">Home</a></li>
+            <li><a href="/archives" class="animsition-link" title="archive">archives</a></li>
+            <!-- Dropdown Menu -->
+			 
+            
+            
+            <li>
+                <a class="sb-toggle-submenu">Friends<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                    <li><a href="http://yellowfefe.cn/" class="animsition-link" target="_blank">Yellowfefe</a></li>
+                    
+                    <li><a href="http://sheltonlee.cn/" class="animsition-link" target="_blank">SheltonLee</a></li>
+                    
+                </ul>
+            </li>
+            
+        </ul>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu secondary">
+            
+            <li><a href="/about.html" class="animsition-link" title="about">About</a></li>
+            <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li>
+        </ul>
+    </div>
+    <!-- ============================ END Off-canvas navigation ============================ -->
+
+    <!-- 首页顶端中间显示的内容 -->
+    <div id="sb-site">
+        <!-- ============================ Header & Logo bar ============================ -->
+        <div class="nav" style="width: 100%">
+            <div class="container-fluid">
+                <div class="row justify-content-center">
+                    <!-- Nav logo -->
+                    
+                        <div class="col-lg-2 col-md-2 col-sm-2 col-12" style="padding: 0; vertical-align: center">
+                            <a href="/" title="Logo" class="navbar-brand" style="padding: 0; margin-left: 25px; height:100%">
+                                <img src="/img/wolf_orange_small.png" alt="Logo" style="width: 40px"/>
+                            </a>
+                        </div>
+                    
+                    <!-- Nav logo -->
+                    <!-- <div class="mx-auto"> -->
+                    <div class="col-lg-8 col-md-8 col-sm-8 col-12" style="padding: 0; vertical-align: center">
+                        <ul class="nav justify-content-center">
+                            <li class="nav-item nav-link border-right-1 border-grey" style="padding: 0 16px; margin: 8px 0">
+                                <a href="/">H2P'S BLOG</a>
+                            </li>
+                            
+                                <li class="nav-item nav-link border-right-1 border-grey" style="padding: 0 16px; margin: 8px 0">
+                                    <a href="https://github.com/WaterH2P" title="Github" target="_blank"><i class="icon-github"></i></a>
+                                </li>
+                            
+                            
+                            <li class="nav-item nav-link">
+                                <span>Welcome!</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-12" style="padding: 0; vertical-align: center">
+                        <div class="learnmore sb-toggle-right">More</div>
+                        <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
+                            <span class="icon-bar before"></span>
+                            <span class="icon-bar main"></span>
+                            <span class="icon-bar after"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ============================ END Header & Logo bar ============================ -->
+    </div>
+
+    <!-- ============================ Tap Blog's Links ============================ -->
+    <!-- <div id="div-side-navigation-right" class="col-lg-3 col-md-3" style="position: fixed; top: 46px; right: 0; padding-top: 0; padding-left: 50px; z-index: 5" v-if="show">
+        <div class="list-group" style="border-radius: 0; border: 1px solid rgba(0, 0, 0, 0.1)">
+            <a class="list-group-item list-group-item-action" :class="{linkFocus:aShow}" style="padding: 1px 20px; border: 0; border-radius: 0; text-align: center" @click="showALinks()">
+                Links
+            </a>
+            <a class="list-group-item list-group-item-action" :class="{linkFocus:tagShow}" style="padding: 1px 20px; border: 0; border-radius: 0; text-align: center" @click="showTagLinks">
+                Tag Links
+            </a>
+        </div>
+        <div class="width-100-pct height-5 visibility-hidden"></div>
+        <div class="list-group" style="border-radius: 0; border: 1px solid rgba(0, 0, 0, 0.1)">
+            <transition 
+                enter-active-class="animated slideInUp"
+                leave-active-class="">
+                <div v-if="aShow">
+                    <div class="list-group-item list-group-item-action" style="padding: 1px 20px; border: 0; border-radius: 0" v-for="link in links">
+                        <a :href="link.href" :title="link.text">{{link.abbrText}}</a>
+                    </div>
+                </div>
+            </transition>
+            <transition
+                enter-active-class="animated slideInUp"
+                leave-active-class="">
+                <div v-if="tagShow">
+                    <div class="list-group-item list-group-item-action" style="padding: 1px 20px; border: 0; border-radius: 0" v-for="link in tags">
+                        <a :href="link.href" :title="link.text">{{link.abbrText}}</a>
+                    </div>
+                </div>
+            </transition>
+        </div>
+    </div>
+
+    <style>
+        .linkFocus {
+            background-color: #5fefe8;
+            user-select:none;
+        }
+        .linkFocus:hover {
+            /* cursor: auto; */
+            background-color: #5fefe8;
+        }
+
+        .noFocus {
+            user-select:none;
+            background-color: #fff;
+        }
+        .noFocus:hover {
+            cursor: auto;
+            user-select:none;
+            background-color: #fff;
+        }
+    </style>
+
+    <script>
+        'use strict';
+        
+        var min_width = 1050;
+        $(function(){
+            var width = $(window).width();
+            if( width > min_width ){
+                div_side_navigation_right.show = true;
+            }
+            else {
+                div_side_navigation_right.show = false;
+            }
+
+            // 对于链接提取
+            var aCount = 0;
+            var tagCount = 0;
+            var hrefFilter = ['//go.kieran.top', '/archives', '/about.html', '/atom.xml', 'http://yellowfefe.cn/', 'http://sheltonlee.cn/'];
+            var hrefFound = [];
+            $('a').each(function(index, element){
+                var href = $(element).attr('href');
+                var text = $(element).text().toString();
+
+                if( !href || $.inArray(href, hrefFilter)>-1 || $.inArray(href, hrefFound)>-1 || text.indexOf('<img')>-1 || text.indexOf('Read More')>-1 || text.length===0 ){
+                    return;
+                }
+
+                var isTag = href.indexOf('/tag')>-1 && href.indexOf('/page/')<0;
+                var currentIndex = isTag ? ++aCount : ++tagCount;
+                hrefFound[aCount+tagCount] = href;
+                $(function(index){
+                    if( index<10 ){
+                        text = index + '.  ' +text;
+                    }
+                    else{
+                        text = index + '. ' +text
+                    }
+                    var abbrText = text;
+                    var link = {'href':href, 'text':text, 'abbrText': abbrText};
+                    if( !isTag ){
+                        div_side_navigation_right.links.push(link);
+                    }
+                    else{
+                        div_side_navigation_right.tags.push(link);
+                    }
+                }(currentIndex));
+            });
+        });
+
+        $(window).resize(function(){
+            var width = $(window).width();
+            if( width > min_width ){
+                div_side_navigation_right.show = true;
+            }
+            else {
+                div_side_navigation_right.show = false;
+            }
+        });
+
+        var div_side_navigation_right = new Vue({
+            el : '#div-side-navigation-right',
+            data : {
+                show : true,
+                aShow : true,
+                tagShow : false,
+                links : [],
+                tags :[]
+            },
+            methods : {
+                showALinks : function(){
+                    if( !div_side_navigation_right.tagShow ){
+                        return;
+                    }
+                    setTimeout(function(){
+                        div_side_navigation_right.aShow = true;
+                    }, 50);
+                    div_side_navigation_right.tagShow = false;
+                },
+                showTagLinks : function(){
+                    if( !div_side_navigation_right.aShow ){
+                        return;
+                    }
+                    div_side_navigation_right.aShow = false;
+                    setTimeout(function(){
+                        div_side_navigation_right.tagShow = true;
+                    }, 50);
+                }
+            }
+        });
+    </script> -->
+    <!-- ============================ END Tap Blog's Links ============================ -->
+    
+    
+    <section id="intro">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 col-md-10 col-sm-12">
+                    
+<span class="post-meta">
+    <!-- blog 的 date -->
+    
+        <span>
+            2019-08-13
+        </span>
+        <span>&nbsp;&nbsp;</span>
+    
+    <!-- blog 的 tags -->
+    
+    
+    
+    <span class="tag is-info">
+        <a href='/tags/maths/'>maths</a>
+    </span>
+    
+    
+    
+</span>
+
+                    <h1>平方根倒数速算法</h1>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8 col-md-10 col-sm-12">
+                    <div class="div-message div-desc">
+                        
+                            <span>近似求解平方根倒数</span>
+                            <br>
+                        
+                        
+                            <span>最近更新：2019-08-14</span>
+                            <br>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8 col-md-10 col-sm-12">
+                    <p>【参考维基百科】<a class="own-underline" href="http://en.wikipedia.org/wiki/Fast_inverse_square_root" target="_blank">平方根倒数速算法</a></p>
+<h2 id="源码"><a href="#源码" class="headerlink" title="源码"></a>源码</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">float</span> <span class="title">invSqrt</span><span class="params">(<span class="keyword">float</span> x)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">float</span> halfx = <span class="number">0.5f</span> * x;</span><br><span class="line">	<span class="keyword">float</span> y = x;</span><br><span class="line">	<span class="keyword">long</span> i = *(<span class="keyword">long</span>*)&amp;y;</span><br><span class="line">	i = <span class="number">0x5f3759df</span> - (i&gt;&gt;<span class="number">1</span>);</span><br><span class="line">	y = *(<span class="keyword">float</span>*)&amp;i;</span><br><span class="line">	y = y * (<span class="number">1.5f</span> - (halfx * y * y));</span><br><span class="line">	y = y * (<span class="number">1.5f</span> - (halfx * y * y));</span><br><span class="line">	<span class="keyword">return</span> y;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>该代码是先求出平方根倒数的近似值，然后使用牛顿迭代法进行精确。</p>
+<p><br></p>
+<h2 id="浮点数"><a href="#浮点数" class="headerlink" title="浮点数"></a>浮点数</h2><h3 id="浮点数的存储格式"><a href="#浮点数的存储格式" class="headerlink" title="浮点数的存储格式"></a>浮点数的存储格式</h3><p><img src="https://github.com/WaterH2P/WaterH2P.github.io/raw/master/img/blogImg/storage%20format%20of%20float.png" width="80%"></p>
+<ul>
+<li>首位符号位</li>
+<li>8 位表示经过<strong>偏移处理</strong>后的指数，表示范围为 $[-127, \, 128]$ </li>
+<li>最后 23 位表示有效数字中除最高位外的其余数字</li>
+</ul>
+<script type="math/tex; mode=display">
+x = (-1)^{S_i} \cdot (1 + m) \cdot 2^{E - B}</script><ul>
+<li>m 表示有效数字的尾数（$0 \le m \lt 1$）</li>
+<li>偏移量 $B = 127$ </li>
+<li>以上图为例<ul>
+<li>$m = 2^{-2} = 0.25$ </li>
+<li>$E - B = 4 + 8 + 16 + 32 + 64 - 127 = -3$ </li>
+<li>$x = (1 +0.25) \cdot 2^{-3} = 0.15625$ </li>
+</ul>
+</li>
+</ul>
+<p><br></p>
+<h3 id="将浮点数取别名存储为整数"><a href="#将浮点数取别名存储为整数" class="headerlink" title="将浮点数取别名存储为整数"></a>将浮点数取别名存储为整数</h3><p>该整数的数值为</p>
+<script type="math/tex; mode=display">
+I = E \times 2^{23} + M</script><ul>
+<li>$E$ 表示指数</li>
+<li>$M$ 表示有效数字</li>
+<li>以上图为例<ul>
+<li>$E = 124$，$M = 2^{21}$ </li>
+<li>$I = 124 \times 2^{23} + 2^{21}$ </li>
+</ul>
+</li>
+</ul>
+<h3 id="魔术数字"><a href="#魔术数字" class="headerlink" title="魔术数字"></a>魔术数字</h3><div class="table-container">
+<table>
+<thead>
+<tr>
+<th>Sign（符号）</th>
+<th>Exponent（指数）</th>
+<th>Mantissa（尾数）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1 位</td>
+<td>$b$ 位</td>
+<td>$(n - 1 -b)$ 位</td>
+</tr>
+</tbody>
+</table>
+</div>
+<ul>
+<li>一共 $n$ 位</li>
+<li>浮点数表示实际数值时<ul>
+<li>$x = (1 + m_x) \cdot 2^{e_x}$ </li>
+</ul>
+</li>
+<li>若为整数表示时<ul>
+<li>$I_x = E_x L + M_x$ </li>
+<li>$L = 2^{n - 1 -b}$ </li>
+</ul>
+</li>
+<li>导出<ul>
+<li>$m_x = \dfrac{M_x}{L}$ </li>
+<li>$e_x = E_x - B$，其中 $B = 2^{b-1} - 1$ </li>
+</ul>
+</li>
+</ul>
+<script type="math/tex; mode=display">
+y = \dfrac{1}{ \sqrt{x} }</script><p>对等式的两边取二进制对数有</p>
+<ul>
+<li>$\log_2 (y) = - \dfrac{1}{2} \log_2 (x)$ </li>
+<li>带入 $x = (1 + m_x) \cdot 2^{e_x}$ <ul>
+<li>$\log_2 (1 + m_y) + e_y = - \dfrac{1}{2} \log_2 (1 + m_x) - \dfrac{1}{2} e_x$ </li>
+<li>因为 $0 \lt m_y \lt 1$，$0 \lt m_x \lt 1$ <ul>
+<li>且 $0 \lt x \lt 1$ 时，$\log_2(1 + x) \approx x$ </li>
+<li>设 $0 \le \sigma \le \dfrac{1}{3}$，$\log_2(1 + x) \approx x +\sigma$ </li>
+<li>当近似值 $R = {\rm 0x5f3759df}$ 时，$\sigma \approx 0.04504618758$ </li>
+</ul>
+</li>
+<li>将 $\log_2(1 + x) \approx x +\sigma$ 代入上式<ul>
+<li>$m_y + \sigma + e_y = - \dfrac{1}{2} m_x - \dfrac{1}{2} \sigma - \dfrac{1}{2} e_x$ </li>
+</ul>
+</li>
+<li>带入 $M_x$，$E_x$，$B$ 和 $L$ <ul>
+<li>$M_x + (E_y - B) L = - \dfrac{1}{2} M_x - \dfrac{1}{2} (E_x - B) L - \dfrac{3}{2} \sigma L$ </li>
+<li>$E_y L +M_y = \dfrac{3}{2} (B - \sigma) L - \dfrac{1}{2} (E_x L + M_x)$ </li>
+<li>$\begin{array}{l} I_y &amp;= \dfrac{3}{2} (B - \sigma) L - \dfrac{1}{2} I_x \\ &amp;= R - \dfrac{1}{2} I_x \end{array}$ </li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">R = <span class="number">0x5f3759df</span> = <span class="number">0</span> <span class="number">10111110</span> <span class="number">01101110101100111011111</span> = <span class="number">1597463007</span>;</span><br></pre></td></tr></table></figure>
+<p>$\dfrac{3}{2} (B - \sigma) L = \dfrac{3}{2} B L - \dfrac{3}{2} \sigma L$ </p>
+<ul>
+<li><p>$\begin{array}{l} \dfrac{3}{2} (B - \sigma) L &amp;= \dfrac{3}{2} B L - \dfrac{3}{2} \sigma L \\\\ &amp;= \dfrac{3}{2} ( 2^{b-1} - 1 ) 2^{n-1-b} - \dfrac{3}{2} \sigma L \\\\ &amp;= 3 \cdot 2^{n-3} - \dfrac{3}{2} L - \dfrac{3}{2} \sigma L \\\\ &amp;= 3 \cdot 2^{n-3} - \dfrac{3}{2} (1 + \sigma) L \\\\ \end{array}$ 且 $n = 32$，$b = 8$ </p>
+<ul>
+<li>$3 \cdot 2^{n-3} = 3 \cdot 2^{29} = 1610612736$ </li>
+<li>$L = 2^{b-1} -1 = 127$ <ul>
+<li>$190.5 \le \dfrac{3}{2} (1 + \sigma) L \le 254$ </li>
+</ul>
+</li>
+<li>$1610612545.5 \le 3 \cdot 2^{n-3} - \dfrac{3}{2} (1 + \sigma) L \le 1610612482$ </li>
+</ul>
+</li>
+<li><p>所以 $\dfrac{3}{2} (B - \sigma) L \approx R$ </p>
+</li>
+</ul>
+<p><br></p>
+<h2 id="牛顿迭代法"><a href="#牛顿迭代法" class="headerlink" title="牛顿迭代法"></a>牛顿迭代法</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">近似求解方程的方法</span><br></pre></td></tr></table></figure>
+<ul>
+<li>假设求解方程 $f(x) = 0$，且解为 $x = x_0$ </li>
+<li>在 $x_0$ 旁取一近似点 $x_1$ <ul>
+<li>过 $(x_1, \, f(x_1))$ 作 $f(x)$ 的切线，切线方程为 $y = f(x_1) + f’(x_1)(x - x_1)$ </li>
+<li>切线与 x 轴的交点为 $x_2 = x_1 - \dfrac{ f(x_1) }{ f’(x_1) }$ </li>
+</ul>
+</li>
+<li>将 $x_2$ 作为新的近似点进行迭代，直到 $x_{n+1} - x_n &lt; \text{阈值}$ </li>
+</ul>
+<h3 id="案例"><a href="#案例" class="headerlink" title="案例"></a>案例</h3><p>设 $f(x) = \dfrac{1}{ \sqrt{x} }$，求解 $x = x’$ 时，$f(x’) \approx  ?$ </p>
+<ul>
+<li>即求解 $\dfrac{1}{y^2} - x = 0$ 的解，即 $f(y) = \dfrac{1}{y^2} - x = 0$ </li>
+<li>设求出某一近似点为 $y_n$，则更精确的值为 $y_{n+1} = y_n - \dfrac{ f(y_n) }{ f’(y_n) }$ <ul>
+<li>$f(y_n) = \dfrac{1}{y_n^2} - x’$，$f’(y_{n+1}) = - \dfrac{2}{y_n^3}$ </li>
+</ul>
+</li>
+<li>所以 $y_{n+1} = \dfrac{ y_n (3 - x’ y_n^2) }{2} = y_n \left(1.5 - \dfrac{1}{2} x’ y_n^2 \right)$ </li>
+</ul>
+
+                </div>
+            </div>
+            <div class="clearfix"></div>
+            <hr class="nogutter">
+            
+<!-- 当前博客前后两篇博客 -->
+<div class="row justify-content-center">
+    <nav class="m-pagination col-md-8 col-sm-24" role="pagination">
+        
+        <a class="float-left" href="/2019/11/18/Parallels Desktop 搭建本地小集群/" style="float: left;">
+            ← Parallels Desktop 搭建本地小集群
+        </a>
+        
+        
+        <a class="float-right" href="/2019/04/17/Node.js 同步问题/">
+            Node.js 同步问题 →
+        </a>
+        
+    </nav>
+</div>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-8 col-md-10 col-sm-12">
+                    <script type="text/javascript"></script>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Catalog of Blog Titles -->
+        <!-- <div id="div-side-navigation-left" class="col-lg-3 col-md-3" style="position: fixed; top: 46px; left: 0; padding-top: 0; padding-right: 50px" v-if="show">
+            <div class="list-group" style="border-radius: 0; border: 1px solid rgba(0, 0, 0, 0.1)">
+                <a class="list-group-item list-group-item-action" :class="{linkFocus:header.fillColor}" style="padding: 1px 20px; border: 0; border-radius: 0" :href="IDToHref(header.id)" v-for="header in headers" @click="showChildren(header.index)">{{header.text}}</a>
+            </div>
+            <div class="width-100-pct height-5 visibility-hidden"></div>
+            <div class="list-group" style="border-radius: 0; border: 1px solid rgba(0, 0, 0, 0.1)">
+                <div v-for="header in headers">
+                    <transition 
+                        enter-active-class="animated slideInUp"
+                        leave-active-class="">
+                        <div v-if="header.show">
+                            <a class="list-group-item list-group-item-action" style="padding: 1px 20px; border: 0; border-radius: 0" :href="IDToHref(child.id)" v-for="child in header.children">{{child.text}}</a>
+                        </div>
+                    </transition>
+                </div>
+            </div>
+        </div> -->
+        <!-- End Catalog of Blog Titles -->
+
+    </section>
+    
+    <!-- Catalog of Blog Titles Script -->
+    <!-- <script>
+        'use strict';
+
+        var min_width = 1050;
+        $(function(){
+            var width = $(window).width();
+            if( width > min_width ){
+                div_side_navigation_left.show = true;
+            }
+            else {
+                div_side_navigation_left.show = false;
+            }
+            
+            // 对于目录索引
+            var preH2 = undefined;
+            var num_map = [ '零', '一', '二', '三', '四', '五', '六', '七', '八', '九' ];
+            var id_exist = [];
+            var h2s = $('h2');
+            var numOfH2 = h2s.length;
+            for(var i=0; i<numOfH2; i++){
+                var id_index = 0;
+
+                var h2 = h2s[i];
+                var text = $(h2).text().toString();
+                var header = text.indexOf('、') > 0 ? text.split('、')[1] : 
+                    text.indexOf('.') > 0 ? text.split('.')[1] : text;
+                text = num_map[i + 1] + '. ' + header + '';
+                var id = text + '-' + id_index + '';
+                while( id_exist.indexOf(id) > -1 ){
+                    id_index++;
+                    id = text + '-' + id_index + '';
+                    if( id_index > 5 ){
+                        console.log('more than five h2-element named likewise');
+                        break;
+                    }
+                }
+                id_exist[id_exist.length] = id;
+                $(h2).attr('id', id);
+
+                var h4s = [];
+                if(i<numOfH2-1){
+                    var h2Next = h2s[i+1];
+                    h4s = $(h2).nextUntil(h2Next, 'h4');
+                }
+                else{
+                    h4s = $(h2).nextAll('h4');
+                }
+
+                var h2Children = [];
+                h4s.each(function(index, element){
+                    var childId_index = 0;
+
+                    var childText = $(element).text().toString();
+                    var childHeader = childText.indexOf('、') > 0 ? childText.split('、')[1] : 
+                        childText.indexOf('.') > 0 ? childText.split('.')[1] : childText;
+                    childText = (index+1) + '. ' + childHeader + '';
+                    var childId = childText + '-' + childId_index + '';
+                    while( id_exist.indexOf(childId) > -1 ){
+                        childId_index++;
+                        childId = childText + '-' + childId_index + '';
+                        if( childId_index > 5 ){
+                            console.log('more than five h4-element named likewise');
+                            break;
+                        }
+                    }
+                    id_exist[id_exist.length] = childId;
+                    $(element).attr('id', childId);
+                    h2Children[index] = {'id':childId, 'text': childText};
+                });
+                var fillColor = i===0 ? true : false;
+                var show = i===0 ? true : false;
+                var header = {'id':id, 'text':text, 'index':i, 'fillColor':fillColor, 'show':show, 'children': h2Children};
+
+                div_side_navigation_left.headers.push(header);
+            }
+
+            $(window).scroll(function(){
+                var height_work = $(window).height();
+                var scrollTop = $(window).scrollTop();
+                var h2s = $('h2');
+                for( var i=0; i<h2s.length; i++ ){
+                    var element = h2s[i];
+                    if( $(element).offset().top - scrollTop > -10 && $(element).offset().top - scrollTop < 20 ){
+                        div_side_navigation_left.showChildren(i);
+                        break;
+                    }
+                }
+            });
+        });
+
+        $(window).resize(function(){
+            var width = $(window).width();
+            if( width > min_width ){
+                div_side_navigation_left.show = true;
+            }
+            else {
+                div_side_navigation_left.show = false;
+            }
+        });
+        
+        var div_side_navigation_left = new Vue({
+            el : '#div-side-navigation-left',
+            data : {
+                currentIndex : 0,
+                show : true,
+                headers : []
+            },
+            methods : {
+                IDToHref : function(id){
+                    return "#" + id;
+                },
+                showChildren : function(index){
+                    if(div_side_navigation_left.currentIndex==index){
+                        return;
+                    }
+                    var currentShow = div_side_navigation_left.headers[div_side_navigation_left.currentIndex];
+                    currentShow['fillColor'] = false;
+                    currentShow['show'] = false;
+                    Vue.set(div_side_navigation_left.headers, div_side_navigation_left.currentIndex, currentShow);
+
+                    div_side_navigation_left.currentIndex = index;
+                    var newShow = div_side_navigation_left.headers[index];
+                    newShow['fillColor'] = true;
+                    newShow['show'] = true;
+                    Vue.set(div_side_navigation_left.headers, index, newShow);
+                }
+            }
+        });
+    </script> -->
+    <!-- End Catalog of Blog Titles Script -->
+
+
+    
+<!-- ============================ Footer =========================== -->
+
+<footer>
+    <div class="container">
+            <div class="copy">
+                <p>
+                    &copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By WaterH2P. All Rights Reserved.
+                </p>
+                <p>Theme By <a href="//go.kieran.top" style="color: #767D84">Kieran</a></p>
+            </div>
+            <div class="social">
+                <ul>
+                    
+                    <li><a href="https://github.com/WaterH2P" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;&nbsp;</li>
+                    
+                    
+                    
+                    
+                    
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+</footer>
+
+<!-- ============================ END Footer =========================== -->
+
+    
+    <!-- Load our scripts -->
+    <!-- Resizable 'on-demand' full-height hero -->
+    <script type="text/javascript">
+        var resizeHero = function () {
+            var hero = $(".cover,.heightblock");
+            var window1 = $(window);
+            hero.css({
+                "height": window1.height()
+            });
+        };
+
+        resizeHero();
+
+        $(window).resize(function () {
+            resizeHero();
+        });
+    </script>
+
+    <!-- Bootstrap core and concatenated plugins always load here -->
+    <script src="/js/plugins.min.js"></script>
+
+    <!-- Theme scripts -->
+    <script src="/js/scripts.js"></script>
+
+    
+    <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+    <script src="/fancybox/jquery.fancybox.pack.js"></script>
+    <script type="text/javascript">
+        $('#intro').find('img').each(function(){
+            var alt = this.alt;
+
+            if (alt){
+                $(this).after('<span class="caption" style="display:none">' + alt + '</span>');
+            }
+
+            $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox" rel="gallery" />');
+        });
+        (function($){
+            $('.fancybox').fancybox();
+        })(jQuery);
+    </script>
+    
+
+
+    
+
+    <!-- 设置按钮位置 -->
+    <script>
+        function setPosition() {
+            var max_width = 1450;
+            var min_distance = 20;
+
+            var width = $(window).width();
+            if( width > max_width ){
+                var right_distance = ( width - max_width) / 2;
+                right_distance = ( right_distance > min_distance ) ? right_distance : min_distance;
+                $('#div-back-top').css('right', right_distance + 'px');
+            }
+            else {
+                $('#div-back-top').css('right', min_distance + 'px');
+            }
+        }
+    </script>
+    <script>
+        $(function () {
+            setPosition();
+            $(window).resize(function () {
+                setPosition();
+            });
+
+            // 返回顶端按钮监听
+            $(window).scroll(function () {
+                if( $(document).scrollTop() < 15 ){
+                    $('#div-back-top').hide();
+                }
+                else {
+                    $('#div-back-top').show();
+                }
+            });
+        });
+        function back_to_top(){
+            $('html').animate({scrollTop: 0}, 'slow');
+        }
+    </script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<!-- <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script> -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+<!-- <script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+
+</body>
+</html>
