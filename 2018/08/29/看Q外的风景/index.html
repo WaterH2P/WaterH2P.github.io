@@ -281,7 +281,7 @@
     <section id="intro">
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-lg-8 col-md-10 col-sm-12">
+                <div class="col-lg-10 col-md-11 col-sm-12">
                     
 <span class="post-meta">
     <!-- blog 的 date -->
@@ -317,7 +317,7 @@
                 </div>
             </div>
             <div class="row justify-content-center">
-                <div class="col-lg-8 col-md-10 col-sm-12">
+                <div class="col-lg-10 col-md-11 col-sm-12">
                     <div class="div-message div-desc">
                         
                             <span>搭建 SSR，翻越 Q，看风景</span>
@@ -334,22 +334,18 @@
                 </div>
             </div>
             <div class="row justify-content-center">
-                <div class="col-lg-8 col-md-10 col-sm-12">
+                <div class="col-lg-10 col-md-11 col-sm-12">
                     <p>【转】<a class="own-underline" href="https://lccurious.github.io/2018/03/03/vlutr-ssr/" target="_blank">在 Vultr 上搭建 SSR 服务</a></p>
 <h2 id="搭建-ssr"><a href="#搭建-ssr" class="headerlink" title="搭建 ssr"></a>搭建 ssr</h2><h4 id="购买-Vultr-服务器"><a href="#购买-Vultr-服务器" class="headerlink" title="购买 Vultr 服务器"></a>购买 Vultr 服务器</h4><ol>
 <li><a class="own-underline" href="https://www.vultr.com/" target="_blank">Vultr 官网</a></li>
 <li>注册登录</li>
 <li>点击左侧 <code>Servers</code> ，点击右侧蓝色的 <code>+</code> 号。</li>
-<li>选择服务器类型<ul>
-<li>我选的是：Los Angeles / CentOS 7 x64 / $3.5</li>
-</ul>
+<li><p>选择服务器类型</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">我选的是：Los Angeles / CentOS 7 x64 / $3.5</span><br></pre></td></tr></table></figure>
 </li>
-<li>Deploy Now</li>
-<li>等服务器处于 <code>Running</code> 状态的时候，首先使用 <code>ssh</code> 登录服务器来判断 IP 是否被墙。<ul>
-<li>【转】<a class="own-underline" href="https://www.vultryhw.com/ssh-forbidden/" target="_blank">Vultr 能 ping 通 SSH 连不上</a></li>
-<li>TCP阻断与ICMP阻断<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">首先科普一下，阻断（封/墙）的方式目前有两种，一种是 TCP 阻断，一种是 ICMP 阻断。</span><br><span class="line">ping 命令走的是 ICMP 协议，而 ssh 连接的时候是 TCP 协议。</span><br><span class="line">因此，Vultr 出现能 ping 通，ssh 却连不上的这种情况时，就是 ICMP 包被放行了，而 TCP 包却被拦截了，也就是 TCP 阻断。</span><br><span class="line">这是目前封禁比较常用的方法，我不禁你 IP，我让你端口用不了，自然也就什么都用不了了。</span><br></pre></td></tr></table></figure>
+<li><p>Deploy Now</p>
 </li>
-</ul>
+<li>等服务器处于 <code>Running</code> 状态的时候，首先使用 <code>ssh</code> 登录服务器来判断 IP 是否被墙。<br>【转】<a class="own-underline" href="https://www.vultryhw.com/ssh-forbidden/" target="_blank">Vultr 能 ping 通 SSH 连不上</a><br>TCP阻断与ICMP阻断<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">首先科普一下，阻断（封/墙）的方式目前有两种，一种是 TCP 阻断，一种是 ICMP 阻断。</span><br><span class="line">ping 命令走的是 ICMP 协议，而 ssh 连接的时候是 TCP 协议。</span><br><span class="line">因此，Vultr 出现能 ping 通，ssh 却连不上的这种情况时，就是 ICMP 包被放行了，而 TCP 包却被拦截了，也就是 TCP 阻断。</span><br><span class="line">这是目前封禁比较常用的方法，我不禁你 IP，我让你端口用不了，自然也就什么都用不了了。</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
 <p><br></p>
@@ -359,13 +355,13 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">wget --no-check-certificate  https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocksR.sh</span><br><span class="line">chmod +x shadowsocksR.sh</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>输入命令： <code>./shadowsocksR.sh 2&gt;&amp;1 | tee shadowsocksR.log</code> 。</p>
-<ul>
+<ol>
 <li>输入 <code>password</code> ，就是将来用于连接的密码。</li>
 <li>选择端口号。</li>
 <li>选择加密方式：<code>aes-256-cfb</code>。</li>
 <li>选择混淆：<code>auth_aes128_md5</code>。</li>
 <li>选择协议：<code>tls1.2_ticket_auth</code>。</li>
-</ul>
+</ol>
 </li>
 <li>【接下来是一段时间的安装过程，可以休息一下】</li>
 <li>安装完成会显示服务器 ssr 信息。</li>
@@ -497,7 +493,7 @@
 </div>
 
             <div class="row justify-content-center">
-                <div class="col-lg-8 col-md-10 col-sm-12">
+                <div class="col-lg-10 col-md-11 col-sm-12">
                     <script type="text/javascript"></script>
 
                 </div>
