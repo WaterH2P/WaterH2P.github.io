@@ -166,9 +166,8 @@
       </header>
     
     <div class="article-entry" itemprop="articleBody">
-      <div style="border-left: 1px solid black;padding: 10px;background: #eaeaea;">
-        
-          <h3 id="建库"><a href="#建库" class="headerlink" title="建库"></a>建库</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">DATABASE</span> databaseName</span><br><span class="line">	<span class="built_in">CHARACTER</span> <span class="keyword">SET</span> utf8</span><br><span class="line">	<span class="keyword">DEFAULT</span> <span class="built_in">CHARACTER</span> <span class="keyword">SET</span> utf8</span><br><span class="line">	<span class="keyword">COLLATE</span> utf8_general_ci</span><br><span class="line">	<span class="keyword">DEFAULT</span> <span class="keyword">COLLATE</span> utf8_general_ci ;</span><br></pre></td></tr></table></figure>
+      
+        <h3 id="建库"><a href="#建库" class="headerlink" title="建库"></a>建库</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">DATABASE</span> databaseName</span><br><span class="line">	<span class="built_in">CHARACTER</span> <span class="keyword">SET</span> utf8</span><br><span class="line">	<span class="keyword">DEFAULT</span> <span class="built_in">CHARACTER</span> <span class="keyword">SET</span> utf8</span><br><span class="line">	<span class="keyword">COLLATE</span> utf8_general_ci</span><br><span class="line">	<span class="keyword">DEFAULT</span> <span class="keyword">COLLATE</span> utf8_general_ci ;</span><br></pre></td></tr></table></figure>
 <p><br></p>
 <h3 id="建表"><a href="#建表" class="headerlink" title="建表"></a>建表</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">DROP</span> <span class="keyword">TABLE</span> <span class="keyword">IF</span> <span class="keyword">EXISTS</span> tableName;</span><br><span class="line"></span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> tableName(</span><br><span class="line">...</span><br><span class="line">)<span class="keyword">ENGINE</span>=<span class="keyword">InnoDB</span> <span class="keyword">DEFAULT</span> <span class="keyword">CHARSET</span>=utf8;</span><br></pre></td></tr></table></figure>
 <p><br></p>
@@ -195,8 +194,8 @@
 <h3 id="字符串转-int-double"><a href="#字符串转-int-double" class="headerlink" title="字符串转 int / double"></a>字符串转 int / double</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">CAST(value as type);  </span><br><span class="line">CONVERT(value, type);</span><br><span class="line"></span><br><span class="line">type 可以是：</span><br><span class="line">	二进制:	BINARY    </span><br><span class="line">    字符型:	CHAR()，可带参数     </span><br><span class="line">    日期:		DATE     </span><br><span class="line">    时间: 	TIME     </span><br><span class="line">    日期时间型:DATETIME     </span><br><span class="line">    浮点数:	DECIMAL      </span><br><span class="line">    整数:		SIGNED     </span><br><span class="line">    无符号整数:UNSIGNED</span><br></pre></td></tr></table></figure>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">eg:</span><br><span class="line">	CONVERT( value, DECIMAL(10,2) )</span><br><span class="line">		保留两位小数</span><br></pre></td></tr></table></figure>
 
-        
-      </div>
+      
+      
 
       
         <div class="page-reward">
@@ -466,11 +465,11 @@ MathJax.Hub.Queue(function() {
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">nodejs</a>
+                <a href="javascript:void(0)" class="js-tag color2">CentOS</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">同步</a>
+                <a href="javascript:void(0)" class="js-tag color3">MongoDB</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -483,6 +482,18 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">mysql</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">nodejs</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">同步</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Parallels</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -519,18 +530,6 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">windows</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Parallels</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">CentOS</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">MongoDB</a>
               </li>
              
               <li class="article-tag-list-item">
