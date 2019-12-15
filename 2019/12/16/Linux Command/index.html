@@ -2,7 +2,7 @@
 
     
 <head>
-    <title>Archives: 2019/12 | H2P&#39;S BLOG</title>
+    <title>Linux 命令 | H2P&#39;S BLOG</title>
     <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -42,7 +42,7 @@
 </head>
 
     <!--
-    <body class="home-template">
+    <body class="post-template">
     -->
 <body id="index" class="lightnav animsition">
     <!-- 返回页面顶端 -->
@@ -277,73 +277,108 @@
     </script> -->
     <!-- ============================ END Tap Blog's Links ============================ -->
     
-    <!-- ============================ Hero Image =========================== -->
-
-    <section id="hero" class="scrollme">
-        <div class="container-fluid element-img" style="background: url() no-repeat center center fixed;background-size: cover">
-            <div class="herofade beige-dk"></div>
-        </div>
-    </section>
-
-    <!-- Height spacing helper -->
-    <!-- <div class="heightblock"></div> -->
-    <!-- // End height spacing helper -->
-
-    <!-- ============================ END Hero Image =========================== -->
-
     
-
-    
-    <section id="services">
+    <section id="intro">
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-lg-8 col-md-8 col-sm-10">
+                <div class="col-lg-9 col-md-10 col-sm-122">
                     
-                    <div class="row boxes">
+<span class="post-meta">
+    <!-- blog 的 date -->
+    
+        <span>
+            2019-12-16
+        </span>
+        <span>&nbsp;&nbsp;</span>
+    
+    <!-- blog 的 tags -->
+    
+    
+    
+    <span class="tag is-info">
+        <a href='/tags/linux/'>linux</a>
+    </span>
+    ,
+    
+    <span class="tag is-info">
+        <a href='/tags/command/'>command</a>
+    </span>
+    
+    
+    
+</span>
+
+                    <h1>Linux 命令</h1>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-9 col-md-10 col-sm-122">
+                    <div class="div-message div-desc">
+                        
+                            <span>Linux 一些容易忘记的命令</span>
+                            <br>
                         
                         
-                            
-                            
-                            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
-                                <div class="card hover-box-shadow card-blog">
-                                    <div class="card-body" style="padding: 15px">
-                                        <h4 class="title"><a href="/2019/12/16/Linux Command/">Linux 命令</a></h4>
-                                        <p><time datetime="2019-12-15T16:00:00.000Z"><a href="/2019/12/16/Linux Command/">2019-12-16</a></time></p>
-                                    </div>
-                                </div>
-                            </div>
+                            <span>最近更新：2019-12-16</span>
+                            <br>
                         
-                            
-                            
-                            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
-                                <div class="card hover-box-shadow card-blog">
-                                    <div class="card-body" style="padding: 15px">
-                                        <h4 class="title"><a href="/2019/12/08/CentOS 7 安装 MongoDB/">CentOS 7 安装 MongoDB</a></h4>
-                                        <p><time datetime="2019-12-07T16:00:00.000Z"><a href="/2019/12/08/CentOS 7 安装 MongoDB/">2019-12-08</a></time></p>
-                                    </div>
-                                </div>
-                            </div>
+                        
+                            <span>CentOS 7</span>
                         
                     </div>
-                    <hr class="nogutter">
                 </div>
             </div>
             <div class="row justify-content-center">
-                <div class="col-lg-8 col-md-8 col-sm-10">
-                    
-                    
+                <div class="col-lg-9 col-md-10 col-sm-122">
+                    <h2 id="wget-查看任务进度"><a href="#wget-查看任务进度" class="headerlink" title="wget 查看任务进度"></a>wget 查看任务进度</h2><p>【转自 Java小学森 的博客】<a href="https://blog.csdn.net/wanglc7/article/details/85136418" target="_blank" rel="noopener">Linux：wget后台下载/查看后台任务进度</a> </p>
+<h4 id="后台下载"><a href="#后台下载" class="headerlink" title="后台下载"></a>后台下载</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget -b &#123;url&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="查看-wget-后台进度"><a href="#查看-wget-后台进度" class="headerlink" title="查看 wget 后台进度"></a>查看 wget 后台进度</h4><ol>
+<li>使用断点续传</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget -c &#123;url&#125;</span><br></pre></td></tr></table></figure>
+<ol>
+<li>找到下载文件的文件夹</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tail -f wget-log</span><br></pre></td></tr></table></figure>
+<ol>
+<li>实时查看下载进度</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat wget-log</span><br></pre></td></tr></table></figure>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+            <hr class="nogutter">
+            
+<!-- 当前博客前后两篇博客 -->
+<div class="row justify-content-center">
+    <nav class="m-pagination col-md-8 col-sm-24" role="pagination">
+        
+        
+        <a class="float-right" href="/2019/12/08/CentOS 7 安装 MongoDB/">
+            CentOS 7 安装 MongoDB →
+        </a>
+        
+    </nav>
+</div>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-9 col-md-10 col-sm-122">
+                    <script type="text/javascript"></script>
+
                 </div>
             </div>
         </div>
+
     </section>
+
     
-    <section id="statement">
-        <div class="container text-center wow fadeInUp" data-wow-delay="0.5s">
-            <div class="row justify-content-center">
-                <p>给岁月以文明，给时光以生命。</p>
-            </div>
-        </div>
-    </section>
+    
+    <!-- <script src="/js/MathJax/TeX-MML-AM_CHTML.min.js"></script>
+    <script src="/js/MathJax/MathJax.min.js"></script>
+    <script src="/js/MathJax/jax.min.js"></script>
+    <script src="/js/MathJax/fontdata.min.js"></script>
+    <script src="/js/MathJax/mtable.min.js"></script>
+    <script src="/js/MathJax/AMS-Regular.min.js"></script> -->
 
     
 <!-- ============================ Footer =========================== -->
