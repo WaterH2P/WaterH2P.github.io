@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+
+    
+<head>
+    <title>Java 基于 socket 处理 Http 文件上传 | H2P&#39;S BLOG</title>
+    <!-- Meta data -->
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="H2P'S BLOG">
+    <meta name="author" content="WaterH2P">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicon, (keep icon in root folder) -->
+    <link rel="Shortcut Icon" href="/img/wolf_small.png" type="image/ico">
+
+    <link rel="alternate" href="/atom.xml" title="H2P&#39;S BLOG" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/all.css" media="screen" type="text/css">
+    
+    <link rel="stylesheet" href="/highlightjs/vs.css" type="text/css">
+    
+
+    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
+    <script src="/js/jquery-3.3.1.min.js"></script>
+    <script src="/js/popper.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/vue.min.js"></script>
+
+    
+    
+    
+
+    <style>
+        .col-md-8.col-md-offset-2.opening-statement img{display:none;}
+        a:hover {
+            cursor: pointer;
+            color : #96d103;
+        }
+        a.own-underline { text-decoration:underline; }
+    </style>
+</head>
+
+    <!--
+    <body class="post-template">
+    -->
+<body id="index" class="lightnav animsition">
+    <!-- 返回页面顶端 -->
+    <div id="div-back-top" style="position: fixed; right: 25px; bottom: 25px; z-index: 99; display: none">
+        <a class="btn btn-grey" onclick="back_to_top()" title="返回顶端"><strong>↑</strong></a>
+    </div>
+
+    
+    <!-- ============================ Off-canvas navigation ============================ -->
+    <!-- More 显示内容 -->
+    <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
+        <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
+            <img src="/img/close.png" alt="Close"/>
+        </div>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu">
+            <li><a href="/" class="animsition-link" title="Home">Home</a></li>
+            <li><a href="/archives" class="animsition-link" title="archive">archives</a></li>
+            <!-- Dropdown Menu -->
+			 
+            
+            
+            <li>
+                <a class="sb-toggle-submenu">Friends<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                    <li><a href="http://yellowfefe.cn/" class="animsition-link" target="_blank">Yellowfefe</a></li>
+                    
+                    <li><a href="http://sheltonlee.cn/" class="animsition-link" target="_blank">SheltonLee</a></li>
+                    
+                </ul>
+            </li>
+            
+        </ul>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu secondary">
+            
+            <li><a href="/about.html" class="animsition-link" title="about">About</a></li>
+            <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li>
+        </ul>
+    </div>
+    <!-- ============================ END Off-canvas navigation ============================ -->
+
+    <!-- 首页顶端中间显示的内容 -->
+    <div id="sb-site">
+        <!-- ============================ Header & Logo bar ============================ -->
+        <div class="nav" style="width: 100%">
+            <div class="container-fluid">
+                <div class="row justify-content-center">
+                    <!-- Nav logo -->
+                    
+                        <div class="col-lg-2 col-md-2 col-sm-2 col-12" style="padding: 0; vertical-align: middle">
+                            <a href="/" title="Logo" class="navbar-brand" style="padding: 0; margin-left: 25px; height:100%">
+                                <img src="/img/wolf_orange_small.png" alt="Logo" style="width: 40px; position: absolute; top: 50%; transform: translate(0px, -50%);"/>
+                            </a>
+                        </div>
+                    
+                    <!-- Nav logo -->
+                    <!-- <div class="mx-auto"> -->
+                    <div class="col-lg-8 col-md-8 col-sm-8 col-12" style="padding: 0; vertical-align: middle">
+                        <ul class="nav justify-content-center">
+                            <li class="nav-item nav-link border-right-1 border-grey" style="padding: 0 16px; margin: 8px 0">
+                                <a href="/">H2P'S BLOG</a>
+                            </li>
+                            
+                                <li class="nav-item nav-link border-right-1 border-grey" style="padding: 0 16px; margin: 8px 0">
+                                    <a href="https://github.com/WaterH2P" title="Github" target="_blank"><i class="icon-github"></i></a>
+                                </li>
+                            
+                            
+                            <li class="nav-item nav-link">
+                                <span>Welcome!</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-12" style="padding: 0; vertical-align: middle">
+                        <div class="learnmore sb-toggle-right" style="position: absolute; top: 50%; left: 75%; transform: translate(0px, -50%);">More</div>
+                        <!-- <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
+                            <span class="icon-bar before"></span>
+                            <span class="icon-bar main"></span>
+                            <span class="icon-bar after"></span>
+                        </button> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ============================ END Header & Logo bar ============================ -->
+    </div>
+
+    <!-- ============================ Tap Blog's Links ============================ -->
+    <!-- <div id="div-side-navigation-right" class="col-lg-3 col-md-3" style="position: fixed; top: 46px; right: 0; padding-top: 0; padding-left: 50px; z-index: 5" v-if="show">
+        <div class="list-group" style="border-radius: 0; border: 1px solid rgba(0, 0, 0, 0.1)">
+            <a class="list-group-item list-group-item-action" :class="{linkFocus:aShow}" style="padding: 1px 20px; border: 0; border-radius: 0; text-align: center" @click="showALinks()">
+                Links
+            </a>
+            <a class="list-group-item list-group-item-action" :class="{linkFocus:tagShow}" style="padding: 1px 20px; border: 0; border-radius: 0; text-align: center" @click="showTagLinks">
+                Tag Links
+            </a>
+        </div>
+        <div class="width-100-pct height-5 visibility-hidden"></div>
+        <div class="list-group" style="border-radius: 0; border: 1px solid rgba(0, 0, 0, 0.1)">
+            <transition 
+                enter-active-class="animated slideInUp"
+                leave-active-class="">
+                <div v-if="aShow">
+                    <div class="list-group-item list-group-item-action" style="padding: 1px 20px; border: 0; border-radius: 0" v-for="link in links">
+                        <a :href="link.href" :title="link.text">{{link.abbrText}}</a>
+                    </div>
+                </div>
+            </transition>
+            <transition
+                enter-active-class="animated slideInUp"
+                leave-active-class="">
+                <div v-if="tagShow">
+                    <div class="list-group-item list-group-item-action" style="padding: 1px 20px; border: 0; border-radius: 0" v-for="link in tags">
+                        <a :href="link.href" :title="link.text">{{link.abbrText}}</a>
+                    </div>
+                </div>
+            </transition>
+        </div>
+    </div>
+
+    <style>
+        .linkFocus {
+            background-color: #5fefe8;
+            user-select:none;
+        }
+        .linkFocus:hover {
+            /* cursor: auto; */
+            background-color: #5fefe8;
+        }
+
+        .noFocus {
+            user-select:none;
+            background-color: #fff;
+        }
+        .noFocus:hover {
+            cursor: auto;
+            user-select:none;
+            background-color: #fff;
+        }
+    </style>
+
+    <script>
+        'use strict';
+        
+        var min_width = 1050;
+        $(function(){
+            var width = $(window).width();
+            if( width > min_width ){
+                div_side_navigation_right.show = true;
+            }
+            else {
+                div_side_navigation_right.show = false;
+            }
+
+            // 对于链接提取
+            var aCount = 0;
+            var tagCount = 0;
+            var hrefFilter = ['//go.kieran.top', '/archives', '/about.html', '/atom.xml', 'http://yellowfefe.cn/', 'http://sheltonlee.cn/'];
+            var hrefFound = [];
+            $('a').each(function(index, element){
+                var href = $(element).attr('href');
+                var text = $(element).text().toString();
+
+                if( !href || $.inArray(href, hrefFilter)>-1 || $.inArray(href, hrefFound)>-1 || text.indexOf('<img')>-1 || text.indexOf('Read More')>-1 || text.length===0 ){
+                    return;
+                }
+
+                var isTag = href.indexOf('/tag')>-1 && href.indexOf('/page/')<0;
+                var currentIndex = isTag ? ++aCount : ++tagCount;
+                hrefFound[aCount+tagCount] = href;
+                $(function(index){
+                    if( index<10 ){
+                        text = index + '.  ' +text;
+                    }
+                    else{
+                        text = index + '. ' +text
+                    }
+                    var abbrText = text;
+                    var link = {'href':href, 'text':text, 'abbrText': abbrText};
+                    if( !isTag ){
+                        div_side_navigation_right.links.push(link);
+                    }
+                    else{
+                        div_side_navigation_right.tags.push(link);
+                    }
+                }(currentIndex));
+            });
+        });
+
+        $(window).resize(function(){
+            var width = $(window).width();
+            if( width > min_width ){
+                div_side_navigation_right.show = true;
+            }
+            else {
+                div_side_navigation_right.show = false;
+            }
+        });
+
+        var div_side_navigation_right = new Vue({
+            el : '#div-side-navigation-right',
+            data : {
+                show : true,
+                aShow : true,
+                tagShow : false,
+                links : [],
+                tags :[]
+            },
+            methods : {
+                showALinks : function(){
+                    if( !div_side_navigation_right.tagShow ){
+                        return;
+                    }
+                    setTimeout(function(){
+                        div_side_navigation_right.aShow = true;
+                    }, 50);
+                    div_side_navigation_right.tagShow = false;
+                },
+                showTagLinks : function(){
+                    if( !div_side_navigation_right.aShow ){
+                        return;
+                    }
+                    div_side_navigation_right.aShow = false;
+                    setTimeout(function(){
+                        div_side_navigation_right.tagShow = true;
+                    }, 50);
+                }
+            }
+        });
+    </script> -->
+    <!-- ============================ END Tap Blog's Links ============================ -->
+    
+    
+    <section id="intro">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-9 col-md-10 col-sm-122">
+                    
+<span class="post-meta">
+    <!-- blog 的 date -->
+    
+        <span>
+            2019-12-19
+        </span>
+        <span>&nbsp;&nbsp;</span>
+    
+    <!-- blog 的 tags -->
+    
+    
+    
+    <span class="tag is-info">
+        <a href='/tags/java/'>java</a>
+    </span>
+    ,
+    
+    <span class="tag is-info">
+        <a href='/tags/socket/'>socket</a>
+    </span>
+    ,
+    
+    <span class="tag is-info">
+        <a href='/tags/http/'>http</a>
+    </span>
+    ,
+    
+    <span class="tag is-info">
+        <a href='/tags/file-upload/'>file upload</a>
+    </span>
+    
+    
+    
+</span>
+
+                    <h1>Java 基于 socket 处理 Http 文件上传</h1>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-9 col-md-10 col-sm-122">
+                    <div class="div-message div-desc">
+                        
+                            <span>毕竟熬夜写的，记录一下。</span>
+                            <br>
+                        
+                        
+                            <span>最近更新：2019-12-19</span>
+                            <br>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-9 col-md-10 col-sm-122">
+                    <p>【参考 木叶之荣 的博客】<a class="own-underline" href="https://www.jb51.net/article/110854.htm" target="_blank">Java中用Socket实现HTTP文件上传实例</a></p>
+<h2 id="HTTP-POST-请求报文"><a href="#HTTP-POST-请求报文" class="headerlink" title="HTTP POST 请求报文"></a>HTTP POST 请求报文</h2><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">POST</span> <span class="string">/uploadFile</span> HTTP/1.1</span><br><span class="line"><span class="attribute">Host</span>: localhost:8080</span><br><span class="line"><span class="attribute">Connection</span>: keep-alive</span><br><span class="line"><span class="attribute">Content-Length</span>: 14752</span><br><span class="line"><span class="attribute">Accept</span>: application/json, text/javascript, */*; q=0.01</span><br><span class="line"><span class="attribute">Origin</span>: http://localhost:8080</span><br><span class="line"><span class="attribute">X-Requested-With</span>: XMLHttpRequest</span><br><span class="line"><span class="attribute">User-Agent</span>: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36</span><br><span class="line"><span class="attribute">Content-Type</span>: multipart/form-data; boundary=----WebKitFormBoundaryOINSWz8sKneAKSpY</span><br><span class="line"><span class="attribute">Sec-Fetch-Site</span>: same-origin</span><br><span class="line"><span class="attribute">Sec-Fetch-Mode</span>: cors</span><br><span class="line"><span class="attribute">Referer</span>: http://localhost:8080/</span><br><span class="line"><span class="attribute">Accept-Encoding</span>: gzip, deflate, br</span><br><span class="line"><span class="attribute">Accept-Language</span>: zh-CN,zh;q=0.9,en;q=0.8</span><br><span class="line"></span><br><span class="line">------WebKitFormBoundaryOINSWz8sKneAKSpY</span><br><span class="line"><span class="attribute">Content-Disposition</span>: form-data; name="file"; filename="%E7%AC%9B%E5%8D%A1%E5%B0%94%E5%9E%8B%E6%9C%BA%E6%A2%B0%E8%87%82.png"</span><br><span class="line"><span class="attribute">Content-Type</span>: application/octet-stream</span><br><span class="line"></span><br><span class="line">âPNG</span><br><span class="line">...</span><br><span class="line"></span><br><span class="line">------WebKitFormBoundaryOINSWz8sKneAKSpY--</span><br></pre></td></tr></table></figure>
+<ul>
+<li>从 <code>âPNG</code> 开始是文件内容</li>
+<li><code>--boundary--</code> 表示文件的结尾</li>
+</ul>
+<p><br></p>
+<h2 id="处理-HTTP-HEADER"><a href="#处理-HTTP-HEADER" class="headerlink" title="处理 HTTP HEADER"></a>处理 HTTP HEADER</h2><p>因为我对 socket 工作原理不是很了解，所以这里从拿到 socket 开始。</p>
+<h4 id="创建处理-HTTP-请求的类"><a href="#创建处理-HTTP-请求的类" class="headerlink" title="创建处理 HTTP 请求的类"></a>创建处理 HTTP 请求的类</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HttpProcess</span> <span class="keyword">implements</span> <span class="title">Runnable</span></span>&#123;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            InputStream input = socket.getInputStream();</span><br><span class="line">            OutputStream output = socket.getOutputStream();</span><br><span class="line">            <span class="comment">// ...</span></span><br><span class="line">        &#125; <span class="keyword">catch</span> (Exception e) &#123; e.printStackTrace(); &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>这里拿到输入流 <code>input</code> 和输出流 <code>output</code> </li>
+<li>HTTP 请求的数据从 <code>input</code> 中获得</li>
+<li>服务器端返回的数据用 <code>output</code> 写入</li>
+</ul>
+<h4 id="获得-HTTP-请求的-HEADER"><a href="#获得-HTTP-请求的-HEADER" class="headerlink" title="获得 HTTP 请求的 HEADER"></a>获得 HTTP 请求的 HEADER</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">StringBuilder sb = <span class="keyword">new</span> StringBuilder();</span><br><span class="line"><span class="keyword">int</span> cache;</span><br><span class="line"><span class="keyword">while</span> (input.available() &gt; <span class="number">0</span> &amp;&amp; (cache = input.read()) &gt; -<span class="number">1</span>)&#123;</span><br><span class="line">    <span class="keyword">if</span> ((<span class="keyword">char</span>)cache == <span class="string">'\r'</span>)&#123;</span><br><span class="line">        sb.append((<span class="keyword">char</span>)cache);</span><br><span class="line">        <span class="keyword">if</span> (input.available() &gt; <span class="number">0</span> &amp;&amp; (cache = input.read()) &gt; -<span class="number">1</span>)&#123;</span><br><span class="line">            sb.append((<span class="keyword">char</span>)cache);</span><br><span class="line">            <span class="keyword">if</span> ((<span class="keyword">char</span>)cache == <span class="string">'\n'</span>)&#123;</span><br><span class="line">                <span class="keyword">if</span> (input.available() &gt; <span class="number">0</span> &amp;&amp; (cache = input.read()) &gt; -<span class="number">1</span>)&#123;</span><br><span class="line">                    sb.append((<span class="keyword">char</span>)cache);</span><br><span class="line">                    <span class="keyword">if</span> ((<span class="keyword">char</span>)cache == <span class="string">'\r'</span>)&#123;</span><br><span class="line">                        <span class="keyword">if</span> (input.available() &gt; <span class="number">0</span> &amp;&amp; (cache = input.read()) &gt; -<span class="number">1</span>&#123;</span><br><span class="line">                            sb.append((<span class="keyword">char</span>)cache);</span><br><span class="line">                            <span class="keyword">if</span> ((<span class="keyword">char</span>)cache == <span class="string">'\n'</span>)&#123;</span><br><span class="line">                                sb.append((<span class="keyword">char</span>)cache);</span><br><span class="line">                                <span class="keyword">break</span>;</span><br><span class="line">                            &#125;</span><br><span class="line">                        &#125;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        sb.append((<span class="keyword">char</span>)cache);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Queue&lt;String&gt; headers = Arrays.stream(sb.toString().split(<span class="string">"\r\n"</span>)).collect(Collectors.toCollection(LinkedList::<span class="keyword">new</span>));</span><br><span class="line">Map&lt;String, String&gt; headers = <span class="keyword">new</span> HashMap&lt;&gt;();</span><br><span class="line"><span class="keyword">while</span> (!headers.isEmpty())&#123;</span><br><span class="line">    String headerString = headers.poll();</span><br><span class="line">    String[] keyValue = headerString.split(<span class="string">": "</span>);</span><br><span class="line">    headers.put(keyValue[<span class="number">0</span>].toLowerCase(), keyValue[<span class="number">1</span>]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>\r\n\r\n</code> 表示头部的结束</li>
+<li><code>headers</code> 用于保存头部 key 和 value</li>
+</ul>
+<p><br></p>
+<h2 id="处理-HTTP-body"><a href="#处理-HTTP-body" class="headerlink" title="处理 HTTP body"></a>处理 HTTP body</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">String contentType = headers.get(<span class="string">"Content-Type"</span>);</span><br><span class="line"><span class="keyword">if</span> (request.getMethod() == HttpMethod.POST &amp;&amp; contentType != <span class="keyword">null</span> &amp;&amp; contentType.startsWith(<span class="string">"multipart/form-data"</span>))&#123;...&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>如果 contentType 中包含 <code>multipart/form-data</code> 表示后面是文件的二进制流。</li>
+</ul>
+<h4 id="保存结束符号"><a href="#保存结束符号" class="headerlink" title="保存结束符号"></a>保存结束符号</h4><p>由上面介绍可知，文件结束符号为 <code>--boundary--</code>。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">String boundary = <span class="string">"\r\n--"</span> + contentType.substring(contentType.indexOf(<span class="string">"boundary"</span>) + <span class="string">"boundary="</span>.length()) + <span class="string">"--"</span>;</span><br></pre></td></tr></table></figure>
+<h4 id="读取文件名称"><a href="#读取文件名称" class="headerlink" title="读取文件名称"></a>读取文件名称</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">String filename = <span class="string">""</span>;</span><br><span class="line"><span class="keyword">while</span> (input.available() &gt; <span class="number">0</span> &amp;&amp; (cache = input.read()) &gt; -<span class="number">1</span>)&#123;</span><br><span class="line">    <span class="comment">// 读取文件名称</span></span><br><span class="line">    <span class="keyword">if</span> ((<span class="keyword">char</span>)cache == <span class="string">'f'</span>)&#123;</span><br><span class="line">        <span class="keyword">if</span> (input.available() &gt; <span class="number">0</span> &amp;&amp; (cache = input.read()) == <span class="string">'i'</span>)&#123;</span><br><span class="line">            <span class="keyword">if</span> (input.available() &gt; <span class="number">0</span> &amp;&amp; (cache = input.read()) == <span class="string">'l'</span>)&#123;</span><br><span class="line">                <span class="keyword">if</span> (input.available() &gt; <span class="number">0</span> &amp;&amp; (cache = input.read()) == <span class="string">'e'</span>)&#123;</span><br><span class="line">                    <span class="keyword">if</span> (input.available() &gt; <span class="number">0</span> &amp;&amp; (cache = input.read()) == <span class="string">'n'</span>)&#123;</span><br><span class="line">                        <span class="keyword">if</span> (input.available() &gt; <span class="number">0</span> &amp;&amp; (cache = input.read()) == <span class="string">'a'</span>)&#123;</span><br><span class="line">                            <span class="keyword">if</span> (input.available() &gt; <span class="number">0</span> &amp;&amp; (cache = input.read()) == <span class="string">'m'</span>)&#123;</span><br><span class="line">                                <span class="keyword">if</span> (input.available() &gt; <span class="number">0</span> &amp;&amp; (cache = input.read()) == <span class="string">'e'</span>)&#123;</span><br><span class="line">                                    <span class="keyword">if</span> (input.available() &gt; <span class="number">0</span> &amp;&amp; (cache = input.read()) == <span class="string">'='</span>)&#123;</span><br><span class="line">                                        <span class="keyword">if</span> (input.available() &gt; <span class="number">0</span> &amp;&amp; (cache = input.read()) == <span class="string">'\"'</span>)&#123;</span><br><span class="line">                                            StringBuilder sbfilename = <span class="keyword">new</span> StringBuilder();</span><br><span class="line">                                            <span class="keyword">while</span> (input.available() &gt; <span class="number">0</span> &amp;&amp; (cache = input.read()) != <span class="string">'\"'</span>)&#123;</span><br><span class="line">                                                sbfilename.append((<span class="keyword">char</span>)cache);</span><br><span class="line">                                            &#125;</span><br><span class="line">                                            filename = URLDecoder.decode(sbfilename.toString(), <span class="string">"UTF-8"</span>);</span><br><span class="line">                                            input.read();</span><br><span class="line">                                            <span class="keyword">break</span>;</span><br><span class="line">                                        &#125;</span><br><span class="line">                                    &#125;</span><br><span class="line">                                &#125;</span><br><span class="line">                            &#125;</span><br><span class="line">                        &#125;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这里我们读取的是</p>
+<figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">------WebKitFormBoundaryOINSWz8sKneAKSpY</span><br><span class="line"><span class="attribute">Content-Disposition</span>: form-data; name="file"; filename="%E7%AC%9B%E5%8D%A1%E5%B0%94%E5%9E%8B%E6%9C%BA%E6%A2%B0%E8%87%82.png"</span><br><span class="line"><span class="attribute">Content-Type</span>: application/octet-stream</span><br></pre></td></tr></table></figure>
+<p>因此为了读取文件名称，当读到 <code>f</code> 时，判断剩下的是否为 <code>ilename</code>。</p>
+<h4 id="读取无用行"><a href="#读取无用行" class="headerlink" title="读取无用行"></a>读取无用行</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 读取无用行</span></span><br><span class="line"><span class="keyword">while</span> (input.available() &gt; <span class="number">0</span> &amp;&amp; (cache = input.read()) != <span class="string">'\n'</span>)&#123;&#125;</span><br><span class="line"><span class="keyword">while</span> (input.available() &gt; <span class="number">0</span> &amp;&amp; (cache = input.read()) != <span class="string">'\n'</span>)&#123;&#125;</span><br><span class="line"><span class="keyword">while</span> (input.available() &gt; <span class="number">0</span> &amp;&amp; (cache = input.read()) != <span class="string">'\n'</span>)&#123;&#125;</span><br></pre></td></tr></table></figure>
+<p>读取的内容为</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">\r\n</span><br><span class="line"><span class="attribute">Content-Type</span>: application/octet-stream</span><br><span class="line">\r\n</span><br></pre></td></tr></table></figure>
+<h4 id="读取文件二进制流"><a href="#读取文件二进制流" class="headerlink" title="读取文件二进制流"></a>读取文件二进制流</h4><p>下面是文件的二进制流和结束符号</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">âPNG</span><br><span class="line">...</span><br><span class="line"></span><br><span class="line">------WebKitFormBoundaryOINSWz8sKneAKSpY--</span><br></pre></td></tr></table></figure>
+<p>读取文件二进制流并写入到临时文件 <code>file</code> 中。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">DataOutputStream output = <span class="keyword">new</span> DataOutputStream(<span class="keyword">new</span> FileOutputStream(file));</span><br><span class="line"><span class="keyword">boolean</span> isOver = <span class="keyword">false</span>;</span><br><span class="line"><span class="keyword">while</span> (input.available() &gt; <span class="number">0</span> &amp;&amp; (cache = input.read()) &gt; -<span class="number">1</span> &amp;&amp; !isOver)&#123;</span><br><span class="line">    <span class="comment">// 判断是否到达文件末尾</span></span><br><span class="line">    <span class="keyword">if</span> ((<span class="keyword">char</span>)cache == <span class="string">'\r'</span>)&#123;</span><br><span class="line">        <span class="keyword">byte</span>[] bytes = <span class="keyword">new</span> <span class="keyword">byte</span>[boundary.length()];</span><br><span class="line">        bytes[<span class="number">0</span>] = (<span class="keyword">byte</span>)cache;</span><br><span class="line">        <span class="keyword">int</span> i = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span> (input.available() &gt; <span class="number">0</span> &amp;&amp; (cache = input.read()) &gt; -<span class="number">1</span> &amp;&amp; i &lt; boundary.length())&#123;</span><br><span class="line">            <span class="keyword">if</span> ((<span class="keyword">char</span>)cache == boundary.charAt(i))&#123;</span><br><span class="line">                bytes[i] = (<span class="keyword">byte</span>)cache;</span><br><span class="line">                <span class="keyword">if</span> (i == boundary.length() - <span class="number">1</span>)&#123;</span><br><span class="line">                    isOver = <span class="keyword">true</span>;</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                i++;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                output.write(bytes, <span class="number">0</span>, i);</span><br><span class="line">                output.write(cache);</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        output.write(cache);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">output.close();</span><br></pre></td></tr></table></figure>
+<ul>
+<li>上面 <code>filename</code> 的查找可效仿 <code>--boundary--</code>，可我不想改了。·</li>
+</ul>
+
+                </div>
+            </div>
+            <div class="clearfix"></div>
+            <hr class="nogutter">
+            
+<!-- 当前博客前后两篇博客 -->
+<div class="row justify-content-center">
+    <nav class="m-pagination col-md-8 col-sm-24" role="pagination">
+        
+        
+        <a class="float-right" href="/2019/12/16/Linux Command/">
+            Linux 命令 →
+        </a>
+        
+    </nav>
+</div>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-9 col-md-10 col-sm-122">
+                    <script type="text/javascript"></script>
+
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    
+    
+    <!-- <script src="/js/MathJax/TeX-MML-AM_CHTML.min.js"></script>
+    <script src="/js/MathJax/MathJax.min.js"></script>
+    <script src="/js/MathJax/jax.min.js"></script>
+    <script src="/js/MathJax/fontdata.min.js"></script>
+    <script src="/js/MathJax/mtable.min.js"></script>
+    <script src="/js/MathJax/AMS-Regular.min.js"></script> -->
+
+    
+<!-- ============================ Footer =========================== -->
+
+<footer style="background-color: #242424;">
+    <div class="container">
+            <div class="copy">
+                <p>
+                    &copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By WaterH2P. All Rights Reserved.
+                </p>
+                <p>Theme By <a href="//go.kieran.top" style="color: #767D84">Kieran</a></p>
+            </div>
+            <div class="social">
+                <ul>
+                    
+                    <li><a href="https://github.com/WaterH2P" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;&nbsp;</li>
+                    
+                    
+                    
+                    
+                    
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+</footer>
+
+<!-- ============================ END Footer =========================== -->
+
+    
+    <!-- Load our scripts -->
+    <!-- Resizable 'on-demand' full-height hero -->
+    <script type="text/javascript">
+        var resizeHero = function () {
+            var hero = $(".cover,.heightblock");
+            var window1 = $(window);
+            hero.css({
+                "height": window1.height()
+            });
+        };
+
+        resizeHero();
+
+        $(window).resize(function () {
+            resizeHero();
+        });
+    </script>
+
+    <!-- Bootstrap core and concatenated plugins always load here -->
+    <script src="/js/plugins.min.js"></script>
+
+    <!-- Theme scripts -->
+    <script src="/js/scripts.js"></script>
+
+    
+    <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+    <script src="/fancybox/jquery.fancybox.pack.js"></script>
+    <script type="text/javascript">
+        $('#intro').find('img').each(function(){
+            var alt = this.alt;
+
+            if (alt){
+                $(this).after('<span class="caption" style="display:none">' + alt + '</span>');
+            }
+
+            $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox" rel="gallery" />');
+        });
+        (function($){
+            $('.fancybox').fancybox();
+        })(jQuery);
+    </script>
+    
+
+
+    
+
+    <!-- 设置按钮位置 -->
+    <script>
+        function setPosition() {
+            var max_width = 1450;
+            var min_distance = 20;
+
+            var width = $(window).width();
+            if( width > max_width ){
+                var right_distance = ( width - max_width) / 2;
+                right_distance = ( right_distance > min_distance ) ? right_distance : min_distance;
+                $('#div-back-top').css('right', right_distance + 'px');
+            }
+            else {
+                $('#div-back-top').css('right', min_distance + 'px');
+            }
+        }
+    </script>
+    <script>
+        $(function () {
+            setPosition();
+            $(window).resize(function () {
+                setPosition();
+            });
+
+            // 返回顶端按钮监听
+            $(window).scroll(function () {
+                if( $(document).scrollTop() < 15 ){
+                    $('#div-back-top').hide();
+                }
+                else {
+                    $('#div-back-top').show();
+                }
+            });
+        });
+        function back_to_top(){
+            $('html').animate({scrollTop: 0}, 'slow');
+        }
+    </script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<!-- <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script> -->
+<!-- <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script> -->
+<!-- <script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+
+</body>
+</html>
