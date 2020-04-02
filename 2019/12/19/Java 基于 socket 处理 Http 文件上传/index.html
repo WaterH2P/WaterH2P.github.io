@@ -21,12 +21,6 @@
     <link rel="stylesheet" href="/highlightjs/vs.css" type="text/css">
     
 
-    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
-    <script src="/js/jquery-3.3.1.min.js"></script>
-    <script src="/js/popper.min.js"></script>
-    <script src="/js/bootstrap.min.js"></script>
-    <script src="/js/vue.min.js"></script>
-
     
     
     
@@ -163,118 +157,7 @@
                 </div>
             </transition>
         </div>
-    </div>
-
-    <style>
-        .linkFocus {
-            background-color: #5fefe8;
-            user-select:none;
-        }
-        .linkFocus:hover {
-            /* cursor: auto; */
-            background-color: #5fefe8;
-        }
-
-        .noFocus {
-            user-select:none;
-            background-color: #fff;
-        }
-        .noFocus:hover {
-            cursor: auto;
-            user-select:none;
-            background-color: #fff;
-        }
-    </style>
-
-    <script>
-        'use strict';
-        
-        var min_width = 1050;
-        $(function(){
-            var width = $(window).width();
-            if( width > min_width ){
-                div_side_navigation_right.show = true;
-            }
-            else {
-                div_side_navigation_right.show = false;
-            }
-
-            // 对于链接提取
-            var aCount = 0;
-            var tagCount = 0;
-            var hrefFilter = ['//go.kieran.top', '/archives', '/about.html', '/atom.xml', 'http://yellowfefe.cn/', 'http://sheltonlee.cn/'];
-            var hrefFound = [];
-            $('a').each(function(index, element){
-                var href = $(element).attr('href');
-                var text = $(element).text().toString();
-
-                if( !href || $.inArray(href, hrefFilter)>-1 || $.inArray(href, hrefFound)>-1 || text.indexOf('<img')>-1 || text.indexOf('Read More')>-1 || text.length===0 ){
-                    return;
-                }
-
-                var isTag = href.indexOf('/tag')>-1 && href.indexOf('/page/')<0;
-                var currentIndex = isTag ? ++aCount : ++tagCount;
-                hrefFound[aCount+tagCount] = href;
-                $(function(index){
-                    if( index<10 ){
-                        text = index + '.  ' +text;
-                    }
-                    else{
-                        text = index + '. ' +text
-                    }
-                    var abbrText = text;
-                    var link = {'href':href, 'text':text, 'abbrText': abbrText};
-                    if( !isTag ){
-                        div_side_navigation_right.links.push(link);
-                    }
-                    else{
-                        div_side_navigation_right.tags.push(link);
-                    }
-                }(currentIndex));
-            });
-        });
-
-        $(window).resize(function(){
-            var width = $(window).width();
-            if( width > min_width ){
-                div_side_navigation_right.show = true;
-            }
-            else {
-                div_side_navigation_right.show = false;
-            }
-        });
-
-        var div_side_navigation_right = new Vue({
-            el : '#div-side-navigation-right',
-            data : {
-                show : true,
-                aShow : true,
-                tagShow : false,
-                links : [],
-                tags :[]
-            },
-            methods : {
-                showALinks : function(){
-                    if( !div_side_navigation_right.tagShow ){
-                        return;
-                    }
-                    setTimeout(function(){
-                        div_side_navigation_right.aShow = true;
-                    }, 50);
-                    div_side_navigation_right.tagShow = false;
-                },
-                showTagLinks : function(){
-                    if( !div_side_navigation_right.aShow ){
-                        return;
-                    }
-                    div_side_navigation_right.aShow = false;
-                    setTimeout(function(){
-                        div_side_navigation_right.tagShow = true;
-                    }, 50);
-                }
-            }
-        });
-    </script> -->
+    </div> -->
     <!-- ============================ END Tap Blog's Links ============================ -->
     
     
@@ -407,13 +290,6 @@
     </section>
 
     
-    
-    <!-- <script src="/js/MathJax/TeX-MML-AM_CHTML.min.js"></script>
-    <script src="/js/MathJax/MathJax.min.js"></script>
-    <script src="/js/MathJax/jax.min.js"></script>
-    <script src="/js/MathJax/fontdata.min.js"></script>
-    <script src="/js/MathJax/mtable.min.js"></script>
-    <script src="/js/MathJax/AMS-Regular.min.js"></script> -->
 
     
 <!-- ============================ Footer =========================== -->
@@ -442,8 +318,12 @@
 </footer>
 
 <!-- ============================ END Footer =========================== -->
-
     
+    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
+    <script src="/js/jquery-3.3.1.min.js"></script>
+    <script src="/js/popper.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+
     <!-- Load our scripts -->
     <!-- Resizable 'on-demand' full-height hero -->
     <script type="text/javascript">
@@ -466,11 +346,11 @@
     <script src="/js/plugins.min.js"></script>
 
     <!-- Theme scripts -->
-    <script src="/js/scripts.js"></script>
+    <script src="/js/scripts.min.js"></script>
 
     
     <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
-    <script src="/fancybox/jquery.fancybox.pack.js"></script>
+    <script src="/fancybox/jquery.fancybox.pack.min.js"></script>
     <script type="text/javascript">
         $('#intro').find('img').each(function(){
             var alt = this.alt;
